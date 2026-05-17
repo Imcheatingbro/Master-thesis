@@ -1,0 +1,44 @@
+{
+  "cnc": {
+    "input_rows": 3075,
+    "output_samples": 3075,
+    "causal_samples": 1624,
+    "non_causal_samples": 1451,
+    "total_relations": 2257,
+    "relation_count_distribution": {
+      "0": 1451,
+      "1": 1105,
+      "2": 418,
+      "3": 90,
+      "4": 9,
+      "5": 2
+    },
+    "warnings": {
+      "num_rs_mismatch": 0,
+      "substring_check_failed_relations": 0,
+      "substring_check_failed_samples": 0
+    }
+  },
+  "li": {
+    "input_items": 786,
+    "output_samples": 786,
+    "causal_samples": 191,
+    "non_causal_samples": 595,
+    "total_relations": 296,
+    "relation_count_distribution": {
+      "0": 595,
+      "1": 126,
+      "2": 47,
+      "3": 7,
+      "4": 8,
+      "5": 1,
+      "6": 1,
+      "12": 1
+    },
+    "warnings": {
+      "missing_entity_mapping": 0,
+      "substring_check_failed_relations": 0,
+      "substring_check_failed_samples": 0
+    }
+  }
+}

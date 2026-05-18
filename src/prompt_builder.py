@@ -7,7 +7,8 @@ from pathlib import Path
 from typing import Protocol
 
 
-PROMPT_PATH = Path(__file__).resolve().parents[1] / "prompts" / "v1.txt"
+PROMPT_DIR = Path(__file__).resolve().parents[1] / "prompts"
+DEFAULT_PROMPT_NAME = "v1"
 
 
 class RetrieverProtocol(Protocol):
@@ -23,9 +24,10 @@ def build_messages(
     retriever: RetrieverProtocol | None,
     top_k: int,
     rag_mode: str = "pattern",
+    prompt_name: str = DEFAULT_PROMPT_NAME,
 ) -> list[dict[str, str]]:
     """根据 RAG 开关与模式构造 OpenAI chat messages。"""
-    template = PROMPT_PATH.read_text(encoding="utf-8")
+    template = load_prompt_template(prompt_name)
     rag_examples = ""
     if use_rag:
         if retriever is None:
@@ -33,11 +35,20 @@ def build_messages(
         examples = retriever.retrieve(text, top_k)
         rag_examples = format_rag_examples(examples, rag_mode=rag_mode)
 
-    system_content = template.replace("{rag_examples}", rag_examples).replace("{input_text}", text)
+    system_content = template.replace("{rag_examples}", rag_examples)
     return [
         {"role": "system", "content": system_content},
         {"role": "user", "content": text},
     ]
+
+
+def load_prompt_template(prompt_name: str = DEFAULT_PROMPT_NAME) -> str:
+    """按 prompt 名称读取模板文件。"""
+    safe_name = Path(prompt_name).stem
+    prompt_path = PROMPT_DIR / f"{safe_name}.txt"
+    if not prompt_path.exists():
+        raise FileNotFoundError(f"Prompt 模板不存在: {prompt_path}")
+    return prompt_path.read_text(encoding="utf-8")
 
 
 def format_rag_examples(examples: list[dict[str, object]], rag_mode: str = "pattern") -> str:

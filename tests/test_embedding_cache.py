@@ -10,7 +10,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from src.embedding_cache import build_embedding_cache, load_embedding_cache
+from src.retriever import build_embedding_cache, load_embedding_cache
 
 
 class FakeEncoder:

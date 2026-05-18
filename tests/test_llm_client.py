@@ -31,9 +31,11 @@ class FakeChatCompletions:
     def __init__(self, failures_before_success: int) -> None:
         self.failures_before_success = failures_before_success
         self.calls = 0
+        self.last_kwargs: dict[str, object] | None = None
 
     def create(self, **kwargs: object) -> SimpleNamespace:
         self.calls += 1
+        self.last_kwargs = kwargs
         if self.calls <= self.failures_before_success:
             raise TimeoutError("临时超时")
         return SimpleNamespace(
@@ -63,6 +65,7 @@ llm:
   api_key: "lm-studio"
   temperature: 0.0
   max_tokens: 2048
+  context_length: 8192
   timeout: 120
   retry_times: 3
 """.lstrip(),
@@ -80,6 +83,7 @@ def test_client_loads_config_and_allows_overrides(tmp_path: Path) -> None:
     assert client.model == "override-model"
     assert client.temperature == 0.2
     assert client.max_tokens == 2048
+    assert client.context_length == 8192
 
 
 def test_ping_returns_true_when_models_endpoint_is_reachable(tmp_path: Path) -> None:
@@ -109,3 +113,5 @@ def test_chat_retries_transient_failures_and_returns_text(tmp_path: Path, monkey
 
     assert result == "ok:qwen/qwen3-14b:0.0"
     assert fake_client.chat.completions.calls == 3
+    assert fake_client.chat.completions.last_kwargs is not None
+    assert fake_client.chat.completions.last_kwargs["extra_body"] == {"context_length": 8192}

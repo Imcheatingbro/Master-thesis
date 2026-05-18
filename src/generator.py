@@ -7,7 +7,7 @@ import logging
 import re
 from typing import Any
 
-from src.prompt_builder import RetrieverProtocol, build_messages
+from src.prompt_builder import DEFAULT_PROMPT_NAME, RetrieverProtocol, build_messages
 
 
 LOGGER = logging.getLogger(__name__)
@@ -51,6 +51,7 @@ def generate(
     use_rag: bool,
     top_k: int,
     rag_mode: str = "pattern",
+    prompt_name: str = DEFAULT_PROMPT_NAME,
     max_retry: int = 2,
 ) -> dict[str, Any]:
     """主入口：构造 prompt、调用 LLM、解析输出，失败后返回兜底结果。"""
@@ -63,6 +64,7 @@ def generate(
                 retriever=retriever,
                 top_k=top_k,
                 rag_mode=rag_mode,
+                prompt_name=prompt_name,
             )
             raw_output = call_llm(messages, client)
             parsed = parse_output(raw_output)

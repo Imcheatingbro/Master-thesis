@@ -32,6 +32,7 @@ class LLMClient:
         self.api_key = str(config["api_key"])
         self.temperature = float(config["temperature"])
         self.max_tokens = int(config["max_tokens"])
+        self.context_length = int(config.get("context_length", 8192))
         self.timeout = float(config["timeout"])
         self.retry_times = int(config["retry_times"])
         self._client = openai_client or OpenAI(
@@ -71,6 +72,7 @@ class LLMClient:
                     messages=messages,
                     temperature=self.temperature,
                     max_tokens=self.max_tokens,
+                    extra_body={"context_length": self.context_length},
                 )
                 content = response.choices[0].message.content or ""
                 elapsed = time.perf_counter() - start_time

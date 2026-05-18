@@ -43,3 +43,11 @@
 - 为后续大量 evaluation，BGE cache 使用 `RAG Database/bge-small-en-v1.5_examples.jsonl` 与 `RAG Database/bge-small-en-v1.5_embeddings.npy`，避免在 CSV 中反复解析长 float 字符串。
 - 单独 Pattern RAG 仍保留；当 BGE metadata cache 存在时，PatternRetriever 默认使用同一份 jsonl metadata，实现 Pattern、KNN、KNN+Pattern 三种模式共享 example metadata。
 - KNN+Pattern RAG 按参考代码习惯先拼接 Pattern examples，再拼接 KNN examples，并按 `(sentence, cause, effect)` 去重；因此最终 examples 数量最多为 `2 * RAG_TOP_K`。
+- 原始 Pattern DB CSV 只作为重建 BGE cache 的输入，不再作为 notebook demo/eval 运行时验收项；运行时统一验证并读取 BGE jsonl/npy cache。
+- 为降低 demo 阶段代码阅读成本，RAG 检索相关实现合并到 `src/retriever.py`，脚本与 notebook 统一从该模块导入。
+
+- prompt 模板不再在 system message 末尾重复 {input_text}；输入文本只放在 user message，减少 prompt 冗余。
+- LM Studio 已手动提升 context length 至 8192；configs/llm.yaml 增加 context_length: 8192，客户端通过 OpenAI 兼容接口的 extra_body 传递该值。
+
+- notebook sample demo 的 Gold 输出改为完整 has_causal 与 	riples JSON，方便人工对照模型输出。
+- 删除 notebook 中的 Cell N 批量生成预备逻辑；正式 evaluation 由后续 SPEC_05 单独实现，避免 demo notebook 出现半成品评估入口。

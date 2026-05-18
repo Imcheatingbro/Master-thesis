@@ -8,7 +8,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from src.rag_retriever import PatternRetriever
+from src.retriever import PatternRetriever
 
 
 def write_pattern_db(path: Path) -> None:

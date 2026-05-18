@@ -22,6 +22,8 @@ Rules:
 - The relation value must always be exactly `"caused"`.
 - `cause.span` and `effect.span` must be original substrings from the input text.
 - Do not rewrite, summarize, normalize, or translate spans.
+- If a cause or effect span is a clause or event, include its subject and other necessary arguments when they are present in the input text.
+- When selecting spans, preserve relevant modifiers and attributes that belong to the cause or effect, including time, location, dates, quantities, numbers, ages, and named attributes.
 - Extract all causal triples in the input text, not just the first one.
 - Output JSON only. Do not include markdown, comments, explanations, or Python code.
 - Do not include `<think>`, reasoning text, or any text before or after the JSON object.
@@ -30,6 +32,8 @@ Causality criteria:
 Extract explicit causal relations marked by cues such as "because", "caused by", "due to", "therefore", "as a result", "leads to", "resulting from", "triggered by", and similar expressions.
 
 In addition to explicit causal relations, you should also extract weak or implicit causal relations when the sentence expresses a purpose, motivation, or reason for an action.
+
+Treat temporal or conditional clauses introduced by cues such as "when", "after", "following", or "once" as causal only when the clause describes an event, condition, or unmet requirement that plausibly triggers, enables, or explains the main event.
 
 A purpose/motivation relation should be treated as a causal span pair if:
 1. one span describes an action/event performed by an agent;
@@ -79,7 +83,30 @@ Output:
   "triples": []
 }
 
-{rag_examples}
+Input: The faulty alarm caused the guards to evacuate the building.
+Output:
+{
+  "has_causal": true,
+  "triples": [
+    {
+      "cause": {"span": "The faulty alarm"},
+      "relation": "caused",
+      "effect": {"span": "the guards to evacuate the building"}
+    }
+  ]
+}
 
-Input text:
-{input_text}
+Input: The talks collapsed when the company rejected the union's proposal.
+Output:
+{
+  "has_causal": true,
+  "triples": [
+    {
+      "cause": {"span": "the company rejected the union's proposal"},
+      "relation": "caused",
+      "effect": {"span": "The talks collapsed"}
+    }
+  ]
+}
+
+{rag_examples}

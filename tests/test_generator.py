@@ -18,9 +18,11 @@ class FakeClient:
     def __init__(self, outputs: list[str | Exception]) -> None:
         self.outputs = outputs
         self.calls = 0
+        self.messages: list[list[dict[str, str]]] = []
 
     def chat(self, messages: list[dict[str, str]]) -> str:
         self.calls += 1
+        self.messages.append(messages)
         output = self.outputs.pop(0)
         if isinstance(output, Exception):
             raise output
@@ -149,3 +151,21 @@ def test_generate_passes_rag_mode_to_prompt_builder() -> None:
 
     assert result == {"id": 3, "has_causal": True, "triples": []}
     assert retriever.calls == [("Rain caused flooding.", 1)]
+
+
+def test_generate_accepts_prompt_name() -> None:
+    client = FakeClient(['{"has_causal": false, "triples": []}'])
+
+    result = generate(
+        text="The talks collapsed when the offer was rejected.",
+        sample_id=4,
+        client=client,
+        retriever=None,
+        use_rag=False,
+        top_k=0,
+        prompt_name="v1",
+        max_retry=1,
+    )
+
+    assert result == {"id": 4, "has_causal": False, "triples": []}
+    assert "triggers, enables, or explains the main event" in client.messages[0][0]["content"]

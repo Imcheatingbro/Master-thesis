@@ -14,3 +14,11 @@
 - 配置文件使用 `configs/llm.yaml`，notebook 可通过构造函数覆盖 `temperature` 与 `max_tokens` 等参数。
 - 单元测试使用假 OpenAI 客户端验证连接状态和重试行为，避免 pytest 依赖本地 LM Studio 必须在线。
 - `notebooks/main_pipeline.ipynb` 只追加 SPEC_02 验收 cells；真实模型连通性和示例输出留给项目作者在 LM Studio 启动后验收。
+
+## SPEC_03 Prompt 与 Pattern RAG 实现
+
+- Pattern DB 实际路径为 `RAG Database/comb_SCITEsemADE_CausalityPattern.csv`，不是早期规范中的 `DAGdatabase`。
+- 论文与参考代码中的 Pattern RAG 主要依赖 causal connective 匹配；本实现使用 `rapidfuzz` 复刻相近逻辑，并用 token overlap 作为未命中时的稳定补齐策略。
+- 未使用 CSV 中的 `embedings` 字段，因为 Demo1 只实现 Pattern RAG，不实现 kNN+Pattern RAG。
+- 为保证 demo/eval 可复现，超过 `top_k` 的候选按分数与 CSV 原始顺序稳定排序，不使用参考 notebook 中的随机抽样。
+- 真实 LM Studio 测试中，Qwen 仍会输出 `<think>` 推理文本；SPEC_04 的解析器需要处理 `<think>`、前缀解释文本和截断 JSON。

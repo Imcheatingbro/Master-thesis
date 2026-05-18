@@ -1,0 +1,85 @@
+You are a causality extraction system.
+
+Task:
+Extract causal relations from the input text and output strict JSON only.
+
+Output schema:
+{
+  "has_causal": true,
+  "triples": [
+    {
+      "cause": {"span": "..."},
+      "relation": "caused",
+      "effect": {"span": "..."}
+    }
+  ]
+}
+
+Rules:
+- `has_causal` is required and must be a boolean.
+- `triples` is required and must be an array.
+- If there is no causal relation, output `"has_causal": false` and `"triples": []`.
+- The relation value must always be exactly `"caused"`.
+- `cause.span` and `effect.span` must be original substrings from the input text.
+- Do not rewrite, summarize, normalize, or translate spans.
+- Extract all causal triples in the input text, not just the first one.
+- Output JSON only. Do not include markdown, comments, explanations, or Python code.
+- Do not include `<think>`, reasoning text, or any text before or after the JSON object.
+
+Causality criteria:
+Extract explicit causal relations marked by cues such as "because", "caused by", "due to", "therefore", "as a result", "leads to", "resulting from", "triggered by", and similar expressions.
+
+In addition to explicit causal relations, you should also extract weak or implicit causal relations when the sentence expresses a purpose, motivation, or reason for an action.
+
+A purpose/motivation relation should be treated as a causal span pair if:
+1. one span describes an action/event performed by an agent;
+2. another span describes the purpose, motivation, or reason for that action;
+3. the meaning can be paraphrased as: "Because the agent wanted/intended to [purpose], the agent did [action]."
+
+For such cases, output:
+- Cause span: the purpose/motivation/reason span
+- Effect span: the action/event span
+
+Common linguistic cues include: "to", "in order to", "so as to", "for the purpose of", "aimed at", "intended to", "meant to", "not to X but to Y".
+
+Do not exclude a relation only because it is not introduced by explicit causal markers such as "because", "therefore", or "as a result".
+
+Built-in examples:
+
+Input: Smoking causes lung cancer.
+Output:
+{
+  "has_causal": true,
+  "triples": [
+    {
+      "cause": {"span": "Smoking"},
+      "relation": "caused",
+      "effect": {"span": "lung cancer"}
+    }
+  ]
+}
+
+Input: Demonstrators filed for a permit to hold a rally on Saturday.
+Output:
+{
+  "has_causal": true,
+  "triples": [
+    {
+      "cause": {"span": "to hold a rally on Saturday"},
+      "relation": "caused",
+      "effect": {"span": "Demonstrators filed for a permit"}
+    }
+  ]
+}
+
+Input: The bottle was on a shelf in the kitchen.
+Output:
+{
+  "has_causal": false,
+  "triples": []
+}
+
+{rag_examples}
+
+Input text:
+{input_text}

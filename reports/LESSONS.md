@@ -22,3 +22,11 @@
 - 未使用 CSV 中的 `embedings` 字段，因为 Demo1 只实现 Pattern RAG，不实现 kNN+Pattern RAG。
 - 为保证 demo/eval 可复现，超过 `top_k` 的候选按分数与 CSV 原始顺序稳定排序，不使用参考 notebook 中的随机抽样。
 - 真实 LM Studio 测试中，Qwen 仍会输出 `<think>` 推理文本；SPEC_04 的解析器需要处理 `<think>`、前缀解释文本和截断 JSON。
+
+## SPEC_04 Generator 实现
+
+- `parse_output` 支持纯 JSON、markdown 代码块、前缀解释文本和 `<think>...</think>` 后再解析首个 JSON 对象。
+- `generate` 每次调用重新构造 prompt 并调用 LLM；解析或最小校验失败时按 `max_retry` 重试，耗尽后返回 `{"id": sample_id, "has_causal": false, "triples": []}` 兜底。
+- Demo1 的最小校验只检查 `has_causal: bool` 与 `triples: list`，不在本阶段做 span 子串评估或 relation-level 指标，这些留给 SPEC_05。
+- `load_dataset` 按实际路径读取 `data/Dataset_1_CNC_modified.jsonl` 与 `data/Dataset_2_Li_modified.jsonl`；sample 模式暂取前 N 条，保证 notebook 行为可复现。
+- 真实 LM Studio smoke test 使用 `Heavy rain caused widespread flooding in the region.`，成功解析出 1 条 causal triple，未触发兜底。

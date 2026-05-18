@@ -46,3 +46,15 @@ def test_build_messages_with_rag_includes_retrieved_examples() -> None:
     assert "Retrieved Pattern RAG examples" in system_content
     assert '"cause": {"span": "Rain"}' in system_content
     assert '"effect": {"span": "flooding"}' in system_content
+
+
+def test_build_messages_labels_knn_pattern_mode() -> None:
+    messages = build_messages(
+        "Heavy rain caused flooding.",
+        use_rag=True,
+        retriever=FakeRetriever(),
+        top_k=1,
+        rag_mode="knn_pattern",
+    )
+
+    assert "Retrieved KNN+Pattern RAG examples" in messages[0]["content"]

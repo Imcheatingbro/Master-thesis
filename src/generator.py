@@ -50,13 +50,20 @@ def generate(
     retriever: RetrieverProtocol | None,
     use_rag: bool,
     top_k: int,
+    rag_mode: str = "pattern",
     max_retry: int = 2,
 ) -> dict[str, Any]:
     """主入口：构造 prompt、调用 LLM、解析输出，失败后返回兜底结果。"""
     last_error: Exception | None = None
     for attempt in range(1, max_retry + 1):
         try:
-            messages = build_messages(text, use_rag=use_rag, retriever=retriever, top_k=top_k)
+            messages = build_messages(
+                text,
+                use_rag=use_rag,
+                retriever=retriever,
+                top_k=top_k,
+                rag_mode=rag_mode,
+            )
             raw_output = call_llm(messages, client)
             parsed = parse_output(raw_output)
             return {

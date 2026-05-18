@@ -11,7 +11,7 @@ PROMPT_PATH = Path(__file__).resolve().parents[1] / "prompts" / "v1.txt"
 
 
 class RetrieverProtocol(Protocol):
-    """PatternRetriever 的最小接口。"""
+    """RAG 检索器的最小接口。"""
 
     def retrieve(self, text: str, top_k: int) -> list[dict[str, object]]:
         """检索 top-k 个 few-shot examples。"""
@@ -22,15 +22,16 @@ def build_messages(
     use_rag: bool,
     retriever: RetrieverProtocol | None,
     top_k: int,
+    rag_mode: str = "pattern",
 ) -> list[dict[str, str]]:
-    """根据 RAG 开关构造 OpenAI chat messages。"""
+    """根据 RAG 开关与模式构造 OpenAI chat messages。"""
     template = PROMPT_PATH.read_text(encoding="utf-8")
     rag_examples = ""
     if use_rag:
         if retriever is None:
             raise ValueError("use_rag=True 时必须提供 retriever")
         examples = retriever.retrieve(text, top_k)
-        rag_examples = format_rag_examples(examples)
+        rag_examples = format_rag_examples(examples, rag_mode=rag_mode)
 
     system_content = template.replace("{rag_examples}", rag_examples).replace("{input_text}", text)
     return [
@@ -39,12 +40,12 @@ def build_messages(
     ]
 
 
-def format_rag_examples(examples: list[dict[str, object]]) -> str:
+def format_rag_examples(examples: list[dict[str, object]], rag_mode: str = "pattern") -> str:
     """将检索结果转换成 prompt 中的 JSON few-shot examples。"""
     if not examples:
         return ""
 
-    blocks = ["Retrieved Pattern RAG examples:"]
+    blocks = [f"Retrieved {_rag_mode_label(rag_mode)} examples:"]
     for index, example in enumerate(examples, start=1):
         output = {
             "has_causal": True,
@@ -67,3 +68,12 @@ def format_rag_examples(examples: list[dict[str, object]]) -> str:
             )
         )
     return "\n\n".join(blocks)
+
+
+def _rag_mode_label(rag_mode: str) -> str:
+    labels = {
+        "pattern": "Pattern RAG",
+        "knn": "KNN RAG",
+        "knn_pattern": "KNN+Pattern RAG",
+    }
+    return labels.get(rag_mode.strip().lower(), "RAG")

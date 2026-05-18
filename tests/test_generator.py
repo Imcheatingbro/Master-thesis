@@ -27,6 +27,25 @@ class FakeClient:
         return output
 
 
+class RecordingRetriever:
+    """记录被调用参数的测试检索器。"""
+
+    def __init__(self) -> None:
+        self.calls: list[tuple[str, int]] = []
+
+    def retrieve(self, text: str, top_k: int) -> list[dict[str, object]]:
+        self.calls.append((text, top_k))
+        return [
+            {
+                "sentence": "<cause>Rain</cause> caused <effect>flooding</effect>.",
+                "cause": "Rain",
+                "effect": "flooding",
+                "causality_phrase": "caused",
+                "score": 99.0,
+            }
+        ]
+
+
 def test_parse_output_accepts_plain_json() -> None:
     result = parse_output('{"has_causal": true, "triples": []}')
 
@@ -111,3 +130,22 @@ def test_generate_returns_fallback_after_retries_are_exhausted() -> None:
 
     assert client.calls == 2
     assert result == {"id": None, "has_causal": False, "triples": []}
+
+
+def test_generate_passes_rag_mode_to_prompt_builder() -> None:
+    client = FakeClient(['{"has_causal": true, "triples": []}'])
+    retriever = RecordingRetriever()
+
+    result = generate(
+        text="Rain caused flooding.",
+        sample_id=3,
+        client=client,
+        retriever=retriever,
+        use_rag=True,
+        top_k=1,
+        rag_mode="knn_pattern",
+        max_retry=1,
+    )
+
+    assert result == {"id": 3, "has_causal": True, "triples": []}
+    assert retriever.calls == [("Rain caused flooding.", 1)]

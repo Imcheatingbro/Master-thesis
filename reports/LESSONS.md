@@ -30,3 +30,16 @@
 - Demo1 的最小校验只检查 `has_causal: bool` 与 `triples: list`，不在本阶段做 span 子串评估或 relation-level 指标，这些留给 SPEC_05。
 - `load_dataset` 按实际路径读取 `data/Dataset_1_CNC_modified.jsonl` 与 `data/Dataset_2_Li_modified.jsonl`；sample 模式暂取前 N 条，保证 notebook 行为可复现。
 - 真实 LM Studio smoke test 使用 `Heavy rain caused widespread flooding in the region.`，成功解析出 1 条 causal triple，未触发兜底。
+
+## Notebook 内核与导入路径修正
+
+- Jupyter 从 notebooks 目录或普通 Python 内核启动时，项目根目录不会自动进入 sys.path，因此 from src... 会报 ModuleNotFoundError；在 notebook 初始化 cell 中加入项目根目录兜底。
+- Master_thesis 环境需要安装并注册 ipykernel 后，Jupyter 界面才会出现对应内核；notebook 元数据同步指向 Master_thesis，减少误选普通内核导致的依赖不一致。
+- notebook 验收 cell 访问项目文件时不能直接使用相对路径；应复用初始化 cell 的 PROJECT_ROOT，否则从 notebooks 目录启动时会误查 notebooks 子目录。
+
+## SPEC_03 KNN+Pattern RAG 扩展
+
+- `Xenova/text-embedding-ada-002` 只是 OpenAI ada-002 tokenizer 的 Hugging Face 兼容版，不能替代真实 embedding encoder；本项目改用 `BAAI/bge-small-en-v1.5` 生成本地 sentence embeddings。
+- 为后续大量 evaluation，BGE cache 使用 `RAG Database/bge-small-en-v1.5_examples.jsonl` 与 `RAG Database/bge-small-en-v1.5_embeddings.npy`，避免在 CSV 中反复解析长 float 字符串。
+- 单独 Pattern RAG 仍保留；当 BGE metadata cache 存在时，PatternRetriever 默认使用同一份 jsonl metadata，实现 Pattern、KNN、KNN+Pattern 三种模式共享 example metadata。
+- KNN+Pattern RAG 按参考代码习惯先拼接 Pattern examples，再拼接 KNN examples，并按 `(sentence, cause, effect)` 去重；因此最终 examples 数量最多为 `2 * RAG_TOP_K`。

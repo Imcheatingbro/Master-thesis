@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-import csv
+import json
 import logging
 import re
 from pathlib import Path
@@ -10,37 +10,33 @@ from typing import Any
 
 from rapidfuzz import fuzz
 
+from src.embedding_cache import DEFAULT_BGE_METADATA_PATH, DEFAULT_PATTERN_DB_PATH, load_examples_from_csv
+
 
 LOGGER = logging.getLogger(__name__)
-DEFAULT_PATTERN_DB_PATH = (
-    Path(__file__).resolve().parents[1] / "RAG Database" / "comb_SCITEsemADE_CausalityPattern.csv"
-)
 
 
 class PatternRetriever:
     """从 causal pattern database 中检索与输入文本相似的 examples。"""
 
-    def __init__(self, pattern_db_path: Path | str = DEFAULT_PATTERN_DB_PATH) -> None:
-        self.pattern_db_path = Path(pattern_db_path)
+    def __init__(self, pattern_db_path: Path | str | None = None) -> None:
+        self.pattern_db_path = self._resolve_pattern_db_path(pattern_db_path)
         self.examples = self._load_examples(self.pattern_db_path)
 
     @staticmethod
+    def _resolve_pattern_db_path(pattern_db_path: Path | str | None) -> Path:
+        if pattern_db_path is not None:
+            return Path(pattern_db_path)
+        if DEFAULT_BGE_METADATA_PATH.exists():
+            return DEFAULT_BGE_METADATA_PATH
+        return DEFAULT_PATTERN_DB_PATH
+
+    @staticmethod
     def _load_examples(pattern_db_path: Path) -> list[dict[str, str]]:
-        examples: list[dict[str, str]] = []
-        with pattern_db_path.open("r", encoding="utf-8", newline="") as file:
-            reader = csv.DictReader(file)
-            for row in reader:
-                phrase = (row.get("causality_phrase") or "").strip()
-                if not phrase:
-                    continue
-                examples.append(
-                    {
-                        "sentence": row.get("sentence", ""),
-                        "cause": row.get("cause_t", ""),
-                        "effect": row.get("effect_t", ""),
-                        "causality_phrase": phrase,
-                    }
-                )
+        if pattern_db_path.suffix.lower() == ".jsonl":
+            examples = _load_examples_from_jsonl(pattern_db_path)
+        else:
+            examples = load_examples_from_csv(pattern_db_path)
         LOGGER.info("Pattern DB 已加载：path=%s examples=%s", pattern_db_path, len(examples))
         return examples
 
@@ -65,6 +61,7 @@ class PatternRetriever:
                 "effect": example["effect"],
                 "causality_phrase": example["causality_phrase"],
                 "score": round(score, 4),
+                "source": "pattern",
             }
             for score, _phrase_score, _overlap_score, _index, example in scored[:top_k]
         ]
@@ -102,3 +99,20 @@ class PatternRetriever:
             return 0.0
         overlap = len(text_tokens & example_tokens) / len(text_tokens)
         return overlap * 10.0
+
+
+def _load_examples_from_jsonl(pattern_db_path: Path) -> list[dict[str, str]]:
+    examples: list[dict[str, str]] = []
+    with pattern_db_path.open("r", encoding="utf-8") as file:
+        for line in file:
+            if line.strip():
+                row = json.loads(line)
+                examples.append(
+                    {
+                        "sentence": row.get("sentence", ""),
+                        "cause": row.get("cause", ""),
+                        "effect": row.get("effect", ""),
+                        "causality_phrase": row.get("causality_phrase", ""),
+                    }
+                )
+    return examples

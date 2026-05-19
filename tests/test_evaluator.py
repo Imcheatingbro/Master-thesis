@@ -4,7 +4,15 @@ from __future__ import annotations
 
 import pytest
 
-from src.evaluator import Evaluator, match_triples, preprocess_span, token_f1
+from src.evaluator import (
+    Evaluator,
+    build_sample_judgement,
+    match_triples,
+    match_triples_original_like,
+    original_like_span_score,
+    preprocess_span,
+    token_f1,
+)
 
 
 def test_preprocess_span_normalizes_articles_punctuation_case_and_spaces() -> None:
@@ -38,6 +46,30 @@ def test_match_triples_uses_greedy_one_to_one_matching_and_threshold() -> None:
 
     assert match_triples(pred_triples, gold_relations, threshold=0.8) == (1, 1, 0)
     assert match_triples(pred_triples, gold_relations, threshold=0.81) == (0, 2, 1)
+
+
+def test_original_like_span_score_slides_gold_length_window_over_prediction() -> None:
+    assert original_like_span_score("street flooding", "serious street flooding") == pytest.approx(100.0)
+    assert original_like_span_score("serious street flooding", "street flooding") == pytest.approx(0.0)
+    assert original_like_span_score("heavy rain", "") == pytest.approx(0.0)
+
+
+def test_match_triples_original_like_uses_cause_and_effect_window_threshold() -> None:
+    pred_triples = [
+        {
+            "cause": {"span": "a heavy rain"},
+            "relation": "caused",
+            "effect": {"span": "serious street flooding"},
+        },
+        {
+            "cause": {"span": "street flooding"},
+            "relation": "caused",
+            "effect": {"span": "heavy rain"},
+        },
+    ]
+    gold_relations = [{"cause": "heavy rain", "effect": "street flooding"}]
+
+    assert match_triples_original_like(pred_triples, gold_relations, threshold=90.0) == (1, 1, 0)
 
 
 def test_evaluator_reports_detection_and_two_extraction_views() -> None:
@@ -136,6 +168,14 @@ def test_evaluator_reports_detection_and_two_extraction_views() -> None:
     assert detected_only["fn"] == 1
     assert detected_only["f1"] == pytest.approx(2 / 3)
 
+    original_like = report["extraction"]["original_like"]
+    assert original_like["n_eval_samples"] == 5
+    assert original_like["n_gold_triples"] == 4
+    assert original_like["n_pred_triples"] == 4
+    assert original_like["tp"] == 0
+    assert original_like["fp"] == 4
+    assert original_like["fn"] == 4
+
 
 def test_format_report_contains_progress_snapshot_fields() -> None:
     evaluator = Evaluator()
@@ -154,3 +194,30 @@ def test_format_report_contains_progress_snapshot_fields() -> None:
     assert "[Layer 1] Detection" in formatted
     assert "[Layer 2A] Extraction all_samples" in formatted
     assert "[Layer 2B] Extraction detected_only" in formatted
+    assert "[Layer 2C] Extraction original_like" in formatted
+
+
+def test_build_sample_judgement_exposes_first_ten_debug_fields() -> None:
+    judgement = build_sample_judgement(
+        prediction={
+            "id": 7,
+            "has_causal": True,
+            "triples": [
+                {
+                    "cause": {"span": "a heavy rain"},
+                    "relation": "caused",
+                    "effect": {"span": "serious street flooding"},
+                }
+            ],
+        },
+        gold={"id": 7, "text": "Heavy rain caused street flooding.", "has_causal": True, "relations": [
+            {"cause": "heavy rain", "effect": "street flooding"}
+        ]},
+    )
+
+    assert judgement["id"] == 7
+    assert judgement["text"] == "Heavy rain caused street flooding."
+    assert judgement["token_f1"]["counts"] == {"tp": 1, "fp": 0, "fn": 0}
+    assert judgement["original_like"]["counts"] == {"tp": 1, "fp": 0, "fn": 0}
+    assert judgement["gold_relations"] == [{"cause": "heavy rain", "effect": "street flooding"}]
+    assert judgement["pred_triples"][0]["cause"]["span"] == "a heavy rain"

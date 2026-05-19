@@ -4,6 +4,8 @@
 
 - Evaluator 不直接打印，提供 `format_report()` 返回字符串；notebook 负责 `print`，避免违反模块内不使用 `print` 的项目约定。
 - Extraction 同时输出两套指标：`all_samples` 忽略 `has_causal` 字段，在全部样本上匹配 triples；`detected_only` 只在 gold=True 且 pred=True 的样本上评估 span 质量，用于剥离 detection 错误后观察抽取边界。
+- 增加 `original_like` 抽取指标，用原作者风格的字符窗口 fuzzy ratio 同时判断 cause/effect；该口径比 token F1 更严格，尤其是预测 span 短于 gold span 时会直接无法命中。
+- notebook 的最终 eval cell 追加前 10 条样本明细，输出 gold/pred triples 以及 `token_f1`、`original_like` 的 TP/FP/FN，方便定位分数偏低来自 span 边界、漏抽还是误抽。
 - notebook eval helper 使用 `tqdm.auto` 显示进度条，并按 `EVAL_PROGRESS_EVERY` 周期输出当前累计 report；完整数据集评估默认由 `RUN_FULL_EVAL=False` 关闭，避免误触发长时间 LM Studio 推理。
 
 ## SPEC_01 数据清洗实现

@@ -1,5 +1,11 @@
 # LESSONS
 
+## SPEC_05 Evaluator 实现
+
+- Evaluator 不直接打印，提供 `format_report()` 返回字符串；notebook 负责 `print`，避免违反模块内不使用 `print` 的项目约定。
+- Extraction 同时输出两套指标：`all_samples` 忽略 `has_causal` 字段，在全部样本上匹配 triples；`detected_only` 只在 gold=True 且 pred=True 的样本上评估 span 质量，用于剥离 detection 错误后观察抽取边界。
+- notebook eval helper 使用 `tqdm.auto` 显示进度条，并按 `EVAL_PROGRESS_EVERY` 周期输出当前累计 report；完整数据集评估默认由 `RUN_FULL_EVAL=False` 关闭，避免误触发长时间 LM Studio 推理。
+
 ## SPEC_01 数据清洗实现
 
 - 实际数据文件直接位于 `Data` 目录，未采用规范示例中的 `data/raw` 与 `data/modified` 分层；按项目作者要求，脚本位于 `Data/script`，新数据直接写回 `Data`。

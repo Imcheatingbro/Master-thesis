@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import difflib
 import re
 import string
 from dataclasses import dataclass
@@ -10,7 +9,6 @@ from typing import Any
 
 
 FUZZY_THRESHOLD = 0.8
-ORIGINAL_LIKE_THRESHOLD = 90.0
 ARTICLES = {"a", "an", "the"}
 
 
@@ -58,16 +56,12 @@ class Evaluator:
         self.det_fn = 0
         self.all_samples_counts = Counts()
         self.detected_only_counts = Counts()
-        self.original_like_counts = Counts()
         self.all_samples_n_eval = 0
         self.all_samples_gold_triples = 0
         self.all_samples_pred_triples = 0
         self.detected_only_n_eval = 0
         self.detected_only_gold_triples = 0
         self.detected_only_pred_triples = 0
-        self.original_like_n_eval = 0
-        self.original_like_gold_triples = 0
-        self.original_like_pred_triples = 0
 
     def update(self, prediction: dict[str, Any], gold: dict[str, Any]) -> None:
         """用单条 prediction 与 gold 更新累计指标。"""
@@ -81,7 +75,6 @@ class Evaluator:
         self.n_causal_pred += int(pred_has_causal)
         self._update_detection(pred_has_causal=pred_has_causal, gold_has_causal=gold_has_causal)
         self._update_all_samples(pred_triples=pred_triples, gold_relations=gold_relations)
-        self._update_original_like(pred_triples=pred_triples, gold_relations=gold_relations)
 
         if pred_has_causal and gold_has_causal:
             self._update_detected_only(pred_triples=pred_triples, gold_relations=gold_relations)
@@ -117,12 +110,6 @@ class Evaluator:
                     n_gold_triples=self.detected_only_gold_triples,
                     n_pred_triples=self.detected_only_pred_triples,
                 ),
-                "original_like": self._extraction_report(
-                    self.original_like_counts,
-                    n_eval_samples=self.original_like_n_eval,
-                    n_gold_triples=self.original_like_gold_triples,
-                    n_pred_triples=self.original_like_pred_triples,
-                ),
             },
             "fuzzy_threshold": self.threshold,
         }
@@ -133,7 +120,6 @@ class Evaluator:
         detection = report["detection"]
         all_samples = report["extraction"]["all_samples"]
         detected_only = report["extraction"]["detected_only"]
-        original_like = report["extraction"]["original_like"]
         lines = [
             f"================ {title} ================",
             f"样本总数: {report['n_samples']}",
@@ -154,10 +140,6 @@ class Evaluator:
             "[Layer 2B] Extraction detected_only",
             "  说明: 只在 gold=True 且 pred=True 的样本上评估 span 质量。",
             _format_extraction_block(detected_only),
-            "",
-            "[Layer 2C] Extraction original_like",
-            "  说明: 使用原作者风格的字符窗口 fuzzy ratio，cause/effect 都需大于 90。",
-            _format_extraction_block(original_like),
             "================================================",
         ]
         return "\n".join(lines)
@@ -185,13 +167,6 @@ class Evaluator:
         self.detected_only_n_eval += 1
         self.detected_only_gold_triples += len(gold_relations)
         self.detected_only_pred_triples += len(pred_triples)
-
-    def _update_original_like(self, pred_triples: list[Any], gold_relations: list[Any]) -> None:
-        tp, fp, fn = match_triples_original_like(pred_triples, gold_relations)
-        self.original_like_counts.add(tp, fp, fn)
-        self.original_like_n_eval += 1
-        self.original_like_gold_triples += len(gold_relations)
-        self.original_like_pred_triples += len(pred_triples)
 
     @staticmethod
     def _extraction_report(
@@ -266,60 +241,11 @@ def match_triples(
     return tp, fp, fn
 
 
-def original_like_span_score(gold_span: str, pred_span: str) -> float:
-    """按原作者风格，在 pred 内滑动 gold 长度窗口计算最高字符相似度。"""
-    gold = gold_span.lower()
-    pred = pred_span.lower()
-    if not gold or not pred or len(pred) < len(gold):
-        return 0.0
-
-    window_size = len(gold)
-    scores = []
-    for index in range(len(pred) - window_size + 1):
-        window = pred[index : index + window_size]
-        scores.append(difflib.SequenceMatcher(None, window, gold).ratio() * 100)
-    return max(scores) if scores else 0.0
-
-
-def match_triples_original_like(
-    pred_triples: list[Any],
-    gold_relations: list[Any],
-    threshold: float = ORIGINAL_LIKE_THRESHOLD,
-) -> tuple[int, int, int]:
-    """用原作者风格 fuzzy ratio 统计 triple 级 TP/FP/FN。"""
-    pair_scores = []
-    for pred_index, pred_triple in enumerate(pred_triples):
-        pred_cause = _pred_span(pred_triple, "cause")
-        pred_effect = _pred_span(pred_triple, "effect")
-        for gold_index, gold_relation in enumerate(gold_relations):
-            gold_cause = str(gold_relation.get("cause", "")) if isinstance(gold_relation, dict) else ""
-            gold_effect = str(gold_relation.get("effect", "")) if isinstance(gold_relation, dict) else ""
-            cause_score = original_like_span_score(gold_cause, pred_cause)
-            effect_score = original_like_span_score(gold_effect, pred_effect)
-            pair_scores.append((min(cause_score, effect_score), pred_index, gold_index))
-
-    matched_preds: set[int] = set()
-    matched_golds: set[int] = set()
-    for score, pred_index, gold_index in sorted(pair_scores, key=lambda item: item[0], reverse=True):
-        if score <= threshold:
-            break
-        if pred_index in matched_preds or gold_index in matched_golds:
-            continue
-        matched_preds.add(pred_index)
-        matched_golds.add(gold_index)
-
-    tp = len(matched_preds)
-    fp = len(pred_triples) - tp
-    fn = len(gold_relations) - tp
-    return tp, fp, fn
-
-
 def build_sample_judgement(prediction: dict[str, Any], gold: dict[str, Any]) -> dict[str, Any]:
-    """构造单条样本的调试判定，供 notebook 展示前十条明细。"""
+    """构造单条样本的调试判定，供 notebook 展示或写入报告。"""
     pred_triples = _as_list(prediction.get("triples"))
     gold_relations = _as_list(gold.get("relations"))
     token_counts = match_triples(pred_triples, gold_relations)
-    original_counts = match_triples_original_like(pred_triples, gold_relations)
     return {
         "id": gold.get("id", prediction.get("id")),
         "text": gold.get("text", ""),
@@ -328,7 +254,6 @@ def build_sample_judgement(prediction: dict[str, Any], gold: dict[str, Any]) -> 
         "gold_relations": gold_relations,
         "pred_triples": pred_triples,
         "token_f1": {"counts": _counts_dict(token_counts)},
-        "original_like": {"counts": _counts_dict(original_counts)},
     }
 
 

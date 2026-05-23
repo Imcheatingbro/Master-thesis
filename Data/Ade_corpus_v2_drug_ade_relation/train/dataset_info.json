@@ -1,0 +1,74 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "Ade_corpus_v2_drug_ade_relation",
+  "dataset_name": "ade_corpus_v2",
+  "dataset_size": 1549599,
+  "description": "",
+  "download_size": 491362,
+  "features": {
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "drug": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "effect": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "indexes": {
+      "drug": {
+        "start_char": {
+          "feature": {
+            "dtype": "int32",
+            "_type": "Value"
+          },
+          "_type": "List"
+        },
+        "end_char": {
+          "feature": {
+            "dtype": "int32",
+            "_type": "Value"
+          },
+          "_type": "List"
+        }
+      },
+      "effect": {
+        "start_char": {
+          "feature": {
+            "dtype": "int32",
+            "_type": "Value"
+          },
+          "_type": "List"
+        },
+        "end_char": {
+          "feature": {
+            "dtype": "int32",
+            "_type": "Value"
+          },
+          "_type": "List"
+        }
+      }
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 2040961,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 1549599,
+      "num_examples": 6821,
+      "dataset_name": "ade_corpus_v2"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

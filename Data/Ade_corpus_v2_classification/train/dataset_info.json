@@ -1,0 +1,39 @@
+{
+  "builder_name": "parquet",
+  "citation": "",
+  "config_name": "Ade_corpus_v2_classification",
+  "dataset_name": "ade_corpus_v2",
+  "dataset_size": 3406639,
+  "description": "",
+  "download_size": 1706476,
+  "features": {
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label": {
+      "names": [
+        "Not-Related",
+        "Related"
+      ],
+      "_type": "ClassLabel"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 5113115,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 3406639,
+      "num_examples": 23516,
+      "dataset_name": "ade_corpus_v2"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

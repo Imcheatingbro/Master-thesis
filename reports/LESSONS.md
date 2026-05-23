@@ -11,6 +11,7 @@
 
 ## SPEC_01 数据清洗实现
 
+- ADE benchmark 只作为 Hugging Face 原始快照下载到 `Data/Ade_corpus_v2_classification` 和 `Data/Ade_corpus_v2_drug_ade_relation`；脚本位于 `Data/script/download_ade_hf_datasets.py`，使用 `datasets.load_dataset(...).save_to_disk(...)`，不做清洗或字段重构。
 - 实际数据文件直接位于 `Data` 目录，未采用规范示例中的 `data/raw` 与 `data/modified` 分层；清洗脚本位于 `Data/script`，清洗产物也写回 `Data`。
 - CNC 清洗按 `causal_text_w_pairs` 解析 `<ARG0>` 和 `<ARG1>`，先剥离 `<SIGn>` 标签，再做 cause/effect 子串校验；Li 清洗先从句内 `<eN>` 标签建立实体映射，再按 label 中的 `(eX,eY)` 提取多对因果关系。
 - 清洗过程只剥离标注标签与首尾空白，保留原始文本内部空格和标点空格；这是下游 span 子串校验和评估可复现的基础。

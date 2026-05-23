@@ -64,6 +64,7 @@
 
 ## SPEC_05 Evaluator 实现
 
+- SPEC_05 的运行编排已从 notebook 抽到 `src/eval_pipeline.py`：该文件负责循环生成、进度快照、报告落盘和前 10 条样本展示；`src/evaluator.py` 继续只负责匹配算法与指标累计，Cell P 只构造 `EvalRunConfig`。
 - `Evaluator` 流式累计指标，不直接打印；`format_report()` 返回字符串，notebook 负责展示，这样既适合长评估过程，也符合模块内不使用 `print` 的约定。
 - Detection 是句子级二分类，按 `has_causal` 统计 TP/TN/FP/FN、accuracy、precision、recall、F1。
 - 当前主评估流程分两层：第一层 detection 按 `has_causal` 做句子级二分类；第二层 extraction 不依赖 `has_causal`，直接比较模型输出的 `triples` 与 gold `relations`。
@@ -73,6 +74,6 @@
 - 曾实现过 `original_like` 指标来近似原作者 evaluation：对每个 span 先小写，如果预测 span 短于 gold span 就直接得 0；否则在预测 span 中用 gold span 长度滑动窗口，逐窗口用字符级 fuzzy ratio 取最高分；cause 和 effect 都必须大于 90，triple 才算命中。
 - 删除 `original_like` 的原因是它对 Demo1 的 prompt 调优过于严格：模型只要少输出一个主语、时间地点修饰、冠词或边界稍短，就可能整条 triple 变成 FN/FP；这种口径更适合复现原论文表格，不适合当前阶段判断 prompt 是否在语义上抽对了因果事件。
 - `build_sample_judgement()` 输出单条样本的 text、gold/pred has_causal、gold/pred triples，以及 token-F1 的 TP/FP/FN，便于定位分数偏低来自漏抽、误抽还是 span 边界。
-- SPEC_05 notebook helper 不能隐式依赖前面 cell 已经导入 `load_dataset`、`generate` 或创建 `retriever`；Cell P 已自带必要 imports，并在 `USE_RAG=True` 时复用已有 retriever 或即时创建。
+- SPEC_05 notebook 的 Cell P 不再定义运行函数，只负责导入 `load_dataset`、`EvalRunConfig`、`run_stream_eval` 并构造 `eval_config`；RAG retriever 的复用或即时创建放在 `eval_pipeline.py`，避免 notebook cell 之间隐藏函数依赖。
 - notebook eval helper 使用 `tqdm.auto` 展示进度，并按 `EVAL_PROGRESS_EVERY` 输出累计指标快照；完整数据集评估由 `RUN_FULL_EVAL=False` 默认关闭，避免误触发长时间 LM Studio 推理。
 - `SAVE_EVAL_REPORT=True` 时，Cell Q/Cell R 会把最终统计指标和本次评估的全部样本明细写入 `results/eval_report`；文件名包含模型、数据集、样本数量、prompt 名、RAG 配置和生成时间，便于对比不同 prompt 实验。

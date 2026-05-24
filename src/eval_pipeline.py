@@ -73,7 +73,7 @@ def run_stream_eval(
     generated_at: datetime | None = None,
 ) -> dict[str, Any]:
     """流式运行 eval，按需输出进度快照并保存完整 Markdown 报告。"""
-    evaluator = Evaluator()
+    evaluator = Evaluator(dataset=config.dataset)
     eval_retriever = _get_eval_retriever(config, existing_retriever)
     sample_judgements: list[dict[str, Any]] = []
     total = len(samples)
@@ -91,7 +91,7 @@ def run_stream_eval(
             prompt_name=config.prompt_name,
         )
         evaluator.update(prediction=prediction, gold=sample)
-        sample_judgements.append(build_sample_judgement(prediction=prediction, gold=sample))
+        sample_judgements.append(build_sample_judgement(prediction=prediction, gold=sample, dataset=config.dataset))
         if emit is not None and config.progress_every > 0 and index % config.progress_every == 0:
             emit("")
             emit(evaluator.format_report(title=f"{label} progress {index}/{total}"))
@@ -227,6 +227,9 @@ def format_sample_judgements(records: list[dict[str, Any]], title: str = "前 10
                 f"gold_has_causal={row.get('gold_has_causal', False)} | "
                 f"pred_has_causal={row.get('pred_has_causal', False)}",
                 f"token_f1 counts: {row.get('token_f1', {}).get('counts', {})}",
+                f"primary_metric: {row.get('primary_metric', 'strict_token_f1')}",
+                f"strict_token_f1 counts: {row.get('strict_token_f1', {}).get('counts', {})}",
+                f"anchor_window counts: {row.get('anchor_window', {}).get('counts', {})}",
                 "gold_relations:",
                 json.dumps(row.get("gold_relations", []), indent=2, ensure_ascii=False),
                 "pred_triples:",
@@ -272,6 +275,9 @@ def _format_sample_judgement(row: dict[str, Any]) -> list[str]:
     payload = {
         "gold_has_causal": row.get("gold_has_causal", False),
         "pred_has_causal": row.get("pred_has_causal", False),
+        "primary_metric": row.get("primary_metric", "strict_token_f1"),
+        "strict_token_f1_counts": row.get("strict_token_f1", {}).get("counts", {}),
+        "anchor_window_counts": row.get("anchor_window", {}).get("counts", {}),
         "token_f1_counts": row.get("token_f1", {}).get("counts", {}),
         "gold_relations": row.get("gold_relations", []),
         "pred_triples": row.get("pred_triples", []),

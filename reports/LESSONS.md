@@ -82,12 +82,12 @@
 - `Evaluator` 流式累计指标，不直接打印；`format_report()` 返回字符串，notebook 负责展示，这样既适合长评估过程，也符合模块内不使用 `print` 的约定。
 - Detection 是句子级二分类，按 `has_causal` 统计 TP/TN/FP/FN、accuracy、precision、recall、F1。
 - 当前主评估流程分两层：第一层 detection 按 `has_causal` 做句子级二分类；第二层 extraction 不依赖 `has_causal`，直接比较模型输出的 `triples` 与 gold `relations`。
-- Extraction 保留两套视角：`all_samples` 在全部样本上评估 triple 抽取，是当前 prompt 调优时最主要看的指标；`detected_only` 只在 gold=True 且 pred=True 的样本上观察 span 质量，用来排除 detection 错误后分析边界抽取。
-- token-F1 匹配会小写、去标点、去冠词、合并空格，再对 cause/effect 分别计算 token F1，并用二者最小值作为 triple pair 分数；默认阈值为 `0.8`。
+- Extraction 保留两套视角：`all_samples` 在全部样本上评估 triple 抽取，是当前 prompt 调优时最主要看的指标；`detected_only` 只在 gold=True 且 pred=True 的样本上观察 span 质量，用来排除 detection 错误后分析边界抽取，当前定位为诊断视图而不是主结果。
+- Extraction 也保留两套匹配指标：`strict_token_f1` 会小写、去标点、去冠词、合并空格，再对 cause/effect 分别计算 token F1，并用二者最小值作为 triple pair 分数；默认阈值为 `0.8`。`anchor_window` 会检查较短的 gold concept anchor 是否能在较长的 prediction span 中通过滑动窗口 fuzzy matching 命中；默认阈值为 `0.9`。
+- 不同数据集的主 extraction 指标按标注粒度选择：CNC/Li 的 gold 更接近完整 event/span，因此主指标为 `strict_token_f1`；ADE/CauseNet 的 gold 更接近 drug/disease/concept anchor，因此主指标为 `anchor_window`。报告会同时输出两套指标，避免隐藏不同口径带来的差异。
 - triple 匹配使用 greedy one-to-one matching：先计算所有 pred/gold triple pair 分数，再从高到低匹配；一个预测和一个 gold 都最多只能被命中一次，最后累计 TP/FP/FN。
-- 曾实现过 `original_like` 指标来近似原作者 evaluation：对每个 span 先小写，如果预测 span 短于 gold span 就直接得 0；否则在预测 span 中用 gold span 长度滑动窗口，逐窗口用字符级 fuzzy ratio 取最高分；cause 和 effect 都必须大于 90，triple 才算命中。
-- 删除 `original_like` 的原因是它对 Demo1 的 prompt 调优过于严格：模型只要少输出一个主语、时间地点修饰、冠词或边界稍短，就可能整条 triple 变成 FN/FP；这种口径更适合复现原论文表格，不适合当前阶段判断 prompt 是否在语义上抽对了因果事件。
-- `build_sample_judgement()` 输出单条样本的 text、gold/pred has_causal、gold/pred triples，以及 token-F1 的 TP/FP/FN，便于定位分数偏低来自漏抽、误抽还是 span 边界。
+- 曾删除过近似原作者 evaluation 的 `original_like` 指标，因为它不适合 CNC/Li 这类完整 span 标注；加入 ADE/CauseNet 后重新发现其“gold 较短、prediction 合理更长”的场景，因此以更明确的 `anchor_window` 名称回归，并只作为 concept-anchor 数据集的主指标。
+- `build_sample_judgement()` 输出单条样本的 text、gold/pred has_causal、gold/pred triples，以及 `strict_token_f1` 和 `anchor_window` 两套 TP/FP/FN，便于定位分数偏低来自漏抽、误抽、span 边界还是数据集标注粒度差异。
 - SPEC_05 notebook 的 Cell P 不再定义运行函数，只负责导入 `load_dataset`、`EvalRunConfig`、`run_stream_eval` 并构造 `eval_config`；RAG retriever 的复用或即时创建放在 `eval_pipeline.py`，避免 notebook cell 之间隐藏函数依赖。
 - notebook eval helper 使用 `tqdm.auto` 展示进度，并按 `EVAL_PROGRESS_EVERY` 输出累计指标快照；完整数据集评估由 `RUN_FULL_EVAL=False` 默认关闭，避免误触发长时间 LM Studio 推理。
 - `SAVE_EVAL_REPORT=True` 时，Cell Q/Cell R 会把最终统计指标和本次评估的全部样本明细写入 `results/eval_report`；文件名包含模型、数据集、样本数量、prompt 名、RAG 配置和生成时间，便于对比不同 prompt 实验。

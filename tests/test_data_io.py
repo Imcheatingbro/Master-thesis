@@ -46,3 +46,12 @@ def test_load_dataset_supports_ade_name(tmp_path: Path) -> None:
     samples = load_dataset("ade", data_dir=tmp_path)
 
     assert samples == rows
+
+
+def test_load_dataset_supports_causenet_name(tmp_path: Path) -> None:
+    rows = [{"id": 1, "text": "Rain caused flooding.", "has_causal": True, "relations": []}]
+    write_jsonl(tmp_path / "Dataset_4_causenet_modified.jsonl", rows)
+
+    samples = load_dataset("causenet", data_dir=tmp_path)
+
+    assert samples == rows

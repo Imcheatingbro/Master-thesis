@@ -2,3 +2,6 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 Data/Dataset_4_causenet_raw.jsonl
+Data/Dataset_4_causenet_modified.jsonl
+Data/Dataset_4_causenet_extra.jsonl
+Data/finetuning/Dataset_4_causenet_train.jsonl

@@ -19,12 +19,14 @@ def validate_jsonl(name: str, path: Path, stats: dict[str, Any]) -> str:
     if not data.endswith(b"\n") or b"\r\n" in data:
         raise AssertionError(f"{path} 不是 LF 结尾格式")
 
-    lines = path.read_text(encoding="utf-8").splitlines()
     ids: list[int] = []
     relation_sum = 0
     causal_samples = 0
     non_causal_samples = 0
     distribution: dict[str, int] = {}
+
+    with path.open("r", encoding="utf-8", newline="\n") as file:
+        lines = [line.rstrip("\n") for line in file]
 
     for line_no, line in enumerate(lines, start=1):
         sample = json.loads(line)
@@ -80,6 +82,9 @@ def main() -> None:
         validate_jsonl("li", DATA_DIR / "Dataset_2_Li_modified.jsonl", stats),
         validate_jsonl("ade_train", DATA_DIR / "finetuning" / "Dataset_3_ADE_train.jsonl", stats),
         validate_jsonl("ade", DATA_DIR / "Dataset_3_ADE_modified.jsonl", stats),
+        validate_jsonl("causenet_train", DATA_DIR / "finetuning" / "Dataset_4_causenet_train.jsonl", stats),
+        validate_jsonl("causenet", DATA_DIR / "Dataset_4_causenet_modified.jsonl", stats),
+        validate_jsonl("causenet_extra", DATA_DIR / "Dataset_4_causenet_extra.jsonl", stats),
     ]
     for summary in summaries:
         LOGGER.info(summary)

@@ -12,6 +12,7 @@ DATASET_FILES = {
     "cnc": "Dataset_1_CNC_modified.jsonl",
     "li": "Dataset_2_Li_modified.jsonl",
     "ade": "Dataset_3_ADE_modified.jsonl",
+    "causenet": "Dataset_4_causenet_modified.jsonl",
 }
 
 

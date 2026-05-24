@@ -17,6 +17,9 @@
 - 当前 ADE 清洗统计：classification `23516` 行、规范化后唯一句子 `20895` 条、BGE overlap 剔除 `1286` 条，切分前 source pool 为 `19609` 条样本、`4555` 条 relation，软错误统计均为 `0`。
 - ADE 清洗后会按 `has_causal` 分层随机切分，固定 `split_seed=20260524`，每个类别内分别打乱后按 7:3 切分；train 写入 `Data/finetuning/Dataset_3_ADE_train.jsonl`，test 覆盖保留为 `Data/Dataset_3_ADE_modified.jsonl`。
 - 当前 ADE split 结果：train `13727` 条（causal `2090`、non-causal `11637`、relations `3238`），test `5882` 条（causal `895`、non-causal `4987`、relations `1317`）；train/test 与 BGE examples 的规范化句子 overlap 均为 `0`。
+- CauseNet raw 使用 `Data/script/filter_causenet_raw.py` 流式过滤并原地替换 `Data/Dataset_4_causenet_raw.jsonl`；保留标准不是固定 source type 名称，而是 source 的 `payload.sentence` 非空，以免后续遇到新的 sentence source type 被误删。
+- CauseNet 中纯 `wikipedia_list` / `wikipedia_infobox` 等无句子 provenance 的 row 会被删除；若同一 row 混有 sentence 和非 sentence source，则保留该 row 及其 sentence source，并剔除无句子的 source，保证后续 text-to-triples demo 只面对有原句的证据。
+- 当前 CauseNet raw 过滤结果：原始 `197806` 行，保留 `180885` 行，删除 `16921` 行；保留 source `1941181` 个（`clueweb12_sentence` `1904792`、`wikipedia_sentence` `36389`），删除无句子 source `20307` 个（`wikipedia_list` `12391`、`wikipedia_infobox` `7916`）。复核结果为 invalid JSON `0`，无句子 source `0`。
 - 实际数据文件直接位于 `Data` 目录，未采用规范示例中的 `data/raw` 与 `data/modified` 分层；清洗脚本位于 `Data/script`，清洗产物也写回 `Data`。
 - CNC 清洗按 `causal_text_w_pairs` 解析 `<ARG0>` 和 `<ARG1>`，先剥离 `<SIGn>` 标签，再做 cause/effect 子串校验；Li 清洗先从句内 `<eN>` 标签建立实体映射，再按 label 中的 `(eX,eY)` 提取多对因果关系。
 - 清洗过程只剥离标注标签与首尾空白，保留原始文本内部空格和标点空格；这是下游 span 子串校验和评估可复现的基础。

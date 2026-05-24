@@ -78,6 +78,7 @@ def main() -> None:
     summaries = [
         validate_jsonl("cnc", DATA_DIR / "Dataset_1_CNC_modified.jsonl", stats),
         validate_jsonl("li", DATA_DIR / "Dataset_2_Li_modified.jsonl", stats),
+        validate_jsonl("ade_train", DATA_DIR / "finetuning" / "Dataset_3_ADE_train.jsonl", stats),
         validate_jsonl("ade", DATA_DIR / "Dataset_3_ADE_modified.jsonl", stats),
     ]
     for summary in summaries:

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import logging
+import random
 import re
 from collections import Counter
 from pathlib import Path
@@ -16,8 +17,12 @@ DATA_DIR = PROJECT_ROOT / "Data"
 CLASSIFICATION_DIR_NAME = "Ade_corpus_v2_classification"
 RELATION_DIR_NAME = "Ade_corpus_v2_drug_ade_relation"
 ADE_OUTPUT_NAME = "Dataset_3_ADE_modified.jsonl"
+ADE_TRAIN_OUTPUT_NAME = "Dataset_3_ADE_train.jsonl"
+FINETUNING_DIR_NAME = "finetuning"
 STATS_NAME = "stats.json"
 BGE_EXAMPLES_PATH = PROJECT_ROOT / "RAG Database" / "bge-small-en-v1.5_examples.jsonl"
+DEFAULT_TRAIN_RATIO = 0.7
+DEFAULT_SPLIT_SEED = 20260524
 TAG_PATTERN = re.compile(r"</?(?:cause|effect)>", flags=re.IGNORECASE)
 Sample = dict[str, Any]
 
@@ -102,6 +107,32 @@ def build_ade_samples(
     return samples, stats
 
 
+def split_samples(
+    samples: list[Sample],
+    train_ratio: float = DEFAULT_TRAIN_RATIO,
+    seed: int = DEFAULT_SPLIT_SEED,
+) -> tuple[list[Sample], list[Sample], dict[str, Any]]:
+    """按 causal/non-causal 分层随机切分，并重新编号 train/test。"""
+    causal_samples = [sample for sample in samples if sample["has_causal"]]
+    non_causal_samples = [sample for sample in samples if not sample["has_causal"]]
+    rng = random.Random(seed)
+    rng.shuffle(causal_samples)
+    rng.shuffle(non_causal_samples)
+
+    causal_train, causal_test = _split_group(causal_samples, train_ratio)
+    non_causal_train, non_causal_test = _split_group(non_causal_samples, train_ratio)
+    train = _renumber_samples(sorted(causal_train + non_causal_train, key=lambda sample: int(sample["id"])))
+    test = _renumber_samples(sorted(causal_test + non_causal_test, key=lambda sample: int(sample["id"])))
+    stats = {
+        "seed": seed,
+        "train_ratio": train_ratio,
+        "source_samples": len(samples),
+        "train": _build_file_stats(train, split_role="train", seed=seed, train_ratio=train_ratio),
+        "test": _build_file_stats(test, split_role="test", seed=seed, train_ratio=train_ratio),
+    }
+    return train, test, stats
+
+
 def write_jsonl(path: Path, samples: list[Sample]) -> None:
     """以 UTF-8 与 LF 换行写出 JSONL。"""
     with path.open("w", encoding="utf-8", newline="\n") as file:
@@ -129,15 +160,26 @@ def run_cleaning(
     relation_rows = _load_hf_train_split(target_dir / RELATION_DIR_NAME)
     excluded_texts = load_bge_example_texts(bge_examples_path)
     samples, ade_stats = build_ade_samples(classification_rows, relation_rows, excluded_texts)
+    train_samples, test_samples, split_stats = split_samples(samples)
 
-    write_jsonl(target_dir / ADE_OUTPUT_NAME, samples)
+    finetuning_dir = target_dir / FINETUNING_DIR_NAME
+    finetuning_dir.mkdir(parents=True, exist_ok=True)
+    write_jsonl(finetuning_dir / ADE_TRAIN_OUTPUT_NAME, train_samples)
+    write_jsonl(target_dir / ADE_OUTPUT_NAME, test_samples)
     stats_path = target_dir / STATS_NAME
     all_stats = json.loads(stats_path.read_text(encoding="utf-8")) if stats_path.exists() else {}
-    all_stats["ade"] = ade_stats
+    all_stats["ade_source"] = ade_stats
+    all_stats["ade_train"] = split_stats["train"]
+    all_stats["ade"] = split_stats["test"]
     write_stats(stats_path, all_stats)
 
-    LOGGER.info("ADE 数据清洗完成：samples=%s relations=%s", ade_stats["output_samples"], ade_stats["total_relations"])
-    return ade_stats
+    LOGGER.info(
+        "ADE 数据清洗完成：source=%s train=%s test=%s",
+        ade_stats["output_samples"],
+        split_stats["train"]["output_samples"],
+        split_stats["test"]["output_samples"],
+    )
+    return {"source": ade_stats, "split": split_stats}
 
 
 def main() -> None:
@@ -198,6 +240,41 @@ def _build_stats(
         "relation_count_distribution": dict(sorted(distribution.items(), key=lambda item: int(item[0]))),
         "warnings": warnings,
     }
+
+
+def _build_file_stats(
+    samples: list[Sample],
+    split_role: str,
+    seed: int,
+    train_ratio: float,
+) -> dict[str, Any]:
+    distribution = Counter(str(len(sample["relations"])) for sample in samples)
+    causal_samples = sum(1 for sample in samples if sample["has_causal"])
+    return {
+        "split_role": split_role,
+        "split_seed": seed,
+        "train_ratio": train_ratio,
+        "output_samples": len(samples),
+        "causal_samples": causal_samples,
+        "non_causal_samples": len(samples) - causal_samples,
+        "total_relations": sum(len(sample["relations"]) for sample in samples),
+        "relation_count_distribution": dict(sorted(distribution.items(), key=lambda item: int(item[0]))),
+        "warnings": {},
+    }
+
+
+def _split_group(samples: list[Sample], train_ratio: float) -> tuple[list[Sample], list[Sample]]:
+    train_count = int(len(samples) * train_ratio + 0.5)
+    return samples[:train_count], samples[train_count:]
+
+
+def _renumber_samples(samples: list[Sample]) -> list[Sample]:
+    renumbered = []
+    for new_id, sample in enumerate(samples, start=1):
+        row = dict(sample)
+        row["id"] = new_id
+        renumbered.append(row)
+    return renumbered
 
 
 def _is_related_label(label: Any) -> bool:

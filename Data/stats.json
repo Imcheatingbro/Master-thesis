@@ -40,5 +40,36 @@
       "substring_check_failed_relations": 0,
       "substring_check_failed_samples": 0
     }
+  },
+  "ade": {
+    "input_classification_rows": 23516,
+    "unique_classification_texts": 20895,
+    "input_relation_rows": 6821,
+    "bge_example_sentences": 2077,
+    "bge_excluded_samples": 1286,
+    "output_samples": 19609,
+    "causal_samples": 2985,
+    "non_causal_samples": 16624,
+    "total_relations": 4555,
+    "relation_count_distribution": {
+      "0": 16624,
+      "1": 2054,
+      "2": 650,
+      "3": 131,
+      "4": 77,
+      "5": 18,
+      "6": 29,
+      "7": 2,
+      "8": 17,
+      "9": 2,
+      "10": 1,
+      "12": 2,
+      "16": 1,
+      "18": 1
+    },
+    "warnings": {
+      "substring_check_failed_relations": 0,
+      "positive_without_relation": 0
+    }
   }
 }

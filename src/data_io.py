@@ -7,10 +7,11 @@ from pathlib import Path
 from typing import Any
 
 
-DATA_DIR = Path(__file__).resolve().parents[1] / "data"
+DATA_DIR = Path(__file__).resolve().parents[1] / "Data"
 DATASET_FILES = {
     "cnc": "Dataset_1_CNC_modified.jsonl",
     "li": "Dataset_2_Li_modified.jsonl",
+    "ade": "Dataset_3_ADE_modified.jsonl",
 }
 
 

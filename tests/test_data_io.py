@@ -37,3 +37,12 @@ def test_load_dataset_supports_li_name(tmp_path: Path) -> None:
     samples = load_dataset("li", data_dir=tmp_path)
 
     assert samples == rows
+
+
+def test_load_dataset_supports_ade_name(tmp_path: Path) -> None:
+    rows = [{"id": 1, "text": "Drug caused rash.", "has_causal": True, "relations": []}]
+    write_jsonl(tmp_path / "Dataset_3_ADE_modified.jsonl", rows)
+
+    samples = load_dataset("ade", data_dir=tmp_path)
+
+    assert samples == rows

@@ -6,12 +6,15 @@
 
 - 所有 Python 运行、测试和 notebook kernel 都应使用 conda 环境 `Master_thesis`；notebook 初始化 cell 会检查 `sys.executable`，避免误用 base 或其他环境。
 - 源码模块保持无交互输出：库代码使用 `logging`，展示型输出放在 notebook 或脚本入口中。
-- 文件路径在 Windows 上大小写不敏感，但项目里真实数据目录是 `Data`，部分源码默认路径写成 `data`；如果迁移到 Linux/macOS 的大小写敏感文件系统，需要统一路径大小写。
+- 文件路径在 Windows 上大小写不敏感，但项目里真实数据目录是 `Data`；`src/data_io.py` 的默认数据目录已统一为 `Data`，避免迁移到大小写敏感文件系统后找不到文件。
 - 当前工作流依赖本地 LM Studio OpenAI-compatible API；单元测试用 fake client 避免 pytest 依赖真实服务在线。
 
 ## SPEC_01 数据清洗实现
 
 - ADE benchmark 只作为 Hugging Face 原始快照下载到 `Data/Ade_corpus_v2_classification` 和 `Data/Ade_corpus_v2_drug_ade_relation`；脚本位于 `Data/script/download_ade_hf_datasets.py`，使用 `datasets.load_dataset(...).save_to_disk(...)`，不做清洗或字段重构。
+- `Data/script/clean_ade_data.py` 将 ADE classification 与 drug-ADE relation 合并成 `Dataset_3_ADE_modified.jsonl`：classification 负责句子级 `has_causal`，relation 的 `drug` 作为 cause、`effect` 作为 effect，同一句子多条关系合并到一个样本。
+- ADE 输出前会把 `RAG Database/bge-small-en-v1.5_examples.jsonl` 中出现过的句子剔除；比较时会去掉 `<cause>/<effect>` 标签、外层引号并合并空白，避免 RAG few-shot 库与 evaluation 数据串样。
+- 当前 ADE 清洗统计：classification `23516` 行、规范化后唯一句子 `20895` 条、BGE overlap 剔除 `1286` 条，最终输出 `19609` 条样本、`4555` 条 relation，软错误统计均为 `0`。
 - 实际数据文件直接位于 `Data` 目录，未采用规范示例中的 `data/raw` 与 `data/modified` 分层；清洗脚本位于 `Data/script`，清洗产物也写回 `Data`。
 - CNC 清洗按 `causal_text_w_pairs` 解析 `<ARG0>` 和 `<ARG1>`，先剥离 `<SIGn>` 标签，再做 cause/effect 子串校验；Li 清洗先从句内 `<eN>` 标签建立实体映射，再按 label 中的 `(eX,eY)` 提取多对因果关系。
 - 清洗过程只剥离标注标签与首尾空白，保留原始文本内部空格和标点空格；这是下游 span 子串校验和评估可复现的基础。
@@ -49,7 +52,7 @@
 - `parse_output()` 支持纯 JSON、markdown fenced code block、前缀解释文本和完整 `<think>...</think>` 包裹后的 JSON；如果模型输出未闭合 `<think>`，仍可能无法提取 JSON，需要通过关闭 thinking 或更强 prompt 约束规避。
 - Demo1 的最小校验只检查 `has_causal: bool` 与 `triples: list`，不在生成阶段强制检查 span 是否为原文子串；span 质量留给 SPEC_05 evaluator 统一评估。
 - `generate()` 会把 `rag_mode` 和 `prompt_name` 继续传给 prompt builder，因此同一套生成入口可以覆盖 Pattern、KNN、KNN+Pattern 和不同 prompt 版本。
-- `src/data_io.py` 的 `load_dataset()` 支持 `cnc`、`li` 和前 n 条样本读取；当前实现按前 N 条取样，不做随机抽样，便于 notebook demo/eval 可复现。
+- `src/data_io.py` 的 `load_dataset()` 支持 `cnc`、`li`、`ade` 和前 n 条样本读取；当前实现按前 N 条取样，不做随机抽样，便于 notebook demo/eval 可复现。
 - 真实 LM Studio smoke test 曾用 `Heavy rain caused widespread flooding in the region.` 成功解析出 causal triple，未触发兜底；这只能说明链路可跑通，不代表评估质量。
 
 ## Notebook 集成与运行经验

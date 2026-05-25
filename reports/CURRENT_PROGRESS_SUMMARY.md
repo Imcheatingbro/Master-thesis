@@ -11,6 +11,98 @@
 - BGE 检索使用本地缓存：`RAG Database/bge-small-en-v1.5_examples.jsonl` 与 `RAG Database/bge-small-en-v1.5_embeddings.npy`。
 - evaluation 已从 notebook 中抽出到 `src/eval_pipeline.py`，报告会落盘到 `results/eval_report`，并保存配置、最终指标、生成失败统计和样本明细。
 
+## 数据结构与当前数据文件
+
+当前四个可评估数据集都被统一成 JSONL，每一行是一条句子级样本：
+
+```json
+{
+  "id": 1,
+  "text": "原始句子文本",
+  "has_causal": true,
+  "relations": [
+    {
+      "cause": "gold cause span",
+      "effect": "gold effect span"
+    }
+  ]
+}
+```
+
+- `id`：当前文件内重新编号的样本 ID，不保证跨 train/test 或跨数据集唯一。
+- `text`：模型实际输入的句子文本。
+- `has_causal`：句子级 detection gold label。
+- `relations`：gold 因果关系列表；非因果样本为空列表。一个句子可以对应多个因果关系，例如同一句中有两个原因、两个结果或多个独立因果事件。
+- 生成端模型输出字段叫 `triples`，其中每条 triple 使用 `cause.span / relation / effect.span`；evaluation 时会把 `pred.triples` 与 `gold.relations` 做匹配。
+
+当前 `src.data_io.load_dataset()` 支持四个名称：
+
+| dataset 名称 | 文件 | 当前用途 | 主 evaluation 匹配方式 |
+|---|---|---|---|
+| `cnc` | `Data/Dataset_1_CNC_modified.jsonl` | eval/test | `strict_token_f1` |
+| `li` | `Data/Dataset_2_Li_modified.jsonl` | eval/test | `strict_token_f1` |
+| `ade` | `Data/Dataset_3_ADE_modified.jsonl` | eval/test | `anchor_window` |
+| `causenet` | `Data/Dataset_4_causenet_modified.jsonl` | eval/test | `anchor_window` |
+
+当前统计来自 `Data/stats.json`：
+
+| 数据集 | 样本数 | causal | non-causal | gold relations | 备注 |
+|---|---:|---:|---:|---:|---|
+| CNC | 3,075 | 1,624 | 1,451 | 2,257 | 原始 CSV 的 `<ARG0>/<ARG1>` span 被解析为较完整的事件/短语 span。 |
+| Li | 786 | 191 | 595 | 296 | 原始 XML 中实体标签映射为 cause/effect span。 |
+| ADE test | 5,882 | 895 | 4,987 | 1,317 | 从 Hugging Face classification + relation 两份数据合并；BGE example 中出现过的句子已剔除。 |
+| ADE train | 13,727 | 2,090 | 11,637 | 3,238 | 位于 `Data/finetuning/Dataset_3_ADE_train.jsonl`，按 causal/non-causal 分层随机切分，seed=`20260524`。 |
+| CauseNet test | 5,000 | 5,000 | 0 | 5,908 | 从 CauseNet sentence sources 清洗后随机抽样；全部为 causal 样本。 |
+| CauseNet train | 10,000 | 10,000 | 0 | 11,653 | 位于 `Data/finetuning/Dataset_4_causenet_train.jsonl`，seed=`20260524`。 |
+
+各数据集的标注粒度并不完全一致，这是后面采用两种 extraction 匹配方式的根本原因：
+
+- CNC/Li 更接近“文本 span 抽取”任务，gold 往往是较完整的短语或事件片段。例如 CNC 中：
+
+```json
+{
+  "text": "The State alleged they hacked Sabata Petros Chale , 39 , to death in Marikana West , on December 8 , 2016 , allegedly over the allocation of low cost ( RDP ) houses at Marikana West Extension 2 .",
+  "relations": [
+    {
+      "cause": "the allocation of low cost ( RDP ) houses at Marikana West Extension 2",
+      "effect": "they hacked Sabata Petros Chale , 39 , to death in Marikana West , on December 8 , 2016"
+    }
+  ]
+}
+```
+
+如果模型只输出 `hacked Sabata Petros Chale`，就漏掉了主语、时间、地点等成分。对 CNC/Li 来说，这类缺失应该被评价指标惩罚。
+
+- ADE/CauseNet 更接近“concept anchor 标注”，gold 往往比自然语言中的合理抽取 span 短。例如 ADE 中：
+
+```json
+{
+  "text": "Fixed drug eruption in hands caused by omeprazole.",
+  "relations": [
+    {
+      "cause": "omeprazole",
+      "effect": "eruption"
+    }
+  ]
+}
+```
+
+模型如果输出 `Fixed drug eruption in hands` 或 `drug eruption in hands` 作为 effect，并不一定是错误；只是它比 gold concept anchor 更长。再例如 CauseNet 中：
+
+```json
+{
+  "text": "Drug users also may become involved in risky sexual behaviors, which could lead to the spread of HIV, the virus that causes AIDS.",
+  "relations": [
+    {
+      "cause": "virus",
+      "effect": "AIDS"
+    }
+  ]
+}
+```
+
+模型可能抽到更自然的 `the virus`，甚至更长的局部短语。若用 CNC/Li 的严格 span 标准，会把大量“包含 gold anchor 的合理长 span”误判为错。
+
 ## 模型与 thinking 问题
 
 - 已测试 `qwen/qwen3-14b` 与 `Qwen3.5-9B` 系列模型。14B 在 4090 上速度可接受，并且 thinking 行为相对稳定。
@@ -22,13 +114,14 @@
 ## Evaluation 定义
 
 - Detection 是句子级二分类，直接比较 `pred.has_causal` 与 `gold.has_causal`，统计 Accuracy、Precision、Recall、F1 以及 TP/TN/FP/FN。
-- Extraction 分两种视角：
-- `all_samples`：忽略 `has_causal`，在全部样本上匹配 pred triples 与 gold relations，是当前主要观察指标。
-- `detected_only`：只在 gold=True 且 pred=True 的样本上观察 span 抽取质量，主要用于诊断。
-- Extraction 当前保留两种匹配方法：
-- `strict_token_f1`：对 cause/effect 分别做 token F1，并取二者较小值作为 triple pair 分数；CNC/Li 的主指标。
-- `anchor_window`：用于 ADE/CauseNet 这类 gold 更接近 concept anchor 的数据集。
-- 本文下方结果表使用 `Extraction all_samples` 的第一种方法，即 `strict_token_f1`。
+- Extraction 分两种统计视角：
+  - `all_samples`：忽略 `has_causal` 字段，直接在全部样本上匹配 `pred.triples` 与 `gold.relations`。这是当前主要观察指标，因为它把 detection 漏检也计入 extraction 的总体损失：如果 gold 有因果但模型说没有因果，就会产生 FN。
+  - `detected_only`：只在 `gold.has_causal=True` 且 `pred.has_causal=True` 的样本上观察 span 抽取质量。它不作为主要结论指标，主要用于诊断：当 `all_samples` 很低时，可以区分问题来自 detection 漏检，还是来自已经检测到因果之后 span 抽得不好。
+- Extraction 同时保留两种 span 匹配方法：
+  - `strict_token_f1`：先对 cause span 和 effect span 分别做 token-level F1，再取二者较小值作为一个 triple pair 的分数；分数达到 `0.8` 才算匹配成功。它适合 CNC/Li，因为这两个数据集的 gold 更像完整文本 span。例子：gold effect 是 `they hacked Sabata Petros Chale , 39 , to death in Marikana West , on December 8 , 2016`，如果模型只输出 `hacked Sabata Petros Chale`，应当被视为不完整抽取。
+  - `anchor_window`：把 gold cause/effect 当作较短的 concept anchor，只要 gold anchor 能在更长的 prediction span 中被窗口匹配到，且分数达到 `0.9`，就算匹配成功。它适合 ADE/CauseNet，因为这两个数据集的 gold 常常只是药物、疾病、概念词，而模型输出更长的自然语言 span 往往仍然合理。例子：gold 是 `azithromycin -> ototoxicity`，prediction 是 `Intravenous azithromycin -> severe ototoxicity`，`strict_token_f1` 会判失败，但 `anchor_window` 会判成功。
+- 主指标按数据集自动选择：`cnc/li` 使用 `strict_token_f1`，`ade/causenet` 使用 `anchor_window`。报告里仍同时输出两种方法，方便排查不同标注粒度带来的差异。
+- 本文下方三份结果表都是 `cnc` 前 20 条，因此表内 extraction 数值使用 `Extraction all_samples / strict_token_f1`。
 
 ## 当前三份结果对比
 

@@ -8,6 +8,7 @@
 - 源码模块保持无交互输出：库代码使用 `logging`，展示型输出放在 notebook 或脚本入口中。
 - 文件路径在 Windows 上大小写不敏感，但项目里真实数据目录是 `Data`；`src/data_io.py` 的默认数据目录已统一为 `Data`，避免迁移到大小写敏感文件系统后找不到文件。
 - 当前工作流依赖本地 LM Studio OpenAI-compatible API；单元测试用 fake client 避免 pytest 依赖真实服务在线。
+- 跨电脑复现环境使用根目录 `environment.yml`，避免使用 `conda list --export` 生成的 Windows 构建号锁文件；macOS 上应先安装 Miniforge/Miniconda，再运行 `conda env create -f environment.yml`，随后用 `python -m ipykernel install --user --name Master_thesis --display-name Master_thesis` 注册 notebook kernel。
 
 ## SPEC_01 数据清洗实现
 
@@ -25,6 +26,7 @@
 - CauseNet 二阶段清洗统计：输入 `180885` 行、`1941181` 个 sentence source，合并后 `786249` 个全因果句子样本、`918495` 条 relation；`substring_check_failed_relations` 为 `16630`，主要来自 concept 无法作为表面字符串在句中匹配，`duplicate_relations` 为 `1006056`，主要来自同一句同一因果关系被多个 provenance source 重复支持。
 - CauseNet 固定随机种子 `split_seed=20260524` 后抽样切分：train 写入 `Data/finetuning/Dataset_4_causenet_train.jsonl`，共 `10000` 条、`11653` 条 relation；test 写入 `Data/Dataset_4_causenet_modified.jsonl`，共 `5000` 条、`5908` 条 relation；剩余 `771249` 条、`900934` 条 relation 写入 `Data/Dataset_4_causenet_extra.jsonl`。三份文件之间句子 overlap 为 `0`。
 - CauseNet 真实句子里存在 Unicode 行分隔符等 `str.splitlines()` 会识别的字符；`Data/script/validate_outputs.py` 必须按文件对象逐行读取 JSONL，而不是对整文件 `read_text().splitlines()`，否则会把合法 JSON 字符串内部字符误当作记录边界。
+- `Data/Dataset_4_causenet_extra.jsonl` 属于大型剩余样本池，可移动到 `Data/raw/` 并不纳入 Git；`validate_outputs.py` 对 `causenet_extra` 采用“文件存在才验证”的可选逻辑，确保新电脑 clone 后只凭已提交数据也能完成验收。
 - 实际数据文件直接位于 `Data` 目录，未采用规范示例中的 `data/raw` 与 `data/modified` 分层；清洗脚本位于 `Data/script`，清洗产物也写回 `Data`。
 - CNC 清洗按 `causal_text_w_pairs` 解析 `<ARG0>` 和 `<ARG1>`，先剥离 `<SIGn>` 标签，再做 cause/effect 子串校验；Li 清洗先从句内 `<eN>` 标签建立实体映射，再按 label 中的 `(eX,eY)` 提取多对因果关系。
 - 清洗过程只剥离标注标签与首尾空白，保留原始文本内部空格和标点空格；这是下游 span 子串校验和评估可复现的基础。

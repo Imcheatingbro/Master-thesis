@@ -38,6 +38,33 @@ def test_validate_jsonl_handles_unicode_line_separator_inside_text(tmp_path: Pat
     assert summary == f"causenet: 1 samples, 1 relations, LF ok"
 
 
+def test_validation_targets_skip_missing_causenet_extra(tmp_path: Path) -> None:
+    module = _load_script_module()
+    (tmp_path / "finetuning").mkdir()
+    for path in [
+        tmp_path / "Dataset_1_CNC_modified.jsonl",
+        tmp_path / "Dataset_2_Li_modified.jsonl",
+        tmp_path / "Dataset_3_ADE_modified.jsonl",
+        tmp_path / "Dataset_4_causenet_modified.jsonl",
+        tmp_path / "finetuning" / "Dataset_3_ADE_train.jsonl",
+        tmp_path / "finetuning" / "Dataset_4_causenet_train.jsonl",
+    ]:
+        path.write_text("", encoding="utf-8")
+
+    targets = module.validation_targets(tmp_path)
+
+    assert [name for name, _ in targets] == ["cnc", "li", "ade_train", "ade", "causenet_train", "causenet"]
+
+
+def test_validation_targets_include_existing_causenet_extra(tmp_path: Path) -> None:
+    module = _load_script_module()
+    (tmp_path / "Dataset_4_causenet_extra.jsonl").write_text("", encoding="utf-8")
+
+    targets = module.validation_targets(tmp_path)
+
+    assert targets[-1] == ("causenet_extra", tmp_path / "Dataset_4_causenet_extra.jsonl")
+
+
 def _load_script_module() -> Any:
     spec = importlib.util.spec_from_file_location("validate_outputs", SCRIPT_PATH)
     assert spec is not None

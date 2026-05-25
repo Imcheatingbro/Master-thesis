@@ -73,19 +73,27 @@ def validate_jsonl(name: str, path: Path, stats: dict[str, Any]) -> str:
     return f"{name}: {len(lines)} samples, {relation_sum} relations, LF ok"
 
 
+def validation_targets(data_dir: Path) -> list[tuple[str, Path]]:
+    """返回当前仓库应验收的 JSONL 产物；大型 extra 文件存在时才验证。"""
+    targets = [
+        ("cnc", data_dir / "Dataset_1_CNC_modified.jsonl"),
+        ("li", data_dir / "Dataset_2_Li_modified.jsonl"),
+        ("ade_train", data_dir / "finetuning" / "Dataset_3_ADE_train.jsonl"),
+        ("ade", data_dir / "Dataset_3_ADE_modified.jsonl"),
+        ("causenet_train", data_dir / "finetuning" / "Dataset_4_causenet_train.jsonl"),
+        ("causenet", data_dir / "Dataset_4_causenet_modified.jsonl"),
+    ]
+    causenet_extra = data_dir / "Dataset_4_causenet_extra.jsonl"
+    if causenet_extra.exists():
+        targets.append(("causenet_extra", causenet_extra))
+    return targets
+
+
 def main() -> None:
     """执行完整产物验收。"""
     logging.basicConfig(level=logging.INFO, format="%(levelname)s:%(name)s:%(message)s")
     stats = json.loads((DATA_DIR / "stats.json").read_text(encoding="utf-8"))
-    summaries = [
-        validate_jsonl("cnc", DATA_DIR / "Dataset_1_CNC_modified.jsonl", stats),
-        validate_jsonl("li", DATA_DIR / "Dataset_2_Li_modified.jsonl", stats),
-        validate_jsonl("ade_train", DATA_DIR / "finetuning" / "Dataset_3_ADE_train.jsonl", stats),
-        validate_jsonl("ade", DATA_DIR / "Dataset_3_ADE_modified.jsonl", stats),
-        validate_jsonl("causenet_train", DATA_DIR / "finetuning" / "Dataset_4_causenet_train.jsonl", stats),
-        validate_jsonl("causenet", DATA_DIR / "Dataset_4_causenet_modified.jsonl", stats),
-        validate_jsonl("causenet_extra", DATA_DIR / "Dataset_4_causenet_extra.jsonl", stats),
-    ]
+    summaries = [validate_jsonl(name, path, stats) for name, path in validation_targets(DATA_DIR)]
     for summary in summaries:
         LOGGER.info(summary)
     LOGGER.info("validation ok")

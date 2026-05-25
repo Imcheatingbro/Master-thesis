@@ -10,6 +10,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from src.generator import generate, parse_output, validate_minimal
+from src.llm_client import LLMEmptyContentError
 
 
 class FakeClient:
@@ -131,7 +132,48 @@ def test_generate_returns_fallback_after_retries_are_exhausted() -> None:
     )
 
     assert client.calls == 2
-    assert result == {"id": None, "has_causal": False, "triples": []}
+    assert result == {
+        "id": None,
+        "has_causal": False,
+        "triples": [],
+        "error_type": "unknown_generation_error",
+        "error_message": "坏输出",
+    }
+
+
+def test_generate_classifies_reasoning_only_empty_content() -> None:
+    client = FakeClient([LLMEmptyContentError("模型只返回 reasoning_content，content 为空")])
+
+    result = generate(
+        text="Difficult sample.",
+        sample_id=8,
+        client=client,
+        retriever=None,
+        use_rag=False,
+        top_k=0,
+        max_retry=2,
+    )
+
+    assert client.calls == 1
+    assert result["error_type"] == "llm_reasoning_only_empty_content"
+    assert "reasoning_content" in result["error_message"]
+
+
+def test_generate_classifies_missing_json_object() -> None:
+    client = FakeClient(["not json"])
+
+    result = generate(
+        text="Difficult sample.",
+        sample_id=9,
+        client=client,
+        retriever=None,
+        use_rag=False,
+        top_k=0,
+        max_retry=1,
+    )
+
+    assert result["error_type"] == "no_json_object"
+    assert "JSON" in result["error_message"]
 
 
 def test_generate_passes_rag_mode_to_prompt_builder() -> None:

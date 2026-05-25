@@ -7,6 +7,7 @@ import logging
 import re
 from typing import Any
 
+from src.llm_client import LLMEmptyContentError
 from src.prompt_builder import DEFAULT_PROMPT_NAME, RetrieverProtocol, build_messages
 
 
@@ -76,9 +77,47 @@ def generate(
         except Exception as exc:
             last_error = exc
             LOGGER.warning("生成失败：sample_id=%s attempt=%s/%s error=%s", sample_id, attempt, max_retry, exc)
+            if any(isinstance(item, LLMEmptyContentError) for item in _iter_error_chain(exc)):
+                break
 
     LOGGER.error("生成兜底：sample_id=%s error=%s", sample_id, last_error)
-    return {"id": sample_id, "has_causal": False, "triples": []}
+    return {
+        "id": sample_id,
+        "has_causal": False,
+        "triples": [],
+        "error_type": classify_generation_error(last_error),
+        "error_message": str(last_error) if last_error is not None else "",
+    }
+
+
+def classify_generation_error(error: Exception | None) -> str:
+    """把生成失败归类，便于 eval report 统计主要失败来源。"""
+    if error is None:
+        return "unknown_generation_error"
+
+    chain = list(_iter_error_chain(error))
+    message = " ".join(str(item) for item in chain)
+    lower_message = message.lower()
+    if any(isinstance(item, LLMEmptyContentError) for item in chain):
+        if "reasoning_content" in lower_message:
+            return "llm_reasoning_only_empty_content"
+        return "llm_empty_content"
+    if any(isinstance(item, json.JSONDecodeError) for item in chain):
+        return "invalid_json_syntax"
+    if "json" in lower_message and ("未找到" in message or "not found" in lower_message):
+        return "no_json_object"
+    if "缺少字段" in message or "字段类型" in message or "has_causal" in message or "triples" in message:
+        return "invalid_output_schema"
+    return "unknown_generation_error"
+
+
+def _iter_error_chain(error: Exception) -> list[Exception]:
+    chain: list[Exception] = []
+    current: BaseException | None = error
+    while isinstance(current, Exception) and current not in chain:
+        chain.append(current)
+        current = current.__cause__ or current.__context__
+    return chain
 
 
 def _extract_json_from_markdown(text: str) -> str | None:

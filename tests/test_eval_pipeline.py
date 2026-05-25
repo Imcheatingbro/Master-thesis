@@ -137,6 +137,50 @@ def test_run_stream_eval_saves_report_and_emits_debug_rows(tmp_path: Path) -> No
     assert any("前 10 条样本判定" in message for message in emitted)
 
 
+def test_run_stream_eval_records_generation_failure_summary(tmp_path: Path) -> None:
+    samples = [
+        {
+            "id": 1,
+            "text": "Rain caused flooding.",
+            "has_causal": True,
+            "relations": [{"cause": "Rain", "effect": "flooding"}],
+        },
+        {"id": 8, "text": "Hard sample.", "has_causal": False, "relations": []},
+    ]
+    config = EvalRunConfig(
+        project_root=tmp_path,
+        model="qwen3.5-9b.gguf",
+        dataset="cnc",
+        prompt_name="v2",
+        use_rag=False,
+        rag_mode="pattern",
+        rag_top_k=0,
+        temperature=0.0,
+        max_tokens=800,
+        save_report=True,
+        report_dir="results/eval_report",
+    )
+
+    report = run_stream_eval(
+        samples,
+        label="cnc failure check",
+        client=object(),
+        config=config,
+        generator=_fake_generator_with_failure,
+        generated_at=datetime(2026, 5, 25, 12, 0, 0),
+    )
+
+    failure_summary = report["generation_failures"]
+    assert failure_summary["total"] == 1
+    assert failure_summary["by_type"] == {"llm_reasoning_only_empty_content": 1}
+    assert failure_summary["samples"][0]["id"] == 8
+
+    report_text = Path(str(report["report_path"])).read_text(encoding="utf-8")
+    assert "## 生成失败统计" in report_text
+    assert "llm_reasoning_only_empty_content" in report_text
+    assert "reasoning_content" in report_text
+
+
 def _fake_generator(
     text: str,
     sample_id: int | None,
@@ -154,3 +198,28 @@ def _fake_generator(
             "triples": [{"cause": {"span": "Rain"}, "effect": {"span": "flooding"}}],
         }
     return {"id": sample_id, "has_causal": False, "triples": []}
+
+
+def _fake_generator_with_failure(
+    text: str,
+    sample_id: int | None,
+    client: Any,
+    retriever: Any,
+    use_rag: bool,
+    top_k: int,
+    rag_mode: str,
+    prompt_name: str,
+) -> dict[str, Any]:
+    if sample_id == 8:
+        return {
+            "id": sample_id,
+            "has_causal": False,
+            "triples": [],
+            "error_type": "llm_reasoning_only_empty_content",
+            "error_message": "模型只返回 reasoning_content，content 为空",
+        }
+    return {
+        "id": sample_id,
+        "has_causal": True,
+        "triples": [{"cause": {"span": "Rain"}, "effect": {"span": "flooding"}}],
+    }

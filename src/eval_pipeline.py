@@ -91,7 +91,9 @@ def run_stream_eval(
             prompt_name=config.prompt_name,
         )
         evaluator.update(prediction=prediction, gold=sample)
-        sample_judgements.append(build_sample_judgement(prediction=prediction, gold=sample, dataset=config.dataset))
+        judgement = build_sample_judgement(prediction=prediction, gold=sample, dataset=config.dataset)
+        _attach_generation_error(judgement, prediction)
+        sample_judgements.append(judgement)
         if emit is not None and config.progress_every > 0 and index % config.progress_every == 0:
             emit("")
             emit(evaluator.format_report(title=f"{label} progress {index}/{total}"))
@@ -102,7 +104,9 @@ def run_stream_eval(
         emit(final_metrics_text)
         emit(format_sample_judgements(sample_judgements[:10]))
 
+    generation_failures = summarize_generation_failures(sample_judgements)
     report = evaluator.report()
+    report["generation_failures"] = generation_failures
     if config.save_report:
         report_path = write_eval_report(
             output_dir=config.report_output_dir,
@@ -117,6 +121,7 @@ def run_stream_eval(
             metrics_text=final_metrics_text,
             sample_judgements=sample_judgements,
             config=config.to_report_config(total, label),
+            generation_failures=generation_failures,
             title=f"{label} eval report",
         )
         report["report_path"] = str(report_path)
@@ -152,8 +157,10 @@ def format_eval_report_text(
     metrics_text: str,
     sample_judgements: list[dict[str, Any]],
     config: dict[str, Any],
+    generation_failures: dict[str, Any] | None = None,
 ) -> str:
     """生成包含统计指标和全部样本 gold/pred 对照的 Markdown 报告。"""
+    failure_summary = generation_failures or {"total": 0, "by_type": {}, "samples": []}
     lines = [
         f"# {title}",
         "",
@@ -165,6 +172,11 @@ def format_eval_report_text(
         "## 统计指标",
         "```text",
         metrics_text,
+        "```",
+        "",
+        "## 生成失败统计",
+        "```json",
+        json.dumps(failure_summary, indent=2, ensure_ascii=False),
         "```",
         "",
         "## 样本明细",
@@ -187,6 +199,7 @@ def write_eval_report(
     metrics_text: str,
     sample_judgements: list[dict[str, Any]],
     config: dict[str, Any],
+    generation_failures: dict[str, Any] | None = None,
     title: str | None = None,
 ) -> Path:
     """写入 eval Markdown 报告并返回路径。"""
@@ -209,10 +222,31 @@ def write_eval_report(
             metrics_text=metrics_text,
             sample_judgements=sample_judgements,
             config=config,
+            generation_failures=generation_failures,
         ),
         encoding="utf-8",
     )
     return report_path
+
+
+def summarize_generation_failures(sample_judgements: list[dict[str, Any]]) -> dict[str, Any]:
+    """汇总 generator 兜底时记录的失败类型。"""
+    failures: list[dict[str, Any]] = []
+    by_type: dict[str, int] = {}
+    for row in sample_judgements:
+        error_type = row.get("generation_error_type")
+        if not error_type:
+            continue
+        error_key = str(error_type)
+        by_type[error_key] = by_type.get(error_key, 0) + 1
+        failures.append(
+            {
+                "id": row.get("id"),
+                "error_type": error_key,
+                "error_message": row.get("generation_error_message", ""),
+            }
+        )
+    return {"total": len(failures), "by_type": by_type, "samples": failures}
 
 
 def format_sample_judgements(records: list[dict[str, Any]], title: str = "前 10 条样本判定") -> str:
@@ -256,6 +290,14 @@ def _get_eval_retriever(
     return create_retriever(config.rag_mode, **kwargs)
 
 
+def _attach_generation_error(judgement: dict[str, Any], prediction: dict[str, Any]) -> None:
+    error_type = prediction.get("error_type")
+    if not error_type:
+        return
+    judgement["generation_error_type"] = str(error_type)
+    judgement["generation_error_message"] = str(prediction.get("error_message", ""))
+
+
 def _build_progress_iterator(
     samples: list[dict[str, Any]],
     label: str,
@@ -282,6 +324,9 @@ def _format_sample_judgement(row: dict[str, Any]) -> list[str]:
         "gold_relations": row.get("gold_relations", []),
         "pred_triples": row.get("pred_triples", []),
     }
+    if row.get("generation_error_type"):
+        payload["generation_error_type"] = row.get("generation_error_type")
+        payload["generation_error_message"] = row.get("generation_error_message", "")
     return [
         "",
         f"### --- id={row.get('id')} ---",

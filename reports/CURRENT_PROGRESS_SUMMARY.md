@@ -212,30 +212,40 @@ Extraction 有两种匹配方法：
 
 ## 4. 当前已有实验结果
 
-以下结果主要用于阶段判断，还不能作为最终论文结论。
+以下结果主要用于阶段判断，还不能作为最终论文结论。当前这一组 report 的重点是检查 pipeline、prompt、RAG 和不同数据集主指标是否能稳定产出可比较结果。
 
-### 4.1 CNC 前 20 条小样本对比
+### 4.1 当前本地 100 条结果
 
-| 实验 | 数据集/样本 | RAG | Thinking 状态 | Detection F1 | Extraction all_samples 主 F1 | 生成失败 |
-|---|---|---|---|---:|---:|---:|
-| Qwen3 14B 较早结果 | CNC n=20 | `knn_pattern-k2` | 未开 thinking | 0.625 | 0.400 | 0 |
-| Qwen3 14B 较晚结果 | CNC n=20 | `knn_pattern-k2` | 开 thinking | 0.818 | 0.600 | 0 |
-| Qwen3.5 9B no-thinking | CNC n=20 | off | 关闭 thinking | 0.952 | 0.741 | 0 |
+#### 4.1.1 Qwen3.5 9B no-thinking baseline
 
-注意：这些实验条件不完全一致，不能直接得出“某模型绝对更强”的结论。尤其前两个 14B 使用了 RAG，而 9B no-thinking 的结果是 RAG off。
+| 数据集/样本 | Gold causal / Gold triples | 主 extraction metric | Detection P/R/F1 | Extraction all_samples P/R/F1 | Extraction detected_only P/R/F1 | 生成失败 |
+|---|---:|---|---|---|---|---:|
+| CNC n=100 | 51 / 74 | `strict_token_f1` | 0.864 / 0.745 / 0.800 | 0.500 / 0.311 / 0.383 | 0.575 / 0.383 / 0.460 | 0 |
+| ADE n=100 | 100 / 124 | `anchor_window` | 1.000 / 0.470 / 0.639 | 0.804 / 0.331 / 0.469 | 0.804 / 0.621 / 0.701 | 0 |
 
-### 4.2 当前本地 100 条结果
+#### 4.1.2 Qwen3.5 35B-A3B n=100 对比
 
-| 实验 | 数据集/样本 | 主 extraction metric | Detection P/R/F1 | Extraction all_samples P/R/F1 | Extraction detected_only P/R/F1 | 生成失败 |
-|---|---|---|---|---|---|---:|
-| Qwen3.5 9B no-thinking | CNC n=100 | `strict_token_f1` | 0.864 / 0.745 / 0.800 | 0.500 / 0.311 / 0.383 | 0.575 / 0.383 / 0.460 | 0 |
-| Qwen3.5 9B no-thinking | ADE n=100 | `anchor_window` | 1.000 / 0.470 / 0.639 | 0.804 / 0.331 / 0.469 | 0.804 / 0.621 / 0.701 | 0 |
+| 数据集/样本 | Prompt | RAG | Gold causal / Gold triples | 主 extraction metric | Detection P/R/F1 | Extraction all_samples P/R/F1 | Extraction detected_only P/R/F1 | 生成失败 |
+|---|---|---|---:|---|---|---|---|---:|
+| ADE n=100 | v4 | off | 100 / 124 | `anchor_window` | 1.000 / 0.430 / 0.601 | 0.894 / 0.339 / 0.491 | 0.894 / 0.778 / 0.832 | 0 |
+| ADE n=100 | v3 | off | 100 / 124 | `anchor_window` | 1.000 / 0.690 / 0.817 | 0.929 / 0.524 / 0.670 | 0.929 / 0.747 / 0.828 | 0 |
+| ADE n=100 | v3 | `knn_pattern-k3` | 100 / 124 | `anchor_window` | 1.000 / 0.910 / 0.953 | 0.968 / 0.734 / 0.835 | 0.968 / 0.812 / 0.883 | 0 |
+| CNC n=100 | v3 | off | 51 / 74 | `strict_token_f1` | 0.841 / 0.725 / 0.779 | 0.447 / 0.284 / 0.347 | 0.525 / 0.356 / 0.424 | 0 |
+| CNC n=100 | v3 | `knn_pattern-k3` | 51 / 74 | `strict_token_f1` | 0.871 / 0.529 / 0.659 | 0.486 / 0.230 / 0.312 | 0.548 / 0.378 / 0.447 | 0 |
+| CauseNet n=100 | v3 | off | 100 / 121 | `anchor_window` | 1.000 / 0.880 / 0.936 | 0.589 / 0.545 / 0.567 | 0.589 / 0.611 / 0.600 | 0 |
+| CauseNet n=100 | v3 | `knn_pattern-k3` | 100 / 121 | `anchor_window` | 1.000 / 0.900 / 0.947 | 0.600 / 0.595 / 0.598 | 0.600 / 0.667 / 0.632 | 0 |
+| Li n=100 | v3 | off | 34 / 53 | `strict_token_f1` | 0.853 / 0.853 / 0.853 | 0.056 / 0.038 / 0.045 | 0.065 / 0.042 / 0.051 | 0 |
+| Li n=100 | v3 | `knn_pattern-k3` | 34 / 53 | `strict_token_f1` | 0.892 / 0.971 / 0.930 | 0.256 / 0.189 / 0.217 | 0.286 / 0.192 / 0.230 | 0 |
 
 阶段性观察：
 
-- CNC n=100 比 n=20 更能暴露问题：detection 还可以，但 extraction recall 明显偏低，说明模型漏抽或抽取边界不够完整。
-- ADE n=100 中 precision 高但 recall 低，说明模型比较保守：只要它抽出来，anchor_window 下往往是对的，但漏掉了大量 gold relation。
-- ADE 的 `strict_token_f1` 很低、`anchor_window` 明显更高，验证了我们对数据标注粒度的判断：ADE gold 更像 drug/effect anchor，而不是完整自然语言 event span。
+- 当前更新后的 report 中 generation failure 全部为 0，说明这批实验至少没有再触发空 `content` 或 JSON 解析失败这类工程性阻塞。
+- ADE 上 35B-A3B + v3 + `knn_pattern-k3` 明显优于 v3 RAG off，也优于 v4 RAG off。这个结果好的一部分原因是 ADE 多数样本接近单因果对：100 个 causal 样本对应 124 个 gold triples，平均每个 causal 样本约 1.24 个 causal triple。
+- 当前模型对多因果提取仍然偏弱，可以从 `Gold causal / Gold triples` 的差距看出来。CNC 是 51 / 74，Li 是 34 / 53，说明不少 causal 样本含多个因果对；这两组的 strict extraction F1 明显低于 ADE。
+- CauseNet 是 100 / 121，形式上也以接近单因果为主，但 extraction 分数仍不高。这里更主要的问题不是多因果，而是 CauseNet 来自自动抽取，标注和 provenance 噪声较大，gold span/anchor 本身的可靠性弱于 ADE/CNC/Li。
+- CauseNet 上 RAG 有小幅提升，但 CauseNet test 基本是 causal 样本，detection 指标不能和 CNC/Li 这类含负例的数据集直接横比。
+- CNC 上 `knn_pattern-k3` 在这次 35B-A3B 实验里降低了 detection recall 和 all_samples F1，说明 RAG 不是稳定增益，需要后续做更系统的 ablation。
+- Li 上 RAG 提升明显，但 extraction F1 仍然很低，说明 Li 的完整 span、多因果和严格匹配仍是当前最难的部分。
 
 ## 5. 遇到的问题与解决/取舍
 

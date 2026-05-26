@@ -6,6 +6,7 @@ import difflib
 import re
 import string
 from dataclasses import dataclass
+from functools import lru_cache
 from typing import Any, Callable
 
 
@@ -340,7 +341,7 @@ def _match_triples_by_span_score(
     threshold: float,
     span_score: Callable[[str, str], float],
 ) -> tuple[int, int, int]:
-    pair_scores = []
+    candidates_by_pred: list[list[tuple[int, float]]] = [[] for _ in pred_triples]
     for pred_index, pred_triple in enumerate(pred_triples):
         pred_cause = _pred_span(pred_triple, "cause")
         pred_effect = _pred_span(pred_triple, "effect")
@@ -349,19 +350,27 @@ def _match_triples_by_span_score(
             gold_effect = str(gold_relation.get("effect", "")) if isinstance(gold_relation, dict) else ""
             cause_score = span_score(pred_cause, gold_cause)
             effect_score = span_score(pred_effect, gold_effect)
-            pair_scores.append((min(cause_score, effect_score), pred_index, gold_index))
+            pair_score = min(cause_score, effect_score)
+            if pair_score >= threshold:
+                candidates_by_pred[pred_index].append((gold_index, pair_score))
 
-    matched_preds: set[int] = set()
-    matched_golds: set[int] = set()
-    for score, pred_index, gold_index in sorted(pair_scores, key=lambda item: item[0], reverse=True):
-        if score < threshold:
-            break
-        if pred_index in matched_preds or gold_index in matched_golds:
-            continue
-        matched_preds.add(pred_index)
-        matched_golds.add(gold_index)
+    @lru_cache(maxsize=None)
+    def best_match(pred_index: int, used_gold_mask: int) -> tuple[int, float]:
+        if pred_index >= len(candidates_by_pred):
+            return 0, 0.0
 
-    tp = len(matched_preds)
+        best = best_match(pred_index + 1, used_gold_mask)
+        for gold_index, score in candidates_by_pred[pred_index]:
+            gold_bit = 1 << gold_index
+            if used_gold_mask & gold_bit:
+                continue
+            match_count, total_score = best_match(pred_index + 1, used_gold_mask | gold_bit)
+            candidate = (match_count + 1, total_score + score)
+            if candidate > best:
+                best = candidate
+        return best
+
+    tp, _ = best_match(0, 0)
     fp = len(pred_triples) - tp
     fn = len(gold_relations) - tp
     return tp, fp, fn

@@ -7,6 +7,7 @@ import pytest
 from src.evaluator import (
     anchor_window_score,
     Evaluator,
+    _match_triples_by_span_score,
     build_sample_judgement,
     match_triples_anchor_window,
     match_triples,
@@ -30,7 +31,7 @@ def test_token_f1_handles_exact_empty_different_and_partial_overlap() -> None:
     assert token_f1("heavy rain caused flooding", "heavy rain") == pytest.approx(2 / 3)
 
 
-def test_match_triples_uses_greedy_one_to_one_matching_and_threshold() -> None:
+def test_match_triples_uses_one_to_one_matching_and_threshold() -> None:
     pred_triples = [
         {
             "cause": {"span": "a heavy rain damage"},
@@ -47,6 +48,34 @@ def test_match_triples_uses_greedy_one_to_one_matching_and_threshold() -> None:
 
     assert match_triples(pred_triples, gold_relations, threshold=0.8) == (1, 1, 0)
     assert match_triples(pred_triples, gold_relations, threshold=0.81) == (0, 2, 1)
+
+
+def test_match_triples_prefers_global_tp_count_over_local_best_score() -> None:
+    pred_triples = [
+        {"cause": {"span": "pred one"}, "effect": {"span": "shared effect"}},
+        {"cause": {"span": "pred two"}, "effect": {"span": "shared effect"}},
+    ]
+    gold_relations = [
+        {"cause": "gold one", "effect": "shared effect"},
+        {"cause": "gold two", "effect": "shared effect"},
+    ]
+    span_scores = {
+        ("pred one", "gold one"): 0.95,
+        ("pred one", "gold two"): 0.94,
+        ("pred two", "gold one"): 0.94,
+        ("pred two", "gold two"): 0.10,
+        ("shared effect", "shared effect"): 1.0,
+    }
+
+    def span_score(pred_span: str, gold_span: str) -> float:
+        return span_scores.get((pred_span, gold_span), 0.0)
+
+    assert _match_triples_by_span_score(
+        pred_triples,
+        gold_relations,
+        threshold=0.9,
+        span_score=span_score,
+    ) == (2, 0, 0)
 
 
 def test_anchor_window_accepts_gold_anchor_inside_longer_prediction() -> None:

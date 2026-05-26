@@ -87,7 +87,7 @@
 - Extraction 保留两套视角：`all_samples` 在全部样本上评估 triple 抽取，是当前 prompt 调优时最主要看的指标；`detected_only` 只在 gold=True 且 pred=True 的样本上观察 span 质量，用来排除 detection 错误后分析边界抽取，当前定位为诊断视图而不是主结果。
 - Extraction 也保留两套匹配指标：`strict_token_f1` 会小写、去标点、去冠词、合并空格，再对 cause/effect 分别计算 token F1，并用二者最小值作为 triple pair 分数；默认阈值为 `0.8`。`anchor_window` 会检查较短的 gold concept anchor 是否能在较长的 prediction span 中通过滑动窗口 fuzzy matching 命中；默认阈值为 `0.9`。
 - 不同数据集的主 extraction 指标按标注粒度选择：CNC/Li 的 gold 更接近完整 event/span，因此主指标为 `strict_token_f1`；ADE/CauseNet 的 gold 更接近 drug/disease/concept anchor，因此主指标为 `anchor_window`。报告会同时输出两套指标，避免隐藏不同口径带来的差异。
-- triple 匹配使用 greedy one-to-one matching：先计算所有 pred/gold triple pair 分数，再从高到低匹配；一个预测和一个 gold 都最多只能被命中一次，最后累计 TP/FP/FN。
+- triple 匹配使用全局最优 one-to-one matching：先计算所有 pred/gold triple pair 分数并过滤低于阈值的候选边，再选择“TP 数最多；若 TP 相同则总分最高”的匹配组合；一个预测和一个 gold 都最多只能被命中一次，最后累计 TP/FP/FN。该修改不影响单因果对样本，只修正多因果对中 greedy 局部最优可能少算 TP 的情况。
 - 曾删除过近似原作者 evaluation 的 `original_like` 指标，因为它不适合 CNC/Li 这类完整 span 标注；加入 ADE/CauseNet 后重新发现其“gold 较短、prediction 合理更长”的场景，因此以更明确的 `anchor_window` 名称回归，并只作为 concept-anchor 数据集的主指标。
 - `build_sample_judgement()` 输出单条样本的 text、gold/pred has_causal、gold/pred triples，以及 `strict_token_f1` 和 `anchor_window` 两套 TP/FP/FN，便于定位分数偏低来自漏抽、误抽、span 边界还是数据集标注粒度差异。
 - SPEC_05 notebook 的 Cell P 不再定义运行函数，只负责导入 `load_dataset`、`EvalRunConfig`、`run_stream_eval` 并构造 `eval_config`；RAG retriever 的复用或即时创建放在 `eval_pipeline.py`，避免 notebook cell 之间隐藏函数依赖。

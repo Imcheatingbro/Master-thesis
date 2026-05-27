@@ -176,6 +176,19 @@ Extraction 有两种匹配方法：
 | `strict_token_f1` | CNC / Li | gold 更接近完整 span/event，需要惩罚边界不完整 |
 | `anchor_window` | ADE / CauseNet | gold 更像 concept anchor，允许模型输出更长但包含 anchor 的合理 span |
 
+两种 extraction matching 的具体实现：
+
+| 方法 | Span 级分数 | Triple 级分数 | 默认阈值 |
+|---|---|---|---:|
+| `strict_token_f1` | 先把 span 小写化、标点转空格、去掉 `a/an/the`、合并空格，再转成 token set。分数是 token overlap 的 F1：`precision=overlap/pred_tokens`，`recall=overlap/gold_tokens`，`F1=2PR/(P+R)`。 | 分别计算 cause span 和 effect span 的 token F1，然后取 `min(cause_score, effect_score)`。 | 0.800 |
+| `anchor_window` | 先小写化、合并空格。若 `gold` 是 `pred` 的子串，分数为 1.0；若 `pred` 比 `gold` 短或任一为空，分数为 0；否则在 `pred` 上滑动一个与 `gold` 等长的字符窗口，用 `SequenceMatcher` 计算每个窗口与 `gold` 的相似度，取最高分。 | 同样分别计算 cause 和 effect，再取 `min(cause_score, effect_score)`。 | 0.900 |
+
+因此，Extraction report 里的 Precision / Recall / F1 不是所有 span 分数的平均值，而是先根据阈值判断 pred/gold triple 是否匹配，再基于 TP/FP/FN 计算：
+
+- `TP`：成功匹配的预测 triple。
+- `FP`：没有匹配到任何 gold 的预测 triple。
+- `FN`：没有被任何 prediction 命中的 gold relation。
+
 当前主指标选择：
 
 | 数据集 | 主 extraction metric |

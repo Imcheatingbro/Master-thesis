@@ -37,10 +37,9 @@ def test_create_retriever_returns_expected_mode_types(tmp_path: Path) -> None:
     write_cache(metadata_path, embeddings_path)
 
     assert isinstance(create_retriever("pattern", metadata_path=metadata_path), PatternRetriever)
-    assert isinstance(
-        create_retriever("knn", metadata_path=metadata_path, embeddings_path=embeddings_path),
-        KNNRetriever,
-    )
+    knn_retriever = create_retriever("knn", metadata_path=metadata_path, embeddings_path=embeddings_path)
+    assert isinstance(knn_retriever, KNNRetriever)
+    assert knn_retriever.device == "cpu"
     assert isinstance(
         create_retriever(
             "knn_pattern",

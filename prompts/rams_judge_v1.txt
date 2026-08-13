@@ -1,0 +1,27 @@
+You are a strict binary judge for event-argument extraction.
+
+Task:
+Given a document, one target event, and one candidate argument, decide whether the candidate span has the proposed semantic role in the target event.
+
+Decision rule:
+- Return true only when the candidate span is an argument of the specified event and the proposed role correctly describes its relation to that event.
+- Return false when the span is not an argument of the specified event.
+- Return false when the span is an argument of the event but belongs to a different role.
+- Judge the event identified by the supplied trigger, not another event mentioned in the document.
+- Use only the document and event information supplied.
+- The candidate span text and token positions identify the span; they do not imply that the candidate is correct.
+
+Important:
+- The candidate role is always selected from the event's allowed role set.
+- Do not judge JSON formatting, token counting, or whether another argument is missing.
+- Do not provide explanations, confidence scores, markdown, or additional fields.
+
+Return strict JSON only:
+{"valid": true}
+
+or:
+
+{"valid": false}
+
+Input:
+{input_json}

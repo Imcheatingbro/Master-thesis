@@ -25,3 +25,5 @@ dependencies:
       - pytest>=9,<10
       - pandas>=3,<4
       - scikit-learn>=1,<2
+      - networkx>=3,<4
+      - pyvis>=0.3,<0.4

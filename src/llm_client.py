@@ -35,6 +35,7 @@ class LLMClient:
         config = self._load_config(Path(config_path))
         config.update({key: value for key, value in overrides.items() if value is not None})
 
+        self.provider = str(config.get("provider", "lmstudio")).lower()
         self.base_url = str(config["base_url"])
         self.model = str(config["model"])
         self.api_key = str(config["api_key"])
@@ -42,6 +43,7 @@ class LLMClient:
         self.max_tokens = int(config["max_tokens"])
         self.context_length = int(config.get("context_length", 8192))
         self.reasoning = config.get("reasoning")
+        self.reasoning_effort = config.get("reasoning_effort")
         self.extra_body = _load_extra_body(config.get("extra_body"))
         self.timeout = float(config["timeout"])
         self.retry_times = int(config["retry_times"])
@@ -112,9 +114,13 @@ class LLMClient:
 
         for attempt in range(1, self.retry_times + 1):
             try:
-                extra_body: dict[str, Any] = {"context_length": self.context_length}
+                extra_body: dict[str, Any] = {}
+                if self.provider == "lmstudio":
+                    extra_body["context_length"] = self.context_length
                 if self.reasoning is not None:
                     extra_body["reasoning"] = self.reasoning
+                if self.reasoning_effort is not None:
+                    extra_body["reasoning_effort"] = self.reasoning_effort
                 extra_body.update(self.extra_body)
                 response = self._client.chat.completions.create(
                     model=self.model,

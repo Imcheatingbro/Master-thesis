@@ -239,6 +239,31 @@ def test_chat_passes_configured_extra_body_without_mutating_messages(tmp_path: P
     }
 
 
+def test_chat_omits_lmstudio_context_length_for_deepseek_and_passes_reasoning_options(tmp_path: Path) -> None:
+    config_path = tmp_path / "llm.yaml"
+    write_config(config_path)
+    fake_client = FakeOpenAI()
+    client = LLMClient(
+        config_path=config_path,
+        provider="deepseek",
+        base_url="https://api.deepseek.com",
+        model="deepseek-v4-pro",
+        api_key="deepseek-token",
+        reasoning_effort="high",
+        extra_body={"thinking": {"type": "enabled"}},
+        openai_client=fake_client,
+    )
+
+    client.chat([{"role": "user", "content": "extract JSON"}])
+
+    assert fake_client.chat.completions.last_kwargs is not None
+    assert fake_client.chat.completions.last_kwargs["model"] == "deepseek-v4-pro"
+    assert fake_client.chat.completions.last_kwargs["extra_body"] == {
+        "thinking": {"type": "enabled"},
+        "reasoning_effort": "high",
+    }
+
+
 def test_chat_reports_reasoning_only_response_as_empty_content(tmp_path: Path) -> None:
     config_path = tmp_path / "llm.yaml"
     write_config(config_path)

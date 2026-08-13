@@ -10,7 +10,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from src.retriever import HybridRetriever, KNNRetriever
+from src.retriever import HybridRetriever, KNNRetriever, load_examples_from_jsonl
 
 
 class FakeEncoder:
@@ -98,3 +98,30 @@ def test_hybrid_retriever_concatenates_pattern_and_knn_with_dedup(tmp_path: Path
         "KNN second.",
     ]
     assert [example["source"] for example in examples] == ["pattern", "pattern", "knn"]
+
+
+def test_load_examples_from_jsonl_preserves_multi_triples_and_signals(tmp_path: Path) -> None:
+    metadata_path = tmp_path / "cnc_examples.jsonl"
+    metadata_path.write_text(
+        json.dumps(
+            {
+                "dataset": "cnc",
+                "sample_id": 7,
+                "sentence": "A caused B and led to C.",
+                "triples": [
+                    {"cause": "A", "effect": "B"},
+                    {"cause": "A", "effect": "C"},
+                ],
+                "signals": ["caused", "led to"],
+            }
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+    examples = load_examples_from_jsonl(metadata_path)
+
+    assert examples[0]["sample_id"] == 7
+    assert len(examples[0]["triples"]) == 2
+    assert examples[0]["signals"] == ["caused", "led to"]
+    assert examples[0]["cause"] == "A"

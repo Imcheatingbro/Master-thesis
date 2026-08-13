@@ -100,7 +100,9 @@ def test_match_triples_anchor_window_matches_concept_annotations() -> None:
 
 def test_primary_metric_defaults_follow_dataset_annotation_style() -> None:
     assert primary_metric_for_dataset("cnc") == "strict_token_f1"
-    assert primary_metric_for_dataset("li") == "strict_token_f1"
+    assert primary_metric_for_dataset("cnc_positive") == "strict_token_f1"
+    assert primary_metric_for_dataset("cnc_positive_rag_eval") == "strict_token_f1"
+    assert primary_metric_for_dataset("li") == "anchor_window"
     assert primary_metric_for_dataset("ade") == "anchor_window"
     assert primary_metric_for_dataset("causenet") == "anchor_window"
     assert primary_metric_for_dataset("unknown") == "strict_token_f1"
@@ -210,29 +212,30 @@ def test_evaluator_reports_detection_two_metrics_and_two_extraction_views() -> N
     assert "original_like" not in report["extraction"]
 
 
-def test_evaluator_uses_anchor_window_as_primary_for_ade_and_causenet() -> None:
-    evaluator = Evaluator(dataset="ade")
-    evaluator.update(
-        prediction={
-            "id": 1,
-            "has_causal": True,
-            "triples": [
-                {
-                    "cause": {"span": "Intravenous azithromycin"},
-                    "relation": "caused",
-                    "effect": {"span": "severe ototoxicity"},
-                }
-            ],
-        },
-        gold={"id": 1, "has_causal": True, "relations": [{"cause": "azithromycin", "effect": "ototoxicity"}]},
-    )
+def test_evaluator_uses_anchor_window_as_primary_for_anchor_datasets() -> None:
+    for dataset in ("ade", "causenet", "li"):
+        evaluator = Evaluator(dataset=dataset)
+        evaluator.update(
+            prediction={
+                "id": 1,
+                "has_causal": True,
+                "triples": [
+                    {
+                        "cause": {"span": "Intravenous azithromycin"},
+                        "relation": "caused",
+                        "effect": {"span": "severe ototoxicity"},
+                    }
+                ],
+            },
+            gold={"id": 1, "has_causal": True, "relations": [{"cause": "azithromycin", "effect": "ototoxicity"}]},
+        )
 
-    report = evaluator.report()
+        report = evaluator.report()
 
-    assert report["extraction"]["primary_metric"] == "anchor_window"
-    assert report["extraction"]["strict_token_f1"]["all_samples"]["tp"] == 0
-    assert report["extraction"]["anchor_window"]["all_samples"]["tp"] == 1
-    assert report["extraction"]["all_samples"] == report["extraction"]["anchor_window"]["all_samples"]
+        assert report["extraction"]["primary_metric"] == "anchor_window"
+        assert report["extraction"]["strict_token_f1"]["all_samples"]["tp"] == 0
+        assert report["extraction"]["anchor_window"]["all_samples"]["tp"] == 1
+        assert report["extraction"]["all_samples"] == report["extraction"]["anchor_window"]["all_samples"]
 
 
 def test_format_report_contains_progress_snapshot_fields() -> None:
@@ -283,3 +286,29 @@ def test_build_sample_judgement_exposes_first_ten_debug_fields() -> None:
     assert judgement["anchor_window"]["counts"] == {"tp": 1, "fp": 0, "fn": 0}
     assert judgement["gold_relations"] == [{"cause": "heavy rain", "effect": "street flooding"}]
     assert judgement["pred_triples"][0]["cause"]["span"] == "a heavy rain"
+
+
+def test_build_sample_judgement_uses_li_anchor_window_primary() -> None:
+    judgement = build_sample_judgement(
+        prediction={
+            "id": 9,
+            "has_causal": True,
+            "triples": [
+                {
+                    "cause": {"span": "stress and hard work"},
+                    "effect": {"span": "bleeding stomach ulcer"},
+                }
+            ],
+        },
+        gold={
+            "id": 9,
+            "text": "Stress and hard work caused a bleeding stomach ulcer.",
+            "has_causal": True,
+            "relations": [{"cause": "stress", "effect": "stomach ulcer"}],
+        },
+        dataset="li",
+    )
+
+    assert judgement["primary_metric"] == "anchor_window"
+    assert judgement["strict_token_f1"]["counts"] == {"tp": 0, "fp": 1, "fn": 1}
+    assert judgement["anchor_window"]["counts"] == {"tp": 1, "fp": 0, "fn": 0}

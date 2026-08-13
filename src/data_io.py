@@ -10,6 +10,8 @@ from typing import Any
 DATA_DIR = Path(__file__).resolve().parents[1] / "Data"
 DATASET_FILES = {
     "cnc": "Dataset_1_CNC_modified.jsonl",
+    "cnc_positive": "Dataset_1_CNC_positive_only.jsonl",
+    "cnc_positive_rag_eval": "Dataset_1_CNC_positive_rag_eval.jsonl",
     "li": "Dataset_2_Li_modified.jsonl",
     "ade": "Dataset_3_ADE_modified.jsonl",
     "causenet": "Dataset_4_causenet_modified.jsonl",

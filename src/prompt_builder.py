@@ -44,8 +44,9 @@ def build_messages(
 
 def load_prompt_template(prompt_name: str = DEFAULT_PROMPT_NAME) -> str:
     """按 prompt 名称读取模板文件。"""
-    safe_name = Path(prompt_name).stem
-    prompt_path = PROMPT_DIR / f"{safe_name}.txt"
+    safe_name = Path(prompt_name).name
+    prompt_filename = safe_name if safe_name.endswith(".txt") else f"{safe_name}.txt"
+    prompt_path = PROMPT_DIR / prompt_filename
     if not prompt_path.exists():
         raise FileNotFoundError(f"Prompt 模板不存在: {prompt_path}")
     return prompt_path.read_text(encoding="utf-8")
@@ -58,14 +59,16 @@ def format_rag_examples(examples: list[dict[str, object]], rag_mode: str = "patt
 
     blocks = [f"Retrieved {_rag_mode_label(rag_mode)} examples:"]
     for index, example in enumerate(examples, start=1):
+        triples = _example_triples(example)
         output = {
             "has_causal": True,
             "triples": [
                 {
-                    "cause": {"span": str(example["cause"])},
+                    "cause": {"span": triple["cause"]},
                     "relation": "caused",
-                    "effect": {"span": str(example["effect"])},
+                    "effect": {"span": triple["effect"]},
                 }
+                for triple in triples
             ],
         }
         blocks.append(
@@ -79,6 +82,31 @@ def format_rag_examples(examples: list[dict[str, object]], rag_mode: str = "patt
             )
         )
     return "\n\n".join(blocks)
+
+
+def _example_triples(example: dict[str, object]) -> list[dict[str, str]]:
+    raw_triples = example.get("triples")
+    triples: list[dict[str, str]] = []
+    if isinstance(raw_triples, list):
+        for raw_triple in raw_triples:
+            if not isinstance(raw_triple, dict):
+                continue
+            cause = _span_text(raw_triple.get("cause"))
+            effect = _span_text(raw_triple.get("effect"))
+            if cause and effect:
+                triples.append({"cause": cause, "effect": effect})
+    if triples:
+        return triples
+
+    cause = _span_text(example.get("cause"))
+    effect = _span_text(example.get("effect"))
+    return [{"cause": cause, "effect": effect}] if cause and effect else []
+
+
+def _span_text(value: object) -> str:
+    if isinstance(value, dict):
+        value = value.get("span", "")
+    return str(value or "").strip()
 
 
 def _rag_mode_label(rag_mode: str) -> str:

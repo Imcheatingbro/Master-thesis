@@ -39,6 +39,24 @@ def test_load_dataset_supports_li_name(tmp_path: Path) -> None:
     assert samples == rows
 
 
+def test_load_dataset_supports_cnc_positive_name(tmp_path: Path) -> None:
+    rows = [{"id": 3, "text": "A caused B.", "has_causal": True, "relations": [{"cause": "A", "effect": "B"}]}]
+    write_jsonl(tmp_path / "Dataset_1_CNC_positive_only.jsonl", rows)
+
+    samples = load_dataset("cnc_positive", data_dir=tmp_path)
+
+    assert samples == rows
+
+
+def test_load_dataset_supports_cnc_positive_rag_eval_name(tmp_path: Path) -> None:
+    rows = [{"id": 4, "text": "A led to B.", "has_causal": True, "relations": [{"cause": "A", "effect": "B"}]}]
+    write_jsonl(tmp_path / "Dataset_1_CNC_positive_rag_eval.jsonl", rows)
+
+    samples = load_dataset("cnc_positive_rag_eval", data_dir=tmp_path)
+
+    assert samples == rows
+
+
 def test_load_dataset_supports_ade_name(tmp_path: Path) -> None:
     rows = [{"id": 1, "text": "Drug caused rash.", "has_causal": True, "relations": []}]
     write_jsonl(tmp_path / "Dataset_3_ADE_modified.jsonl", rows)

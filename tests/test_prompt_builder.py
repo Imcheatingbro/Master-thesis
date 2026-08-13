@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from src.prompt_builder import build_messages
+from src.prompt_builder import build_messages, format_rag_examples, load_prompt_template
 
 
 class FakeRetriever:
@@ -51,6 +51,13 @@ def test_build_messages_supports_prompt_name_selection() -> None:
     assert "causality extraction system" in messages[0]["content"]
 
 
+def test_load_prompt_template_supports_dotted_prompt_names() -> None:
+    prompt = load_prompt_template("v6.1")
+
+    assert "adverse drug event extraction system" in prompt
+    assert "known drug properties" in prompt
+
+
 def test_v1_prompt_includes_condition_trigger_guidance() -> None:
     messages = build_messages("The talks collapsed when the offer was rejected.", use_rag=False, retriever=None, top_k=0)
 
@@ -82,3 +89,136 @@ def test_build_messages_labels_knn_pattern_mode() -> None:
     )
 
     assert "Retrieved KNN+Pattern RAG examples" in messages[0]["content"]
+
+
+def test_format_rag_examples_preserves_all_cnc_triples() -> None:
+    rendered = format_rag_examples(
+        [
+            {
+                "sentence": "The outage stopped trains and caused delays.",
+                "triples": [
+                    {"cause": "The outage", "effect": "stopped trains"},
+                    {"cause": "The outage", "effect": "delays"},
+                ],
+                "signals": ["caused"],
+            }
+        ],
+        rag_mode="knn",
+    )
+
+    assert rendered.count('"relation": "caused"') == 2
+    assert '"effect": {"span": "stopped trains"}' in rendered
+    assert '"effect": {"span": "delays"}' in rendered
+
+
+def test_v13_prompt_inserts_dynamic_rag_examples() -> None:
+    messages = build_messages(
+        "Heavy rain caused flooding.",
+        use_rag=True,
+        retriever=FakeRetriever(),
+        top_k=1,
+        rag_mode="knn",
+        prompt_name="v13",
+    )
+
+    assert "Retrieved KNN RAG examples:" in messages[0]["content"]
+    assert "<cause>Rain</cause> caused <effect>flooding</effect>." in messages[0]["content"]
+
+
+def test_v14_prompt_is_compact_recall_oriented_and_rag_ready() -> None:
+    prompt = load_prompt_template("v14")
+
+    assert prompt.count("\nInput:\n") == 2
+    assert "do not stop after finding the first relation" in prompt
+    assert "Output all relations supported" in prompt
+    assert "A missing speculative triple costs less" not in prompt
+    assert prompt.count("{rag_examples}") == 1
+    assert len(prompt) < 8000
+
+    messages = build_messages(
+        "Heavy rain caused flooding.",
+        use_rag=True,
+        retriever=FakeRetriever(),
+        top_k=1,
+        rag_mode="knn",
+        prompt_name="v14",
+    )
+    assert "Retrieved KNN RAG examples:" in messages[0]["content"]
+
+
+def test_v17_prompt_is_anchor_oriented_and_keeps_fixed_examples_bounded() -> None:
+    prompt = load_prompt_template("v17")
+
+    assert "HIGHEST PRIORITY: ANCHOR-SAFE SPAN BOUNDARIES" in prompt
+    assert "prefer the WIDEST DEFENSIBLE CONTINUOUS CLAUSE" in prompt
+    assert "Never use the whole sentence as both arguments" in prompt
+    assert prompt.count("Fixed example ") == 10
+    assert prompt.count("{rag_examples}") == 1
+    assert "Jitin Das" not in prompt
+    assert "Falcon Tyres" not in prompt
+
+    messages = build_messages(
+        "Heavy rain caused flooding.",
+        use_rag=True,
+        retriever=FakeRetriever(),
+        top_k=1,
+        rag_mode="knn",
+        prompt_name="v17",
+    )
+
+    assert "{rag_examples}" not in messages[0]["content"]
+    assert "Retrieved KNN RAG examples:" in messages[0]["content"]
+
+
+def test_v98_prompt_preserves_mixed_cnc_detection_and_adds_anchor_boundaries() -> None:
+    prompt = load_prompt_template("v9.8")
+
+    assert "STAGE 1: CNC CAUSALITY DECISION" in prompt
+    assert "STAGE 2: ANCHOR-SAFE SPAN BOUNDARIES" in prompt
+    assert "prefer the WIDEST DEFENSIBLE CONTINUOUS VERSION OF THE SAME EVENT" in prompt
+    assert '{"has_causal": false, "triples": []}' in prompt
+    assert prompt.count("\nInput:\n") == 10
+    assert prompt.count("{rag_examples}") == 1
+    assert "Adhir Chowdhury" not in prompt
+    assert "Chale was allegedly chased" not in prompt
+    assert "All the 417 guards" not in prompt
+
+    messages = build_messages(
+        "Heavy rain caused flooding.",
+        use_rag=True,
+        retriever=FakeRetriever(),
+        top_k=1,
+        rag_mode="knn",
+        prompt_name="v9.8",
+    )
+
+    assert "{rag_examples}" not in messages[0]["content"]
+    assert "Retrieved KNN RAG examples:" in messages[0]["content"]
+
+
+def test_v5_prompt_preserves_general_rules_and_adds_multi_causal_boundary_example() -> None:
+    prompt = load_prompt_template("v5")
+
+    assert "Output strict JSON object only." in prompt
+    assert "Do not output reasoning" in prompt
+    assert "Extract all causal triples in the input text." in prompt
+    assert "complete event/state spans" in prompt
+    assert "Treat purpose clauses" in prompt
+    assert "Treat \"when\", \"after\", \"following\", or \"once\" as causal" in prompt
+    assert "Do not merge the effect of one causal relation with another downstream event." in prompt
+    assert "Critical span copying rule" in prompt
+    assert "Never use ellipses" in prompt
+    assert '"span": "..."' not in prompt
+    assert "EXACT_ORIGINAL_CAUSE_SUBSTRING" in prompt
+    assert "EXACT_ORIGINAL_EFFECT_SUBSTRING" in prompt
+    assert "Video of the clashes emerged on Monday" in prompt
+    assert "fuelling public anger" in prompt
+    assert "failing to prevent the attack" in prompt
+    assert "residents demanded explanations from officials" in prompt
+    assert "the factory spill" in prompt
+    assert "the tanker accident" in prompt
+    assert "the river contamination" in prompt
+    assert "Maya Chen , the lead researcher in the project related to repairs at the coastal observatory , could not appear before the review board on Thursday" in prompt
+    assert "logistics staff in Northport failed to arrange transport for her" in prompt
+    assert "Maya Chen ... could not appear" not in prompt
+    assert "Anoop George" not in prompt

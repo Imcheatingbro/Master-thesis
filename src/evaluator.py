@@ -16,7 +16,9 @@ STRICT_TOKEN_F1 = "strict_token_f1"
 ANCHOR_WINDOW = "anchor_window"
 PRIMARY_METRIC_BY_DATASET = {
     "cnc": STRICT_TOKEN_F1,
-    "li": STRICT_TOKEN_F1,
+    "cnc_positive": STRICT_TOKEN_F1,
+    "cnc_positive_rag_eval": STRICT_TOKEN_F1,
+    "li": ANCHOR_WINDOW,
     "ade": ANCHOR_WINDOW,
     "causenet": ANCHOR_WINDOW,
 }

@@ -9,7 +9,13 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from src.generator import generate, parse_output, validate_minimal
+from src.generator import (
+    DUPLICATE_EFFECT_CLOSING_BRACE_REPAIR,
+    generate,
+    parse_output,
+    parse_output_with_metadata,
+    validate_minimal,
+)
 from src.llm_client import LLMEmptyContentError
 
 
@@ -88,6 +94,44 @@ def test_parse_output_raises_clear_error_when_fields_are_missing() -> None:
         parse_output('{"triples": []}')
 
 
+def test_parse_output_repairs_duplicate_effect_closing_brace() -> None:
+    raw = """```json
+{
+  "has_causal": true,
+  "triples": [
+    {
+      "cause": {"span": "Rain"},
+      "relation": "caused",
+      "effect": {"span": "flooding"}}
+    }
+  ]
+}
+```"""
+
+    parsed, repair_type = parse_output_with_metadata(raw)
+
+    assert parsed["triples"][0]["effect"]["span"] == "flooding"
+    assert repair_type == DUPLICATE_EFFECT_CLOSING_BRACE_REPAIR
+
+
+def test_parse_output_does_not_repair_unrelated_json_error() -> None:
+    raw = """```json
+{
+  "has_causal": true,
+  "triples": [
+    {
+      "cause": {"span": "Rain"}}
+      "relation": "caused",
+      "effect": {"span": "flooding"}
+    }
+  ]
+}
+```"""
+
+    with pytest.raises(ValueError):
+        parse_output(raw)
+
+
 def test_validate_minimal_rejects_wrong_types() -> None:
     assert validate_minimal({"has_causal": True, "triples": []}) is True
     assert validate_minimal({"has_causal": "true", "triples": []}) is False
@@ -118,6 +162,34 @@ def test_generate_retries_after_parse_failure_and_sets_id() -> None:
     assert result["triples"][0]["effect"]["span"] == "flooding"
 
 
+def test_generate_accepts_non_substring_span_for_evaluator_to_score() -> None:
+    client = FakeClient(
+        [
+            (
+                '{"has_causal": true, "triples": ['
+                '{"cause": {"span": "jail authorities failed to arrange escort"}, '
+                '"relation": "caused", '
+                '"effect": {"span": "Anoop George ... could not be produced"}}]}'
+            ),
+        ]
+    )
+
+    result = generate(
+        text="Anoop George could not be produced after jail authorities failed to arrange escort.",
+        sample_id=15,
+        client=client,
+        retriever=None,
+        use_rag=False,
+        top_k=0,
+        max_retry=2,
+    )
+
+    assert client.calls == 1
+    assert result["id"] == 15
+    assert result["has_causal"] is True
+    assert result["triples"][0]["effect"]["span"] == "Anoop George ... could not be produced"
+
+
 def test_generate_returns_fallback_after_retries_are_exhausted() -> None:
     client = FakeClient(["not json", ValueError("坏输出")])
 
@@ -132,13 +204,76 @@ def test_generate_returns_fallback_after_retries_are_exhausted() -> None:
     )
 
     assert client.calls == 2
-    assert result == {
-        "id": None,
-        "has_causal": False,
-        "triples": [],
-        "error_type": "unknown_generation_error",
-        "error_message": "坏输出",
+    assert result["id"] is None
+    assert result["has_causal"] is False
+    assert result["triples"] == []
+    assert result["error_type"] == "unknown_generation_error"
+    assert result["error_message"] == "坏输出"
+    assert result["generation_attempts"] == [
+        {
+            "attempt": 1,
+            "raw_output": "not json",
+            "error_type": "no_json_object",
+            "error_message": "未找到 JSON 对象",
+        },
+        {
+            "attempt": 2,
+            "raw_output": None,
+            "error_type": "unknown_generation_error",
+            "error_message": "坏输出",
+        },
+    ]
+
+
+def test_generate_preserves_every_invalid_json_output() -> None:
+    first_output = '{"has_causal": true "triples": []}'
+    second_output = '{"has_causal": true, "triples": [}'
+    client = FakeClient([first_output, second_output])
+
+    result = generate(
+        text="Rain caused flooding.",
+        sample_id=21,
+        client=client,
+        retriever=None,
+        use_rag=False,
+        top_k=0,
+        max_retry=2,
+    )
+
+    assert result["error_type"] == "invalid_json_syntax"
+    assert [row["raw_output"] for row in result["generation_attempts"]] == [first_output, second_output]
+    assert [row["attempt"] for row in result["generation_attempts"]] == [1, 2]
+
+
+def test_generate_records_successful_limited_parse_repair() -> None:
+    raw = """```json
+{
+  "has_causal": true,
+  "triples": [
+    {
+      "cause": {"span": "Rain"},
+      "relation": "caused",
+      "effect": {"span": "flooding"}}
     }
+  ]
+}
+```"""
+    client = FakeClient([raw])
+
+    result = generate(
+        text="Rain caused flooding.",
+        sample_id=22,
+        client=client,
+        retriever=None,
+        use_rag=False,
+        top_k=0,
+        max_retry=2,
+    )
+
+    assert client.calls == 1
+    assert result["has_causal"] is True
+    assert result["parse_repair_type"] == DUPLICATE_EFFECT_CLOSING_BRACE_REPAIR
+    assert result["parse_repair_raw_output"] == raw
 
 
 def test_generate_classifies_reasoning_only_empty_content() -> None:

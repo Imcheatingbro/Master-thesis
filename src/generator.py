@@ -12,6 +12,7 @@ from src.prompt_builder import DEFAULT_PROMPT_NAME, RetrieverProtocol, build_mes
 
 
 LOGGER = logging.getLogger(__name__)
+DUPLICATE_EFFECT_CLOSING_BRACE_REPAIR = "duplicate_effect_closing_brace"
 
 
 def call_llm(messages: list[dict[str, str]], client: Any) -> str:
@@ -21,12 +22,18 @@ def call_llm(messages: list[dict[str, str]], client: Any) -> str:
 
 def parse_output(raw_str: str) -> dict[str, Any]:
     """将模型原始输出解析成 dict，兼容 markdown、前缀文本和 `<think>`。"""
+    parsed, _ = parse_output_with_metadata(raw_str)
+    return parsed
+
+
+def parse_output_with_metadata(raw_str: str) -> tuple[dict[str, Any], str | None]:
+    """解析模型输出，并返回实际应用的受限 JSON 修复类型。"""
     cleaned = re.sub(r"<think>.*?</think>", "", raw_str, flags=re.DOTALL | re.IGNORECASE).strip()
     json_text = _extract_json_from_markdown(cleaned) or _extract_first_json_object(cleaned)
     if json_text is None:
         raise ValueError("未找到 JSON 对象")
 
-    parsed = json.loads(json_text)
+    parsed, repair_type = _parse_json_with_limited_repair(json_text)
     if not validate_minimal(parsed):
         missing = []
         if "has_causal" not in parsed:
@@ -36,7 +43,7 @@ def parse_output(raw_str: str) -> dict[str, Any]:
         if missing:
             raise ValueError(f"输出缺少字段：{', '.join(missing)}")
         raise ValueError("输出字段类型错误：has_causal 必须为 bool，triples 必须为 list")
-    return parsed
+    return parsed, repair_type
 
 
 def validate_minimal(data: dict[str, Any]) -> bool:
@@ -57,7 +64,9 @@ def generate(
 ) -> dict[str, Any]:
     """主入口：构造 prompt、调用 LLM、解析输出，失败后返回兜底结果。"""
     last_error: Exception | None = None
+    failed_attempts: list[dict[str, Any]] = []
     for attempt in range(1, max_retry + 1):
+        raw_output: str | None = None
         try:
             messages = build_messages(
                 text,
@@ -68,14 +77,26 @@ def generate(
                 prompt_name=prompt_name,
             )
             raw_output = call_llm(messages, client)
-            parsed = parse_output(raw_output)
-            return {
+            parsed, repair_type = parse_output_with_metadata(raw_output)
+            result = {
                 "id": sample_id,
                 "has_causal": parsed["has_causal"],
                 "triples": parsed["triples"],
             }
+            if repair_type is not None:
+                result["parse_repair_type"] = repair_type
+                result["parse_repair_raw_output"] = raw_output
+            return result
         except Exception as exc:
             last_error = exc
+            failed_attempts.append(
+                {
+                    "attempt": attempt,
+                    "raw_output": raw_output,
+                    "error_type": classify_generation_error(exc),
+                    "error_message": str(exc),
+                }
+            )
             LOGGER.warning("生成失败：sample_id=%s attempt=%s/%s error=%s", sample_id, attempt, max_retry, exc)
             if any(isinstance(item, LLMEmptyContentError) for item in _iter_error_chain(exc)):
                 break
@@ -87,6 +108,7 @@ def generate(
         "triples": [],
         "error_type": classify_generation_error(last_error),
         "error_message": str(last_error) if last_error is not None else "",
+        "generation_attempts": failed_attempts,
     }
 
 
@@ -153,3 +175,34 @@ def _extract_first_json_object(text: str) -> str | None:
             if depth == 0:
                 return text[start : index + 1]
     return None
+
+
+def _parse_json_with_limited_repair(json_text: str) -> tuple[dict[str, Any], str | None]:
+    try:
+        return json.loads(json_text), None
+    except json.JSONDecodeError as original_error:
+        repaired = _repair_duplicate_effect_closing_brace(json_text)
+        if repaired == json_text:
+            raise
+        try:
+            return json.loads(repaired), DUPLICATE_EFFECT_CLOSING_BRACE_REPAIR
+        except json.JSONDecodeError:
+            raise original_error
+
+
+def _repair_duplicate_effect_closing_brace(json_text: str) -> str:
+    """删除 effect 单行对象后、独立 triple 结束符前的重复右括号。"""
+    lines = json_text.splitlines()
+    changed = False
+    for index, line in enumerate(lines):
+        stripped = line.rstrip()
+        if not re.match(r'^\s*"effect"\s*:\s*\{.*\}\}\s*$', stripped):
+            continue
+        next_index = index + 1
+        while next_index < len(lines) and not lines[next_index].strip():
+            next_index += 1
+        if next_index >= len(lines) or lines[next_index].strip() not in {"}", "},"}:
+            continue
+        lines[index] = stripped[:-1]
+        changed = True
+    return "\n".join(lines) if changed else json_text

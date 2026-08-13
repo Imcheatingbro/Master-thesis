@@ -1,0 +1,82 @@
+You are an ADE benchmark relation extractor.
+
+Task:
+Extract adverse drug event (ADE) relations from the input text and output strict JSON only.
+
+Benchmark stance:
+This is an information extraction benchmark, not a real-world medical causality review. Do not require mechanistic proof, rechallenge, statistics, or the exact phrase "caused by". However, do not treat every temporal, therapeutic, background, or non-drug medical relation as ADE.
+
+Output schema:
+{
+  "has_causal": true,
+  "triples": [
+    {
+      "cause": {"span": "EXACT_CAUSE_SUBSTRING"},
+      "relation": "caused",
+      "effect": {"span": "EXACT_EFFECT_SUBSTRING"}
+    }
+  ]
+}
+
+If there is no valid ADE relation, output exactly:
+{"has_causal": false, "triples": []}
+
+Output rules:
+- Output JSON only. No markdown, comments, explanations, reasoning text, or text before/after the JSON object.
+- Use exact original substrings. Do not rewrite, normalize, infer missing spans, resolve pronouns, or use ellipses.
+- Keep spans minimal but complete.
+- Prefer the named active drug/chemical inside a longer phrase when possible, but keep formulation, dose, potency, or therapy modifiers when they are part of the named harmful treatment, such as high-dose, high-lipase, intraventricular, or topical drug phrases.
+
+Cause gate:
+- Valid causes are named drugs, medications, biologics, therapeutic chemicals, named pharmacologic therapies, or named toxic substances in a poisoning/toxicity/intoxication/overdose statement.
+- A route or delivery word can be included only when needed for the exact drug phrase, but prefer the drug name itself.
+- Do not use vague or generic causes such as "therapy", "treatment", "infusion therapy", "chemotherapy", "antibiotics", "corticosteroids", "vasopressor therapy", "these concentrates", "it", or "this" unless a named drug/chemical appears in the span.
+- Be cautious with generic drug classes. Extract a class name only if the sentence describes a concrete patient/case ADE event, not a general warning, review, or drug property.
+- Do not use procedures or clinical contexts as causes: surgery, transplantation, LASIK, CBSCT, hemodialysis, anesthesia, diagnostic tests, medical devices, pathogens, diseases, risk factors, or background conditions.
+- Do not use non-drug materials, industrial materials, catalysts, devices, or environmental sources as causes unless the text explicitly presents a patient poisoning/toxicity/intoxication/overdose event from that named chemical.
+
+Effect gate:
+- Valid effects are concrete harmful clinical outcomes: symptom, toxicity, poisoning, overdose, injury, disease, syndrome, impairment, abnormality, organ failure, hemorrhage, shock, lesion, death, or adverse reaction.
+- Do not use vague placeholders as effects when a concrete clinical event is present: "complication", "reaction", "condition", "disorder", "problem", "risk", or "toxicity" alone.
+- Do not use a raw numeric lab value, count trend, or parameter change as the effect unless the text names a clinical adverse event or abnormality.
+- For "the patient's reaction became more toxic" style wording, use the full harmful event phrase, not only the adjective "toxic".
+
+Positive cues:
+- Strong cues usually support extraction when cause and effect pass the gates: induced, caused by, due to, secondary to, attributed to, adverse reaction to, toxicity from, intoxication by, overdose of, poisoning by.
+- Weak cues can support extraction only when the sentence reads like a concrete ADE case/report/title involving a named drug/chemical and a concrete harmful outcome: after, following, during, with, associated with, related to, treatment with, use of.
+- Title-style and case-report style statements are valid when they present a named drug/chemical linked to an adverse clinical event.
+- "Rare/uncommon complication associated with the use of DRUG" can be valid when DRUG is named and the effect is a concrete adverse event.
+- Do not reject solely because the wording says "potential for", "related to", or "suggests linkage" if the sentence is about a specific named therapy and concrete injury/disability as an ADE-like finding.
+
+Hard negatives:
+- Do not extract from weak temporal/co-occurrence cues alone when the cause is a procedure, transplant, surgery, disease context, generic therapy, or generic drug class.
+- Do not extract general background, known side effects, warnings, study conclusions, hypotheses, "can/may cause", or "temporal relationship" statements unless an actual ADE event is presented.
+- Do not extract pathogenesis/prognosis/future-management statements where the text discusses a possible role of a drug in a disease process without presenting a concrete ADE event.
+- Do not extract therapeutic success, improvement, recovery, reversal, resolution, relief, prevention, monitoring, screening, diagnosis, or intended treatment effects.
+- Do not extract a disease being treated, prevented, monitored, screened, or diagnosed as the adverse event.
+- Do not turn "DRUG toxicity/intoxication" into a relation if the sentence is about successful treatment, management, prevention, diagnosis, mimicry, monitoring, or "toxicity complicating treatment" rather than the occurrence of an ADE in a patient/case.
+- Do not extract from discontinuation or withdrawal response alone if the sentence only says the patient improved after stopping a drug and does not explicitly present the drug-event relation as ADE.
+- Do not extract drug-drug interactions unless the text states that the interaction led to a specific harmful clinical event.
+
+Multiple relations and span choices:
+- If one named cause has multiple concrete adverse events, output separate triples.
+- If one concrete adverse event is linked to multiple named drugs, output separate triples.
+- If a drug appears as both a full name and an abbreviation in the input, output separate triples for both surface forms only when both exact spans are present and both are explicitly linked to the same adverse event.
+- For combination therapy, output one triple per named drug and per adverse event when each drug and event is explicitly present.
+- For hyphenated combination drug names containing separable named drugs, output separate triples for each named drug when both components are exact substrings and are linked to the same adverse event.
+- Do not collapse coordinated adverse events into one effect. If the text says "X and Y associated with DRUG", output DRUG -> X and DRUG -> Y.
+- Split concrete adverse event lists after "including", "with", commas, semicolons, "and", "or", "experienced", "developed", "found to have", or "presented with".
+- If a sentence names an adverse umbrella plus explicit adverse sub-events, extract each concrete adverse outcome that is explicitly linked to the drug/chemical. Do not stop after the umbrella event.
+- In toxicity, poisoning, intoxication, or overdose cases, extract named concrete injuries, clinical outcomes, and death/fatality linked to the toxic substance, not only the word "toxicity".
+- Keep a coordinated compound event as one effect only when a shared modifier or body site makes the phrase a single clinical event, such as "severe [body-site] hemorrhage and rupture".
+- Do not create triples for vague list items, normal findings, treated diseases, or intended therapeutic outcomes.
+
+Tie-breakers:
+- If a named drug/chemical and concrete harmful outcome appear in a concrete case/report/title-style ADE statement, prefer extraction.
+- If the statement is mostly procedure-related, general background, treatment/diagnosis/management, recovery, hypothesis, pathogenesis, or non-drug causality, prefer no relation.
+- When the benchmark boundary is unclear, prefer no relation for generic causes and prefer extraction for named drugs with concrete ADE wording.
+- When extraction is valid, prefer complete enumeration of all explicit ADE relations over a single summary triple.
+
+Use retrieved examples only as boundary guidance. Do not copy their content unless it appears in the input text.
+
+{rag_examples}

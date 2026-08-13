@@ -20,6 +20,13 @@ DEFAULT_PATTERN_DB_PATH = PROJECT_ROOT / "RAG Database" / "comb_SCITEsemADE_Caus
 DEFAULT_BGE_MODEL_NAME = "BAAI/bge-small-en-v1.5"
 DEFAULT_BGE_METADATA_PATH = PROJECT_ROOT / "RAG Database" / "bge-small-en-v1.5_examples.jsonl"
 DEFAULT_BGE_EMBEDDINGS_PATH = PROJECT_ROOT / "RAG Database" / "bge-small-en-v1.5_embeddings.npy"
+DEFAULT_CNC_METADATA_PATH = PROJECT_ROOT / "RAG Database" / "cnc_examples.jsonl"
+DEFAULT_CNC_EMBEDDINGS_PATH = PROJECT_ROOT / "RAG Database" / "cnc_embeddings.npy"
+
+RAG_CACHE_PATHS = {
+    "generic": (DEFAULT_BGE_METADATA_PATH, DEFAULT_BGE_EMBEDDINGS_PATH),
+    "cnc": (DEFAULT_CNC_METADATA_PATH, DEFAULT_CNC_EMBEDDINGS_PATH),
+}
 
 
 class SentenceEncoderProtocol(Protocol):
@@ -42,9 +49,9 @@ class RetrieverProtocol(Protocol):
         """检索 top-k 个 few-shot examples。"""
 
 
-def load_examples_from_csv(pattern_db_path: Path | str) -> list[dict[str, str]]:
+def load_examples_from_csv(pattern_db_path: Path | str) -> list[dict[str, Any]]:
     """从原始 Pattern DB CSV 读取 few-shot examples，用于重建 cache。"""
-    examples: list[dict[str, str]] = []
+    examples: list[dict[str, Any]] = []
     with Path(pattern_db_path).open("r", encoding="utf-8", newline="") as file:
         reader = csv.DictReader(file)
         for row in reader:
@@ -52,32 +59,80 @@ def load_examples_from_csv(pattern_db_path: Path | str) -> list[dict[str, str]]:
             if not phrase:
                 continue
             examples.append(
-                {
-                    "sentence": row.get("sentence", ""),
-                    "cause": row.get("cause_t", ""),
-                    "effect": row.get("effect_t", ""),
-                    "causality_phrase": phrase,
-                }
+                _normalize_example(
+                    {
+                        "sentence": row.get("sentence", ""),
+                        "cause": row.get("cause_t", ""),
+                        "effect": row.get("effect_t", ""),
+                        "causality_phrase": phrase,
+                    }
+                )
             )
     return examples
 
 
-def load_examples_from_jsonl(metadata_path: Path | str) -> list[dict[str, str]]:
+def load_examples_from_jsonl(metadata_path: Path | str) -> list[dict[str, Any]]:
     """从 BGE metadata jsonl 读取 few-shot examples。"""
-    examples: list[dict[str, str]] = []
+    examples: list[dict[str, Any]] = []
     with Path(metadata_path).open("r", encoding="utf-8") as file:
         for line in file:
             if line.strip():
-                row = json.loads(line)
-                examples.append(
-                    {
-                        "sentence": row.get("sentence", ""),
-                        "cause": row.get("cause", ""),
-                        "effect": row.get("effect", ""),
-                        "causality_phrase": row.get("causality_phrase", ""),
-                    }
-                )
+                examples.append(_normalize_example(json.loads(line)))
     return examples
+
+
+def _normalize_example(row: dict[str, Any]) -> dict[str, Any]:
+    """Normalize legacy single-pair and CNC multi-triple metadata."""
+    triples: list[dict[str, str]] = []
+    raw_triples = row.get("triples")
+    if isinstance(raw_triples, list):
+        for triple in raw_triples:
+            if not isinstance(triple, dict):
+                continue
+            cause = _span_text(triple.get("cause"))
+            effect = _span_text(triple.get("effect"))
+            if cause and effect:
+                triples.append({"cause": cause, "effect": effect})
+
+    legacy_cause = _span_text(row.get("cause"))
+    legacy_effect = _span_text(row.get("effect"))
+    if not triples and legacy_cause and legacy_effect:
+        triples.append({"cause": legacy_cause, "effect": legacy_effect})
+
+    raw_signals = row.get("signals")
+    if isinstance(raw_signals, list):
+        signals = [str(signal).strip() for signal in raw_signals if str(signal).strip()]
+    else:
+        phrase = str(row.get("causality_phrase") or "").strip()
+        signals = [phrase] if phrase else []
+
+    normalized = dict(row)
+    normalized.update(
+        {
+            "sentence": str(row.get("sentence") or ""),
+            "triples": triples,
+            "signals": list(dict.fromkeys(signals)),
+            # Legacy aliases keep the existing retrievers and downstream callers compatible.
+            "cause": triples[0]["cause"] if triples else legacy_cause,
+            "effect": triples[0]["effect"] if triples else legacy_effect,
+            "causality_phrase": signals[0] if signals else "",
+        }
+    )
+    return normalized
+
+
+def _span_text(value: Any) -> str:
+    if isinstance(value, dict):
+        value = value.get("span", "")
+    return str(value or "").strip()
+
+
+def resolve_rag_cache_paths(database: str = "generic") -> tuple[Path, Path]:
+    """Return metadata and embedding cache paths for a named RAG database."""
+    normalized = database.strip().lower()
+    if normalized not in RAG_CACHE_PATHS:
+        raise ValueError(f"rag_database must be one of: {', '.join(sorted(RAG_CACHE_PATHS))}")
+    return RAG_CACHE_PATHS[normalized]
 
 
 def build_embedding_cache(
@@ -125,7 +180,7 @@ def build_embedding_cache(
 def load_embedding_cache(
     metadata_path: Path | str = DEFAULT_BGE_METADATA_PATH,
     embeddings_path: Path | str = DEFAULT_BGE_EMBEDDINGS_PATH,
-) -> tuple[list[dict[str, str]], NDArray[np.float32]]:
+) -> tuple[list[dict[str, Any]], NDArray[np.float32]]:
     """读取 jsonl metadata 与 npy embedding cache，并校验行数一致。"""
     examples = load_examples_from_jsonl(metadata_path)
     embeddings = np.load(embeddings_path).astype(np.float32, copy=False)
@@ -150,7 +205,7 @@ class PatternRetriever:
         self.examples = self._load_examples(self.metadata_path)
 
     @staticmethod
-    def _load_examples(metadata_path: Path) -> list[dict[str, str]]:
+    def _load_examples(metadata_path: Path) -> list[dict[str, Any]]:
         if metadata_path.suffix.lower() == ".csv":
             examples = load_examples_from_csv(metadata_path)
         else:
@@ -165,7 +220,10 @@ class PatternRetriever:
 
         scored = []
         for index, example in enumerate(self.examples):
-            phrase_score = self._phrase_score(text, example["causality_phrase"])
+            phrase_score = max(
+                (self._phrase_score(text, signal) for signal in example.get("signals", [])),
+                default=0.0,
+            )
             overlap_score = self._token_overlap_score(text, example)
             score = phrase_score + overlap_score
             if score > 0:
@@ -173,14 +231,7 @@ class PatternRetriever:
 
         scored.sort(key=lambda item: (-item[0], -item[1], -item[2], item[3]))
         return [
-            {
-                "sentence": example["sentence"],
-                "cause": example["cause"],
-                "effect": example["effect"],
-                "causality_phrase": example["causality_phrase"],
-                "score": round(score, 4),
-                "source": "pattern",
-            }
+            _retrieval_result(example, score=score, source="pattern")
             for score, _phrase_score, _overlap_score, _index, example in scored[:top_k]
         ]
 
@@ -205,12 +256,17 @@ class PatternRetriever:
         return max(scores, default=0.0)
 
     @staticmethod
-    def _token_overlap_score(text: str, example: dict[str, str]) -> float:
+    def _token_overlap_score(text: str, example: dict[str, Any]) -> float:
         text_tokens = set(re.findall(r"[a-z0-9]+", text.lower()))
+        triple_text = " ".join(
+            part
+            for triple in example.get("triples", [])
+            for part in (str(triple.get("cause", "")), str(triple.get("effect", "")))
+        )
         example_tokens = set(
             re.findall(
                 r"[a-z0-9]+",
-                " ".join([example["sentence"], example["cause"], example["effect"]]).lower(),
+                " ".join([str(example["sentence"]), triple_text]).lower(),
             )
         )
         if not text_tokens or not example_tokens:
@@ -228,6 +284,7 @@ class KNNRetriever:
         embeddings_path: Path | str = DEFAULT_BGE_EMBEDDINGS_PATH,
         model_name: str = DEFAULT_BGE_MODEL_NAME,
         encoder: SentenceEncoderProtocol | None = None,
+        device: str | None = "cpu",
     ) -> None:
         self.metadata_path = Path(metadata_path)
         self.embeddings_path = Path(embeddings_path)
@@ -235,7 +292,13 @@ class KNNRetriever:
         self.examples, embeddings = load_embedding_cache(self.metadata_path, self.embeddings_path)
         self.embeddings = _normalize_matrix(embeddings)
         self.encoder = encoder
-        LOGGER.info("KNN cache 已加载：examples=%s path=%s", len(self.examples), self.metadata_path)
+        self.device = device
+        LOGGER.info(
+            "KNN cache 已加载：examples=%s path=%s embedding_device=%s",
+            len(self.examples),
+            self.metadata_path,
+            self.device,
+        )
 
     def retrieve(self, text: str, top_k: int = 3) -> list[dict[str, object]]:
         """返回与输入文本 embedding cosine similarity 最高的 top-k examples。"""
@@ -247,23 +310,14 @@ class KNNRetriever:
         results: list[dict[str, object]] = []
         for index in top_indices:
             example = self.examples[int(index)]
-            results.append(
-                {
-                    "sentence": example["sentence"],
-                    "cause": example["cause"],
-                    "effect": example["effect"],
-                    "causality_phrase": example["causality_phrase"],
-                    "score": round(float(scores[int(index)]), 4),
-                    "source": "knn",
-                }
-            )
+            results.append(_retrieval_result(example, score=float(scores[int(index)]), source="knn"))
         return results
 
     def _encode_query(self, text: str) -> NDArray[np.float32]:
         if self.encoder is None:
             from sentence_transformers import SentenceTransformer
 
-            self.encoder = SentenceTransformer(self.model_name)
+            self.encoder = SentenceTransformer(self.model_name, device=self.device)
         embedding = self.encoder.encode(
             [text],
             batch_size=1,
@@ -283,10 +337,17 @@ class HybridRetriever:
     def retrieve(self, text: str, top_k: int = 3) -> list[dict[str, object]]:
         """返回 Pattern examples 后接 KNN examples 的去重结果。"""
         combined = self.pattern_retriever.retrieve(text, top_k) + self.knn_retriever.retrieve(text, top_k)
-        seen: set[tuple[str, str, str]] = set()
+        seen: set[tuple[str, ...]] = set()
         results: list[dict[str, object]] = []
         for example in combined:
-            key = (str(example["sentence"]), str(example["cause"]), str(example["effect"]))
+            sample_id = example.get("sample_id")
+            if sample_id is not None:
+                key = ("sample_id", str(example.get("dataset", "")), str(sample_id))
+            else:
+                key = (
+                    "content",
+                    str(example["sentence"]),
+                )
             if key in seen:
                 continue
             seen.add(key)
@@ -298,17 +359,26 @@ def create_retriever(
     rag_mode: str,
     metadata_path: Path | str = DEFAULT_BGE_METADATA_PATH,
     embeddings_path: Path | str = DEFAULT_BGE_EMBEDDINGS_PATH,
+    embedding_device: str | None = "cpu",
 ) -> RetrieverProtocol:
     """根据 rag_mode 创建检索器，支持 pattern、knn、knn_pattern。"""
     normalized_mode = rag_mode.strip().lower()
     if normalized_mode == "pattern":
         return PatternRetriever(metadata_path=metadata_path)
     if normalized_mode == "knn":
-        return KNNRetriever(metadata_path=metadata_path, embeddings_path=embeddings_path)
+        return KNNRetriever(
+            metadata_path=metadata_path,
+            embeddings_path=embeddings_path,
+            device=embedding_device,
+        )
     if normalized_mode == "knn_pattern":
         return HybridRetriever(
             pattern_retriever=PatternRetriever(metadata_path=metadata_path),
-            knn_retriever=KNNRetriever(metadata_path=metadata_path, embeddings_path=embeddings_path),
+            knn_retriever=KNNRetriever(
+                metadata_path=metadata_path,
+                embeddings_path=embeddings_path,
+                device=embedding_device,
+            ),
         )
     raise ValueError("rag_mode 必须是 pattern、knn 或 knn_pattern")
 
@@ -317,3 +387,10 @@ def _normalize_matrix(matrix: NDArray[np.float32]) -> NDArray[np.float32]:
     norms = np.linalg.norm(matrix, axis=1, keepdims=True)
     norms[norms == 0] = 1.0
     return (matrix / norms).astype(np.float32, copy=False)
+
+
+def _retrieval_result(example: dict[str, Any], score: float, source: str) -> dict[str, object]:
+    result: dict[str, object] = dict(example)
+    result["score"] = round(float(score), 4)
+    result["source"] = source
+    return result

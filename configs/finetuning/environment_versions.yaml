@@ -13,6 +13,7 @@ packages:
   peft: 0.18.1
   trl: 0.24.0
   bitsandbytes: 0.50.1
+  ipykernel: 7.3.0
 model:
   id: Qwen/Qwen3-8B
   revision: b968826d9c46dd6066d109eabc6255188de91218

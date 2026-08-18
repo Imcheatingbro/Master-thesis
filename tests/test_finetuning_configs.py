@@ -79,3 +79,21 @@ def test_smoke_config_matches_full_model_and_uses_bounded_training() -> None:
     assert smoke["max_steps"] == 5
     assert smoke["save_strategy"] == "no"
     assert smoke["eval_strategy"] == "no"
+
+
+def test_download_notebook_pins_training_weights_and_kernel() -> None:
+    notebook_path = PROJECT_ROOT / "notebooks" / "download_qwen3_8b_for_finetuning.ipynb"
+    notebook = json.loads(notebook_path.read_text(encoding="utf-8"))
+    source = "\n".join(
+        "".join(cell.get("source", []))
+        for cell in notebook["cells"]
+    )
+
+    assert notebook["nbformat"] == 4
+    assert notebook["metadata"]["kernelspec"]["name"] == "model_finetune"
+    assert "Qwen/Qwen3-8B" in source
+    assert MODEL_REVISION in source
+    assert r"D:\huggingface_cache" in source
+    assert "snapshot_download" in source
+    assert "model-*.safetensors" in source
+    assert "max_workers=4" in source

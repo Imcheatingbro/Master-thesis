@@ -1,0 +1,25 @@
+environment: Model_finetune
+platform: Windows
+python: 3.11.15
+gpu: NVIDIA GeForce RTX 4090 24GB
+cuda_runtime: "12.6"
+packages:
+  llamafactory: 0.9.6.dev0
+  llamafactory_git_revision: ff6d4d12eeb035d6ce06805a5733dd7b29f2ac30
+  torch: 2.12.0+cu126
+  transformers: 5.8.0
+  datasets: 4.0.0
+  accelerate: 1.11.0
+  peft: 0.18.1
+  trl: 0.24.0
+  bitsandbytes: 0.50.1
+model:
+  id: Qwen/Qwen3-8B
+  revision: b968826d9c46dd6066d109eabc6255188de91218
+  weight_bytes: 16381516776
+cache:
+  hf_home: D:/huggingface_cache
+notes:
+  - WSL distribution is not installed; current LLaMA-Factory and bitsandbytes support native Windows.
+  - FlashAttention 2 is not used on Windows; PyTorch SDPA is selected.
+  - Unsloth is disabled for the first reproducible baseline.

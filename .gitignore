@@ -1,6 +1,60 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+
+# 编辑器、notebook 与系统缓存
+**/.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 本地密钥与环境变量
+.env
+.env.*
+!.env.example
+*_api.txt
+*.pem
+*.key
+
+# 外部下载的数据；项目内生成的 CNC 固定划分仍保留
 Data/raw/
 Data/Dataset_4_causenet_raw.jsonl
 Data/Dataset_4_causenet_extra.jsonl
+Data/RAMS_1.0c/
+Data/RAMS_1.0c.tar.gz
+
+# 外部参考代码只保留已经明确纳入版本历史的文件
+reference code from related work/
+
+# 本地模型权重与训练状态
+**/checkpoint-*/
+*.safetensors
+*.gguf
+optimizer.pt
+scheduler.pt
+rng_state*.pth
+training_args.bin
+
+# 本地生成的训练模型、缓存与临时产物（禁止进入 Git/Codex 快照）
+outputs/finetuning/
+outputs/cache/
+output/
+.codex-tmp/
+tmp/
+trash/
+unsloth_compiled_cache/
+notebooks/unsloth_compiled_cache/
+RAG Database/archive/
+_tmp_*
+*.tmp
+*.log

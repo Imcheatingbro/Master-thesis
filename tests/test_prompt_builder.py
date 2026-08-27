@@ -51,6 +51,25 @@ def test_build_messages_supports_prompt_name_selection() -> None:
     assert "causality extraction system" in messages[0]["content"]
 
 
+def test_cnc_sft_v2_prompt_matches_training_message_format() -> None:
+    text = "Heavy rain caused flooding."
+    messages = build_messages(
+        text,
+        use_rag=False,
+        retriever=None,
+        top_k=0,
+        prompt_name="cnc_sft_v2",
+    )
+
+    assert messages[0]["role"] == "system"
+    assert messages[0]["content"] == load_prompt_template("cnc_sft_v2").strip()
+    assert messages[1] == {"role": "user", "content": f"Input text:\n{text}"}
+    assert "Extract all supported relations" in messages[0]["content"]
+    assert "smallest complete event" in messages[0]["content"]
+    assert "{rag_examples}" not in messages[0]["content"]
+    assert "Example" not in messages[0]["content"]
+
+
 def test_load_prompt_template_supports_dotted_prompt_names() -> None:
     prompt = load_prompt_template("v6.1")
 
@@ -89,6 +108,21 @@ def test_build_messages_labels_knn_pattern_mode() -> None:
     )
 
     assert "Retrieved KNN+Pattern RAG examples" in messages[0]["content"]
+
+
+def test_format_rag_examples_labels_random_control() -> None:
+    rendered = format_rag_examples(
+        [
+            {
+                "sentence": "Rain caused flooding.",
+                "cause": "Rain",
+                "effect": "flooding",
+            }
+        ],
+        rag_mode="random",
+    )
+
+    assert "Retrieved Random-control RAG examples:" in rendered
 
 
 def test_format_rag_examples_preserves_all_cnc_triples() -> None:
@@ -194,6 +228,80 @@ def test_v98_prompt_preserves_mixed_cnc_detection_and_adds_anchor_boundaries() -
 
     assert "{rag_examples}" not in messages[0]["content"]
     assert "Retrieved KNN RAG examples:" in messages[0]["content"]
+
+
+def test_v96_prompt_contains_ten_fixed_examples() -> None:
+    prompt = load_prompt_template("v9.6")
+    zero_shot_prompt = load_prompt_template("v9.6_zero_shot")
+    v98_prompt = load_prompt_template("v9.8")
+    v98_zero_shot_prompt = load_prompt_template("v9.8_zero_shot")
+
+    assert prompt.count("\nInput:\n") == 10
+    assert "Raman was chased by a crowd" in prompt
+    assert "opposition legislator Mira Sen" in prompt
+    assert "in which twelve people were injured" in prompt
+    assert "Anchor-safe span boundaries:" in prompt
+    assert "CNC non-causal checks:" in prompt
+    assert "Neither span may contain the other argument in full" in prompt
+    assert prompt.split("\nExamples:\n", 1)[0].strip() == zero_shot_prompt.split("\n{rag_examples}", 1)[0].strip()
+    assert abs(len(prompt.split()) - len(v98_prompt.split())) <= 200
+    assert abs(len(zero_shot_prompt.split()) - len(v98_zero_shot_prompt.split())) <= 200
+
+
+def test_cnc_gemma_v1_preserves_v98_logic_without_repeated_sft_examples() -> None:
+    prompt = load_prompt_template("cnc_gemma_v1")
+    qwen_sft_prompt = load_prompt_template("cnc_sft_v2")
+
+    assert "CNC causality decision:" in prompt
+    assert "Anchor-oriented span boundaries:" in prompt
+    assert "Prefer the WIDEST DEFENSIBLE CONTINUOUS VERSION OF THE SAME EVENT" in prompt
+    assert "Thinking is disabled:" in prompt
+    assert "Fictional examples" not in prompt
+    assert "\nInput:\n" not in prompt
+    assert "{rag_examples}" not in prompt
+    assert len(prompt) < len(qwen_sft_prompt)
+
+    messages = build_messages(
+        "Heavy rain caused flooding.",
+        use_rag=False,
+        retriever=None,
+        top_k=0,
+        prompt_name="cnc_gemma_v1",
+    )
+
+    assert messages[0]["content"] == prompt.strip()
+    assert messages[1]["content"] == "Input text:\nHeavy rain caused flooding."
+
+
+def test_cnc_gemma_v2_matches_12b_training_message_format() -> None:
+    prompt = load_prompt_template("cnc_gemma_v2")
+    messages = build_messages(
+        "Heavy rain caused flooding.",
+        use_rag=False,
+        retriever=None,
+        top_k=0,
+        prompt_name="cnc_gemma_v2",
+    )
+
+    assert messages[0]["content"] == prompt.strip()
+    assert messages[1]["content"] == "Input text:\nHeavy rain caused flooding."
+    assert "Anchor-safe span boundaries:" in prompt
+
+
+def test_cnc_gemma_v4_triples_only_removes_redundant_decision_field() -> None:
+    prompt = load_prompt_template("cnc_gemma_v4_triples_only")
+    messages = build_messages(
+        "Heavy rain caused flooding.",
+        use_rag=False,
+        retriever=None,
+        top_k=0,
+        prompt_name="cnc_gemma_v4_triples_only",
+    )
+
+    assert messages[0]["content"] == prompt.strip()
+    assert messages[1]["content"] == "Input text:\nHeavy rain caused flooding."
+    assert '"triples":[]' in prompt
+    assert "has_causal" not in prompt
 
 
 def test_v5_prompt_preserves_general_rules_and_adds_multi_causal_boundary_example() -> None:

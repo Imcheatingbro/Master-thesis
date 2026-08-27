@@ -9,6 +9,15 @@ from typing import Protocol
 
 PROMPT_DIR = Path(__file__).resolve().parents[1] / "prompts"
 DEFAULT_PROMPT_NAME = "v1"
+USER_PREFIX_BY_PROMPT = {
+    "cnc_sft_v1": "Input text:\n",
+    "cnc_sft_v2": "Input text:\n",
+    "cnc_eval_v2": "Input text:\n",
+    "cnc_gemma_v1": "Input text:\n",
+    "cnc_gemma_v2": "Input text:\n",
+    "cnc_gemma_v3_fewshot": "Input text:\n",
+    "cnc_gemma_v4_triples_only": "Input text:\n",
+}
 
 
 class RetrieverProtocol(Protocol):
@@ -35,10 +44,14 @@ def build_messages(
         examples = retriever.retrieve(text, top_k)
         rag_examples = format_rag_examples(examples, rag_mode=rag_mode)
 
+    prompt_key = Path(prompt_name).stem
     system_content = template.replace("{rag_examples}", rag_examples)
+    if prompt_key in USER_PREFIX_BY_PROMPT:
+        system_content = system_content.rstrip("\r\n")
+    user_content = f"{USER_PREFIX_BY_PROMPT.get(prompt_key, '')}{text}"
     return [
         {"role": "system", "content": system_content},
-        {"role": "user", "content": text},
+        {"role": "user", "content": user_content},
     ]
 
 
@@ -114,5 +127,6 @@ def _rag_mode_label(rag_mode: str) -> str:
         "pattern": "Pattern RAG",
         "knn": "KNN RAG",
         "knn_pattern": "KNN+Pattern RAG",
+        "random": "Random-control RAG",
     }
     return labels.get(rag_mode.strip().lower(), "RAG")

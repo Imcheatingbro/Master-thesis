@@ -3,8 +3,10 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import logging
+import random
 import re
 from pathlib import Path
 from typing import Any, Protocol
@@ -353,6 +355,85 @@ class HybridRetriever:
             seen.add(key)
             results.append(example)
         return results
+
+
+class ExactCountHybridRetriever(HybridRetriever):
+    """为消融实验返回严格 2k 个去重的 Pattern+KNN examples。"""
+
+    def retrieve(self, text: str, top_k: int = 3) -> list[dict[str, object]]:
+        """优先各取 k 个 Pattern/KNN 结果，重叠时从后续候选补足至 2k。"""
+        if top_k <= 0:
+            return []
+
+        target_count = 2 * top_k
+        pattern_examples = self.pattern_retriever.retrieve(text, target_count)
+        knn_examples = self.knn_retriever.retrieve(text, target_count)
+        candidates = pattern_examples[:top_k] + knn_examples[:top_k]
+        for offset in range(top_k, target_count):
+            if offset < len(pattern_examples):
+                candidates.append(pattern_examples[offset])
+            if offset < len(knn_examples):
+                candidates.append(knn_examples[offset])
+
+        results = _deduplicate_retrieval_results(candidates, limit=target_count)
+        if len(results) != target_count:
+            raise ValueError(
+                f"Pattern+KNN 无法补足严格 2k examples：k={top_k} actual={len(results)}"
+            )
+        return results
+
+
+class DeterministicRandomRetriever:
+    """从同一 support pool 为每个 query 确定性随机抽取严格 2k 个 examples。"""
+
+    def __init__(
+        self,
+        metadata_path: Path | str = DEFAULT_CNC_METADATA_PATH,
+        seed: int = 42,
+    ) -> None:
+        self.metadata_path = Path(metadata_path)
+        self.examples = load_examples_from_jsonl(self.metadata_path)
+        self.seed = int(seed)
+
+    def retrieve(self, text: str, top_k: int = 3) -> list[dict[str, object]]:
+        """按 seed 与 query 文本稳定抽取 2k 个不重复 examples。"""
+        if top_k <= 0:
+            return []
+
+        target_count = 2 * top_k
+        if target_count > len(self.examples):
+            raise ValueError(
+                f"Random support 不足：requested={target_count} available={len(self.examples)}"
+            )
+        digest = hashlib.sha256(f"{self.seed}\0{text}".encode("utf-8")).digest()
+        query_seed = int.from_bytes(digest[:8], byteorder="big", signed=False)
+        indices = random.Random(query_seed).sample(range(len(self.examples)), target_count)
+        return [
+            _retrieval_result(self.examples[index], score=0.0, source="random")
+            for index in indices
+        ]
+
+
+def _deduplicate_retrieval_results(
+    examples: list[dict[str, object]],
+    limit: int,
+) -> list[dict[str, object]]:
+    """按 sample ID 或句子内容去重并截断检索结果。"""
+    seen: set[tuple[str, ...]] = set()
+    results: list[dict[str, object]] = []
+    for example in examples:
+        sample_id = example.get("sample_id")
+        if sample_id is not None:
+            key = ("sample_id", str(example.get("dataset", "")), str(sample_id))
+        else:
+            key = ("content", str(example["sentence"]))
+        if key in seen:
+            continue
+        seen.add(key)
+        results.append(example)
+        if len(results) == limit:
+            break
+    return results
 
 
 def create_retriever(

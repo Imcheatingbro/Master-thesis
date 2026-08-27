@@ -100,11 +100,129 @@ class LLMClient:
                 model_ids.append(str(item["id"]))
         return model_ids
 
+    def list_local_models(self) -> list[dict[str, Any]]:
+        """返回 LM Studio REST API 中的本地模型及其加载实例。"""
+        payload = self._request_lmstudio_json("GET", "/api/v1/models")
+        models = payload.get("models")
+        if not isinstance(models, list):
+            raise ValueError("LM Studio /api/v1/models 响应缺少 models 列表")
+        return [dict(item) for item in models if isinstance(item, dict)]
+
+    def list_loaded_instances(self) -> list[str]:
+        """返回 LM Studio 当前已加载的 LLM 实例 ID，不包含 embedding。"""
+        instance_ids: list[str] = []
+        for model in self.list_local_models():
+            if model.get("type") != "llm":
+                continue
+            for instance in model.get("loaded_instances", []):
+                if isinstance(instance, dict) and instance.get("id"):
+                    instance_ids.append(str(instance["id"]))
+        return instance_ids
+
+    def load_model(
+        self,
+        model: str,
+        *,
+        context_length: int | None = None,
+        parallel: int | None = None,
+        flash_attention: bool = True,
+        offload_kv_cache_to_gpu: bool = True,
+    ) -> dict[str, Any]:
+        """通过 LM Studio REST API 加载一个模型并返回实例信息。"""
+        body: dict[str, Any] = {
+            "model": model,
+            "flash_attention": flash_attention,
+            "offload_kv_cache_to_gpu": offload_kv_cache_to_gpu,
+            "echo_load_config": True,
+        }
+        if context_length is not None:
+            body["context_length"] = int(context_length)
+        if parallel is not None:
+            body["parallel"] = int(parallel)
+        return self._request_lmstudio_json(
+            "POST",
+            "/api/v1/models/load",
+            body,
+            timeout=self.timeout,
+        )
+
+    def unload_model(self, instance_id: str) -> dict[str, Any]:
+        """通过 LM Studio REST API 卸载指定模型实例。"""
+        return self._request_lmstudio_json(
+            "POST",
+            "/api/v1/models/unload",
+            {"instance_id": instance_id},
+        )
+
+    def unload_all_models(self) -> list[str]:
+        """卸载当前所有 LLM 实例，并返回已卸载的实例 ID。"""
+        instance_ids = self.list_loaded_instances()
+        for instance_id in instance_ids:
+            self.unload_model(instance_id)
+        return instance_ids
+
+    def chat_rest(
+        self,
+        input_text: str,
+        *,
+        model: str | None = None,
+        system_prompt: str | None = None,
+        reasoning: str = "off",
+        max_output_tokens: int = 512,
+        context_length: int | None = None,
+    ) -> dict[str, Any]:
+        """调用 LM Studio 原生 chat API，并保留 reasoning 统计供 smoke 检查。"""
+        body: dict[str, Any] = {
+            "model": model or self.model,
+            "input": input_text,
+            "temperature": self.temperature,
+            "max_output_tokens": int(max_output_tokens),
+            "reasoning": reasoning,
+            "store": False,
+        }
+        if system_prompt:
+            body["system_prompt"] = system_prompt
+        if context_length is not None:
+            body["context_length"] = int(context_length)
+        return self._request_lmstudio_json(
+            "POST",
+            "/api/v1/chat",
+            body,
+            timeout=self.timeout,
+        )
+
     def _lmstudio_models_endpoint(self) -> str:
         base_url = self.base_url.rstrip("/")
         if base_url.endswith("/v1"):
             base_url = base_url[:-3]
         return f"{base_url}/api/v0/models"
+
+    def _lmstudio_api_v1_endpoint(self, path: str) -> str:
+        base_url = self.base_url.rstrip("/")
+        if base_url.endswith("/v1"):
+            base_url = base_url[:-3]
+        return f"{base_url}/{path.lstrip('/')}"
+
+    def _request_lmstudio_json(
+        self,
+        method: str,
+        path: str,
+        body: dict[str, Any] | None = None,
+        *,
+        timeout: float | None = None,
+    ) -> dict[str, Any]:
+        endpoint = self._lmstudio_api_v1_endpoint(path)
+        data = json.dumps(body).encode("utf-8") if body is not None else None
+        request = Request(endpoint, data=data, method=method)
+        if self.api_key:
+            request.add_header("Authorization", f"Bearer {self.api_key}")
+        if data is not None:
+            request.add_header("Content-Type", "application/json")
+        with self._urlopen(request, timeout=timeout or min(self.timeout, 10.0)) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+        if not isinstance(payload, dict):
+            raise ValueError(f"LM Studio {path} 响应不是 JSON object")
+        return payload
 
     def chat(self, messages: list[dict[str, str]]) -> str:
         """发送 OpenAI 格式 messages，并返回模型输出文本。"""

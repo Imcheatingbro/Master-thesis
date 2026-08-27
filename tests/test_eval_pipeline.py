@@ -465,6 +465,41 @@ def test_run_stream_eval_saves_report_and_emits_debug_rows(tmp_path: Path) -> No
     assert not list(report_path.parent.glob("*_parse_repairs.jsonl"))
 
 
+def test_run_stream_eval_passes_explicit_triples_only_schema(tmp_path: Path) -> None:
+    samples = [
+        {
+            "id": 1,
+            "text": "Rain caused flooding.",
+            "has_causal": True,
+            "relations": [{"cause": "Rain", "effect": "flooding"}],
+        }
+    ]
+    config = EvalRunConfig(
+        project_root=tmp_path,
+        model="gemma-triples-only",
+        dataset="cnc",
+        prompt_name="cnc_gemma_v4_triples_only",
+        use_rag=False,
+        rag_mode="knn",
+        rag_top_k=0,
+        temperature=0.0,
+        max_tokens=512,
+        output_schema="triples_only",
+        progress_every=1,
+    )
+
+    report = run_stream_eval(
+        samples,
+        label="triples-only check",
+        client=object(),
+        config=config,
+        generator=_fake_triples_only_generator,
+    )
+
+    assert report["detection"]["f1"] == 1.0
+    assert report["extraction"]["strict_token_f1"]["all_samples"]["f1"] == 1.0
+
+
 def test_run_stream_eval_records_generation_failure_summary(tmp_path: Path) -> None:
     samples = [
         {
@@ -646,6 +681,31 @@ def _fake_generator(
             "triples": [{"cause": {"span": "Rain"}, "effect": {"span": "flooding"}}],
         }
     return {"id": sample_id, "has_causal": False, "triples": []}
+
+
+def _fake_triples_only_generator(
+    text: str,
+    sample_id: int | None,
+    client: Any,
+    retriever: Any,
+    use_rag: bool,
+    top_k: int,
+    rag_mode: str,
+    prompt_name: str,
+    output_schema: str,
+) -> dict[str, Any]:
+    assert output_schema == "triples_only"
+    return {
+        "id": sample_id,
+        "has_causal": True,
+        "triples": [
+            {
+                "cause": {"span": "Rain"},
+                "relation": "caused",
+                "effect": {"span": "flooding"},
+            }
+        ],
+    }
 
 
 def _sample_judgement(sample_id: int, gold: bool, pred: bool, counts: dict[str, int]) -> dict[str, Any]:

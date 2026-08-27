@@ -188,6 +188,126 @@ def test_list_loaded_models_returns_only_loaded_chat_models_and_sends_api_token(
     assert calls == [("http://127.0.0.1:1234/api/v0/models", "Bearer real-token", 10.0)]
 
 
+def test_lmstudio_model_management_and_no_reasoning_chat(tmp_path: Path) -> None:
+    config_path = tmp_path / "llm.yaml"
+    write_config(config_path)
+    calls: list[dict[str, object]] = []
+    responses = iter(
+        [
+            {
+                "models": [
+                    {
+                        "type": "llm",
+                        "key": "qwen/qwen3.6-35b-a3b",
+                        "loaded_instances": [{"id": "qwen-loaded"}],
+                    },
+                    {
+                        "type": "embedding",
+                        "key": "bge-small",
+                        "loaded_instances": [{"id": "bge-loaded"}],
+                    },
+                ]
+            },
+            {"instance_id": "qwen/qwen3.6-35b-a3b", "status": "loaded"},
+            {
+                "model_instance_id": "qwen/qwen3.6-35b-a3b",
+                "output": [{"type": "message", "content": '{"has_causal":true,"triples":[]}'}],
+                "stats": {"reasoning_output_tokens": 0},
+            },
+            {"instance_id": "qwen-loaded"},
+        ]
+    )
+
+    def fake_urlopen(request: object, timeout: float) -> FakeHTTPResponse:
+        request_data = getattr(request, "data", None)
+        calls.append(
+            {
+                "url": getattr(request, "full_url"),
+                "method": getattr(request, "method"),
+                "authorization": request.get_header("Authorization"),
+                "content_type": request.get_header("Content-type"),
+                "body": json.loads(request_data.decode("utf-8")) if request_data else None,
+                "timeout": timeout,
+            }
+        )
+        return FakeHTTPResponse(next(responses))
+
+    client = LLMClient(
+        config_path=config_path,
+        api_key="real-token",
+        timeout=900,
+        openai_client=FakeOpenAI(),
+        urlopen_func=fake_urlopen,
+    )
+
+    assert client.list_loaded_instances() == ["qwen-loaded"]
+    load_result = client.load_model(
+        "qwen/qwen3.6-35b-a3b",
+        context_length=16384,
+        parallel=1,
+    )
+    smoke_result = client.chat_rest(
+        "Heavy rain caused flooding.",
+        model=load_result["instance_id"],
+        system_prompt="Output JSON only.",
+        context_length=16384,
+    )
+    unload_result = client.unload_model("qwen-loaded")
+
+    assert smoke_result["stats"]["reasoning_output_tokens"] == 0
+    assert unload_result == {"instance_id": "qwen-loaded"}
+    assert calls == [
+        {
+            "url": "http://127.0.0.1:1234/api/v1/models",
+            "method": "GET",
+            "authorization": "Bearer real-token",
+            "content_type": None,
+            "body": None,
+            "timeout": 10.0,
+        },
+        {
+            "url": "http://127.0.0.1:1234/api/v1/models/load",
+            "method": "POST",
+            "authorization": "Bearer real-token",
+            "content_type": "application/json",
+            "body": {
+                "model": "qwen/qwen3.6-35b-a3b",
+                "flash_attention": True,
+                "offload_kv_cache_to_gpu": True,
+                "echo_load_config": True,
+                "context_length": 16384,
+                "parallel": 1,
+            },
+            "timeout": 900.0,
+        },
+        {
+            "url": "http://127.0.0.1:1234/api/v1/chat",
+            "method": "POST",
+            "authorization": "Bearer real-token",
+            "content_type": "application/json",
+            "body": {
+                "model": "qwen/qwen3.6-35b-a3b",
+                "input": "Heavy rain caused flooding.",
+                "temperature": 0.0,
+                "max_output_tokens": 512,
+                "reasoning": "off",
+                "store": False,
+                "system_prompt": "Output JSON only.",
+                "context_length": 16384,
+            },
+            "timeout": 900.0,
+        },
+        {
+            "url": "http://127.0.0.1:1234/api/v1/models/unload",
+            "method": "POST",
+            "authorization": "Bearer real-token",
+            "content_type": "application/json",
+            "body": {"instance_id": "qwen-loaded"},
+            "timeout": 10.0,
+        },
+    ]
+
+
 def test_chat_retries_transient_failures_and_returns_text(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
     config_path = tmp_path / "llm.yaml"
     write_config(config_path)
@@ -262,6 +382,26 @@ def test_chat_omits_lmstudio_context_length_for_deepseek_and_passes_reasoning_op
         "thinking": {"type": "enabled"},
         "reasoning_effort": "high",
     }
+
+
+def test_chat_supports_generic_openai_compatible_server_without_vendor_fields(tmp_path: Path) -> None:
+    config_path = tmp_path / "llm.yaml"
+    write_config(config_path)
+    fake_client = FakeOpenAI()
+    client = LLMClient(
+        config_path=config_path,
+        provider="openai_compatible",
+        base_url="http://127.0.0.1:8000/v1",
+        model="qwen3-8b-cnc-qlora-best",
+        api_key="llamafactory-local",
+        openai_client=fake_client,
+    )
+
+    client.chat([{"role": "user", "content": "extract JSON"}])
+
+    assert fake_client.chat.completions.last_kwargs is not None
+    assert fake_client.chat.completions.last_kwargs["model"] == "qwen3-8b-cnc-qlora-best"
+    assert fake_client.chat.completions.last_kwargs["extra_body"] == {}
 
 
 def test_chat_reports_reasoning_only_response_as_empty_content(tmp_path: Path) -> None:

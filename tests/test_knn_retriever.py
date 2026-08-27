@@ -10,7 +10,13 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from src.retriever import HybridRetriever, KNNRetriever, load_examples_from_jsonl
+from src.retriever import (
+    DeterministicRandomRetriever,
+    ExactCountHybridRetriever,
+    HybridRetriever,
+    KNNRetriever,
+    load_examples_from_jsonl,
+)
 
 
 class FakeEncoder:
@@ -48,6 +54,26 @@ class FakePatternRetriever:
                 "source": "pattern",
             },
         ][:top_k]
+
+
+class StaticRetriever:
+    """测试用固定顺序检索器。"""
+
+    def __init__(self, sentences: list[str], source: str) -> None:
+        self.examples = [
+            {
+                "dataset": "cnc",
+                "sample_id": sentence,
+                "sentence": sentence,
+                "cause": f"{sentence} cause",
+                "effect": f"{sentence} effect",
+                "source": source,
+            }
+            for sentence in sentences
+        ]
+
+    def retrieve(self, text: str, top_k: int) -> list[dict[str, object]]:
+        return self.examples[:top_k]
 
 
 def write_cache(metadata_path: Path, embeddings_path: Path) -> None:
@@ -98,6 +124,46 @@ def test_hybrid_retriever_concatenates_pattern_and_knn_with_dedup(tmp_path: Path
         "KNN second.",
     ]
     assert [example["source"] for example in examples] == ["pattern", "pattern", "knn"]
+
+
+def test_exact_count_hybrid_retriever_fills_overlap_to_two_k() -> None:
+    retriever = ExactCountHybridRetriever(
+        pattern_retriever=StaticRetriever(["P1", "shared", "P3", "P4"], "pattern"),
+        knn_retriever=StaticRetriever(["shared", "K2", "K3", "K4"], "knn"),
+    )
+
+    examples = retriever.retrieve("query", top_k=2)
+
+    assert len(examples) == 4
+    assert len({str(example["sentence"]) for example in examples}) == 4
+    assert [example["sentence"] for example in examples] == ["P1", "shared", "K2", "P3"]
+
+
+def test_deterministic_random_retriever_returns_stable_two_k(tmp_path: Path) -> None:
+    metadata_path = tmp_path / "random_examples.jsonl"
+    rows = [
+        {
+            "dataset": "cnc",
+            "sample_id": index,
+            "sentence": f"Sentence {index}.",
+            "cause": f"Cause {index}",
+            "effect": f"Effect {index}",
+        }
+        for index in range(10)
+    ]
+    metadata_path.write_text(
+        "\n".join(json.dumps(row) for row in rows) + "\n",
+        encoding="utf-8",
+    )
+    retriever = DeterministicRandomRetriever(metadata_path=metadata_path, seed=42)
+
+    first = retriever.retrieve("query", top_k=3)
+    second = retriever.retrieve("query", top_k=3)
+
+    assert len(first) == 6
+    assert [example["sample_id"] for example in first] == [example["sample_id"] for example in second]
+    assert len({example["sample_id"] for example in first}) == 6
+    assert all(example["source"] == "random" for example in first)
 
 
 def test_load_examples_from_jsonl_preserves_multi_triples_and_signals(tmp_path: Path) -> None:

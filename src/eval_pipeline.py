@@ -17,7 +17,7 @@ from src.evaluator import (
     build_sample_judgement,
     primary_metric_for_dataset,
 )
-from src.generator import generate
+from src.generator import STANDARD_OUTPUT_SCHEMA, VALID_OUTPUT_SCHEMAS, generate
 from src.retriever import RetrieverProtocol, create_retriever
 
 
@@ -39,6 +39,8 @@ class EvalRunConfig:
     rag_top_k: int
     temperature: float
     max_tokens: int
+    output_schema: str = STANDARD_OUTPUT_SCHEMA
+    primary_metric: str | None = None
     progress_every: int = 50
     max_workers: int = 1
     llm_provider: str | None = None
@@ -76,6 +78,8 @@ class EvalRunConfig:
             "rag_top_k": self.rag_top_k,
             "temperature": self.temperature,
             "max_tokens": self.max_tokens,
+            "output_schema": self.output_schema,
+            "primary_metric": self.primary_metric,
             "progress_every": self.progress_every,
             "max_workers": self.max_workers,
             "llm_provider": self.llm_provider,
@@ -104,7 +108,9 @@ def run_stream_eval(
     generated_at: datetime | None = None,
 ) -> dict[str, Any]:
     """流式运行 eval，按需输出进度快照并保存完整 Markdown 报告。"""
-    evaluator = Evaluator(dataset=config.dataset)
+    if config.output_schema not in VALID_OUTPUT_SCHEMAS:
+        raise ValueError(f"未知输出 schema：{config.output_schema}")
+    evaluator = Evaluator(dataset=config.dataset, primary_metric=config.primary_metric)
     eval_retriever = _get_eval_retriever(config, existing_retriever)
     indexed_judgements: list[tuple[int, dict[str, Any]]] = []
     total = len(samples)
@@ -236,16 +242,19 @@ def _generate_prediction(
     generator: Callable[..., dict[str, Any]],
 ) -> dict[str, Any]:
     try:
-        return generator(
-            text=sample["text"],
-            sample_id=sample["id"],
-            client=client,
-            retriever=retriever,
-            use_rag=config.use_rag,
-            top_k=config.rag_top_k,
-            rag_mode=config.rag_mode,
-            prompt_name=config.prompt_name,
-        )
+        generator_kwargs = {
+            "text": sample["text"],
+            "sample_id": sample["id"],
+            "client": client,
+            "retriever": retriever,
+            "use_rag": config.use_rag,
+            "top_k": config.rag_top_k,
+            "rag_mode": config.rag_mode,
+            "prompt_name": config.prompt_name,
+        }
+        if config.output_schema != STANDARD_OUTPUT_SCHEMA:
+            generator_kwargs["output_schema"] = config.output_schema
+        return generator(**generator_kwargs)
     except Exception as exc:
         return {
             "id": sample.get("id"),

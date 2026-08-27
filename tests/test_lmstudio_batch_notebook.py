@@ -59,7 +59,7 @@ def test_batch_notebook_separates_smoke_switching_from_guarded_formal_eval() -> 
     assert "reasoning='off'" in smoke_helper_source
     assert "lmstudio.unload_all_models()" in smoke_helper_source
     assert "reasoning='off'" not in eval_helper_source
-    assert "llm_extra_body=run.get('llm_extra_body')" in eval_helper_source
+    assert "llm_extra_body=_extra_body_for_run(run)" in eval_helper_source
     assert "progress_factory=_notebook_progress" in eval_helper_source
     assert "if not RUN_BATCH_EVAL" in formal_source
     assert "run_formal_batch(MODEL_RUNS)" in formal_source
@@ -90,8 +90,10 @@ def test_batch_notebook_appends_qwen_family_validation_selected_rag3_test() -> N
     assert "completed_samples % reload_every_samples == 0" in eval_helper_source
     assert "manager.unload_all_models()" in eval_helper_source
     assert "samples_override: list[dict[str, Any]] | None = None" in eval_helper_source
-    assert "extra_body=run.get('llm_extra_body')" in eval_helper_source
-    assert "llm_extra_body=run.get('llm_extra_body')" in eval_helper_source
+    assert "return {'cache_prompt': False, **(run.get('llm_extra_body') or {})}" in eval_helper_source
+    assert "extra_body=_extra_body_for_run(run)" in eval_helper_source
+    assert "llm_extra_body=_extra_body_for_run(run)" in eval_helper_source
+    assert "'cache_prompt': _extra_body_for_run(run)['cache_prompt']" in eval_helper_source
     assert "'detection_tp': detection['tp']" in eval_helper_source
     assert "'strict_all_tp': strict['all_samples']['tp']" in eval_helper_source
     assert "'anchor_detected_fn': anchor['detected_only']['fn']" in eval_helper_source

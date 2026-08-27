@@ -124,6 +124,7 @@ def test_client_loads_config_and_allows_overrides(tmp_path: Path) -> None:
     assert client.temperature == 0.2
     assert client.max_tokens == 2048
     assert client.context_length == 8192
+    assert client.extra_body == {"cache_prompt": False}
 
 
 def test_ping_returns_true_when_models_endpoint_is_reachable(tmp_path: Path) -> None:
@@ -320,7 +321,10 @@ def test_chat_retries_transient_failures_and_returns_text(tmp_path: Path, monkey
     assert result == "ok:qwen/qwen3-14b:0.0"
     assert fake_client.chat.completions.calls == 3
     assert fake_client.chat.completions.last_kwargs is not None
-    assert fake_client.chat.completions.last_kwargs["extra_body"] == {"context_length": 8192}
+    assert fake_client.chat.completions.last_kwargs["extra_body"] == {
+        "context_length": 8192,
+        "cache_prompt": False,
+    }
 
 
 def test_chat_passes_reasoning_option_when_configured(tmp_path: Path) -> None:
@@ -335,6 +339,7 @@ def test_chat_passes_reasoning_option_when_configured(tmp_path: Path) -> None:
     assert fake_client.chat.completions.last_kwargs["extra_body"] == {
         "context_length": 8192,
         "reasoning": "off",
+        "cache_prompt": False,
     }
 
 
@@ -355,7 +360,27 @@ def test_chat_passes_configured_extra_body_without_mutating_messages(tmp_path: P
     assert fake_client.chat.completions.last_kwargs["messages"] == messages
     assert fake_client.chat.completions.last_kwargs["extra_body"] == {
         "context_length": 8192,
+        "cache_prompt": False,
         "chat_template_kwargs": {"enable_thinking": False},
+    }
+
+
+def test_lmstudio_extra_body_can_explicitly_override_prompt_cache_default(tmp_path: Path) -> None:
+    config_path = tmp_path / "llm.yaml"
+    write_config(config_path)
+    fake_client = FakeOpenAI()
+    client = LLMClient(
+        config_path=config_path,
+        openai_client=fake_client,
+        extra_body={"cache_prompt": True},
+    )
+
+    client.chat([{"role": "user", "content": "hello"}])
+
+    assert fake_client.chat.completions.last_kwargs is not None
+    assert fake_client.chat.completions.last_kwargs["extra_body"] == {
+        "context_length": 8192,
+        "cache_prompt": True,
     }
 
 

@@ -108,3 +108,9 @@
 - 虚拟模型 `Manojb/Qwen3.5-9B-Q8_0-no-thinking` 的小规模 eval 已生成 report，`generation_failures.total=0`，未再出现 `llm_reasoning_only_empty_content`；后续运行应优先加载该虚拟模型，并新开会话确认 `Enable Thinking=Off`，避免旧会话状态覆盖模型默认值。
 - 虚拟模型默认关闭 thinking 后，notebook 层的 `LLM_REASONING=None` 与 `LLM_EXTRA_BODY={"chat_template_kwargs": {"enable_thinking": False}}` 都属于多余默认参数，已清理为不传；`LLMClient.extra_body` 通用能力保留，便于将来测试没有正确暴露 `enableThinking` 的模型。
 - 不再从 `reasoning_content` 里兜底解析 JSON；structured output 与 thinking 模型叠加时虽然可能把 JSON 放入 reasoning 通道，但这种行为依赖 LM Studio/模型模板边界状态，且容易把 `Thinking Process` 中复述的示例 JSON 误判为最终答案。当前规则恢复为只解析 `content`，`content=""` 继续按 `llm_reasoning_only_empty_content` 记录失败。
+
+## 2026-08-27：LM Studio prompt cache 长批量生成异常
+
+- Qwen3.6 27B No Thinking 在固定 RAG3 test 中出现 HTTP 200 但 completion 达到 token 上限、重复或截断，并导致连续非法 JSON；把模型重载间隔缩短到 100 条仍不能消除问题，因此不能把这类失败简单归因于断连或累积请求数。
+- 固定 test 第 590–636 条在相同模型、Prompt、RAG 与解码参数下设置 `cache_prompt=False` 后，47 条生成失败和解析修复均为 0；第 501–1038 条的正式续跑也实现 538 条失败/修复均为 0。后续 LM Studio OpenAI-compatible 请求默认关闭 prompt cache，并在报告配置中显式记录。
+- 中止运行若只保留周期性指标，可以复用已打印的原始 TP/FP/FN/TN，但不能恢复逐样本预测。合并结果必须先相加原始计数，再重新计算 Precision/Recall/F1；不得根据已四舍五入的显示分数反推，也必须记录两段运行时参数差异。

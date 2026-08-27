@@ -16,6 +16,7 @@ from openai import OpenAI
 
 LOGGER = logging.getLogger(__name__)
 DEFAULT_CONFIG_PATH = Path(__file__).resolve().parents[1] / "configs" / "llm.yaml"
+DEFAULT_LMSTUDIO_EXTRA_BODY: dict[str, Any] = {"cache_prompt": False}
 
 
 class LLMEmptyContentError(RuntimeError):
@@ -44,7 +45,12 @@ class LLMClient:
         self.context_length = int(config.get("context_length", 8192))
         self.reasoning = config.get("reasoning")
         self.reasoning_effort = config.get("reasoning_effort")
-        self.extra_body = _load_extra_body(config.get("extra_body"))
+        configured_extra_body = _load_extra_body(config.get("extra_body"))
+        self.extra_body = (
+            {**DEFAULT_LMSTUDIO_EXTRA_BODY, **configured_extra_body}
+            if self.provider == "lmstudio"
+            else configured_extra_body
+        )
         self.timeout = float(config["timeout"])
         self.retry_times = int(config["retry_times"])
         self._client = openai_client or OpenAI(

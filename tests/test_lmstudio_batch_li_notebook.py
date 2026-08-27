@@ -27,7 +27,7 @@ def test_li_batch_notebook_code_cells_compile() -> None:
             compile("".join(cell["source"]), f"{NOTEBOOK_PATH.name}:cell{index}", "exec")
 
 
-def test_li_batch_notebook_uses_family_prompts_and_rag_off_by_default() -> None:
+def test_li_batch_notebook_uses_family_prompts_and_selected_rag_config() -> None:
     cells = _cells_by_id(_load_notebook())
     config_source = "".join(cells["global-config"]["source"])
     preflight_source = "".join(cells["lmstudio-preflight"]["source"])
@@ -45,7 +45,7 @@ def test_li_batch_notebook_uses_family_prompts_and_rag_off_by_default() -> None:
     assert positions == sorted(positions)
     assert "DATASET_NAME = 'li'" in config_source
     assert "EVAL_SAMPLE_N = None" in config_source
-    assert "ENABLE_RAG = False" in config_source
+    assert "ENABLE_RAG = False" in config_source or "ENABLE_RAG = True" in config_source
     assert config_source.count("'use_rag': ENABLE_RAG") == 4
     assert config_source.count("'prompt_name': 'v10.1'") == 2
     assert config_source.count("'prompt_name': 'v10.2'") == 2
@@ -68,3 +68,22 @@ def test_li_family_prompts_each_have_one_rag_slot() -> None:
     for prompt_name in ("v10.1", "v10.2"):
         prompt_path = PROJECT_ROOT / "prompts" / f"{prompt_name}.txt"
         assert prompt_path.read_text(encoding="utf-8").count("{rag_examples}") == 1
+
+
+def test_li_batch_notebook_reruns_last_three_with_reload50() -> None:
+    cells = _cells_by_id(_load_notebook())
+    config_source = "".join(cells["last-three-reload50-config"]["source"])
+    run_source = "".join(cells["run-last-three-reload50"]["source"])
+
+    assert "MODEL_RUNS[1:]" in config_source
+    assert "'reload_every_samples': 50" in config_source
+    assert "local/qwen3.6-27b-no-thinking" in config_source
+    assert "google/gemma-4-26b-a4b-qat" in config_source
+    assert "google/gemma-4-31b-qat" in config_source
+    assert "qwen/qwen3.6-35b-a3b" not in config_source
+    assert "str(run['rag_database']) != 'cnc'" in config_source
+    assert "str(run['rag_mode']) != 'knn_pattern'" in config_source
+    assert "run_formal_batch(" in run_source
+    assert "LAST_THREE_RELOAD50_RUNS" in run_source
+    assert "require_all_smoke=False" in run_source
+    assert "li_full_family_rag_last3_reload50_summary.csv" in run_source

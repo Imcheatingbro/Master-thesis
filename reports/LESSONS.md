@@ -123,3 +123,4 @@
 - v10.2 的 strict all-samples F1 从 `0.585` 降到 `0.537`，与允许较长 span 的目标一致；本项目在 Li 的主比较采用 anchor 指标，因此不能把这项边界变化误写成所有 extraction 指标均改善。
 - v10.1 与 v10.2 均必须保留唯一的 `{rag_examples}` 槽位。Li 第一轮家族批量对照关闭 RAG；第二轮沿用 CNC validation 预先选定的家族配置与 CNC train-only support：Qwen 为 KNN+Pattern k=3，Gemma 为 KNN+Pattern k=1，不能退回未经选择的 generic KNN 默认值。
 - Li 最终批量比较使用当前全部 786 条，不再另拆 validation/test。由于 Gemma v10.2 曾根据前 300 条结果确定，完整 786 条包含 Prompt 开发样本，因此论文中应称为“Li 全数据集评测”，不能表述为完全未触碰的 held-out test。
+- Li 家族 RAG 全量运行中，Qwen 35B 正常完成，Qwen 27B 再次出现大量调用错误；已完成报告确认 `cache_prompt=False`，因此该现象不能解释为缓存开关回退。后续仅补跑 Qwen 27B 与两个 Gemma，并每 50 条卸载、重新加载当前模型实例；该设置属于 LM Studio 长批量稳定性控制，不改变 Prompt、RAG、解码参数或评估样本。

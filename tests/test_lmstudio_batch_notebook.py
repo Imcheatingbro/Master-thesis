@@ -86,6 +86,9 @@ def test_batch_notebook_appends_qwen_family_validation_selected_rag3_test() -> N
     assert "primary_metric=str(run.get('primary_metric', 'anchor_window'))" in eval_helper_source
     assert "existing_retriever=(existing_retrievers or {}).get(run_id)" in eval_helper_source
     assert "parallel=None if run_parallel is None else int(run_parallel)" in eval_helper_source
+    assert "def generate_with_periodic_reload(" in eval_helper_source
+    assert "completed_samples % reload_every_samples == 0" in eval_helper_source
+    assert "manager.unload_all_models()" in eval_helper_source
 
     assert "QWEN_FAMILY_RAG3_TEST_RUNS" in rag3_config_source
     assert "qwen/qwen3.6-35b-a3b" in rag3_config_source
@@ -93,7 +96,8 @@ def test_batch_notebook_appends_qwen_family_validation_selected_rag3_test() -> N
     assert rag3_config_source.count("'rag_top_k': 3") == 2
     assert rag3_config_source.count("'primary_metric': 'strict_token_f1'") == 2
     assert rag3_config_source.count("'context_length': 8192") == 2
-    assert rag3_config_source.count("'parallel': 4") == 2
+    assert rag3_config_source.count("'parallel': 1") == 2
+    assert rag3_config_source.count("'reload_every_samples': 200") == 2
     assert "ExactCountHybridRetriever(" in rag3_config_source
     assert "PatternRetriever(" in rag3_config_source
     assert "KNNRetriever(" in rag3_config_source

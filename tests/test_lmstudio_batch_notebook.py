@@ -92,6 +92,9 @@ def test_batch_notebook_appends_qwen_family_validation_selected_rag3_test() -> N
     assert "samples_override: list[dict[str, Any]] | None = None" in eval_helper_source
     assert "extra_body=run.get('llm_extra_body')" in eval_helper_source
     assert "llm_extra_body=run.get('llm_extra_body')" in eval_helper_source
+    assert "'detection_tp': detection['tp']" in eval_helper_source
+    assert "'strict_all_tp': strict['all_samples']['tp']" in eval_helper_source
+    assert "'anchor_detected_fn': anchor['detected_only']['fn']" in eval_helper_source
 
     assert "QWEN_FAMILY_RAG3_TEST_RUNS" in rag3_config_source
     assert "RUN_QWEN_FAMILY_RAG3_TEST = False" in rag3_config_source
@@ -142,3 +145,23 @@ def test_batch_notebook_appends_qwen27_cache_prompt_off_diagnostic() -> None:
     assert "samples_override=qwen27_cache_prompt_off_samples" in diagnostic_source
     assert "QWEN_RAG3_RETRIEVER" in diagnostic_source
     assert "qwen27_fixed_rag_k3_cache_prompt_off_diagnostic_590_636_summary.csv" in diagnostic_source
+
+
+def test_batch_notebook_reuses_first_500_and_runs_cache_off_tail() -> None:
+    cells = _cells_by_id(_load_notebook())
+    tail_source = "".join(cells["qwen27-reuse500-cache-off-tail"]["source"])
+
+    assert "RUN_QWEN27_REUSE500_TAIL = True" in tail_source
+    assert "'n_samples': 500" in tail_source
+    assert "'detection_tp': 228" in tail_source
+    assert "'strict_all_tp': 175" in tail_source
+    assert "'anchor_detected_fn': 141" in tail_source
+    assert "qwen27_all_test_samples[500:]" in tail_source
+    assert "len(qwen27_tail_samples) != 538" in tail_source
+    assert "str(qwen27_prefix500_samples[-1]['id']) != '30'" in tail_source
+    assert "str(qwen27_tail_samples[0]['id']) != '1076'" in tail_source
+    assert "'llm_extra_body': {'cache_prompt': False}" in tail_source
+    assert "'reload_every_samples': 100" in tail_source
+    assert "samples_override=qwen27_tail_samples" in tail_source
+    assert "qwen27_combined_counts" in tail_source
+    assert "qwen27_fixed_rag_k3_test_reuse500_cache_prompt_off_tail_summary.csv" in tail_source

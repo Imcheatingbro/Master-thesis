@@ -117,6 +117,6 @@
 
 ## 2026-08-27：Li Gemma v10.2 Prompt 设计
 
-- v10.2 采用 Gemma CNC v9.8 的分阶段表达与最终核验，但不能照搬其“最宽完整事件”边界；Li 的 Gold 是短实体 anchor，因此专门加入从两侧收缩到最短可辨识实体的检查。
-- v10.2 与 v10.1 保持完全相同的 11 个 fixed examples，只调整规则组织、显式因果门控、短 span 边界和关系覆盖检查，使后续对照尽量只反映 instruction 变化。
+- v10.2 保持 v10.1 的整体结构，只修改 span 策略：借鉴 Gemma CNC v9.8 的“同一参数内最宽可辩护连续边界”，允许较长的同一 cause/effect 短语，但禁止跨过因果连接词、吞入另一侧参数或无关从句。
+- v10.1 与 v10.2 统一保留相同的 10 个 fixed examples；删除信息量最低的普通非因果例句，使后续对照主要反映 span instruction 差异。
 - v10.2 目前是面向 Gemma 的候选 Prompt，不应在 validation 对照完成前写成优于 v10.1 或 Gemma 家族最优配置。

@@ -248,6 +248,20 @@ def test_v96_prompt_contains_ten_fixed_examples() -> None:
     assert abs(len(zero_shot_prompt.split()) - len(v98_zero_shot_prompt.split())) <= 200
 
 
+def test_v102_adapts_gemma_staging_to_li_short_anchors() -> None:
+    prompt = load_prompt_template("v10.2")
+    v101_prompt = load_prompt_template("v10.1")
+
+    assert "STAGE 1: LI EXPLICIT CAUSALITY DECISION" in prompt
+    assert "STAGE 2: LI SHORT ENTITY ANCHORS" in prompt
+    assert "STAGE 3: COMPLETE RELATION COVERAGE" in prompt
+    assert "prefer the shortest defensible entity anchor" in prompt
+    assert "Do not copy the CNC convention" in prompt
+    assert "Do not create a Cartesian product across unrelated causal frames" in prompt
+    assert prompt.count("\nInput:\n") == v101_prompt.count("\nInput:\n") == 11
+    assert prompt.split("\nExamples:\n", 1)[1] == v101_prompt.split("\nExamples:\n", 1)[1]
+
+
 def test_cnc_gemma_v1_preserves_v98_logic_without_repeated_sft_examples() -> None:
     prompt = load_prompt_template("cnc_gemma_v1")
     qwen_sft_prompt = load_prompt_template("cnc_sft_v2")

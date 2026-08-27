@@ -114,3 +114,9 @@
 - Qwen3.6 27B No Thinking 在固定 RAG3 test 中出现 HTTP 200 但 completion 达到 token 上限、重复或截断，并导致连续非法 JSON；把模型重载间隔缩短到 100 条仍不能消除问题，因此不能把这类失败简单归因于断连或累积请求数。
 - 固定 test 第 590–636 条在相同模型、Prompt、RAG 与解码参数下设置 `cache_prompt=False` 后，47 条生成失败和解析修复均为 0；第 501–1038 条的正式续跑也实现 538 条失败/修复均为 0。后续 LM Studio OpenAI-compatible 请求默认关闭 prompt cache，并在报告配置中显式记录。
 - 中止运行若只保留周期性指标，可以复用已打印的原始 TP/FP/FN/TN，但不能恢复逐样本预测。合并结果必须先相加原始计数，再重新计算 Precision/Recall/F1；不得根据已四舍五入的显示分数反推，也必须记录两段运行时参数差异。
+
+## 2026-08-27：Li Gemma v10.2 Prompt 设计
+
+- v10.2 采用 Gemma CNC v9.8 的分阶段表达与最终核验，但不能照搬其“最宽完整事件”边界；Li 的 Gold 是短实体 anchor，因此专门加入从两侧收缩到最短可辨识实体的检查。
+- v10.2 与 v10.1 保持完全相同的 11 个 fixed examples，只调整规则组织、显式因果门控、短 span 边界和关系覆盖检查，使后续对照尽量只反映 instruction 变化。
+- v10.2 目前是面向 Gemma 的候选 Prompt，不应在 validation 对照完成前写成优于 v10.1 或 Gemma 家族最优配置。

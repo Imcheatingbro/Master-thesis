@@ -59,7 +59,7 @@ def test_batch_notebook_separates_smoke_switching_from_guarded_formal_eval() -> 
     assert "reasoning='off'" in smoke_helper_source
     assert "lmstudio.unload_all_models()" in smoke_helper_source
     assert "reasoning='off'" not in eval_helper_source
-    assert "llm_extra_body=None" in eval_helper_source
+    assert "llm_extra_body=run.get('llm_extra_body')" in eval_helper_source
     assert "progress_factory=_notebook_progress" in eval_helper_source
     assert "if not RUN_BATCH_EVAL" in formal_source
     assert "run_formal_batch(MODEL_RUNS)" in formal_source
@@ -89,8 +89,12 @@ def test_batch_notebook_appends_qwen_family_validation_selected_rag3_test() -> N
     assert "def generate_with_periodic_reload(" in eval_helper_source
     assert "completed_samples % reload_every_samples == 0" in eval_helper_source
     assert "manager.unload_all_models()" in eval_helper_source
+    assert "samples_override: list[dict[str, Any]] | None = None" in eval_helper_source
+    assert "extra_body=run.get('llm_extra_body')" in eval_helper_source
+    assert "llm_extra_body=run.get('llm_extra_body')" in eval_helper_source
 
     assert "QWEN_FAMILY_RAG3_TEST_RUNS" in rag3_config_source
+    assert "RUN_QWEN_FAMILY_RAG3_TEST = False" in rag3_config_source
     assert "qwen/qwen3.6-35b-a3b" in rag3_config_source
     assert "local/qwen3.6-27b-no-thinking" in rag3_config_source
     assert rag3_config_source.count("'rag_top_k': 3") == 2
@@ -108,3 +112,33 @@ def test_batch_notebook_appends_qwen_family_validation_selected_rag3_test() -> N
     assert "QWEN_FAMILY_RAG3_TEST_RUNS" in rag3_run_source
     assert "require_all_smoke=False" in rag3_run_source
     assert "qwen_family_fixed_rag_k3_test_summary.csv" in rag3_config_source
+
+
+def test_batch_notebook_appends_qwen27_reload100_rerun() -> None:
+    cells = _cells_by_id(_load_notebook())
+    rerun_source = "".join(cells["qwen27-rag3-reload100-rerun"]["source"])
+
+    assert "RUN_QWEN27_RAG3_RELOAD100_RERUN = False" in rerun_source
+    assert "local/qwen3.6-27b-no-thinking" in rerun_source
+    assert "'reload_every_samples': 100" in rerun_source
+    assert "'qwen27_fixed_rag_k3_test_reload100_rerun'" in rerun_source
+    assert "QWEN27_RAG3_RELOAD100_RESULTS = run_formal_batch(" in rerun_source
+    assert "[QWEN27_RAG3_RELOAD100_RERUN]" in rerun_source
+    assert "QWEN_RAG3_RETRIEVER" in rerun_source
+    assert "require_all_smoke=False" in rerun_source
+    assert "qwen27_fixed_rag_k3_test_reload100_rerun_summary.csv" in rerun_source
+
+
+def test_batch_notebook_appends_qwen27_cache_prompt_off_diagnostic() -> None:
+    cells = _cells_by_id(_load_notebook())
+    diagnostic_source = "".join(cells["qwen27-cache-prompt-off-diagnostic"]["source"])
+
+    assert "RUN_QWEN27_CACHE_PROMPT_OFF_DIAGNOSTIC = True" in diagnostic_source
+    assert "'llm_extra_body': {'cache_prompt': False}" in diagnostic_source
+    assert "'reload_every_samples': 0" in diagnostic_source
+    assert "load_dataset(DATASET_NAME, n=None)[589:636]" in diagnostic_source
+    assert "str(qwen27_cache_prompt_off_samples[5]['id']) != '2677'" in diagnostic_source
+    assert "str(qwen27_cache_prompt_off_samples[41]['id']) != '110'" in diagnostic_source
+    assert "samples_override=qwen27_cache_prompt_off_samples" in diagnostic_source
+    assert "QWEN_RAG3_RETRIEVER" in diagnostic_source
+    assert "qwen27_fixed_rag_k3_cache_prompt_off_diagnostic_590_636_summary.csv" in diagnostic_source

@@ -119,4 +119,7 @@
 
 - v10.2 保持 v10.1 的整体结构，只修改 span 策略：借鉴 Gemma CNC v9.8 的“同一参数内最宽可辩护连续边界”，允许较长的同一 cause/effect 短语，但禁止跨过因果连接词、吞入另一侧参数或无关从句。
 - v10.1 与 v10.2 统一保留相同的 10 个 fixed examples；删除信息量最低的普通非因果例句，使后续对照主要反映 span instruction 差异。
-- v10.2 目前是面向 Gemma 的候选 Prompt，不应在 validation 对照完成前写成优于 v10.1 或 Gemma 家族最优配置。
+- Gemma 4 31B 在相同 Li 前 300 条上，v10.2 相对 v10.1 的 anchor all-samples F1 从 `0.854` 提升到 `0.868`，anchor detected-only F1 从 `0.913` 提升到 `0.929`；Detection F1 基本不变（`0.902` 与 `0.901`）。因此后续 Gemma 家族使用 v10.2，Qwen 家族继续使用 v10.1。
+- v10.2 的 strict all-samples F1 从 `0.585` 降到 `0.537`，与允许较长 span 的目标一致；本项目在 Li 的主比较采用 anchor 指标，因此不能把这项边界变化误写成所有 extraction 指标均改善。
+- v10.1 与 v10.2 均必须保留唯一的 `{rag_examples}` 槽位。Li 第一轮家族批量对照关闭 RAG；第二轮沿用 CNC validation 预先选定的家族配置与 CNC train-only support：Qwen 为 KNN+Pattern k=3，Gemma 为 KNN+Pattern k=1，不能退回未经选择的 generic KNN 默认值。
+- Li 最终批量比较使用当前全部 786 条，不再另拆 validation/test。由于 Gemma v10.2 曾根据前 300 条结果确定，完整 786 条包含 Prompt 开发样本，因此论文中应称为“Li 全数据集评测”，不能表述为完全未触碰的 held-out test。

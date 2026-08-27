@@ -105,3 +105,5 @@ Input:
 The damage caused by a bullet depends on the amount of energy which it transfers to the tissues.
 Output:
 {"has_causal": true, "triples": [{"cause": {"span": "a bullet"}, "relation": "caused", "effect": {"span": "The damage"}}]}
+
+{rag_examples}

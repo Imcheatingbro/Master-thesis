@@ -258,6 +258,8 @@ def test_v102_keeps_v101_structure_and_allows_gemma_wider_li_spans() -> None:
     assert "Do not expand across the causal marker" in prompt
     assert prompt.count("\nInput:\n") == v101_prompt.count("\nInput:\n") == 10
     assert prompt.split("\nExamples:\n", 1)[1] == v101_prompt.split("\nExamples:\n", 1)[1]
+    assert prompt.count("{rag_examples}") == 1
+    assert v101_prompt.count("{rag_examples}") == 1
     assert "A qualified medical professional" not in prompt
     assert "A qualified medical professional" not in v101_prompt
 

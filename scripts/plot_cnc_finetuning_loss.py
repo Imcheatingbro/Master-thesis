@@ -149,7 +149,11 @@ def load_all_points() -> list[LossPoint]:
 def write_csv(points: Iterable[LossPoint]) -> None:
     """保存可核查的绘图源数据。"""
     with CSV_PATH.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=("model", "split", "step", "loss"))
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=("model", "split", "step", "loss"),
+            lineterminator="\n",
+        )
         writer.writeheader()
         for point in points:
             writer.writerow(

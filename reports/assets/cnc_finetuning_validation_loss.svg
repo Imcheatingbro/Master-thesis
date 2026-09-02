@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
+<title id="title">CNC Fine-tuning: Validation Loss</title>
+<desc id="description">Loss curves for four final CNC fine-tuning branches over training steps.</desc>
+<style>
+          .title { font: 600 25px Arial, sans-serif; fill: #111827; }
+          .axis { font: 16px Arial, sans-serif; fill: #374151; }
+          .tick { font: 14px Arial, sans-serif; fill: #4b5563; }
+          .legend { font: 15px Arial, sans-serif; fill: #374151; }
+          .note { font: 13px Arial, sans-serif; fill: #64748b; }
+          .epoch { font: 12px Arial, sans-serif; fill: #94a3b8; }
+          .grid { stroke: #dbe2ea; stroke-width: 1; }
+        </style>
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="600.0" y="46" class="title" text-anchor="middle">CNC Fine-tuning: Validation Loss</text>
+<rect x="105" y="145" width="1050" height="445" fill="#fbfcfe" stroke="#cbd5e1" stroke-width="1"/>
+<line x1="105" y1="590.00" x2="1155" y2="590.00" class="grid"/>
+<text x="89" y="595.00" class="tick" text-anchor="end">0.00</text>
+<line x1="105" y1="515.83" x2="1155" y2="515.83" class="grid"/>
+<text x="89" y="520.83" class="tick" text-anchor="end">0.03</text>
+<line x1="105" y1="441.67" x2="1155" y2="441.67" class="grid"/>
+<text x="89" y="446.67" class="tick" text-anchor="end">0.06</text>
+<line x1="105" y1="367.50" x2="1155" y2="367.50" class="grid"/>
+<text x="89" y="372.50" class="tick" text-anchor="end">0.09</text>
+<line x1="105" y1="293.33" x2="1155" y2="293.33" class="grid"/>
+<text x="89" y="298.33" class="tick" text-anchor="end">0.12</text>
+<line x1="105" y1="219.17" x2="1155" y2="219.17" class="grid"/>
+<text x="89" y="224.17" class="tick" text-anchor="end">0.15</text>
+<line x1="105" y1="145.00" x2="1155" y2="145.00" class="grid"/>
+<text x="89" y="150.00" class="tick" text-anchor="end">0.18</text>
+<text x="105.00" y="621" class="tick" text-anchor="middle">0</text>
+<text x="285.41" y="621" class="tick" text-anchor="middle">50</text>
+<text x="465.82" y="621" class="tick" text-anchor="middle">100</text>
+<text x="646.24" y="621" class="tick" text-anchor="middle">150</text>
+<text x="826.65" y="621" class="tick" text-anchor="middle">200</text>
+<text x="1007.06" y="621" class="tick" text-anchor="middle">250</text>
+<text x="1155.00" y="621" class="tick" text-anchor="end">291</text>
+<line x1="455.00" y1="145" x2="455.00" y2="590" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 6"/>
+<line x1="805.00" y1="145" x2="805.00" y2="590" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 6"/>
+<text x="278.20" y="165" class="epoch" text-anchor="middle">Epoch 1</text>
+<text x="628.20" y="165" class="epoch" text-anchor="middle">Epoch 2</text>
+<text x="978.20" y="165" class="epoch" text-anchor="middle">Epoch 3</text>
+<text x="630.0" y="660" class="axis" text-anchor="middle">Training step</text>
+<text x="31" y="367.5" class="axis" text-anchor="middle" transform="rotate(-90 31 367.5)">Cross-entropy loss</text>
+<polyline points="465.82,475.08 826.65,490.09 1155.00,477.62" fill="none" stroke="#0f766e" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="465.82" cy="475.08" r="5.0" fill="#0f766e"/>
+<circle cx="826.65" cy="490.09" r="5.0" fill="#0f766e"/>
+<circle cx="1155.00" cy="477.62" r="5.0" fill="#0f766e"/>
+<circle cx="122.00" cy="91.00" r="5.0" fill="#0f766e"/>
+<text x="136" y="96" class="legend" text-anchor="start">Qwen3-8B LoRA</text>
+<polyline points="285.41,447.45 465.82,479.13 646.24,477.15 826.65,489.22 1007.06,480.66 1155.00,485.47" fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="280.41" y="442.45" width="10.00" height="10.00" fill="#2563eb"/>
+<rect x="460.82" y="474.13" width="10.00" height="10.00" fill="#2563eb"/>
+<rect x="641.24" y="472.15" width="10.00" height="10.00" fill="#2563eb"/>
+<rect x="821.65" y="484.22" width="10.00" height="10.00" fill="#2563eb"/>
+<rect x="1002.06" y="475.66" width="10.00" height="10.00" fill="#2563eb"/>
+<rect x="1150.00" y="480.47" width="10.00" height="10.00" fill="#2563eb"/>
+<rect x="380.00" y="86.00" width="10.00" height="10.00" fill="#2563eb"/>
+<text x="399" y="96" class="legend" text-anchor="start">Qwen3-14B QLoRA</text>
+<polyline points="285.41,466.34 465.82,472.26 646.24,491.81 826.65,488.32 1007.06,489.57 1155.00,490.17" fill="none" stroke="#d97706" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="285.41,460.54 291.21,466.34 285.41,472.14 279.61,466.34" fill="#d97706"/>
+<polygon points="465.82,466.46 471.62,472.26 465.82,478.06 460.02,472.26" fill="#d97706"/>
+<polygon points="646.24,486.01 652.04,491.81 646.24,497.61 640.44,491.81" fill="#d97706"/>
+<polygon points="826.65,482.52 832.45,488.32 826.65,494.12 820.85,488.32" fill="#d97706"/>
+<polygon points="1007.06,483.77 1012.86,489.57 1007.06,495.37 1001.26,489.57" fill="#d97706"/>
+<polygon points="1155.00,484.37 1160.80,490.17 1155.00,495.97 1149.20,490.17" fill="#d97706"/>
+<polygon points="648.00,85.20 653.80,91.00 648.00,96.80 642.20,91.00" fill="#d97706"/>
+<text x="662" y="96" class="legend" text-anchor="start">Gemma 4 E4B LoRA</text>
+<polyline points="285.41,196.90 465.82,404.55 646.24,404.19 826.65,470.74 1007.06,480.19 1155.00,481.99" fill="none" stroke="#7c3aed" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="285.41,190.90 291.41,201.90 279.41,201.90" fill="#7c3aed"/>
+<polygon points="465.82,398.55 471.82,409.55 459.82,409.55" fill="#7c3aed"/>
+<polygon points="646.24,398.19 652.24,409.19 640.24,409.19" fill="#7c3aed"/>
+<polygon points="826.65,464.74 832.65,475.74 820.65,475.74" fill="#7c3aed"/>
+<polygon points="1007.06,474.19 1013.06,485.19 1001.06,485.19" fill="#7c3aed"/>
+<polygon points="1155.00,475.99 1161.00,486.99 1149.00,486.99" fill="#7c3aed"/>
+<polygon points="911.00,85.00 917.00,96.00 905.00,96.00" fill="#7c3aed"/>
+<text x="925" y="96" class="legend" text-anchor="start">Gemma 4 12B QLoRA</text>
+<text x="600.0" y="687" class="note" text-anchor="middle">Validation frequency differs: Qwen3-8B at steps 100/200/final; the other runs every 50 steps and final.</text>
+</svg>

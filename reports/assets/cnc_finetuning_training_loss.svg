@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title description">
+<title id="title">CNC Fine-tuning: Training Loss</title>
+<desc id="description">Loss curves for four final CNC fine-tuning branches over training steps.</desc>
+<style>
+          .title { font: 600 25px Arial, sans-serif; fill: #111827; }
+          .axis { font: 16px Arial, sans-serif; fill: #374151; }
+          .tick { font: 14px Arial, sans-serif; fill: #4b5563; }
+          .legend { font: 15px Arial, sans-serif; fill: #374151; }
+          .note { font: 13px Arial, sans-serif; fill: #64748b; }
+          .epoch { font: 12px Arial, sans-serif; fill: #94a3b8; }
+          .grid { stroke: #dbe2ea; stroke-width: 1; }
+        </style>
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="600.0" y="46" class="title" text-anchor="middle">CNC Fine-tuning: Training Loss</text>
+<rect x="105" y="145" width="1050" height="445" fill="#fbfcfe" stroke="#cbd5e1" stroke-width="1"/>
+<line x1="105" y1="590.00" x2="1155" y2="590.00" class="grid"/>
+<text x="89" y="595.00" class="tick" text-anchor="end">0.00</text>
+<line x1="105" y1="501.00" x2="1155" y2="501.00" class="grid"/>
+<text x="89" y="506.00" class="tick" text-anchor="end">0.20</text>
+<line x1="105" y1="412.00" x2="1155" y2="412.00" class="grid"/>
+<text x="89" y="417.00" class="tick" text-anchor="end">0.40</text>
+<line x1="105" y1="323.00" x2="1155" y2="323.00" class="grid"/>
+<text x="89" y="328.00" class="tick" text-anchor="end">0.60</text>
+<line x1="105" y1="234.00" x2="1155" y2="234.00" class="grid"/>
+<text x="89" y="239.00" class="tick" text-anchor="end">0.80</text>
+<line x1="105" y1="145.00" x2="1155" y2="145.00" class="grid"/>
+<text x="89" y="150.00" class="tick" text-anchor="end">1.00</text>
+<text x="105.00" y="621" class="tick" text-anchor="middle">0</text>
+<text x="286.03" y="621" class="tick" text-anchor="middle">50</text>
+<text x="467.07" y="621" class="tick" text-anchor="middle">100</text>
+<text x="648.10" y="621" class="tick" text-anchor="middle">150</text>
+<text x="829.14" y="621" class="tick" text-anchor="middle">200</text>
+<text x="1010.17" y="621" class="tick" text-anchor="middle">250</text>
+<text x="1155.00" y="621" class="tick" text-anchor="end">290</text>
+<line x1="456.21" y1="145" x2="456.21" y2="590" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 6"/>
+<line x1="807.41" y1="145" x2="807.41" y2="590" stroke="#94a3b8" stroke-width="1" stroke-dasharray="5 6"/>
+<text x="278.79" y="165" class="epoch" text-anchor="middle">Epoch 1</text>
+<text x="630.00" y="165" class="epoch" text-anchor="middle">Epoch 2</text>
+<text x="981.21" y="165" class="epoch" text-anchor="middle">Epoch 3</text>
+<text x="630.0" y="660" class="axis" text-anchor="middle">Training step</text>
+<text x="31" y="367.5" class="axis" text-anchor="middle" transform="rotate(-90 31 367.5)">Cross-entropy loss</text>
+<polyline points="141.21,238.92 177.41,540.45 213.62,551.27 249.83,553.76 286.03,559.29 322.24,562.55 358.45,556.50 394.66,562.08 430.86,559.94 467.07,567.67 503.28,571.76 539.48,571.70 575.69,572.18 611.90,568.91 648.10,570.41 684.31,570.86 720.52,573.42 756.72,573.79 792.93,576.50 829.14,574.34 865.34,577.31 901.55,580.15 937.76,580.71 973.97,579.49 1010.17,579.32 1046.38,582.06 1082.59,579.19 1118.79,582.91 1155.00,579.80" fill="none" stroke="#0f766e" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="141.21" cy="238.92" r="3.8" fill="#0f766e"/>
+<circle cx="177.41" cy="540.45" r="3.8" fill="#0f766e"/>
+<circle cx="213.62" cy="551.27" r="3.8" fill="#0f766e"/>
+<circle cx="249.83" cy="553.76" r="3.8" fill="#0f766e"/>
+<circle cx="286.03" cy="559.29" r="3.8" fill="#0f766e"/>
+<circle cx="322.24" cy="562.55" r="3.8" fill="#0f766e"/>
+<circle cx="358.45" cy="556.50" r="3.8" fill="#0f766e"/>
+<circle cx="394.66" cy="562.08" r="3.8" fill="#0f766e"/>
+<circle cx="430.86" cy="559.94" r="3.8" fill="#0f766e"/>
+<circle cx="467.07" cy="567.67" r="3.8" fill="#0f766e"/>
+<circle cx="503.28" cy="571.76" r="3.8" fill="#0f766e"/>
+<circle cx="539.48" cy="571.70" r="3.8" fill="#0f766e"/>
+<circle cx="575.69" cy="572.18" r="3.8" fill="#0f766e"/>
+<circle cx="611.90" cy="568.91" r="3.8" fill="#0f766e"/>
+<circle cx="648.10" cy="570.41" r="3.8" fill="#0f766e"/>
+<circle cx="684.31" cy="570.86" r="3.8" fill="#0f766e"/>
+<circle cx="720.52" cy="573.42" r="3.8" fill="#0f766e"/>
+<circle cx="756.72" cy="573.79" r="3.8" fill="#0f766e"/>
+<circle cx="792.93" cy="576.50" r="3.8" fill="#0f766e"/>
+<circle cx="829.14" cy="574.34" r="3.8" fill="#0f766e"/>
+<circle cx="865.34" cy="577.31" r="3.8" fill="#0f766e"/>
+<circle cx="901.55" cy="580.15" r="3.8" fill="#0f766e"/>
+<circle cx="937.76" cy="580.71" r="3.8" fill="#0f766e"/>
+<circle cx="973.97" cy="579.49" r="3.8" fill="#0f766e"/>
+<circle cx="1010.17" cy="579.32" r="3.8" fill="#0f766e"/>
+<circle cx="1046.38" cy="582.06" r="3.8" fill="#0f766e"/>
+<circle cx="1082.59" cy="579.19" r="3.8" fill="#0f766e"/>
+<circle cx="1118.79" cy="582.91" r="3.8" fill="#0f766e"/>
+<circle cx="1155.00" cy="579.80" r="3.8" fill="#0f766e"/>
+<circle cx="122.00" cy="91.00" r="5.0" fill="#0f766e"/>
+<text x="136" y="96" class="legend" text-anchor="start">Qwen3-8B LoRA</text>
+<polyline points="141.21,235.86 177.41,373.32 213.62,534.31 249.83,545.82 286.03,554.35 322.24,559.20 358.45,553.67 394.66,560.44 430.86,559.65 467.07,565.99 503.28,567.34 539.48,568.49 575.69,568.86 611.90,565.21 648.10,565.27 684.31,566.65 720.52,570.73 756.72,571.75 792.93,573.66 829.14,574.64 865.34,572.05 901.55,575.94 937.76,574.62 973.97,575.24 1010.17,572.92 1046.38,577.91 1082.59,574.41 1118.79,578.15 1155.00,573.60" fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="137.41" y="232.06" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="173.61" y="369.52" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="209.82" y="530.51" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="246.03" y="542.02" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="282.23" y="550.55" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="318.44" y="555.40" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="354.65" y="549.87" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="390.86" y="556.64" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="427.06" y="555.85" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="463.27" y="562.19" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="499.48" y="563.54" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="535.68" y="564.69" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="571.89" y="565.06" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="608.10" y="561.41" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="644.30" y="561.47" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="680.51" y="562.85" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="716.72" y="566.93" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="752.92" y="567.95" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="789.13" y="569.86" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="825.34" y="570.84" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="861.54" y="568.25" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="897.75" y="572.14" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="933.96" y="570.82" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="970.17" y="571.44" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="1006.37" y="569.12" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="1042.58" y="574.11" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="1078.79" y="570.61" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="1114.99" y="574.35" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="1151.20" y="569.80" width="7.60" height="7.60" fill="#2563eb"/>
+<rect x="380.00" y="86.00" width="10.00" height="10.00" fill="#2563eb"/>
+<text x="399" y="96" class="legend" text-anchor="start">Qwen3-14B QLoRA</text>
+<polyline points="141.21,489.67 177.41,558.35 213.62,565.76 249.83,564.80 286.03,566.20 322.24,569.57 358.45,567.50 394.66,567.57 430.86,567.24 467.07,574.68 503.28,571.75 539.48,575.57 575.69,577.58 611.90,573.83 648.10,573.63 684.31,576.01 720.52,576.28 756.72,578.03 792.93,579.60 829.14,581.28 865.34,580.62 901.55,583.42 937.76,582.42 973.97,581.95 1010.17,581.66 1046.38,584.55 1082.59,582.97 1118.79,585.12 1155.00,582.64" fill="none" stroke="#d97706" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="141.21,485.07 145.81,489.67 141.21,494.27 136.61,489.67" fill="#d97706"/>
+<polygon points="177.41,553.75 182.01,558.35 177.41,562.95 172.81,558.35" fill="#d97706"/>
+<polygon points="213.62,561.16 218.22,565.76 213.62,570.36 209.02,565.76" fill="#d97706"/>
+<polygon points="249.83,560.20 254.43,564.80 249.83,569.40 245.23,564.80" fill="#d97706"/>
+<polygon points="286.03,561.60 290.63,566.20 286.03,570.80 281.43,566.20" fill="#d97706"/>
+<polygon points="322.24,564.97 326.84,569.57 322.24,574.17 317.64,569.57" fill="#d97706"/>
+<polygon points="358.45,562.90 363.05,567.50 358.45,572.10 353.85,567.50" fill="#d97706"/>
+<polygon points="394.66,562.97 399.26,567.57 394.66,572.17 390.06,567.57" fill="#d97706"/>
+<polygon points="430.86,562.64 435.46,567.24 430.86,571.84 426.26,567.24" fill="#d97706"/>
+<polygon points="467.07,570.08 471.67,574.68 467.07,579.28 462.47,574.68" fill="#d97706"/>
+<polygon points="503.28,567.15 507.88,571.75 503.28,576.35 498.68,571.75" fill="#d97706"/>
+<polygon points="539.48,570.97 544.08,575.57 539.48,580.17 534.88,575.57" fill="#d97706"/>
+<polygon points="575.69,572.98 580.29,577.58 575.69,582.18 571.09,577.58" fill="#d97706"/>
+<polygon points="611.90,569.23 616.50,573.83 611.90,578.43 607.30,573.83" fill="#d97706"/>
+<polygon points="648.10,569.03 652.70,573.63 648.10,578.23 643.50,573.63" fill="#d97706"/>
+<polygon points="684.31,571.41 688.91,576.01 684.31,580.61 679.71,576.01" fill="#d97706"/>
+<polygon points="720.52,571.68 725.12,576.28 720.52,580.88 715.92,576.28" fill="#d97706"/>
+<polygon points="756.72,573.43 761.32,578.03 756.72,582.63 752.12,578.03" fill="#d97706"/>
+<polygon points="792.93,575.00 797.53,579.60 792.93,584.20 788.33,579.60" fill="#d97706"/>
+<polygon points="829.14,576.68 833.74,581.28 829.14,585.88 824.54,581.28" fill="#d97706"/>
+<polygon points="865.34,576.02 869.94,580.62 865.34,585.22 860.74,580.62" fill="#d97706"/>
+<polygon points="901.55,578.82 906.15,583.42 901.55,588.02 896.95,583.42" fill="#d97706"/>
+<polygon points="937.76,577.82 942.36,582.42 937.76,587.02 933.16,582.42" fill="#d97706"/>
+<polygon points="973.97,577.35 978.57,581.95 973.97,586.55 969.37,581.95" fill="#d97706"/>
+<polygon points="1010.17,577.06 1014.77,581.66 1010.17,586.26 1005.57,581.66" fill="#d97706"/>
+<polygon points="1046.38,579.95 1050.98,584.55 1046.38,589.15 1041.78,584.55" fill="#d97706"/>
+<polygon points="1082.59,578.37 1087.19,582.97 1082.59,587.57 1077.99,582.97" fill="#d97706"/>
+<polygon points="1118.79,580.52 1123.39,585.12 1118.79,589.72 1114.19,585.12" fill="#d97706"/>
+<polygon points="1155.00,578.04 1159.60,582.64 1155.00,587.24 1150.40,582.64" fill="#d97706"/>
+<polygon points="648.00,85.20 653.80,91.00 648.00,96.80 642.20,91.00" fill="#d97706"/>
+<text x="662" y="96" class="legend" text-anchor="start">Gemma 4 E4B LoRA</text>
+<polyline points="141.21,161.98 177.41,287.13 213.62,496.40 249.83,546.27 286.03,551.08 322.24,507.12 358.45,572.22 394.66,537.24 430.86,555.22 467.07,565.29 503.28,555.14 539.48,576.27 575.69,516.52 611.90,563.69 648.10,547.70 684.31,551.90 720.52,575.85 756.72,547.51 792.93,570.52 829.14,562.76 865.34,568.13 901.55,575.51 937.76,554.90 973.97,579.38 1010.17,562.56 1046.38,575.20 1082.59,571.01 1118.79,564.00 1155.00,582.48" fill="none" stroke="#7c3aed" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="141.21,157.18 146.01,165.78 136.41,165.78" fill="#7c3aed"/>
+<polygon points="177.41,282.33 182.21,290.93 172.61,290.93" fill="#7c3aed"/>
+<polygon points="213.62,491.60 218.42,500.20 208.82,500.20" fill="#7c3aed"/>
+<polygon points="249.83,541.47 254.63,550.07 245.03,550.07" fill="#7c3aed"/>
+<polygon points="286.03,546.28 290.83,554.88 281.23,554.88" fill="#7c3aed"/>
+<polygon points="322.24,502.32 327.04,510.92 317.44,510.92" fill="#7c3aed"/>
+<polygon points="358.45,567.42 363.25,576.02 353.65,576.02" fill="#7c3aed"/>
+<polygon points="394.66,532.44 399.46,541.04 389.86,541.04" fill="#7c3aed"/>
+<polygon points="430.86,550.42 435.66,559.02 426.06,559.02" fill="#7c3aed"/>
+<polygon points="467.07,560.49 471.87,569.09 462.27,569.09" fill="#7c3aed"/>
+<polygon points="503.28,550.34 508.08,558.94 498.48,558.94" fill="#7c3aed"/>
+<polygon points="539.48,571.47 544.28,580.07 534.68,580.07" fill="#7c3aed"/>
+<polygon points="575.69,511.72 580.49,520.32 570.89,520.32" fill="#7c3aed"/>
+<polygon points="611.90,558.89 616.70,567.49 607.10,567.49" fill="#7c3aed"/>
+<polygon points="648.10,542.90 652.90,551.50 643.30,551.50" fill="#7c3aed"/>
+<polygon points="684.31,547.10 689.11,555.70 679.51,555.70" fill="#7c3aed"/>
+<polygon points="720.52,571.05 725.32,579.65 715.72,579.65" fill="#7c3aed"/>
+<polygon points="756.72,542.71 761.52,551.31 751.92,551.31" fill="#7c3aed"/>
+<polygon points="792.93,565.72 797.73,574.32 788.13,574.32" fill="#7c3aed"/>
+<polygon points="829.14,557.96 833.94,566.56 824.34,566.56" fill="#7c3aed"/>
+<polygon points="865.34,563.33 870.14,571.93 860.54,571.93" fill="#7c3aed"/>
+<polygon points="901.55,570.71 906.35,579.31 896.75,579.31" fill="#7c3aed"/>
+<polygon points="937.76,550.10 942.56,558.70 932.96,558.70" fill="#7c3aed"/>
+<polygon points="973.97,574.58 978.77,583.18 969.17,583.18" fill="#7c3aed"/>
+<polygon points="1010.17,557.76 1014.97,566.36 1005.37,566.36" fill="#7c3aed"/>
+<polygon points="1046.38,570.40 1051.18,579.00 1041.58,579.00" fill="#7c3aed"/>
+<polygon points="1082.59,566.21 1087.39,574.81 1077.79,574.81" fill="#7c3aed"/>
+<polygon points="1118.79,559.20 1123.59,567.80 1113.99,567.80" fill="#7c3aed"/>
+<polygon points="1155.00,577.68 1159.80,586.28 1150.20,586.28" fill="#7c3aed"/>
+<polygon points="911.00,85.00 917.00,96.00 905.00,96.00" fill="#7c3aed"/>
+<text x="925" y="96" class="legend" text-anchor="start">Gemma 4 12B QLoRA</text>
+<text x="600.0" y="687" class="note" text-anchor="middle">Training loss is logged every 10 steps; curves show interval loss, not the final run-average loss.</text>
+</svg>

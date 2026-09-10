@@ -211,10 +211,10 @@ def load_saved_span_results(path: Path | str) -> list[dict[str, Any]]:
                 continue
             record = json.loads(line)
             if not isinstance(record, dict):
-                raise ValueError(f"第 {line_number} 行不是 JSON object")
+                raise ValueError(f"line {line_number} is not a JSON object")
             records.append(record)
     if not records:
-        raise ValueError(f"未读取到 span 结果：{path}")
+        raise ValueError(f"no span results were read from: {path}")
     return records
 
 

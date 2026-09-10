@@ -225,12 +225,12 @@ def parse_judge_output(raw_str: str) -> dict[str, Any]:
     cleaned = re.sub(r"<think>.*?</think>", "", raw_str, flags=re.DOTALL | re.IGNORECASE).strip()
     json_text = _extract_json_from_markdown(cleaned) or _extract_first_json_object(cleaned)
     if json_text is None:
-        raise ValueError("未找到 judge JSON object")
+        raise ValueError("Judge JSON object not found")
     parsed = json.loads(json_text)
     if not isinstance(parsed, dict):
-        raise ValueError("judge 输出必须是 JSON object")
+        raise ValueError("Judge output must be a JSON object")
     if not isinstance(parsed.get("units"), list):
-        raise ValueError("judge 输出缺少 units 列表")
+        raise ValueError("Judge output is missing the units list")
     return parsed
 
 
@@ -530,11 +530,11 @@ class DeepSeekJudgeClient:
         urlopen_func: Any | None = None,
     ) -> None:
         if thinking not in {"enabled", "disabled"}:
-            raise ValueError("thinking 必须是 'enabled' 或 'disabled'")
+            raise ValueError("thinking must be either 'enabled' or 'disabled'")
         if reasoning_effort not in {None, "high", "max"}:
-            raise ValueError("reasoning_effort 必须是 None、'high' 或 'max'")
+            raise ValueError("reasoning_effort must be None, 'high', or 'max'")
         if thinking == "disabled" and reasoning_effort is not None:
-            raise ValueError("thinking='disabled' 时 reasoning_effort 必须是 None")
+            raise ValueError("reasoning_effort must be None when thinking='disabled'")
 
         self.api_key = _read_api_key(Path(api_key_path))
         self.model = model
@@ -589,7 +589,7 @@ class DeepSeekJudgeClient:
             raise RuntimeError("DeepSeek judge request failed without response payload")
         content = payload["choices"][0]["message"].get("content") or ""
         if not content:
-            raise ValueError("DeepSeek judge 返回空 content")
+            raise ValueError("DeepSeek Judge returned empty content")
         return str(content)
     def _should_retry_http_error(self, exc: HTTPError, attempt: int) -> bool:
         return exc.code in RETRYABLE_DEEPSEEK_STATUS_CODES and attempt < self.retry_times
@@ -722,7 +722,7 @@ def _load_judge_prompt(prompt_version: str) -> str:
     prompt_name = f"{safe_version}.txt" if safe_version.startswith("kg_eval_judge_") else f"kg_eval_judge_{safe_version}.txt"
     prompt_path = PROMPT_DIR / prompt_name
     if not prompt_path.exists():
-        raise FileNotFoundError(f"Judge prompt 模板不存在：{prompt_path}")
+        raise FileNotFoundError(f"Judge prompt template not found: {prompt_path}")
     return prompt_path.read_text(encoding="utf-8")
 
 
@@ -864,12 +864,12 @@ def _clean_number(value: float) -> int | float:
 def _read_api_key(api_key_path: Path) -> str:
     raw = api_key_path.read_text(encoding="utf-8").strip()
     if not raw:
-        raise ValueError(f"DeepSeek API key 文件为空：{api_key_path}")
+        raise ValueError(f"DeepSeek API key file is empty: {api_key_path}")
     match = re.search(r"DEEPSEEK_API_KEY\s*=\s*(.+)", raw)
     key = match.group(1).strip() if match else raw
     key = key.strip('"').strip("'")
     if not key:
-        raise ValueError(f"DeepSeek API key 文件为空：{api_key_path}")
+        raise ValueError(f"DeepSeek API key file is empty: {api_key_path}")
     return key
 
 

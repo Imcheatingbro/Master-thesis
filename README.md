@@ -193,6 +193,23 @@ In evaluation mode, the bounded run uses `EVAL_SAMPLE_N`. Progress, predictions,
 
 Reports are written under `results/eval_report/`, and resumable prediction checkpoints are stored under `results/eval_checkpoints/`. `REPORT_DETAIL_MODE = "errors"` records misclassified samples, while `REPORT_DETAIL_LIMIT` bounds report size. The final two cells can reload a saved report and inspect extraction or detection errors by metric and error bucket.
 
+## Knowledge-graph construction notebook
+
+Open `notebooks/kg_construction.ipynb` and select one workflow with `RUN_MODE` in the first cell. The default `"postprocess"` mode loads the included cached CNC `nested_v1` constructions for samples 370 and 371, then demonstrates deterministic normalization, within-example deduplication, collection-level canonical-resource consolidation, provenance retention, Stanza NER reconciliation, Wikipedia linking, visualization, and RDF serialization. It does not require LM Studio.
+
+- `"visualize"` runs a single-sample construction using gold causal spans or Demo1 predictions and requires the LM Studio service.
+- `"postprocess"` reuses `results/kg_evaluation/cnc_nested_v1_n300_20260901_132127_spans.jsonl`; disable `POSTPROCESS_ENABLE_NER` or `POSTPROCESS_ENABLE_WIKIPEDIA` when those optional stages are not required.
+- `"rejudge"` reuses saved constructions and reruns the DeepSeek unit Judge and optional global diagnostics without LM Studio.
+- `"evaluation"` performs batch construction over gold causal spans and optionally calls the DeepSeek Judge.
+
+The general environment includes Stanza, but its English NER resources are an external model download. Install them once in the default `~/stanza_resources` directory:
+
+```bash
+python -c "import stanza; stanza.download('en', processors='tokenize,ner', package={'ner': 'ontonotes-ww-multi_charlm'})"
+```
+
+If the resources are stored elsewhere, set `STANZA_MODEL_DIR` in the first cell. Rejudge, global-diagnostic, and judged-evaluation runs require a DeepSeek key in the ignored root-level file `deepseek_api.txt`. Post-processing artifacts are written under `outputs/kg_postprocessing/`; new evaluation results are written under `results/kg_evaluation/`.
+
 ## RAMS semantic-judge notebook
 
 Open `notebooks/rams_judge_evaluation.ipynb`. Place the DeepSeek key in the ignored root-level file `deepseek_api.txt`, or update the key path locally. Use `SAMPLE_LIMIT` for a small smoke run or leave it as `None` for all 998 document-isolated test records. Set `RUN_EVALUATION = False` to inspect the dataset summary and prompt without API calls; set it to `True` to run or resume the evaluation.

@@ -11,7 +11,7 @@ def build_graph(kg_json: dict[str, Any]) -> nx.DiGraph:
     graph = nx.DiGraph()
     events = kg_json.get("events", {})
     if not isinstance(events, dict):
-        raise ValueError("kg_json.events 必须是 dict")
+        raise ValueError("kg_json.events must be a dictionary")
 
     event_roles = _collect_event_roles(kg_json.get("causal_links", []))
     for event_id, event in events.items():
@@ -22,7 +22,7 @@ def build_graph(kg_json: dict[str, Any]) -> nx.DiGraph:
         cause_event = str(link.get("cause_event", ""))
         effect_event = str(link.get("effect_event", ""))
         if cause_event not in graph or effect_event not in graph:
-            raise ValueError(f"causal_link 引用了不存在的 event：{cause_event} -> {effect_event}")
+            raise ValueError(f"causal_link references a missing event: {cause_event} -> {effect_event}")
         graph.add_edge(
             cause_event,
             effect_event,

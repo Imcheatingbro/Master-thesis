@@ -1,0 +1,81 @@
+### Reproduction entry for the completed Gemma 4 E4B CNC direct-Unsloth run
+experiment_name: gemma4_e4b_cnc_bf16_lora_unsloth_v1
+model_name_or_path: google/gemma-4-E4B-it
+model_type: gemma4
+minimum_transformers_version: "5.5.0"
+tested_transformers_version: "5.10.4"
+minimum_unsloth_version: "2026.8.19"
+tested_unsloth_version: "2026.8.19"
+trust_remote_code: false
+use_unsloth: true
+dtype: bfloat16
+load_in_4bit: false
+full_finetuning: false
+
+finetuning_type: lora
+lora_rank: 32
+lora_alpha: 64
+lora_dropout: 0.0
+bias: none
+finetune_vision_layers: false
+finetune_language_layers: true
+finetune_attention_modules: true
+finetune_mlp_modules: true
+
+dataset_dir: Data/CNC_sft_gemma_v1
+dataset: cnc_sft_train
+eval_dataset: cnc_sft_validation
+prompt_path: prompts/cnc_gemma_v1.txt
+template: gemma-4
+enable_thinking: false
+train_on_prompt: false
+cutoff_len: 2048
+packing: false
+train_sampling_strategy: random
+dataloader_num_workers: 0
+
+token_loss_weights:
+  enabled: false
+
+# Formal output already exists; the notebook deliberately refuses to overwrite it.
+output_dir: outputs/finetuning/gemma4_e4b_cnc_bf16_lora_unsloth_v1
+smoke_output_dir: outputs/finetuning/gemma4_e4b_cnc_bf16_lora_unsloth_v1_smoke
+logging_steps: 10
+eval_strategy: steps
+eval_steps: 50
+per_device_eval_batch_size: 1
+save_strategy: steps
+save_steps: 50
+save_total_limit: 10
+load_best_model_at_end: false
+report_to: tensorboard
+
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 16
+learning_rate: 1.0e-4
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.05
+weight_decay: 0.01
+max_grad_norm: 1.0
+bf16: true
+fp16: false
+gradient_checkpointing: true
+gradient_checkpointing_mode: unsloth
+optim: adamw_8bit
+seed: 42
+data_seed: 42
+
+generation_gate_step: 0
+
+smoke:
+  sample_strategy: longest_positive_plus_longest_negative
+  sample_ids: [2197, 1034, 2261, 1236, 797, 201, 413, 2031]
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 1
+  max_steps: 5
+  warmup_steps: 0
+  logging_steps: 1
+  eval_strategy: "no"
+  save_strategy: "no"
+  report_to: none

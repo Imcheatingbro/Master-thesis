@@ -6,9 +6,9 @@ This repository contains the reviewed implementation, processed evaluation data,
 
 - `src/` contains the reusable Python implementation. It includes dataset loading, prompt construction, local and hosted model clients, structured-output parsing, retrieval, checkpointing, evaluation metrics, knowledge-graph construction and serialization, graph diagnostics, RAMS judging, the KAPipe adapter, and supervised-training utilities.
 - `notebooks/` contains the four representative interactive workflows. `main_pipeline_demo1.ipynb` is the general extraction and evaluation entry point; `kg_construction.ipynb` covers knowledge-graph construction and evaluation; `rams_judge_evaluation.ipynb` evaluates semantic role-span judgements; and `kapipe_cdr_baseline.ipynb` runs the KAPipe CDR baseline.
-- `configs/` contains `llm.yaml`, the reusable configuration for connecting to a local OpenAI-compatible model service.
+- `configs/` contains `llm.yaml` for an OpenAI-compatible model service and `configs/finetuning/` for the five archived PEFT adapters, bounded smoke runs, the retained Qwen3-8B QLoRA comparison, and the matching Qwen inference services. All repository paths in these configurations are relative to the repository root.
 - `prompts/` contains the complete versioned prompt collection for causal extraction, dataset-specific evaluation, knowledge-graph judging, event extraction, RAMS judging, and fine-tuned model variants. Notebook parameters refer to these files by stem, for example `PROMPT_NAME = "v8.7"` loads `prompts/v8.7.txt`.
-- `Data/` contains the processed CNC, Li, ADE, and PolitiCAUSE evaluation datasets, the frozen PolitiCAUSE development split, the document-isolated RAMS judge splits, split manifests, summary statistics, and the fixed knowledge-graph judge calibration set. Raw downloads and derived fine-tuning datasets are not included.
+- `Data/` contains the processed CNC, Li, ADE, PolitiCAUSE, and retained CauseNet evaluation splits; the fine-tuning datasets required by the five archived adapters; the CNC positive-only and RAG evaluation sets; the document-isolated RAMS judge splits; and the relevant manifests, audits, and summary statistics. Raw source downloads remain external.
 - `RAG Database/` contains the generic, CNC, and PolitiCAUSE retrieval examples and their BGE embedding matrices. It also contains pattern-completion records, split manifests, the causality-pattern table, ontology resources, and archived CNC database variants used during retrieval development.
 - `results/` contains the selected experiment artifacts last modified on or after 2026-07-10. These include evaluation reports, resumable checkpoints, knowledge-graph evaluations, RAMS judge runs, diagnostics, and offline repair backups. Older exploratory outputs are excluded.
 - `scripts/` contains supplementary utilities for preparing data, building retrieval databases, creating experiment notebooks, launching training or inference, repairing saved results, running diagnostics, and plotting figures. A one-line description of every script is provided in `scripts/README.md`.
@@ -17,6 +17,20 @@ This repository contains the reviewed implementation, processed evaluation data,
 - `environments/` contains the Windows/NVIDIA reference environments used to serve the Qwen and Gemma fine-tuned checkpoints. They are server environments and do not replace the main `environment.yml`.
 
 Base-model weights, API keys, local caches, raw source downloads, and temporary runtime files are not part of the repository.
+
+## Fine-tuning configurations and data paths
+
+The selected training configurations use Hugging Face model IDs and repository-relative data and output paths. Run training or serving commands from the repository root. Replace a model ID with an absolute local model directory only when using an offline copy.
+
+| Archived adapter | Training configuration | Training data |
+| --- | --- | --- |
+| Qwen3-8B BF16 LoRA | `configs/finetuning/qwen3_8b_cnc_bf16_lora_unsloth_v1.yaml` | `Data/CNC_sft/` |
+| Qwen3-8B hard-v2 BF16 LoRA | `configs/finetuning/qwen3_8b_cnc_bf16_lora_hard_v2_e3.yaml` | `Data/CNC_sft_hard_v2/` |
+| Qwen3-14B QLoRA | `configs/finetuning/qwen3_14b_cnc_qlora_unsloth_v2_gemma12_profile.yaml` | `Data/CNC_sft_qwen3_14b_original_v1/` |
+| Gemma 4 E4B BF16 LoRA | `configs/finetuning/gemma4_e4b_cnc_bf16_lora_unsloth_v1.yaml` | `Data/CNC_sft_gemma_v1/` |
+| Gemma 4 12B QLoRA | `configs/finetuning/gemma4_12b_cnc_qlora_unsloth_v1.yaml` | `Data/CNC_sft_gemma_v2/` |
+
+The Qwen service configurations point to the same directories under `outputs/finetuning/` that are stored in Git LFS. Gemma checkpoints are served with `scripts/serve_cnc_unsloth_api.py`, using an explicit base-model path and the corresponding repository-relative adapter path.
 
 ## General environment setup
 

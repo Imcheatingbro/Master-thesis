@@ -1,0 +1,166 @@
+{
+  "source": {
+    "samples": 3075,
+    "documents": 2925,
+    "positive": 1624,
+    "negative": 1451,
+    "relations": 2257,
+    "relation_count": {
+      "0": 1451,
+      "1": 1105,
+      "2": 418,
+      "3": 90,
+      "4": 9,
+      "5": 2
+    },
+    "length_bucket": {
+      "long": 712,
+      "medium": 1471,
+      "short": 892
+    },
+    "strata": {
+      "0|long": 231,
+      "0|medium": 654,
+      "0|short": 566,
+      "1|long": 223,
+      "1|medium": 588,
+      "1|short": 294,
+      "2|long": 185,
+      "2|medium": 202,
+      "2|short": 31,
+      "3+|long": 73,
+      "3+|medium": 27,
+      "3+|short": 1
+    }
+  },
+  "splits": {
+    "train": {
+      "samples": 1537,
+      "documents": 1460,
+      "positive": 812,
+      "negative": 725,
+      "relations": 1128,
+      "relation_count": {
+        "0": 725,
+        "1": 552,
+        "2": 209,
+        "3": 47,
+        "4": 3,
+        "5": 1
+      },
+      "length_bucket": {
+        "long": 354,
+        "medium": 736,
+        "short": 447
+      },
+      "strata": {
+        "0|long": 115,
+        "0|medium": 327,
+        "0|short": 283,
+        "1|long": 111,
+        "1|medium": 294,
+        "1|short": 147,
+        "2|long": 92,
+        "2|medium": 101,
+        "2|short": 16,
+        "3+|long": 36,
+        "3+|medium": 14,
+        "3+|short": 1
+      }
+    },
+    "validation": {
+      "samples": 500,
+      "documents": 478,
+      "positive": 264,
+      "negative": 236,
+      "relations": 366,
+      "relation_count": {
+        "0": 236,
+        "1": 180,
+        "2": 68,
+        "3": 14,
+        "4": 2
+      },
+      "length_bucket": {
+        "long": 116,
+        "medium": 239,
+        "short": 145
+      },
+      "strata": {
+        "0|long": 38,
+        "0|medium": 106,
+        "0|short": 92,
+        "1|long": 36,
+        "1|medium": 96,
+        "1|short": 48,
+        "2|long": 30,
+        "2|medium": 33,
+        "2|short": 5,
+        "3+|long": 12,
+        "3+|medium": 4
+      }
+    },
+    "test": {
+      "samples": 1038,
+      "documents": 987,
+      "positive": 548,
+      "negative": 490,
+      "relations": 763,
+      "relation_count": {
+        "0": 490,
+        "1": 373,
+        "2": 141,
+        "3": 29,
+        "4": 4,
+        "5": 1
+      },
+      "length_bucket": {
+        "long": 242,
+        "medium": 496,
+        "short": 300
+      },
+      "strata": {
+        "0|long": 78,
+        "0|medium": 221,
+        "0|short": 191,
+        "1|long": 76,
+        "1|medium": 198,
+        "1|short": 99,
+        "2|long": 63,
+        "2|medium": 68,
+        "2|short": 10,
+        "3+|long": 25,
+        "3+|medium": 9
+      }
+    }
+  },
+  "pairwise_overlap": {
+    "ids": {
+      "train__validation": 0,
+      "train__test": 0,
+      "validation__test": 0
+    },
+    "texts": {
+      "train__validation": 0,
+      "train__test": 0,
+      "validation__test": 0
+    },
+    "documents": {
+      "train__validation": 0,
+      "train__test": 0,
+      "validation__test": 0
+    }
+  },
+  "checks": {
+    "exact_target_sizes": true,
+    "all_samples_assigned_once": true,
+    "source_ids_unique": true,
+    "source_texts_unique": true,
+    "id_overlap_zero": true,
+    "text_overlap_zero": true,
+    "document_overlap_zero": true,
+    "strata_match_targets": true,
+    "labels_consistent": true,
+    "all_spans_are_exact_substrings": true
+  }
+}

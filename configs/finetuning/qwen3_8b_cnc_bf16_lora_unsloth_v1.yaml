@@ -1,0 +1,63 @@
+### Model: BF16 base weights with Unsloth (LoRA, not full fine-tuning)
+model_name_or_path: Qwen/Qwen3-8B
+trust_remote_code: true
+flash_attn: sdpa
+use_unsloth: true
+upcast_layernorm: true
+cache_dir: outputs/cache/huggingface_datasets_v3_6
+
+### BF16 LoRA
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 32
+lora_alpha: 64
+lora_dropout: 0.0
+lora_target: all
+
+### CNC dataset
+dataset_dir: Data/CNC_sft
+dataset: cnc_sft_train
+eval_dataset: cnc_sft_validation
+template: qwen3
+enable_thinking: false
+train_on_prompt: false
+cutoff_len: 2048
+packing: false
+preprocessing_num_workers: 4
+dataloader_num_workers: 0
+overwrite_cache: true
+
+### Output and checkpoints
+output_dir: outputs/finetuning/qwen3_8b_cnc_bf16_lora_unsloth_v1
+logging_steps: 10
+save_strategy: steps
+save_steps: 100
+save_total_limit: 2
+plot_loss: true
+overwrite_output_dir: false
+save_only_model: false
+report_to: tensorboard
+
+### Training
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-4
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.05
+weight_decay: 0.01
+max_grad_norm: 1.0
+bf16: true
+gradient_checkpointing: true
+optim: adamw_8bit
+seed: 42
+data_seed: 42
+
+### Validation
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 100
+load_best_model_at_end: true
+metric_for_best_model: eval_loss
+greater_is_better: false

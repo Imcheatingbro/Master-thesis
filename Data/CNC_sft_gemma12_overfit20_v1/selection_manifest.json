@@ -1,0 +1,148 @@
+{
+  "purpose": "Gemma 4 12B current-schema 20-example memorization diagnostic",
+  "seed": 20260823,
+  "source_dir": "Data/CNC_sft_gemma_v2",
+  "source_train_sha256": "9f8594c74e5ba4157421f2d86b3db5ed3deb6c8693fbf55189fb60f39bb18093",
+  "selection": [
+    {
+      "order": 0,
+      "category": "negative",
+      "id": 452,
+      "doc_id": "train_02_196",
+      "gold_relations": 0
+    },
+    {
+      "order": 1,
+      "category": "single_positive",
+      "id": 2854,
+      "doc_id": "train_09_A_55",
+      "gold_relations": 1
+    },
+    {
+      "order": 2,
+      "category": "negative",
+      "id": 503,
+      "doc_id": "train_02_24",
+      "gold_relations": 0
+    },
+    {
+      "order": 3,
+      "category": "multi_positive",
+      "id": 1707,
+      "doc_id": "train_06_100",
+      "gold_relations": 2
+    },
+    {
+      "order": 4,
+      "category": "negative",
+      "id": 849,
+      "doc_id": "train_03_242",
+      "gold_relations": 0
+    },
+    {
+      "order": 5,
+      "category": "single_positive",
+      "id": 1747,
+      "doc_id": "train_06_135",
+      "gold_relations": 1
+    },
+    {
+      "order": 6,
+      "category": "multi_positive",
+      "id": 1355,
+      "doc_id": "train_04_96",
+      "gold_relations": 2
+    },
+    {
+      "order": 7,
+      "category": "single_positive",
+      "id": 620,
+      "doc_id": "train_02_49",
+      "gold_relations": 1
+    },
+    {
+      "order": 8,
+      "category": "negative",
+      "id": 1601,
+      "doc_id": "train_05_303",
+      "gold_relations": 0
+    },
+    {
+      "order": 9,
+      "category": "negative",
+      "id": 1209,
+      "doc_id": "train_04_26",
+      "gold_relations": 0
+    },
+    {
+      "order": 10,
+      "category": "negative",
+      "id": 898,
+      "doc_id": "train_03_286",
+      "gold_relations": 0
+    },
+    {
+      "order": 11,
+      "category": "negative",
+      "id": 549,
+      "doc_id": "train_02_281",
+      "gold_relations": 0
+    },
+    {
+      "order": 12,
+      "category": "multi_positive",
+      "id": 1437,
+      "doc_id": "train_05_165",
+      "gold_relations": 2
+    },
+    {
+      "order": 13,
+      "category": "multi_positive",
+      "id": 535,
+      "doc_id": "train_02_269",
+      "gold_relations": 2
+    },
+    {
+      "order": 14,
+      "category": "negative",
+      "id": 2868,
+      "doc_id": "train_09_A_66",
+      "gold_relations": 0
+    },
+    {
+      "order": 15,
+      "category": "negative",
+      "id": 1349,
+      "doc_id": "train_04_90",
+      "gold_relations": 0
+    },
+    {
+      "order": 16,
+      "category": "single_positive",
+      "id": 2872,
+      "doc_id": "train_09_A_7",
+      "gold_relations": 1
+    },
+    {
+      "order": 17,
+      "category": "negative",
+      "id": 1276,
+      "doc_id": "train_04_318",
+      "gold_relations": 0
+    },
+    {
+      "order": 18,
+      "category": "single_positive",
+      "id": 2864,
+      "doc_id": "train_09_A_62",
+      "gold_relations": 1
+    },
+    {
+      "order": 19,
+      "category": "single_positive",
+      "id": 2178,
+      "doc_id": "train_07_212",
+      "gold_relations": 1
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+### Qwen3-14B CNC QLoRA v2 complete 3-epoch original-data adapter (step 291)
+model_name_or_path: Qwen/Qwen3-14B
+adapter_name_or_path: outputs/finetuning/qwen3_14b_cnc_qlora_unsloth_v2_gemma12_profile
+trust_remote_code: true
+template: qwen3
+finetuning_type: lora
+infer_backend: huggingface
+flash_attn: sdpa
+quantization_bit: 4
+quantization_method: bnb
+quantization_type: nf4
+double_quantization: true
+enable_thinking: false
+do_sample: false
+max_new_tokens: 512
+cutoff_len: 2048

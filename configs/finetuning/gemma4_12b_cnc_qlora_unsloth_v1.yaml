@@ -1,0 +1,84 @@
+### Experiment identity and base model
+experiment_name: gemma4_12b_qlora_unsloth_v1
+model_name_or_path: google/gemma-4-12B-it
+model_type: gemma4_unified
+minimum_transformers_version: "5.10.0"
+tested_transformers_version: "5.10.4"
+minimum_unsloth_version: "2026.8.19"
+tested_unsloth_version: "2026.8.19"
+trust_remote_code: false
+use_unsloth: true
+dtype: bfloat16
+load_in_4bit: true
+full_finetuning: false
+
+### NF4 QLoRA settings used by the direct Unsloth loader
+quantization_bit: 4
+quantization_method: bnb
+quantization_type: nf4
+double_quantization: true
+finetuning_type: lora
+lora_rank: 16
+lora_alpha: 32
+lora_dropout: 0.0
+bias: none
+finetune_vision_layers: false
+finetune_language_layers: true
+finetune_attention_modules: true
+finetune_mlp_modules: true
+
+### Prompt v2 was adjusted from validation errors and contains no fixed few-shot examples
+dataset_dir: Data/CNC_sft_gemma_v2
+dataset: cnc_sft_train
+eval_dataset: cnc_sft_validation
+prompt_path: prompts/cnc_gemma_v2.txt
+template: gemma-4
+enable_thinking: false
+train_on_prompt: false
+cutoff_len: 1280
+packing: false
+train_sampling_strategy: group_by_length
+dataloader_num_workers: 0
+
+### Output and monitoring
+output_dir: outputs/finetuning/gemma4_12b_cnc_qlora_unsloth_v1
+smoke_output_dir: outputs/finetuning/gemma4_12b_cnc_qlora_unsloth_v1_smoke
+logging_steps: 10
+eval_strategy: steps
+eval_steps: 50
+per_device_eval_batch_size: 1
+save_strategy: steps
+save_steps: 50
+save_total_limit: 10
+load_best_model_at_end: false
+report_to: tensorboard
+
+### Formal single-RTX-4090 run with effective batch size 16
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 4
+learning_rate: 5.0e-5
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_steps: 30
+weight_decay: 0.01
+max_grad_norm: 0.5
+bf16: true
+fp16: false
+gradient_checkpointing: true
+gradient_checkpointing_mode: unsloth
+optim: adamw_8bit
+seed: 42
+data_seed: 42
+
+### Smoke run uses the eight longest training examples to expose peak memory at batch size 4
+smoke:
+  sample_strategy: longest_ids
+  sample_ids: [1236, 1034, 2197, 1634, 2261, 797, 690, 2669]
+  per_device_train_batch_size: 4
+  gradient_accumulation_steps: 1
+  max_steps: 2
+  warmup_steps: 0
+  logging_steps: 1
+  eval_strategy: "no"
+  save_strategy: "no"
+  report_to: none

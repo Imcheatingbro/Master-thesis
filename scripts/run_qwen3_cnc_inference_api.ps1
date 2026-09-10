@@ -1,6 +1,6 @@
 param(
-    [ValidateSet("best", "bf16_best", "hard_v2_e3_final", "base")]
-    [string]$Variant = "best",
+    [ValidateSet("bf16_best", "hard_v2_e3_final", "qwen14_final")]
+    [string]$Variant = "bf16_best",
 
     [ValidateRange(1, 65535)]
     [int]$Port = 8000,
@@ -15,10 +15,6 @@ $projectRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $resolvedCli = Get-Command $LlamaFactoryCli -ErrorAction SilentlyContinue
 
 $variantConfig = @{
-    best = @{
-        Config = "configs\finetuning\qwen3_8b_cnc_qlora_best_api.yaml"
-        Model = "qwen3-8b-cnc-qlora-best"
-    }
     bf16_best = @{
         Config = "configs\finetuning\qwen3_8b_cnc_bf16_lora_best_api.yaml"
         Model = "qwen3-8b-cnc-bf16-lora-best"
@@ -27,9 +23,9 @@ $variantConfig = @{
         Config = "configs\finetuning\qwen3_8b_cnc_bf16_lora_hard_v2_e3_final_api.yaml"
         Model = "qwen3-8b-cnc-bf16-lora-hard-v2-e3-final"
     }
-    base = @{
-        Config = "configs\finetuning\qwen3_8b_cnc_base_api.yaml"
-        Model = "qwen3-8b-base"
+    qwen14_final = @{
+        Config = "configs\finetuning\qwen3_14b_cnc_qlora_final_api.yaml"
+        Model = "qwen3-14b-cnc-qlora-final"
     }
 }
 

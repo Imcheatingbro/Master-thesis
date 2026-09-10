@@ -1,0 +1,57 @@
+{
+  "purpose": "pipeline memorization test; this is not a generalization evaluation split",
+  "seed": 20260823,
+  "source_dir": "Data/CNC_sft_gemma_v2",
+  "output_dir": "Data/CNC_sft_gemma12_overfit20_v1",
+  "distribution": {
+    "samples": 20,
+    "positive": 10,
+    "negative": 10,
+    "single_positive": 6,
+    "multi_positive": 4,
+    "relations": 14,
+    "distinct_documents": 20
+  },
+  "selected_ids": [
+    452,
+    2854,
+    503,
+    1707,
+    849,
+    1747,
+    1355,
+    620,
+    1601,
+    1209,
+    898,
+    549,
+    1437,
+    535,
+    2868,
+    1349,
+    2872,
+    1276,
+    2864,
+    2178
+  ],
+  "checks": {
+    "exactly_20_rows": true,
+    "unique_ids": true,
+    "distinct_documents": true,
+    "all_rows_exactly_preserved": true,
+    "ten_negative": true,
+    "six_single_positive": true,
+    "four_multi_positive": true,
+    "ten_positive_total": true,
+    "labels_and_messages_consistent": true,
+    "no_validation_or_test_ids": true,
+    "no_validation_or_test_documents": true
+  },
+  "output_train_sha256": "ab1fb5c35d24d17c2ffcfdaaf3cb7fbac89904aded39c7b859295ea90adda999",
+  "notes": [
+    "Every selected row comes from CNC_sft_gemma_v2/train.jsonl.",
+    "The 20 rows are used for both training and diagnostic generation by design.",
+    "No validation or test row is included.",
+    "Messages, labels, spans, and the current has_causal-first JSON schema are unchanged."
+  ]
+}

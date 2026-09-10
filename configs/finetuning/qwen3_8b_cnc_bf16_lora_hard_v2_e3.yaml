@@ -1,0 +1,61 @@
+### Three-epoch run with a fresh LoRA adapter on the Qwen3-8B BF16 base
+model_name_or_path: Qwen/Qwen3-8B
+trust_remote_code: true
+flash_attn: sdpa
+use_unsloth: true
+upcast_layernorm: true
+cache_dir: outputs/cache/huggingface_datasets_v3_6
+
+### Fresh LoRA adapter; no previous adapter is loaded
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 32
+lora_alpha: 64
+lora_dropout: 0.0
+lora_target: all
+
+### Resampled CNC hard-example dataset
+dataset_dir: Data/CNC_sft_hard_v2
+dataset: cnc_sft_hard_train
+eval_dataset: cnc_sft_hard_validation
+template: qwen3
+enable_thinking: false
+train_on_prompt: false
+cutoff_len: 2048
+packing: false
+preprocessing_num_workers: 4
+dataloader_num_workers: 0
+overwrite_cache: true
+
+### Independent output with 50-step checkpoint cadence
+output_dir: outputs/finetuning/qwen3_8b_cnc_bf16_lora_hard_v2_e3
+logging_steps: 10
+save_strategy: steps
+save_steps: 50
+save_total_limit: 10
+plot_loss: true
+overwrite_output_dir: false
+save_only_model: false
+report_to: tensorboard
+
+### Complete three-epoch training run without max_steps
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-4
+num_train_epochs: 3.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.05
+weight_decay: 0.01
+max_grad_norm: 1.0
+bf16: true
+gradient_checkpointing: true
+optim: adamw_8bit
+seed: 42
+data_seed: 42
+
+### Eval loss is logged; the reported final adapter was selected by validation strict F1
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 50
+load_best_model_at_end: false

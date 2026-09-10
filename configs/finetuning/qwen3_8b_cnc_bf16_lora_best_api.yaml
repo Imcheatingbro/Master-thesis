@@ -1,0 +1,16 @@
+### Qwen3-8B BF16 base + best CNC LoRA adapter (best checkpoint: step 200)
+model_name_or_path: Qwen/Qwen3-8B
+adapter_name_or_path: outputs/finetuning/qwen3_8b_cnc_bf16_lora_unsloth_v1
+trust_remote_code: true
+template: qwen3
+finetuning_type: lora
+infer_backend: huggingface
+infer_dtype: bfloat16
+flash_attn: sdpa
+use_unsloth: false
+
+### Deterministic, non-thinking evaluation
+enable_thinking: false
+do_sample: false
+max_new_tokens: 512
+cutoff_len: 2048

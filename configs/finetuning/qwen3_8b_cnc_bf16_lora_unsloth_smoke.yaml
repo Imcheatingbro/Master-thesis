@@ -1,0 +1,54 @@
+### Model: BF16 base weights with Unsloth for the short memory smoke test
+model_name_or_path: Qwen/Qwen3-8B
+trust_remote_code: true
+flash_attn: sdpa
+use_unsloth: true
+upcast_layernorm: true
+cache_dir: outputs/cache/huggingface_datasets_v3_6
+
+### BF16 LoRA
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 32
+lora_alpha: 64
+lora_dropout: 0.0
+lora_target: all
+
+### CNC dataset
+dataset_dir: Data/CNC_sft
+dataset: cnc_sft_train
+template: qwen3
+enable_thinking: false
+train_on_prompt: false
+cutoff_len: 2048
+max_samples: 64
+packing: false
+preprocessing_num_workers: 4
+dataloader_num_workers: 0
+overwrite_cache: true
+
+### Output
+output_dir: outputs/finetuning/qwen3_8b_cnc_bf16_lora_unsloth_smoke
+logging_steps: 1
+save_strategy: "no"
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: none
+
+### Five-step memory and data-pipeline smoke test
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 1.0e-4
+max_steps: 5
+lr_scheduler_type: cosine
+warmup_ratio: 0.05
+weight_decay: 0.01
+max_grad_norm: 1.0
+bf16: true
+gradient_checkpointing: true
+optim: adamw_8bit
+seed: 42
+data_seed: 42
+eval_strategy: "no"

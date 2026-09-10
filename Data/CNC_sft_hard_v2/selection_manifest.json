@@ -1,0 +1,4815 @@
+{
+  "multi_causal_oversample": [
+    {
+      "source_id": 1405,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2898,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 593,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1664,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 715,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2527,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 61,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1653,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1434,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 278,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1416,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 99,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1739,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 644,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1123,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1447,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1851,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 235,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 2261,
+      "gold_relations": 4
+    },
+    {
+      "source_id": 1935,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 263,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1504,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2839,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1937,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 552,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2305,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2015,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1479,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1769,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2370,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2365,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 2869,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1459,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1468,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2462,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1475,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 767,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 2475,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 554,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1442,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 907,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2726,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2255,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2706,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 795,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2292,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2776,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1707,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 3020,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1128,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1379,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 544,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2037,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1281,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1059,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 2127,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 2343,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1292,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1692,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2197,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 993,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1449,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 160,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1277,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2463,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 786,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2942,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2553,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 690,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 496,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 388,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1304,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1355,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1792,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 826,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 605,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 590,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1864,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2655,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1238,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 578,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1263,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1844,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 385,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 45,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2563,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1487,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 352,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1097,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2895,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1195,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2141,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2669,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 332,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2129,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 390,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 3042,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 230,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2402,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2356,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1712,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 33,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2557,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 94,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 400,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 735,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2259,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1367,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 588,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 429,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 106,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 858,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2927,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1319,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 763,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1830,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2468,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 930,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1634,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 98,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2385,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2573,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 2928,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1236,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 210,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1942,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 11,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1437,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 538,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1890,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2994,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 3023,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 389,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1347,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2455,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2517,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1061,
+      "gold_relations": 5
+    },
+    {
+      "source_id": 2149,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1817,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2623,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2243,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1310,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2310,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1179,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 909,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 3058,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2793,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 317,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1381,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1524,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1427,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1587,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2481,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2486,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 626,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1020,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2765,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 20,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 191,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1088,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1611,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 4,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1316,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 391,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 797,
+      "gold_relations": 4
+    },
+    {
+      "source_id": 1080,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1474,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 2949,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 298,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1991,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1303,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2701,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1365,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 541,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 803,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1371,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2290,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 133,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2647,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 585,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 96,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 218,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1676,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1826,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 381,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2852,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1933,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2307,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1827,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1013,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 261,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 3030,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1784,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2196,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 754,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 3075,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1520,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 3034,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 792,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 733,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1034,
+      "gold_relations": 4
+    },
+    {
+      "source_id": 405,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 928,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2434,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1730,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1668,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1799,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1478,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1439,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 579,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2193,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2487,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2542,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1522,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1675,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2581,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 637,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 458,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1874,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1375,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2438,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2749,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 855,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1771,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1849,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 1985,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2829,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 3043,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1560,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1464,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 532,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 553,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 148,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1094,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 365,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 927,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 150,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2260,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 535,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1171,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 933,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2393,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1891,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2917,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2064,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2544,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 998,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2036,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2769,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2429,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 292,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 331,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 521,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2359,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2288,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 341,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 1254,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 2358,
+      "gold_relations": 2
+    },
+    {
+      "source_id": 961,
+      "gold_relations": 3
+    },
+    {
+      "source_id": 2054,
+      "gold_relations": 3
+    }
+  ],
+  "hard_single_positive_oversample": [
+    {
+      "source_id": 1615,
+      "score": 16,
+      "reasons": [
+        "strong:leave",
+        "strong:kill_injure",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:over",
+        "long_context",
+        "tokenization_or_apostrophe_noise",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2492,
+      "score": 14,
+      "reasons": [
+        "strong:kill_injure",
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:against",
+        "leading_function_word:cause",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1064,
+      "score": 13,
+      "reasons": [
+        "strong:leave",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "leading_function_word:cause",
+        "long_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 1296,
+      "score": 13,
+      "reasons": [
+        "strong:because",
+        "strong:force",
+        "weak_argument_marker:to",
+        "weak_argument_marker:against",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1382,
+      "score": 13,
+      "reasons": [
+        "strong:due_to",
+        "strong:force",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2410,
+      "score": 13,
+      "reasons": [
+        "strong:because",
+        "strong:force",
+        "temporal_ambiguity:when_once",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 83,
+      "score": 12,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to",
+        "weak_argument_marker:against",
+        "leading_function_word:cause",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 105,
+      "score": 12,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge",
+        "reaction_or_purpose:blame_accuse",
+        "weak_argument_marker:for",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 416,
+      "score": 12,
+      "reasons": [
+        "strong:kill_injure",
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "long_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 519,
+      "score": 12,
+      "reasons": [
+        "reaction_or_purpose:support",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "leading_function_word:cause",
+        "long_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 1027,
+      "score": 12,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge",
+        "reaction_or_purpose:blame_accuse",
+        "weak_argument_marker:against",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1788,
+      "score": 12,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:concern_condemn",
+        "reaction_or_purpose:seek_prevent",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1831,
+      "score": 12,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:over",
+        "leading_function_word:cause",
+        "long_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2107,
+      "score": 12,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to",
+        "weak_argument_marker:against",
+        "leading_function_word:cause",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2183,
+      "score": 12,
+      "reasons": [
+        "strong:due_to",
+        "strong:force",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2614,
+      "score": 12,
+      "reasons": [
+        "strong:force",
+        "strong:kill_injure",
+        "temporal_ambiguity:since",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2683,
+      "score": 12,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:over",
+        "leading_function_word:cause",
+        "long_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 3068,
+      "score": 12,
+      "reasons": [
+        "reaction_or_purpose:support",
+        "reaction_or_purpose:concern_condemn",
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 113,
+      "score": 11,
+      "reasons": [
+        "strong:lead",
+        "strong:kill_injure",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 250,
+      "score": 11,
+      "reasons": [
+        "reaction_or_purpose:seek_prevent",
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "long_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 293,
+      "score": 11,
+      "reasons": [
+        "strong:leave",
+        "strong:kill_injure",
+        "weak_argument_marker:over",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 660,
+      "score": 11,
+      "reasons": [
+        "strong:leave",
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:to",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1000,
+      "score": 11,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "weak_argument_marker:against",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1441,
+      "score": 11,
+      "reasons": [
+        "strong:due_to",
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:concern_condemn",
+        "weak_argument_marker:to"
+      ]
+    },
+    {
+      "source_id": 1586,
+      "score": 11,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:commemorate",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1808,
+      "score": 11,
+      "reasons": [
+        "strong:force",
+        "strong:kill_injure",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2053,
+      "score": 11,
+      "reasons": [
+        "strong:kill_injure",
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:when_once",
+        "weak_argument_marker:to",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2206,
+      "score": 11,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:for",
+        "weak_argument_marker:over",
+        "weak_argument_marker:against",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2642,
+      "score": 11,
+      "reasons": [
+        "strong:force",
+        "strong:kill_injure",
+        "temporal_ambiguity:when_once",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 3038,
+      "score": 11,
+      "reasons": [
+        "strong:cause",
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:against",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 355,
+      "score": 10,
+      "reasons": [
+        "strong:kill_injure",
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:when_once",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 371,
+      "score": 10,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:against",
+        "leading_function_word:cause",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 668,
+      "score": 10,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "weak_argument_marker:against",
+        "leading_function_word:cause",
+        "compact_or_headline_like"
+      ]
+    },
+    {
+      "source_id": 1454,
+      "score": 10,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:to",
+        "weak_argument_marker:over",
+        "leading_function_word:cause",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1456,
+      "score": 10,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "tokenization_or_apostrophe_noise",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1492,
+      "score": 10,
+      "reasons": [
+        "strong:lead",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "weak_argument_marker:over",
+        "leading_function_word:effect"
+      ]
+    },
+    {
+      "source_id": 1562,
+      "score": 10,
+      "reasons": [
+        "strong:due_to",
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2175,
+      "score": 10,
+      "reasons": [
+        "strong:cause",
+        "reaction_or_purpose:blame_accuse",
+        "weak_argument_marker:to",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2176,
+      "score": 10,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge",
+        "reaction_or_purpose:blame_accuse",
+        "weak_argument_marker:to"
+      ]
+    },
+    {
+      "source_id": 2199,
+      "score": 10,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:to",
+        "weak_argument_marker:against",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2339,
+      "score": 10,
+      "reasons": [
+        "strong:force",
+        "weak_argument_marker:for",
+        "leading_function_word:cause",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2442,
+      "score": 10,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:to",
+        "weak_argument_marker:against",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2500,
+      "score": 10,
+      "reasons": [
+        "reaction_or_purpose:concern_condemn",
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2570,
+      "score": 10,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:against",
+        "leading_function_word:cause",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 3066,
+      "score": 10,
+      "reasons": [
+        "strong:kill_injure",
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:after_following",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 15,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:blame_accuse",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 22,
+      "score": 9,
+      "reasons": [
+        "strong:kill_injure",
+        "reaction_or_purpose:blame_accuse",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 330,
+      "score": 9,
+      "reasons": [
+        "strong:result",
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "compact_or_headline_like"
+      ]
+    },
+    {
+      "source_id": 408,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 587,
+      "score": 9,
+      "reasons": [
+        "strong:kill_injure",
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:for",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 906,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "weak_argument_marker:over",
+        "weak_argument_marker:against",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 980,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:support",
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 1011,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "reaction_or_purpose:concern_condemn",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:for"
+      ]
+    },
+    {
+      "source_id": 1360,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:concern_condemn",
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1422,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 1585,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "compact_or_headline_like",
+        "fragment_or_headline_ending",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1652,
+      "score": 9,
+      "reasons": [
+        "strong:because",
+        "temporal_ambiguity:when_once",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1785,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:blame_accuse",
+        "reaction_or_purpose:seek_prevent",
+        "weak_argument_marker:for",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1924,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "reaction_or_purpose:concern_condemn",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2009,
+      "score": 9,
+      "reasons": [
+        "strong:kill_injure",
+        "temporal_ambiguity:when_once",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2225,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:to",
+        "weak_argument_marker:against",
+        "long_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2257,
+      "score": 9,
+      "reasons": [
+        "strong:due_to",
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2386,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:concern_condemn",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "leading_function_word:cause",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2421,
+      "score": 9,
+      "reasons": [
+        "strong:due_to",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2422,
+      "score": 9,
+      "reasons": [
+        "strong:result",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "weak_argument_marker:over",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2520,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to",
+        "leading_function_word:cause"
+      ]
+    },
+    {
+      "source_id": 2588,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2616,
+      "score": 9,
+      "reasons": [
+        "strong:force",
+        "temporal_ambiguity:when_once",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2887,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2892,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:seek_prevent",
+        "weak_argument_marker:for",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2901,
+      "score": 9,
+      "reasons": [
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "long_context",
+        "tokenization_or_apostrophe_noise",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2938,
+      "score": 9,
+      "reasons": [
+        "strong:kill_injure",
+        "temporal_ambiguity:when_once",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 3010,
+      "score": 9,
+      "reasons": [
+        "strong:result",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "weak_argument_marker:against",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 3054,
+      "score": 9,
+      "reasons": [
+        "strong:due_to",
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 13,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:since",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 28,
+      "score": 8,
+      "reasons": [
+        "strong:kill_injure",
+        "reaction_or_purpose:blame_accuse",
+        "weak_argument_marker:over"
+      ]
+    },
+    {
+      "source_id": 48,
+      "score": 8,
+      "reasons": [
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "long_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 58,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "leading_function_word:cause"
+      ]
+    },
+    {
+      "source_id": 370,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:over",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 383,
+      "score": 8,
+      "reasons": [
+        "strong:leave",
+        "temporal_ambiguity:after_following",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 433,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:when_once",
+        "weak_argument_marker:for",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 465,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 547,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:seek_prevent",
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 666,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:support",
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "compact_or_headline_like"
+      ]
+    },
+    {
+      "source_id": 779,
+      "score": 8,
+      "reasons": [
+        "strong:result",
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to"
+      ]
+    },
+    {
+      "source_id": 809,
+      "score": 8,
+      "reasons": [
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "leading_function_word:cause",
+        "compact_or_headline_like",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 1040,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:for",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1351,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "weak_argument_marker:against",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1417,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:to",
+        "compact_or_headline_like"
+      ]
+    },
+    {
+      "source_id": 1418,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:concern_condemn",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1443,
+      "score": 8,
+      "reasons": [
+        "strong:due_to",
+        "weak_argument_marker:to",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1489,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:after_following",
+        "tokenization_or_apostrophe_noise",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1490,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:since",
+        "weak_argument_marker:against",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1495,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:when_once",
+        "weak_argument_marker:to",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1665,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "long_context",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 1823,
+      "score": 8,
+      "reasons": [
+        "strong:kill_injure",
+        "temporal_ambiguity:when_once",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 1906,
+      "score": 8,
+      "reasons": [
+        "strong:force",
+        "strong:kill_injure"
+      ]
+    },
+    {
+      "source_id": 1920,
+      "score": 8,
+      "reasons": [
+        "weak_argument_marker:for",
+        "leading_function_word:cause",
+        "long_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2112,
+      "score": 8,
+      "reasons": [
+        "strong:result",
+        "weak_argument_marker:to",
+        "weak_argument_marker:over",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2178,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "reaction_or_purpose:blame_accuse",
+        "weak_argument_marker:to",
+        "weak_argument_marker:against"
+      ]
+    },
+    {
+      "source_id": 2194,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:after_following",
+        "temporal_ambiguity:when_once",
+        "weak_argument_marker:against"
+      ]
+    },
+    {
+      "source_id": 2213,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge",
+        "temporal_ambiguity:since"
+      ]
+    },
+    {
+      "source_id": 2251,
+      "score": 8,
+      "reasons": [
+        "strong:leave",
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to"
+      ]
+    },
+    {
+      "source_id": 2265,
+      "score": 8,
+      "reasons": [
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "long_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2269,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:concern_condemn",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2431,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:support",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "leading_function_word:cause"
+      ]
+    },
+    {
+      "source_id": 2643,
+      "score": 8,
+      "reasons": [
+        "strong:kill_injure",
+        "temporal_ambiguity:when_once",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2699,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:against",
+        "compact_or_headline_like",
+        "fragment_or_headline_ending",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2816,
+      "score": 8,
+      "reasons": [
+        "strong:because",
+        "reaction_or_purpose:protest_opposition",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 3022,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:concern_condemn",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 3055,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 3064,
+      "score": 8,
+      "reasons": [
+        "strong:kill_injure",
+        "temporal_ambiguity:after_following",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 86,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 95,
+      "score": 7,
+      "reasons": [
+        "strong:leave",
+        "weak_argument_marker:over",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 108,
+      "score": 7,
+      "reasons": [
+        "strong:because",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 179,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "compact_or_headline_like",
+        "fragment_or_headline_ending",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 267,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 310,
+      "score": 7,
+      "reasons": [
+        "strong:kill_injure",
+        "weak_argument_marker:to",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 498,
+      "score": 7,
+      "reasons": [
+        "strong:kill_injure",
+        "tokenization_or_apostrophe_noise",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 620,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:after_following",
+        "temporal_ambiguity:when_once"
+      ]
+    },
+    {
+      "source_id": 743,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:for",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 791,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "reaction_or_purpose:blame_accuse",
+        "weak_argument_marker:against"
+      ]
+    },
+    {
+      "source_id": 825,
+      "score": 7,
+      "reasons": [
+        "strong:kill_injure",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to"
+      ]
+    },
+    {
+      "source_id": 932,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "leading_function_word:cause"
+      ]
+    },
+    {
+      "source_id": 1019,
+      "score": 7,
+      "reasons": [
+        "strong:kill_injure",
+        "weak_argument_marker:for",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1070,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for"
+      ]
+    },
+    {
+      "source_id": 1163,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:when_once",
+        "weak_argument_marker:to",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1191,
+      "score": 7,
+      "reasons": [
+        "strong:due_to",
+        "weak_argument_marker:to",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1221,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to",
+        "weak_argument_marker:against"
+      ]
+    },
+    {
+      "source_id": 1348,
+      "score": 7,
+      "reasons": [
+        "strong:result",
+        "weak_argument_marker:to",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1352,
+      "score": 7,
+      "reasons": [
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1363,
+      "score": 7,
+      "reasons": [
+        "weak_argument_marker:over",
+        "compact_or_headline_like",
+        "fragment_or_headline_ending",
+        "tokenization_or_apostrophe_noise",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1414,
+      "score": 7,
+      "reasons": [
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "weak_argument_marker:against",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1462,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1498,
+      "score": 7,
+      "reasons": [
+        "weak_argument_marker:to",
+        "weak_argument_marker:over",
+        "long_context",
+        "tokenization_or_apostrophe_noise",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1508,
+      "score": 7,
+      "reasons": [
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to",
+        "long_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 1529,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:support",
+        "weak_argument_marker:for"
+      ]
+    },
+    {
+      "source_id": 1541,
+      "score": 7,
+      "reasons": [
+        "strong:leave",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1563,
+      "score": 7,
+      "reasons": [
+        "temporal_ambiguity:since",
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1567,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:support",
+        "reaction_or_purpose:demand_urge",
+        "compact_or_headline_like"
+      ]
+    },
+    {
+      "source_id": 1608,
+      "score": 7,
+      "reasons": [
+        "strong:kill_injure",
+        "reaction_or_purpose:blame_accuse"
+      ]
+    },
+    {
+      "source_id": 1638,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:over",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1820,
+      "score": 7,
+      "reasons": [
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "leading_function_word:cause",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1904,
+      "score": 7,
+      "reasons": [
+        "strong:lead",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2008,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:seek_prevent",
+        "weak_argument_marker:to",
+        "weak_argument_marker:against",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2078,
+      "score": 7,
+      "reasons": [
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "leading_function_word:cause",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2151,
+      "score": 7,
+      "reasons": [
+        "strong:leave",
+        "weak_argument_marker:for",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2274,
+      "score": 7,
+      "reasons": [
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to",
+        "long_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2334,
+      "score": 7,
+      "reasons": [
+        "temporal_ambiguity:when_once",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2476,
+      "score": 7,
+      "reasons": [
+        "strong:kill_injure",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2646,
+      "score": 7,
+      "reasons": [
+        "strong:kill_injure",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2665,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "reaction_or_purpose:seek_prevent",
+        "weak_argument_marker:to"
+      ]
+    },
+    {
+      "source_id": 2680,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:seek_prevent",
+        "temporal_ambiguity:when_once",
+        "weak_argument_marker:for",
+        "compact_or_headline_like"
+      ]
+    },
+    {
+      "source_id": 2751,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2771,
+      "score": 7,
+      "reasons": [
+        "strong:lead",
+        "weak_argument_marker:to",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2791,
+      "score": 7,
+      "reasons": [
+        "strong:due_to",
+        "weak_argument_marker:to",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2863,
+      "score": 7,
+      "reasons": [
+        "strong:kill_injure",
+        "fragment_or_headline_ending",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 2864,
+      "score": 7,
+      "reasons": [
+        "strong:kill_injure",
+        "weak_argument_marker:to",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 2904,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:over",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 3000,
+      "score": 7,
+      "reasons": [
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "tokenization_or_apostrophe_noise",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 3,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "temporal_ambiguity:when_once",
+        "compact_or_headline_like"
+      ]
+    },
+    {
+      "source_id": 81,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:blame_accuse",
+        "weak_argument_marker:for",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 91,
+      "score": 6,
+      "reasons": [
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 100,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 104,
+      "score": 6,
+      "reasons": [
+        "strong:kill_injure",
+        "temporal_ambiguity:after_following"
+      ]
+    },
+    {
+      "source_id": 114,
+      "score": 6,
+      "reasons": [
+        "strong:kill_injure",
+        "temporal_ambiguity:after_following"
+      ]
+    },
+    {
+      "source_id": 173,
+      "score": 6,
+      "reasons": [
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 175,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:demand_urge",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to"
+      ]
+    },
+    {
+      "source_id": 227,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge"
+      ]
+    },
+    {
+      "source_id": 232,
+      "score": 6,
+      "reasons": [
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 276,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:when_once",
+        "weak_argument_marker:to"
+      ]
+    },
+    {
+      "source_id": 311,
+      "score": 6,
+      "reasons": [
+        "temporal_ambiguity:when_once",
+        "weak_argument_marker:to",
+        "weak_argument_marker:over",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 329,
+      "score": 6,
+      "reasons": [
+        "strong:force",
+        "weak_argument_marker:to",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 436,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:when_once",
+        "compact_or_headline_like"
+      ]
+    },
+    {
+      "source_id": 518,
+      "score": 6,
+      "reasons": [
+        "weak_argument_marker:to",
+        "leading_function_word:cause",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 564,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge"
+      ]
+    },
+    {
+      "source_id": 625,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:over"
+      ]
+    },
+    {
+      "source_id": 647,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge"
+      ]
+    },
+    {
+      "source_id": 676,
+      "score": 6,
+      "reasons": [
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 799,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 910,
+      "score": 6,
+      "reasons": [
+        "strong:cause",
+        "weak_argument_marker:to",
+        "compact_or_headline_like"
+      ]
+    },
+    {
+      "source_id": 960,
+      "score": 6,
+      "reasons": [
+        "strong:kill_injure",
+        "temporal_ambiguity:after_following"
+      ]
+    },
+    {
+      "source_id": 1150,
+      "score": 6,
+      "reasons": [
+        "temporal_ambiguity:since",
+        "weak_argument_marker:to",
+        "leading_function_word:cause"
+      ]
+    },
+    {
+      "source_id": 1204,
+      "score": 6,
+      "reasons": [
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "leading_function_word:cause",
+        "compact_or_headline_like"
+      ]
+    },
+    {
+      "source_id": 1208,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:blame_accuse",
+        "weak_argument_marker:for",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1402,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:blame_accuse"
+      ]
+    },
+    {
+      "source_id": 1426,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:after_following",
+        "weak_argument_marker:to"
+      ]
+    },
+    {
+      "source_id": 1444,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "long_context",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1446,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:concern_condemn",
+        "weak_argument_marker:over",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1507,
+      "score": 6,
+      "reasons": [
+        "weak_argument_marker:to",
+        "long_context",
+        "fragment_or_headline_ending",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1568,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:after_following",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1618,
+      "score": 6,
+      "reasons": [
+        "strong:cause",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 1649,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:to",
+        "weak_argument_marker:for",
+        "compact_or_headline_like"
+      ]
+    },
+    {
+      "source_id": 1701,
+      "score": 6,
+      "reasons": [
+        "strong:kill_injure",
+        "weak_argument_marker:to",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1724,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:for",
+        "compact_or_headline_like",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1733,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:for",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1734,
+      "score": 6,
+      "reasons": [
+        "strong:kill_injure",
+        "long_context"
+      ]
+    },
+    {
+      "source_id": 1741,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "temporal_ambiguity:after_following",
+        "short_causal_argument"
+      ]
+    },
+    {
+      "source_id": 1749,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "reaction_or_purpose:demand_urge"
+      ]
+    },
+    {
+      "source_id": 1787,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose:protest_opposition",
+        "weak_argument_marker:against",
+        "long_context"
+      ]
+    }
+  ],
+  "hard_negative_oversample": [
+    {
+      "source_id": 47,
+      "score": 14,
+      "reasons": [
+        "reaction_or_purpose_surface_form:support",
+        "reaction_or_purpose_surface_form:seek_prevent",
+        "temporal_surface_form:when_once",
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "long_distractor_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 284,
+      "score": 14,
+      "reasons": [
+        "strong_causal_surface_form:cause",
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "reaction_or_purpose_surface_form:concern_condemn",
+        "weak_surface_form:over",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 50,
+      "score": 13,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "temporal_surface_form:since",
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "weak_surface_form:over",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 2401,
+      "score": 13,
+      "reasons": [
+        "strong_causal_surface_form:force",
+        "reaction_or_purpose_surface_form:support",
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "long_distractor_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2894,
+      "score": 12,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "reaction_or_purpose_surface_form:demand_urge",
+        "temporal_surface_form:after_following",
+        "weak_surface_form:for",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 2974,
+      "score": 12,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to",
+        "long_distractor_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 486,
+      "score": 11,
+      "reasons": [
+        "strong_causal_surface_form:leave",
+        "strong_causal_surface_form:kill_injure",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 146,
+      "score": 10,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "reaction_or_purpose_surface_form:blame_accuse",
+        "reaction_or_purpose_surface_form:concern_condemn",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 556,
+      "score": 10,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "reaction_or_purpose_surface_form:demand_urge",
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 756,
+      "score": 10,
+      "reasons": [
+        "strong_causal_surface_form:force",
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "weak_surface_form:over"
+      ]
+    },
+    {
+      "source_id": 1048,
+      "score": 10,
+      "reasons": [
+        "reaction_or_purpose_surface_form:support",
+        "temporal_surface_form:when_once",
+        "weak_surface_form:to",
+        "weak_surface_form:over",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1073,
+      "score": 10,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "reaction_or_purpose_surface_form:blame_accuse",
+        "weak_surface_form:to",
+        "long_distractor_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 1251,
+      "score": 10,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "temporal_surface_form:since",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1469,
+      "score": 10,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "reaction_or_purpose_surface_form:blame_accuse",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 2946,
+      "score": 10,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "temporal_surface_form:after_following",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 2968,
+      "score": 10,
+      "reasons": [
+        "strong_causal_surface_form:leave",
+        "strong_causal_surface_form:kill_injure"
+      ]
+    },
+    {
+      "source_id": 40,
+      "score": 9,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 413,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "reaction_or_purpose_surface_form:support",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 417,
+      "score": 9,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "weak_surface_form:to",
+        "long_distractor_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 738,
+      "score": 9,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 742,
+      "score": 9,
+      "reasons": [
+        "strong_causal_surface_form:cause",
+        "reaction_or_purpose_surface_form:demand_urge",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 871,
+      "score": 9,
+      "reasons": [
+        "strong_causal_surface_form:force",
+        "weak_surface_form:to",
+        "long_distractor_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2532,
+      "score": 9,
+      "reasons": [
+        "reaction_or_purpose_surface_form:support",
+        "reaction_or_purpose_surface_form:demand_urge",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 2844,
+      "score": 9,
+      "reasons": [
+        "strong_causal_surface_form:cause",
+        "weak_surface_form:to",
+        "long_distractor_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2847,
+      "score": 9,
+      "reasons": [
+        "strong_causal_surface_form:cause",
+        "weak_surface_form:to",
+        "long_distractor_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 151,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "reaction_or_purpose_surface_form:concern_condemn",
+        "weak_surface_form:to",
+        "weak_surface_form:for"
+      ]
+    },
+    {
+      "source_id": 444,
+      "score": 8,
+      "reasons": [
+        "strong_causal_surface_form:cause",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 818,
+      "score": 8,
+      "reasons": [
+        "strong_causal_surface_form:leave",
+        "reaction_or_purpose_surface_form:protest_opposition"
+      ]
+    },
+    {
+      "source_id": 1083,
+      "score": 8,
+      "reasons": [
+        "temporal_surface_form:when_once",
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "weak_surface_form:against",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1298,
+      "score": 8,
+      "reasons": [
+        "strong_causal_surface_form:cause",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1326,
+      "score": 8,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "weak_surface_form:over",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1433,
+      "score": 8,
+      "reasons": [
+        "strong_causal_surface_form:leave",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1616,
+      "score": 8,
+      "reasons": [
+        "strong_causal_surface_form:force",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1758,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "reaction_or_purpose_surface_form:blame_accuse",
+        "weak_surface_form:to",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2436,
+      "score": 8,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "reaction_or_purpose_surface_form:support",
+        "weak_surface_form:to",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 3024,
+      "score": 8,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "temporal_surface_form:since",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 56,
+      "score": 7,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to",
+        "long_distractor_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 190,
+      "score": 7,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 269,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "weak_surface_form:against",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 378,
+      "score": 7,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 438,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 455,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "weak_surface_form:against",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 566,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 868,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose_surface_form:support",
+        "temporal_surface_form:since",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 968,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "reaction_or_purpose_surface_form:support",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 1142,
+      "score": 7,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to",
+        "weak_surface_form:against",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1667,
+      "score": 7,
+      "reasons": [
+        "strong_causal_surface_form:cause",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1716,
+      "score": 7,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1865,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1908,
+      "score": 7,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "weak_surface_form:to",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2028,
+      "score": 7,
+      "reasons": [
+        "temporal_surface_form:since",
+        "weak_surface_form:to",
+        "long_distractor_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2200,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "temporal_surface_form:after_following",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 2453,
+      "score": 7,
+      "reasons": [
+        "strong_causal_surface_form:leave",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 2827,
+      "score": 7,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:against",
+        "compact_negative",
+        "fragment_or_headline_ending",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2967,
+      "score": 7,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 3006,
+      "score": 7,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "weak_surface_form:over",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 14,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:blame_accuse",
+        "weak_surface_form:to",
+        "compact_negative",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 41,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 46,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:seek_prevent",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 52,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:concern_condemn",
+        "weak_surface_form:to",
+        "weak_surface_form:over",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 67,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 156,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "compact_negative",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 157,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:blame_accuse",
+        "weak_surface_form:to",
+        "compact_negative",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 174,
+      "score": 6,
+      "reasons": [
+        "temporal_surface_form:when_once",
+        "weak_surface_form:over",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 236,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:leave",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 305,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 384,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 411,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "weak_surface_form:over"
+      ]
+    },
+    {
+      "source_id": 447,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 503,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 551,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 675,
+      "score": 6,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 729,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 800,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "temporal_surface_form:after_following"
+      ]
+    },
+    {
+      "source_id": 936,
+      "score": 6,
+      "reasons": [
+        "temporal_surface_form:when_once",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1104,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "reaction_or_purpose_surface_form:concern_condemn"
+      ]
+    },
+    {
+      "source_id": 1133,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:lead",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 1137,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:demand_urge",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1140,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:demand_urge",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1149,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:result",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 1209,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:support",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1212,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:for",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1287,
+      "score": 6,
+      "reasons": [
+        "temporal_surface_form:when_once",
+        "long_distractor_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 1336,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:force",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 1345,
+      "score": 6,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1452,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 1639,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "compact_negative",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 1656,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:force",
+        "weak_surface_form:against"
+      ]
+    },
+    {
+      "source_id": 1705,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 1810,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 1812,
+      "score": 6,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to",
+        "compact_negative",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 1841,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 1910,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 2094,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "temporal_surface_form:after_following"
+      ]
+    },
+    {
+      "source_id": 2110,
+      "score": 6,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 2142,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 2146,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:result",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 2221,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "reaction_or_purpose_surface_form:concern_condemn"
+      ]
+    },
+    {
+      "source_id": 2264,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "compact_negative",
+        "fragment_or_headline_ending",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2329,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 2337,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 2390,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 2445,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "reaction_or_purpose_surface_form:concern_condemn"
+      ]
+    },
+    {
+      "source_id": 2482,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:demand_urge",
+        "compact_negative",
+        "fragment_or_headline_ending",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2547,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 2550,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 2692,
+      "score": 6,
+      "reasons": [
+        "temporal_surface_form:when_once",
+        "weak_surface_form:to",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 2710,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:leave",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 2780,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 2805,
+      "score": 6,
+      "reasons": [
+        "strong_causal_surface_form:force",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 3012,
+      "score": 6,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "compact_negative",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 17,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "weak_surface_form:against"
+      ]
+    },
+    {
+      "source_id": 19,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 199,
+      "score": 5,
+      "reasons": [
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "weak_surface_form:against",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 336,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:seek_prevent",
+        "weak_surface_form:to",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 427,
+      "score": 5,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 459,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:support",
+        "weak_surface_form:to",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 476,
+      "score": 5,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure"
+      ]
+    },
+    {
+      "source_id": 494,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:concern_condemn",
+        "weak_surface_form:against",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 509,
+      "score": 5,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure"
+      ]
+    },
+    {
+      "source_id": 516,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 528,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:support",
+        "weak_surface_form:for",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 545,
+      "score": 5,
+      "reasons": [
+        "temporal_surface_form:when_once",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 650,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 755,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:seek_prevent",
+        "compact_negative",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 785,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:demand_urge",
+        "compact_negative",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 806,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 840,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:demand_urge",
+        "weak_surface_form:to",
+        "weak_surface_form:against"
+      ]
+    },
+    {
+      "source_id": 849,
+      "score": 5,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure"
+      ]
+    },
+    {
+      "source_id": 860,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:seek_prevent",
+        "weak_surface_form:to",
+        "weak_surface_form:for"
+      ]
+    },
+    {
+      "source_id": 862,
+      "score": 5,
+      "reasons": [
+        "temporal_surface_form:since",
+        "weak_surface_form:to",
+        "weak_surface_form:for"
+      ]
+    },
+    {
+      "source_id": 957,
+      "score": 5,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure"
+      ]
+    },
+    {
+      "source_id": 1025,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:for",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 1029,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 1084,
+      "score": 5,
+      "reasons": [
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "weak_surface_form:against",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1086,
+      "score": 5,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1117,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "weak_surface_form:against"
+      ]
+    },
+    {
+      "source_id": 1144,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:blame_accuse",
+        "weak_surface_form:for",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 1222,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:concern_condemn",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 1228,
+      "score": 5,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 1232,
+      "score": 5,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "compact_negative",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 1315,
+      "score": 5,
+      "reasons": [
+        "weak_surface_form:for",
+        "weak_surface_form:against",
+        "long_distractor_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 1353,
+      "score": 5,
+      "reasons": [
+        "temporal_surface_form:since",
+        "weak_surface_form:against",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 1448,
+      "score": 5,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure"
+      ]
+    },
+    {
+      "source_id": 1451,
+      "score": 5,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure"
+      ]
+    },
+    {
+      "source_id": 1743,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:over",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 1798,
+      "score": 5,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 1828,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 1858,
+      "score": 5,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure"
+      ]
+    },
+    {
+      "source_id": 2031,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 2049,
+      "score": 5,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure"
+      ]
+    },
+    {
+      "source_id": 2106,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:demand_urge",
+        "compact_negative",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 2125,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "compact_negative",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2246,
+      "score": 5,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 2312,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 2388,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2443,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "compact_negative",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 2499,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:concern_condemn",
+        "compact_negative",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 2536,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:demand_urge",
+        "compact_negative",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2592,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2599,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "compact_negative",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 2691,
+      "score": 5,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 2735,
+      "score": 5,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure"
+      ]
+    },
+    {
+      "source_id": 2821,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:demand_urge",
+        "weak_surface_form:to",
+        "weak_surface_form:for"
+      ]
+    },
+    {
+      "source_id": 2877,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:blame_accuse",
+        "compact_negative",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 2893,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "compact_negative",
+        "fragment_or_headline_ending"
+      ]
+    },
+    {
+      "source_id": 2939,
+      "score": 5,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure"
+      ]
+    },
+    {
+      "source_id": 2958,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:seek_prevent",
+        "weak_surface_form:against",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 3005,
+      "score": 5,
+      "reasons": [
+        "strong_causal_surface_form:kill_injure"
+      ]
+    },
+    {
+      "source_id": 3037,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:concern_condemn",
+        "weak_surface_form:to",
+        "weak_surface_form:over"
+      ]
+    },
+    {
+      "source_id": 3047,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:blame_accuse",
+        "weak_surface_form:to",
+        "weak_surface_form:for"
+      ]
+    },
+    {
+      "source_id": 3056,
+      "score": 5,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 21,
+      "score": 4,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 39,
+      "score": 4,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 79,
+      "score": 4,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 131,
+      "score": 4,
+      "reasons": [
+        "temporal_surface_form:when_once",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 134,
+      "score": 4,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 154,
+      "score": 4,
+      "reasons": [
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 185,
+      "score": 4,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 198,
+      "score": 4,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 200,
+      "score": 4,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 244,
+      "score": 4,
+      "reasons": [
+        "weak_surface_form:to",
+        "long_distractor_context",
+        "tokenization_or_apostrophe_noise"
+      ]
+    },
+    {
+      "source_id": 265,
+      "score": 4,
+      "reasons": [
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 268,
+      "score": 4,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 272,
+      "score": 4,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 306,
+      "score": 4,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:against"
+      ]
+    },
+    {
+      "source_id": 367,
+      "score": 4,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 401,
+      "score": 4,
+      "reasons": [
+        "temporal_surface_form:when_once",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 451,
+      "score": 4,
+      "reasons": [
+        "temporal_surface_form:when_once",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 559,
+      "score": 4,
+      "reasons": [
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 580,
+      "score": 4,
+      "reasons": [
+        "reaction_or_purpose_surface_form:demand_urge",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 659,
+      "score": 4,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 725,
+      "score": 4,
+      "reasons": [
+        "reaction_or_purpose_surface_form:demand_urge",
+        "weak_surface_form:for"
+      ]
+    },
+    {
+      "source_id": 739,
+      "score": 4,
+      "reasons": [
+        "temporal_surface_form:after_following",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 746,
+      "score": 4,
+      "reasons": [
+        "reaction_or_purpose_surface_form:concern_condemn",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 784,
+      "score": 4,
+      "reasons": [
+        "temporal_surface_form:when_once",
+        "compact_negative"
+      ]
+    },
+    {
+      "source_id": 808,
+      "score": 4,
+      "reasons": [
+        "temporal_surface_form:since",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 845,
+      "score": 4,
+      "reasons": [
+        "weak_surface_form:to",
+        "weak_surface_form:for",
+        "long_distractor_context"
+      ]
+    },
+    {
+      "source_id": 852,
+      "score": 4,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:to"
+      ]
+    },
+    {
+      "source_id": 854,
+      "score": 4,
+      "reasons": [
+        "reaction_or_purpose_surface_form:protest_opposition",
+        "weak_surface_form:over"
+      ]
+    }
+  ]
+}

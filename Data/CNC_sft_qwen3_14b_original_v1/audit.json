@@ -1,0 +1,52 @@
+{
+  "strategy": "copy the existing audited CNC SFT splits and replace only messages[0].content",
+  "source_dir": "Data/CNC_sft",
+  "output_dir": "Data/CNC_sft_qwen3_14b_original_v1",
+  "system_prompt": {
+    "path": "prompts/cnc_eval_v2.txt",
+    "sha256": "0027d77c5f89f888f15dd47dee08fb6c3dc819a2ea58a5cd2629c03f6abb1dd6"
+  },
+  "distribution": {
+    "train": {
+      "samples": 1537,
+      "positive": 812,
+      "negative": 725,
+      "relations": 1128
+    },
+    "validation": {
+      "samples": 500,
+      "positive": 264,
+      "negative": 236,
+      "relations": 366
+    },
+    "test": {
+      "samples": 1038,
+      "positive": 548,
+      "negative": 490,
+      "relations": 763
+    }
+  },
+  "source_hashes": {
+    "train.jsonl": "22159892a7737d8e7a7495055fb7d906e10dd17f46df0de56d9352706b44cc54",
+    "validation.jsonl": "013b1b3f8a61019f6dc3bdfde5ee56cc430f325ba3c2d02224576e8d9603be35",
+    "test.jsonl": "eb7cb307dcca77659c2aecf63f21cd71d3fb90a3b9891fbc704c3659cea1b349"
+  },
+  "output_hashes": {
+    "train.jsonl": "712b97bbc14425a8b81082a16168d7e0e76a6eb2421704a66aff19045564f791",
+    "validation.jsonl": "6805d7e2e925ad0332af916ffd8c70ebcd12fa225562d8b10ef45df35fa1ccfb",
+    "test.jsonl": "df7a9ae28e852c21b51c2114b0b7d7d14ac3f1026224a3b0d94a61817948b827"
+  },
+  "checks": {
+    "split_sizes_preserved": true,
+    "row_order_and_ids_preserved": true,
+    "non_message_fields_preserved": true,
+    "user_and_assistant_messages_preserved": true,
+    "system_prompt_replaced_exactly": true,
+    "ids_document_disjoint": true
+  },
+  "notes": [
+    "IDs, document assignments, text, labels, Gold spans, user messages, and assistant answers are unchanged.",
+    "Only the system prompt differs from Data/CNC_sft.",
+    "No validation or test example is added to training."
+  ]
+}

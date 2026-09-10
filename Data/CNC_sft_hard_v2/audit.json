@@ -1,0 +1,107 @@
+{
+  "strategy": "retain every original training row once; add one extra occurrence for every multi-causal row, the highest-scoring hard single-positive rows, and the highest-scoring causal-looking negative rows",
+  "strategy_version": 1,
+  "seed": 42,
+  "source_dir": "Data/CNC_sft",
+  "output_dir": "Data/CNC_sft_hard_v2",
+  "source_hashes": {
+    "train.jsonl": "22159892a7737d8e7a7495055fb7d906e10dd17f46df0de56d9352706b44cc54",
+    "validation.jsonl": "013b1b3f8a61019f6dc3bdfde5ee56cc430f325ba3c2d02224576e8d9603be35",
+    "test.jsonl": "eb7cb307dcca77659c2aecf63f21cd71d3fb90a3b9891fbc704c3659cea1b349"
+  },
+  "output_hashes": {
+    "train.jsonl": "f086b3e50eb653f7025cf1d6b6c80ed6fdc41daff01e8df4e4d8e04f81cf9fa0",
+    "validation.jsonl": "013b1b3f8a61019f6dc3bdfde5ee56cc430f325ba3c2d02224576e8d9603be35",
+    "test.jsonl": "eb7cb307dcca77659c2aecf63f21cd71d3fb90a3b9891fbc704c3659cea1b349"
+  },
+  "selection_targets": {
+    "multi_causal": 260,
+    "hard_single_positive": 200,
+    "hard_negative": 200
+  },
+  "sampling_kind_counts": {
+    "base": 1537,
+    "hard_negative_oversample": 200,
+    "hard_single_positive_oversample": 200,
+    "multi_causal_oversample": 260
+  },
+  "unique_source_distribution": {
+    "samples": 1537,
+    "unique_source_ids": 1537,
+    "positive": 812,
+    "negative": 725,
+    "relations": 1128,
+    "relation_count": {
+      "0": 725,
+      "1": 552,
+      "2": 209,
+      "3": 47,
+      "4": 3,
+      "5": 1
+    }
+  },
+  "effective_distribution": {
+    "samples": 2197,
+    "unique_source_ids": 1537,
+    "positive": 1272,
+    "negative": 925,
+    "relations": 1904,
+    "relation_count": {
+      "0": 925,
+      "1": 752,
+      "2": 418,
+      "3": 94,
+      "4": 6,
+      "5": 2
+    }
+  },
+  "validation_distribution": {
+    "samples": 500,
+    "unique_source_ids": 500,
+    "positive": 264,
+    "negative": 236,
+    "relations": 366,
+    "relation_count": {
+      "0": 236,
+      "1": 180,
+      "2": 68,
+      "3": 14,
+      "4": 2
+    }
+  },
+  "test_distribution": {
+    "samples": 1038,
+    "unique_source_ids": 1038,
+    "positive": 548,
+    "negative": 490,
+    "relations": 763,
+    "relation_count": {
+      "0": 490,
+      "1": 373,
+      "2": 141,
+      "3": 29,
+      "4": 4,
+      "5": 1
+    }
+  },
+  "checks": {
+    "source_train_ids_unique": true,
+    "base_train_covered": true,
+    "only_selected_rows_duplicated": true,
+    "each_selected_row_occurs_twice": true,
+    "each_unselected_row_occurs_once": true,
+    "selection_categories_disjoint": true,
+    "multi_selection_complete": true,
+    "hard_single_target_met": true,
+    "hard_negative_target_met": true,
+    "no_validation_or_test_ids_used": true,
+    "validation_byte_identical": true,
+    "test_byte_identical": true,
+    "messages_preserved": true
+  },
+  "notes": [
+    "No validation or test row is included in the derived training data.",
+    "Gold labels, spans, messages, and the training prompt are unchanged.",
+    "Oversampling is implemented as deterministic duplicate training occurrences, not synthetic data."
+  ]
+}

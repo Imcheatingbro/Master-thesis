@@ -1,0 +1,32 @@
+{
+  "run_id": "rams_judge_validation_v4_fs10_deepseek-v4-pro_thinking-high_n300",
+  "model": "deepseek-v4-pro",
+  "prompt_version": "v4_fs10",
+  "sample_limit": 300,
+  "selected_count": 300,
+  "selection_summary": {
+    "total": 300,
+    "labels": {
+      "false": 150,
+      "true": 150
+    },
+    "case_types": {
+      "positive": 150,
+      "role_corruption": 75,
+      "span_swap": 75
+    }
+  },
+  "dataset_path": "D:\\Master thesis\\Data\\RAMS_judge\\splits\\doc_level_v1\\validation.jsonl",
+  "dataset_sha256": "44eac033febf29b2c8155368258339120529e26aaca2f73507fb8d879e632c57",
+  "prompt_path": "D:\\Master thesis\\prompts\\rams_judge_v4_fs10.txt",
+  "prompt_sha256": "16b8083ab0b2c59c48bb946b68c81f1d82063e952a3864bd30ca73a1f8a277ea",
+  "prompt_snapshot_path": "D:\\Master thesis\\results\\rams_judge_evaluation\\rams_judge_validation_v4_fs10_deepseek-v4-pro_thinking-high_n300\\prompt_snapshot.txt",
+  "max_workers": 10,
+  "max_tokens": 4096,
+  "timeout_seconds": 120.0,
+  "retry_times": 3,
+  "retry_failed": true,
+  "thinking": "enabled",
+  "reasoning_effort": "high",
+  "temperature": null
+}

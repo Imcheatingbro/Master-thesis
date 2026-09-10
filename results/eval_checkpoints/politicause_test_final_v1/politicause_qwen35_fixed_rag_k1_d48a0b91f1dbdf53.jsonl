@@ -1,0 +1,860 @@
+{"prediction": {"has_causal": true, "id": 1906, "triples": [{"cause": {"span": "The attacks, claimed by Islamic State in Khorasan Province"}, "effect": {"span": "resulted in the death and injuries of over 300 civilians, including women and children, and military personnel"}, "relation": "caused"}]}, "sample_id": 1906}
+{"prediction": {"has_causal": false, "id": 10658, "triples": []}, "sample_id": 10658}
+{"prediction": {"has_causal": true, "id": 12317, "triples": [{"cause": {"span": "work together"}, "effect": {"span": "to give them a future to blossom in peace"}, "relation": "caused"}]}, "sample_id": 12317}
+{"prediction": {"has_causal": false, "id": 8825, "triples": []}, "sample_id": 8825}
+{"prediction": {"has_causal": false, "id": 2878, "triples": []}, "sample_id": 2878}
+{"prediction": {"has_causal": false, "id": 10264, "triples": []}, "sample_id": 10264}
+{"prediction": {"has_causal": true, "id": 1697, "triples": [{"cause": {"span": "the world can incentivise them to go this direction"}, "effect": {"span": "this twenty-year presence of the coalition forces in Afghanistan would not be wasted after all"}, "relation": "caused"}]}, "sample_id": 1697}
+{"prediction": {"has_causal": false, "id": 4425, "triples": []}, "sample_id": 4425}
+{"prediction": {"has_causal": true, "id": 13687, "triples": [{"cause": {"span": "intensified collaboration between the Government, United Nations agencies and development partners"}, "effect": {"span": "the humanitarian trend in the country has remarkably improved"}, "relation": "caused"}]}, "sample_id": 13687}
+{"prediction": {"has_causal": false, "id": 15815, "triples": []}, "sample_id": 15815}
+{"prediction": {"has_causal": true, "id": 10561, "triples": [{"cause": {"span": "all segments of society are included"}, "effect": {"span": "Post-conflict reconstruction can be successful"}, "relation": "caused"}]}, "sample_id": 10561}
+{"prediction": {"has_causal": true, "id": 15482, "triples": [{"cause": {"span": "reduced the water level of the Euphrates River to less than half the level agreed upon between the two countries in a 1987 agreement"}, "effect": {"span": "grave humanitarian, ecological, health and agricultural consequences"}, "relation": "caused"}]}, "sample_id": 15482}
+{"prediction": {"has_causal": false, "id": 83, "triples": []}, "sample_id": 83}
+{"prediction": {"has_causal": false, "id": 16758, "triples": []}, "sample_id": 16758}
+{"prediction": {"has_causal": true, "id": 2233, "triples": [{"cause": {"span": "intensive and prolonged droughts and rainfall"}, "effect": {"span": "severely impacting lives and livelihoods"}, "relation": "caused"}]}, "sample_id": 2233}
+{"prediction": {"has_causal": false, "id": 1668, "triples": []}, "sample_id": 1668}
+{"prediction": {"has_causal": true, "id": 5914, "triples": [{"cause": {"span": "vaccine rollout"}, "effect": {"span": "has already saved many thousands of lives"}, "relation": "caused"}]}, "sample_id": 5914}
+{"prediction": {"has_causal": true, "id": 13166, "triples": [{"cause": {"span": "establish a special reforestation fund"}, "effect": {"span": "to thereby combat extreme poverty"}, "relation": "caused"}]}, "sample_id": 13166}
+{"prediction": {"has_causal": false, "id": 2816, "triples": []}, "sample_id": 2816}
+{"prediction": {"has_causal": true, "id": 12498, "triples": [{"cause": {"span": "owe the Lebanese people our full support"}, "effect": {"span": "to enable them to rise from this crisis"}, "relation": "caused"}]}, "sample_id": 12498}
+{"prediction": {"has_causal": true, "id": 15753, "triples": [{"cause": {"span": "correct a decades-long course and treat our planet differently"}, "effect": {"span": "in order to guarantee the survival of humankind"}, "relation": "caused"}]}, "sample_id": 15753}
+{"prediction": {"has_causal": true, "id": 238, "triples": [{"cause": {"span": "get the jab"}, "effect": {"span": "prevent the serious consequences of catching COVID-19 in pregnancy"}, "relation": "caused"}]}, "sample_id": 238}
+{"prediction": {"has_causal": true, "id": 12077, "triples": [{"cause": {"span": "put all our effort into stepping up vaccine production and sharing the available doses fairly"}, "effect": {"span": "so that we can vaccinate as many people as quickly as possible"}, "relation": "caused"}]}, "sample_id": 12077}
+{"prediction": {"has_causal": true, "id": 11100, "triples": [{"cause": {"span": "All of those efforts constitute a process"}, "effect": {"span": "that will help solidify the foundation for peace on the Korean peninsula, as well as contribute to peace and stability in North-East Asia"}, "relation": "caused"}]}, "sample_id": 11100}
+{"prediction": {"has_causal": false, "id": 5200, "triples": []}, "sample_id": 5200}
+{"prediction": {"has_causal": true, "id": 16693, "triples": [{"cause": {"span": "We have launched the electronic single register of crimes and misdemeanours and single register of offences"}, "effect": {"span": "which strengthen the capacity of law enforcement agencies and the legal system as a whole"}, "relation": "caused"}]}, "sample_id": 16693}
+{"prediction": {"has_causal": false, "id": 11298, "triples": []}, "sample_id": 11298}
+{"prediction": {"has_causal": true, "id": 2778, "triples": [{"cause": {"span": "incremental effects of climate change"}, "effect": {"span": "threaten the livelihoods, security, and well-being of our people"}, "relation": "caused"}]}, "sample_id": 2778}
+{"prediction": {"has_causal": true, "id": 6078, "triples": [{"cause": {"span": "Both the coronavirus pandemic and polarization"}, "effect": {"span": "erode public trust in our institutions"}, "relation": "caused"}]}, "sample_id": 6078}
+{"prediction": {"has_causal": false, "id": 3883, "triples": []}, "sample_id": 3883}
+{"prediction": {"has_causal": false, "id": 5065, "triples": []}, "sample_id": 5065}
+{"prediction": {"has_causal": true, "id": 13987, "triples": [{"cause": {"span": "take steps towards a gradual but effective action"}, "effect": {"span": "make it possible to reverse the abysmal and shameful inequality on the planet"}, "relation": "caused"}]}, "sample_id": 13987}
+{"prediction": {"has_causal": false, "id": 6562, "triples": []}, "sample_id": 6562}
+{"prediction": {"has_causal": false, "id": 2269, "triples": []}, "sample_id": 2269}
+{"prediction": {"has_causal": false, "id": 4132, "triples": []}, "sample_id": 4132}
+{"prediction": {"has_causal": false, "id": 9683, "triples": []}, "sample_id": 9683}
+{"prediction": {"has_causal": false, "id": 4509, "triples": []}, "sample_id": 4509}
+{"prediction": {"has_causal": true, "id": 14872, "triples": [{"cause": {"span": "the approach President Trump has taken"}, "effect": {"span": "the two leaders to talk candidly with each other and try to work out the issues at hand"}, "relation": "caused"}]}, "sample_id": 14872}
+{"prediction": {"has_causal": true, "id": 9339, "triples": [{"cause": {"span": "The tireless efforts of NHS and care staff, and the army of volunteers, as well as the phenomenal response of the British public"}, "effect": {"span": "over 37 million people have been boosted"}, "relation": "caused"}]}, "sample_id": 9339}
+{"prediction": {"has_causal": true, "id": 2828, "triples": [{"cause": {"span": "climate change"}, "effect": {"span": "increase the prevalence of emerging infectious diseases and vector-borne diseases"}, "relation": "caused"}]}, "sample_id": 2828}
+{"prediction": {"has_causal": true, "id": 15713, "triples": [{"cause": {"span": "Securing climate financing"}, "effect": {"span": "no action on our nationally determined contributions is possible"}, "relation": "caused"}]}, "sample_id": 15713}
+{"prediction": {"has_causal": false, "id": 8620, "triples": []}, "sample_id": 8620}
+{"prediction": {"has_causal": false, "id": 6480, "triples": []}, "sample_id": 6480}
+{"prediction": {"has_causal": false, "id": 4554, "triples": []}, "sample_id": 4554}
+{"prediction": {"has_causal": true, "id": 15447, "triples": [{"cause": {"span": "ensure that adequate and sustainable financing is available"}, "effect": {"span": "to support the responses from the Resident Coordinators to the needs of the most vulnerable"}, "relation": "caused"}]}, "sample_id": 15447}
+{"prediction": {"has_causal": true, "id": 14041, "triples": [{"cause": {"span": "This very rare situation, involving a special moment of agreement, at both the domestic and the international level"}, "effect": {"span": "fuels our hopes for real progress on the path towards developing such needed internal reforms as justice reform and the fight against corruption, as well as the way the Transnistrian problem is to be solved"}, "relation": "caused"}]}, "sample_id": 14041}
+{"prediction": {"has_causal": true, "id": 2649, "triples": [{"cause": {"span": "The increase and frequency of natural disasters"}, "effect": {"span": "devastate countless lives"}, "relation": "caused"}]}, "sample_id": 2649}
+{"prediction": {"has_causal": false, "id": 309, "triples": []}, "sample_id": 309}
+{"prediction": {"has_causal": false, "id": 1914, "triples": []}, "sample_id": 1914}
+{"prediction": {"has_causal": false, "id": 6630, "triples": []}, "sample_id": 6630}
+{"prediction": {"has_causal": false, "id": 9737, "triples": []}, "sample_id": 9737}
+{"prediction": {"has_causal": false, "id": 719, "triples": []}, "sample_id": 719}
+{"prediction": {"has_causal": true, "id": 12568, "triples": [{"cause": {"span": "working with our valuable international partners"}, "effect": {"span": "to ensure we rebuild a democratic, inclusive and economically prosperous Somalia"}, "relation": "caused"}]}, "sample_id": 12568}
+{"prediction": {"has_causal": true, "id": 6590, "triples": [{"cause": {"span": "destroyed millions of dollars’ worth of crops and wreaked significant havoc on our reefs and corals"}, "effect": {"span": "undermining Palau’s food security"}, "relation": "caused"}]}, "sample_id": 6590}
+{"prediction": {"has_causal": true, "id": 9633, "triples": [{"cause": {"span": "cease to be one of the areas of conflict and tension in the world"}, "effect": {"span": "achieving a fair and peaceful future"}, "relation": "caused"}]}, "sample_id": 9633}
+{"prediction": {"has_causal": false, "id": 7694, "triples": []}, "sample_id": 7694}
+{"prediction": {"has_causal": true, "id": 13580, "triples": [{"cause": {"span": "multilateralism"}, "effect": {"span": "has enabled us to develop mechanisms for conflict resolution, peacekeeping and peacebuilding"}, "relation": "caused"}]}, "sample_id": 13580}
+{"prediction": {"has_causal": false, "id": 2126, "triples": []}, "sample_id": 2126}
+{"prediction": {"has_causal": true, "id": 5875, "triples": [{"cause": {"span": "a global effort"}, "effect": {"span": "the development and distribution of safe and effective vaccines"}, "relation": "caused"}]}, "sample_id": 5875}
+{"prediction": {"has_causal": true, "id": 7600, "triples": [{"cause": {"span": "someone infected with the virus talking and interacting with another person"}, "effect": {"span": "produces a build-up of COVID-19 particles in the air"}, "relation": "caused"}]}, "sample_id": 7600}
+{"prediction": {"has_causal": false, "id": 394, "triples": []}, "sample_id": 394}
+{"prediction": {"has_causal": false, "id": 16099, "triples": []}, "sample_id": 16099}
+{"prediction": {"has_causal": false, "id": 8292, "triples": []}, "sample_id": 8292}
+{"prediction": {"has_causal": true, "id": 4610, "triples": [{"cause": {"span": "Thanks to the success of the UK’s vaccine and booster rollout"}, "effect": {"span": "the government is now able to reduce the number of travel restrictions"}, "relation": "caused"}]}, "sample_id": 4610}
+{"prediction": {"has_causal": true, "id": 15845, "triples": [{"cause": {"span": "Through the use of that type of financing"}, "effect": {"span": "we have pioneered the world’s first debt-for-adaptation swap, established the world’s first sovereign blue bonds and protected ocean space in our exclusive economic zone"}, "relation": "caused"}]}, "sample_id": 15845}
+{"prediction": {"has_causal": false, "id": 9437, "triples": []}, "sample_id": 9437}
+{"prediction": {"has_causal": true, "id": 15844, "triples": [{"cause": {"span": "innovative financing"}, "effect": {"span": "promotes ocean conservation and climate action"}, "relation": "caused"}]}, "sample_id": 15844}
+{"prediction": {"has_causal": false, "id": 1980, "triples": []}, "sample_id": 1980}
+{"prediction": {"has_causal": false, "id": 8066, "triples": []}, "sample_id": 8066}
+{"prediction": {"has_causal": false, "id": 5411, "triples": []}, "sample_id": 5411}
+{"prediction": {"has_causal": false, "id": 13177, "triples": []}, "sample_id": 13177}
+{"prediction": {"has_causal": false, "id": 8830, "triples": []}, "sample_id": 8830}
+{"prediction": {"has_causal": true, "id": 12933, "triples": [{"cause": {"span": "this glaring gap"}, "effect": {"span": "adverse effects ... on Government’s ability to manage its macroeconomic affairs"}, "relation": "caused"}]}, "sample_id": 12933}
+{"prediction": {"has_causal": false, "id": 1283, "triples": []}, "sample_id": 1283}
+{"prediction": {"has_causal": true, "id": 12487, "triples": [{"cause": {"span": "only dialogue involving political parties and organized civil society actors"}, "effect": {"span": "allow for the consensus required to ensure socio-political stability"}, "relation": "caused"}]}, "sample_id": 12487}
+{"prediction": {"has_causal": true, "id": 13477, "triples": [{"cause": {"span": "undertaken the implementation of major programmes"}, "effect": {"span": "aimed at the long-term improvement of the living conditions of Mali’s entire population"}, "relation": "caused"}]}, "sample_id": 13477}
+{"prediction": {"has_causal": true, "id": 8695, "triples": [{"cause": {"span": "the peak of the Omicron wave"}, "effect": {"span": "cases have declined substantially"}, "relation": "caused"}]}, "sample_id": 8695}
+{"prediction": {"has_causal": false, "id": 12739, "triples": []}, "sample_id": 12739}
+{"prediction": {"has_causal": true, "id": 4284, "triples": [{"cause": {"span": "helping to achieve a common approach for aviation recovery"}, "effect": {"span": "as we continue to collaborate with our international partners in response to the pandemic"}, "relation": "caused"}]}, "sample_id": 4284}
+{"prediction": {"has_causal": true, "id": 5275, "triples": [{"cause": {"span": "delivering mobile vaccinations where people are sleeping on the streets, supporting outreach work in shelters to educate people about the dangers of the virus, and giving money to councils to provide safe and secure accommodation"}, "effect": {"span": "while their level of vaccination is increased"}, "relation": "caused"}]}, "sample_id": 5275}
+{"prediction": {"has_causal": false, "id": 8442, "triples": []}, "sample_id": 8442}
+{"prediction": {"has_causal": true, "id": 4329, "triples": [{"cause": {"span": "Vaccinated people"}, "effect": {"span": "are far less likely to get COVID-19 with symptoms and are less likely to get serious COVID-19, to be admitted to hospital, or to die from it"}, "relation": "caused"}]}, "sample_id": 4329}
+{"prediction": {"has_causal": true, "id": 4792, "triples": [{"cause": {"span": "everybody gets their vaccines and booster jabs"}, "effect": {"span": "We can learn to live with COVID-19"}, "relation": "caused"}]}, "sample_id": 4792}
+{"prediction": {"has_causal": false, "id": 12893, "triples": []}, "sample_id": 12893}
+{"prediction": {"has_causal": false, "id": 16867, "triples": []}, "sample_id": 16867}
+{"prediction": {"has_causal": false, "id": 11238, "triples": []}, "sample_id": 11238}
+{"prediction": {"has_causal": false, "id": 16243, "triples": []}, "sample_id": 16243}
+{"prediction": {"has_causal": true, "id": 9509, "triples": [{"cause": {"span": "injustice"}, "effect": {"span": "instability, power struggles, crises, waste and extravagance"}, "relation": "caused"}]}, "sample_id": 9509}
+{"prediction": {"has_causal": false, "id": 10691, "triples": []}, "sample_id": 10691}
+{"prediction": {"has_causal": true, "id": 13334, "triples": [{"cause": {"span": "joined the International Maritime Security Construct at this critical and important period"}, "effect": {"span": "to safeguard the most important international strategic maritime lanes, which are vital for commerce and energy"}, "relation": "caused"}]}, "sample_id": 13334}
+{"prediction": {"has_causal": true, "id": 10822, "triples": [{"cause": {"span": "this serious issue"}, "effect": {"span": "hinders the development of the vast potential of the African continent"}, "relation": "caused"}]}, "sample_id": 10822}
+{"prediction": {"has_causal": false, "id": 6251, "triples": []}, "sample_id": 6251}
+{"prediction": {"has_causal": true, "id": 17510, "triples": [{"cause": {"span": "International humanitarian law and human rights are violated on a daily basis"}, "effect": {"span": "sowing the seeds of future conflicts"}, "relation": "caused"}]}, "sample_id": 17510}
+{"prediction": {"has_causal": false, "id": 1903, "triples": []}, "sample_id": 1903}
+{"prediction": {"has_causal": false, "id": 1770, "triples": []}, "sample_id": 1770}
+{"prediction": {"has_causal": false, "id": 15913, "triples": []}, "sample_id": 15913}
+{"prediction": {"has_causal": false, "id": 1858, "triples": []}, "sample_id": 1858}
+{"prediction": {"has_causal": true, "id": 17196, "triples": [{"cause": {"span": "the promotion of constructive dialogue"}, "effect": {"span": "so that these two countries can achieve a definitive normalization of their bilateral relations for the well-being and prosperity of their peoples"}, "relation": "caused"}]}, "sample_id": 17196}
+{"prediction": {"has_causal": true, "id": 6308, "triples": [{"cause": {"span": "have also included all eligible Rohingyas in the national vaccination drive"}, "effect": {"span": "in order to curb the spread of COVID-19 in the camps"}, "relation": "caused"}]}, "sample_id": 6308}
+{"prediction": {"has_causal": true, "id": 9097, "triples": [{"cause": {"span": "took part in this incredible national mission"}, "effect": {"span": "helped us to turn the tide as we learn to live with COVID-19"}, "relation": "caused"}]}, "sample_id": 9097}
+{"prediction": {"has_causal": false, "id": 3874, "triples": []}, "sample_id": 3874}
+{"prediction": {"has_causal": false, "id": 11051, "triples": []}, "sample_id": 11051}
+{"prediction": {"has_causal": true, "id": 10503, "triples": [{"cause": {"span": "identify the majority of Argentine soldiers buried in the Darwin cemetery"}, "effect": {"span": "paying a historic debt to their families"}, "relation": "caused"}]}, "sample_id": 10503}
+{"prediction": {"has_causal": true, "id": 17375, "triples": [{"cause": {"span": "begin with small steps to build trust"}, "effect": {"span": "we can move towards resolving other regional and global issues together"}, "relation": "caused"}]}, "sample_id": 17375}
+{"prediction": {"has_causal": false, "id": 16636, "triples": []}, "sample_id": 16636}
+{"prediction": {"has_causal": true, "id": 16744, "triples": [{"cause": {"span": "creating safe spaces in schools"}, "effect": {"span": "expanded opportunities in education for girls"}, "relation": "caused"}]}, "sample_id": 16744}
+{"prediction": {"has_causal": true, "id": 769, "triples": [{"cause": {"span": "have any symptoms of a respiratory infection such as a high temperature"}, "effect": {"span": "try to stay at home or away from other people"}, "relation": "caused"}]}, "sample_id": 769}
+{"prediction": {"has_causal": false, "id": 8586, "triples": []}, "sample_id": 8586}
+{"prediction": {"has_causal": false, "id": 480, "triples": []}, "sample_id": 480}
+{"prediction": {"has_causal": false, "id": 1385, "triples": []}, "sample_id": 1385}
+{"prediction": {"has_causal": true, "id": 7106, "triples": [{"cause": {"span": "the Government took bold measures"}, "effect": {"span": "to maintain a positive growth rate of 3 per cent in 2020"}, "relation": "caused"}]}, "sample_id": 7106}
+{"prediction": {"has_causal": false, "id": 10826, "triples": []}, "sample_id": 10826}
+{"prediction": {"has_causal": true, "id": 96, "triples": [{"cause": {"span": "In response to the changing risk posed by the Omicron variant"}, "effect": {"span": "the booster will now be given no sooner than 3 months after the primary course"}, "relation": "caused"}]}, "sample_id": 96}
+{"prediction": {"has_causal": true, "id": 13855, "triples": [{"cause": {"span": "the illegal economic sanctions imposed on our country"}, "effect": {"span": "we were a collapsed economy with a collapsed currency"}, "relation": "caused"}]}, "sample_id": 13855}
+{"prediction": {"has_causal": false, "id": 1942, "triples": []}, "sample_id": 1942}
+{"prediction": {"has_causal": true, "id": 15651, "triples": [{"cause": {"span": "barriers to the crossing of State borders continue"}, "effect": {"span": "will not bring the maximum possible benefits"}, "relation": "caused"}]}, "sample_id": 15651}
+{"prediction": {"has_causal": true, "id": 11723, "triples": [{"cause": {"span": "reform"}, "effect": {"span": "make it more democratic and responsive to the needs of all nations, rich and poor, big and small, strong and weak"}, "relation": "caused"}]}, "sample_id": 11723}
+{"prediction": {"has_causal": true, "id": 11190, "triples": [{"cause": {"span": "continuing to support our young people"}, "effect": {"span": "in order to guarantee a future for the building of our Honduras"}, "relation": "caused"}]}, "sample_id": 11190}
+{"prediction": {"has_causal": false, "id": 1535, "triples": []}, "sample_id": 1535}
+{"prediction": {"has_causal": false, "id": 10116, "triples": []}, "sample_id": 10116}
+{"prediction": {"has_causal": true, "id": 5633, "triples": [{"cause": {"span": "our delay to the road map that we announced last month"}, "effect": {"span": "enabled us to get 7 million more jabs in the last 4 weeks alone"}, "relation": "caused"}]}, "sample_id": 5633}
+{"prediction": {"has_causal": false, "id": 8366, "triples": []}, "sample_id": 8366}
+{"prediction": {"has_causal": true, "id": 14156, "triples": [{"cause": {"span": "the apparent lack of genuine interest by Armenia’s leadership"}, "effect": {"span": "impedes the conflict resolution process"}, "relation": "caused"}]}, "sample_id": 14156}
+{"prediction": {"has_causal": true, "id": 13351, "triples": [{"cause": {"span": "promoted inclusive educational policies"}, "effect": {"span": "providing our young people with the tools they need to develop their potential in a multicultural and global world"}, "relation": "caused"}]}, "sample_id": 13351}
+{"prediction": {"has_causal": false, "id": 61, "triples": []}, "sample_id": 61}
+{"prediction": {"has_causal": true, "id": 2935, "triples": [{"cause": {"span": "these violations"}, "effect": {"span": "Iran will have enough enriched uranium in a few months for two nuclear bombs"}, "relation": "caused"}]}, "sample_id": 2935}
+{"prediction": {"has_causal": false, "id": 17010, "triples": []}, "sample_id": 17010}
+{"prediction": {"has_causal": false, "id": 6992, "triples": []}, "sample_id": 6992}
+{"prediction": {"has_causal": true, "id": 9012, "triples": [{"cause": {"span": "the announcement"}, "effect": {"span": "we’ve seen strong and sustained booking patterns"}, "relation": "caused"}]}, "sample_id": 9012}
+{"prediction": {"has_causal": false, "id": 9800, "triples": []}, "sample_id": 9800}
+{"prediction": {"has_causal": true, "id": 13482, "triples": [{"cause": {"span": "the situation in Libya"}, "effect": {"span": "a negative impact on the entire Sahel region"}, "relation": "caused"}]}, "sample_id": 13482}
+{"prediction": {"has_causal": true, "id": 11989, "triples": [{"cause": {"span": "comprehensive financial and tax equity"}, "effect": {"span": "would contribute to real social justice"}, "relation": "caused"}]}, "sample_id": 11989}
+{"prediction": {"has_causal": true, "id": 16386, "triples": [{"cause": {"span": "our willingness to put our words into action"}, "effect": {"span": "will usher the world out of ongoing misery"}, "relation": "caused"}]}, "sample_id": 16386}
+{"prediction": {"has_causal": false, "id": 12648, "triples": []}, "sample_id": 12648}
+{"prediction": {"has_causal": true, "id": 11961, "triples": [{"cause": {"span": "inadequate information, communication and technology facilities within our countries"}, "effect": {"span": "The disruption to educational systems, particularly in developing countries"}, "relation": "caused"}]}, "sample_id": 11961}
+{"prediction": {"has_causal": false, "id": 6409, "triples": []}, "sample_id": 6409}
+{"prediction": {"has_causal": false, "id": 9671, "triples": []}, "sample_id": 9671}
+{"prediction": {"has_causal": false, "id": 16705, "triples": []}, "sample_id": 16705}
+{"prediction": {"has_causal": false, "id": 973, "triples": []}, "sample_id": 973}
+{"prediction": {"has_causal": false, "id": 5125, "triples": []}, "sample_id": 5125}
+{"prediction": {"has_causal": true, "id": 5850, "triples": [{"cause": {"span": "the vaccine is the only way out of this crisis"}, "effect": {"span": "we managed to convince an increasing number of people to be vaccinated"}, "relation": "caused"}]}, "sample_id": 5850}
+{"prediction": {"has_causal": true, "id": 8300, "triples": [{"cause": {"span": "get the vaccine"}, "effect": {"span": "protect yourself and others against COVID-19"}, "relation": "caused"}]}, "sample_id": 8300}
+{"prediction": {"has_causal": false, "id": 6354, "triples": []}, "sample_id": 6354}
+{"prediction": {"has_causal": false, "id": 2382, "triples": []}, "sample_id": 2382}
+{"prediction": {"has_causal": true, "id": 6231, "triples": [{"cause": {"span": "This situation compromises the ethical values of democracy"}, "effect": {"span": "affects the competitiveness of the State and the economy"}, "relation": "caused"}]}, "sample_id": 6231}
+{"prediction": {"has_causal": false, "id": 15662, "triples": []}, "sample_id": 15662}
+{"prediction": {"has_causal": true, "id": 13286, "triples": [{"cause": {"span": "Monaco will be increasing its international funding aimed at preserving and regenerating biodiversity, while mitigating and promoting adaptation to climate change and improving the resilience of vulnerable populations"}, "effect": {"span": "preserving and regenerating biodiversity, while mitigating and promoting adaptation to climate change and improving the resilience of vulnerable populations"}, "relation": "caused"}]}, "sample_id": 13286}
+{"prediction": {"has_causal": true, "id": 2983, "triples": [{"cause": {"span": "supply chains were disrupted"}, "effect": {"span": "Food security was affected"}, "relation": "caused"}]}, "sample_id": 2983}
+{"prediction": {"has_causal": true, "id": 9923, "triples": [{"cause": {"span": "The great qualities and skills that we all recognize in him"}, "effect": {"span": "are undoubtedly a guarantee of the success of the work of this session"}, "relation": "caused"}]}, "sample_id": 9923}
+{"prediction": {"has_causal": true, "id": 17569, "triples": [{"cause": {"span": "contribute to the international community’s efforts"}, "effect": {"span": "to ensure a better life for the people affected by the military chaos and destruction"}, "relation": "caused"}]}, "sample_id": 17569}
+{"prediction": {"has_causal": false, "id": 8955, "triples": []}, "sample_id": 8955}
+{"prediction": {"has_causal": false, "id": 1976, "triples": []}, "sample_id": 1976}
+{"prediction": {"has_causal": false, "id": 1800, "triples": []}, "sample_id": 1800}
+{"prediction": {"has_causal": false, "id": 9466, "triples": []}, "sample_id": 9466}
+{"prediction": {"has_causal": true, "id": 5950, "triples": [{"cause": {"span": "Tocilizumab and Sarilumab"}, "effect": {"span": "reduce the risk of death for critically ill patients"}, "relation": "caused"}]}, "sample_id": 5950}
+{"prediction": {"has_causal": true, "id": 5892, "triples": [{"cause": {"span": "local restrictions have helped slow the spread of the virus"}, "effect": {"span": "The natural rate of R is around 3"}, "relation": "caused"}]}, "sample_id": 5892}
+{"prediction": {"has_causal": true, "id": 12227, "triples": [{"cause": {"span": "the upcoming NPT Review Conference will lead to a successful outcome"}, "effect": {"span": "that will facilitate global denuclearization"}, "relation": "caused"}]}, "sample_id": 12227}
+{"prediction": {"has_causal": false, "id": 834, "triples": []}, "sample_id": 834}
+{"prediction": {"has_causal": true, "id": 4319, "triples": [{"cause": {"span": "getting the vaccine"}, "effect": {"span": "to protect themselves and those around them"}, "relation": "caused"}]}, "sample_id": 4319}
+{"prediction": {"has_causal": false, "id": 1343, "triples": []}, "sample_id": 1343}
+{"prediction": {"has_causal": false, "id": 3823, "triples": []}, "sample_id": 3823}
+{"prediction": {"has_causal": false, "id": 14374, "triples": []}, "sample_id": 14374}
+{"prediction": {"has_causal": false, "id": 9371, "triples": []}, "sample_id": 9371}
+{"prediction": {"has_causal": false, "id": 15254, "triples": []}, "sample_id": 15254}
+{"prediction": {"has_causal": true, "id": 462, "triples": [{"cause": {"span": "getting the booster"}, "effect": {"span": "we look to spend more valuable time with our loved ones"}, "relation": "caused"}]}, "sample_id": 462}
+{"prediction": {"has_causal": true, "id": 8590, "triples": [{"cause": {"span": "The internationally recognised Community Infection Survey delivered through the Office for National Statistics will continue to provide a detailed national surveillance capability in the coming year"}, "effect": {"span": "so the government can respond appropriately to emerging developments such as a new variant of concern or changing levels of population infection"}, "relation": "caused"}]}, "sample_id": 8590}
+{"prediction": {"has_causal": false, "id": 15921, "triples": []}, "sample_id": 15921}
+{"prediction": {"has_causal": false, "id": 9593, "triples": []}, "sample_id": 9593}
+{"prediction": {"has_causal": false, "id": 2085, "triples": []}, "sample_id": 2085}
+{"prediction": {"has_causal": true, "id": 17440, "triples": [{"cause": {"span": "that authority will regulate the energy space"}, "effect": {"span": "to facilitate more investment into, and development of, the different energy options, especially the clean energy sources that we advocate"}, "relation": "caused"}]}, "sample_id": 17440}
+{"prediction": {"has_causal": true, "id": 16722, "triples": [{"cause": {"span": "by promoting dialogue between all political and military forces under the auspices of the United Nations"}, "effect": {"span": "the peaceful resolution of the ongoing conflicts and crises around the world"}, "relation": "caused"}]}, "sample_id": 16722}
+{"prediction": {"has_causal": true, "id": 16300, "triples": [{"cause": {"span": "levelling the playing field"}, "effect": {"span": "every Fijian enjoys equal opportunity in our new democracy"}, "relation": "caused"}]}, "sample_id": 16300}
+{"prediction": {"has_causal": false, "id": 16557, "triples": []}, "sample_id": 16557}
+{"prediction": {"has_causal": false, "id": 3378, "triples": []}, "sample_id": 3378}
+{"prediction": {"has_causal": false, "id": 15800, "triples": []}, "sample_id": 15800}
+{"prediction": {"has_causal": true, "id": 17148, "triples": [{"cause": {"span": "fail to prepare young people"}, "effect": {"span": "prepare a generation to fail"}, "relation": "caused"}]}, "sample_id": 17148}
+{"prediction": {"has_causal": true, "id": 12763, "triples": [{"cause": {"span": "continue supporting the United Nations Relief and Works Agency for Palestine Refugees in the Near East"}, "effect": {"span": "enable it to provide services to Palestinian refugees"}, "relation": "caused"}]}, "sample_id": 12763}
+{"prediction": {"has_causal": true, "id": 487, "triples": [{"cause": {"span": "protection from the first dose will eventually start to decline"}, "effect": {"span": "the benefits from the second vaccine dose will become more important over time"}, "relation": "caused"}]}, "sample_id": 487}
+{"prediction": {"has_causal": false, "id": 16708, "triples": []}, "sample_id": 16708}
+{"prediction": {"has_causal": false, "id": 3628, "triples": []}, "sample_id": 3628}
+{"prediction": {"has_causal": false, "id": 14404, "triples": []}, "sample_id": 14404}
+{"prediction": {"has_causal": false, "id": 6238, "triples": []}, "sample_id": 6238}
+{"prediction": {"has_causal": false, "id": 16179, "triples": []}, "sample_id": 16179}
+{"prediction": {"has_causal": false, "id": 573, "triples": []}, "sample_id": 573}
+{"prediction": {"has_causal": true, "id": 14086, "triples": [{"cause": {"span": "we need greater efforts and more research"}, "effect": {"span": "in order to address non-communicable diseases and neurological disorders, including spinal-cord injuries, which affect as many as a billion people worldwide"}, "relation": "caused"}]}, "sample_id": 14086}
+{"prediction": {"has_causal": true, "id": 14219, "triples": [{"cause": {"span": "Precisely with a view to achieving, guaranteeing and preserving peace and order in our republic"}, "effect": {"span": "President Nicolas Maduro invited all segments of society to participate in a sovereign dialogue"}, "relation": "caused"}]}, "sample_id": 14219}
+{"prediction": {"has_causal": true, "id": 9490, "triples": [{"cause": {"span": "The use of the Nile waters"}, "effect": {"span": "offers a unique opportunity for transboundary cooperation among the sisterly countries of the region"}, "relation": "caused"}]}, "sample_id": 9490}
+{"prediction": {"has_causal": false, "id": 8518, "triples": []}, "sample_id": 8518}
+{"prediction": {"has_causal": true, "id": 5962, "triples": [{"cause": {"span": "buy the extra weeks we need to immunise the most vulnerable and get this virus under control"}, "effect": {"span": "together we can defeat this most wretched disease, reclaim our lives once and for all"}, "relation": "caused"}]}, "sample_id": 5962}
+{"prediction": {"has_causal": false, "id": 4285, "triples": []}, "sample_id": 4285}
+{"prediction": {"has_causal": true, "id": 13423, "triples": [{"cause": {"span": "produce electricity for export to the neighbouring French islands of Martinique and Guadeloupe"}, "effect": {"span": "reducing their carbon footprint as well"}, "relation": "caused"}]}, "sample_id": 13423}
+{"prediction": {"has_causal": true, "id": 3270, "triples": [{"cause": {"span": "the wound in the center of Europe is bleeding"}, "effect": {"span": "the pain will be felt all over the world"}, "relation": "caused"}]}, "sample_id": 3270}
+{"prediction": {"has_causal": true, "id": 16317, "triples": [{"cause": {"span": "As a result"}, "effect": {"span": "the Government has been able to increase its development budget allocation to 40 per cent"}, "relation": "caused"}]}, "sample_id": 16317}
+{"prediction": {"has_causal": false, "id": 8533, "triples": []}, "sample_id": 8533}
+{"prediction": {"has_causal": false, "id": 3748, "triples": []}, "sample_id": 3748}
+{"prediction": {"has_causal": true, "id": 8106, "triples": [{"cause": {"span": "working closely with international counterparts"}, "effect": {"span": "ensure a longer-term solution can be reached for these individuals"}, "relation": "caused"}]}, "sample_id": 8106}
+{"prediction": {"has_causal": false, "id": 17159, "triples": []}, "sample_id": 17159}
+{"prediction": {"has_causal": false, "id": 8401, "triples": []}, "sample_id": 8401}
+{"prediction": {"has_causal": false, "id": 3464, "triples": []}, "sample_id": 3464}
+{"prediction": {"has_causal": false, "id": 8966, "triples": []}, "sample_id": 8966}
+{"prediction": {"has_causal": false, "id": 14430, "triples": []}, "sample_id": 14430}
+{"prediction": {"has_causal": false, "id": 5717, "triples": []}, "sample_id": 5717}
+{"prediction": {"has_causal": false, "id": 162, "triples": []}, "sample_id": 162}
+{"prediction": {"has_causal": false, "id": 3888, "triples": []}, "sample_id": 3888}
+{"prediction": {"has_causal": false, "id": 13621, "triples": []}, "sample_id": 13621}
+{"prediction": {"has_causal": false, "id": 7175, "triples": []}, "sample_id": 7175}
+{"prediction": {"has_causal": false, "id": 9003, "triples": []}, "sample_id": 9003}
+{"prediction": {"has_causal": false, "id": 1433, "triples": []}, "sample_id": 1433}
+{"prediction": {"has_causal": false, "id": 2414, "triples": []}, "sample_id": 2414}
+{"prediction": {"has_causal": true, "id": 967, "triples": [{"cause": {"span": "the Delta variant continues to circulate at high levels across all age ranges"}, "effect": {"span": "is still causing substantial infection and hospitalisation in older people"}, "relation": "caused"}]}, "sample_id": 967}
+{"prediction": {"has_causal": false, "id": 16031, "triples": []}, "sample_id": 16031}
+{"prediction": {"has_causal": false, "id": 16874, "triples": []}, "sample_id": 16874}
+{"prediction": {"has_causal": true, "id": 10831, "triples": [{"cause": {"span": "need decades of peace, hard and diligent work and great successes"}, "effect": {"span": "in order to bring ourselves closer to the developed European countries"}, "relation": "caused"}]}, "sample_id": 10831}
+{"prediction": {"has_causal": true, "id": 3540, "triples": [{"cause": {"span": "through this global partnership"}, "effect": {"span": "our countries will be able to stand up and pursue the sustainable development Agenda"}, "relation": "caused"}]}, "sample_id": 3540}
+{"prediction": {"has_causal": false, "id": 4576, "triples": []}, "sample_id": 4576}
+{"prediction": {"has_causal": false, "id": 7048, "triples": []}, "sample_id": 7048}
+{"prediction": {"has_causal": false, "id": 14427, "triples": []}, "sample_id": 14427}
+{"prediction": {"has_causal": false, "id": 13021, "triples": []}, "sample_id": 13021}
+{"prediction": {"has_causal": true, "id": 1718, "triples": [{"cause": {"span": "due to unbalanced growth and development"}, "effect": {"span": "the world is facing a growing existential threat of natural catastrophes connected with climate change on an unprecedented scale"}, "relation": "caused"}]}, "sample_id": 1718}
+{"prediction": {"has_causal": true, "id": 16829, "triples": [{"cause": {"span": "better endow the Green Climate Fund"}, "effect": {"span": "so that it can better assist less polluting States that are more exposed to climate change in finding the appropriate means to deal with it"}, "relation": "caused"}]}, "sample_id": 16829}
+{"prediction": {"has_causal": false, "id": 9288, "triples": []}, "sample_id": 9288}
+{"prediction": {"has_causal": false, "id": 4181, "triples": []}, "sample_id": 4181}
+{"prediction": {"has_causal": true, "id": 17515, "triples": [{"cause": {"span": "Turkey will continue to fulfil its responsibilities"}, "effect": {"span": "so that the General Assembly can carry out its activities in the most efficient way"}, "relation": "caused"}]}, "sample_id": 17515}
+{"prediction": {"has_causal": false, "id": 7281, "triples": []}, "sample_id": 7281}
+{"prediction": {"has_causal": false, "id": 12841, "triples": []}, "sample_id": 12841}
+{"prediction": {"has_causal": false, "id": 2461, "triples": []}, "sample_id": 2461}
+{"prediction": {"has_causal": true, "id": 16694, "triples": [{"cause": {"span": "implementing national programmes in the areas of education and health care, youth policies and infrastructure projects, as well as by attracting investment and creating the most favourable conditions to that end"}, "effect": {"span": "raising the standard of living of the population"}, "relation": "caused"}]}, "sample_id": 16694}
+{"prediction": {"has_causal": true, "id": 2547, "triples": [{"cause": {"span": "act together"}, "effect": {"span": "ensure that the people have access to humanitarian assistance"}, "relation": "caused"}]}, "sample_id": 2547}
+{"prediction": {"has_causal": true, "id": 17565, "triples": [{"cause": {"span": "climate change"}, "effect": {"span": "poses a very serious existential threat to our national security and well-being"}, "relation": "caused"}]}, "sample_id": 17565}
+{"prediction": {"has_causal": false, "id": 6884, "triples": []}, "sample_id": 6884}
+{"prediction": {"has_causal": true, "id": 3229, "triples": [{"cause": {"span": "a debt crisis is looming"}, "effect": {"span": "will compound their high debt to GDP and debt service ratios"}, "relation": "caused"}]}, "sample_id": 3229}
+{"prediction": {"has_causal": true, "id": 15136, "triples": [{"cause": {"span": "unilateral action by the Cuban regime"}, "effect": {"span": "left Brazil"}, "relation": "caused"}]}, "sample_id": 15136}
+{"prediction": {"has_causal": true, "id": 4276, "triples": [{"cause": {"span": "committing to prioritising the sustainable decarbonisation of transport and protecting the rights of transport workers"}, "effect": {"span": "to facilitate international travel"}, "relation": "caused"}]}, "sample_id": 4276}
+{"prediction": {"has_causal": true, "id": 17057, "triples": [{"cause": {"span": "collaborate with farmers to build systems in New Zealand"}, "effect": {"span": "every farmer will be able to use to measure, manage and reduce their own farm’s emissions"}, "relation": "caused"}]}, "sample_id": 17057}
+{"prediction": {"has_causal": false, "id": 12811, "triples": []}, "sample_id": 12811}
+{"prediction": {"has_causal": false, "id": 13393, "triples": []}, "sample_id": 13393}
+{"prediction": {"has_causal": false, "id": 17564, "triples": []}, "sample_id": 17564}
+{"prediction": {"has_causal": true, "id": 10790, "triples": [{"cause": {"span": "blind support of certain countries"}, "effect": {"span": "consequences of Israel’s actions"}, "relation": "caused"}]}, "sample_id": 10790}
+{"prediction": {"has_causal": false, "id": 7739, "triples": []}, "sample_id": 7739}
+{"prediction": {"has_causal": false, "id": 2839, "triples": []}, "sample_id": 2839}
+{"prediction": {"has_causal": false, "id": 15093, "triples": []}, "sample_id": 15093}
+{"prediction": {"has_causal": false, "id": 8973, "triples": []}, "sample_id": 8973}
+{"prediction": {"has_causal": true, "id": 6936, "triples": [{"cause": {"span": "development priorities and needs must be mainstreamed into all humanitarian aid activities"}, "effect": {"span": "to spur early recovery by focusing on socioeconomic activities and implementing the Sustainable Development Goals"}, "relation": "caused"}]}, "sample_id": 6936}
+{"prediction": {"has_causal": false, "id": 3818, "triples": []}, "sample_id": 3818}
+{"prediction": {"has_causal": false, "id": 4498, "triples": []}, "sample_id": 4498}
+{"prediction": {"has_causal": false, "id": 5682, "triples": []}, "sample_id": 5682}
+{"prediction": {"has_causal": false, "id": 8842, "triples": []}, "sample_id": 8842}
+{"prediction": {"has_causal": false, "id": 11094, "triples": []}, "sample_id": 11094}
+{"prediction": {"has_causal": false, "id": 12097, "triples": []}, "sample_id": 12097}
+{"prediction": {"has_causal": false, "id": 54, "triples": []}, "sample_id": 54}
+{"prediction": {"has_causal": true, "id": 10730, "triples": [{"cause": {"span": "urge the international community to mobilize the necessary financial resources"}, "effect": {"span": "to support those efforts"}, "relation": "caused"}]}, "sample_id": 10730}
+{"prediction": {"has_causal": true, "id": 16447, "triples": [{"cause": {"span": "an age-old atavistic claim that has hindered Belize’s development"}, "effect": {"span": "made more difficult the relations of friendship and cooperation that both our peoples aspire to and deserve"}, "relation": "caused"}]}, "sample_id": 16447}
+{"prediction": {"has_causal": false, "id": 303, "triples": []}, "sample_id": 303}
+{"prediction": {"has_causal": true, "id": 13224, "triples": [{"cause": {"span": "climate change and pollution"}, "effect": {"span": "threaten our natural resources, our delicate ecosystems and our Adriatic Sea"}, "relation": "caused"}]}, "sample_id": 13224}
+{"prediction": {"has_causal": true, "id": 11327, "triples": [{"cause": {"span": "establishing a plastic-recycling plant"}, "effect": {"span": "enable our country to become plastic-neutral"}, "relation": "caused"}]}, "sample_id": 11327}
+{"prediction": {"has_causal": true, "id": 11636, "triples": [{"cause": {"span": "this has led to increased hospital admissions and, sadly, more deaths"}, "effect": {"span": "increased hospital admissions and, sadly, more deaths"}, "relation": "caused"}]}, "sample_id": 11636}
+{"prediction": {"has_causal": true, "id": 12820, "triples": [{"cause": {"span": "mass vaccination"}, "effect": {"span": "contain the pandemic and ensure the recovery of the global economy"}, "relation": "caused"}]}, "sample_id": 12820}
+{"prediction": {"has_causal": false, "id": 1190, "triples": []}, "sample_id": 1190}
+{"prediction": {"has_causal": true, "id": 5846, "triples": [{"cause": {"span": "In order to overcome the shocks of the COVID-19 pandemic"}, "effect": {"span": "we need to seriously address the issue of developing countries’ debt"}, "relation": "caused"}]}, "sample_id": 5846}
+{"prediction": {"has_causal": false, "id": 3854, "triples": []}, "sample_id": 3854}
+{"prediction": {"has_causal": false, "id": 4605, "triples": []}, "sample_id": 4605}
+{"prediction": {"has_causal": true, "id": 11775, "triples": [{"cause": {"span": "Japan will host the Tokyo Nutrition for Growth Summit 2021"}, "effect": {"span": "to improve nutrition for people around the world"}, "relation": "caused"}]}, "sample_id": 11775}
+{"prediction": {"has_causal": false, "id": 8744, "triples": []}, "sample_id": 8744}
+{"prediction": {"has_causal": false, "id": 14152, "triples": []}, "sample_id": 14152}
+{"prediction": {"has_causal": false, "id": 12951, "triples": []}, "sample_id": 12951}
+{"prediction": {"has_causal": true, "id": 8889, "triples": [{"cause": {"span": "take up the offer"}, "effect": {"span": "increase protection against potential future waves of COVID-19"}, "relation": "caused"}]}, "sample_id": 8889}
+{"prediction": {"has_causal": false, "id": 10857, "triples": []}, "sample_id": 10857}
+{"prediction": {"has_causal": false, "id": 13013, "triples": []}, "sample_id": 13013}
+{"prediction": {"has_causal": false, "id": 15820, "triples": []}, "sample_id": 15820}
+{"prediction": {"has_causal": false, "id": 3971, "triples": []}, "sample_id": 3971}
+{"prediction": {"has_causal": false, "id": 8682, "triples": []}, "sample_id": 8682}
+{"prediction": {"has_causal": true, "id": 2609, "triples": [{"cause": {"span": "In order to confront the urgency of the pandemic"}, "effect": {"span": "Governments across the globe reallocated funds to meet desperate needs"}, "relation": "caused"}]}, "sample_id": 2609}
+{"prediction": {"has_causal": true, "id": 4871, "triples": [{"cause": {"span": "thanks to an incredible national endeavour"}, "effect": {"span": "we’re now better protected than ever before"}, "relation": "caused"}]}, "sample_id": 4871}
+{"prediction": {"has_causal": false, "id": 15252, "triples": []}, "sample_id": 15252}
+{"prediction": {"has_causal": true, "id": 3348, "triples": [{"cause": {"span": "transformation of Botswana’s economy from one that largely relies on the extractive industry, which is vulnerable to globe shocks, to a knowledge-based economy"}, "effect": {"span": "realize this ambition"}, "relation": "caused"}]}, "sample_id": 3348}
+{"prediction": {"has_causal": true, "id": 17614, "triples": [{"cause": {"span": "heavy-handed policies of containment and encirclement to forestall healthy strategic competition and mutual progress based on symmetric, equitable, and rules-based international system"}, "effect": {"span": "a climate of confrontation and instability with all the risks that this may entail in the period ahead"}, "relation": "caused"}]}, "sample_id": 17614}
+{"prediction": {"has_causal": true, "id": 15705, "triples": [{"cause": {"span": "without the support of this community, without the true support of the States Members of the United Nations"}, "effect": {"span": "those who left their homes with the desire to return will not easily find their way back"}, "relation": "caused"}]}, "sample_id": 15705}
+{"prediction": {"has_causal": false, "id": 14500, "triples": []}, "sample_id": 14500}
+{"prediction": {"has_causal": false, "id": 14827, "triples": []}, "sample_id": 14827}
+{"prediction": {"has_causal": true, "id": 6336, "triples": [{"cause": {"span": "works closely with universities and the private sector"}, "effect": {"span": "to find innovative technological approaches for development and poverty-reduction projects"}, "relation": "caused"}]}, "sample_id": 6336}
+{"prediction": {"has_causal": false, "id": 9685, "triples": []}, "sample_id": 9685}
+{"prediction": {"has_causal": true, "id": 1139, "triples": [{"cause": {"span": "Thanks to the expertise of scientists at UKHSA and partner organisations"}, "effect": {"span": "we’re able to respond quickly to new variations of the virus"}, "relation": "caused"}]}, "sample_id": 1139}
+{"prediction": {"has_causal": false, "id": 7949, "triples": []}, "sample_id": 7949}
+{"prediction": {"has_causal": false, "id": 16545, "triples": []}, "sample_id": 16545}
+{"prediction": {"has_causal": true, "id": 17420, "triples": [{"cause": {"span": "launched Vision 2030"}, "effect": {"span": "aimed at improving the lives of our people, sustainably managing the environment and ensuring that no one is left behind"}, "relation": "caused"}]}, "sample_id": 17420}
+{"prediction": {"has_causal": true, "id": 16330, "triples": [{"cause": {"span": "urge the international community to collaborate"}, "effect": {"span": "in order to make renewable energy technologies accessible and affordable"}, "relation": "caused"}]}, "sample_id": 16330}
+{"prediction": {"has_causal": false, "id": 2571, "triples": []}, "sample_id": 2571}
+{"prediction": {"has_causal": false, "id": 7662, "triples": []}, "sample_id": 7662}
+{"prediction": {"has_causal": false, "id": 1528, "triples": []}, "sample_id": 1528}
+{"prediction": {"has_causal": true, "id": 12171, "triples": [{"cause": {"span": "get your booster when you get the call"}, "effect": {"span": "keep yourself, your loved ones, and everyone around you safe"}, "relation": "caused"}]}, "sample_id": 12171}
+{"prediction": {"has_causal": false, "id": 14352, "triples": []}, "sample_id": 14352}
+{"prediction": {"has_causal": true, "id": 12776, "triples": [{"cause": {"span": "enabling them to benefit from the Algerian experience in the area of national reconciliation"}, "effect": {"span": "benefit from the Algerian experience in the area of national reconciliation"}, "relation": "caused"}]}, "sample_id": 12776}
+{"prediction": {"has_causal": true, "id": 8391, "triples": [{"cause": {"span": "vaccination"}, "effect": {"span": "weakening the link between infection and serious illness"}, "relation": "caused"}]}, "sample_id": 8391}
+{"prediction": {"has_causal": false, "id": 12931, "triples": []}, "sample_id": 12931}
+{"prediction": {"has_causal": false, "id": 2720, "triples": []}, "sample_id": 2720}
+{"prediction": {"has_causal": false, "id": 13399, "triples": []}, "sample_id": 13399}
+{"prediction": {"has_causal": false, "id": 3724, "triples": []}, "sample_id": 3724}
+{"prediction": {"has_causal": false, "id": 10896, "triples": []}, "sample_id": 10896}
+{"prediction": {"has_causal": false, "id": 4100, "triples": []}, "sample_id": 4100}
+{"prediction": {"has_causal": false, "id": 6659, "triples": []}, "sample_id": 6659}
+{"prediction": {"has_causal": false, "id": 15948, "triples": []}, "sample_id": 15948}
+{"prediction": {"has_causal": false, "id": 12602, "triples": []}, "sample_id": 12602}
+{"prediction": {"has_causal": true, "id": 9749, "triples": [{"cause": {"span": "The conservation and sustainable use of our ocean"}, "effect": {"span": "our country’s sustainable economic development, prosperity, and stability"}, "relation": "caused"}]}, "sample_id": 9749}
+{"prediction": {"has_causal": false, "id": 5747, "triples": []}, "sample_id": 5747}
+{"prediction": {"has_causal": false, "id": 1862, "triples": []}, "sample_id": 1862}
+{"prediction": {"has_causal": false, "id": 16452, "triples": []}, "sample_id": 16452}
+{"prediction": {"has_causal": false, "id": 4254, "triples": []}, "sample_id": 4254}
+{"prediction": {"has_causal": false, "id": 13311, "triples": []}, "sample_id": 13311}
+{"prediction": {"has_causal": false, "id": 6760, "triples": []}, "sample_id": 6760}
+{"prediction": {"has_causal": false, "id": 14269, "triples": []}, "sample_id": 14269}
+{"prediction": {"has_causal": false, "id": 12398, "triples": []}, "sample_id": 12398}
+{"prediction": {"has_causal": false, "id": 4045, "triples": []}, "sample_id": 4045}
+{"prediction": {"has_causal": false, "id": 15903, "triples": []}, "sample_id": 15903}
+{"prediction": {"has_causal": true, "id": 5946, "triples": [{"cause": {"span": "bring the NHS and the social care system in England closer together"}, "effect": {"span": "people can be better cared for at the time and place that is right for them"}, "relation": "caused"}]}, "sample_id": 5946}
+{"prediction": {"has_causal": true, "id": 7723, "triples": [{"cause": {"span": "Vaccinated people"}, "effect": {"span": "are far less likely to get COVID-19 with symptoms and even more unlikely to get serious COVID-19, to be admitted to hospital, or to die from the virus"}, "relation": "caused"}]}, "sample_id": 7723}
+{"prediction": {"has_causal": true, "id": 13083, "triples": [{"cause": {"span": "No effort must be spared"}, "effect": {"span": "to ensure their full reintegration into society"}, "relation": "caused"}]}, "sample_id": 13083}
+{"prediction": {"has_causal": false, "id": 11920, "triples": []}, "sample_id": 11920}
+{"prediction": {"has_causal": false, "id": 15265, "triples": []}, "sample_id": 15265}
+{"prediction": {"has_causal": true, "id": 3081, "triples": [{"cause": {"span": "the negotiations between Russia, Ukraine, France and Germany"}, "effect": {"span": "to bring about the longest ceasefire since the beginning of the conflict"}, "relation": "caused"}]}, "sample_id": 3081}
+{"prediction": {"has_causal": false, "id": 5942, "triples": []}, "sample_id": 5942}
+{"prediction": {"has_causal": true, "id": 12680, "triples": [{"cause": {"span": "the COVID-19 pandemic emergency"}, "effect": {"span": "compromised our capacity to respond to the harmful impact of climate change"}, "relation": "caused"}]}, "sample_id": 12680}
+{"prediction": {"has_causal": true, "id": 17381, "triples": [{"cause": {"span": "the pandemic"}, "effect": {"span": "placed enormous strain on developing economies"}, "relation": "caused"}]}, "sample_id": 17381}
+{"prediction": {"has_causal": false, "id": 8516, "triples": []}, "sample_id": 8516}
+{"prediction": {"has_causal": true, "id": 15491, "triples": [{"cause": {"span": "Through its adoption of the Colombo Declaration on Sustainable Nitrogen Management"}, "effect": {"span": "Sri Lanka has also contributed to global efforts to reduce environmental pollution"}, "relation": "caused"}]}, "sample_id": 15491}
+{"prediction": {"has_causal": false, "id": 14880, "triples": []}, "sample_id": 14880}
+{"prediction": {"has_causal": false, "id": 12363, "triples": []}, "sample_id": 12363}
+{"prediction": {"has_causal": false, "id": 7871, "triples": []}, "sample_id": 7871}
+{"prediction": {"has_causal": false, "id": 14573, "triples": []}, "sample_id": 14573}
+{"prediction": {"has_causal": false, "id": 7635, "triples": []}, "sample_id": 7635}
+{"prediction": {"has_causal": false, "id": 4798, "triples": []}, "sample_id": 4798}
+{"prediction": {"has_causal": false, "id": 9697, "triples": []}, "sample_id": 9697}
+{"prediction": {"has_causal": true, "id": 6721, "triples": [{"cause": {"span": "difficult concessions will have to be made"}, "effect": {"span": "to satisfy the desires of both sides"}, "relation": "caused"}]}, "sample_id": 6721}
+{"prediction": {"has_causal": false, "id": 14350, "triples": []}, "sample_id": 14350}
+{"prediction": {"has_causal": false, "id": 6497, "triples": []}, "sample_id": 6497}
+{"prediction": {"has_causal": false, "id": 5323, "triples": []}, "sample_id": 5323}
+{"prediction": {"has_causal": false, "id": 2989, "triples": []}, "sample_id": 2989}
+{"prediction": {"has_causal": false, "id": 8703, "triples": []}, "sample_id": 8703}
+{"prediction": {"has_causal": false, "id": 2392, "triples": []}, "sample_id": 2392}
+{"prediction": {"has_causal": false, "id": 4032, "triples": []}, "sample_id": 4032}
+{"prediction": {"has_causal": false, "id": 781, "triples": []}, "sample_id": 781}
+{"prediction": {"has_causal": false, "id": 518, "triples": []}, "sample_id": 518}
+{"prediction": {"has_causal": false, "id": 3704, "triples": []}, "sample_id": 3704}
+{"prediction": {"has_causal": true, "id": 16612, "triples": [{"cause": {"span": "Our children’s access to quality education"}, "effect": {"span": "a sustainable fight against poverty and climate change"}, "relation": "caused"}]}, "sample_id": 16612}
+{"prediction": {"has_causal": false, "id": 6853, "triples": []}, "sample_id": 6853}
+{"prediction": {"has_causal": false, "id": 15530, "triples": []}, "sample_id": 15530}
+{"prediction": {"has_causal": false, "id": 9626, "triples": []}, "sample_id": 9626}
+{"prediction": {"has_causal": false, "id": 16851, "triples": []}, "sample_id": 16851}
+{"prediction": {"has_causal": true, "id": 11216, "triples": [{"cause": {"span": "provide access to a health benefits package that prioritizes primary health-care interventions"}, "effect": {"span": "reduces the cost of medicine and increases the number of people with insurance coverage"}, "relation": "caused"}]}, "sample_id": 11216}
+{"prediction": {"has_causal": false, "id": 12866, "triples": []}, "sample_id": 12866}
+{"prediction": {"has_causal": false, "id": 17156, "triples": []}, "sample_id": 17156}
+{"prediction": {"has_causal": true, "id": 15872, "triples": [{"cause": {"span": "corruption had become a cancer"}, "effect": {"span": "preventing us from taking advantage of all the potential that we have to achieve greater levels of progress and development"}, "relation": "caused"}]}, "sample_id": 15872}
+{"prediction": {"has_causal": false, "id": 5900, "triples": []}, "sample_id": 5900}
+{"prediction": {"has_causal": false, "id": 4342, "triples": []}, "sample_id": 4342}
+{"prediction": {"has_causal": false, "id": 5581, "triples": []}, "sample_id": 5581}
+{"prediction": {"has_causal": false, "id": 14605, "triples": []}, "sample_id": 14605}
+{"prediction": {"has_causal": true, "id": 16824, "triples": [{"cause": {"span": "the adoption of the principle of a common ECOWAS currency"}, "effect": {"span": "accelerating integration"}, "relation": "caused"}]}, "sample_id": 16824}
+{"prediction": {"has_causal": false, "id": 4801, "triples": []}, "sample_id": 4801}
+{"prediction": {"has_causal": false, "id": 6626, "triples": []}, "sample_id": 6626}
+{"prediction": {"has_causal": true, "id": 3420, "triples": [{"cause": {"span": "take care of your own citizens"}, "effect": {"span": "find a true basis for cooperation"}, "relation": "caused"}]}, "sample_id": 3420}
+{"prediction": {"has_causal": false, "id": 4906, "triples": []}, "sample_id": 4906}
+{"prediction": {"has_causal": true, "id": 7644, "triples": [{"cause": {"span": "Lagevrio"}, "effect": {"span": "reducing the risk of hospitalisation or death for at-risk non-hospitalised adults with mild to moderate COVID-19 by 50%"}, "relation": "caused"}]}, "sample_id": 7644}
+{"prediction": {"has_causal": true, "id": 10785, "triples": [{"cause": {"span": "imposing a blockade and unilateral coercive economic measures"}, "effect": {"span": "economic terrorism"}, "relation": "caused"}]}, "sample_id": 10785}
+{"prediction": {"has_causal": true, "id": 11771, "triples": [{"cause": {"span": "establish that new Ministry"}, "effect": {"span": "build our ability to implement climate-positive actions in our country"}, "relation": "caused"}]}, "sample_id": 11771}
+{"prediction": {"has_causal": true, "id": 3513, "triples": [{"cause": {"span": "assistance extended to other member states who are facing difficulties"}, "effect": {"span": "enables us to control the outbreak of the COVID-19 at a certain level"}, "relation": "caused"}]}, "sample_id": 3513}
+{"prediction": {"has_causal": false, "id": 15969, "triples": []}, "sample_id": 15969}
+{"prediction": {"has_causal": false, "id": 17413, "triples": []}, "sample_id": 17413}
+{"prediction": {"has_causal": false, "id": 8674, "triples": []}, "sample_id": 8674}
+{"prediction": {"has_causal": false, "id": 7518, "triples": []}, "sample_id": 7518}
+{"prediction": {"has_causal": false, "id": 6603, "triples": []}, "sample_id": 6603}
+{"prediction": {"has_causal": true, "id": 16490, "triples": [{"cause": {"span": "continued greed and hunger for power and dominance"}, "effect": {"span": "the turbulence that we continue to face in our world today has emerged"}, "relation": "caused"}]}, "sample_id": 16490}
+{"prediction": {"has_causal": false, "id": 1293, "triples": []}, "sample_id": 1293}
+{"prediction": {"has_causal": false, "id": 3865, "triples": []}, "sample_id": 3865}
+{"prediction": {"has_causal": false, "id": 14914, "triples": []}, "sample_id": 14914}
+{"prediction": {"has_causal": true, "id": 13794, "triples": [{"cause": {"span": "preventive diplomacy under the auspices of the United Nations"}, "effect": {"span": "can produce real results"}, "relation": "caused"}]}, "sample_id": 13794}
+{"prediction": {"has_causal": true, "id": 5934, "triples": [{"cause": {"span": "distributed 300 million lateral flow devices"}, "effect": {"span": "enabling millions of people to get tested and keep their loved ones, friends and colleagues safe in the run-up to Christmas"}, "relation": "caused"}]}, "sample_id": 5934}
+{"prediction": {"has_causal": true, "id": 15332, "triples": [{"cause": {"span": "The rapid progress in digital technologies and e-commerce"}, "effect": {"span": "can help in economic recovery"}, "relation": "caused"}]}, "sample_id": 15332}
+{"prediction": {"has_causal": false, "id": 4604, "triples": []}, "sample_id": 4604}
+{"prediction": {"has_causal": true, "id": 5915, "triples": [{"cause": {"span": "get two vaccine doses"}, "effect": {"span": "to continue to receive the best possible protection against COVID"}, "relation": "caused"}]}, "sample_id": 5915}
+{"prediction": {"has_causal": false, "id": 12070, "triples": []}, "sample_id": 12070}
+{"prediction": {"has_causal": true, "id": 3496, "triples": [{"cause": {"span": "launched a global response by the United Nations system"}, "effect": {"span": "to address the pandemic and guide our States to safeguard themselves against the adverse consequences of the pandemic"}, "relation": "caused"}]}, "sample_id": 3496}
+{"prediction": {"has_causal": true, "id": 11751, "triples": [{"cause": {"span": "We need to know"}, "effect": {"span": "we can prevent this death and this calamity being visited upon the world again"}, "relation": "caused"}]}, "sample_id": 11751}
+{"prediction": {"has_causal": false, "id": 525, "triples": []}, "sample_id": 525}
+{"prediction": {"has_causal": false, "id": 6652, "triples": []}, "sample_id": 6652}
+{"prediction": {"has_causal": false, "id": 4389, "triples": []}, "sample_id": 4389}
+{"prediction": {"has_causal": true, "id": 12188, "triples": [{"cause": {"span": "the coronavirus disease (COVID-19) pandemic"}, "effect": {"span": "continues to claim thousands of lives daily"}, "relation": "caused"}]}, "sample_id": 12188}
+{"prediction": {"has_causal": false, "id": 15460, "triples": []}, "sample_id": 15460}
+{"prediction": {"has_causal": false, "id": 7141, "triples": []}, "sample_id": 7141}
+{"prediction": {"has_causal": false, "id": 1007, "triples": []}, "sample_id": 1007}
+{"prediction": {"has_causal": false, "id": 8548, "triples": []}, "sample_id": 8548}
+{"prediction": {"has_causal": true, "id": 5793, "triples": [{"cause": {"span": "massive and uncontrollable floods"}, "effect": {"span": "destroying riverbanks and homes and killing hundreds in their wake"}, "relation": "caused"}]}, "sample_id": 5793}
+{"prediction": {"has_causal": true, "id": 10872, "triples": [{"cause": {"span": "take advantage of the latest technological developments"}, "effect": {"span": "to benefit everyone"}, "relation": "caused"}]}, "sample_id": 10872}
+{"prediction": {"has_causal": false, "id": 9148, "triples": []}, "sample_id": 9148}
+{"prediction": {"has_causal": false, "id": 5143, "triples": []}, "sample_id": 5143}
+{"prediction": {"has_causal": false, "id": 2793, "triples": []}, "sample_id": 2793}
+{"prediction": {"has_causal": true, "id": 11574, "triples": [{"cause": {"span": "we were forced into a new national lockdown"}, "effect": {"span": "that would threaten not just jobs and livelihoods but the loving human contact on which we all depend"}, "relation": "caused"}]}, "sample_id": 11574}
+{"prediction": {"has_causal": true, "id": 4948, "triples": [{"cause": {"span": "come forward for their booster dose, or if unvaccinated, for their first 2 doses"}, "effect": {"span": "to increase their protection against serious illness"}, "relation": "caused"}]}, "sample_id": 4948}
+{"prediction": {"has_causal": false, "id": 8365, "triples": []}, "sample_id": 8365}
+{"prediction": {"has_causal": true, "id": 13322, "triples": [{"cause": {"span": "That will allow for a peaceful resolution of the crisis"}, "effect": {"span": "based on the Gulf Cooperation Council Initiative and its Implementation Mechanism, the outcomes of National Dialogue Conference and Security Council resolution 2216 (2015)"}, "relation": "caused"}]}, "sample_id": 13322}
+{"prediction": {"has_causal": false, "id": 10125, "triples": []}, "sample_id": 10125}
+{"prediction": {"has_causal": false, "id": 9444, "triples": []}, "sample_id": 9444}
+{"prediction": {"has_causal": false, "id": 10392, "triples": []}, "sample_id": 10392}
+{"prediction": {"has_causal": true, "id": 10863, "triples": [{"cause": {"span": "The data I have just mentioned are part of the achievements of our democratic and cultural revolution"}, "effect": {"span": "which have brought political, economic and social stability to Bolivia"}, "relation": "caused"}]}, "sample_id": 10863}
+{"prediction": {"has_causal": true, "id": 13192, "triples": [{"cause": {"span": "if the philosophy is adequately and wisely implemented"}, "effect": {"span": "SDG 1, on poverty eradication, will no longer need to be part of the equation"}, "relation": "caused"}]}, "sample_id": 13192}
+{"prediction": {"has_causal": true, "id": 14025, "triples": [{"cause": {"span": "joint international efforts"}, "effect": {"span": "the complex problems facing the peoples of the world can be solved"}, "relation": "caused"}]}, "sample_id": 14025}
+{"prediction": {"has_causal": false, "id": 3002, "triples": []}, "sample_id": 3002}
+{"prediction": {"has_causal": false, "id": 9657, "triples": []}, "sample_id": 9657}
+{"prediction": {"has_causal": true, "id": 5874, "triples": [{"cause": {"span": "uniting those with differing positions"}, "effect": {"span": "in order to address these dangers"}, "relation": "caused"}]}, "sample_id": 5874}
+{"prediction": {"has_causal": true, "id": 11581, "triples": [{"cause": {"span": "developing the vaccines and treatments"}, "effect": {"span": "could gradually replace those restrictions"}, "relation": "caused"}]}, "sample_id": 11581}
+{"prediction": {"has_causal": false, "id": 8729, "triples": []}, "sample_id": 8729}
+{"prediction": {"has_causal": true, "id": 16836, "triples": [{"cause": {"span": "its proximity to neighbouring countries hard hit by the scourge of terrorism"}, "effect": {"span": "Togo is well aware of the magnitude of the threat and remains on high alert in the face of this asymmetrical threat"}, "relation": "caused"}]}, "sample_id": 16836}
+{"prediction": {"has_causal": true, "id": 2893, "triples": [{"cause": {"span": "pressures on our finances in the United Kingdom caused by COVID-19"}, "effect": {"span": "we have kept that promise to the letter"}, "relation": "caused"}]}, "sample_id": 2893}
+{"prediction": {"has_causal": false, "id": 822, "triples": []}, "sample_id": 822}
+{"prediction": {"has_causal": false, "id": 10726, "triples": []}, "sample_id": 10726}
+{"prediction": {"has_causal": true, "id": 9022, "triples": [{"cause": {"span": "share their vaccination status on dating apps"}, "effect": {"span": "receive 30% more matches than those who don’t"}, "relation": "caused"}]}, "sample_id": 9022}
+{"prediction": {"has_causal": true, "id": 50, "triples": [{"cause": {"span": "require anyone who enters the UK to take a PCR test by the end of their second day after they arrive"}, "effect": {"span": "to self-isolate until they’ve received a negative result"}, "relation": "caused"}]}, "sample_id": 50}
+{"prediction": {"has_causal": true, "id": 1069, "triples": [{"cause": {"span": "continue to work with the WHO Eastern Mediterranean region"}, "effect": {"span": "improve regional genomic sequencing hubs in Oman, Abu Dhabi and Morocco"}, "relation": "caused"}]}, "sample_id": 1069}
+{"prediction": {"has_causal": true, "id": 7830, "triples": [{"cause": {"span": "the success of our vaccination programme"}, "effect": {"span": "we can make this switch"}, "relation": "caused"}]}, "sample_id": 7830}
+{"prediction": {"has_causal": true, "id": 11203, "triples": [{"cause": {"span": "We must form a common front"}, "effect": {"span": "in order to generate prosperity and promote sustainable development"}, "relation": "caused"}]}, "sample_id": 11203}
+{"prediction": {"has_causal": true, "id": 11983, "triples": [{"cause": {"span": "The United Nations must empower countries to deal with the challenges of managing our global commons"}, "effect": {"span": "in order to build a more resilient future"}, "relation": "caused"}]}, "sample_id": 11983}
+{"prediction": {"has_causal": false, "id": 7717, "triples": []}, "sample_id": 7717}
+{"prediction": {"has_causal": false, "id": 6217, "triples": []}, "sample_id": 6217}
+{"prediction": {"has_causal": true, "id": 11288, "triples": [{"cause": {"span": "our collective inability to address it"}, "effect": {"span": "the climate crisis looms ever larger"}, "relation": "caused"}]}, "sample_id": 11288}
+{"prediction": {"has_causal": true, "id": 9337, "triples": [{"cause": {"span": "the lifting of Plan B"}, "effect": {"span": "mandatory COVID-19 certification will end"}, "relation": "caused"}]}, "sample_id": 9337}
+{"prediction": {"has_causal": false, "id": 1896, "triples": []}, "sample_id": 1896}
+{"prediction": {"has_causal": false, "id": 9891, "triples": []}, "sample_id": 9891}
+{"prediction": {"has_causal": false, "id": 1701, "triples": []}, "sample_id": 1701}
+{"prediction": {"has_causal": true, "id": 12006, "triples": [{"cause": {"span": "an unjustified and excessive military presence on the islands"}, "effect": {"span": "brings tension to a region characterized as an area of peace and international cooperation"}, "relation": "caused"}]}, "sample_id": 12006}
+{"prediction": {"has_causal": false, "id": 8258, "triples": []}, "sample_id": 8258}
+{"prediction": {"has_causal": true, "id": 7035, "triples": [{"cause": {"span": "thanks to generous support from the People’s Republic of China"}, "effect": {"span": "we have established highly functional quarantine sites across our Nation"}, "relation": "caused"}]}, "sample_id": 7035}
+{"prediction": {"has_causal": false, "id": 8346, "triples": []}, "sample_id": 8346}
+{"prediction": {"has_causal": false, "id": 3844, "triples": []}, "sample_id": 3844}
+{"prediction": {"has_causal": true, "id": 7361, "triples": [{"cause": {"span": "if they are not addressed in a timely and decisive manner"}, "effect": {"span": "results from such non-traditional security challenges as disease or climate change"}, "relation": "caused"}]}, "sample_id": 7361}
+{"prediction": {"has_causal": true, "id": 2042, "triples": [{"cause": {"span": "incorporating their respective countries into a free trade area"}, "effect": {"span": "the development of their continent"}, "relation": "caused"}]}, "sample_id": 2042}
+{"prediction": {"has_causal": false, "id": 4091, "triples": []}, "sample_id": 4091}
+{"prediction": {"has_causal": false, "id": 799, "triples": []}, "sample_id": 799}
+{"prediction": {"has_causal": true, "id": 10657, "triples": [{"cause": {"span": "those areas will be designated as special economic recovery zones for an initial period of three years"}, "effect": {"span": "enable the communities affected by Hurricane Dorian to benefit from an extensive range of tax breaks and incentives for Bahamians and international investors"}, "relation": "caused"}]}, "sample_id": 10657}
+{"prediction": {"has_causal": true, "id": 13653, "triples": [{"cause": {"span": "failure to establish a Palestinian State"}, "effect": {"span": "continued violence and terrorism"}, "relation": "caused"}]}, "sample_id": 13653}
+{"prediction": {"has_causal": false, "id": 9805, "triples": []}, "sample_id": 9805}
+{"prediction": {"has_causal": false, "id": 6766, "triples": []}, "sample_id": 6766}
+{"prediction": {"has_causal": true, "id": 12225, "triples": [{"cause": {"span": "the enabling of more countries"}, "effect": {"span": "to sustainably graduate from the LDC category"}, "relation": "caused"}]}, "sample_id": 12225}
+{"prediction": {"has_causal": false, "id": 4937, "triples": []}, "sample_id": 4937}
+{"prediction": {"has_causal": true, "id": 16468, "triples": [{"cause": {"span": "Those critical investments"}, "effect": {"span": "game-changers for Kiribati’s development curve"}, "relation": "caused"}]}, "sample_id": 16468}
+{"prediction": {"has_causal": false, "id": 9530, "triples": []}, "sample_id": 9530}
+{"prediction": {"has_causal": false, "id": 938, "triples": []}, "sample_id": 938}
+{"prediction": {"has_causal": false, "id": 2265, "triples": []}, "sample_id": 2265}
+{"prediction": {"has_causal": false, "id": 13841, "triples": []}, "sample_id": 13841}
+{"prediction": {"has_causal": false, "id": 2675, "triples": []}, "sample_id": 2675}
+{"prediction": {"has_causal": false, "id": 110, "triples": []}, "sample_id": 110}
+{"prediction": {"has_causal": false, "id": 9716, "triples": []}, "sample_id": 9716}
+{"prediction": {"has_causal": true, "id": 4894, "triples": [{"cause": {"span": "Our world-leading testing system"}, "effect": {"span": "protecting millions of people from COVID-19"}, "relation": "caused"}]}, "sample_id": 4894}
+{"prediction": {"has_causal": false, "id": 6658, "triples": []}, "sample_id": 6658}
+{"prediction": {"has_causal": false, "id": 8235, "triples": []}, "sample_id": 8235}
+{"prediction": {"has_causal": false, "id": 1628, "triples": []}, "sample_id": 1628}
+{"prediction": {"has_causal": false, "id": 16861, "triples": []}, "sample_id": 16861}
+{"prediction": {"has_causal": false, "id": 1774, "triples": []}, "sample_id": 1774}
+{"prediction": {"has_causal": false, "id": 11234, "triples": []}, "sample_id": 11234}
+{"prediction": {"has_causal": false, "id": 1822, "triples": []}, "sample_id": 1822}
+{"prediction": {"has_causal": true, "id": 2822, "triples": [{"cause": {"span": "The pandemic’s devastating impact on global travel, tourism, supply chains and investment"}, "effect": {"span": "the deepest economic recession in nearly a century"}, "relation": "caused"}]}, "sample_id": 2822}
+{"prediction": {"has_causal": false, "id": 10054, "triples": []}, "sample_id": 10054}
+{"prediction": {"has_causal": false, "id": 1677, "triples": []}, "sample_id": 1677}
+{"prediction": {"has_causal": false, "id": 8443, "triples": []}, "sample_id": 8443}
+{"prediction": {"has_causal": false, "id": 3144, "triples": []}, "sample_id": 3144}
+{"prediction": {"has_causal": false, "id": 4475, "triples": []}, "sample_id": 4475}
+{"prediction": {"has_causal": false, "id": 10252, "triples": []}, "sample_id": 10252}
+{"prediction": {"has_causal": true, "id": 13629, "triples": [{"cause": {"span": "political reform of the Council"}, "effect": {"span": "lead to a greater sense of participation, responsibility and ownership among the membership"}, "relation": "caused"}]}, "sample_id": 13629}
+{"prediction": {"has_causal": false, "id": 588, "triples": []}, "sample_id": 588}
+{"prediction": {"has_causal": false, "id": 5706, "triples": []}, "sample_id": 5706}
+{"prediction": {"has_causal": true, "id": 5927, "triples": [{"cause": {"span": "schools may nonetheless act as vectors for transmission"}, "effect": {"span": "the virus to spread between households"}, "relation": "caused"}]}, "sample_id": 5927}
+{"prediction": {"has_causal": true, "id": 13657, "triples": [{"cause": {"span": "all the international and regional forums, deliberations and dialogues"}, "effect": {"span": "the 2030 Agenda for Sustainable Development"}, "relation": "caused"}]}, "sample_id": 13657}
+{"prediction": {"has_causal": true, "id": 5980, "triples": [{"cause": {"span": "the capacity of our forests"}, "effect": {"span": "the absorption of carbon emissions"}, "relation": "caused"}]}, "sample_id": 5980}
+{"prediction": {"has_causal": false, "id": 1045, "triples": []}, "sample_id": 1045}
+{"prediction": {"has_causal": true, "id": 6030, "triples": [{"cause": {"span": "the surge of salutary solidarity"}, "effect": {"span": "to avoid the worst"}, "relation": "caused"}]}, "sample_id": 6030}
+{"prediction": {"has_causal": true, "id": 14853, "triples": [{"cause": {"span": "educational materials on avoiding teenage pregnancy were distributed"}, "effect": {"span": "so that the girls could read them"}, "relation": "caused"}]}, "sample_id": 14853}
+{"prediction": {"has_causal": false, "id": 4331, "triples": []}, "sample_id": 4331}
+{"prediction": {"has_causal": true, "id": 8468, "triples": [{"cause": {"span": "The storage temperature for the Valneva vaccine - of 2°C to 8°C - is similar to that of a domestic fridge"}, "effect": {"span": "making it appropriate for use in countries where storage at very low temperatures is not possible"}, "relation": "caused"}]}, "sample_id": 8468}
+{"prediction": {"has_causal": false, "id": 5136, "triples": []}, "sample_id": 5136}
+{"prediction": {"has_causal": false, "id": 1960, "triples": []}, "sample_id": 1960}
+{"prediction": {"has_causal": false, "id": 6583, "triples": []}, "sample_id": 6583}
+{"prediction": {"has_causal": true, "id": 13703, "triples": [{"cause": {"span": "climate change"}, "effect": {"span": "is already having a devastating impact on our people, our lives and our economy"}, "relation": "caused"}]}, "sample_id": 13703}
+{"prediction": {"has_causal": true, "id": 9018, "triples": [{"cause": {"span": "the government is looking to replace the hotel quarantine policy with other contingency measures including home isolation"}, "effect": {"span": "a sufficiently robust digital solution to ensure compliance with home isolation can be found"}, "relation": "caused"}]}, "sample_id": 9018}
+{"prediction": {"has_causal": false, "id": 13046, "triples": []}, "sample_id": 13046}
+{"prediction": {"has_causal": false, "id": 8933, "triples": []}, "sample_id": 8933}
+{"prediction": {"has_causal": false, "id": 75, "triples": []}, "sample_id": 75}
+{"prediction": {"has_causal": false, "id": 17140, "triples": []}, "sample_id": 17140}
+{"prediction": {"has_causal": false, "id": 4034, "triples": []}, "sample_id": 4034}
+{"prediction": {"has_causal": false, "id": 1371, "triples": []}, "sample_id": 1371}
+{"prediction": {"has_causal": false, "id": 4540, "triples": []}, "sample_id": 4540}
+{"prediction": {"has_causal": true, "id": 12057, "triples": [{"cause": {"span": "understanding the cause of this pandemic"}, "effect": {"span": "prevent the next one"}, "relation": "caused"}]}, "sample_id": 12057}
+{"prediction": {"has_causal": false, "id": 16794, "triples": []}, "sample_id": 16794}
+{"prediction": {"has_causal": true, "id": 17563, "triples": [{"cause": {"span": "the rules and procedures of the United Nations be revised"}, "effect": {"span": "resolutions adopted in the Security Council can be rejected, when necessary, by General Assembly resolutions, which reflect the will of an overwhelming majority of Member States"}, "relation": "caused"}]}, "sample_id": 17563}
+{"prediction": {"has_causal": false, "id": 9468, "triples": []}, "sample_id": 9468}
+{"prediction": {"has_causal": false, "id": 7656, "triples": []}, "sample_id": 7656}
+{"prediction": {"has_causal": true, "id": 13425, "triples": [{"cause": {"span": "honoured His Royal Highness Prince Khalifa Bin Salman Al Khalifa and granted him the Global Leader in Health Care award"}, "effect": {"span": "thereby confirming the high esteem of His Royal Highness and reflecting the international community’s recognition of the role played by the Kingdom of Bahrain in achieving the goals set by WHO"}, "relation": "caused"}]}, "sample_id": 13425}
+{"prediction": {"has_causal": false, "id": 14924, "triples": []}, "sample_id": 14924}
+{"prediction": {"has_causal": false, "id": 7301, "triples": []}, "sample_id": 7301}
+{"prediction": {"has_causal": true, "id": 4881, "triples": [{"cause": {"span": "Free, centrally procured PPE"}, "effect": {"span": "relieves the financial burden of PPE procurement done on an individual basis"}, "relation": "caused"}]}, "sample_id": 4881}
+{"prediction": {"has_causal": true, "id": 15617, "triples": [{"cause": {"span": "providing mechanisms to facilitate investments in health infrastructure, technology, the environment and people"}, "effect": {"span": "that will foster resilience and equitable recovery"}, "relation": "caused"}]}, "sample_id": 15617}
+{"prediction": {"has_causal": false, "id": 13569, "triples": []}, "sample_id": 13569}
+{"prediction": {"has_causal": true, "id": 16037, "triples": [{"cause": {"span": "The crossing points to both regions are periodically closed"}, "effect": {"span": "immense humanitarian suffering"}, "relation": "caused"}]}, "sample_id": 16037}
+{"prediction": {"has_causal": true, "id": 11232, "triples": [{"cause": {"span": "implement and scale up affordable solutions"}, "effect": {"span": "help us leapfrog to sustainable and more resilient economies that can reduce greenhouse emissions and push global warming below 1.5°C"}, "relation": "caused"}]}, "sample_id": 11232}
+{"prediction": {"has_causal": true, "id": 15984, "triples": [{"cause": {"span": "profound political transformation is accomplished"}, "effect": {"span": "Kazakhstan will not become a success story of socioeconomic development"}, "relation": "caused"}]}, "sample_id": 15984}
+{"prediction": {"has_causal": true, "id": 15683, "triples": [{"cause": {"span": "bold leadership, innovative ideas and schemes"}, "effect": {"span": "make possible what seems to be a chimera"}, "relation": "caused"}]}, "sample_id": 15683}
+{"prediction": {"has_causal": false, "id": 12437, "triples": []}, "sample_id": 12437}
+{"prediction": {"has_causal": true, "id": 1763, "triples": [{"cause": {"span": "adopted the Aotearoa New Zealand Biodiversity Strategy 2020 — Te Mana o te Taiao"}, "effect": {"span": "will guide our actions domestically for the protection, restoration and sustainable use of biodiversity"}, "relation": "caused"}]}, "sample_id": 1763}
+{"prediction": {"has_causal": true, "id": 5721, "triples": [{"cause": {"span": "press the reset button and reaffirm our commitment to multilateral ideals"}, "effect": {"span": "we can accelerate the implementation of the SDGs in this Decade of Action"}, "relation": "caused"}]}, "sample_id": 5721}
+{"prediction": {"has_causal": false, "id": 8893, "triples": []}, "sample_id": 8893}
+{"prediction": {"has_causal": true, "id": 16909, "triples": [{"cause": {"span": "set up the International Partnership for Blue Carbon"}, "effect": {"span": "protecting and conserving mangroves, tidal marshes and seagrasses for climate change mitigation and adaptation"}, "relation": "caused"}]}, "sample_id": 16909}
+{"prediction": {"has_causal": false, "id": 1560, "triples": []}, "sample_id": 1560}
+{"prediction": {"has_causal": false, "id": 1148, "triples": []}, "sample_id": 1148}
+{"prediction": {"has_causal": true, "id": 10463, "triples": [{"cause": {"span": "The Himalayan glaciers have been melting at double the rate since the turn of this century"}, "effect": {"span": "threatening water supplies throughout Central, South and East Asia"}, "relation": "caused"}]}, "sample_id": 10463}
+{"prediction": {"has_causal": false, "id": 3722, "triples": []}, "sample_id": 3722}
+{"prediction": {"has_causal": false, "id": 7851, "triples": []}, "sample_id": 7851}
+{"prediction": {"has_causal": true, "id": 328, "triples": [{"cause": {"span": "NHS COVID Pass can now be used to demonstrate proof of a booster or third dose for outbound international travel"}, "effect": {"span": "Travellers who have had a booster or a third dose will be able to demonstrate their vaccine status through the NHS COVID Pass from Friday 19 November"}, "relation": "caused"}]}, "sample_id": 328}
+{"prediction": {"has_causal": true, "id": 4215, "triples": [{"cause": {"span": "The current measures are in place"}, "effect": {"span": "to help protect all of us"}, "relation": "caused"}]}, "sample_id": 4215}
+{"prediction": {"has_causal": true, "id": 10999, "triples": [{"cause": {"span": "the existential vulnerabilities that we suffer in the face of this growing threat"}, "effect": {"span": "We speak out, and we speak loudly"}, "relation": "caused"}]}, "sample_id": 10999}
+{"prediction": {"has_causal": false, "id": 17391, "triples": []}, "sample_id": 17391}
+{"prediction": {"has_causal": true, "id": 13641, "triples": [{"cause": {"span": "regional mediation efforts that have led"}, "effect": {"span": "the Sudanese parties to this great national achievement"}, "relation": "caused"}]}, "sample_id": 13641}
+{"prediction": {"has_causal": false, "id": 8801, "triples": []}, "sample_id": 8801}
+{"prediction": {"has_causal": false, "id": 7646, "triples": []}, "sample_id": 7646}
+{"prediction": {"has_causal": true, "id": 16896, "triples": [{"cause": {"span": "recycle used plastics into valuable new plastics"}, "effect": {"span": "creating a circular plastics economy"}, "relation": "caused"}]}, "sample_id": 16896}
+{"prediction": {"has_causal": false, "id": 928, "triples": []}, "sample_id": 928}
+{"prediction": {"has_causal": true, "id": 7067, "triples": [{"cause": {"span": "The aim of the package was to support the economic sectors affected by the pandemic, the private sector and citizens"}, "effect": {"span": "as well as to support wages and protect jobs"}, "relation": "caused"}]}, "sample_id": 7067}
+{"prediction": {"has_causal": false, "id": 13654, "triples": []}, "sample_id": 13654}
+{"prediction": {"has_causal": true, "id": 8638, "triples": [{"cause": {"span": "develop severe disease"}, "effect": {"span": "have increased rates of admission to intensive care, the need for invasive ventilation and pre-term delivery"}, "relation": "caused"}]}, "sample_id": 8638}
+{"prediction": {"has_causal": false, "id": 15605, "triples": []}, "sample_id": 15605}
+{"prediction": {"has_causal": true, "id": 5702, "triples": [{"cause": {"span": "This is a significant, long-term increase in public spending"}, "effect": {"span": "which will directly improve people’s lives"}, "relation": "caused"}]}, "sample_id": 5702}
+{"prediction": {"has_causal": true, "id": 6794, "triples": [{"cause": {"span": "acting together"}, "effect": {"span": "make a difference"}, "relation": "caused"}]}, "sample_id": 6794}
+{"prediction": {"has_causal": false, "id": 8708, "triples": []}, "sample_id": 8708}
+{"prediction": {"has_causal": true, "id": 4836, "triples": [{"cause": {"span": "everyone to choose responsibly and take the simple step"}, "effect": {"span": "help secure greater freedom for us all"}, "relation": "caused"}]}, "sample_id": 4836}
+{"prediction": {"has_causal": false, "id": 7540, "triples": []}, "sample_id": 7540}
+{"prediction": {"has_causal": true, "id": 4427, "triples": [{"cause": {"span": "following the success of an existing pilot with the US and Europe"}, "effect": {"span": "England will welcome fully vaccinated travellers from a host of new countries – who will be treated like returning fully vaccinated UK travellers – including 17 countries and territories such as Japan and Singapore"}, "relation": "caused"}]}, "sample_id": 4427}
+{"prediction": {"has_causal": false, "id": 4972, "triples": []}, "sample_id": 4972}
+{"prediction": {"has_causal": false, "id": 14667, "triples": []}, "sample_id": 14667}
+{"prediction": {"has_causal": true, "id": 11231, "triples": [{"cause": {"span": "turn to sustainable resource-management models"}, "effect": {"span": "to help restore the balance in our ecosystem"}, "relation": "caused"}]}, "sample_id": 11231}
+{"prediction": {"has_causal": true, "id": 3636, "triples": [{"cause": {"span": "The country continues to enjoy political stability, social order and continued economic growth"}, "effect": {"span": "which has significantly contributed to the poverty reduction and improving living standard of all multi-ethnic people"}, "relation": "caused"}]}, "sample_id": 3636}
+{"prediction": {"has_causal": false, "id": 4460, "triples": []}, "sample_id": 4460}
+{"prediction": {"has_causal": false, "id": 17513, "triples": []}, "sample_id": 17513}
+{"prediction": {"has_causal": false, "id": 17429, "triples": []}, "sample_id": 17429}
+{"prediction": {"has_causal": false, "id": 6637, "triples": []}, "sample_id": 6637}
+{"prediction": {"has_causal": false, "id": 5671, "triples": []}, "sample_id": 5671}
+{"prediction": {"has_causal": false, "id": 2931, "triples": []}, "sample_id": 2931}
+{"prediction": {"has_causal": false, "id": 5112, "triples": []}, "sample_id": 5112}
+{"prediction": {"has_causal": true, "id": 9912, "triples": [{"cause": {"span": "multilateral institutions must be reformed"}, "effect": {"span": "in order to meet new requirements and better serve the interests of Member States, especially developing States in Asia, Africa and Latin America"}, "relation": "caused"}]}, "sample_id": 9912}
+{"prediction": {"has_causal": false, "id": 14984, "triples": []}, "sample_id": 14984}
+{"prediction": {"has_causal": false, "id": 5482, "triples": []}, "sample_id": 5482}
+{"prediction": {"has_causal": false, "id": 16156, "triples": []}, "sample_id": 16156}
+{"prediction": {"has_causal": false, "id": 90, "triples": []}, "sample_id": 90}
+{"prediction": {"has_causal": false, "id": 10589, "triples": []}, "sample_id": 10589}
+{"prediction": {"has_causal": false, "id": 961, "triples": []}, "sample_id": 961}
+{"prediction": {"has_causal": false, "id": 52, "triples": []}, "sample_id": 52}
+{"prediction": {"has_causal": true, "id": 10368, "triples": [{"cause": {"span": "developing countries continue to face significant gaps in funding"}, "effect": {"span": "making it difficult to adequately detect and respond to problems while still providing basic health services and building the capacity of the health sector"}, "relation": "caused"}]}, "sample_id": 10368}
+{"prediction": {"has_causal": false, "id": 14583, "triples": []}, "sample_id": 14583}
+{"prediction": {"has_causal": true, "id": 11108, "triples": [{"cause": {"span": "established a presidential commission on sustainable development"}, "effect": {"span": "to ensure the institutional implementation of the Goals"}, "relation": "caused"}]}, "sample_id": 11108}
+{"prediction": {"has_causal": false, "id": 13137, "triples": []}, "sample_id": 13137}
+{"prediction": {"has_causal": false, "id": 8249, "triples": []}, "sample_id": 8249}
+{"prediction": {"has_causal": true, "id": 4858, "triples": [{"cause": {"span": "putting in place new Nightingale surge hubs within hospital grounds"}, "effect": {"span": "provide extra resilience should we need it"}, "relation": "caused"}]}, "sample_id": 4858}
+{"prediction": {"has_causal": true, "id": 2879, "triples": [{"cause": {"span": "join forces"}, "effect": {"span": "ensure this turns into concrete steps"}, "relation": "caused"}]}, "sample_id": 2879}
+{"prediction": {"has_causal": false, "id": 15059, "triples": []}, "sample_id": 15059}
+{"prediction": {"has_causal": false, "id": 16805, "triples": []}, "sample_id": 16805}
+{"prediction": {"has_causal": true, "id": 13173, "triples": [{"cause": {"span": "advocate Security Council reform"}, "effect": {"span": "thereby transform the Council into a more inclusive and transparent body, capable of addressing threats to international peace and security"}, "relation": "caused"}]}, "sample_id": 13173}
+{"prediction": {"has_causal": false, "id": 7797, "triples": []}, "sample_id": 7797}
+{"prediction": {"has_causal": false, "id": 7897, "triples": []}, "sample_id": 7897}
+{"prediction": {"has_causal": false, "id": 1058, "triples": []}, "sample_id": 1058}
+{"prediction": {"has_causal": true, "id": 4302, "triples": [{"cause": {"span": "the phenomenal success of the vaccination programme"}, "effect": {"span": "the data continues to show the link between cases, hospitalisations and deaths has weakened significantly"}, "relation": "caused"}]}, "sample_id": 4302}
+{"prediction": {"has_causal": true, "id": 9025, "triples": [{"cause": {"span": "Getting your booster vaccine"}, "effect": {"span": "protect yourself and your loved ones from COVID-19"}, "relation": "caused"}]}, "sample_id": 9025}
+{"prediction": {"has_causal": false, "id": 11312, "triples": []}, "sample_id": 11312}
+{"prediction": {"has_causal": true, "id": 14467, "triples": [{"cause": {"span": "The multiplication of tensions and crises, if not defused swiftly enough"}, "effect": {"span": "can spiral out of control, seriously threatening peace and security"}, "relation": "caused"}]}, "sample_id": 14467}
+{"prediction": {"has_causal": false, "id": 8750, "triples": []}, "sample_id": 8750}
+{"prediction": {"has_causal": false, "id": 5272, "triples": []}, "sample_id": 5272}
+{"prediction": {"has_causal": true, "id": 2521, "triples": [{"cause": {"span": "the injustices related to stated obligations and burden-sharing"}, "effect": {"span": "we had not yet ratified it"}, "relation": "caused"}]}, "sample_id": 2521}
+{"prediction": {"has_causal": false, "id": 6727, "triples": []}, "sample_id": 6727}
+{"prediction": {"has_causal": false, "id": 5073, "triples": []}, "sample_id": 5073}
+{"prediction": {"has_causal": false, "id": 1031, "triples": []}, "sample_id": 1031}
+{"prediction": {"has_causal": false, "id": 8164, "triples": []}, "sample_id": 8164}
+{"prediction": {"has_causal": true, "id": 11169, "triples": [{"cause": {"span": "pool our resources, streamline our efforts and apply multi-stakeholder approaches"}, "effect": {"span": "combat those challenges"}, "relation": "caused"}]}, "sample_id": 11169}
+{"prediction": {"has_causal": false, "id": 15388, "triples": []}, "sample_id": 15388}
+{"prediction": {"has_causal": true, "id": 205, "triples": [{"cause": {"span": "A temporary ban on commercial and private planes travelling from the six countries will also come into force at midday on Friday until 4am Sunday"}, "effect": {"span": "to reduce the risk of importing this new variant under investigation while hotel quarantine is stood up"}, "relation": "caused"}]}, "sample_id": 205}
+{"prediction": {"has_causal": true, "id": 5931, "triples": [{"cause": {"span": "scrapping the pre-departure test"}, "effect": {"span": "discourages many from travelling for fear of being trapped overseas and incurring significant extra expense"}, "relation": "caused"}]}, "sample_id": 5931}
+{"prediction": {"has_causal": false, "id": 17200, "triples": []}, "sample_id": 17200}
+{"prediction": {"has_causal": false, "id": 5470, "triples": []}, "sample_id": 5470}
+{"prediction": {"has_causal": true, "id": 2848, "triples": [{"cause": {"span": "overcome the challenges surrounding the production, distribution, deployment and acceptance of vaccines"}, "effect": {"span": "prevent the spread of dangerous new virus strains"}, "relation": "caused"}]}, "sample_id": 2848}
+{"prediction": {"has_causal": false, "id": 1132, "triples": []}, "sample_id": 1132}
+{"prediction": {"has_causal": true, "id": 15441, "triples": [{"cause": {"span": "sacrificed our youth"}, "effect": {"span": "to free it from terrorism"}, "relation": "caused"}]}, "sample_id": 15441}
+{"prediction": {"has_causal": true, "id": 16111, "triples": [{"cause": {"span": "Through a mix of prudent budgetary and macroeconomic policies"}, "effect": {"span": "we have managed to register a 6.6 per cent rate of economic growth"}, "relation": "caused"}]}, "sample_id": 16111}
+{"prediction": {"has_causal": true, "id": 13007, "triples": [{"cause": {"span": "a national socioeconomic fabric that has been torn apart"}, "effect": {"span": "the collateral damage of the war-wounded, the shattered families, the displaced populations, the resettlement of refugees and all the other negative consequences"}, "relation": "caused"}]}, "sample_id": 13007}
+{"prediction": {"has_causal": false, "id": 951, "triples": []}, "sample_id": 951}
+{"prediction": {"has_causal": true, "id": 13353, "triples": [{"cause": {"span": "the environmental policy of a single country, however ambitious it may be"}, "effect": {"span": "is totally ineffective without action at on a global scale"}, "relation": "caused"}]}, "sample_id": 13353}
+{"prediction": {"has_causal": true, "id": 5730, "triples": [{"cause": {"span": "relentless fighting"}, "effect": {"span": "the humanitarian catastrophe"}, "relation": "caused"}]}, "sample_id": 5730}
+{"prediction": {"has_causal": false, "id": 12191, "triples": []}, "sample_id": 12191}
+{"prediction": {"has_causal": false, "id": 14763, "triples": []}, "sample_id": 14763}
+{"prediction": {"has_causal": false, "id": 3485, "triples": []}, "sample_id": 3485}
+{"prediction": {"has_causal": true, "id": 7584, "triples": [{"cause": {"span": "have already received their top-up vaccine"}, "effect": {"span": "ensuring the vital protection they have secured from their first 2 doses is maintained over the winter months"}, "relation": "caused"}]}, "sample_id": 7584}
+{"prediction": {"has_causal": true, "id": 5271, "triples": [{"cause": {"span": "every day people are continuing to come forward for their first and second doses"}, "effect": {"span": "allowing them to also get their booster as soon as possible"}, "relation": "caused"}]}, "sample_id": 5271}
+{"prediction": {"has_causal": false, "id": 16621, "triples": []}, "sample_id": 16621}
+{"prediction": {"has_causal": true, "id": 17497, "triples": [{"cause": {"span": "This"}, "effect": {"span": "broader and sustainable incomes for the majority of people living in rural areas who now contribute to the increased levels of household and national food and nutrition security"}, "relation": "caused"}]}, "sample_id": 17497}
+{"prediction": {"has_causal": false, "id": 10584, "triples": []}, "sample_id": 10584}
+{"prediction": {"has_causal": false, "id": 6815, "triples": []}, "sample_id": 6815}
+{"prediction": {"has_causal": false, "id": 8285, "triples": []}, "sample_id": 8285}
+{"prediction": {"has_causal": true, "id": 3203, "triples": [{"cause": {"span": "declaring an end to the War"}, "effect": {"span": "can affirm mutual commitments to peace"}, "relation": "caused"}]}, "sample_id": 3203}
+{"prediction": {"has_causal": false, "id": 15596, "triples": []}, "sample_id": 15596}
+{"prediction": {"has_causal": false, "id": 4161, "triples": []}, "sample_id": 4161}
+{"prediction": {"has_causal": true, "id": 10942, "triples": [{"cause": {"span": "such cooperation"}, "effect": {"span": "the signing of peace agreements between our countries"}, "relation": "caused"}]}, "sample_id": 10942}
+{"prediction": {"has_causal": true, "id": 14129, "triples": [{"cause": {"span": "We do this"}, "effect": {"span": "our top priority must be to help all people to enjoy a safe and secure life in their home countries"}, "relation": "caused"}]}, "sample_id": 14129}
+{"prediction": {"has_causal": false, "id": 7363, "triples": []}, "sample_id": 7363}
+{"prediction": {"has_causal": true, "id": 10388, "triples": [{"cause": {"span": "develop programmes aimed at increasing the opportunities for our young people"}, "effect": {"span": "to start their own businesses"}, "relation": "caused"}]}, "sample_id": 10388}
+{"prediction": {"has_causal": true, "id": 13896, "triples": [{"cause": {"span": "follow up on these recommendations"}, "effect": {"span": "in order to give meaning to the shared commitments to our young people"}, "relation": "caused"}]}, "sample_id": 13896}
+{"prediction": {"has_causal": false, "id": 17297, "triples": []}, "sample_id": 17297}
+{"prediction": {"has_causal": true, "id": 11901, "triples": [{"cause": {"span": "call on all countries to cooperate fully with the investigation"}, "effect": {"span": "so that justice is served and responsibility accepted"}, "relation": "caused"}]}, "sample_id": 11901}
+{"prediction": {"has_causal": false, "id": 2036, "triples": []}, "sample_id": 2036}
+{"prediction": {"has_causal": true, "id": 9191, "triples": [{"cause": {"span": "UKHSA has used more accurate algorithms"}, "effect": {"span": "to check existing surveillance data"}, "relation": "caused"}]}, "sample_id": 9191}
+{"prediction": {"has_causal": false, "id": 1438, "triples": []}, "sample_id": 1438}
+{"prediction": {"has_causal": false, "id": 2509, "triples": []}, "sample_id": 2509}
+{"prediction": {"has_causal": true, "id": 12896, "triples": [{"cause": {"span": "without sensible precautions"}, "effect": {"span": "we would risk the virus escalating into a Winter or New Year surge"}, "relation": "caused"}]}, "sample_id": 12896}
+{"prediction": {"has_causal": true, "id": 10507, "triples": [{"cause": {"span": "be better integrated into the world and deploy all of our labour and talent to that end"}, "effect": {"span": "to grow and develop, to have the life that we Argentines deserve"}, "relation": "caused"}]}, "sample_id": 10507}
+{"prediction": {"has_causal": true, "id": 16316, "triples": [{"cause": {"span": "the new mining law"}, "effect": {"span": "revenues from the mining sector have also increased exponentially, from TSh191 billion in the 2016-2017 financial year to TSh335.18 billion in the 2018-2019 financial year"}, "relation": "caused"}]}, "sample_id": 16316}
+{"prediction": {"has_causal": true, "id": 2923, "triples": [{"cause": {"span": "the Turkish regime has deliberately and repeatedly cut the city’s water supply"}, "effect": {"span": "endangering the lives of civilians"}, "relation": "caused"}]}, "sample_id": 2923}
+{"prediction": {"has_causal": false, "id": 10052, "triples": []}, "sample_id": 10052}
+{"prediction": {"has_causal": false, "id": 15996, "triples": []}, "sample_id": 15996}
+{"prediction": {"has_causal": false, "id": 6555, "triples": []}, "sample_id": 6555}
+{"prediction": {"has_causal": false, "id": 12405, "triples": []}, "sample_id": 12405}
+{"prediction": {"has_causal": true, "id": 13798, "triples": [{"cause": {"span": "this practice should be harnessed in other areas"}, "effect": {"span": "so as to create a comprehensive arsenal of political, diplomatic and socioeconomic instruments for preventing risks and addressing challenges"}, "relation": "caused"}]}, "sample_id": 13798}
+{"prediction": {"has_causal": false, "id": 2319, "triples": []}, "sample_id": 2319}
+{"prediction": {"has_causal": true, "id": 8403, "triples": [{"cause": {"span": "the steps that all students and staff have taken"}, "effect": {"span": "in keeping the spread of the virus in schools at bay"}, "relation": "caused"}]}, "sample_id": 8403}
+{"prediction": {"has_causal": true, "id": 10051, "triples": [{"cause": {"span": "securing Syrian territory"}, "effect": {"span": "so as to enable the voluntary and safe return of all refugees"}, "relation": "caused"}]}, "sample_id": 10051}
+{"prediction": {"has_causal": false, "id": 3154, "triples": []}, "sample_id": 3154}
+{"prediction": {"has_causal": true, "id": 1623, "triples": [{"cause": {"span": "greater international solidarity"}, "effect": {"span": "we can truly be shielded from the devastating effects of the pandemic"}, "relation": "caused"}]}, "sample_id": 1623}
+{"prediction": {"has_causal": true, "id": 11074, "triples": [{"cause": {"span": "the joint military exercises between the Republic of Korea and the United States that had been planned for the spring of 2018 were suspended"}, "effect": {"span": "creating an environment that enabled the North Korean Olympic delegation to come to Pyeong Chang"}, "relation": "caused"}]}, "sample_id": 11074}
+{"prediction": {"has_causal": false, "id": 13113, "triples": []}, "sample_id": 13113}
+{"prediction": {"has_causal": true, "id": 5218, "triples": [{"cause": {"span": "the additional £60 million"}, "effect": {"span": "help protect both those who receive care, the family and friends who support them, as well as the adult social care workforce"}, "relation": "caused"}]}, "sample_id": 5218}
+{"prediction": {"has_causal": true, "id": 3535, "triples": [{"cause": {"span": "setting and improving global standards on human rights, rule of law, accountability, conflict prevention, peacekeeping and disarmament"}, "effect": {"span": "made our planet safer"}, "relation": "caused"}]}, "sample_id": 3535}
+{"prediction": {"has_causal": true, "id": 16246, "triples": [{"cause": {"span": "respect the rules and to live and act by them"}, "effect": {"span": "we can then predict how we behave and be prepared when the unexpected happens"}, "relation": "caused"}]}, "sample_id": 16246}
+{"prediction": {"has_causal": false, "id": 13526, "triples": []}, "sample_id": 13526}
+{"prediction": {"has_causal": false, "id": 6831, "triples": []}, "sample_id": 6831}
+{"prediction": {"has_causal": false, "id": 7433, "triples": []}, "sample_id": 7433}
+{"prediction": {"has_causal": true, "id": 9976, "triples": [{"cause": {"span": "needs a consensual approach"}, "effect": {"span": "in order to confront such major challenges as climate change, terrorism, the peaceful settlement of conflicts, peacekeeping around the world, the reform of the Security Council, threats to multilateralism and the issue of migration"}, "relation": "caused"}]}, "sample_id": 9976}
+{"prediction": {"has_causal": false, "id": 16508, "triples": []}, "sample_id": 16508}
+{"prediction": {"has_causal": false, "id": 14843, "triples": []}, "sample_id": 14843}
+{"prediction": {"has_causal": false, "id": 15287, "triples": []}, "sample_id": 15287}
+{"prediction": {"has_causal": false, "id": 8858, "triples": []}, "sample_id": 8858}
+{"prediction": {"has_causal": true, "id": 16678, "triples": [{"cause": {"span": "the damage that Lebanon is likely to suffer as a result because it hosts a large number of refugees"}, "effect": {"span": "undermine any chance for peace in the Middle East"}, "relation": "caused"}]}, "sample_id": 16678}
+{"prediction": {"has_causal": true, "id": 15568, "triples": [{"cause": {"span": "the debt cancellation"}, "effect": {"span": "help us focus on recovery"}, "relation": "caused"}]}, "sample_id": 15568}
+{"prediction": {"has_causal": false, "id": 8155, "triples": []}, "sample_id": 8155}
+{"prediction": {"has_causal": true, "id": 3244, "triples": [{"cause": {"span": "thanks to them"}, "effect": {"span": "we have been exceptionally successful in our war on terrorism"}, "relation": "caused"}]}, "sample_id": 3244}
+{"prediction": {"has_causal": true, "id": 5691, "triples": [{"cause": {"span": "by taking tough action now"}, "effect": {"span": "we can allow families across the country to be together"}, "relation": "caused"}]}, "sample_id": 5691}
+{"prediction": {"has_causal": true, "id": 4626, "triples": [{"cause": {"span": "Thanks to the success of the vaccination programme"}, "effect": {"span": "now is the right time to take this additional step towards opening up international travel once again"}, "relation": "caused"}]}, "sample_id": 4626}
+{"prediction": {"has_causal": false, "id": 14021, "triples": []}, "sample_id": 14021}
+{"prediction": {"has_causal": true, "id": 12371, "triples": [{"cause": {"span": "relocated some of them to Bhasan Char"}, "effect": {"span": "to facilitate the temporary stay of the forcibly displaced Myanmar national Rohingyas in Bangladesh"}, "relation": "caused"}]}, "sample_id": 12371}
+{"prediction": {"has_causal": false, "id": 6316, "triples": []}, "sample_id": 6316}
+{"prediction": {"has_causal": true, "id": 10771, "triples": [{"cause": {"span": "if they continue with that approach"}, "effect": {"span": "terrorism will re-emerge stronger than ever and will threaten everyone, without exception, including its supporters and those who have invested in it"}, "relation": "caused"}]}, "sample_id": 10771}
+{"prediction": {"has_causal": false, "id": 1057, "triples": []}, "sample_id": 1057}
+{"prediction": {"has_causal": false, "id": 13174, "triples": []}, "sample_id": 13174}
+{"prediction": {"has_causal": false, "id": 1361, "triples": []}, "sample_id": 1361}
+{"prediction": {"has_causal": false, "id": 12257, "triples": []}, "sample_id": 12257}
+{"prediction": {"has_causal": false, "id": 4555, "triples": []}, "sample_id": 4555}
+{"prediction": {"has_causal": true, "id": 11420, "triples": [{"cause": {"span": "calling for a new strategic orientation and partnership"}, "effect": {"span": "accelerate our pandemic recovery"}, "relation": "caused"}]}, "sample_id": 11420}
+{"prediction": {"has_causal": false, "id": 13817, "triples": []}, "sample_id": 13817}
+{"prediction": {"has_causal": false, "id": 17417, "triples": []}, "sample_id": 17417}
+{"prediction": {"has_causal": false, "id": 1773, "triples": []}, "sample_id": 1773}
+{"prediction": {"has_causal": false, "id": 14414, "triples": []}, "sample_id": 14414}
+{"prediction": {"has_causal": false, "id": 15308, "triples": []}, "sample_id": 15308}
+{"prediction": {"has_causal": false, "id": 11616, "triples": []}, "sample_id": 11616}
+{"prediction": {"has_causal": false, "id": 7845, "triples": []}, "sample_id": 7845}
+{"prediction": {"has_causal": true, "id": 16, "triples": [{"cause": {"span": "two antivirals"}, "effect": {"span": "speed up recovery time and stop infections progressing"}, "relation": "caused"}]}, "sample_id": 16}
+{"prediction": {"has_causal": true, "id": 13938, "triples": [{"cause": {"span": "our classification as a middle-income country"}, "effect": {"span": "the achievement of the Sustainable Development Goals (SDGs) practically unattainable"}, "relation": "caused"}]}, "sample_id": 13938}
+{"prediction": {"has_causal": false, "id": 2741, "triples": []}, "sample_id": 2741}
+{"prediction": {"has_causal": true, "id": 5742, "triples": [{"cause": {"span": "almost every corner of Latvia has access to high-speed Internet"}, "effect": {"span": "many people have used those solutions during the pandemic to change their habits and shape their daily lives"}, "relation": "caused"}]}, "sample_id": 5742}
+{"prediction": {"has_causal": false, "id": 16826, "triples": []}, "sample_id": 16826}
+{"prediction": {"has_causal": false, "id": 5497, "triples": []}, "sample_id": 5497}
+{"prediction": {"has_causal": true, "id": 16023, "triples": [{"cause": {"span": "In the absence of trust"}, "effect": {"span": "the potential for conflict grows"}, "relation": "caused"}]}, "sample_id": 16023}
+{"prediction": {"has_causal": false, "id": 16457, "triples": []}, "sample_id": 16457}
+{"prediction": {"has_causal": false, "id": 8780, "triples": []}, "sample_id": 8780}
+{"prediction": {"has_causal": false, "id": 10151, "triples": []}, "sample_id": 10151}
+{"prediction": {"has_causal": false, "id": 16576, "triples": []}, "sample_id": 16576}
+{"prediction": {"has_causal": false, "id": 4564, "triples": []}, "sample_id": 4564}
+{"prediction": {"has_causal": false, "id": 8162, "triples": []}, "sample_id": 8162}
+{"prediction": {"has_causal": false, "id": 6343, "triples": []}, "sample_id": 6343}
+{"prediction": {"has_causal": true, "id": 15971, "triples": [{"cause": {"span": "Thanks to the Astana process"}, "effect": {"span": "a cessation of hostilities has been reached"}, "relation": "caused"}]}, "sample_id": 15971}
+{"prediction": {"has_causal": false, "id": 6234, "triples": []}, "sample_id": 6234}
+{"prediction": {"has_causal": false, "id": 10247, "triples": []}, "sample_id": 10247}
+{"prediction": {"has_causal": true, "id": 15488, "triples": [{"cause": {"span": "revive the reform agenda of the United Nations"}, "effect": {"span": "in order to give impetus to articulating cohesive, effective, efficient and inclusive decision-making processes"}, "relation": "caused"}]}, "sample_id": 15488}
+{"prediction": {"has_causal": false, "id": 14586, "triples": []}, "sample_id": 14586}
+{"prediction": {"has_causal": false, "id": 5459, "triples": []}, "sample_id": 5459}
+{"prediction": {"has_causal": false, "id": 4392, "triples": []}, "sample_id": 4392}
+{"prediction": {"has_causal": false, "id": 5147, "triples": []}, "sample_id": 5147}
+{"prediction": {"has_causal": true, "id": 12906, "triples": [{"cause": {"span": "this new £1000 grant – on top of the furlough, VAT and business rates relief and existing grants"}, "effect": {"span": "help them weather the economic storm"}, "relation": "caused"}]}, "sample_id": 12906}
+{"prediction": {"has_causal": true, "id": 3413, "triples": [{"cause": {"span": "Turkey’s actions"}, "effect": {"span": "undermine international law and threaten the security and stability of the broader region of the Eastern Mediterranean and of all EU member states"}, "relation": "caused"}]}, "sample_id": 3413}
+{"prediction": {"has_causal": true, "id": 16475, "triples": [{"cause": {"span": "improving access to education and by ensuring quality education for all"}, "effect": {"span": "drive inclusive education"}, "relation": "caused"}]}, "sample_id": 16475}
+{"prediction": {"has_causal": true, "id": 454, "triples": [{"cause": {"span": "boosters give over 90% protection against symptomatic COVID-19 in adults over 50"}, "effect": {"span": "maintaining protection ahead of winter"}, "relation": "caused"}]}, "sample_id": 454}
+{"prediction": {"has_causal": true, "id": 355, "triples": [{"cause": {"span": "our shared experience of the strife and suffering of the Second World War"}, "effect": {"span": "to transform the nation’s health"}, "relation": "caused"}]}, "sample_id": 355}
+{"prediction": {"has_causal": true, "id": 11903, "triples": [{"cause": {"span": "an invisible virus that continues to evolve and mutate"}, "effect": {"span": "threatening to claim more lives all over the world"}, "relation": "caused"}]}, "sample_id": 11903}
+{"prediction": {"has_causal": false, "id": 2638, "triples": []}, "sample_id": 2638}
+{"prediction": {"has_causal": false, "id": 3272, "triples": []}, "sample_id": 3272}
+{"prediction": {"has_causal": true, "id": 3068, "triples": [{"cause": {"span": "human activities came to a halt"}, "effect": {"span": "blue skies re-emerged in parts of the world"}, "relation": "caused"}]}, "sample_id": 3068}
+{"prediction": {"has_causal": false, "id": 10321, "triples": []}, "sample_id": 10321}
+{"prediction": {"has_causal": false, "id": 397, "triples": []}, "sample_id": 397}
+{"prediction": {"has_causal": false, "id": 9272, "triples": []}, "sample_id": 9272}
+{"prediction": {"has_causal": false, "id": 4556, "triples": []}, "sample_id": 4556}
+{"prediction": {"has_causal": true, "id": 13705, "triples": [{"cause": {"span": "the Government has introduced feed-in tariffs for wind, solar and hydropower energy"}, "effect": {"span": "in support of renewable energy"}, "relation": "caused"}]}, "sample_id": 13705}
+{"prediction": {"has_causal": true, "id": 14758, "triples": [{"cause": {"span": "education has been the most equitable source of opportunities"}, "effect": {"span": "has provided the fastest and most reliable route out of poverty"}, "relation": "caused"}]}, "sample_id": 14758}
+{"prediction": {"has_causal": false, "id": 14876, "triples": []}, "sample_id": 14876}
+{"prediction": {"has_causal": false, "id": 14321, "triples": []}, "sample_id": 14321}
+{"prediction": {"has_causal": true, "id": 17255, "triples": [{"cause": {"span": "by working together"}, "effect": {"span": "we can better respond to global crises such as the COVID-19 pandemic and climate change and their consequences"}, "relation": "caused"}]}, "sample_id": 17255}
+{"prediction": {"has_causal": true, "id": 13908, "triples": [{"cause": {"span": "harness momentum"}, "effect": {"span": "better tackle global problems"}, "relation": "caused"}]}, "sample_id": 13908}
+{"prediction": {"has_causal": false, "id": 10951, "triples": []}, "sample_id": 10951}
+{"prediction": {"has_causal": true, "id": 13062, "triples": [{"cause": {"span": "the initiatives"}, "effect": {"span": "lasting peace and stability on the Korean peninsula"}, "relation": "caused"}]}, "sample_id": 13062}
+{"prediction": {"has_causal": false, "id": 13754, "triples": []}, "sample_id": 13754}
+{"prediction": {"has_causal": false, "id": 2543, "triples": []}, "sample_id": 2543}
+{"prediction": {"has_causal": false, "id": 4107, "triples": []}, "sample_id": 4107}
+{"prediction": {"has_causal": true, "id": 16361, "triples": [{"cause": {"span": "join hands and take bold climate action"}, "effect": {"span": "to save Mother Earth"}, "relation": "caused"}]}, "sample_id": 16361}
+{"prediction": {"has_causal": false, "id": 14494, "triples": []}, "sample_id": 14494}
+{"prediction": {"has_causal": false, "id": 2064, "triples": []}, "sample_id": 2064}
+{"prediction": {"has_causal": false, "id": 2608, "triples": []}, "sample_id": 2608}
+{"prediction": {"has_causal": true, "id": 3084, "triples": [{"cause": {"span": "rethink the scope and reach of the multilateralism that we are promoting"}, "effect": {"span": "all countries of the world can enjoy a shared source of resiliency with the appropriate tools for dealing with myriad crises like COVID-19 and avoid undoing decades of collective work within our Organization and various regional communities"}, "relation": "caused"}]}, "sample_id": 3084}
+{"prediction": {"has_causal": false, "id": 16864, "triples": []}, "sample_id": 16864}
+{"prediction": {"has_causal": true, "id": 12279, "triples": [{"cause": {"span": "Member states expeditiously work towards achieving progress in the negotiations on reform in the context of the Intergovernmental Negotiations (IGN)"}, "effect": {"span": "Africa can assume its rightful place in the Security Council"}, "relation": "caused"}]}, "sample_id": 12279}
+{"prediction": {"has_causal": true, "id": 16264, "triples": [{"cause": {"span": "global warming"}, "effect": {"span": "global average sea levels could rise by up to 1.1 metres by 2100"}, "relation": "caused"}]}, "sample_id": 16264}
+{"prediction": {"has_causal": false, "id": 12952, "triples": []}, "sample_id": 12952}
+{"prediction": {"has_causal": false, "id": 344, "triples": []}, "sample_id": 344}
+{"prediction": {"has_causal": false, "id": 8213, "triples": []}, "sample_id": 8213}
+{"prediction": {"has_causal": false, "id": 10659, "triples": []}, "sample_id": 10659}
+{"prediction": {"has_causal": true, "id": 3145, "triples": [{"cause": {"span": "providing Digital Access to its millions of citizens"}, "effect": {"span": "ensuring empowerment and transparency"}, "relation": "caused"}]}, "sample_id": 3145}
+{"prediction": {"has_causal": false, "id": 4823, "triples": []}, "sample_id": 4823}
+{"prediction": {"has_causal": false, "id": 1747, "triples": []}, "sample_id": 1747}
+{"prediction": {"has_causal": true, "id": 4313, "triples": [{"cause": {"span": "the pandemic"}, "effect": {"span": "directly affected their lives"}, "relation": "caused"}]}, "sample_id": 4313}
+{"prediction": {"has_causal": true, "id": 8946, "triples": [{"cause": {"span": "opening up fresh sources of supply that we could rapidly vet as being technically, legally and commercially compliant"}, "effect": {"span": "in order to secure product in the rapidly-moving global market for PPE"}, "relation": "caused"}]}, "sample_id": 8946}
+{"prediction": {"has_causal": true, "id": 12442, "triples": [{"cause": {"span": "offering appropriate support"}, "effect": {"span": "to enable them adequately respond to the pandemic"}, "relation": "caused"}]}, "sample_id": 12442}
+{"prediction": {"has_causal": false, "id": 9848, "triples": []}, "sample_id": 9848}
+{"prediction": {"has_causal": false, "id": 13104, "triples": []}, "sample_id": 13104}
+{"prediction": {"has_causal": false, "id": 4265, "triples": []}, "sample_id": 4265}
+{"prediction": {"has_causal": false, "id": 553, "triples": []}, "sample_id": 553}
+{"prediction": {"has_causal": false, "id": 10761, "triples": []}, "sample_id": 10761}
+{"prediction": {"has_causal": false, "id": 3825, "triples": []}, "sample_id": 3825}
+{"prediction": {"has_causal": true, "id": 14720, "triples": [{"cause": {"span": "ratified the Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment"}, "effect": {"span": "bringing to six the number of core human rights conventions to which we are a State party"}, "relation": "caused"}]}, "sample_id": 14720}
+{"prediction": {"has_causal": false, "id": 2448, "triples": []}, "sample_id": 2448}
+{"prediction": {"has_causal": true, "id": 15369, "triples": [{"cause": {"span": "grant the G-5 Sahel Joint Force a mandate, under Chapter VII of the Charter of the United Nations"}, "effect": {"span": "provide it with sustainable and predictable funding"}, "relation": "caused"}]}, "sample_id": 15369}
+{"prediction": {"has_causal": false, "id": 10827, "triples": []}, "sample_id": 10827}
+{"prediction": {"has_causal": false, "id": 9830, "triples": []}, "sample_id": 9830}
+{"prediction": {"has_causal": false, "id": 13139, "triples": []}, "sample_id": 13139}
+{"prediction": {"has_causal": false, "id": 1780, "triples": []}, "sample_id": 1780}
+{"prediction": {"has_causal": true, "id": 10821, "triples": [{"cause": {"span": "We are now more familiar with the complex issues of the world in which we live"}, "effect": {"span": "led us to reaffirm our belief in the sacred principles of international law outlined in the Charter of the United Nations"}, "relation": "caused"}]}, "sample_id": 10821}
+{"prediction": {"has_causal": false, "id": 7058, "triples": []}, "sample_id": 7058}
+{"prediction": {"has_causal": false, "id": 1785, "triples": []}, "sample_id": 1785}
+{"prediction": {"has_causal": true, "id": 9889, "triples": [{"cause": {"span": "respect for international law"}, "effect": {"span": "preventing conflicts and seeking sustainable solutions to disputes"}, "relation": "caused"}]}, "sample_id": 9889}
+{"prediction": {"has_causal": true, "id": 6232, "triples": [{"cause": {"span": "reconsider our activities"}, "effect": {"span": "we can achieve sustainable development in harmony with the planet, with a view to leaving a habitable world for future generations"}, "relation": "caused"}]}, "sample_id": 6232}
+{"prediction": {"has_causal": true, "id": 5059, "triples": [{"cause": {"span": "through the hard work of all of you"}, "effect": {"span": "we have ensured, and will continue to ensure pupils and students get the learning that they deserve"}, "relation": "caused"}]}, "sample_id": 5059}
+{"prediction": {"has_causal": true, "id": 5603, "triples": [{"cause": {"span": "This will mean that those countries most affected by climate change are better able to participate fully in discussions about creating a greener future for the planet"}, "effect": {"span": "participate fully in discussions about creating a greener future for the planet"}, "relation": "caused"}]}, "sample_id": 5603}
+{"prediction": {"has_causal": false, "id": 10012, "triples": []}, "sample_id": 10012}
+{"prediction": {"has_causal": false, "id": 6890, "triples": []}, "sample_id": 6890}
+{"prediction": {"has_causal": false, "id": 8070, "triples": []}, "sample_id": 8070}
+{"prediction": {"has_causal": false, "id": 11048, "triples": []}, "sample_id": 11048}
+{"prediction": {"has_causal": false, "id": 9678, "triples": []}, "sample_id": 9678}
+{"prediction": {"has_causal": false, "id": 170, "triples": []}, "sample_id": 170}
+{"prediction": {"has_causal": true, "id": 3093, "triples": [{"cause": {"span": "insistently call on its authorities to refrain from the use of force"}, "effect": {"span": "to ensure adherence to the principles of international law and human rights and to finally start a peaceful transition of power"}, "relation": "caused"}]}, "sample_id": 3093}
+{"prediction": {"has_causal": false, "id": 6631, "triples": []}, "sample_id": 6631}
+{"prediction": {"has_causal": true, "id": 3156, "triples": [{"cause": {"span": "our greater reliance on digital platforms"}, "effect": {"span": "result in opportunities for our young people in fields related to cyber technology and cyber security"}, "relation": "caused"}]}, "sample_id": 3156}
+{"prediction": {"has_causal": false, "id": 1849, "triples": []}, "sample_id": 1849}
+{"prediction": {"has_causal": false, "id": 1936, "triples": []}, "sample_id": 1936}
+{"prediction": {"has_causal": true, "id": 12904, "triples": [{"cause": {"span": "we work together"}, "effect": {"span": "we would have a better chance of defeating the virus"}, "relation": "caused"}]}, "sample_id": 12904}
+{"prediction": {"has_causal": false, "id": 9921, "triples": []}, "sample_id": 9921}
+{"prediction": {"has_causal": true, "id": 10469, "triples": [{"cause": {"span": "such products store carbon for their entire lifetime"}, "effect": {"span": "carbon-positive"}, "relation": "caused"}]}, "sample_id": 10469}
+{"prediction": {"has_causal": false, "id": 10216, "triples": []}, "sample_id": 10216}
+{"prediction": {"has_causal": false, "id": 3507, "triples": []}, "sample_id": 3507}
+{"prediction": {"has_causal": false, "id": 16731, "triples": []}, "sample_id": 16731}
+{"prediction": {"has_causal": false, "id": 13016, "triples": []}, "sample_id": 13016}
+{"prediction": {"has_causal": true, "id": 8096, "triples": [{"cause": {"span": "This is to ensure the protection they’ve received from vaccination as part of the trial is prolonged"}, "effect": {"span": "over the winter months"}, "relation": "caused"}]}, "sample_id": 8096}
+{"prediction": {"has_causal": false, "id": 8395, "triples": []}, "sample_id": 8395}
+{"prediction": {"has_causal": false, "id": 2007, "triples": []}, "sample_id": 2007}
+{"prediction": {"has_causal": false, "id": 3884, "triples": []}, "sample_id": 3884}
+{"prediction": {"has_causal": false, "id": 4726, "triples": []}, "sample_id": 4726}
+{"prediction": {"has_causal": false, "id": 1961, "triples": []}, "sample_id": 1961}
+{"prediction": {"has_causal": false, "id": 1005, "triples": []}, "sample_id": 1005}
+{"prediction": {"has_causal": false, "id": 1594, "triples": []}, "sample_id": 1594}
+{"prediction": {"has_causal": true, "id": 16214, "triples": [{"cause": {"span": "call for the successful conclusion of the World Trade Organization negotiations on fishery subsidies"}, "effect": {"span": "in order to halt improper practices in this sector"}, "relation": "caused"}]}, "sample_id": 16214}
+{"prediction": {"has_causal": false, "id": 7379, "triples": []}, "sample_id": 7379}
+{"prediction": {"has_causal": true, "id": 1085, "triples": [{"cause": {"span": "Our continued genomic surveillance"}, "effect": {"span": "allows us to further investigate variants that are growing within the UK"}, "relation": "caused"}]}, "sample_id": 1085}
+{"prediction": {"has_causal": false, "id": 4825, "triples": []}, "sample_id": 4825}
+{"prediction": {"has_causal": false, "id": 341, "triples": []}, "sample_id": 341}
+{"prediction": {"has_causal": true, "id": 3627, "triples": [{"cause": {"span": "The 75th anniversary of the UN foundation"}, "effect": {"span": "transforming our Organization into a more dynamic and efficient body"}, "relation": "caused"}]}, "sample_id": 3627}
+{"prediction": {"has_causal": true, "id": 12840, "triples": [{"cause": {"span": "because of the coronavirus disease (COVID-19) pandemic"}, "effect": {"span": "was generally a sleepless year for the whole world"}, "relation": "caused"}]}, "sample_id": 12840}
+{"prediction": {"has_causal": false, "id": 6091, "triples": []}, "sample_id": 6091}
+{"prediction": {"has_causal": true, "id": 13739, "triples": [{"cause": {"span": "various challenges, including inadequate financial resources"}, "effect": {"span": "most African countries were not able to attain the forerunner Millennium Development Goals (MDGs)"}, "relation": "caused"}]}, "sample_id": 13739}
+{"prediction": {"has_causal": false, "id": 314, "triples": []}, "sample_id": 314}
+{"prediction": {"has_causal": false, "id": 11603, "triples": []}, "sample_id": 11603}
+{"prediction": {"has_causal": false, "id": 17486, "triples": []}, "sample_id": 17486}
+{"prediction": {"has_causal": false, "id": 4934, "triples": []}, "sample_id": 4934}
+{"prediction": {"has_causal": false, "id": 4387, "triples": []}, "sample_id": 4387}
+{"prediction": {"has_causal": true, "id": 11820, "triples": [{"cause": {"span": "because of us, because of what we are doing now"}, "effect": {"span": "We will see desertification, drought, crop failure and mass movements of humankind on a scale not seen before"}, "relation": "caused"}]}, "sample_id": 11820}
+{"prediction": {"has_causal": false, "id": 1117, "triples": []}, "sample_id": 1117}
+{"prediction": {"has_causal": false, "id": 86, "triples": []}, "sample_id": 86}
+{"prediction": {"has_causal": true, "id": 12096, "triples": [{"cause": {"span": "a political solution to the Libyan conflict"}, "effect": {"span": "contribute to stability and security in the Sahel region"}, "relation": "caused"}]}, "sample_id": 12096}
+{"prediction": {"has_causal": true, "id": 7034, "triples": [{"cause": {"span": "financially support the United Nations Office for the Coordination of Humanitarian Affairs"}, "effect": {"span": "provide humanitarian support to the Afghan people"}, "relation": "caused"}]}, "sample_id": 7034}
+{"prediction": {"has_causal": true, "id": 17272, "triples": [{"cause": {"span": "adopt an optimistic approach by implementing its development vision"}, "effect": {"span": "recover from this shock wave"}, "relation": "caused"}]}, "sample_id": 17272}
+{"prediction": {"has_causal": false, "id": 13593, "triples": []}, "sample_id": 13593}
+{"prediction": {"has_causal": false, "id": 7079, "triples": []}, "sample_id": 7079}
+{"prediction": {"has_causal": false, "id": 16451, "triples": []}, "sample_id": 16451}
+{"prediction": {"has_causal": false, "id": 10223, "triples": []}, "sample_id": 10223}
+{"prediction": {"has_causal": true, "id": 15667, "triples": [{"cause": {"span": "the overthrow of the elected Government by the Tatmadaw"}, "effect": {"span": "much hardship and suffering to the people of Myanmar"}, "relation": "caused"}]}, "sample_id": 15667}
+{"prediction": {"has_causal": false, "id": 2419, "triples": []}, "sample_id": 2419}
+{"prediction": {"has_causal": true, "id": 3498, "triples": [{"cause": {"span": "took part in various meetings and hosted two summits"}, "effect": {"span": "enabled us to make progress in the fight against violent extremism in the Sahel region"}, "relation": "caused"}]}, "sample_id": 3498}
+{"prediction": {"has_causal": false, "id": 902, "triples": []}, "sample_id": 902}
+{"prediction": {"has_causal": true, "id": 14886, "triples": [{"cause": {"span": "the words used to talk about Africa should from now on, by all means, tell a story of investment and growth"}, "effect": {"span": "was reborn as the New TICAD"}, "relation": "caused"}]}, "sample_id": 14886}
+{"prediction": {"has_causal": false, "id": 271, "triples": []}, "sample_id": 271}
+{"prediction": {"has_causal": true, "id": 17110, "triples": [{"cause": {"span": "sustained economic growth"}, "effect": {"span": "lasting democratic achievements"}, "relation": "caused"}]}, "sample_id": 17110}
+{"prediction": {"has_causal": false, "id": 14266, "triples": []}, "sample_id": 14266}
+{"prediction": {"has_causal": false, "id": 17740, "triples": []}, "sample_id": 17740}
+{"prediction": {"has_causal": false, "id": 12901, "triples": []}, "sample_id": 12901}
+{"prediction": {"has_causal": true, "id": 16275, "triples": [{"cause": {"span": "stop burning coal"}, "effect": {"span": "have no hope of achieving net zero emissions in 31 years’ time"}, "relation": "caused"}]}, "sample_id": 16275}
+{"prediction": {"has_causal": true, "id": 6937, "triples": [{"cause": {"span": "constructive dialogue"}, "effect": {"span": "establishment of sustainable and lasting peace in the region"}, "relation": "caused"}]}, "sample_id": 6937}
+{"prediction": {"has_causal": true, "id": 14584, "triples": [{"cause": {"span": "they are inflaming anti-Armenian sentiments among their people and spending enormous resources on armaments"}, "effect": {"span": "anti-Armenian hate speech has become official policy in Azerbaijan"}, "relation": "caused"}]}, "sample_id": 14584}
+{"prediction": {"has_causal": false, "id": 3495, "triples": []}, "sample_id": 3495}
+{"prediction": {"has_causal": false, "id": 7155, "triples": []}, "sample_id": 7155}
+{"prediction": {"has_causal": false, "id": 9480, "triples": []}, "sample_id": 9480}
+{"prediction": {"has_causal": false, "id": 6856, "triples": []}, "sample_id": 6856}
+{"prediction": {"has_causal": true, "id": 13381, "triples": [{"cause": {"span": "populist rhetoric"}, "effect": {"span": "manipulates minds, fosters hatred and, ultimately, trivializes racism, xenophobia and violent extremism"}, "relation": "caused"}]}, "sample_id": 13381}
+{"prediction": {"has_causal": false, "id": 10257, "triples": []}, "sample_id": 10257}
+{"prediction": {"has_causal": false, "id": 16844, "triples": []}, "sample_id": 16844}
+{"prediction": {"has_causal": true, "id": 1037, "triples": [{"cause": {"span": "have any COVID-19 symptoms"}, "effect": {"span": "get a PCR test"}, "relation": "caused"}]}, "sample_id": 1037}
+{"prediction": {"has_causal": false, "id": 8764, "triples": []}, "sample_id": 8764}
+{"prediction": {"has_causal": true, "id": 8795, "triples": [{"cause": {"span": "builds on user feedback"}, "effect": {"span": "to improve the experience of those using the site"}, "relation": "caused"}]}, "sample_id": 8795}
+{"prediction": {"has_causal": false, "id": 6924, "triples": []}, "sample_id": 6924}
+{"prediction": {"has_causal": false, "id": 7504, "triples": []}, "sample_id": 7504}
+{"prediction": {"has_causal": true, "id": 5234, "triples": [{"cause": {"span": "a third jab"}, "effect": {"span": "will bring you over the try line to boost your protection"}, "relation": "caused"}]}, "sample_id": 5234}
+{"prediction": {"has_causal": false, "id": 10222, "triples": []}, "sample_id": 10222}
+{"prediction": {"has_causal": false, "id": 14489, "triples": []}, "sample_id": 14489}
+{"prediction": {"has_causal": false, "id": 8362, "triples": []}, "sample_id": 8362}
+{"prediction": {"has_causal": false, "id": 8992, "triples": []}, "sample_id": 8992}
+{"prediction": {"has_causal": false, "id": 9893, "triples": []}, "sample_id": 9893}
+{"prediction": {"has_causal": true, "id": 14346, "triples": [{"cause": {"span": "ceased to function"}, "effect": {"span": "creating a real danger that the types of missiles it covered, with a flying time of a few minutes, could be deployed in various regions of the world, including Europe"}, "relation": "caused"}]}, "sample_id": 14346}
+{"prediction": {"has_causal": false, "id": 16382, "triples": []}, "sample_id": 16382}
+{"prediction": {"has_causal": false, "id": 10138, "triples": []}, "sample_id": 10138}
+{"prediction": {"has_causal": false, "id": 583, "triples": []}, "sample_id": 583}
+{"prediction": {"has_causal": false, "id": 6252, "triples": []}, "sample_id": 6252}
+{"prediction": {"has_causal": false, "id": 13683, "triples": []}, "sample_id": 13683}
+{"prediction": {"has_causal": true, "id": 13552, "triples": [{"cause": {"span": "it will enable us"}, "effect": {"span": "to identify new avenues for bridging the current funding gap and directing resources to productive sectors and structural projects linked to the SDGs"}, "relation": "caused"}]}, "sample_id": 13552}
+{"prediction": {"has_causal": true, "id": 16921, "triples": [{"cause": {"span": "generate hope, focus their minds and direct their energies to practical solutions — things they can do, positive behaviour"}, "effect": {"span": "that will deliver enduring results for them"}, "relation": "caused"}]}, "sample_id": 16921}
+{"prediction": {"has_causal": false, "id": 626, "triples": []}, "sample_id": 626}
+{"prediction": {"has_causal": false, "id": 14767, "triples": []}, "sample_id": 14767}
+{"prediction": {"has_causal": false, "id": 4124, "triples": []}, "sample_id": 4124}
+{"prediction": {"has_causal": false, "id": 6272, "triples": []}, "sample_id": 6272}
+{"prediction": {"has_causal": true, "id": 15930, "triples": [{"cause": {"span": "the very cultural survival of entire peoples may be at stake"}, "effect": {"span": "undermining all human rights, including cultural rights"}, "relation": "caused"}]}, "sample_id": 15930}
+{"prediction": {"has_causal": true, "id": 3333, "triples": [{"cause": {"span": "the initiative of our brother President Abdel Fattah al Sisi"}, "effect": {"span": "gave hope to the brotherly Libyan people to confront and resist foreign interference"}, "relation": "caused"}]}, "sample_id": 3333}
+{"prediction": {"has_causal": true, "id": 14109, "triples": [{"cause": {"span": "Due to the irresponsible and harmful migration policy of Brussels"}, "effect": {"span": "more than 1 million illegal migrants entered the territory of Europe"}, "relation": "caused"}]}, "sample_id": 14109}
+{"prediction": {"has_causal": false, "id": 7445, "triples": []}, "sample_id": 7445}
+{"prediction": {"has_causal": false, "id": 7655, "triples": []}, "sample_id": 7655}
+{"prediction": {"has_causal": true, "id": 13854, "triples": [{"cause": {"span": "his able stewardship"}, "effect": {"span": "the General Assembly will accelerate towards achieving our Organization’s objectives"}, "relation": "caused"}]}, "sample_id": 13854}
+{"prediction": {"has_causal": false, "id": 4234, "triples": []}, "sample_id": 4234}
+{"prediction": {"has_causal": false, "id": 9828, "triples": []}, "sample_id": 9828}
+{"prediction": {"has_causal": false, "id": 14642, "triples": []}, "sample_id": 14642}
+{"prediction": {"has_causal": true, "id": 5109, "triples": [{"cause": {"span": "led the successful responses to the detection of MERS in the UK and the first UK cases of monkeypox"}, "effect": {"span": "ensuring dangerous infectious diseases were swiftly contained"}, "relation": "caused"}]}, "sample_id": 5109}
+{"prediction": {"has_causal": false, "id": 9594, "triples": []}, "sample_id": 9594}
+{"prediction": {"has_causal": false, "id": 14121, "triples": []}, "sample_id": 14121}
+{"prediction": {"has_causal": false, "id": 13385, "triples": []}, "sample_id": 13385}
+{"prediction": {"has_causal": true, "id": 15529, "triples": [{"cause": {"span": "the meltdown of the Arctic"}, "effect": {"span": "the alarming rise in the levels of the world’s oceans"}, "relation": "caused"}]}, "sample_id": 15529}
+{"prediction": {"has_causal": true, "id": 16328, "triples": [{"cause": {"span": "investing in renewable energy"}, "effect": {"span": "in order to reduce the impact of climate change"}, "relation": "caused"}]}, "sample_id": 16328}
+{"prediction": {"has_causal": false, "id": 16955, "triples": []}, "sample_id": 16955}
+{"prediction": {"has_causal": true, "id": 1707, "triples": [{"cause": {"span": "finalize robust and fair carbon markets under the Paris rulebook"}, "effect": {"span": "unlock new financing streams that better account for the sustainable development interests of countries such as my own"}, "relation": "caused"}]}, "sample_id": 1707}
+{"prediction": {"has_causal": false, "id": 11249, "triples": []}, "sample_id": 11249}
+{"prediction": {"has_causal": true, "id": 16053, "triples": [{"cause": {"span": "losing their vitality, their brains and their younger generations to the outside world"}, "effect": {"span": "a future decline"}, "relation": "caused"}]}, "sample_id": 16053}
+{"prediction": {"has_causal": true, "id": 9827, "triples": [{"cause": {"span": "donating a patrol boat in 1996"}, "effect": {"span": "support that step"}, "relation": "caused"}]}, "sample_id": 9827}
+{"prediction": {"has_causal": true, "id": 3667, "triples": [{"cause": {"span": "intended effort of halting armed conflict"}, "effect": {"span": "to allow the world to focus on the more pressing and bigger battle against the pandemic"}, "relation": "caused"}]}, "sample_id": 3667}

@@ -1,0 +1,2754 @@
+{
+  "v2": {
+    "prompt_version": "v2",
+    "summary": {
+      "case_count": 10,
+      "judge_success_rate": 1.0,
+      "error_target_count": 5,
+      "detected_error_target_count": 4,
+      "error_detection_rate": 0.8,
+      "protected_unit_count": 36,
+      "retained_protected_unit_count": 34,
+      "clean_retention_rate": 0.9444444444444444,
+      "false_positive_rate": 0.05555555555555558,
+      "clean_case_pass_rate": 0.8,
+      "error_case_detection_rate": 0.8
+    },
+    "cases": [
+      {
+        "case_id": "p1_clean",
+        "pair_id": "p1",
+        "variant": "clean",
+        "span_id": "p1_clean",
+        "span": "the storm destroyed several homes",
+        "expected": {
+          "error_targets": [],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2",
+            "a0"
+          ]
+        },
+        "judge_prompt_version": "v2",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "storm"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "destroyed"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "homes"
+          },
+          {
+            "id": "a0",
+            "kind": "attribute",
+            "path": "c2.attr0",
+            "parent": {
+              "id": "n2",
+              "role": "Theme",
+              "value": "homes"
+            },
+            "role": "Quantifier",
+            "value": "several"
+          }
+        ],
+        "judge_prompt": "You are a strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a list of extracted semantic units, judge whether each extracted unit is semantically appropriate.\n\nImportant:\n- This is precision-oriented evaluation.\n- Judge only the extracted units provided.\n- Do not penalize missing information.\n- Do not suggest additional nodes or attributes.\n- Do not evaluate JSON validity, schema validity, substring validity, depth compliance, or counts. These are checked by code.\n- Do not compare this extraction with other methods.\n- The outer causal relation has already been extracted. Judge only the internal structure of this span.\n\nScores:\nUse only:\n- 1 = correct\n- 0.5 = partially correct / acceptable but imperfect\n- 0 = incorrect\n- null = not applicable\n\nFor each unit, output:\n- s: semantic support. Is the value a meaningful textual unit supported by the span?\n- r: role correctness. Is the role appropriate for this value in context?\n- m: minimal value / scope. Is the value neither too broad nor too narrow for its role?\n- a: attachment correctness. Is it attached to the nearest semantically correct parent?\n- e: short error label, or null if all applicable s/r/m/a scores are 1.\n\nUnit-specific rules:\n- For node units, judge s, r, and m. Use a = null.\n- For attribute units, judge s, r, and a. Use m = null unless the attribute value is clearly too broad or too narrow.\n- For child_link units, judge a. Use s, r, m = null.\n\nScope guidance:\n- Ordinary nodes such as Action, Actor, Theme, Object, Location, Time, State should usually use a concise head or core phrase.\n- Modifiers such as Quantifier, Negation, Age, Name, Type, Topic, Location, Time, Description may be attributes when they simply modify a parent.\n- Use partial if a role or attachment is reasonable but not the best choice.\n- Mark attachment incorrect if a unit is attached to a broad parent while a nearer semantic parent is available.\n- A node does not need children. Maximum depth means \"up to that depth\", not \"must reach that depth\".\n- A Content-like or clause-like unit may be broader when it represents a complete embedded content block, but it should not unnecessarily swallow separable ordinary components.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, wrong_role, too_broad, too_narrow, wrong_parent, unclear, other\n\nReturn strict JSON only. No markdown. No explanation.\n\nInput:\n{\n  \"span_id\": \"p1_clean\",\n  \"span\": \"the storm destroyed several homes\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"storm\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"destroyed\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"homes\"\n    },\n    {\n      \"id\": \"a0\",\n      \"kind\": \"attribute\",\n      \"path\": \"c2.attr0\",\n      \"parent\": {\n        \"id\": \"n2\",\n        \"role\": \"Theme\",\n        \"value\": \"homes\"\n      },\n      \"role\": \"Quantifier\",\n      \"value\": \"several\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p1_clean\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"a0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": 1,\n      \"e\": null\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p1_clean",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "a0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": 1,
+              "e": null
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0,
+          "judge_unit_count": 4,
+          "judge_coverage": 1,
+          "correct_unit_yield": 4,
+          "strict_unit_precision": 1.0,
+          "role_correctness": 1.0,
+          "attachment_correctness": 1.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [],
+        "retained_protected_units": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p1_error",
+        "pair_id": "p1",
+        "variant": "error",
+        "span_id": "p1_error",
+        "span": "the storm destroyed several homes",
+        "expected": {
+          "error_targets": [
+            {
+              "unit_id": "n3",
+              "fields": [
+                "s",
+                "m"
+              ],
+              "issue": "redundant_wrapper"
+            }
+          ],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2",
+            "a0"
+          ]
+        },
+        "judge_prompt_version": "v2",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "storm"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "destroyed"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "homes"
+          },
+          {
+            "id": "a0",
+            "kind": "attribute",
+            "path": "c2.attr0",
+            "parent": {
+              "id": "n2",
+              "role": "Theme",
+              "value": "homes"
+            },
+            "role": "Quantifier",
+            "value": "several"
+          },
+          {
+            "id": "n3",
+            "kind": "node",
+            "path": "c3",
+            "role": "Content",
+            "value": "the storm destroyed several homes"
+          }
+        ],
+        "judge_prompt": "You are a strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a list of extracted semantic units, judge whether each extracted unit is semantically appropriate.\n\nImportant:\n- This is precision-oriented evaluation.\n- Judge only the extracted units provided.\n- Do not penalize missing information.\n- Do not suggest additional nodes or attributes.\n- Do not evaluate JSON validity, schema validity, substring validity, depth compliance, or counts. These are checked by code.\n- Do not compare this extraction with other methods.\n- The outer causal relation has already been extracted. Judge only the internal structure of this span.\n\nScores:\nUse only:\n- 1 = correct\n- 0.5 = partially correct / acceptable but imperfect\n- 0 = incorrect\n- null = not applicable\n\nFor each unit, output:\n- s: semantic support. Is the value a meaningful textual unit supported by the span?\n- r: role correctness. Is the role appropriate for this value in context?\n- m: minimal value / scope. Is the value neither too broad nor too narrow for its role?\n- a: attachment correctness. Is it attached to the nearest semantically correct parent?\n- e: short error label, or null if all applicable s/r/m/a scores are 1.\n\nUnit-specific rules:\n- For node units, judge s, r, and m. Use a = null.\n- For attribute units, judge s, r, and a. Use m = null unless the attribute value is clearly too broad or too narrow.\n- For child_link units, judge a. Use s, r, m = null.\n\nScope guidance:\n- Ordinary nodes such as Action, Actor, Theme, Object, Location, Time, State should usually use a concise head or core phrase.\n- Modifiers such as Quantifier, Negation, Age, Name, Type, Topic, Location, Time, Description may be attributes when they simply modify a parent.\n- Use partial if a role or attachment is reasonable but not the best choice.\n- Mark attachment incorrect if a unit is attached to a broad parent while a nearer semantic parent is available.\n- A node does not need children. Maximum depth means \"up to that depth\", not \"must reach that depth\".\n- A Content-like or clause-like unit may be broader when it represents a complete embedded content block, but it should not unnecessarily swallow separable ordinary components.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, wrong_role, too_broad, too_narrow, wrong_parent, unclear, other\n\nReturn strict JSON only. No markdown. No explanation.\n\nInput:\n{\n  \"span_id\": \"p1_error\",\n  \"span\": \"the storm destroyed several homes\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"storm\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"destroyed\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"homes\"\n    },\n    {\n      \"id\": \"a0\",\n      \"kind\": \"attribute\",\n      \"path\": \"c2.attr0\",\n      \"parent\": {\n        \"id\": \"n2\",\n        \"role\": \"Theme\",\n        \"value\": \"homes\"\n      },\n      \"role\": \"Quantifier\",\n      \"value\": \"several\"\n    },\n    {\n      \"id\": \"n3\",\n      \"kind\": \"node\",\n      \"path\": \"c3\",\n      \"role\": \"Content\",\n      \"value\": \"the storm destroyed several homes\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 1,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p1_error\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"a0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": null,\n      \"a\": 1,\n      \"e\": null\n    },\n    {\n      \"id\": \"n3\",\n      \"s\": 1,\n      \"r\": 0,\n      \"m\": 0,\n      \"a\": null,\n      \"e\": \"wrong_role\"\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p1_error",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "a0",
+              "s": 1,
+              "r": 1,
+              "m": null,
+              "a": 1,
+              "e": null
+            },
+            {
+              "id": "n3",
+              "s": 1,
+              "r": 0,
+              "m": 0,
+              "a": null,
+              "e": "wrong_role"
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 1,
+          "child_link_count": 0,
+          "judge_unit_count": 5,
+          "judge_coverage": 1,
+          "correct_unit_yield": 4,
+          "strict_unit_precision": 0.8,
+          "role_correctness": 0.8,
+          "attachment_correctness": 1.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [
+          true
+        ],
+        "retained_protected_units": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p2_clean",
+        "pair_id": "p2",
+        "variant": "clean",
+        "span_id": "p2_clean",
+        "span": "the committee approved the proposal unanimously",
+        "expected": {
+          "error_targets": [],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2",
+            "a0"
+          ]
+        },
+        "judge_prompt_version": "v2",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "committee"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "approved"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "proposal"
+          },
+          {
+            "id": "a0",
+            "kind": "attribute",
+            "path": "c1.attr0",
+            "parent": {
+              "id": "n1",
+              "role": "Action",
+              "value": "approved"
+            },
+            "role": "Manner",
+            "value": "unanimously"
+          }
+        ],
+        "judge_prompt": "You are a strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a list of extracted semantic units, judge whether each extracted unit is semantically appropriate.\n\nImportant:\n- This is precision-oriented evaluation.\n- Judge only the extracted units provided.\n- Do not penalize missing information.\n- Do not suggest additional nodes or attributes.\n- Do not evaluate JSON validity, schema validity, substring validity, depth compliance, or counts. These are checked by code.\n- Do not compare this extraction with other methods.\n- The outer causal relation has already been extracted. Judge only the internal structure of this span.\n\nScores:\nUse only:\n- 1 = correct\n- 0.5 = partially correct / acceptable but imperfect\n- 0 = incorrect\n- null = not applicable\n\nFor each unit, output:\n- s: semantic support. Is the value a meaningful textual unit supported by the span?\n- r: role correctness. Is the role appropriate for this value in context?\n- m: minimal value / scope. Is the value neither too broad nor too narrow for its role?\n- a: attachment correctness. Is it attached to the nearest semantically correct parent?\n- e: short error label, or null if all applicable s/r/m/a scores are 1.\n\nUnit-specific rules:\n- For node units, judge s, r, and m. Use a = null.\n- For attribute units, judge s, r, and a. Use m = null unless the attribute value is clearly too broad or too narrow.\n- For child_link units, judge a. Use s, r, m = null.\n\nScope guidance:\n- Ordinary nodes such as Action, Actor, Theme, Object, Location, Time, State should usually use a concise head or core phrase.\n- Modifiers such as Quantifier, Negation, Age, Name, Type, Topic, Location, Time, Description may be attributes when they simply modify a parent.\n- Use partial if a role or attachment is reasonable but not the best choice.\n- Mark attachment incorrect if a unit is attached to a broad parent while a nearer semantic parent is available.\n- A node does not need children. Maximum depth means \"up to that depth\", not \"must reach that depth\".\n- A Content-like or clause-like unit may be broader when it represents a complete embedded content block, but it should not unnecessarily swallow separable ordinary components.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, wrong_role, too_broad, too_narrow, wrong_parent, unclear, other\n\nReturn strict JSON only. No markdown. No explanation.\n\nInput:\n{\n  \"span_id\": \"p2_clean\",\n  \"span\": \"the committee approved the proposal unanimously\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"committee\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"approved\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"proposal\"\n    },\n    {\n      \"id\": \"a0\",\n      \"kind\": \"attribute\",\n      \"path\": \"c1.attr0\",\n      \"parent\": {\n        \"id\": \"n1\",\n        \"role\": \"Action\",\n        \"value\": \"approved\"\n      },\n      \"role\": \"Manner\",\n      \"value\": \"unanimously\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p2_clean\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"a0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": 1,\n      \"e\": null\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p2_clean",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "a0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": 1,
+              "e": null
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0,
+          "judge_unit_count": 4,
+          "judge_coverage": 1,
+          "correct_unit_yield": 4,
+          "strict_unit_precision": 1.0,
+          "role_correctness": 1.0,
+          "attachment_correctness": 1.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [],
+        "retained_protected_units": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p2_error",
+        "pair_id": "p2",
+        "variant": "error",
+        "span_id": "p2_error",
+        "span": "the committee approved the proposal unanimously",
+        "expected": {
+          "error_targets": [
+            {
+              "unit_id": "n0",
+              "fields": [
+                "m"
+              ],
+              "issue": "overbroad_action"
+            }
+          ],
+          "protected_unit_ids": [
+            "n1",
+            "n2"
+          ]
+        },
+        "judge_prompt_version": "v2",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Action",
+            "value": "the committee approved the proposal unanimously"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Actor",
+            "value": "committee"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "proposal"
+          },
+          {
+            "id": "a0",
+            "kind": "attribute",
+            "path": "c0.attr0",
+            "parent": {
+              "id": "n0",
+              "role": "Action",
+              "value": "the committee approved the proposal unanimously"
+            },
+            "role": "Manner",
+            "value": "unanimously"
+          }
+        ],
+        "judge_prompt": "You are a strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a list of extracted semantic units, judge whether each extracted unit is semantically appropriate.\n\nImportant:\n- This is precision-oriented evaluation.\n- Judge only the extracted units provided.\n- Do not penalize missing information.\n- Do not suggest additional nodes or attributes.\n- Do not evaluate JSON validity, schema validity, substring validity, depth compliance, or counts. These are checked by code.\n- Do not compare this extraction with other methods.\n- The outer causal relation has already been extracted. Judge only the internal structure of this span.\n\nScores:\nUse only:\n- 1 = correct\n- 0.5 = partially correct / acceptable but imperfect\n- 0 = incorrect\n- null = not applicable\n\nFor each unit, output:\n- s: semantic support. Is the value a meaningful textual unit supported by the span?\n- r: role correctness. Is the role appropriate for this value in context?\n- m: minimal value / scope. Is the value neither too broad nor too narrow for its role?\n- a: attachment correctness. Is it attached to the nearest semantically correct parent?\n- e: short error label, or null if all applicable s/r/m/a scores are 1.\n\nUnit-specific rules:\n- For node units, judge s, r, and m. Use a = null.\n- For attribute units, judge s, r, and a. Use m = null unless the attribute value is clearly too broad or too narrow.\n- For child_link units, judge a. Use s, r, m = null.\n\nScope guidance:\n- Ordinary nodes such as Action, Actor, Theme, Object, Location, Time, State should usually use a concise head or core phrase.\n- Modifiers such as Quantifier, Negation, Age, Name, Type, Topic, Location, Time, Description may be attributes when they simply modify a parent.\n- Use partial if a role or attachment is reasonable but not the best choice.\n- Mark attachment incorrect if a unit is attached to a broad parent while a nearer semantic parent is available.\n- A node does not need children. Maximum depth means \"up to that depth\", not \"must reach that depth\".\n- A Content-like or clause-like unit may be broader when it represents a complete embedded content block, but it should not unnecessarily swallow separable ordinary components.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, wrong_role, too_broad, too_narrow, wrong_parent, unclear, other\n\nReturn strict JSON only. No markdown. No explanation.\n\nInput:\n{\n  \"span_id\": \"p2_error\",\n  \"span\": \"the committee approved the proposal unanimously\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Action\",\n      \"value\": \"the committee approved the proposal unanimously\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Actor\",\n      \"value\": \"committee\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"proposal\"\n    },\n    {\n      \"id\": \"a0\",\n      \"kind\": \"attribute\",\n      \"path\": \"c0.attr0\",\n      \"parent\": {\n        \"id\": \"n0\",\n        \"role\": \"Action\",\n        \"value\": \"the committee approved the proposal unanimously\"\n      },\n      \"role\": \"Manner\",\n      \"value\": \"unanimously\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p2_error\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 0.5,\n      \"a\": null,\n      \"e\": \"too_broad\"\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"a0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": null,\n      \"a\": 0,\n      \"e\": \"wrong_parent\"\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p2_error",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 0.5,
+              "a": null,
+              "e": "too_broad"
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "a0",
+              "s": 1,
+              "r": 1,
+              "m": null,
+              "a": 0,
+              "e": "wrong_parent"
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0,
+          "judge_unit_count": 4,
+          "judge_coverage": 1,
+          "correct_unit_yield": 2,
+          "strict_unit_precision": 0.5,
+          "role_correctness": 1.0,
+          "attachment_correctness": 0.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [
+          true
+        ],
+        "retained_protected_units": [
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p3_clean",
+        "pair_id": "p3",
+        "variant": "clean",
+        "span_id": "p3_clean",
+        "span": "the factory halted production on Monday",
+        "expected": {
+          "error_targets": [],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2",
+            "a0"
+          ]
+        },
+        "judge_prompt_version": "v2",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "factory"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "halted"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "production"
+          },
+          {
+            "id": "a0",
+            "kind": "attribute",
+            "path": "c1.attr0",
+            "parent": {
+              "id": "n1",
+              "role": "Action",
+              "value": "halted"
+            },
+            "role": "Time",
+            "value": "Monday"
+          }
+        ],
+        "judge_prompt": "You are a strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a list of extracted semantic units, judge whether each extracted unit is semantically appropriate.\n\nImportant:\n- This is precision-oriented evaluation.\n- Judge only the extracted units provided.\n- Do not penalize missing information.\n- Do not suggest additional nodes or attributes.\n- Do not evaluate JSON validity, schema validity, substring validity, depth compliance, or counts. These are checked by code.\n- Do not compare this extraction with other methods.\n- The outer causal relation has already been extracted. Judge only the internal structure of this span.\n\nScores:\nUse only:\n- 1 = correct\n- 0.5 = partially correct / acceptable but imperfect\n- 0 = incorrect\n- null = not applicable\n\nFor each unit, output:\n- s: semantic support. Is the value a meaningful textual unit supported by the span?\n- r: role correctness. Is the role appropriate for this value in context?\n- m: minimal value / scope. Is the value neither too broad nor too narrow for its role?\n- a: attachment correctness. Is it attached to the nearest semantically correct parent?\n- e: short error label, or null if all applicable s/r/m/a scores are 1.\n\nUnit-specific rules:\n- For node units, judge s, r, and m. Use a = null.\n- For attribute units, judge s, r, and a. Use m = null unless the attribute value is clearly too broad or too narrow.\n- For child_link units, judge a. Use s, r, m = null.\n\nScope guidance:\n- Ordinary nodes such as Action, Actor, Theme, Object, Location, Time, State should usually use a concise head or core phrase.\n- Modifiers such as Quantifier, Negation, Age, Name, Type, Topic, Location, Time, Description may be attributes when they simply modify a parent.\n- Use partial if a role or attachment is reasonable but not the best choice.\n- Mark attachment incorrect if a unit is attached to a broad parent while a nearer semantic parent is available.\n- A node does not need children. Maximum depth means \"up to that depth\", not \"must reach that depth\".\n- A Content-like or clause-like unit may be broader when it represents a complete embedded content block, but it should not unnecessarily swallow separable ordinary components.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, wrong_role, too_broad, too_narrow, wrong_parent, unclear, other\n\nReturn strict JSON only. No markdown. No explanation.\n\nInput:\n{\n  \"span_id\": \"p3_clean\",\n  \"span\": \"the factory halted production on Monday\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"factory\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"halted\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"production\"\n    },\n    {\n      \"id\": \"a0\",\n      \"kind\": \"attribute\",\n      \"path\": \"c1.attr0\",\n      \"parent\": {\n        \"id\": \"n1\",\n        \"role\": \"Action\",\n        \"value\": \"halted\"\n      },\n      \"role\": \"Time\",\n      \"value\": \"Monday\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p3_clean\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"a0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": 1,\n      \"e\": null\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p3_clean",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "a0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": 1,
+              "e": null
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0,
+          "judge_unit_count": 4,
+          "judge_coverage": 1,
+          "correct_unit_yield": 4,
+          "strict_unit_precision": 1.0,
+          "role_correctness": 1.0,
+          "attachment_correctness": 1.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [],
+        "retained_protected_units": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p3_error",
+        "pair_id": "p3",
+        "variant": "error",
+        "span_id": "p3_error",
+        "span": "the factory halted production on Monday",
+        "expected": {
+          "error_targets": [
+            {
+              "unit_id": "a0",
+              "fields": [
+                "a"
+              ],
+              "issue": "wrong_attribute_parent"
+            }
+          ],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2"
+          ]
+        },
+        "judge_prompt_version": "v2",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "factory"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "halted"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "production"
+          },
+          {
+            "id": "a0",
+            "kind": "attribute",
+            "path": "c2.attr0",
+            "parent": {
+              "id": "n2",
+              "role": "Theme",
+              "value": "production"
+            },
+            "role": "Time",
+            "value": "Monday"
+          }
+        ],
+        "judge_prompt": "You are a strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a list of extracted semantic units, judge whether each extracted unit is semantically appropriate.\n\nImportant:\n- This is precision-oriented evaluation.\n- Judge only the extracted units provided.\n- Do not penalize missing information.\n- Do not suggest additional nodes or attributes.\n- Do not evaluate JSON validity, schema validity, substring validity, depth compliance, or counts. These are checked by code.\n- Do not compare this extraction with other methods.\n- The outer causal relation has already been extracted. Judge only the internal structure of this span.\n\nScores:\nUse only:\n- 1 = correct\n- 0.5 = partially correct / acceptable but imperfect\n- 0 = incorrect\n- null = not applicable\n\nFor each unit, output:\n- s: semantic support. Is the value a meaningful textual unit supported by the span?\n- r: role correctness. Is the role appropriate for this value in context?\n- m: minimal value / scope. Is the value neither too broad nor too narrow for its role?\n- a: attachment correctness. Is it attached to the nearest semantically correct parent?\n- e: short error label, or null if all applicable s/r/m/a scores are 1.\n\nUnit-specific rules:\n- For node units, judge s, r, and m. Use a = null.\n- For attribute units, judge s, r, and a. Use m = null unless the attribute value is clearly too broad or too narrow.\n- For child_link units, judge a. Use s, r, m = null.\n\nScope guidance:\n- Ordinary nodes such as Action, Actor, Theme, Object, Location, Time, State should usually use a concise head or core phrase.\n- Modifiers such as Quantifier, Negation, Age, Name, Type, Topic, Location, Time, Description may be attributes when they simply modify a parent.\n- Use partial if a role or attachment is reasonable but not the best choice.\n- Mark attachment incorrect if a unit is attached to a broad parent while a nearer semantic parent is available.\n- A node does not need children. Maximum depth means \"up to that depth\", not \"must reach that depth\".\n- A Content-like or clause-like unit may be broader when it represents a complete embedded content block, but it should not unnecessarily swallow separable ordinary components.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, wrong_role, too_broad, too_narrow, wrong_parent, unclear, other\n\nReturn strict JSON only. No markdown. No explanation.\n\nInput:\n{\n  \"span_id\": \"p3_error\",\n  \"span\": \"the factory halted production on Monday\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"factory\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"halted\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"production\"\n    },\n    {\n      \"id\": \"a0\",\n      \"kind\": \"attribute\",\n      \"path\": \"c2.attr0\",\n      \"parent\": {\n        \"id\": \"n2\",\n        \"role\": \"Theme\",\n        \"value\": \"production\"\n      },\n      \"role\": \"Time\",\n      \"value\": \"Monday\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p3_error\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"a0\",\n      \"s\": 1,\n      \"r\": 0,\n      \"m\": null,\n      \"a\": 0,\n      \"e\": \"wrong_parent\"\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p3_error",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "a0",
+              "s": 1,
+              "r": 0,
+              "m": null,
+              "a": 0,
+              "e": "wrong_parent"
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0,
+          "judge_unit_count": 4,
+          "judge_coverage": 1,
+          "correct_unit_yield": 3,
+          "strict_unit_precision": 0.75,
+          "role_correctness": 0.75,
+          "attachment_correctness": 0.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [
+          true
+        ],
+        "retained_protected_units": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p4_clean",
+        "pair_id": "p4",
+        "variant": "clean",
+        "span_id": "p4_clean",
+        "span": "firefighters rescued children from the building",
+        "expected": {
+          "error_targets": [],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2",
+            "n3",
+            "l0"
+          ]
+        },
+        "judge_prompt_version": "v2",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "firefighters"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "rescued"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "children"
+          },
+          {
+            "id": "n3",
+            "kind": "node",
+            "path": "c1.ch0",
+            "role": "Source",
+            "value": "building"
+          },
+          {
+            "id": "l0",
+            "kind": "child_link",
+            "path": "c1->c1.ch0",
+            "parent": {
+              "id": "n1",
+              "role": "Action",
+              "value": "rescued"
+            },
+            "child": {
+              "id": "n3",
+              "role": "Source",
+              "value": "building"
+            }
+          }
+        ],
+        "judge_prompt": "You are a strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a list of extracted semantic units, judge whether each extracted unit is semantically appropriate.\n\nImportant:\n- This is precision-oriented evaluation.\n- Judge only the extracted units provided.\n- Do not penalize missing information.\n- Do not suggest additional nodes or attributes.\n- Do not evaluate JSON validity, schema validity, substring validity, depth compliance, or counts. These are checked by code.\n- Do not compare this extraction with other methods.\n- The outer causal relation has already been extracted. Judge only the internal structure of this span.\n\nScores:\nUse only:\n- 1 = correct\n- 0.5 = partially correct / acceptable but imperfect\n- 0 = incorrect\n- null = not applicable\n\nFor each unit, output:\n- s: semantic support. Is the value a meaningful textual unit supported by the span?\n- r: role correctness. Is the role appropriate for this value in context?\n- m: minimal value / scope. Is the value neither too broad nor too narrow for its role?\n- a: attachment correctness. Is it attached to the nearest semantically correct parent?\n- e: short error label, or null if all applicable s/r/m/a scores are 1.\n\nUnit-specific rules:\n- For node units, judge s, r, and m. Use a = null.\n- For attribute units, judge s, r, and a. Use m = null unless the attribute value is clearly too broad or too narrow.\n- For child_link units, judge a. Use s, r, m = null.\n\nScope guidance:\n- Ordinary nodes such as Action, Actor, Theme, Object, Location, Time, State should usually use a concise head or core phrase.\n- Modifiers such as Quantifier, Negation, Age, Name, Type, Topic, Location, Time, Description may be attributes when they simply modify a parent.\n- Use partial if a role or attachment is reasonable but not the best choice.\n- Mark attachment incorrect if a unit is attached to a broad parent while a nearer semantic parent is available.\n- A node does not need children. Maximum depth means \"up to that depth\", not \"must reach that depth\".\n- A Content-like or clause-like unit may be broader when it represents a complete embedded content block, but it should not unnecessarily swallow separable ordinary components.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, wrong_role, too_broad, too_narrow, wrong_parent, unclear, other\n\nReturn strict JSON only. No markdown. No explanation.\n\nInput:\n{\n  \"span_id\": \"p4_clean\",\n  \"span\": \"firefighters rescued children from the building\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"firefighters\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"rescued\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"children\"\n    },\n    {\n      \"id\": \"n3\",\n      \"kind\": \"node\",\n      \"path\": \"c1.ch0\",\n      \"role\": \"Source\",\n      \"value\": \"building\"\n    },\n    {\n      \"id\": \"l0\",\n      \"kind\": \"child_link\",\n      \"path\": \"c1->c1.ch0\",\n      \"parent\": {\n        \"id\": \"n1\",\n        \"role\": \"Action\",\n        \"value\": \"rescued\"\n      },\n      \"child\": {\n        \"id\": \"n3\",\n        \"role\": \"Source\",\n        \"value\": \"building\"\n      }\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 0,
+          "child_link_count": 1
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p4_clean\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n3\",\n      \"s\": 1,\n      \"r\": 0.5,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": \"wrong_role\"\n    },\n    {\n      \"id\": \"l0\",\n      \"s\": null,\n      \"r\": null,\n      \"m\": null,\n      \"a\": 1,\n      \"e\": null\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p4_clean",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n3",
+              "s": 1,
+              "r": 0.5,
+              "m": 1,
+              "a": null,
+              "e": "wrong_role"
+            },
+            {
+              "id": "l0",
+              "s": null,
+              "r": null,
+              "m": null,
+              "a": 1,
+              "e": null
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 0,
+          "child_link_count": 1,
+          "judge_unit_count": 5,
+          "judge_coverage": 1,
+          "correct_unit_yield": 4,
+          "strict_unit_precision": 0.8,
+          "role_correctness": 0.875,
+          "attachment_correctness": 1.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [],
+        "retained_protected_units": [
+          true,
+          true,
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "case_id": "p4_error",
+        "pair_id": "p4",
+        "variant": "error",
+        "span_id": "p4_error",
+        "span": "firefighters rescued children from the building",
+        "expected": {
+          "error_targets": [
+            {
+              "unit_id": "l0",
+              "fields": [
+                "a"
+              ],
+              "issue": "unsupported_hierarchy"
+            }
+          ],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2",
+            "n3"
+          ]
+        },
+        "judge_prompt_version": "v2",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "firefighters"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "rescued"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "children"
+          },
+          {
+            "id": "n3",
+            "kind": "node",
+            "path": "c0.ch0",
+            "role": "Source",
+            "value": "building"
+          },
+          {
+            "id": "l0",
+            "kind": "child_link",
+            "path": "c0->c0.ch0",
+            "parent": {
+              "id": "n0",
+              "role": "Actor",
+              "value": "firefighters"
+            },
+            "child": {
+              "id": "n3",
+              "role": "Source",
+              "value": "building"
+            }
+          }
+        ],
+        "judge_prompt": "You are a strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a list of extracted semantic units, judge whether each extracted unit is semantically appropriate.\n\nImportant:\n- This is precision-oriented evaluation.\n- Judge only the extracted units provided.\n- Do not penalize missing information.\n- Do not suggest additional nodes or attributes.\n- Do not evaluate JSON validity, schema validity, substring validity, depth compliance, or counts. These are checked by code.\n- Do not compare this extraction with other methods.\n- The outer causal relation has already been extracted. Judge only the internal structure of this span.\n\nScores:\nUse only:\n- 1 = correct\n- 0.5 = partially correct / acceptable but imperfect\n- 0 = incorrect\n- null = not applicable\n\nFor each unit, output:\n- s: semantic support. Is the value a meaningful textual unit supported by the span?\n- r: role correctness. Is the role appropriate for this value in context?\n- m: minimal value / scope. Is the value neither too broad nor too narrow for its role?\n- a: attachment correctness. Is it attached to the nearest semantically correct parent?\n- e: short error label, or null if all applicable s/r/m/a scores are 1.\n\nUnit-specific rules:\n- For node units, judge s, r, and m. Use a = null.\n- For attribute units, judge s, r, and a. Use m = null unless the attribute value is clearly too broad or too narrow.\n- For child_link units, judge a. Use s, r, m = null.\n\nScope guidance:\n- Ordinary nodes such as Action, Actor, Theme, Object, Location, Time, State should usually use a concise head or core phrase.\n- Modifiers such as Quantifier, Negation, Age, Name, Type, Topic, Location, Time, Description may be attributes when they simply modify a parent.\n- Use partial if a role or attachment is reasonable but not the best choice.\n- Mark attachment incorrect if a unit is attached to a broad parent while a nearer semantic parent is available.\n- A node does not need children. Maximum depth means \"up to that depth\", not \"must reach that depth\".\n- A Content-like or clause-like unit may be broader when it represents a complete embedded content block, but it should not unnecessarily swallow separable ordinary components.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, wrong_role, too_broad, too_narrow, wrong_parent, unclear, other\n\nReturn strict JSON only. No markdown. No explanation.\n\nInput:\n{\n  \"span_id\": \"p4_error\",\n  \"span\": \"firefighters rescued children from the building\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"firefighters\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"rescued\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"children\"\n    },\n    {\n      \"id\": \"n3\",\n      \"kind\": \"node\",\n      \"path\": \"c0.ch0\",\n      \"role\": \"Source\",\n      \"value\": \"building\"\n    },\n    {\n      \"id\": \"l0\",\n      \"kind\": \"child_link\",\n      \"path\": \"c0->c0.ch0\",\n      \"parent\": {\n        \"id\": \"n0\",\n        \"role\": \"Actor\",\n        \"value\": \"firefighters\"\n      },\n      \"child\": {\n        \"id\": \"n3\",\n        \"role\": \"Source\",\n        \"value\": \"building\"\n      }\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 0,
+          "child_link_count": 1
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p4_error\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n3\",\n      \"s\": 1,\n      \"r\": 0.5,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": \"wrong_role\"\n    },\n    {\n      \"id\": \"l0\",\n      \"s\": null,\n      \"r\": null,\n      \"m\": null,\n      \"a\": 0,\n      \"e\": \"wrong_parent\"\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p4_error",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n3",
+              "s": 1,
+              "r": 0.5,
+              "m": 1,
+              "a": null,
+              "e": "wrong_role"
+            },
+            {
+              "id": "l0",
+              "s": null,
+              "r": null,
+              "m": null,
+              "a": 0,
+              "e": "wrong_parent"
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 0,
+          "child_link_count": 1,
+          "judge_unit_count": 5,
+          "judge_coverage": 1,
+          "correct_unit_yield": 3,
+          "strict_unit_precision": 0.6,
+          "role_correctness": 0.875,
+          "attachment_correctness": 0.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [
+          true
+        ],
+        "retained_protected_units": [
+          true,
+          true,
+          true,
+          false
+        ]
+      },
+      {
+        "case_id": "p5_clean",
+        "pair_id": "p5",
+        "variant": "clean",
+        "span_id": "p5_clean",
+        "span": "heavy rain flooded the road",
+        "expected": {
+          "error_targets": [],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2"
+          ]
+        },
+        "judge_prompt_version": "v2",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "heavy rain"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "flooded"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "road"
+          }
+        ],
+        "judge_prompt": "You are a strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a list of extracted semantic units, judge whether each extracted unit is semantically appropriate.\n\nImportant:\n- This is precision-oriented evaluation.\n- Judge only the extracted units provided.\n- Do not penalize missing information.\n- Do not suggest additional nodes or attributes.\n- Do not evaluate JSON validity, schema validity, substring validity, depth compliance, or counts. These are checked by code.\n- Do not compare this extraction with other methods.\n- The outer causal relation has already been extracted. Judge only the internal structure of this span.\n\nScores:\nUse only:\n- 1 = correct\n- 0.5 = partially correct / acceptable but imperfect\n- 0 = incorrect\n- null = not applicable\n\nFor each unit, output:\n- s: semantic support. Is the value a meaningful textual unit supported by the span?\n- r: role correctness. Is the role appropriate for this value in context?\n- m: minimal value / scope. Is the value neither too broad nor too narrow for its role?\n- a: attachment correctness. Is it attached to the nearest semantically correct parent?\n- e: short error label, or null if all applicable s/r/m/a scores are 1.\n\nUnit-specific rules:\n- For node units, judge s, r, and m. Use a = null.\n- For attribute units, judge s, r, and a. Use m = null unless the attribute value is clearly too broad or too narrow.\n- For child_link units, judge a. Use s, r, m = null.\n\nScope guidance:\n- Ordinary nodes such as Action, Actor, Theme, Object, Location, Time, State should usually use a concise head or core phrase.\n- Modifiers such as Quantifier, Negation, Age, Name, Type, Topic, Location, Time, Description may be attributes when they simply modify a parent.\n- Use partial if a role or attachment is reasonable but not the best choice.\n- Mark attachment incorrect if a unit is attached to a broad parent while a nearer semantic parent is available.\n- A node does not need children. Maximum depth means \"up to that depth\", not \"must reach that depth\".\n- A Content-like or clause-like unit may be broader when it represents a complete embedded content block, but it should not unnecessarily swallow separable ordinary components.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, wrong_role, too_broad, too_narrow, wrong_parent, unclear, other\n\nReturn strict JSON only. No markdown. No explanation.\n\nInput:\n{\n  \"span_id\": \"p5_clean\",\n  \"span\": \"heavy rain flooded the road\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"heavy rain\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"flooded\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"road\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 0,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p5_clean\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p5_clean",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 0,
+          "child_link_count": 0,
+          "judge_unit_count": 3,
+          "judge_coverage": 1,
+          "correct_unit_yield": 3,
+          "strict_unit_precision": 1.0,
+          "role_correctness": 1.0,
+          "attachment_correctness": null
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [],
+        "retained_protected_units": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p5_error",
+        "pair_id": "p5",
+        "variant": "error",
+        "span_id": "p5_error",
+        "span": "heavy rain flooded the road",
+        "expected": {
+          "error_targets": [
+            {
+              "unit_id": "n3",
+              "fields": [
+                "s"
+              ],
+              "issue": "not_meaningful_unit"
+            }
+          ],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2"
+          ]
+        },
+        "judge_prompt_version": "v2",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "heavy rain"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "flooded"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "road"
+          },
+          {
+            "id": "n3",
+            "kind": "node",
+            "path": "c3",
+            "role": "Description",
+            "value": "the"
+          }
+        ],
+        "judge_prompt": "You are a strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a list of extracted semantic units, judge whether each extracted unit is semantically appropriate.\n\nImportant:\n- This is precision-oriented evaluation.\n- Judge only the extracted units provided.\n- Do not penalize missing information.\n- Do not suggest additional nodes or attributes.\n- Do not evaluate JSON validity, schema validity, substring validity, depth compliance, or counts. These are checked by code.\n- Do not compare this extraction with other methods.\n- The outer causal relation has already been extracted. Judge only the internal structure of this span.\n\nScores:\nUse only:\n- 1 = correct\n- 0.5 = partially correct / acceptable but imperfect\n- 0 = incorrect\n- null = not applicable\n\nFor each unit, output:\n- s: semantic support. Is the value a meaningful textual unit supported by the span?\n- r: role correctness. Is the role appropriate for this value in context?\n- m: minimal value / scope. Is the value neither too broad nor too narrow for its role?\n- a: attachment correctness. Is it attached to the nearest semantically correct parent?\n- e: short error label, or null if all applicable s/r/m/a scores are 1.\n\nUnit-specific rules:\n- For node units, judge s, r, and m. Use a = null.\n- For attribute units, judge s, r, and a. Use m = null unless the attribute value is clearly too broad or too narrow.\n- For child_link units, judge a. Use s, r, m = null.\n\nScope guidance:\n- Ordinary nodes such as Action, Actor, Theme, Object, Location, Time, State should usually use a concise head or core phrase.\n- Modifiers such as Quantifier, Negation, Age, Name, Type, Topic, Location, Time, Description may be attributes when they simply modify a parent.\n- Use partial if a role or attachment is reasonable but not the best choice.\n- Mark attachment incorrect if a unit is attached to a broad parent while a nearer semantic parent is available.\n- A node does not need children. Maximum depth means \"up to that depth\", not \"must reach that depth\".\n- A Content-like or clause-like unit may be broader when it represents a complete embedded content block, but it should not unnecessarily swallow separable ordinary components.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, wrong_role, too_broad, too_narrow, wrong_parent, unclear, other\n\nReturn strict JSON only. No markdown. No explanation.\n\nInput:\n{\n  \"span_id\": \"p5_error\",\n  \"span\": \"heavy rain flooded the road\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"heavy rain\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"flooded\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"road\"\n    },\n    {\n      \"id\": \"n3\",\n      \"kind\": \"node\",\n      \"path\": \"c3\",\n      \"role\": \"Description\",\n      \"value\": \"the\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 0,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p5_error\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n3\",\n      \"s\": 1,\n      \"r\": 0,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": \"wrong_role\"\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p5_error",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n3",
+              "s": 1,
+              "r": 0,
+              "m": 1,
+              "a": null,
+              "e": "wrong_role"
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 0,
+          "child_link_count": 0,
+          "judge_unit_count": 4,
+          "judge_coverage": 1,
+          "correct_unit_yield": 3,
+          "strict_unit_precision": 0.75,
+          "role_correctness": 0.75,
+          "attachment_correctness": null
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [
+          false
+        ],
+        "retained_protected_units": [
+          true,
+          true,
+          true
+        ]
+      }
+    ],
+    "gate": {
+      "passed": true,
+      "checks": {
+        "all_calls_succeeded": true,
+        "error_detection_at_least_80pct": true,
+        "clean_retention_at_least_80pct": true,
+        "false_positive_at_most_20pct": true
+      }
+    }
+  },
+  "v3": {
+    "prompt_version": "v3",
+    "summary": {
+      "case_count": 10,
+      "judge_success_rate": 1.0,
+      "error_target_count": 5,
+      "detected_error_target_count": 5,
+      "error_detection_rate": 1.0,
+      "protected_unit_count": 36,
+      "retained_protected_unit_count": 36,
+      "clean_retention_rate": 1.0,
+      "false_positive_rate": 0.0,
+      "clean_case_pass_rate": 1.0,
+      "error_case_detection_rate": 1.0
+    },
+    "cases": [
+      {
+        "case_id": "p1_clean",
+        "pair_id": "p1",
+        "variant": "clean",
+        "span_id": "p1_clean",
+        "span": "the storm destroyed several homes",
+        "expected": {
+          "error_targets": [],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2",
+            "a0"
+          ]
+        },
+        "judge_prompt_version": "v3",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "storm"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "destroyed"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "homes"
+          },
+          {
+            "id": "a0",
+            "kind": "attribute",
+            "path": "c2.attr0",
+            "parent": {
+              "id": "n2",
+              "role": "Theme",
+              "value": "homes"
+            },
+            "role": "Quantifier",
+            "value": "several"
+          }
+        ],
+        "judge_prompt": "You are an independent, strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a complete flat list of extracted semantic units for that span, judge every provided unit.\n\nEvaluation boundary:\n- This is precision-oriented evaluation. Judge only provided units; do not penalize omissions.\n- Do not reward a unit merely because its text occurs in the span.\n- Do not assume that the extractor's role choice or hierarchy is correct.\n- Consider whether an alternative role, flatter representation, sibling relation, or different available parent would be semantically better.\n- Do not evaluate JSON/schema validity, substring validity, depth limits, or counts; code handles these checks.\n- Do not compare methods and do not reconstruct the outer causal relation.\n\nScores:\n- 1 = clearly correct\n- 0.5 = defensible but materially imperfect or ambiguous\n- 0 = incorrect\n- null = not applicable\n\nFields:\n- s — semantic usefulness: Does this unit contribute a distinct, meaningful proposition/entity/modifier worth representing in the KG? Textual presence alone is insufficient. A vacuous fragment, duplicate restatement, or wrapper that adds no distinct information must score below 1.\n- r — role correctness: Is this the best semantic role for the value in this span? A merely possible role is 0.5 when a clearly better role exists.\n- m — minimal and complete scope:\n  - 1: concise but complete for its role; no separable participant/modifier is unnecessarily swallowed.\n  - 0.5: slightly broad/narrow, or an unnecessary wrapper that remains coherent and partly useful.\n  - 0: a fragment cannot fill the role, or the value absorbs multiple independently representable components and therefore has the wrong granularity.\n- a — attachment correctness:\n  - 1: the parent-child/modifier relation is semantically licensed and the parent is the nearest appropriate one among the units supplied.\n  - 0.5: attachment is plausible but ambiguous or not the best available analysis.\n  - 0: the relation is unsupported or another supplied parent is clearly better. Surface adjacency or textual containment alone never proves attachment.\n- e — one short error label, or null only when all applicable fields equal 1.\n\nUnit rules:\n- node: score s, r, m; a = null.\n- attribute: score s, r, a; use m only when its value is clearly too broad/narrow, otherwise m = null.\n- child_link: score a only; s = r = m = null.\n\nCalibration examples (constructed independently of the extractor and evaluation set):\n\nCorrect example:\nSpan: \"the council approved the budget on Tuesday\"\nUnits: Action=\"approved\"; Actor=\"council\"; Theme=\"budget\"; Time=\"Tuesday\" attached to Action=\"approved\".\nJudgment: the three nodes and Time attribute have all applicable scores 1 because they are distinct, concise, and correctly attached.\n\nIncorrect counterpart:\nSpan: \"the engine suddenly failed\"\nUnits: Action=\"failed\"; Theme=\"engine\"; Content=\"the engine suddenly failed\".\nJudgment: Action and Theme may score 1. The Content wrapper must have s below 1 and m below 1 because it restates the already represented event while swallowing separable components.\n\nCorrect attachment example:\nSpan: \"workers repaired the bridge in Boston\"\nUnits include Action=\"repaired\", Actor=\"workers\", Theme=\"bridge\", Location=\"Boston\", with Location attached to Action.\nJudgment: the Location attachment is correct.\n\nIncorrect attachment counterpart:\nFor the same span and units, Location=\"Boston\" attached to Actor=\"workers\" must have a below 1. Proximity to \"workers\" would not license that parent when the repair event is the appropriate parent.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, redundant_unit, wrong_role, too_broad, too_narrow, wrong_parent, unsupported_hierarchy, unclear, other\n\nReturn strict JSON only. No markdown and no explanation outside the JSON.\nReturn every input unit exactly once, preserving its id.\n\nInput:\n{\n  \"span_id\": \"p1_clean\",\n  \"span\": \"the storm destroyed several homes\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"storm\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"destroyed\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"homes\"\n    },\n    {\n      \"id\": \"a0\",\n      \"kind\": \"attribute\",\n      \"path\": \"c2.attr0\",\n      \"parent\": {\n        \"id\": \"n2\",\n        \"role\": \"Theme\",\n        \"value\": \"homes\"\n      },\n      \"role\": \"Quantifier\",\n      \"value\": \"several\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p1_clean\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"a0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": null,\n      \"a\": 1,\n      \"e\": null\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p1_clean",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "a0",
+              "s": 1,
+              "r": 1,
+              "m": null,
+              "a": 1,
+              "e": null
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0,
+          "judge_unit_count": 4,
+          "judge_coverage": 1,
+          "correct_unit_yield": 4,
+          "strict_unit_precision": 1.0,
+          "role_correctness": 1.0,
+          "attachment_correctness": 1.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [],
+        "retained_protected_units": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p1_error",
+        "pair_id": "p1",
+        "variant": "error",
+        "span_id": "p1_error",
+        "span": "the storm destroyed several homes",
+        "expected": {
+          "error_targets": [
+            {
+              "unit_id": "n3",
+              "fields": [
+                "s",
+                "m"
+              ],
+              "issue": "redundant_wrapper"
+            }
+          ],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2",
+            "a0"
+          ]
+        },
+        "judge_prompt_version": "v3",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "storm"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "destroyed"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "homes"
+          },
+          {
+            "id": "a0",
+            "kind": "attribute",
+            "path": "c2.attr0",
+            "parent": {
+              "id": "n2",
+              "role": "Theme",
+              "value": "homes"
+            },
+            "role": "Quantifier",
+            "value": "several"
+          },
+          {
+            "id": "n3",
+            "kind": "node",
+            "path": "c3",
+            "role": "Content",
+            "value": "the storm destroyed several homes"
+          }
+        ],
+        "judge_prompt": "You are an independent, strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a complete flat list of extracted semantic units for that span, judge every provided unit.\n\nEvaluation boundary:\n- This is precision-oriented evaluation. Judge only provided units; do not penalize omissions.\n- Do not reward a unit merely because its text occurs in the span.\n- Do not assume that the extractor's role choice or hierarchy is correct.\n- Consider whether an alternative role, flatter representation, sibling relation, or different available parent would be semantically better.\n- Do not evaluate JSON/schema validity, substring validity, depth limits, or counts; code handles these checks.\n- Do not compare methods and do not reconstruct the outer causal relation.\n\nScores:\n- 1 = clearly correct\n- 0.5 = defensible but materially imperfect or ambiguous\n- 0 = incorrect\n- null = not applicable\n\nFields:\n- s — semantic usefulness: Does this unit contribute a distinct, meaningful proposition/entity/modifier worth representing in the KG? Textual presence alone is insufficient. A vacuous fragment, duplicate restatement, or wrapper that adds no distinct information must score below 1.\n- r — role correctness: Is this the best semantic role for the value in this span? A merely possible role is 0.5 when a clearly better role exists.\n- m — minimal and complete scope:\n  - 1: concise but complete for its role; no separable participant/modifier is unnecessarily swallowed.\n  - 0.5: slightly broad/narrow, or an unnecessary wrapper that remains coherent and partly useful.\n  - 0: a fragment cannot fill the role, or the value absorbs multiple independently representable components and therefore has the wrong granularity.\n- a — attachment correctness:\n  - 1: the parent-child/modifier relation is semantically licensed and the parent is the nearest appropriate one among the units supplied.\n  - 0.5: attachment is plausible but ambiguous or not the best available analysis.\n  - 0: the relation is unsupported or another supplied parent is clearly better. Surface adjacency or textual containment alone never proves attachment.\n- e — one short error label, or null only when all applicable fields equal 1.\n\nUnit rules:\n- node: score s, r, m; a = null.\n- attribute: score s, r, a; use m only when its value is clearly too broad/narrow, otherwise m = null.\n- child_link: score a only; s = r = m = null.\n\nCalibration examples (constructed independently of the extractor and evaluation set):\n\nCorrect example:\nSpan: \"the council approved the budget on Tuesday\"\nUnits: Action=\"approved\"; Actor=\"council\"; Theme=\"budget\"; Time=\"Tuesday\" attached to Action=\"approved\".\nJudgment: the three nodes and Time attribute have all applicable scores 1 because they are distinct, concise, and correctly attached.\n\nIncorrect counterpart:\nSpan: \"the engine suddenly failed\"\nUnits: Action=\"failed\"; Theme=\"engine\"; Content=\"the engine suddenly failed\".\nJudgment: Action and Theme may score 1. The Content wrapper must have s below 1 and m below 1 because it restates the already represented event while swallowing separable components.\n\nCorrect attachment example:\nSpan: \"workers repaired the bridge in Boston\"\nUnits include Action=\"repaired\", Actor=\"workers\", Theme=\"bridge\", Location=\"Boston\", with Location attached to Action.\nJudgment: the Location attachment is correct.\n\nIncorrect attachment counterpart:\nFor the same span and units, Location=\"Boston\" attached to Actor=\"workers\" must have a below 1. Proximity to \"workers\" would not license that parent when the repair event is the appropriate parent.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, redundant_unit, wrong_role, too_broad, too_narrow, wrong_parent, unsupported_hierarchy, unclear, other\n\nReturn strict JSON only. No markdown and no explanation outside the JSON.\nReturn every input unit exactly once, preserving its id.\n\nInput:\n{\n  \"span_id\": \"p1_error\",\n  \"span\": \"the storm destroyed several homes\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"storm\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"destroyed\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"homes\"\n    },\n    {\n      \"id\": \"a0\",\n      \"kind\": \"attribute\",\n      \"path\": \"c2.attr0\",\n      \"parent\": {\n        \"id\": \"n2\",\n        \"role\": \"Theme\",\n        \"value\": \"homes\"\n      },\n      \"role\": \"Quantifier\",\n      \"value\": \"several\"\n    },\n    {\n      \"id\": \"n3\",\n      \"kind\": \"node\",\n      \"path\": \"c3\",\n      \"role\": \"Content\",\n      \"value\": \"the storm destroyed several homes\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 1,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p1_error\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"a0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": null,\n      \"a\": 1,\n      \"e\": null\n    },\n    {\n      \"id\": \"n3\",\n      \"s\": 0,\n      \"r\": 0.5,\n      \"m\": 0,\n      \"a\": null,\n      \"e\": \"redundant_unit\"\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p1_error",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "a0",
+              "s": 1,
+              "r": 1,
+              "m": null,
+              "a": 1,
+              "e": null
+            },
+            {
+              "id": "n3",
+              "s": 0,
+              "r": 0.5,
+              "m": 0,
+              "a": null,
+              "e": "redundant_unit"
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 1,
+          "child_link_count": 0,
+          "judge_unit_count": 5,
+          "judge_coverage": 1,
+          "correct_unit_yield": 4,
+          "strict_unit_precision": 0.8,
+          "role_correctness": 0.9,
+          "attachment_correctness": 1.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [
+          true
+        ],
+        "retained_protected_units": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p2_clean",
+        "pair_id": "p2",
+        "variant": "clean",
+        "span_id": "p2_clean",
+        "span": "the committee approved the proposal unanimously",
+        "expected": {
+          "error_targets": [],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2",
+            "a0"
+          ]
+        },
+        "judge_prompt_version": "v3",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "committee"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "approved"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "proposal"
+          },
+          {
+            "id": "a0",
+            "kind": "attribute",
+            "path": "c1.attr0",
+            "parent": {
+              "id": "n1",
+              "role": "Action",
+              "value": "approved"
+            },
+            "role": "Manner",
+            "value": "unanimously"
+          }
+        ],
+        "judge_prompt": "You are an independent, strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a complete flat list of extracted semantic units for that span, judge every provided unit.\n\nEvaluation boundary:\n- This is precision-oriented evaluation. Judge only provided units; do not penalize omissions.\n- Do not reward a unit merely because its text occurs in the span.\n- Do not assume that the extractor's role choice or hierarchy is correct.\n- Consider whether an alternative role, flatter representation, sibling relation, or different available parent would be semantically better.\n- Do not evaluate JSON/schema validity, substring validity, depth limits, or counts; code handles these checks.\n- Do not compare methods and do not reconstruct the outer causal relation.\n\nScores:\n- 1 = clearly correct\n- 0.5 = defensible but materially imperfect or ambiguous\n- 0 = incorrect\n- null = not applicable\n\nFields:\n- s — semantic usefulness: Does this unit contribute a distinct, meaningful proposition/entity/modifier worth representing in the KG? Textual presence alone is insufficient. A vacuous fragment, duplicate restatement, or wrapper that adds no distinct information must score below 1.\n- r — role correctness: Is this the best semantic role for the value in this span? A merely possible role is 0.5 when a clearly better role exists.\n- m — minimal and complete scope:\n  - 1: concise but complete for its role; no separable participant/modifier is unnecessarily swallowed.\n  - 0.5: slightly broad/narrow, or an unnecessary wrapper that remains coherent and partly useful.\n  - 0: a fragment cannot fill the role, or the value absorbs multiple independently representable components and therefore has the wrong granularity.\n- a — attachment correctness:\n  - 1: the parent-child/modifier relation is semantically licensed and the parent is the nearest appropriate one among the units supplied.\n  - 0.5: attachment is plausible but ambiguous or not the best available analysis.\n  - 0: the relation is unsupported or another supplied parent is clearly better. Surface adjacency or textual containment alone never proves attachment.\n- e — one short error label, or null only when all applicable fields equal 1.\n\nUnit rules:\n- node: score s, r, m; a = null.\n- attribute: score s, r, a; use m only when its value is clearly too broad/narrow, otherwise m = null.\n- child_link: score a only; s = r = m = null.\n\nCalibration examples (constructed independently of the extractor and evaluation set):\n\nCorrect example:\nSpan: \"the council approved the budget on Tuesday\"\nUnits: Action=\"approved\"; Actor=\"council\"; Theme=\"budget\"; Time=\"Tuesday\" attached to Action=\"approved\".\nJudgment: the three nodes and Time attribute have all applicable scores 1 because they are distinct, concise, and correctly attached.\n\nIncorrect counterpart:\nSpan: \"the engine suddenly failed\"\nUnits: Action=\"failed\"; Theme=\"engine\"; Content=\"the engine suddenly failed\".\nJudgment: Action and Theme may score 1. The Content wrapper must have s below 1 and m below 1 because it restates the already represented event while swallowing separable components.\n\nCorrect attachment example:\nSpan: \"workers repaired the bridge in Boston\"\nUnits include Action=\"repaired\", Actor=\"workers\", Theme=\"bridge\", Location=\"Boston\", with Location attached to Action.\nJudgment: the Location attachment is correct.\n\nIncorrect attachment counterpart:\nFor the same span and units, Location=\"Boston\" attached to Actor=\"workers\" must have a below 1. Proximity to \"workers\" would not license that parent when the repair event is the appropriate parent.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, redundant_unit, wrong_role, too_broad, too_narrow, wrong_parent, unsupported_hierarchy, unclear, other\n\nReturn strict JSON only. No markdown and no explanation outside the JSON.\nReturn every input unit exactly once, preserving its id.\n\nInput:\n{\n  \"span_id\": \"p2_clean\",\n  \"span\": \"the committee approved the proposal unanimously\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"committee\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"approved\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"proposal\"\n    },\n    {\n      \"id\": \"a0\",\n      \"kind\": \"attribute\",\n      \"path\": \"c1.attr0\",\n      \"parent\": {\n        \"id\": \"n1\",\n        \"role\": \"Action\",\n        \"value\": \"approved\"\n      },\n      \"role\": \"Manner\",\n      \"value\": \"unanimously\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p2_clean\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"a0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": null,\n      \"a\": 1,\n      \"e\": null\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p2_clean",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "a0",
+              "s": 1,
+              "r": 1,
+              "m": null,
+              "a": 1,
+              "e": null
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0,
+          "judge_unit_count": 4,
+          "judge_coverage": 1,
+          "correct_unit_yield": 4,
+          "strict_unit_precision": 1.0,
+          "role_correctness": 1.0,
+          "attachment_correctness": 1.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [],
+        "retained_protected_units": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p2_error",
+        "pair_id": "p2",
+        "variant": "error",
+        "span_id": "p2_error",
+        "span": "the committee approved the proposal unanimously",
+        "expected": {
+          "error_targets": [
+            {
+              "unit_id": "n0",
+              "fields": [
+                "m"
+              ],
+              "issue": "overbroad_action"
+            }
+          ],
+          "protected_unit_ids": [
+            "n1",
+            "n2"
+          ]
+        },
+        "judge_prompt_version": "v3",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Action",
+            "value": "the committee approved the proposal unanimously"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Actor",
+            "value": "committee"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "proposal"
+          },
+          {
+            "id": "a0",
+            "kind": "attribute",
+            "path": "c0.attr0",
+            "parent": {
+              "id": "n0",
+              "role": "Action",
+              "value": "the committee approved the proposal unanimously"
+            },
+            "role": "Manner",
+            "value": "unanimously"
+          }
+        ],
+        "judge_prompt": "You are an independent, strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a complete flat list of extracted semantic units for that span, judge every provided unit.\n\nEvaluation boundary:\n- This is precision-oriented evaluation. Judge only provided units; do not penalize omissions.\n- Do not reward a unit merely because its text occurs in the span.\n- Do not assume that the extractor's role choice or hierarchy is correct.\n- Consider whether an alternative role, flatter representation, sibling relation, or different available parent would be semantically better.\n- Do not evaluate JSON/schema validity, substring validity, depth limits, or counts; code handles these checks.\n- Do not compare methods and do not reconstruct the outer causal relation.\n\nScores:\n- 1 = clearly correct\n- 0.5 = defensible but materially imperfect or ambiguous\n- 0 = incorrect\n- null = not applicable\n\nFields:\n- s — semantic usefulness: Does this unit contribute a distinct, meaningful proposition/entity/modifier worth representing in the KG? Textual presence alone is insufficient. A vacuous fragment, duplicate restatement, or wrapper that adds no distinct information must score below 1.\n- r — role correctness: Is this the best semantic role for the value in this span? A merely possible role is 0.5 when a clearly better role exists.\n- m — minimal and complete scope:\n  - 1: concise but complete for its role; no separable participant/modifier is unnecessarily swallowed.\n  - 0.5: slightly broad/narrow, or an unnecessary wrapper that remains coherent and partly useful.\n  - 0: a fragment cannot fill the role, or the value absorbs multiple independently representable components and therefore has the wrong granularity.\n- a — attachment correctness:\n  - 1: the parent-child/modifier relation is semantically licensed and the parent is the nearest appropriate one among the units supplied.\n  - 0.5: attachment is plausible but ambiguous or not the best available analysis.\n  - 0: the relation is unsupported or another supplied parent is clearly better. Surface adjacency or textual containment alone never proves attachment.\n- e — one short error label, or null only when all applicable fields equal 1.\n\nUnit rules:\n- node: score s, r, m; a = null.\n- attribute: score s, r, a; use m only when its value is clearly too broad/narrow, otherwise m = null.\n- child_link: score a only; s = r = m = null.\n\nCalibration examples (constructed independently of the extractor and evaluation set):\n\nCorrect example:\nSpan: \"the council approved the budget on Tuesday\"\nUnits: Action=\"approved\"; Actor=\"council\"; Theme=\"budget\"; Time=\"Tuesday\" attached to Action=\"approved\".\nJudgment: the three nodes and Time attribute have all applicable scores 1 because they are distinct, concise, and correctly attached.\n\nIncorrect counterpart:\nSpan: \"the engine suddenly failed\"\nUnits: Action=\"failed\"; Theme=\"engine\"; Content=\"the engine suddenly failed\".\nJudgment: Action and Theme may score 1. The Content wrapper must have s below 1 and m below 1 because it restates the already represented event while swallowing separable components.\n\nCorrect attachment example:\nSpan: \"workers repaired the bridge in Boston\"\nUnits include Action=\"repaired\", Actor=\"workers\", Theme=\"bridge\", Location=\"Boston\", with Location attached to Action.\nJudgment: the Location attachment is correct.\n\nIncorrect attachment counterpart:\nFor the same span and units, Location=\"Boston\" attached to Actor=\"workers\" must have a below 1. Proximity to \"workers\" would not license that parent when the repair event is the appropriate parent.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, redundant_unit, wrong_role, too_broad, too_narrow, wrong_parent, unsupported_hierarchy, unclear, other\n\nReturn strict JSON only. No markdown and no explanation outside the JSON.\nReturn every input unit exactly once, preserving its id.\n\nInput:\n{\n  \"span_id\": \"p2_error\",\n  \"span\": \"the committee approved the proposal unanimously\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Action\",\n      \"value\": \"the committee approved the proposal unanimously\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Actor\",\n      \"value\": \"committee\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"proposal\"\n    },\n    {\n      \"id\": \"a0\",\n      \"kind\": \"attribute\",\n      \"path\": \"c0.attr0\",\n      \"parent\": {\n        \"id\": \"n0\",\n        \"role\": \"Action\",\n        \"value\": \"the committee approved the proposal unanimously\"\n      },\n      \"role\": \"Manner\",\n      \"value\": \"unanimously\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p2_error\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 0,\n      \"r\": 0.5,\n      \"m\": 0,\n      \"a\": null,\n      \"e\": \"too_broad\"\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"a0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": null,\n      \"a\": 0,\n      \"e\": \"wrong_parent\"\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p2_error",
+          "units": [
+            {
+              "id": "n0",
+              "s": 0,
+              "r": 0.5,
+              "m": 0,
+              "a": null,
+              "e": "too_broad"
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "a0",
+              "s": 1,
+              "r": 1,
+              "m": null,
+              "a": 0,
+              "e": "wrong_parent"
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0,
+          "judge_unit_count": 4,
+          "judge_coverage": 1,
+          "correct_unit_yield": 2,
+          "strict_unit_precision": 0.5,
+          "role_correctness": 0.875,
+          "attachment_correctness": 0.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [
+          true
+        ],
+        "retained_protected_units": [
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p3_clean",
+        "pair_id": "p3",
+        "variant": "clean",
+        "span_id": "p3_clean",
+        "span": "the factory halted production on Monday",
+        "expected": {
+          "error_targets": [],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2",
+            "a0"
+          ]
+        },
+        "judge_prompt_version": "v3",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "factory"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "halted"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "production"
+          },
+          {
+            "id": "a0",
+            "kind": "attribute",
+            "path": "c1.attr0",
+            "parent": {
+              "id": "n1",
+              "role": "Action",
+              "value": "halted"
+            },
+            "role": "Time",
+            "value": "Monday"
+          }
+        ],
+        "judge_prompt": "You are an independent, strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a complete flat list of extracted semantic units for that span, judge every provided unit.\n\nEvaluation boundary:\n- This is precision-oriented evaluation. Judge only provided units; do not penalize omissions.\n- Do not reward a unit merely because its text occurs in the span.\n- Do not assume that the extractor's role choice or hierarchy is correct.\n- Consider whether an alternative role, flatter representation, sibling relation, or different available parent would be semantically better.\n- Do not evaluate JSON/schema validity, substring validity, depth limits, or counts; code handles these checks.\n- Do not compare methods and do not reconstruct the outer causal relation.\n\nScores:\n- 1 = clearly correct\n- 0.5 = defensible but materially imperfect or ambiguous\n- 0 = incorrect\n- null = not applicable\n\nFields:\n- s — semantic usefulness: Does this unit contribute a distinct, meaningful proposition/entity/modifier worth representing in the KG? Textual presence alone is insufficient. A vacuous fragment, duplicate restatement, or wrapper that adds no distinct information must score below 1.\n- r — role correctness: Is this the best semantic role for the value in this span? A merely possible role is 0.5 when a clearly better role exists.\n- m — minimal and complete scope:\n  - 1: concise but complete for its role; no separable participant/modifier is unnecessarily swallowed.\n  - 0.5: slightly broad/narrow, or an unnecessary wrapper that remains coherent and partly useful.\n  - 0: a fragment cannot fill the role, or the value absorbs multiple independently representable components and therefore has the wrong granularity.\n- a — attachment correctness:\n  - 1: the parent-child/modifier relation is semantically licensed and the parent is the nearest appropriate one among the units supplied.\n  - 0.5: attachment is plausible but ambiguous or not the best available analysis.\n  - 0: the relation is unsupported or another supplied parent is clearly better. Surface adjacency or textual containment alone never proves attachment.\n- e — one short error label, or null only when all applicable fields equal 1.\n\nUnit rules:\n- node: score s, r, m; a = null.\n- attribute: score s, r, a; use m only when its value is clearly too broad/narrow, otherwise m = null.\n- child_link: score a only; s = r = m = null.\n\nCalibration examples (constructed independently of the extractor and evaluation set):\n\nCorrect example:\nSpan: \"the council approved the budget on Tuesday\"\nUnits: Action=\"approved\"; Actor=\"council\"; Theme=\"budget\"; Time=\"Tuesday\" attached to Action=\"approved\".\nJudgment: the three nodes and Time attribute have all applicable scores 1 because they are distinct, concise, and correctly attached.\n\nIncorrect counterpart:\nSpan: \"the engine suddenly failed\"\nUnits: Action=\"failed\"; Theme=\"engine\"; Content=\"the engine suddenly failed\".\nJudgment: Action and Theme may score 1. The Content wrapper must have s below 1 and m below 1 because it restates the already represented event while swallowing separable components.\n\nCorrect attachment example:\nSpan: \"workers repaired the bridge in Boston\"\nUnits include Action=\"repaired\", Actor=\"workers\", Theme=\"bridge\", Location=\"Boston\", with Location attached to Action.\nJudgment: the Location attachment is correct.\n\nIncorrect attachment counterpart:\nFor the same span and units, Location=\"Boston\" attached to Actor=\"workers\" must have a below 1. Proximity to \"workers\" would not license that parent when the repair event is the appropriate parent.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, redundant_unit, wrong_role, too_broad, too_narrow, wrong_parent, unsupported_hierarchy, unclear, other\n\nReturn strict JSON only. No markdown and no explanation outside the JSON.\nReturn every input unit exactly once, preserving its id.\n\nInput:\n{\n  \"span_id\": \"p3_clean\",\n  \"span\": \"the factory halted production on Monday\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"factory\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"halted\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"production\"\n    },\n    {\n      \"id\": \"a0\",\n      \"kind\": \"attribute\",\n      \"path\": \"c1.attr0\",\n      \"parent\": {\n        \"id\": \"n1\",\n        \"role\": \"Action\",\n        \"value\": \"halted\"\n      },\n      \"role\": \"Time\",\n      \"value\": \"Monday\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p3_clean\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"a0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": null,\n      \"a\": 1,\n      \"e\": null\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p3_clean",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "a0",
+              "s": 1,
+              "r": 1,
+              "m": null,
+              "a": 1,
+              "e": null
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0,
+          "judge_unit_count": 4,
+          "judge_coverage": 1,
+          "correct_unit_yield": 4,
+          "strict_unit_precision": 1.0,
+          "role_correctness": 1.0,
+          "attachment_correctness": 1.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [],
+        "retained_protected_units": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p3_error",
+        "pair_id": "p3",
+        "variant": "error",
+        "span_id": "p3_error",
+        "span": "the factory halted production on Monday",
+        "expected": {
+          "error_targets": [
+            {
+              "unit_id": "a0",
+              "fields": [
+                "a"
+              ],
+              "issue": "wrong_attribute_parent"
+            }
+          ],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2"
+          ]
+        },
+        "judge_prompt_version": "v3",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "factory"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "halted"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "production"
+          },
+          {
+            "id": "a0",
+            "kind": "attribute",
+            "path": "c2.attr0",
+            "parent": {
+              "id": "n2",
+              "role": "Theme",
+              "value": "production"
+            },
+            "role": "Time",
+            "value": "Monday"
+          }
+        ],
+        "judge_prompt": "You are an independent, strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a complete flat list of extracted semantic units for that span, judge every provided unit.\n\nEvaluation boundary:\n- This is precision-oriented evaluation. Judge only provided units; do not penalize omissions.\n- Do not reward a unit merely because its text occurs in the span.\n- Do not assume that the extractor's role choice or hierarchy is correct.\n- Consider whether an alternative role, flatter representation, sibling relation, or different available parent would be semantically better.\n- Do not evaluate JSON/schema validity, substring validity, depth limits, or counts; code handles these checks.\n- Do not compare methods and do not reconstruct the outer causal relation.\n\nScores:\n- 1 = clearly correct\n- 0.5 = defensible but materially imperfect or ambiguous\n- 0 = incorrect\n- null = not applicable\n\nFields:\n- s — semantic usefulness: Does this unit contribute a distinct, meaningful proposition/entity/modifier worth representing in the KG? Textual presence alone is insufficient. A vacuous fragment, duplicate restatement, or wrapper that adds no distinct information must score below 1.\n- r — role correctness: Is this the best semantic role for the value in this span? A merely possible role is 0.5 when a clearly better role exists.\n- m — minimal and complete scope:\n  - 1: concise but complete for its role; no separable participant/modifier is unnecessarily swallowed.\n  - 0.5: slightly broad/narrow, or an unnecessary wrapper that remains coherent and partly useful.\n  - 0: a fragment cannot fill the role, or the value absorbs multiple independently representable components and therefore has the wrong granularity.\n- a — attachment correctness:\n  - 1: the parent-child/modifier relation is semantically licensed and the parent is the nearest appropriate one among the units supplied.\n  - 0.5: attachment is plausible but ambiguous or not the best available analysis.\n  - 0: the relation is unsupported or another supplied parent is clearly better. Surface adjacency or textual containment alone never proves attachment.\n- e — one short error label, or null only when all applicable fields equal 1.\n\nUnit rules:\n- node: score s, r, m; a = null.\n- attribute: score s, r, a; use m only when its value is clearly too broad/narrow, otherwise m = null.\n- child_link: score a only; s = r = m = null.\n\nCalibration examples (constructed independently of the extractor and evaluation set):\n\nCorrect example:\nSpan: \"the council approved the budget on Tuesday\"\nUnits: Action=\"approved\"; Actor=\"council\"; Theme=\"budget\"; Time=\"Tuesday\" attached to Action=\"approved\".\nJudgment: the three nodes and Time attribute have all applicable scores 1 because they are distinct, concise, and correctly attached.\n\nIncorrect counterpart:\nSpan: \"the engine suddenly failed\"\nUnits: Action=\"failed\"; Theme=\"engine\"; Content=\"the engine suddenly failed\".\nJudgment: Action and Theme may score 1. The Content wrapper must have s below 1 and m below 1 because it restates the already represented event while swallowing separable components.\n\nCorrect attachment example:\nSpan: \"workers repaired the bridge in Boston\"\nUnits include Action=\"repaired\", Actor=\"workers\", Theme=\"bridge\", Location=\"Boston\", with Location attached to Action.\nJudgment: the Location attachment is correct.\n\nIncorrect attachment counterpart:\nFor the same span and units, Location=\"Boston\" attached to Actor=\"workers\" must have a below 1. Proximity to \"workers\" would not license that parent when the repair event is the appropriate parent.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, redundant_unit, wrong_role, too_broad, too_narrow, wrong_parent, unsupported_hierarchy, unclear, other\n\nReturn strict JSON only. No markdown and no explanation outside the JSON.\nReturn every input unit exactly once, preserving its id.\n\nInput:\n{\n  \"span_id\": \"p3_error\",\n  \"span\": \"the factory halted production on Monday\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"factory\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"halted\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"production\"\n    },\n    {\n      \"id\": \"a0\",\n      \"kind\": \"attribute\",\n      \"path\": \"c2.attr0\",\n      \"parent\": {\n        \"id\": \"n2\",\n        \"role\": \"Theme\",\n        \"value\": \"production\"\n      },\n      \"role\": \"Time\",\n      \"value\": \"Monday\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p3_error\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"a0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": null,\n      \"a\": 0,\n      \"e\": \"wrong_parent\"\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p3_error",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "a0",
+              "s": 1,
+              "r": 1,
+              "m": null,
+              "a": 0,
+              "e": "wrong_parent"
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 1,
+          "child_link_count": 0,
+          "judge_unit_count": 4,
+          "judge_coverage": 1,
+          "correct_unit_yield": 3,
+          "strict_unit_precision": 0.75,
+          "role_correctness": 1.0,
+          "attachment_correctness": 0.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [
+          true
+        ],
+        "retained_protected_units": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p4_clean",
+        "pair_id": "p4",
+        "variant": "clean",
+        "span_id": "p4_clean",
+        "span": "firefighters rescued children from the building",
+        "expected": {
+          "error_targets": [],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2",
+            "n3",
+            "l0"
+          ]
+        },
+        "judge_prompt_version": "v3",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "firefighters"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "rescued"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "children"
+          },
+          {
+            "id": "n3",
+            "kind": "node",
+            "path": "c1.ch0",
+            "role": "Source",
+            "value": "building"
+          },
+          {
+            "id": "l0",
+            "kind": "child_link",
+            "path": "c1->c1.ch0",
+            "parent": {
+              "id": "n1",
+              "role": "Action",
+              "value": "rescued"
+            },
+            "child": {
+              "id": "n3",
+              "role": "Source",
+              "value": "building"
+            }
+          }
+        ],
+        "judge_prompt": "You are an independent, strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a complete flat list of extracted semantic units for that span, judge every provided unit.\n\nEvaluation boundary:\n- This is precision-oriented evaluation. Judge only provided units; do not penalize omissions.\n- Do not reward a unit merely because its text occurs in the span.\n- Do not assume that the extractor's role choice or hierarchy is correct.\n- Consider whether an alternative role, flatter representation, sibling relation, or different available parent would be semantically better.\n- Do not evaluate JSON/schema validity, substring validity, depth limits, or counts; code handles these checks.\n- Do not compare methods and do not reconstruct the outer causal relation.\n\nScores:\n- 1 = clearly correct\n- 0.5 = defensible but materially imperfect or ambiguous\n- 0 = incorrect\n- null = not applicable\n\nFields:\n- s — semantic usefulness: Does this unit contribute a distinct, meaningful proposition/entity/modifier worth representing in the KG? Textual presence alone is insufficient. A vacuous fragment, duplicate restatement, or wrapper that adds no distinct information must score below 1.\n- r — role correctness: Is this the best semantic role for the value in this span? A merely possible role is 0.5 when a clearly better role exists.\n- m — minimal and complete scope:\n  - 1: concise but complete for its role; no separable participant/modifier is unnecessarily swallowed.\n  - 0.5: slightly broad/narrow, or an unnecessary wrapper that remains coherent and partly useful.\n  - 0: a fragment cannot fill the role, or the value absorbs multiple independently representable components and therefore has the wrong granularity.\n- a — attachment correctness:\n  - 1: the parent-child/modifier relation is semantically licensed and the parent is the nearest appropriate one among the units supplied.\n  - 0.5: attachment is plausible but ambiguous or not the best available analysis.\n  - 0: the relation is unsupported or another supplied parent is clearly better. Surface adjacency or textual containment alone never proves attachment.\n- e — one short error label, or null only when all applicable fields equal 1.\n\nUnit rules:\n- node: score s, r, m; a = null.\n- attribute: score s, r, a; use m only when its value is clearly too broad/narrow, otherwise m = null.\n- child_link: score a only; s = r = m = null.\n\nCalibration examples (constructed independently of the extractor and evaluation set):\n\nCorrect example:\nSpan: \"the council approved the budget on Tuesday\"\nUnits: Action=\"approved\"; Actor=\"council\"; Theme=\"budget\"; Time=\"Tuesday\" attached to Action=\"approved\".\nJudgment: the three nodes and Time attribute have all applicable scores 1 because they are distinct, concise, and correctly attached.\n\nIncorrect counterpart:\nSpan: \"the engine suddenly failed\"\nUnits: Action=\"failed\"; Theme=\"engine\"; Content=\"the engine suddenly failed\".\nJudgment: Action and Theme may score 1. The Content wrapper must have s below 1 and m below 1 because it restates the already represented event while swallowing separable components.\n\nCorrect attachment example:\nSpan: \"workers repaired the bridge in Boston\"\nUnits include Action=\"repaired\", Actor=\"workers\", Theme=\"bridge\", Location=\"Boston\", with Location attached to Action.\nJudgment: the Location attachment is correct.\n\nIncorrect attachment counterpart:\nFor the same span and units, Location=\"Boston\" attached to Actor=\"workers\" must have a below 1. Proximity to \"workers\" would not license that parent when the repair event is the appropriate parent.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, redundant_unit, wrong_role, too_broad, too_narrow, wrong_parent, unsupported_hierarchy, unclear, other\n\nReturn strict JSON only. No markdown and no explanation outside the JSON.\nReturn every input unit exactly once, preserving its id.\n\nInput:\n{\n  \"span_id\": \"p4_clean\",\n  \"span\": \"firefighters rescued children from the building\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"firefighters\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"rescued\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"children\"\n    },\n    {\n      \"id\": \"n3\",\n      \"kind\": \"node\",\n      \"path\": \"c1.ch0\",\n      \"role\": \"Source\",\n      \"value\": \"building\"\n    },\n    {\n      \"id\": \"l0\",\n      \"kind\": \"child_link\",\n      \"path\": \"c1->c1.ch0\",\n      \"parent\": {\n        \"id\": \"n1\",\n        \"role\": \"Action\",\n        \"value\": \"rescued\"\n      },\n      \"child\": {\n        \"id\": \"n3\",\n        \"role\": \"Source\",\n        \"value\": \"building\"\n      }\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 0,
+          "child_link_count": 1
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p4_clean\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n3\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"l0\",\n      \"s\": null,\n      \"r\": null,\n      \"m\": null,\n      \"a\": 1,\n      \"e\": null\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p4_clean",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n3",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "l0",
+              "s": null,
+              "r": null,
+              "m": null,
+              "a": 1,
+              "e": null
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 0,
+          "child_link_count": 1,
+          "judge_unit_count": 5,
+          "judge_coverage": 1,
+          "correct_unit_yield": 5,
+          "strict_unit_precision": 1.0,
+          "role_correctness": 1.0,
+          "attachment_correctness": 1.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [],
+        "retained_protected_units": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p4_error",
+        "pair_id": "p4",
+        "variant": "error",
+        "span_id": "p4_error",
+        "span": "firefighters rescued children from the building",
+        "expected": {
+          "error_targets": [
+            {
+              "unit_id": "l0",
+              "fields": [
+                "a"
+              ],
+              "issue": "unsupported_hierarchy"
+            }
+          ],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2",
+            "n3"
+          ]
+        },
+        "judge_prompt_version": "v3",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "firefighters"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "rescued"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "children"
+          },
+          {
+            "id": "n3",
+            "kind": "node",
+            "path": "c0.ch0",
+            "role": "Source",
+            "value": "building"
+          },
+          {
+            "id": "l0",
+            "kind": "child_link",
+            "path": "c0->c0.ch0",
+            "parent": {
+              "id": "n0",
+              "role": "Actor",
+              "value": "firefighters"
+            },
+            "child": {
+              "id": "n3",
+              "role": "Source",
+              "value": "building"
+            }
+          }
+        ],
+        "judge_prompt": "You are an independent, strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a complete flat list of extracted semantic units for that span, judge every provided unit.\n\nEvaluation boundary:\n- This is precision-oriented evaluation. Judge only provided units; do not penalize omissions.\n- Do not reward a unit merely because its text occurs in the span.\n- Do not assume that the extractor's role choice or hierarchy is correct.\n- Consider whether an alternative role, flatter representation, sibling relation, or different available parent would be semantically better.\n- Do not evaluate JSON/schema validity, substring validity, depth limits, or counts; code handles these checks.\n- Do not compare methods and do not reconstruct the outer causal relation.\n\nScores:\n- 1 = clearly correct\n- 0.5 = defensible but materially imperfect or ambiguous\n- 0 = incorrect\n- null = not applicable\n\nFields:\n- s — semantic usefulness: Does this unit contribute a distinct, meaningful proposition/entity/modifier worth representing in the KG? Textual presence alone is insufficient. A vacuous fragment, duplicate restatement, or wrapper that adds no distinct information must score below 1.\n- r — role correctness: Is this the best semantic role for the value in this span? A merely possible role is 0.5 when a clearly better role exists.\n- m — minimal and complete scope:\n  - 1: concise but complete for its role; no separable participant/modifier is unnecessarily swallowed.\n  - 0.5: slightly broad/narrow, or an unnecessary wrapper that remains coherent and partly useful.\n  - 0: a fragment cannot fill the role, or the value absorbs multiple independently representable components and therefore has the wrong granularity.\n- a — attachment correctness:\n  - 1: the parent-child/modifier relation is semantically licensed and the parent is the nearest appropriate one among the units supplied.\n  - 0.5: attachment is plausible but ambiguous or not the best available analysis.\n  - 0: the relation is unsupported or another supplied parent is clearly better. Surface adjacency or textual containment alone never proves attachment.\n- e — one short error label, or null only when all applicable fields equal 1.\n\nUnit rules:\n- node: score s, r, m; a = null.\n- attribute: score s, r, a; use m only when its value is clearly too broad/narrow, otherwise m = null.\n- child_link: score a only; s = r = m = null.\n\nCalibration examples (constructed independently of the extractor and evaluation set):\n\nCorrect example:\nSpan: \"the council approved the budget on Tuesday\"\nUnits: Action=\"approved\"; Actor=\"council\"; Theme=\"budget\"; Time=\"Tuesday\" attached to Action=\"approved\".\nJudgment: the three nodes and Time attribute have all applicable scores 1 because they are distinct, concise, and correctly attached.\n\nIncorrect counterpart:\nSpan: \"the engine suddenly failed\"\nUnits: Action=\"failed\"; Theme=\"engine\"; Content=\"the engine suddenly failed\".\nJudgment: Action and Theme may score 1. The Content wrapper must have s below 1 and m below 1 because it restates the already represented event while swallowing separable components.\n\nCorrect attachment example:\nSpan: \"workers repaired the bridge in Boston\"\nUnits include Action=\"repaired\", Actor=\"workers\", Theme=\"bridge\", Location=\"Boston\", with Location attached to Action.\nJudgment: the Location attachment is correct.\n\nIncorrect attachment counterpart:\nFor the same span and units, Location=\"Boston\" attached to Actor=\"workers\" must have a below 1. Proximity to \"workers\" would not license that parent when the repair event is the appropriate parent.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, redundant_unit, wrong_role, too_broad, too_narrow, wrong_parent, unsupported_hierarchy, unclear, other\n\nReturn strict JSON only. No markdown and no explanation outside the JSON.\nReturn every input unit exactly once, preserving its id.\n\nInput:\n{\n  \"span_id\": \"p4_error\",\n  \"span\": \"firefighters rescued children from the building\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"firefighters\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"rescued\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"children\"\n    },\n    {\n      \"id\": \"n3\",\n      \"kind\": \"node\",\n      \"path\": \"c0.ch0\",\n      \"role\": \"Source\",\n      \"value\": \"building\"\n    },\n    {\n      \"id\": \"l0\",\n      \"kind\": \"child_link\",\n      \"path\": \"c0->c0.ch0\",\n      \"parent\": {\n        \"id\": \"n0\",\n        \"role\": \"Actor\",\n        \"value\": \"firefighters\"\n      },\n      \"child\": {\n        \"id\": \"n3\",\n        \"role\": \"Source\",\n        \"value\": \"building\"\n      }\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 0,
+          "child_link_count": 1
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p4_error\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n3\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"l0\",\n      \"s\": null,\n      \"r\": null,\n      \"m\": null,\n      \"a\": 0,\n      \"e\": \"wrong_parent\"\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p4_error",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n3",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "l0",
+              "s": null,
+              "r": null,
+              "m": null,
+              "a": 0,
+              "e": "wrong_parent"
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 0,
+          "child_link_count": 1,
+          "judge_unit_count": 5,
+          "judge_coverage": 1,
+          "correct_unit_yield": 4,
+          "strict_unit_precision": 0.8,
+          "role_correctness": 1.0,
+          "attachment_correctness": 0.0
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [
+          true
+        ],
+        "retained_protected_units": [
+          true,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p5_clean",
+        "pair_id": "p5",
+        "variant": "clean",
+        "span_id": "p5_clean",
+        "span": "heavy rain flooded the road",
+        "expected": {
+          "error_targets": [],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2"
+          ]
+        },
+        "judge_prompt_version": "v3",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "heavy rain"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "flooded"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "road"
+          }
+        ],
+        "judge_prompt": "You are an independent, strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a complete flat list of extracted semantic units for that span, judge every provided unit.\n\nEvaluation boundary:\n- This is precision-oriented evaluation. Judge only provided units; do not penalize omissions.\n- Do not reward a unit merely because its text occurs in the span.\n- Do not assume that the extractor's role choice or hierarchy is correct.\n- Consider whether an alternative role, flatter representation, sibling relation, or different available parent would be semantically better.\n- Do not evaluate JSON/schema validity, substring validity, depth limits, or counts; code handles these checks.\n- Do not compare methods and do not reconstruct the outer causal relation.\n\nScores:\n- 1 = clearly correct\n- 0.5 = defensible but materially imperfect or ambiguous\n- 0 = incorrect\n- null = not applicable\n\nFields:\n- s — semantic usefulness: Does this unit contribute a distinct, meaningful proposition/entity/modifier worth representing in the KG? Textual presence alone is insufficient. A vacuous fragment, duplicate restatement, or wrapper that adds no distinct information must score below 1.\n- r — role correctness: Is this the best semantic role for the value in this span? A merely possible role is 0.5 when a clearly better role exists.\n- m — minimal and complete scope:\n  - 1: concise but complete for its role; no separable participant/modifier is unnecessarily swallowed.\n  - 0.5: slightly broad/narrow, or an unnecessary wrapper that remains coherent and partly useful.\n  - 0: a fragment cannot fill the role, or the value absorbs multiple independently representable components and therefore has the wrong granularity.\n- a — attachment correctness:\n  - 1: the parent-child/modifier relation is semantically licensed and the parent is the nearest appropriate one among the units supplied.\n  - 0.5: attachment is plausible but ambiguous or not the best available analysis.\n  - 0: the relation is unsupported or another supplied parent is clearly better. Surface adjacency or textual containment alone never proves attachment.\n- e — one short error label, or null only when all applicable fields equal 1.\n\nUnit rules:\n- node: score s, r, m; a = null.\n- attribute: score s, r, a; use m only when its value is clearly too broad/narrow, otherwise m = null.\n- child_link: score a only; s = r = m = null.\n\nCalibration examples (constructed independently of the extractor and evaluation set):\n\nCorrect example:\nSpan: \"the council approved the budget on Tuesday\"\nUnits: Action=\"approved\"; Actor=\"council\"; Theme=\"budget\"; Time=\"Tuesday\" attached to Action=\"approved\".\nJudgment: the three nodes and Time attribute have all applicable scores 1 because they are distinct, concise, and correctly attached.\n\nIncorrect counterpart:\nSpan: \"the engine suddenly failed\"\nUnits: Action=\"failed\"; Theme=\"engine\"; Content=\"the engine suddenly failed\".\nJudgment: Action and Theme may score 1. The Content wrapper must have s below 1 and m below 1 because it restates the already represented event while swallowing separable components.\n\nCorrect attachment example:\nSpan: \"workers repaired the bridge in Boston\"\nUnits include Action=\"repaired\", Actor=\"workers\", Theme=\"bridge\", Location=\"Boston\", with Location attached to Action.\nJudgment: the Location attachment is correct.\n\nIncorrect attachment counterpart:\nFor the same span and units, Location=\"Boston\" attached to Actor=\"workers\" must have a below 1. Proximity to \"workers\" would not license that parent when the repair event is the appropriate parent.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, redundant_unit, wrong_role, too_broad, too_narrow, wrong_parent, unsupported_hierarchy, unclear, other\n\nReturn strict JSON only. No markdown and no explanation outside the JSON.\nReturn every input unit exactly once, preserving its id.\n\nInput:\n{\n  \"span_id\": \"p5_clean\",\n  \"span\": \"heavy rain flooded the road\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"heavy rain\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"flooded\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"road\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 0,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p5_clean\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p5_clean",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 3,
+          "attribute_count": 0,
+          "child_link_count": 0,
+          "judge_unit_count": 3,
+          "judge_coverage": 1,
+          "correct_unit_yield": 3,
+          "strict_unit_precision": 1.0,
+          "role_correctness": 1.0,
+          "attachment_correctness": null
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [],
+        "retained_protected_units": [
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "case_id": "p5_error",
+        "pair_id": "p5",
+        "variant": "error",
+        "span_id": "p5_error",
+        "span": "heavy rain flooded the road",
+        "expected": {
+          "error_targets": [
+            {
+              "unit_id": "n3",
+              "fields": [
+                "s"
+              ],
+              "issue": "not_meaningful_unit"
+            }
+          ],
+          "protected_unit_ids": [
+            "n0",
+            "n1",
+            "n2"
+          ]
+        },
+        "judge_prompt_version": "v3",
+        "judge_units": [
+          {
+            "id": "n0",
+            "kind": "node",
+            "path": "c0",
+            "role": "Actor",
+            "value": "heavy rain"
+          },
+          {
+            "id": "n1",
+            "kind": "node",
+            "path": "c1",
+            "role": "Action",
+            "value": "flooded"
+          },
+          {
+            "id": "n2",
+            "kind": "node",
+            "path": "c2",
+            "role": "Theme",
+            "value": "road"
+          },
+          {
+            "id": "n3",
+            "kind": "node",
+            "path": "c3",
+            "role": "Description",
+            "value": "the"
+          }
+        ],
+        "judge_prompt": "You are an independent, strict semantic judge for event-structure extraction.\n\nTask:\nGiven one original event/state span and a complete flat list of extracted semantic units for that span, judge every provided unit.\n\nEvaluation boundary:\n- This is precision-oriented evaluation. Judge only provided units; do not penalize omissions.\n- Do not reward a unit merely because its text occurs in the span.\n- Do not assume that the extractor's role choice or hierarchy is correct.\n- Consider whether an alternative role, flatter representation, sibling relation, or different available parent would be semantically better.\n- Do not evaluate JSON/schema validity, substring validity, depth limits, or counts; code handles these checks.\n- Do not compare methods and do not reconstruct the outer causal relation.\n\nScores:\n- 1 = clearly correct\n- 0.5 = defensible but materially imperfect or ambiguous\n- 0 = incorrect\n- null = not applicable\n\nFields:\n- s — semantic usefulness: Does this unit contribute a distinct, meaningful proposition/entity/modifier worth representing in the KG? Textual presence alone is insufficient. A vacuous fragment, duplicate restatement, or wrapper that adds no distinct information must score below 1.\n- r — role correctness: Is this the best semantic role for the value in this span? A merely possible role is 0.5 when a clearly better role exists.\n- m — minimal and complete scope:\n  - 1: concise but complete for its role; no separable participant/modifier is unnecessarily swallowed.\n  - 0.5: slightly broad/narrow, or an unnecessary wrapper that remains coherent and partly useful.\n  - 0: a fragment cannot fill the role, or the value absorbs multiple independently representable components and therefore has the wrong granularity.\n- a — attachment correctness:\n  - 1: the parent-child/modifier relation is semantically licensed and the parent is the nearest appropriate one among the units supplied.\n  - 0.5: attachment is plausible but ambiguous or not the best available analysis.\n  - 0: the relation is unsupported or another supplied parent is clearly better. Surface adjacency or textual containment alone never proves attachment.\n- e — one short error label, or null only when all applicable fields equal 1.\n\nUnit rules:\n- node: score s, r, m; a = null.\n- attribute: score s, r, a; use m only when its value is clearly too broad/narrow, otherwise m = null.\n- child_link: score a only; s = r = m = null.\n\nCalibration examples (constructed independently of the extractor and evaluation set):\n\nCorrect example:\nSpan: \"the council approved the budget on Tuesday\"\nUnits: Action=\"approved\"; Actor=\"council\"; Theme=\"budget\"; Time=\"Tuesday\" attached to Action=\"approved\".\nJudgment: the three nodes and Time attribute have all applicable scores 1 because they are distinct, concise, and correctly attached.\n\nIncorrect counterpart:\nSpan: \"the engine suddenly failed\"\nUnits: Action=\"failed\"; Theme=\"engine\"; Content=\"the engine suddenly failed\".\nJudgment: Action and Theme may score 1. The Content wrapper must have s below 1 and m below 1 because it restates the already represented event while swallowing separable components.\n\nCorrect attachment example:\nSpan: \"workers repaired the bridge in Boston\"\nUnits include Action=\"repaired\", Actor=\"workers\", Theme=\"bridge\", Location=\"Boston\", with Location attached to Action.\nJudgment: the Location attachment is correct.\n\nIncorrect attachment counterpart:\nFor the same span and units, Location=\"Boston\" attached to Actor=\"workers\" must have a below 1. Proximity to \"workers\" would not license that parent when the repair event is the appropriate parent.\n\nAllowed error labels:\nunsupported_value, not_meaningful_unit, redundant_unit, wrong_role, too_broad, too_narrow, wrong_parent, unsupported_hierarchy, unclear, other\n\nReturn strict JSON only. No markdown and no explanation outside the JSON.\nReturn every input unit exactly once, preserving its id.\n\nInput:\n{\n  \"span_id\": \"p5_error\",\n  \"span\": \"heavy rain flooded the road\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"kind\": \"node\",\n      \"path\": \"c0\",\n      \"role\": \"Actor\",\n      \"value\": \"heavy rain\"\n    },\n    {\n      \"id\": \"n1\",\n      \"kind\": \"node\",\n      \"path\": \"c1\",\n      \"role\": \"Action\",\n      \"value\": \"flooded\"\n    },\n    {\n      \"id\": \"n2\",\n      \"kind\": \"node\",\n      \"path\": \"c2\",\n      \"role\": \"Theme\",\n      \"value\": \"road\"\n    },\n    {\n      \"id\": \"n3\",\n      \"kind\": \"node\",\n      \"path\": \"c3\",\n      \"role\": \"Description\",\n      \"value\": \"the\"\n    }\n  ]\n}\n\nOutput schema:\n{\n  \"span_id\": \"same span_id as input\",\n  \"units\": [\n    {\n      \"id\": \"unit id\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    }\n  ]\n}\n",
+        "validation": {
+          "json_parse_success": true,
+          "schema_valid": true,
+          "substring_valid": true,
+          "depth_compliant": true,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 0,
+          "child_link_count": 0
+        },
+        "raw_judge_output": "{\n  \"span_id\": \"p5_error\",\n  \"units\": [\n    {\n      \"id\": \"n0\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n1\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n2\",\n      \"s\": 1,\n      \"r\": 1,\n      \"m\": 1,\n      \"a\": null,\n      \"e\": null\n    },\n    {\n      \"id\": \"n3\",\n      \"s\": 0,\n      \"r\": 0,\n      \"m\": 0,\n      \"a\": null,\n      \"e\": \"not_meaningful_unit\"\n    }\n  ]\n}",
+        "judge_result": {
+          "span_id": "p5_error",
+          "units": [
+            {
+              "id": "n0",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n1",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n2",
+              "s": 1,
+              "r": 1,
+              "m": 1,
+              "a": null,
+              "e": null
+            },
+            {
+              "id": "n3",
+              "s": 0,
+              "r": 0,
+              "m": 0,
+              "a": null,
+              "e": "not_meaningful_unit"
+            }
+          ]
+        },
+        "judge_error": null,
+        "span_metrics": {
+          "json_parse_success": 1,
+          "schema_valid": 1,
+          "substring_valid": 1,
+          "depth_compliant": 1,
+          "forbidden_role_count": 0,
+          "max_depth": 0,
+          "node_count": 4,
+          "attribute_count": 0,
+          "child_link_count": 0,
+          "judge_unit_count": 4,
+          "judge_coverage": 1,
+          "correct_unit_yield": 3,
+          "strict_unit_precision": 0.75,
+          "role_correctness": 0.75,
+          "attachment_correctness": null
+        },
+        "calibration_complete": true,
+        "detected_expected_targets": [
+          true
+        ],
+        "retained_protected_units": [
+          true,
+          true,
+          true
+        ]
+      }
+    ],
+    "gate": {
+      "passed": true,
+      "checks": {
+        "all_calls_succeeded": true,
+        "error_detection_at_least_80pct": true,
+        "clean_retention_at_least_80pct": true,
+        "false_positive_at_most_20pct": true
+      }
+    }
+  }
+}

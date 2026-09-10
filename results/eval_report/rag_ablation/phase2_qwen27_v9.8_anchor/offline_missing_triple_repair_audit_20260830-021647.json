@@ -1,0 +1,199 @@
+{
+  "audit_path": "D:\\Master thesis\\results\\eval_report\\rag_ablation\\phase2_qwen27_v9.8_anchor\\offline_missing_triple_repair_audit_20260830-021647.json",
+  "backup_dir": "D:\\Master thesis\\results\\repair_backups\\20260830-021647",
+  "checkpoints": [
+    {
+      "after_sha256": "18ba60370f190eda79463b02311a1251d1e100e158e38148d8f50e6836694ed0",
+      "before_sha256": "b163c87a284de8a87af3914cd7865076dbba141336df609bab3f7a6003e03656",
+      "checkpoint": "D:\\Master thesis\\results\\eval_checkpoints\\rag_ablation\\phase2_qwen27_v9.8_anchor\\rag_only_k1_f23dbf5ddb114833.jsonl",
+      "completed_samples": 500,
+      "repair_count": 6,
+      "repairs": [
+        {
+          "old_error_type": "no_json_object",
+          "raw_output_sha256": "b257b9c7268df0ace25c6c6cc939fef76859dc74bd85f7c96aa124fda41bb1b4",
+          "repair_type": "missing_triple_closing_brace",
+          "sample_id": 2458
+        },
+        {
+          "old_error_type": "no_json_object",
+          "raw_output_sha256": "7d57062921a1a0277e7930725f75ead21bfec5323c2e4fb7d5727fd0119f498f",
+          "repair_type": "missing_triple_closing_brace",
+          "sample_id": 1914
+        },
+        {
+          "old_error_type": "no_json_object",
+          "raw_output_sha256": "7a08385b87265551f7e01ba5d168ecca7ba7a05331abe11a4dbf542002d971b5",
+          "repair_type": "missing_triple_closing_brace",
+          "sample_id": 2621
+        },
+        {
+          "old_error_type": "no_json_object",
+          "raw_output_sha256": "f5f9df928a12abdb03724d072230cd362892a5d20bbdf88db173fa9e05aab275",
+          "repair_type": "missing_triple_closing_brace",
+          "sample_id": 1168
+        },
+        {
+          "old_error_type": "no_json_object",
+          "raw_output_sha256": "216206cce41960f29f947f1c92737d1d46214740ecadeaedf85a027b044c498e",
+          "repair_type": "missing_triple_closing_brace",
+          "sample_id": 469
+        },
+        {
+          "old_error_type": "no_json_object",
+          "raw_output_sha256": "ad2d35d3a521249c813a7e2414fc579ba000aad095abf68f04f22bcb8b9ca8d6",
+          "repair_type": "missing_triple_closing_brace",
+          "sample_id": 534
+        }
+      ],
+      "sample_ids": [
+        2458,
+        1914,
+        2621,
+        1168,
+        469,
+        534
+      ],
+      "status": "complete"
+    },
+    {
+      "after_sha256": "7e8f536ffc473295e09f9ea731968bc094eef96977d3c87b50d79bb21439be81",
+      "before_sha256": "5a1cc5e6c763f4d9e4defee7b5909bb0405b2e897a852d6a5fd56d1cf5931114",
+      "checkpoint": "D:\\Master thesis\\results\\eval_checkpoints\\rag_ablation\\phase2_qwen27_v9.8_anchor\\rag_only_k3_72eeae2d55810eb4.jsonl",
+      "completed_samples": 500,
+      "repair_count": 4,
+      "repairs": [
+        {
+          "old_error_type": "no_json_object",
+          "raw_output_sha256": "afe4295cd63a9d3c5e82d5c8a9cadd2de62673d71ed1f90ea82dc551666dd32e",
+          "repair_type": "missing_triple_closing_brace",
+          "sample_id": 1269
+        },
+        {
+          "old_error_type": "no_json_object",
+          "raw_output_sha256": "bc0a6c6b6231d4b93c1761bb2a27cfd33be2198b9e7029c5673bda2b62895f9b",
+          "repair_type": "missing_triple_closing_brace",
+          "sample_id": 164
+        },
+        {
+          "old_error_type": "no_json_object",
+          "raw_output_sha256": "b22bd3e81e50bd6198086f80d682a13a193cd53f88e3d8ada03463f2a27b2bd6",
+          "repair_type": "missing_triple_closing_brace",
+          "sample_id": 1704
+        },
+        {
+          "old_error_type": "no_json_object",
+          "raw_output_sha256": "7d57062921a1a0277e7930725f75ead21bfec5323c2e4fb7d5727fd0119f498f",
+          "repair_type": "missing_triple_closing_brace",
+          "sample_id": 1914
+        }
+      ],
+      "sample_ids": [
+        1269,
+        164,
+        1704,
+        1914
+      ],
+      "status": "complete"
+    },
+    {
+      "after_sha256": "345e4f7ce04820c28767d4fa986b5040f8b9c393b5fde2598d18c4a5ceaf76ff",
+      "before_sha256": "d78e5d6b346aab9715ac48d7ff8bd38330d8d49eafd6937eb58adbf5a4f96c6f",
+      "checkpoint": "D:\\Master thesis\\results\\eval_checkpoints\\rag_ablation\\phase2_qwen27_v9.8_anchor\\rag_only_k5_e4680ef1d702231d.jsonl",
+      "completed_samples": 63,
+      "repair_count": 2,
+      "repairs": [
+        {
+          "old_error_type": "no_json_object",
+          "raw_output_sha256": "93c4155deb0d467c311985539db9358b0f0c655e4ecae342102045880d3dd46b",
+          "repair_type": "missing_triple_closing_brace",
+          "sample_id": 1386
+        },
+        {
+          "old_error_type": "no_json_object",
+          "raw_output_sha256": "202e22b51d7c1d8caf8744f2056fdfc3cc3bbc2ea604cbd521f7c83f622d6652",
+          "repair_type": "missing_triple_closing_brace",
+          "sample_id": 2991
+        }
+      ],
+      "sample_ids": [
+        1386,
+        2991
+      ],
+      "status": "in_progress"
+    }
+  ],
+  "mode": "apply",
+  "rebuilt_reports": {
+    "rag_only_k1": {
+      "anchor_all_f1": 0.49696969696969695,
+      "detection_f1": 0.8544423440453687,
+      "generation_failures": 0,
+      "parse_repairs": {
+        "by_type": {
+          "missing_triple_closing_brace": 6
+        },
+        "samples": [
+          {
+            "id": 2458,
+            "repair_type": "missing_triple_closing_brace"
+          },
+          {
+            "id": 1914,
+            "repair_type": "missing_triple_closing_brace"
+          },
+          {
+            "id": 2621,
+            "repair_type": "missing_triple_closing_brace"
+          },
+          {
+            "id": 1168,
+            "repair_type": "missing_triple_closing_brace"
+          },
+          {
+            "id": 469,
+            "repair_type": "missing_triple_closing_brace"
+          },
+          {
+            "id": 534,
+            "repair_type": "missing_triple_closing_brace"
+          }
+        ],
+        "total": 6
+      },
+      "report_path": "D:\\Master thesis\\results\\eval_report\\rag_ablation\\phase2_qwen27_v9.8_anchor\\local-qwen3.6-27b-no-thinking_cnc_sft_validation-n500_prompt-v9.8_zero_shot_rag-knn_pattern-k1_20260830-013910.md"
+    },
+    "rag_only_k3": {
+      "anchor_all_f1": 0.5102040816326531,
+      "detection_f1": 0.8555555555555556,
+      "generation_failures": 0,
+      "parse_repairs": {
+        "by_type": {
+          "missing_triple_closing_brace": 4
+        },
+        "samples": [
+          {
+            "id": 1269,
+            "repair_type": "missing_triple_closing_brace"
+          },
+          {
+            "id": 164,
+            "repair_type": "missing_triple_closing_brace"
+          },
+          {
+            "id": 1704,
+            "repair_type": "missing_triple_closing_brace"
+          },
+          {
+            "id": 1914,
+            "repair_type": "missing_triple_closing_brace"
+          }
+        ],
+        "total": 4
+      },
+      "report_path": "D:\\Master thesis\\results\\eval_report\\rag_ablation\\phase2_qwen27_v9.8_anchor\\local-qwen3.6-27b-no-thinking_cnc_sft_validation-n500_prompt-v9.8_zero_shot_rag-knn_pattern-k3_20260830-020339.md"
+    }
+  },
+  "repair_type": "missing_triple_closing_brace",
+  "total_repairs": 12
+}

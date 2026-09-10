@@ -1,0 +1,31 @@
+{
+  "run_id": "rams_judge_v2_deepseek-v4-pro_n200_20260723_073240",
+  "model": "deepseek-v4-pro",
+  "prompt_version": "v2",
+  "sample_limit": 200,
+  "selected_count": 200,
+  "selection_summary": {
+    "total": 200,
+    "labels": {
+      "false": 92,
+      "true": 108
+    },
+    "case_types": {
+      "positive": 108,
+      "role_corruption": 43,
+      "span_swap": 49
+    }
+  },
+  "dataset_path": "D:\\Master thesis\\Data\\RAMS_judge\\rams_judge_test.jsonl",
+  "dataset_sha256": "777effdce0169c31fedc6f796a06b4af177a4ad067d8ef32477e4a8b81a517cc",
+  "prompt_path": "D:\\Master thesis\\prompts\\rams_judge_v2.txt",
+  "prompt_sha256": "bd9eb095bb85fab461dcc662756ba115bc796be385cb8ef8b8b9bc7a993a3fd3",
+  "prompt_snapshot_path": "D:\\Master thesis\\results\\rams_judge_evaluation\\rams_judge_v2_deepseek-v4-pro_n200_20260723_073240\\prompt_snapshot.txt",
+  "max_workers": 5,
+  "max_tokens": 64,
+  "timeout_seconds": 60.0,
+  "retry_times": 3,
+  "retry_failed": true,
+  "thinking": "disabled",
+  "temperature": 0
+}

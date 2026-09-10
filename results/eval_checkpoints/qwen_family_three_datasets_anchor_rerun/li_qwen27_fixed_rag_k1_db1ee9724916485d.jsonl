@@ -1,0 +1,786 @@
+{"prediction": {"has_causal": false, "id": 1, "triples": []}, "sample_id": 1}
+{"prediction": {"has_causal": true, "id": 2, "triples": [{"cause": {"span": "the stress"}, "effect": {"span": "a bleeding stomach ulcer"}, "relation": "caused"}, {"cause": {"span": "hard work"}, "effect": {"span": "a bleeding stomach ulcer"}, "relation": "caused"}]}, "sample_id": 2}
+{"prediction": {"has_causal": false, "id": 3, "triples": []}, "sample_id": 3}
+{"prediction": {"has_causal": true, "id": 4, "triples": [{"cause": {"span": "hormone deficiencies and imbalances"}, "effect": {"span": "Paralysis"}, "relation": "caused"}, {"cause": {"span": "hormone deficiencies and imbalances"}, "effect": {"span": "convulsions"}, "relation": "caused"}]}, "sample_id": 4}
+{"prediction": {"has_causal": true, "id": 5, "triples": [{"cause": {"span": "the Prestige oil spill"}, "effect": {"span": "the ecological catastrophe"}, "relation": "caused"}, {"cause": {"span": "the Exxon Valdez"}, "effect": {"span": "the ecological catastrophe"}, "relation": "caused"}]}, "sample_id": 5}
+{"prediction": {"has_causal": true, "id": 6, "triples": [{"cause": {"span": "sunlight"}, "effect": {"span": "eye strain and fatigue"}, "relation": "caused"}, {"cause": {"span": "glare"}, "effect": {"span": "eye strain and fatigue"}, "relation": "caused"}]}, "sample_id": 6}
+{"prediction": {"has_causal": false, "id": 7, "triples": []}, "sample_id": 7}
+{"prediction": {"has_causal": false, "id": 8, "triples": []}, "sample_id": 8}
+{"prediction": {"has_causal": false, "id": 9, "triples": []}, "sample_id": 9}
+{"prediction": {"has_causal": false, "id": 10, "triples": []}, "sample_id": 10}
+{"prediction": {"has_causal": false, "id": 11, "triples": []}, "sample_id": 11}
+{"prediction": {"has_causal": true, "id": 12, "triples": [{"cause": {"span": "the rapid power acceleration"}, "effect": {"span": "The pressure"}, "relation": "caused"}]}, "sample_id": 12}
+{"prediction": {"has_causal": false, "id": 13, "triples": []}, "sample_id": 13}
+{"prediction": {"has_causal": false, "id": 14, "triples": []}, "sample_id": 14}
+{"prediction": {"has_causal": false, "id": 15, "triples": []}, "sample_id": 15}
+{"prediction": {"has_causal": false, "id": 16, "triples": []}, "sample_id": 16}
+{"prediction": {"has_causal": false, "id": 17, "triples": []}, "sample_id": 17}
+{"prediction": {"has_causal": false, "id": 18, "triples": []}, "sample_id": 18}
+{"prediction": {"has_causal": true, "id": 19, "triples": [{"cause": {"span": "a bullet"}, "effect": {"span": "The damage"}, "relation": "caused"}]}, "sample_id": 19}
+{"prediction": {"has_causal": false, "id": 20, "triples": []}, "sample_id": 20}
+{"prediction": {"has_causal": false, "id": 21, "triples": []}, "sample_id": 21}
+{"prediction": {"has_causal": true, "id": 22, "triples": [{"cause": {"span": "alcohol or illicit drug use"}, "effect": {"span": "intoxication"}, "relation": "caused"}]}, "sample_id": 22}
+{"prediction": {"has_causal": false, "id": 23, "triples": []}, "sample_id": 23}
+{"prediction": {"has_causal": false, "id": 24, "triples": []}, "sample_id": 24}
+{"prediction": {"has_causal": true, "id": 25, "triples": [{"cause": {"span": "poverty"}, "effect": {"span": "violence"}, "relation": "caused"}]}, "sample_id": 25}
+{"prediction": {"has_causal": false, "id": 26, "triples": []}, "sample_id": 26}
+{"prediction": {"has_causal": false, "id": 27, "triples": []}, "sample_id": 27}
+{"prediction": {"has_causal": false, "id": 28, "triples": []}, "sample_id": 28}
+{"prediction": {"has_causal": true, "id": 29, "triples": [{"cause": {"span": "the fireplace"}, "effect": {"span": "The warmth"}, "relation": "caused"}]}, "sample_id": 29}
+{"prediction": {"has_causal": false, "id": 30, "triples": []}, "sample_id": 30}
+{"prediction": {"has_causal": false, "id": 31, "triples": []}, "sample_id": 31}
+{"prediction": {"has_causal": true, "id": 32, "triples": [{"cause": {"span": "steroids"}, "effect": {"span": "diabetes"}, "relation": "caused"}, {"cause": {"span": "steroids"}, "effect": {"span": "hypertension"}, "relation": "caused"}]}, "sample_id": 32}
+{"prediction": {"has_causal": false, "id": 33, "triples": []}, "sample_id": 33}
+{"prediction": {"has_causal": false, "id": 34, "triples": []}, "sample_id": 34}
+{"prediction": {"has_causal": false, "id": 35, "triples": []}, "sample_id": 35}
+{"prediction": {"has_causal": false, "id": 36, "triples": []}, "sample_id": 36}
+{"prediction": {"has_causal": false, "id": 37, "triples": []}, "sample_id": 37}
+{"prediction": {"has_causal": false, "id": 38, "triples": []}, "sample_id": 38}
+{"prediction": {"has_causal": true, "id": 39, "triples": [{"cause": {"span": "Conflict"}, "effect": {"span": "the collapse of the Somali Republic"}, "relation": "caused"}]}, "sample_id": 39}
+{"prediction": {"has_causal": true, "id": 40, "triples": [{"cause": {"span": "infection with the human papillomavirus"}, "effect": {"span": "Cervical cancer"}, "relation": "caused"}]}, "sample_id": 40}
+{"prediction": {"has_causal": false, "id": 41, "triples": []}, "sample_id": 41}
+{"prediction": {"has_causal": false, "id": 42, "triples": []}, "sample_id": 42}
+{"prediction": {"has_causal": true, "id": 43, "triples": [{"cause": {"span": "debris"}, "effect": {"span": "a crash"}, "relation": "caused"}]}, "sample_id": 43}
+{"prediction": {"has_causal": false, "id": 44, "triples": []}, "sample_id": 44}
+{"prediction": {"has_causal": false, "id": 45, "triples": []}, "sample_id": 45}
+{"prediction": {"has_causal": false, "id": 46, "triples": []}, "sample_id": 46}
+{"prediction": {"has_causal": true, "id": 47, "triples": [{"cause": {"span": "Glaucoma"}, "effect": {"span": "blindness"}, "relation": "caused"}]}, "sample_id": 47}
+{"prediction": {"has_causal": true, "id": 48, "triples": [{"cause": {"span": "the sympathetic"}, "effect": {"span": "The vascular dilatation"}, "relation": "caused"}, {"cause": {"span": "the course of vaso-motor nerves"}, "effect": {"span": "The vascular dilatation"}, "relation": "caused"}]}, "sample_id": 48}
+{"prediction": {"has_causal": true, "id": 49, "triples": [{"cause": {"span": "the silversmiths"}, "effect": {"span": "a riot"}, "relation": "caused"}]}, "sample_id": 49}
+{"prediction": {"has_causal": false, "id": 50, "triples": []}, "sample_id": 50}
+{"prediction": {"has_causal": false, "id": 51, "triples": []}, "sample_id": 51}
+{"prediction": {"has_causal": true, "id": 52, "triples": [{"cause": {"span": "colds"}, "effect": {"span": "inflammation of the mucous membranes of the nose, throat and mouth"}, "relation": "caused"}, {"cause": {"span": "flu"}, "effect": {"span": "inflammation of the mucous membranes of the nose, throat and mouth"}, "relation": "caused"}]}, "sample_id": 52}
+{"prediction": {"has_causal": false, "id": 53, "triples": []}, "sample_id": 53}
+{"prediction": {"has_causal": false, "id": 54, "triples": []}, "sample_id": 54}
+{"prediction": {"has_causal": true, "id": 55, "triples": [{"cause": {"span": "inhalation"}, "effect": {"span": "death"}, "relation": "caused"}]}, "sample_id": 55}
+{"prediction": {"has_causal": false, "id": 56, "triples": []}, "sample_id": 56}
+{"prediction": {"has_causal": false, "id": 57, "triples": []}, "sample_id": 57}
+{"prediction": {"has_causal": false, "id": 58, "triples": []}, "sample_id": 58}
+{"prediction": {"has_causal": false, "id": 59, "triples": []}, "sample_id": 59}
+{"prediction": {"has_causal": false, "id": 60, "triples": []}, "sample_id": 60}
+{"prediction": {"has_causal": false, "id": 61, "triples": []}, "sample_id": 61}
+{"prediction": {"has_causal": true, "id": 62, "triples": [{"cause": {"span": "the previous administration"}, "effect": {"span": "the war"}, "relation": "caused"}, {"cause": {"span": "the previous administration"}, "effect": {"span": "poverty"}, "relation": "caused"}]}, "sample_id": 62}
+{"prediction": {"has_causal": false, "id": 63, "triples": []}, "sample_id": 63}
+{"prediction": {"has_causal": true, "id": 64, "triples": [{"cause": {"span": "exhaustion"}, "effect": {"span": "nausea"}, "relation": "caused"}, {"cause": {"span": "exhaustion"}, "effect": {"span": "dizziness"}, "relation": "caused"}, {"cause": {"span": "dehydration"}, "effect": {"span": "nausea"}, "relation": "caused"}, {"cause": {"span": "dehydration"}, "effect": {"span": "dizziness"}, "relation": "caused"}]}, "sample_id": 64}
+{"prediction": {"has_causal": false, "id": 65, "triples": []}, "sample_id": 65}
+{"prediction": {"has_causal": true, "id": 66, "triples": [{"cause": {"span": "Trichophyton tonsurans"}, "effect": {"span": "ringworm of the scalp"}, "relation": "caused"}]}, "sample_id": 66}
+{"prediction": {"has_causal": false, "id": 67, "triples": []}, "sample_id": 67}
+{"prediction": {"has_causal": false, "id": 68, "triples": []}, "sample_id": 68}
+{"prediction": {"has_causal": false, "id": 69, "triples": []}, "sample_id": 69}
+{"prediction": {"has_causal": true, "id": 70, "triples": [{"cause": {"span": "the buring of coal"}, "effect": {"span": "the pollution"}, "relation": "caused"}, {"cause": {"span": "soot"}, "effect": {"span": "the light-colored tree trunks became darker"}, "relation": "caused"}]}, "sample_id": 70}
+{"prediction": {"has_causal": false, "id": 71, "triples": []}, "sample_id": 71}
+{"prediction": {"has_causal": true, "id": 72, "triples": [{"cause": {"span": "participant complaint"}, "effect": {"span": "investigative lead"}, "relation": "caused"}]}, "sample_id": 72}
+{"prediction": {"has_causal": false, "id": 73, "triples": []}, "sample_id": 73}
+{"prediction": {"has_causal": true, "id": 74, "triples": [{"cause": {"span": "transmitter"}, "effect": {"span": "electromagnetic wave"}, "relation": "caused"}]}, "sample_id": 74}
+{"prediction": {"has_causal": false, "id": 75, "triples": []}, "sample_id": 75}
+{"prediction": {"has_causal": true, "id": 76, "triples": [{"cause": {"span": "synaptic depression"}, "effect": {"span": "Inhibition"}, "relation": "caused"}]}, "sample_id": 76}
+{"prediction": {"has_causal": true, "id": 77, "triples": [{"cause": {"span": "deliberately planted false intelligence"}, "effect": {"span": "The drone strike"}, "relation": "caused"}]}, "sample_id": 77}
+{"prediction": {"has_causal": true, "id": 78, "triples": [{"cause": {"span": "the coup"}, "effect": {"span": "the confusion"}, "relation": "caused"}]}, "sample_id": 78}
+{"prediction": {"has_causal": false, "id": 79, "triples": []}, "sample_id": 79}
+{"prediction": {"has_causal": false, "id": 80, "triples": []}, "sample_id": 80}
+{"prediction": {"has_causal": false, "id": 81, "triples": []}, "sample_id": 81}
+{"prediction": {"has_causal": true, "id": 82, "triples": [{"cause": {"span": "Fog"}, "effect": {"span": "disorientation"}, "relation": "caused"}, {"cause": {"span": "rain"}, "effect": {"span": "disorientation"}, "relation": "caused"}, {"cause": {"span": "darkness"}, "effect": {"span": "disorientation"}, "relation": "caused"}, {"cause": {"span": "blowing snow"}, "effect": {"span": "disorientation"}, "relation": "caused"}]}, "sample_id": 82}
+{"prediction": {"has_causal": true, "id": 83, "triples": [{"cause": {"span": "the herpes simplex virus"}, "effect": {"span": "Cold sores"}, "relation": "caused"}, {"cause": {"span": "the herpes simplex virus"}, "effect": {"span": "fever blisters"}, "relation": "caused"}]}, "sample_id": 83}
+{"prediction": {"has_causal": false, "id": 84, "triples": []}, "sample_id": 84}
+{"prediction": {"has_causal": false, "id": 85, "triples": []}, "sample_id": 85}
+{"prediction": {"has_causal": false, "id": 86, "triples": []}, "sample_id": 86}
+{"prediction": {"has_causal": false, "id": 87, "triples": []}, "sample_id": 87}
+{"prediction": {"has_causal": true, "id": 88, "triples": [{"cause": {"span": "the injury"}, "effect": {"span": "discomfort"}, "relation": "caused"}, {"cause": {"span": "muscle spasm"}, "effect": {"span": "discomfort"}, "relation": "caused"}]}, "sample_id": 88}
+{"prediction": {"has_causal": true, "id": 89, "triples": [{"cause": {"span": "exertion"}, "effect": {"span": "satisfaction"}, "relation": "caused"}]}, "sample_id": 89}
+{"prediction": {"has_causal": false, "id": 90, "triples": []}, "sample_id": 90}
+{"prediction": {"has_causal": false, "id": 91, "triples": []}, "sample_id": 91}
+{"prediction": {"has_causal": false, "id": 92, "triples": []}, "sample_id": 92}
+{"prediction": {"has_causal": false, "id": 93, "triples": []}, "sample_id": 93}
+{"prediction": {"has_causal": false, "id": 94, "triples": []}, "sample_id": 94}
+{"prediction": {"has_causal": false, "id": 95, "triples": []}, "sample_id": 95}
+{"prediction": {"has_causal": false, "id": 96, "triples": []}, "sample_id": 96}
+{"prediction": {"has_causal": false, "id": 97, "triples": []}, "sample_id": 97}
+{"prediction": {"has_causal": true, "id": 98, "triples": [{"cause": {"span": "the war in Vietnam"}, "effect": {"span": "destruction"}, "relation": "caused"}, {"cause": {"span": "the war in Vietnam"}, "effect": {"span": "death"}, "relation": "caused"}]}, "sample_id": 98}
+{"prediction": {"has_causal": true, "id": 99, "triples": [{"cause": {"span": "giving"}, "effect": {"span": "moral strength"}, "relation": "caused"}, {"cause": {"span": "giving"}, "effect": {"span": "happiness"}, "relation": "caused"}]}, "sample_id": 99}
+{"prediction": {"has_causal": false, "id": 100, "triples": []}, "sample_id": 100}
+{"prediction": {"has_causal": false, "id": 101, "triples": []}, "sample_id": 101}
+{"prediction": {"has_causal": false, "id": 102, "triples": []}, "sample_id": 102}
+{"prediction": {"has_causal": false, "id": 103, "triples": []}, "sample_id": 103}
+{"prediction": {"has_causal": false, "id": 104, "triples": []}, "sample_id": 104}
+{"prediction": {"has_causal": false, "id": 105, "triples": []}, "sample_id": 105}
+{"prediction": {"has_causal": true, "id": 106, "triples": [{"cause": {"span": "Four of the entrapments"}, "effect": {"span": "suffocation"}, "relation": "caused"}]}, "sample_id": 106}
+{"prediction": {"has_causal": false, "id": 107, "triples": []}, "sample_id": 107}
+{"prediction": {"has_causal": false, "id": 108, "triples": []}, "sample_id": 108}
+{"prediction": {"has_causal": false, "id": 109, "triples": []}, "sample_id": 109}
+{"prediction": {"has_causal": true, "id": 110, "triples": [{"cause": {"span": "wine"}, "effect": {"span": "a headache"}, "relation": "caused"}]}, "sample_id": 110}
+{"prediction": {"has_causal": false, "id": 111, "triples": []}, "sample_id": 111}
+{"prediction": {"has_causal": false, "id": 112, "triples": []}, "sample_id": 112}
+{"prediction": {"has_causal": false, "id": 113, "triples": []}, "sample_id": 113}
+{"prediction": {"has_causal": true, "id": 114, "triples": [{"cause": {"span": "the earthquake"}, "effect": {"span": "the fire"}, "relation": "caused"}]}, "sample_id": 114}
+{"prediction": {"has_causal": false, "id": 115, "triples": []}, "sample_id": 115}
+{"prediction": {"has_causal": false, "id": 116, "triples": []}, "sample_id": 116}
+{"prediction": {"has_causal": false, "id": 117, "triples": []}, "sample_id": 117}
+{"prediction": {"has_causal": false, "id": 118, "triples": []}, "sample_id": 118}
+{"prediction": {"has_causal": false, "id": 119, "triples": []}, "sample_id": 119}
+{"prediction": {"has_causal": false, "id": 120, "triples": []}, "sample_id": 120}
+{"prediction": {"has_causal": false, "id": 121, "triples": []}, "sample_id": 121}
+{"prediction": {"has_causal": false, "id": 122, "triples": []}, "sample_id": 122}
+{"prediction": {"has_causal": false, "id": 123, "triples": []}, "sample_id": 123}
+{"prediction": {"has_causal": true, "id": 124, "triples": [{"cause": {"span": "radiation poisoning"}, "effect": {"span": "Most deaths from the accident"}, "relation": "caused"}]}, "sample_id": 124}
+{"prediction": {"has_causal": true, "id": 125, "triples": [{"cause": {"span": "protein"}, "effect": {"span": "calcium loss"}, "relation": "caused"}, {"cause": {"span": "phosphorus"}, "effect": {"span": "calcium loss"}, "relation": "caused"}]}, "sample_id": 125}
+{"prediction": {"has_causal": true, "id": 126, "triples": [{"cause": {"span": "one third of the bench of aldermen is exclusively composed of men"}, "effect": {"span": "the on average lower share of female aldermen than female local councillors"}, "relation": "caused"}]}, "sample_id": 126}
+{"prediction": {"has_causal": false, "id": 127, "triples": []}, "sample_id": 127}
+{"prediction": {"has_causal": false, "id": 128, "triples": []}, "sample_id": 128}
+{"prediction": {"has_causal": false, "id": 129, "triples": []}, "sample_id": 129}
+{"prediction": {"has_causal": false, "id": 130, "triples": []}, "sample_id": 130}
+{"prediction": {"has_causal": true, "id": 131, "triples": [{"cause": {"span": "drugs"}, "effect": {"span": "death"}, "relation": "caused"}]}, "sample_id": 131}
+{"prediction": {"has_causal": false, "id": 132, "triples": []}, "sample_id": 132}
+{"prediction": {"has_causal": false, "id": 133, "triples": []}, "sample_id": 133}
+{"prediction": {"has_causal": false, "id": 134, "triples": []}, "sample_id": 134}
+{"prediction": {"has_causal": true, "id": 135, "triples": [{"cause": {"span": "the economic crisis"}, "effect": {"span": "the suffering"}, "relation": "caused"}]}, "sample_id": 135}
+{"prediction": {"has_causal": false, "id": 136, "triples": []}, "sample_id": 136}
+{"prediction": {"has_causal": true, "id": 137, "triples": [{"cause": {"span": "indigestion"}, "effect": {"span": "Chest pain"}, "relation": "caused"}]}, "sample_id": 137}
+{"prediction": {"has_causal": true, "id": 138, "triples": [{"cause": {"span": "breathing small objects into their breathing passages and lungs"}, "effect": {"span": "suffocation"}, "relation": "caused"}]}, "sample_id": 138}
+{"prediction": {"has_causal": true, "id": 139, "triples": [{"cause": {"span": "the selling"}, "effect": {"span": "Gross revenues"}, "relation": "caused"}]}, "sample_id": 139}
+{"prediction": {"has_causal": false, "id": 140, "triples": []}, "sample_id": 140}
+{"prediction": {"has_causal": true, "id": 141, "triples": [{"cause": {"span": "pneumococcus bacteria"}, "effect": {"span": "Pneumococcal meningitis"}, "relation": "caused"}]}, "sample_id": 141}
+{"prediction": {"has_causal": false, "id": 142, "triples": []}, "sample_id": 142}
+{"prediction": {"has_causal": false, "id": 143, "triples": []}, "sample_id": 143}
+{"prediction": {"has_causal": false, "id": 144, "triples": []}, "sample_id": 144}
+{"prediction": {"has_causal": false, "id": 145, "triples": []}, "sample_id": 145}
+{"prediction": {"has_causal": false, "id": 146, "triples": []}, "sample_id": 146}
+{"prediction": {"has_causal": false, "id": 147, "triples": []}, "sample_id": 147}
+{"prediction": {"has_causal": false, "id": 148, "triples": []}, "sample_id": 148}
+{"prediction": {"has_causal": false, "id": 149, "triples": []}, "sample_id": 149}
+{"prediction": {"has_causal": false, "id": 150, "triples": []}, "sample_id": 150}
+{"prediction": {"has_causal": true, "id": 151, "triples": [{"cause": {"span": "this staring effect"}, "effect": {"span": "Eye discomfort"}, "relation": "caused"}]}, "sample_id": 151}
+{"prediction": {"has_causal": false, "id": 152, "triples": []}, "sample_id": 152}
+{"prediction": {"has_causal": false, "id": 153, "triples": []}, "sample_id": 153}
+{"prediction": {"has_causal": true, "id": 154, "triples": [{"cause": {"span": "The announcement of the game"}, "effect": {"span": "a stir on the web"}, "relation": "caused"}]}, "sample_id": 154}
+{"prediction": {"has_causal": false, "id": 155, "triples": []}, "sample_id": 155}
+{"prediction": {"has_causal": false, "id": 156, "triples": []}, "sample_id": 156}
+{"prediction": {"has_causal": false, "id": 157, "triples": []}, "sample_id": 157}
+{"prediction": {"has_causal": true, "id": 158, "triples": [{"cause": {"span": "the steam"}, "effect": {"span": "a backpressure on the VTD"}, "relation": "caused"}, {"cause": {"span": "a backpressure on the VTD"}, "effect": {"span": "the rupture disc opening"}, "relation": "caused"}]}, "sample_id": 158}
+{"prediction": {"has_causal": false, "id": 159, "triples": []}, "sample_id": 159}
+{"prediction": {"has_causal": false, "id": 160, "triples": []}, "sample_id": 160}
+{"prediction": {"has_causal": false, "id": 161, "triples": []}, "sample_id": 161}
+{"prediction": {"has_causal": true, "id": 162, "triples": [{"cause": {"span": "the discharge of accumulated"}, "effect": {"span": "Earthquakes"}, "relation": "caused"}]}, "sample_id": 162}
+{"prediction": {"has_causal": false, "id": 163, "triples": []}, "sample_id": 163}
+{"prediction": {"has_causal": false, "id": 164, "triples": []}, "sample_id": 164}
+{"prediction": {"has_causal": false, "id": 165, "triples": []}, "sample_id": 165}
+{"prediction": {"has_causal": false, "id": 166, "triples": []}, "sample_id": 166}
+{"prediction": {"has_causal": true, "id": 167, "triples": [{"cause": {"span": "Muscle fatigue"}, "effect": {"span": "arm muscle pain"}, "relation": "caused"}]}, "sample_id": 167}
+{"prediction": {"has_causal": false, "id": 168, "triples": []}, "sample_id": 168}
+{"prediction": {"has_causal": true, "id": 169, "triples": [{"cause": {"span": "Menopause"}, "effect": {"span": "stress"}, "relation": "caused"}, {"cause": {"span": "Menopause"}, "effect": {"span": "anxiety"}, "relation": "caused"}, {"cause": {"span": "PMS"}, "effect": {"span": "stress"}, "relation": "caused"}, {"cause": {"span": "PMS"}, "effect": {"span": "anxiety"}, "relation": "caused"}]}, "sample_id": 169}
+{"prediction": {"has_causal": false, "id": 170, "triples": []}, "sample_id": 170}
+{"prediction": {"has_causal": false, "id": 171, "triples": []}, "sample_id": 171}
+{"prediction": {"has_causal": false, "id": 172, "triples": []}, "sample_id": 172}
+{"prediction": {"has_causal": false, "id": 173, "triples": []}, "sample_id": 173}
+{"prediction": {"has_causal": false, "id": 174, "triples": []}, "sample_id": 174}
+{"prediction": {"has_causal": true, "id": 175, "triples": [{"cause": {"span": "presentation"}, "effect": {"span": "debate"}, "relation": "caused"}]}, "sample_id": 175}
+{"prediction": {"has_causal": false, "id": 176, "triples": []}, "sample_id": 176}
+{"prediction": {"has_causal": false, "id": 177, "triples": []}, "sample_id": 177}
+{"prediction": {"has_causal": false, "id": 178, "triples": []}, "sample_id": 178}
+{"prediction": {"has_causal": false, "id": 179, "triples": []}, "sample_id": 179}
+{"prediction": {"has_causal": false, "id": 180, "triples": []}, "sample_id": 180}
+{"prediction": {"has_causal": false, "id": 181, "triples": []}, "sample_id": 181}
+{"prediction": {"has_causal": true, "id": 182, "triples": [{"cause": {"span": "Germs"}, "effect": {"span": "sickness or disease"}, "relation": "caused"}]}, "sample_id": 182}
+{"prediction": {"has_causal": false, "id": 183, "triples": []}, "sample_id": 183}
+{"prediction": {"has_causal": true, "id": 184, "triples": [{"cause": {"span": "the switching process"}, "effect": {"span": "the interference"}, "relation": "caused"}]}, "sample_id": 184}
+{"prediction": {"has_causal": false, "id": 185, "triples": []}, "sample_id": 185}
+{"prediction": {"has_causal": false, "id": 186, "triples": []}, "sample_id": 186}
+{"prediction": {"has_causal": true, "id": 187, "triples": [{"cause": {"span": "Constipation"}, "effect": {"span": "abdominal pain"}, "relation": "caused"}]}, "sample_id": 187}
+{"prediction": {"has_causal": false, "id": 188, "triples": []}, "sample_id": 188}
+{"prediction": {"has_causal": true, "id": 189, "triples": [{"cause": {"span": "the location design"}, "effect": {"span": "setbacks"}, "relation": "caused"}, {"cause": {"span": "flooding"}, "effect": {"span": "setbacks"}, "relation": "caused"}, {"cause": {"span": "moisture"}, "effect": {"span": "setbacks"}, "relation": "caused"}, {"cause": {"span": "the location design"}, "effect": {"span": "technical problems"}, "relation": "caused"}, {"cause": {"span": "flooding"}, "effect": {"span": "technical problems"}, "relation": "caused"}, {"cause": {"span": "moisture"}, "effect": {"span": "technical problems"}, "relation": "caused"}]}, "sample_id": 189}
+{"prediction": {"has_causal": false, "id": 190, "triples": []}, "sample_id": 190}
+{"prediction": {"has_causal": false, "id": 191, "triples": []}, "sample_id": 191}
+{"prediction": {"has_causal": false, "id": 192, "triples": []}, "sample_id": 192}
+{"prediction": {"has_causal": true, "id": 193, "triples": [{"cause": {"span": "a collision between a ship and a barge"}, "effect": {"span": "An oil spill"}, "relation": "caused"}]}, "sample_id": 193}
+{"prediction": {"has_causal": false, "id": 194, "triples": []}, "sample_id": 194}
+{"prediction": {"has_causal": false, "id": 195, "triples": []}, "sample_id": 195}
+{"prediction": {"has_causal": false, "id": 196, "triples": []}, "sample_id": 196}
+{"prediction": {"has_causal": true, "id": 197, "triples": [{"cause": {"span": "a hormone called progesterone"}, "effect": {"span": "The changes now seen in the endometrium"}, "relation": "caused"}]}, "sample_id": 197}
+{"prediction": {"has_causal": true, "id": 198, "triples": [{"cause": {"span": "the entry of high pressure gas from a deep formation"}, "effect": {"span": "The incident"}, "relation": "caused"}]}, "sample_id": 198}
+{"prediction": {"has_causal": false, "id": 199, "triples": []}, "sample_id": 199}
+{"prediction": {"has_causal": false, "id": 200, "triples": []}, "sample_id": 200}
+{"prediction": {"has_causal": true, "id": 201, "triples": [{"cause": {"span": "smoking"}, "effect": {"span": "The swelling of the vocal fold mucosa"}, "relation": "caused"}]}, "sample_id": 201}
+{"prediction": {"has_causal": false, "id": 202, "triples": []}, "sample_id": 202}
+{"prediction": {"has_causal": false, "id": 203, "triples": []}, "sample_id": 203}
+{"prediction": {"has_causal": false, "id": 204, "triples": []}, "sample_id": 204}
+{"prediction": {"has_causal": false, "id": 205, "triples": []}, "sample_id": 205}
+{"prediction": {"has_causal": false, "id": 206, "triples": []}, "sample_id": 206}
+{"prediction": {"has_causal": false, "id": 207, "triples": []}, "sample_id": 207}
+{"prediction": {"has_causal": false, "id": 208, "triples": []}, "sample_id": 208}
+{"prediction": {"has_causal": false, "id": 209, "triples": []}, "sample_id": 209}
+{"prediction": {"has_causal": false, "id": 210, "triples": []}, "sample_id": 210}
+{"prediction": {"has_causal": false, "id": 211, "triples": []}, "sample_id": 211}
+{"prediction": {"has_causal": false, "id": 212, "triples": []}, "sample_id": 212}
+{"prediction": {"has_causal": false, "id": 213, "triples": []}, "sample_id": 213}
+{"prediction": {"has_causal": false, "id": 214, "triples": []}, "sample_id": 214}
+{"prediction": {"has_causal": true, "id": 215, "triples": [{"cause": {"span": "chronic inflammation"}, "effect": {"span": "The cysts"}, "relation": "caused"}]}, "sample_id": 215}
+{"prediction": {"has_causal": false, "id": 216, "triples": []}, "sample_id": 216}
+{"prediction": {"has_causal": false, "id": 217, "triples": []}, "sample_id": 217}
+{"prediction": {"has_causal": false, "id": 218, "triples": []}, "sample_id": 218}
+{"prediction": {"has_causal": false, "id": 219, "triples": []}, "sample_id": 219}
+{"prediction": {"has_causal": false, "id": 220, "triples": []}, "sample_id": 220}
+{"prediction": {"has_causal": false, "id": 221, "triples": []}, "sample_id": 221}
+{"prediction": {"has_causal": false, "id": 222, "triples": []}, "sample_id": 222}
+{"prediction": {"has_causal": true, "id": 223, "triples": [{"cause": {"span": "a BBC documentary"}, "effect": {"span": "the scandal"}, "relation": "caused"}]}, "sample_id": 223}
+{"prediction": {"has_causal": false, "id": 224, "triples": []}, "sample_id": 224}
+{"prediction": {"has_causal": true, "id": 225, "triples": [{"cause": {"span": "cow"}, "effect": {"span": "sound"}, "relation": "caused"}]}, "sample_id": 225}
+{"prediction": {"has_causal": false, "id": 226, "triples": []}, "sample_id": 226}
+{"prediction": {"has_causal": false, "id": 227, "triples": []}, "sample_id": 227}
+{"prediction": {"has_causal": false, "id": 228, "triples": []}, "sample_id": 228}
+{"prediction": {"has_causal": true, "id": 229, "triples": [{"cause": {"span": "movie"}, "effect": {"span": "impression"}, "relation": "caused"}]}, "sample_id": 229}
+{"prediction": {"has_causal": false, "id": 230, "triples": []}, "sample_id": 230}
+{"prediction": {"has_causal": true, "id": 231, "triples": [{"cause": {"span": "stress"}, "effect": {"span": "hair loss"}, "relation": "caused"}]}, "sample_id": 231}
+{"prediction": {"has_causal": true, "id": 232, "triples": [{"cause": {"span": "the discomfort"}, "effect": {"span": "non-compliance"}, "relation": "caused"}, {"cause": {"span": "the duration of treatment"}, "effect": {"span": "non-compliance"}, "relation": "caused"}]}, "sample_id": 232}
+{"prediction": {"has_causal": false, "id": 233, "triples": []}, "sample_id": 233}
+{"prediction": {"has_causal": false, "id": 234, "triples": []}, "sample_id": 234}
+{"prediction": {"has_causal": false, "id": 235, "triples": []}, "sample_id": 235}
+{"prediction": {"has_causal": false, "id": 236, "triples": []}, "sample_id": 236}
+{"prediction": {"has_causal": false, "id": 237, "triples": []}, "sample_id": 237}
+{"prediction": {"has_causal": true, "id": 238, "triples": [{"cause": {"span": "the sun"}, "effect": {"span": "skin irritation"}, "relation": "caused"}, {"cause": {"span": "environmental pollutants"}, "effect": {"span": "skin irritation"}, "relation": "caused"}]}, "sample_id": 238}
+{"prediction": {"has_causal": false, "id": 239, "triples": []}, "sample_id": 239}
+{"prediction": {"has_causal": true, "id": 240, "triples": [{"cause": {"span": "car"}, "effect": {"span": "screaching sound"}, "relation": "caused"}]}, "sample_id": 240}
+{"prediction": {"has_causal": true, "id": 241, "triples": [{"cause": {"span": "an infection of the stomach"}, "effect": {"span": "inflammation in the stomach"}, "relation": "caused"}, {"cause": {"span": "an infection of the stomach"}, "effect": {"span": "ulceration of the stomach or duodenum"}, "relation": "caused"}]}, "sample_id": 241}
+{"prediction": {"has_causal": false, "id": 242, "triples": []}, "sample_id": 242}
+{"prediction": {"has_causal": true, "id": 243, "triples": [{"cause": {"span": "animals"}, "effect": {"span": "much joy"}, "relation": "caused"}]}, "sample_id": 243}
+{"prediction": {"has_causal": true, "id": 244, "triples": [{"cause": {"span": "the earthquake"}, "effect": {"span": "The largest landslide"}, "relation": "caused"}]}, "sample_id": 244}
+{"prediction": {"has_causal": false, "id": 245, "triples": []}, "sample_id": 245}
+{"prediction": {"has_causal": false, "id": 246, "triples": []}, "sample_id": 246}
+{"prediction": {"has_causal": false, "id": 247, "triples": []}, "sample_id": 247}
+{"prediction": {"has_causal": false, "id": 248, "triples": []}, "sample_id": 248}
+{"prediction": {"has_causal": false, "id": 249, "triples": []}, "sample_id": 249}
+{"prediction": {"has_causal": false, "id": 250, "triples": []}, "sample_id": 250}
+{"prediction": {"has_causal": true, "id": 251, "triples": [{"cause": {"span": "the bacterial toxin"}, "effect": {"span": "the muscle paralysis"}, "relation": "caused"}]}, "sample_id": 251}
+{"prediction": {"has_causal": false, "id": 252, "triples": []}, "sample_id": 252}
+{"prediction": {"has_causal": false, "id": 253, "triples": []}, "sample_id": 253}
+{"prediction": {"has_causal": false, "id": 254, "triples": []}, "sample_id": 254}
+{"prediction": {"has_causal": false, "id": 255, "triples": []}, "sample_id": 255}
+{"prediction": {"has_causal": false, "id": 256, "triples": []}, "sample_id": 256}
+{"prediction": {"has_causal": false, "id": 257, "triples": []}, "sample_id": 257}
+{"prediction": {"has_causal": false, "id": 258, "triples": []}, "sample_id": 258}
+{"prediction": {"has_causal": false, "id": 259, "triples": []}, "sample_id": 259}
+{"prediction": {"has_causal": false, "id": 260, "triples": []}, "sample_id": 260}
+{"prediction": {"has_causal": false, "id": 261, "triples": []}, "sample_id": 261}
+{"prediction": {"has_causal": false, "id": 262, "triples": []}, "sample_id": 262}
+{"prediction": {"has_causal": false, "id": 263, "triples": []}, "sample_id": 263}
+{"prediction": {"has_causal": false, "id": 264, "triples": []}, "sample_id": 264}
+{"prediction": {"has_causal": false, "id": 265, "triples": []}, "sample_id": 265}
+{"prediction": {"has_causal": false, "id": 266, "triples": []}, "sample_id": 266}
+{"prediction": {"has_causal": true, "id": 267, "triples": [{"cause": {"span": "this disease"}, "effect": {"span": "pain"}, "relation": "caused"}]}, "sample_id": 267}
+{"prediction": {"has_causal": false, "id": 268, "triples": []}, "sample_id": 268}
+{"prediction": {"has_causal": false, "id": 269, "triples": []}, "sample_id": 269}
+{"prediction": {"has_causal": false, "id": 270, "triples": []}, "sample_id": 270}
+{"prediction": {"has_causal": false, "id": 271, "triples": []}, "sample_id": 271}
+{"prediction": {"has_causal": false, "id": 272, "triples": []}, "sample_id": 272}
+{"prediction": {"has_causal": false, "id": 273, "triples": []}, "sample_id": 273}
+{"prediction": {"has_causal": false, "id": 274, "triples": []}, "sample_id": 274}
+{"prediction": {"has_causal": false, "id": 275, "triples": []}, "sample_id": 275}
+{"prediction": {"has_causal": false, "id": 276, "triples": []}, "sample_id": 276}
+{"prediction": {"has_causal": false, "id": 277, "triples": []}, "sample_id": 277}
+{"prediction": {"has_causal": false, "id": 278, "triples": []}, "sample_id": 278}
+{"prediction": {"has_causal": true, "id": 279, "triples": [{"cause": {"span": "the news that the stock-index futures have been approved"}, "effect": {"span": "Wednesday's market"}, "relation": "caused"}]}, "sample_id": 279}
+{"prediction": {"has_causal": false, "id": 280, "triples": []}, "sample_id": 280}
+{"prediction": {"has_causal": false, "id": 281, "triples": []}, "sample_id": 281}
+{"prediction": {"has_causal": false, "id": 282, "triples": []}, "sample_id": 282}
+{"prediction": {"has_causal": false, "id": 283, "triples": []}, "sample_id": 283}
+{"prediction": {"has_causal": false, "id": 284, "triples": []}, "sample_id": 284}
+{"prediction": {"has_causal": false, "id": 285, "triples": []}, "sample_id": 285}
+{"prediction": {"has_causal": false, "id": 286, "triples": []}, "sample_id": 286}
+{"prediction": {"has_causal": false, "id": 287, "triples": []}, "sample_id": 287}
+{"prediction": {"has_causal": false, "id": 288, "triples": []}, "sample_id": 288}
+{"prediction": {"has_causal": false, "id": 289, "triples": []}, "sample_id": 289}
+{"prediction": {"has_causal": true, "id": 290, "triples": [{"cause": {"span": "an abnormal build-up of fluid"}, "effect": {"span": "swelling"}, "relation": "caused"}]}, "sample_id": 290}
+{"prediction": {"has_causal": false, "id": 291, "triples": []}, "sample_id": 291}
+{"prediction": {"has_causal": true, "id": 292, "triples": [{"cause": {"span": "the winds"}, "effect": {"span": "damage"}, "relation": "caused"}, {"cause": {"span": "the rough seas"}, "effect": {"span": "damage"}, "relation": "caused"}]}, "sample_id": 292}
+{"prediction": {"has_causal": false, "id": 293, "triples": []}, "sample_id": 293}
+{"prediction": {"has_causal": true, "id": 294, "triples": [{"cause": {"span": "exploitation"}, "effect": {"span": "the suffering"}, "relation": "caused"}, {"cause": {"span": "social injustice"}, "effect": {"span": "the suffering"}, "relation": "caused"}, {"cause": {"span": "stealing"}, "effect": {"span": "the suffering"}, "relation": "caused"}, {"cause": {"span": "oppression"}, "effect": {"span": "the suffering"}, "relation": "caused"}]}, "sample_id": 294}
+{"prediction": {"has_causal": false, "id": 295, "triples": []}, "sample_id": 295}
+{"prediction": {"has_causal": false, "id": 296, "triples": []}, "sample_id": 296}
+{"prediction": {"has_causal": false, "id": 297, "triples": []}, "sample_id": 297}
+{"prediction": {"has_causal": false, "id": 298, "triples": []}, "sample_id": 298}
+{"prediction": {"has_causal": false, "id": 299, "triples": []}, "sample_id": 299}
+{"prediction": {"has_causal": false, "id": 300, "triples": []}, "sample_id": 300}
+{"prediction": {"has_causal": false, "id": 301, "triples": []}, "sample_id": 301}
+{"prediction": {"has_causal": true, "id": 302, "triples": [{"cause": {"span": "the swinging of the pendulum"}, "effect": {"span": "Oscillation of the lever"}, "relation": "caused"}]}, "sample_id": 302}
+{"prediction": {"has_causal": true, "id": 303, "triples": [{"cause": {"span": "malfunctions"}, "effect": {"span": "delays"}, "relation": "caused"}]}, "sample_id": 303}
+{"prediction": {"has_causal": false, "id": 304, "triples": []}, "sample_id": 304}
+{"prediction": {"has_causal": true, "id": 305, "triples": [{"cause": {"span": "Stimulation of the posterior horn of the medial meniscus"}, "effect": {"span": "a measurable amount of CMAP latency for the semimembranosus muscle"}, "relation": "caused"}]}, "sample_id": 305}
+{"prediction": {"has_causal": false, "id": 306, "triples": []}, "sample_id": 306}
+{"prediction": {"has_causal": false, "id": 307, "triples": []}, "sample_id": 307}
+{"prediction": {"has_causal": false, "id": 308, "triples": []}, "sample_id": 308}
+{"prediction": {"has_causal": false, "id": 309, "triples": []}, "sample_id": 309}
+{"prediction": {"has_causal": true, "id": 310, "triples": [{"cause": {"span": "the bacteria called Salmonella"}, "effect": {"span": "the infection"}, "relation": "caused"}]}, "sample_id": 310}
+{"prediction": {"has_causal": true, "id": 311, "triples": [{"cause": {"span": "shock waves"}, "effect": {"span": "The afterglow"}, "relation": "caused"}]}, "sample_id": 311}
+{"prediction": {"has_causal": false, "id": 312, "triples": []}, "sample_id": 312}
+{"prediction": {"has_causal": false, "id": 313, "triples": []}, "sample_id": 313}
+{"prediction": {"has_causal": false, "id": 314, "triples": []}, "sample_id": 314}
+{"prediction": {"has_causal": true, "id": 315, "triples": [{"cause": {"span": "the sunrise"}, "effect": {"span": "The light in the background"}, "relation": "caused"}]}, "sample_id": 315}
+{"prediction": {"has_causal": true, "id": 316, "triples": [{"cause": {"span": "helping others"}, "effect": {"span": "a sense of satisfaction and personal fulfillment"}, "relation": "caused"}]}, "sample_id": 316}
+{"prediction": {"has_causal": false, "id": 317, "triples": []}, "sample_id": 317}
+{"prediction": {"has_causal": false, "id": 318, "triples": []}, "sample_id": 318}
+{"prediction": {"has_causal": false, "id": 319, "triples": []}, "sample_id": 319}
+{"prediction": {"has_causal": false, "id": 320, "triples": []}, "sample_id": 320}
+{"prediction": {"has_causal": false, "id": 321, "triples": []}, "sample_id": 321}
+{"prediction": {"has_causal": true, "id": 322, "triples": [{"cause": {"span": "the needle stab"}, "effect": {"span": "Slone's fear of AIDS"}, "relation": "caused"}, {"cause": {"span": "the needle stab"}, "effect": {"span": "the mental distress she suffered from this fear"}, "relation": "caused"}]}, "sample_id": 322}
+{"prediction": {"has_causal": false, "id": 323, "triples": []}, "sample_id": 323}
+{"prediction": {"has_causal": false, "id": 324, "triples": []}, "sample_id": 324}
+{"prediction": {"has_causal": true, "id": 325, "triples": [{"cause": {"span": "the latest Christmas terrorist"}, "effect": {"span": "The disruption"}, "relation": "caused"}]}, "sample_id": 325}
+{"prediction": {"has_causal": false, "id": 326, "triples": []}, "sample_id": 326}
+{"prediction": {"has_causal": false, "id": 327, "triples": []}, "sample_id": 327}
+{"prediction": {"has_causal": true, "id": 328, "triples": [{"cause": {"span": "the storms"}, "effect": {"span": "the severe devastations"}, "relation": "caused"}]}, "sample_id": 328}
+{"prediction": {"has_causal": false, "id": 329, "triples": []}, "sample_id": 329}
+{"prediction": {"has_causal": true, "id": 330, "triples": [{"cause": {"span": "the growing absolute numbers of young people on the planet"}, "effect": {"span": "A trend"}, "relation": "caused"}, {"cause": {"span": "the rising unemployment rate"}, "effect": {"span": "A trend"}, "relation": "caused"}]}, "sample_id": 330}
+{"prediction": {"has_causal": false, "id": 331, "triples": []}, "sample_id": 331}
+{"prediction": {"has_causal": false, "id": 332, "triples": []}, "sample_id": 332}
+{"prediction": {"has_causal": false, "id": 333, "triples": []}, "sample_id": 333}
+{"prediction": {"has_causal": false, "id": 334, "triples": []}, "sample_id": 334}
+{"prediction": {"has_causal": false, "id": 335, "triples": []}, "sample_id": 335}
+{"prediction": {"has_causal": false, "id": 336, "triples": []}, "sample_id": 336}
+{"prediction": {"has_causal": false, "id": 337, "triples": []}, "sample_id": 337}
+{"prediction": {"has_causal": false, "id": 338, "triples": []}, "sample_id": 338}
+{"prediction": {"has_causal": false, "id": 339, "triples": []}, "sample_id": 339}
+{"prediction": {"has_causal": true, "id": 340, "triples": [{"cause": {"span": "sadness"}, "effect": {"span": "fear"}, "relation": "caused"}, {"cause": {"span": "fear"}, "effect": {"span": "anger"}, "relation": "caused"}]}, "sample_id": 340}
+{"prediction": {"has_causal": false, "id": 341, "triples": []}, "sample_id": 341}
+{"prediction": {"has_causal": false, "id": 342, "triples": []}, "sample_id": 342}
+{"prediction": {"has_causal": false, "id": 343, "triples": []}, "sample_id": 343}
+{"prediction": {"has_causal": true, "id": 344, "triples": [{"cause": {"span": "the complications"}, "effect": {"span": "patient deaths"}, "relation": "caused"}, {"cause": {"span": "the complications"}, "effect": {"span": "a serious injury"}, "relation": "caused"}]}, "sample_id": 344}
+{"prediction": {"has_causal": false, "id": 345, "triples": []}, "sample_id": 345}
+{"prediction": {"has_causal": true, "id": 346, "triples": [{"cause": {"span": "the torment to her head"}, "effect": {"span": "The worst pain of all"}, "relation": "caused"}]}, "sample_id": 346}
+{"prediction": {"has_causal": false, "id": 347, "triples": []}, "sample_id": 347}
+{"prediction": {"has_causal": false, "id": 348, "triples": []}, "sample_id": 348}
+{"prediction": {"has_causal": false, "id": 349, "triples": []}, "sample_id": 349}
+{"prediction": {"has_causal": false, "id": 350, "triples": []}, "sample_id": 350}
+{"prediction": {"has_causal": false, "id": 351, "triples": []}, "sample_id": 351}
+{"prediction": {"has_causal": false, "id": 352, "triples": []}, "sample_id": 352}
+{"prediction": {"has_causal": true, "id": 353, "triples": [{"cause": {"span": "anesthetic"}, "effect": {"span": "unconsciousness"}, "relation": "caused"}, {"cause": {"span": "anesthetic"}, "effect": {"span": "insensibility to paid"}, "relation": "caused"}]}, "sample_id": 353}
+{"prediction": {"has_causal": true, "id": 354, "triples": [{"cause": {"span": "nuclear energy"}, "effect": {"span": "water pollution"}, "relation": "caused"}]}, "sample_id": 354}
+{"prediction": {"has_causal": false, "id": 355, "triples": []}, "sample_id": 355}
+{"prediction": {"has_causal": false, "id": 356, "triples": []}, "sample_id": 356}
+{"prediction": {"has_causal": false, "id": 357, "triples": []}, "sample_id": 357}
+{"prediction": {"has_causal": false, "id": 358, "triples": []}, "sample_id": 358}
+{"prediction": {"has_causal": false, "id": 359, "triples": []}, "sample_id": 359}
+{"prediction": {"has_causal": true, "id": 360, "triples": [{"cause": {"span": "Landslides"}, "effect": {"span": "the majority of the deaths"}, "relation": "caused"}]}, "sample_id": 360}
+{"prediction": {"has_causal": false, "id": 361, "triples": []}, "sample_id": 361}
+{"prediction": {"has_causal": false, "id": 362, "triples": []}, "sample_id": 362}
+{"prediction": {"has_causal": true, "id": 363, "triples": [{"cause": {"span": "unmindful drinking"}, "effect": {"span": "the suffering"}, "relation": "caused"}]}, "sample_id": 363}
+{"prediction": {"has_causal": false, "id": 364, "triples": []}, "sample_id": 364}
+{"prediction": {"has_causal": false, "id": 365, "triples": []}, "sample_id": 365}
+{"prediction": {"has_causal": false, "id": 366, "triples": []}, "sample_id": 366}
+{"prediction": {"has_causal": true, "id": 367, "triples": [{"cause": {"span": "the mold's cavity"}, "effect": {"span": "the shape"}, "relation": "caused"}]}, "sample_id": 367}
+{"prediction": {"has_causal": false, "id": 368, "triples": []}, "sample_id": 368}
+{"prediction": {"has_causal": true, "id": 369, "triples": [{"cause": {"span": "the Earth's atmosphere"}, "effect": {"span": "The drag"}, "relation": "caused"}]}, "sample_id": 369}
+{"prediction": {"has_causal": true, "id": 370, "triples": [{"cause": {"span": "Snails"}, "effect": {"span": "damage"}, "relation": "caused"}, {"cause": {"span": "slugs"}, "effect": {"span": "damage"}, "relation": "caused"}]}, "sample_id": 370}
+{"prediction": {"has_causal": false, "id": 371, "triples": []}, "sample_id": 371}
+{"prediction": {"has_causal": true, "id": 372, "triples": [{"cause": {"span": "The explosion"}, "effect": {"span": "a gas leak"}, "relation": "caused"}]}, "sample_id": 372}
+{"prediction": {"has_causal": false, "id": 373, "triples": []}, "sample_id": 373}
+{"prediction": {"has_causal": false, "id": 374, "triples": []}, "sample_id": 374}
+{"prediction": {"has_causal": false, "id": 375, "triples": []}, "sample_id": 375}
+{"prediction": {"has_causal": false, "id": 376, "triples": []}, "sample_id": 376}
+{"prediction": {"has_causal": true, "id": 377, "triples": [{"cause": {"span": "running in conventional running shoes"}, "effect": {"span": "stress on the knee joints"}, "relation": "caused"}]}, "sample_id": 377}
+{"prediction": {"has_causal": false, "id": 378, "triples": []}, "sample_id": 378}
+{"prediction": {"has_causal": false, "id": 379, "triples": []}, "sample_id": 379}
+{"prediction": {"has_causal": false, "id": 380, "triples": []}, "sample_id": 380}
+{"prediction": {"has_causal": false, "id": 381, "triples": []}, "sample_id": 381}
+{"prediction": {"has_causal": false, "id": 382, "triples": []}, "sample_id": 382}
+{"prediction": {"has_causal": false, "id": 383, "triples": []}, "sample_id": 383}
+{"prediction": {"has_causal": false, "id": 384, "triples": []}, "sample_id": 384}
+{"prediction": {"has_causal": false, "id": 385, "triples": []}, "sample_id": 385}
+{"prediction": {"has_causal": false, "id": 386, "triples": []}, "sample_id": 386}
+{"prediction": {"has_causal": false, "id": 387, "triples": []}, "sample_id": 387}
+{"prediction": {"has_causal": false, "id": 388, "triples": []}, "sample_id": 388}
+{"prediction": {"has_causal": true, "id": 389, "triples": [{"cause": {"span": "Vulvodynia"}, "effect": {"span": "chronic vulval pain"}, "relation": "caused"}]}, "sample_id": 389}
+{"prediction": {"has_causal": false, "id": 390, "triples": []}, "sample_id": 390}
+{"prediction": {"has_causal": false, "id": 391, "triples": []}, "sample_id": 391}
+{"prediction": {"has_causal": false, "id": 392, "triples": []}, "sample_id": 392}
+{"prediction": {"has_causal": false, "id": 393, "triples": []}, "sample_id": 393}
+{"prediction": {"has_causal": false, "id": 394, "triples": []}, "sample_id": 394}
+{"prediction": {"has_causal": false, "id": 395, "triples": []}, "sample_id": 395}
+{"prediction": {"has_causal": true, "id": 396, "triples": [{"cause": {"span": "Polymorph"}, "effect": {"span": "the threat"}, "relation": "caused"}, {"cause": {"span": "the spell"}, "effect": {"span": "the threat"}, "relation": "caused"}]}, "sample_id": 396}
+{"prediction": {"has_causal": true, "id": 397, "triples": [{"cause": {"span": "the tornado"}, "effect": {"span": "the devastation"}, "relation": "caused"}]}, "sample_id": 397}
+{"prediction": {"has_causal": true, "id": 398, "triples": [{"cause": {"span": "acne"}, "effect": {"span": "stress"}, "relation": "caused"}, {"cause": {"span": "stress"}, "effect": {"span": "acne breakouts"}, "relation": "caused"}]}, "sample_id": 398}
+{"prediction": {"has_causal": true, "id": 399, "triples": [{"cause": {"span": "the widgets"}, "effect": {"span": "The problem"}, "relation": "caused"}]}, "sample_id": 399}
+{"prediction": {"has_causal": false, "id": 400, "triples": []}, "sample_id": 400}
+{"prediction": {"has_causal": false, "id": 401, "triples": []}, "sample_id": 401}
+{"prediction": {"has_causal": true, "id": 402, "triples": [{"cause": {"span": "The storm"}, "effect": {"span": "31 deaths"}, "relation": "caused"}, {"cause": {"span": "The storm"}, "effect": {"span": "2.5 million dollars damage"}, "relation": "caused"}]}, "sample_id": 402}
+{"prediction": {"has_causal": false, "id": 403, "triples": []}, "sample_id": 403}
+{"prediction": {"has_causal": false, "id": 404, "triples": []}, "sample_id": 404}
+{"prediction": {"has_causal": true, "id": 405, "triples": [{"cause": {"span": "chemical studies"}, "effect": {"span": "proof of structure of the indole components of the seeds"}, "relation": "caused"}]}, "sample_id": 405}
+{"prediction": {"has_causal": false, "id": 406, "triples": []}, "sample_id": 406}
+{"prediction": {"has_causal": false, "id": 407, "triples": []}, "sample_id": 407}
+{"prediction": {"has_causal": true, "id": 408, "triples": [{"cause": {"span": "Smoke"}, "effect": {"span": "kidney failures"}, "relation": "caused"}]}, "sample_id": 408}
+{"prediction": {"has_causal": false, "id": 409, "triples": []}, "sample_id": 409}
+{"prediction": {"has_causal": false, "id": 410, "triples": []}, "sample_id": 410}
+{"prediction": {"has_causal": false, "id": 411, "triples": []}, "sample_id": 411}
+{"prediction": {"has_causal": false, "id": 412, "triples": []}, "sample_id": 412}
+{"prediction": {"has_causal": true, "id": 413, "triples": [{"cause": {"span": "the quake"}, "effect": {"span": "the loss"}, "relation": "caused"}]}, "sample_id": 413}
+{"prediction": {"has_causal": false, "id": 414, "triples": []}, "sample_id": 414}
+{"prediction": {"has_causal": false, "id": 415, "triples": []}, "sample_id": 415}
+{"prediction": {"has_causal": false, "id": 416, "triples": []}, "sample_id": 416}
+{"prediction": {"has_causal": false, "id": 417, "triples": []}, "sample_id": 417}
+{"prediction": {"has_causal": false, "id": 418, "triples": []}, "sample_id": 418}
+{"prediction": {"has_causal": false, "id": 419, "triples": []}, "sample_id": 419}
+{"prediction": {"has_causal": false, "id": 420, "triples": []}, "sample_id": 420}
+{"prediction": {"has_causal": false, "id": 421, "triples": []}, "sample_id": 421}
+{"prediction": {"has_causal": true, "id": 422, "triples": [{"cause": {"span": "the advertisement"}, "effect": {"span": "the impression"}, "relation": "caused"}]}, "sample_id": 422}
+{"prediction": {"has_causal": false, "id": 423, "triples": []}, "sample_id": 423}
+{"prediction": {"has_causal": false, "id": 424, "triples": []}, "sample_id": 424}
+{"prediction": {"has_causal": false, "id": 425, "triples": []}, "sample_id": 425}
+{"prediction": {"has_causal": false, "id": 426, "triples": []}, "sample_id": 426}
+{"prediction": {"has_causal": true, "id": 427, "triples": [{"cause": {"span": "the purchase"}, "effect": {"span": "the disappointment"}, "relation": "caused"}]}, "sample_id": 427}
+{"prediction": {"has_causal": true, "id": 428, "triples": [{"cause": {"span": "the atomic bomb explosion"}, "effect": {"span": "The radiation"}, "relation": "caused"}]}, "sample_id": 428}
+{"prediction": {"has_causal": false, "id": 429, "triples": []}, "sample_id": 429}
+{"prediction": {"has_causal": false, "id": 430, "triples": []}, "sample_id": 430}
+{"prediction": {"has_causal": false, "id": 431, "triples": []}, "sample_id": 431}
+{"prediction": {"has_causal": false, "id": 432, "triples": []}, "sample_id": 432}
+{"prediction": {"has_causal": false, "id": 433, "triples": []}, "sample_id": 433}
+{"prediction": {"has_causal": false, "id": 434, "triples": []}, "sample_id": 434}
+{"prediction": {"has_causal": true, "id": 435, "triples": [{"cause": {"span": "most cleaners"}, "effect": {"span": "rash"}, "relation": "caused"}, {"cause": {"span": "most cleaners"}, "effect": {"span": "a burning sensation"}, "relation": "caused"}]}, "sample_id": 435}
+{"prediction": {"has_causal": true, "id": 436, "triples": [{"cause": {"span": "work"}, "effect": {"span": "The disruption"}, "relation": "caused"}]}, "sample_id": 436}
+{"prediction": {"has_causal": false, "id": 437, "triples": []}, "sample_id": 437}
+{"prediction": {"has_causal": false, "id": 438, "triples": []}, "sample_id": 438}
+{"prediction": {"has_causal": true, "id": 439, "triples": [{"cause": {"span": "stress"}, "effect": {"span": "neck tension"}, "relation": "caused"}]}, "sample_id": 439}
+{"prediction": {"has_causal": false, "id": 440, "triples": []}, "sample_id": 440}
+{"prediction": {"has_causal": false, "id": 441, "triples": []}, "sample_id": 441}
+{"prediction": {"has_causal": true, "id": 442, "triples": [{"cause": {"span": "a strong offshore earthquake"}, "effect": {"span": "tsunami"}, "relation": "caused"}]}, "sample_id": 442}
+{"prediction": {"has_causal": false, "id": 443, "triples": []}, "sample_id": 443}
+{"prediction": {"has_causal": false, "id": 444, "triples": []}, "sample_id": 444}
+{"prediction": {"has_causal": false, "id": 445, "triples": []}, "sample_id": 445}
+{"prediction": {"has_causal": false, "id": 446, "triples": []}, "sample_id": 446}
+{"prediction": {"has_causal": false, "id": 447, "triples": []}, "sample_id": 447}
+{"prediction": {"has_causal": false, "id": 448, "triples": []}, "sample_id": 448}
+{"prediction": {"has_causal": false, "id": 449, "triples": []}, "sample_id": 449}
+{"prediction": {"has_causal": false, "id": 450, "triples": []}, "sample_id": 450}
+{"prediction": {"has_causal": false, "id": 451, "triples": []}, "sample_id": 451}
+{"prediction": {"has_causal": false, "id": 452, "triples": []}, "sample_id": 452}
+{"prediction": {"has_causal": false, "id": 453, "triples": []}, "sample_id": 453}
+{"prediction": {"has_causal": false, "id": 454, "triples": []}, "sample_id": 454}
+{"prediction": {"has_causal": false, "id": 455, "triples": []}, "sample_id": 455}
+{"prediction": {"has_causal": true, "id": 456, "triples": [{"cause": {"span": "Infection"}, "effect": {"span": "death"}, "relation": "caused"}]}, "sample_id": 456}
+{"prediction": {"has_causal": false, "id": 457, "triples": []}, "sample_id": 457}
+{"prediction": {"has_causal": false, "id": 458, "triples": []}, "sample_id": 458}
+{"prediction": {"has_causal": true, "id": 459, "triples": [{"cause": {"span": "software"}, "effect": {"span": "drain"}, "relation": "caused"}]}, "sample_id": 459}
+{"prediction": {"has_causal": false, "id": 460, "triples": []}, "sample_id": 460}
+{"prediction": {"has_causal": false, "id": 461, "triples": []}, "sample_id": 461}
+{"prediction": {"has_causal": false, "id": 462, "triples": []}, "sample_id": 462}
+{"prediction": {"has_causal": false, "id": 463, "triples": []}, "sample_id": 463}
+{"prediction": {"has_causal": false, "id": 464, "triples": []}, "sample_id": 464}
+{"prediction": {"has_causal": false, "id": 465, "triples": []}, "sample_id": 465}
+{"prediction": {"has_causal": false, "id": 466, "triples": []}, "sample_id": 466}
+{"prediction": {"has_causal": false, "id": 467, "triples": []}, "sample_id": 467}
+{"prediction": {"has_causal": true, "id": 468, "triples": [{"cause": {"span": "braces"}, "effect": {"span": "discomfort"}, "relation": "caused"}]}, "sample_id": 468}
+{"prediction": {"has_causal": true, "id": 469, "triples": [{"cause": {"span": "The crashes"}, "effect": {"span": "the collapse of much of the World Trade Center complex"}, "relation": "caused"}, {"cause": {"span": "The crashes"}, "effect": {"span": "the destruction of part of the southwest side of the Pentagon"}, "relation": "caused"}]}, "sample_id": 469}
+{"prediction": {"has_causal": false, "id": 470, "triples": []}, "sample_id": 470}
+{"prediction": {"has_causal": false, "id": 471, "triples": []}, "sample_id": 471}
+{"prediction": {"has_causal": false, "id": 472, "triples": []}, "sample_id": 472}
+{"prediction": {"has_causal": false, "id": 473, "triples": []}, "sample_id": 473}
+{"prediction": {"has_causal": false, "id": 474, "triples": []}, "sample_id": 474}
+{"prediction": {"has_causal": false, "id": 475, "triples": []}, "sample_id": 475}
+{"prediction": {"has_causal": false, "id": 476, "triples": []}, "sample_id": 476}
+{"prediction": {"has_causal": false, "id": 477, "triples": []}, "sample_id": 477}
+{"prediction": {"has_causal": false, "id": 478, "triples": []}, "sample_id": 478}
+{"prediction": {"has_causal": false, "id": 479, "triples": []}, "sample_id": 479}
+{"prediction": {"has_causal": false, "id": 480, "triples": []}, "sample_id": 480}
+{"prediction": {"has_causal": false, "id": 481, "triples": []}, "sample_id": 481}
+{"prediction": {"has_causal": false, "id": 482, "triples": []}, "sample_id": 482}
+{"prediction": {"has_causal": false, "id": 483, "triples": []}, "sample_id": 483}
+{"prediction": {"has_causal": false, "id": 484, "triples": []}, "sample_id": 484}
+{"prediction": {"has_causal": false, "id": 485, "triples": []}, "sample_id": 485}
+{"prediction": {"has_causal": false, "id": 486, "triples": []}, "sample_id": 486}
+{"prediction": {"has_causal": false, "id": 487, "triples": []}, "sample_id": 487}
+{"prediction": {"has_causal": false, "id": 488, "triples": []}, "sample_id": 488}
+{"prediction": {"has_causal": true, "id": 489, "triples": [{"cause": {"span": "a cyclone"}, "effect": {"span": "The flooding"}, "relation": "caused"}]}, "sample_id": 489}
+{"prediction": {"has_causal": false, "id": 490, "triples": []}, "sample_id": 490}
+{"prediction": {"has_causal": false, "id": 491, "triples": []}, "sample_id": 491}
+{"prediction": {"has_causal": false, "id": 492, "triples": []}, "sample_id": 492}
+{"prediction": {"has_causal": false, "id": 493, "triples": []}, "sample_id": 493}
+{"prediction": {"has_causal": false, "id": 494, "triples": []}, "sample_id": 494}
+{"prediction": {"has_causal": false, "id": 495, "triples": []}, "sample_id": 495}
+{"prediction": {"has_causal": false, "id": 496, "triples": []}, "sample_id": 496}
+{"prediction": {"has_causal": true, "id": 497, "triples": [{"cause": {"span": "Obama's economic policies"}, "effect": {"span": "a global disaster"}, "relation": "caused"}]}, "sample_id": 497}
+{"prediction": {"has_causal": false, "id": 498, "triples": []}, "sample_id": 498}
+{"prediction": {"has_causal": false, "id": 499, "triples": []}, "sample_id": 499}
+{"prediction": {"has_causal": false, "id": 500, "triples": []}, "sample_id": 500}
+{"prediction": {"has_causal": false, "id": 501, "triples": []}, "sample_id": 501}
+{"prediction": {"has_causal": false, "id": 502, "triples": []}, "sample_id": 502}
+{"prediction": {"has_causal": false, "id": 503, "triples": []}, "sample_id": 503}
+{"prediction": {"has_causal": false, "id": 504, "triples": []}, "sample_id": 504}
+{"prediction": {"has_causal": false, "id": 505, "triples": []}, "sample_id": 505}
+{"prediction": {"has_causal": false, "id": 506, "triples": []}, "sample_id": 506}
+{"prediction": {"has_causal": false, "id": 507, "triples": []}, "sample_id": 507}
+{"prediction": {"has_causal": false, "id": 508, "triples": []}, "sample_id": 508}
+{"prediction": {"has_causal": true, "id": 509, "triples": [{"cause": {"span": "factors"}, "effect": {"span": "racial inequality"}, "relation": "caused"}]}, "sample_id": 509}
+{"prediction": {"has_causal": false, "id": 510, "triples": []}, "sample_id": 510}
+{"prediction": {"has_causal": false, "id": 511, "triples": []}, "sample_id": 511}
+{"prediction": {"has_causal": false, "id": 512, "triples": []}, "sample_id": 512}
+{"prediction": {"has_causal": false, "id": 513, "triples": []}, "sample_id": 513}
+{"prediction": {"has_causal": false, "id": 514, "triples": []}, "sample_id": 514}
+{"prediction": {"has_causal": false, "id": 515, "triples": []}, "sample_id": 515}
+{"prediction": {"has_causal": false, "id": 516, "triples": []}, "sample_id": 516}
+{"prediction": {"has_causal": false, "id": 517, "triples": []}, "sample_id": 517}
+{"prediction": {"has_causal": false, "id": 518, "triples": []}, "sample_id": 518}
+{"prediction": {"has_causal": false, "id": 519, "triples": []}, "sample_id": 519}
+{"prediction": {"has_causal": false, "id": 520, "triples": []}, "sample_id": 520}
+{"prediction": {"has_causal": false, "id": 521, "triples": []}, "sample_id": 521}
+{"prediction": {"has_causal": false, "id": 522, "triples": []}, "sample_id": 522}
+{"prediction": {"has_causal": false, "id": 523, "triples": []}, "sample_id": 523}
+{"prediction": {"has_causal": true, "id": 524, "triples": [{"cause": {"span": "indigestion"}, "effect": {"span": "stomach pain"}, "relation": "caused"}]}, "sample_id": 524}
+{"prediction": {"has_causal": false, "id": 525, "triples": []}, "sample_id": 525}
+{"prediction": {"has_causal": false, "id": 526, "triples": []}, "sample_id": 526}
+{"prediction": {"has_causal": true, "id": 527, "triples": [{"cause": {"span": "the bacteria bordetella pertussis"}, "effect": {"span": "an infection of the airways"}, "relation": "caused"}]}, "sample_id": 527}
+{"prediction": {"has_causal": false, "id": 528, "triples": []}, "sample_id": 528}
+{"prediction": {"has_causal": false, "id": 529, "triples": []}, "sample_id": 529}
+{"prediction": {"has_causal": false, "id": 530, "triples": []}, "sample_id": 530}
+{"prediction": {"has_causal": true, "id": 531, "triples": [{"cause": {"span": "ticks"}, "effect": {"span": "rashes"}, "relation": "caused"}, {"cause": {"span": "ticks"}, "effect": {"span": "discomfort"}, "relation": "caused"}, {"cause": {"span": "fleas"}, "effect": {"span": "rashes"}, "relation": "caused"}, {"cause": {"span": "fleas"}, "effect": {"span": "discomfort"}, "relation": "caused"}]}, "sample_id": 531}
+{"prediction": {"has_causal": true, "id": 532, "triples": [{"cause": {"span": "germs"}, "effect": {"span": "flu"}, "relation": "caused"}, {"cause": {"span": "germs"}, "effect": {"span": "colds"}, "relation": "caused"}, {"cause": {"span": "germs"}, "effect": {"span": "sore throat"}, "relation": "caused"}]}, "sample_id": 532}
+{"prediction": {"has_causal": false, "id": 533, "triples": []}, "sample_id": 533}
+{"prediction": {"has_causal": false, "id": 534, "triples": []}, "sample_id": 534}
+{"prediction": {"has_causal": false, "id": 535, "triples": []}, "sample_id": 535}
+{"prediction": {"has_causal": true, "id": 536, "triples": [{"cause": {"span": "the Florida contingent"}, "effect": {"span": "Discussion"}, "relation": "caused"}]}, "sample_id": 536}
+{"prediction": {"has_causal": false, "id": 537, "triples": []}, "sample_id": 537}
+{"prediction": {"has_causal": true, "id": 538, "triples": [{"cause": {"span": "spills"}, "effect": {"span": "environmental damage"}, "relation": "caused"}]}, "sample_id": 538}
+{"prediction": {"has_causal": false, "id": 539, "triples": []}, "sample_id": 539}
+{"prediction": {"has_causal": false, "id": 540, "triples": []}, "sample_id": 540}
+{"prediction": {"has_causal": false, "id": 541, "triples": []}, "sample_id": 541}
+{"prediction": {"has_causal": true, "id": 542, "triples": [{"cause": {"span": "the virus"}, "effect": {"span": "the 1918 flu pandemic"}, "relation": "caused"}]}, "sample_id": 542}
+{"prediction": {"has_causal": true, "id": 543, "triples": [{"cause": {"span": "nitrite"}, "effect": {"span": "Increased reproductive toxicity of landfill leachate after degradation"}, "relation": "caused"}]}, "sample_id": 543}
+{"prediction": {"has_causal": false, "id": 544, "triples": []}, "sample_id": 544}
+{"prediction": {"has_causal": false, "id": 545, "triples": []}, "sample_id": 545}
+{"prediction": {"has_causal": false, "id": 546, "triples": []}, "sample_id": 546}
+{"prediction": {"has_causal": false, "id": 547, "triples": []}, "sample_id": 547}
+{"prediction": {"has_causal": true, "id": 548, "triples": [{"cause": {"span": "the Shia ceasefire"}, "effect": {"span": "The relative calm"}, "relation": "caused"}]}, "sample_id": 548}
+{"prediction": {"has_causal": false, "id": 549, "triples": []}, "sample_id": 549}
+{"prediction": {"has_causal": false, "id": 550, "triples": []}, "sample_id": 550}
+{"prediction": {"has_causal": false, "id": 551, "triples": []}, "sample_id": 551}
+{"prediction": {"has_causal": false, "id": 552, "triples": []}, "sample_id": 552}
+{"prediction": {"has_causal": false, "id": 553, "triples": []}, "sample_id": 553}
+{"prediction": {"has_causal": false, "id": 554, "triples": []}, "sample_id": 554}
+{"prediction": {"has_causal": true, "id": 555, "triples": [{"cause": {"span": "bond speculation"}, "effect": {"span": "the falling interest-rate structure"}, "relation": "caused"}, {"cause": {"span": "the falling interest-rate structure"}, "effect": {"span": "the clandestine wealth-transfer plaguing the productive sector"}, "relation": "caused"}]}, "sample_id": 555}
+{"prediction": {"has_causal": false, "id": 556, "triples": []}, "sample_id": 556}
+{"prediction": {"has_causal": false, "id": 557, "triples": []}, "sample_id": 557}
+{"prediction": {"has_causal": false, "id": 558, "triples": []}, "sample_id": 558}
+{"prediction": {"has_causal": true, "id": 559, "triples": [{"cause": {"span": "Dry air"}, "effect": {"span": "nosebleeds"}, "relation": "caused"}, {"cause": {"span": "dust"}, "effect": {"span": "nosebleeds"}, "relation": "caused"}, {"cause": {"span": "wind"}, "effect": {"span": "nosebleeds"}, "relation": "caused"}, {"cause": {"span": "Dry air"}, "effect": {"span": "coughing"}, "relation": "caused"}, {"cause": {"span": "dust"}, "effect": {"span": "coughing"}, "relation": "caused"}, {"cause": {"span": "wind"}, "effect": {"span": "coughing"}, "relation": "caused"}, {"cause": {"span": "Dry air"}, "effect": {"span": "wheezing"}, "relation": "caused"}, {"cause": {"span": "dust"}, "effect": {"span": "wheezing"}, "relation": "caused"}, {"cause": {"span": "wind"}, "effect": {"span": "wheezing"}, "relation": "caused"}, {"cause": {"span": "Dry air"}, "effect": {"span": "other short-term respiratory problems"}, "relation": "caused"}, {"cause": {"span": "dust"}, "effect": {"span": "other short-term respiratory problems"}, "relation": "caused"}, {"cause": {"span": "wind"}, "effect": {"span": "other short-term respiratory problems"}, "relation": "caused"}]}, "sample_id": 559}
+{"prediction": {"has_causal": false, "id": 560, "triples": []}, "sample_id": 560}
+{"prediction": {"has_causal": true, "id": 561, "triples": [{"cause": {"span": "the crash"}, "effect": {"span": "a seismic event registering 3.0 on the Richter scale"}, "relation": "caused"}]}, "sample_id": 561}
+{"prediction": {"has_causal": false, "id": 562, "triples": []}, "sample_id": 562}
+{"prediction": {"has_causal": true, "id": 563, "triples": [{"cause": {"span": "Collapsing commodity prices"}, "effect": {"span": "poverty"}, "relation": "caused"}]}, "sample_id": 563}
+{"prediction": {"has_causal": true, "id": 564, "triples": [{"cause": {"span": "constructive competition"}, "effect": {"span": "Progress"}, "relation": "caused"}]}, "sample_id": 564}
+{"prediction": {"has_causal": false, "id": 565, "triples": []}, "sample_id": 565}
+{"prediction": {"has_causal": false, "id": 566, "triples": []}, "sample_id": 566}
+{"prediction": {"has_causal": false, "id": 567, "triples": []}, "sample_id": 567}
+{"prediction": {"has_causal": true, "id": 568, "triples": [{"cause": {"span": "clock"}, "effect": {"span": "chime"}, "relation": "caused"}]}, "sample_id": 568}
+{"prediction": {"has_causal": false, "id": 569, "triples": []}, "sample_id": 569}
+{"prediction": {"has_causal": false, "id": 570, "triples": []}, "sample_id": 570}
+{"prediction": {"has_causal": false, "id": 571, "triples": []}, "sample_id": 571}
+{"prediction": {"has_causal": false, "id": 572, "triples": []}, "sample_id": 572}
+{"prediction": {"has_causal": false, "id": 573, "triples": []}, "sample_id": 573}
+{"prediction": {"has_causal": true, "id": 574, "triples": [{"cause": {"span": "landing into the spam folders"}, "effect": {"span": "decreasing the ROI for these programs"}, "relation": "caused"}]}, "sample_id": 574}
+{"prediction": {"has_causal": false, "id": 575, "triples": []}, "sample_id": 575}
+{"prediction": {"has_causal": true, "id": 576, "triples": [{"cause": {"span": "disturbances"}, "effect": {"span": "acne"}, "relation": "caused"}]}, "sample_id": 576}
+{"prediction": {"has_causal": false, "id": 577, "triples": []}, "sample_id": 577}
+{"prediction": {"has_causal": false, "id": 578, "triples": []}, "sample_id": 578}
+{"prediction": {"has_causal": false, "id": 579, "triples": []}, "sample_id": 579}
+{"prediction": {"has_causal": false, "id": 580, "triples": []}, "sample_id": 580}
+{"prediction": {"has_causal": true, "id": 581, "triples": [{"cause": {"span": "the eruption"}, "effect": {"span": "an evacuation"}, "relation": "caused"}]}, "sample_id": 581}
+{"prediction": {"has_causal": false, "id": 582, "triples": []}, "sample_id": 582}
+{"prediction": {"has_causal": false, "id": 583, "triples": []}, "sample_id": 583}
+{"prediction": {"has_causal": false, "id": 584, "triples": []}, "sample_id": 584}
+{"prediction": {"has_causal": true, "id": 585, "triples": [{"cause": {"span": "fatigue"}, "effect": {"span": "headaches"}, "relation": "caused"}, {"cause": {"span": "exhaustion"}, "effect": {"span": "headaches"}, "relation": "caused"}]}, "sample_id": 585}
+{"prediction": {"has_causal": false, "id": 586, "triples": []}, "sample_id": 586}
+{"prediction": {"has_causal": true, "id": 587, "triples": [{"cause": {"span": "The alleged abuse"}, "effect": {"span": "bruises"}, "relation": "caused"}, {"cause": {"span": "The alleged abuse"}, "effect": {"span": "swelling of the brain"}, "relation": "caused"}]}, "sample_id": 587}
+{"prediction": {"has_causal": true, "id": 588, "triples": [{"cause": {"span": "germs"}, "effect": {"span": "sickness"}, "relation": "caused"}, {"cause": {"span": "microbes"}, "effect": {"span": "sickness"}, "relation": "caused"}]}, "sample_id": 588}
+{"prediction": {"has_causal": true, "id": 589, "triples": [{"cause": {"span": "pollution"}, "effect": {"span": "smog"}, "relation": "caused"}, {"cause": {"span": "pollution"}, "effect": {"span": "acid rain"}, "relation": "caused"}, {"cause": {"span": "pollution"}, "effect": {"span": "respiratory illness"}, "relation": "caused"}, {"cause": {"span": "pollution"}, "effect": {"span": "global warming"}, "relation": "caused"}]}, "sample_id": 589}
+{"prediction": {"has_causal": false, "id": 590, "triples": []}, "sample_id": 590}
+{"prediction": {"has_causal": false, "id": 591, "triples": []}, "sample_id": 591}
+{"prediction": {"has_causal": false, "id": 592, "triples": []}, "sample_id": 592}
+{"prediction": {"has_causal": false, "id": 593, "triples": []}, "sample_id": 593}
+{"prediction": {"has_causal": true, "id": 594, "triples": [{"cause": {"span": "The wire"}, "effect": {"span": "a slight injury"}, "relation": "caused"}]}, "sample_id": 594}
+{"prediction": {"has_causal": false, "id": 595, "triples": []}, "sample_id": 595}
+{"prediction": {"has_causal": false, "id": 596, "triples": []}, "sample_id": 596}
+{"prediction": {"has_causal": false, "id": 597, "triples": []}, "sample_id": 597}
+{"prediction": {"has_causal": false, "id": 598, "triples": []}, "sample_id": 598}
+{"prediction": {"has_causal": false, "id": 599, "triples": []}, "sample_id": 599}
+{"prediction": {"has_causal": true, "id": 600, "triples": [{"cause": {"span": "the appointment of Donald Sumner"}, "effect": {"span": "The election"}, "relation": "caused"}]}, "sample_id": 600}
+{"prediction": {"has_causal": false, "id": 601, "triples": []}, "sample_id": 601}
+{"prediction": {"has_causal": false, "id": 602, "triples": []}, "sample_id": 602}
+{"prediction": {"has_causal": false, "id": 603, "triples": []}, "sample_id": 603}
+{"prediction": {"has_causal": true, "id": 604, "triples": [{"cause": {"span": "stereo buss"}, "effect": {"span": "the stereo buss signal"}, "relation": "caused"}, {"cause": {"span": "record buss"}, "effect": {"span": "the record buss signal"}, "relation": "caused"}]}, "sample_id": 604}
+{"prediction": {"has_causal": false, "id": 605, "triples": []}, "sample_id": 605}
+{"prediction": {"has_causal": false, "id": 606, "triples": []}, "sample_id": 606}
+{"prediction": {"has_causal": false, "id": 607, "triples": []}, "sample_id": 607}
+{"prediction": {"has_causal": true, "id": 608, "triples": [{"cause": {"span": "an intense discussion"}, "effect": {"span": "The accolade was decided upon"}, "relation": "caused"}]}, "sample_id": 608}
+{"prediction": {"has_causal": true, "id": 609, "triples": [{"cause": {"span": "a scratch on the eye"}, "effect": {"span": "it's not healing all the way"}, "relation": "caused"}]}, "sample_id": 609}
+{"prediction": {"has_causal": true, "id": 610, "triples": [{"cause": {"span": "the fungus"}, "effect": {"span": "irritation"}, "relation": "caused"}]}, "sample_id": 610}
+{"prediction": {"has_causal": false, "id": 611, "triples": []}, "sample_id": 611}
+{"prediction": {"has_causal": false, "id": 612, "triples": []}, "sample_id": 612}
+{"prediction": {"has_causal": false, "id": 613, "triples": []}, "sample_id": 613}
+{"prediction": {"has_causal": false, "id": 614, "triples": []}, "sample_id": 614}
+{"prediction": {"has_causal": false, "id": 615, "triples": []}, "sample_id": 615}
+{"prediction": {"has_causal": true, "id": 616, "triples": [{"cause": {"span": "A fuel leak in one of the C-17s"}, "effect": {"span": "a delay"}, "relation": "caused"}]}, "sample_id": 616}
+{"prediction": {"has_causal": true, "id": 617, "triples": [{"cause": {"span": "energy"}, "effect": {"span": "separation field"}, "relation": "caused"}]}, "sample_id": 617}
+{"prediction": {"has_causal": false, "id": 618, "triples": []}, "sample_id": 618}
+{"prediction": {"has_causal": false, "id": 619, "triples": []}, "sample_id": 619}
+{"prediction": {"has_causal": false, "id": 620, "triples": []}, "sample_id": 620}
+{"prediction": {"has_causal": false, "id": 621, "triples": []}, "sample_id": 621}
+{"prediction": {"has_causal": false, "id": 622, "triples": []}, "sample_id": 622}
+{"prediction": {"has_causal": false, "id": 623, "triples": []}, "sample_id": 623}
+{"prediction": {"has_causal": false, "id": 624, "triples": []}, "sample_id": 624}
+{"prediction": {"has_causal": false, "id": 625, "triples": []}, "sample_id": 625}
+{"prediction": {"has_causal": false, "id": 626, "triples": []}, "sample_id": 626}
+{"prediction": {"has_causal": true, "id": 627, "triples": [{"cause": {"span": "The accident"}, "effect": {"span": "a major traffic snarl"}, "relation": "caused"}]}, "sample_id": 627}
+{"prediction": {"has_causal": false, "id": 628, "triples": []}, "sample_id": 628}
+{"prediction": {"has_causal": false, "id": 629, "triples": []}, "sample_id": 629}
+{"prediction": {"has_causal": true, "id": 630, "triples": [{"cause": {"span": "violence"}, "effect": {"span": "death"}, "relation": "caused"}, {"cause": {"span": "the death of police \"capo\" Filippo Raciti"}, "effect": {"span": "widespread soul-searching"}, "relation": "caused"}, {"cause": {"span": "the death of police \"capo\" Filippo Raciti"}, "effect": {"span": "a week-long suspension of Italian football"}, "relation": "caused"}]}, "sample_id": 630}
+{"prediction": {"has_causal": false, "id": 631, "triples": []}, "sample_id": 631}
+{"prediction": {"has_causal": false, "id": 632, "triples": []}, "sample_id": 632}
+{"prediction": {"has_causal": true, "id": 633, "triples": [{"cause": {"span": "the construction"}, "effect": {"span": "The dust"}, "relation": "caused"}, {"cause": {"span": "the construction"}, "effect": {"span": "noise"}, "relation": "caused"}, {"cause": {"span": "the construction"}, "effect": {"span": "sleep deprivation"}, "relation": "caused"}]}, "sample_id": 633}
+{"prediction": {"has_causal": true, "id": 634, "triples": [{"cause": {"span": "a virus"}, "effect": {"span": "Plantar warts"}, "relation": "caused"}]}, "sample_id": 634}
+{"prediction": {"has_causal": true, "id": 635, "triples": [{"cause": {"span": "pollutant"}, "effect": {"span": "smog"}, "relation": "caused"}, {"cause": {"span": "pollutant"}, "effect": {"span": "acid rain"}, "relation": "caused"}]}, "sample_id": 635}
+{"prediction": {"has_causal": false, "id": 636, "triples": []}, "sample_id": 636}
+{"prediction": {"has_causal": false, "id": 637, "triples": []}, "sample_id": 637}
+{"prediction": {"has_causal": false, "id": 638, "triples": []}, "sample_id": 638}
+{"prediction": {"has_causal": false, "id": 639, "triples": []}, "sample_id": 639}
+{"prediction": {"has_causal": false, "id": 640, "triples": []}, "sample_id": 640}
+{"prediction": {"has_causal": false, "id": 641, "triples": []}, "sample_id": 641}
+{"prediction": {"has_causal": false, "id": 642, "triples": []}, "sample_id": 642}
+{"prediction": {"has_causal": false, "id": 643, "triples": []}, "sample_id": 643}
+{"prediction": {"has_causal": true, "id": 644, "triples": [{"cause": {"span": "loss of key employees"}, "effect": {"span": "big risk"}, "relation": "caused"}]}, "sample_id": 644}
+{"prediction": {"has_causal": false, "id": 645, "triples": []}, "sample_id": 645}
+{"prediction": {"has_causal": false, "id": 646, "triples": []}, "sample_id": 646}
+{"prediction": {"has_causal": false, "id": 647, "triples": []}, "sample_id": 647}
+{"prediction": {"has_causal": true, "id": 648, "triples": [{"cause": {"span": "the work"}, "effect": {"span": "a great deal of pleasure"}, "relation": "caused"}]}, "sample_id": 648}
+{"prediction": {"has_causal": false, "id": 649, "triples": []}, "sample_id": 649}
+{"prediction": {"has_causal": true, "id": 650, "triples": [{"cause": {"span": "the tornado"}, "effect": {"span": "the damage"}, "relation": "caused"}]}, "sample_id": 650}
+{"prediction": {"has_causal": true, "id": 651, "triples": [{"cause": {"span": "the triggering"}, "effect": {"span": "a market spike"}, "relation": "caused"}, {"cause": {"span": "the election of a conditional order"}, "effect": {"span": "a market spike"}, "relation": "caused"}]}, "sample_id": 651}
+{"prediction": {"has_causal": false, "id": 652, "triples": []}, "sample_id": 652}
+{"prediction": {"has_causal": true, "id": 653, "triples": [{"cause": {"span": "a cholera outbreak"}, "effect": {"span": "the deaths"}, "relation": "caused"}]}, "sample_id": 653}
+{"prediction": {"has_causal": false, "id": 654, "triples": []}, "sample_id": 654}
+{"prediction": {"has_causal": false, "id": 655, "triples": []}, "sample_id": 655}
+{"prediction": {"has_causal": true, "id": 656, "triples": [{"cause": {"span": "the sudden displacement of large volumes of water"}, "effect": {"span": "Tsunamis"}, "relation": "caused"}]}, "sample_id": 656}
+{"prediction": {"has_causal": false, "id": 657, "triples": []}, "sample_id": 657}
+{"prediction": {"has_causal": false, "id": 658, "triples": []}, "sample_id": 658}
+{"prediction": {"has_causal": false, "id": 659, "triples": []}, "sample_id": 659}
+{"prediction": {"has_causal": true, "id": 660, "triples": [{"cause": {"span": "Heat"}, "effect": {"span": "flight delays"}, "relation": "caused"}, {"cause": {"span": "wind"}, "effect": {"span": "flight delays"}, "relation": "caused"}, {"cause": {"span": "smoke"}, "effect": {"span": "flight delays"}, "relation": "caused"}]}, "sample_id": 660}
+{"prediction": {"has_causal": true, "id": 661, "triples": [{"cause": {"span": "A spaghetti pie"}, "effect": {"span": "the poisoning of one hundred people"}, "relation": "caused"}]}, "sample_id": 661}
+{"prediction": {"has_causal": true, "id": 662, "triples": [{"cause": {"span": "the asteroid"}, "effect": {"span": "the devastation"}, "relation": "caused"}]}, "sample_id": 662}
+{"prediction": {"has_causal": false, "id": 663, "triples": []}, "sample_id": 663}
+{"prediction": {"has_causal": false, "id": 664, "triples": []}, "sample_id": 664}
+{"prediction": {"has_causal": false, "id": 665, "triples": []}, "sample_id": 665}
+{"prediction": {"has_causal": false, "id": 666, "triples": []}, "sample_id": 666}
+{"prediction": {"has_causal": true, "id": 667, "triples": [{"cause": {"span": "Alcohol"}, "effect": {"span": "suicide"}, "relation": "caused"}, {"cause": {"span": "drugs"}, "effect": {"span": "suicide"}, "relation": "caused"}]}, "sample_id": 667}
+{"prediction": {"has_causal": false, "id": 668, "triples": []}, "sample_id": 668}
+{"prediction": {"has_causal": false, "id": 669, "triples": []}, "sample_id": 669}
+{"prediction": {"has_causal": false, "id": 670, "triples": []}, "sample_id": 670}
+{"prediction": {"has_causal": false, "id": 671, "triples": []}, "sample_id": 671}
+{"prediction": {"has_causal": false, "id": 672, "triples": []}, "sample_id": 672}
+{"prediction": {"has_causal": false, "id": 673, "triples": []}, "sample_id": 673}
+{"prediction": {"has_causal": true, "id": 674, "triples": [{"cause": {"span": "the quake"}, "effect": {"span": "a fire"}, "relation": "caused"}]}, "sample_id": 674}
+{"prediction": {"has_causal": false, "id": 675, "triples": []}, "sample_id": 675}
+{"prediction": {"has_causal": false, "id": 676, "triples": []}, "sample_id": 676}
+{"prediction": {"has_causal": true, "id": 677, "triples": [{"cause": {"span": "mudslides"}, "effect": {"span": "The damages"}, "relation": "caused"}, {"cause": {"span": "tremors"}, "effect": {"span": "The damages"}, "relation": "caused"}, {"cause": {"span": "subsidence"}, "effect": {"span": "The damages"}, "relation": "caused"}, {"cause": {"span": "superficial or underground water"}, "effect": {"span": "The damages"}, "relation": "caused"}]}, "sample_id": 677}
+{"prediction": {"has_causal": true, "id": 678, "triples": [{"cause": {"span": "the asteroid"}, "effect": {"span": "The boom"}, "relation": "caused"}, {"cause": {"span": "the asteroid"}, "effect": {"span": "shaking"}, "relation": "caused"}]}, "sample_id": 678}
+{"prediction": {"has_causal": false, "id": 679, "triples": []}, "sample_id": 679}
+{"prediction": {"has_causal": false, "id": 680, "triples": []}, "sample_id": 680}
+{"prediction": {"has_causal": false, "id": 681, "triples": []}, "sample_id": 681}
+{"prediction": {"has_causal": true, "id": 682, "triples": [{"cause": {"span": "animal factories"}, "effect": {"span": "The pollution"}, "relation": "caused"}]}, "sample_id": 682}
+{"prediction": {"has_causal": false, "id": 683, "triples": []}, "sample_id": 683}
+{"prediction": {"has_causal": false, "id": 684, "triples": []}, "sample_id": 684}
+{"prediction": {"has_causal": false, "id": 685, "triples": []}, "sample_id": 685}
+{"prediction": {"has_causal": false, "id": 686, "triples": []}, "sample_id": 686}
+{"prediction": {"has_causal": true, "id": 687, "triples": [{"cause": {"span": "the earthquake"}, "effect": {"span": "A large tsunami"}, "relation": "caused"}]}, "sample_id": 687}
+{"prediction": {"has_causal": false, "id": 688, "triples": []}, "sample_id": 688}
+{"prediction": {"has_causal": false, "id": 689, "triples": []}, "sample_id": 689}
+{"prediction": {"has_causal": false, "id": 690, "triples": []}, "sample_id": 690}
+{"prediction": {"has_causal": false, "id": 691, "triples": []}, "sample_id": 691}
+{"prediction": {"has_causal": false, "id": 692, "triples": []}, "sample_id": 692}
+{"prediction": {"has_causal": false, "id": 693, "triples": []}, "sample_id": 693}
+{"prediction": {"has_causal": false, "id": 694, "triples": []}, "sample_id": 694}
+{"prediction": {"has_causal": false, "id": 695, "triples": []}, "sample_id": 695}
+{"prediction": {"has_causal": false, "id": 696, "triples": []}, "sample_id": 696}
+{"prediction": {"has_causal": false, "id": 697, "triples": []}, "sample_id": 697}
+{"prediction": {"has_causal": false, "id": 698, "triples": []}, "sample_id": 698}
+{"prediction": {"has_causal": false, "id": 699, "triples": []}, "sample_id": 699}
+{"prediction": {"has_causal": false, "id": 700, "triples": []}, "sample_id": 700}
+{"prediction": {"has_causal": false, "id": 701, "triples": []}, "sample_id": 701}
+{"prediction": {"has_causal": false, "id": 702, "triples": []}, "sample_id": 702}
+{"prediction": {"has_causal": false, "id": 703, "triples": []}, "sample_id": 703}
+{"prediction": {"has_causal": false, "id": 704, "triples": []}, "sample_id": 704}
+{"prediction": {"has_causal": false, "id": 705, "triples": []}, "sample_id": 705}
+{"prediction": {"has_causal": false, "id": 706, "triples": []}, "sample_id": 706}
+{"prediction": {"has_causal": true, "id": 707, "triples": [{"cause": {"span": "a homogeneous group of keratinophilic fungi"}, "effect": {"span": "The cutaneous mycoses"}, "relation": "caused"}]}, "sample_id": 707}
+{"prediction": {"has_causal": false, "id": 708, "triples": []}, "sample_id": 708}
+{"prediction": {"has_causal": true, "id": 709, "triples": [{"cause": {"span": "The incoming water"}, "effect": {"span": "a stain on the wall"}, "relation": "caused"}]}, "sample_id": 709}
+{"prediction": {"has_causal": true, "id": 710, "triples": [{"cause": {"span": "the relatively low systemic arterial blood pressure"}, "effect": {"span": "Bounding pulses"}, "relation": "caused"}]}, "sample_id": 710}
+{"prediction": {"has_causal": false, "id": 711, "triples": []}, "sample_id": 711}
+{"prediction": {"has_causal": false, "id": 712, "triples": []}, "sample_id": 712}
+{"prediction": {"has_causal": false, "id": 713, "triples": []}, "sample_id": 713}
+{"prediction": {"has_causal": false, "id": 714, "triples": []}, "sample_id": 714}
+{"prediction": {"has_causal": false, "id": 715, "triples": []}, "sample_id": 715}
+{"prediction": {"has_causal": false, "id": 716, "triples": []}, "sample_id": 716}
+{"prediction": {"has_causal": true, "id": 717, "triples": [{"cause": {"span": "salmonella bacteria"}, "effect": {"span": "the foodborne illness"}, "relation": "caused"}]}, "sample_id": 717}
+{"prediction": {"has_causal": true, "id": 718, "triples": [{"cause": {"span": "pressure"}, "effect": {"span": "Bed sores"}, "relation": "caused"}]}, "sample_id": 718}
+{"prediction": {"has_causal": false, "id": 719, "triples": []}, "sample_id": 719}
+{"prediction": {"has_causal": false, "id": 720, "triples": []}, "sample_id": 720}
+{"prediction": {"has_causal": true, "id": 721, "triples": [{"cause": {"span": "Most illnesses"}, "effect": {"span": "a toxic overload"}, "relation": "caused"}, {"cause": {"span": "Most illnesses"}, "effect": {"span": "the stress on the kidneys"}, "relation": "caused"}]}, "sample_id": 721}
+{"prediction": {"has_causal": false, "id": 722, "triples": []}, "sample_id": 722}
+{"prediction": {"has_causal": false, "id": 723, "triples": []}, "sample_id": 723}
+{"prediction": {"has_causal": true, "id": 724, "triples": [{"cause": {"span": "sudden death"}, "effect": {"span": "The grief"}, "relation": "caused"}]}, "sample_id": 724}
+{"prediction": {"has_causal": false, "id": 725, "triples": []}, "sample_id": 725}
+{"prediction": {"has_causal": false, "id": 726, "triples": []}, "sample_id": 726}
+{"prediction": {"has_causal": false, "id": 727, "triples": []}, "sample_id": 727}
+{"prediction": {"has_causal": false, "id": 728, "triples": []}, "sample_id": 728}
+{"prediction": {"has_causal": false, "id": 729, "triples": []}, "sample_id": 729}
+{"prediction": {"has_causal": true, "id": 730, "triples": [{"cause": {"span": "The accident"}, "effect": {"span": "a traffic snarl"}, "relation": "caused"}]}, "sample_id": 730}
+{"prediction": {"has_causal": false, "id": 731, "triples": []}, "sample_id": 731}
+{"prediction": {"has_causal": false, "id": 732, "triples": []}, "sample_id": 732}
+{"prediction": {"has_causal": true, "id": 733, "triples": [{"cause": {"span": "gravitational interactions with the small satellites Prometheus and Pandora"}, "effect": {"span": "The contortions"}, "relation": "caused"}]}, "sample_id": 733}
+{"prediction": {"has_causal": false, "id": 734, "triples": []}, "sample_id": 734}
+{"prediction": {"has_causal": false, "id": 735, "triples": []}, "sample_id": 735}
+{"prediction": {"has_causal": false, "id": 736, "triples": []}, "sample_id": 736}
+{"prediction": {"has_causal": false, "id": 737, "triples": []}, "sample_id": 737}
+{"prediction": {"has_causal": false, "id": 738, "triples": []}, "sample_id": 738}
+{"prediction": {"has_causal": false, "id": 739, "triples": []}, "sample_id": 739}
+{"prediction": {"has_causal": false, "id": 740, "triples": []}, "sample_id": 740}
+{"prediction": {"has_causal": false, "id": 741, "triples": []}, "sample_id": 741}
+{"prediction": {"has_causal": false, "id": 742, "triples": []}, "sample_id": 742}
+{"prediction": {"has_causal": false, "id": 743, "triples": []}, "sample_id": 743}
+{"prediction": {"has_causal": false, "id": 744, "triples": []}, "sample_id": 744}
+{"prediction": {"has_causal": false, "id": 745, "triples": []}, "sample_id": 745}
+{"prediction": {"has_causal": false, "id": 746, "triples": []}, "sample_id": 746}
+{"prediction": {"has_causal": false, "id": 747, "triples": []}, "sample_id": 747}
+{"prediction": {"has_causal": true, "id": 748, "triples": [{"cause": {"span": "an explosive"}, "effect": {"span": "The shock wave"}, "relation": "caused"}]}, "sample_id": 748}
+{"prediction": {"has_causal": false, "id": 749, "triples": []}, "sample_id": 749}
+{"prediction": {"has_causal": false, "id": 750, "triples": []}, "sample_id": 750}
+{"prediction": {"has_causal": false, "id": 751, "triples": []}, "sample_id": 751}
+{"prediction": {"has_causal": false, "id": 752, "triples": []}, "sample_id": 752}
+{"prediction": {"has_causal": false, "id": 753, "triples": []}, "sample_id": 753}
+{"prediction": {"has_causal": false, "id": 754, "triples": []}, "sample_id": 754}
+{"prediction": {"has_causal": true, "id": 755, "triples": [{"cause": {"span": "viruses"}, "effect": {"span": "Ordinary warts on the hands and feet"}, "relation": "caused"}]}, "sample_id": 755}
+{"prediction": {"has_causal": false, "id": 756, "triples": []}, "sample_id": 756}
+{"prediction": {"has_causal": false, "id": 757, "triples": []}, "sample_id": 757}
+{"prediction": {"has_causal": false, "id": 758, "triples": []}, "sample_id": 758}
+{"prediction": {"has_causal": false, "id": 759, "triples": []}, "sample_id": 759}
+{"prediction": {"has_causal": true, "id": 760, "triples": [{"cause": {"span": "the work injury"}, "effect": {"span": "Headaches"}, "relation": "caused"}, {"cause": {"span": "the work injury"}, "effect": {"span": "dizziness"}, "relation": "caused"}, {"cause": {"span": "the work injury"}, "effect": {"span": "balance problems"}, "relation": "caused"}, {"cause": {"span": "the work injury"}, "effect": {"span": "neck and back pain"}, "relation": "caused"}]}, "sample_id": 760}
+{"prediction": {"has_causal": false, "id": 761, "triples": []}, "sample_id": 761}
+{"prediction": {"has_causal": false, "id": 762, "triples": []}, "sample_id": 762}
+{"prediction": {"has_causal": true, "id": 763, "triples": [{"cause": {"span": "capital murders"}, "effect": {"span": "execution"}, "relation": "caused"}]}, "sample_id": 763}
+{"prediction": {"has_causal": false, "id": 764, "triples": []}, "sample_id": 764}
+{"prediction": {"has_causal": false, "id": 765, "triples": []}, "sample_id": 765}
+{"prediction": {"has_causal": false, "id": 766, "triples": []}, "sample_id": 766}
+{"prediction": {"has_causal": false, "id": 767, "triples": []}, "sample_id": 767}
+{"prediction": {"has_causal": false, "id": 768, "triples": []}, "sample_id": 768}
+{"prediction": {"has_causal": true, "id": 769, "triples": [{"cause": {"span": "Traffic vibrations"}, "effect": {"span": "the movement of the light"}, "relation": "caused"}]}, "sample_id": 769}
+{"prediction": {"has_causal": false, "id": 770, "triples": []}, "sample_id": 770}
+{"prediction": {"has_causal": true, "id": 771, "triples": [{"cause": {"span": "sinus infections"}, "effect": {"span": "terrible headaches"}, "relation": "caused"}]}, "sample_id": 771}
+{"prediction": {"has_causal": false, "id": 772, "triples": []}, "sample_id": 772}
+{"prediction": {"has_causal": false, "id": 773, "triples": []}, "sample_id": 773}
+{"prediction": {"has_causal": false, "id": 774, "triples": []}, "sample_id": 774}
+{"prediction": {"has_causal": false, "id": 775, "triples": []}, "sample_id": 775}
+{"prediction": {"has_causal": false, "id": 776, "triples": []}, "sample_id": 776}
+{"prediction": {"has_causal": true, "id": 777, "triples": [{"cause": {"span": "an electrical short at the Farragut North station"}, "effect": {"span": "a fire on the tracks"}, "relation": "caused"}]}, "sample_id": 777}
+{"prediction": {"has_causal": false, "id": 778, "triples": []}, "sample_id": 778}
+{"prediction": {"has_causal": false, "id": 779, "triples": []}, "sample_id": 779}
+{"prediction": {"has_causal": true, "id": 780, "triples": [{"cause": {"span": "440 nuclear reactors"}, "effect": {"span": "The electricity"}, "relation": "caused"}]}, "sample_id": 780}
+{"prediction": {"has_causal": true, "id": 781, "triples": [{"cause": {"span": "a bacteria"}, "effect": {"span": "Salmonellosis"}, "relation": "caused"}]}, "sample_id": 781}
+{"prediction": {"has_causal": false, "id": 782, "triples": []}, "sample_id": 782}
+{"prediction": {"has_causal": false, "id": 783, "triples": []}, "sample_id": 783}
+{"prediction": {"has_causal": false, "id": 784, "triples": []}, "sample_id": 784}
+{"prediction": {"has_causal": true, "id": 785, "triples": [{"cause": {"span": "The earthquake"}, "effect": {"span": "the failures of the electric power system, the water supply system, the sewer system, the telephone and telegraph systems."}, "relation": "caused"}]}, "sample_id": 785}
+{"prediction": {"has_causal": false, "id": 786, "triples": []}, "sample_id": 786}

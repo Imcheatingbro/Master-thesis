@@ -1,0 +1,30 @@
+{
+  "completed_samples": 500,
+  "format_version": 1,
+  "predictions_path": "D:\\Master thesis\\results\\eval_checkpoints\\rag_ablation\\phase2_qwen27_v9.8_anchor\\fixed_rag_k1_158b0e7b1dabc99c.jsonl",
+  "remaining_samples": 0,
+  "report_path": "D:\\Master thesis\\results\\eval_report\\rag_ablation\\phase2_qwen27_v9.8_anchor\\local-qwen3.6-27b-no-thinking_cnc_sft_validation-n500_prompt-v9.8_rag-knn_pattern-k1_20260830-040150.md",
+  "run_name": "fixed_rag_k1",
+  "sample_count": 500,
+  "signature": "158b0e7b1dabc99c8917f53fd81b426f51a5bfade8ca4d45d003e92ff6651933",
+  "signature_payload": {
+    "cache_prompt": false,
+    "context_length": 8192,
+    "dataset": "cnc_sft_validation",
+    "dataset_sha256": "e3a053202ef82b826202e66e199e2c817eaf4efaeeed939ffe44f843cf177180",
+    "max_tokens": 2048,
+    "model_key": "local/qwen3.6-27b-no-thinking",
+    "parallel": 4,
+    "primary_metric": "anchor_window",
+    "prompt_name": "v9.8",
+    "prompt_sha256": "6132be711384e89ad393dca620633472515f1cff5b58f90fe9ec4eada03946e3",
+    "rag_mode": "knn_pattern",
+    "rag_top_k": 1,
+    "random_seed": null,
+    "retriever_kind": "rag",
+    "run_id": "fixed_rag_k1",
+    "sample_count": 500,
+    "temperature": 0.0
+  },
+  "status": "complete"
+}

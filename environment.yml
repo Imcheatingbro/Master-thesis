@@ -1,0 +1,42 @@
+# Cross-platform environment for the extraction, evaluation, graph, and analysis workflows.
+# Tested workflow:
+#   conda env create -f environment.yml
+#   conda activate Master_thesis
+#   python -m ipykernel install --user --name Master_thesis --display-name Master_thesis
+#
+# The KAPipe source tree and pretrained snapshots remain external resources. GPU
+# fine-tuning and model-serving utilities require their dedicated CUDA environments
+# with Unsloth, TRL, cut-cross-entropy, FastAPI, and Uvicorn.
+name: Master_thesis
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - faiss>=1.12,<2
+  - pip:
+      - openai>=2,<3
+      - pyyaml>=6,<7
+      - numpy>=2,<3
+      - scipy>=1.10,<2
+      - pandas>=3,<4
+      - scikit-learn>=1,<2
+      - rapidfuzz>=3,<4
+      - datasets>=4,<5
+      - sentence-transformers>=5,<6
+      - transformers>=4.46,<6
+      - torch>=2,<3
+      - tqdm>=4,<5
+      - networkx>=3,<4
+      - pyvis>=0.3,<0.4
+      - pillow>=10,<13
+      - tensorboard>=2,<3
+      - jsonlines>=4,<5
+      - opt-einsum>=3,<4
+      - pyhocon>=0.3,<0.4
+      - ipython>=9,<10
+      - ipykernel>=7,<8
+      - notebook>=7,<8
+      - ipywidgets>=8,<9
+      - pytest>=9,<10

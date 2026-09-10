@@ -1,0 +1,786 @@
+{"id":1,"text":"This statement threw people into chaos.","has_causal":false,"relations":[]}
+{"id":2,"text":"Cutler ended up with a bleeding stomach ulcer caused by the stress and hard work supervising their tours twenty-four hours a day.","has_causal":true,"relations":[{"cause":"the stress","effect":"a bleeding stomach ulcer"},{"cause":"hard work","effect":"a bleeding stomach ulcer"}]}
+{"id":3,"text":"This theme has been covered in science fiction like Star Trek.","has_causal":false,"relations":[]}
+{"id":4,"text":"Paralysis or convulsions are caused by hormone deficiencies and imbalances.","has_causal":true,"relations":[{"cause":"hormone deficiencies and imbalances","effect":"Paralysis"},{"cause":"hormone deficiencies and imbalances","effect":"convulsions"}]}
+{"id":5,"text":"In economic terms, the ecological catastrophe caused by the Prestige oil spill is comparable with that caused by the Exxon Valdez.","has_causal":true,"relations":[{"cause":"the Prestige oil spill","effect":"the ecological catastrophe"},{"cause":"the Exxon Valdez","effect":"the ecological catastrophe"}]}
+{"id":6,"text":"Use outdoor where sunlight and glare cause eye strain and fatigue.","has_causal":true,"relations":[{"cause":"sunlight","effect":"eye strain and fatigue"},{"cause":"glare","effect":"eye strain and fatigue"}]}
+{"id":7,"text":"A qualified medical professional uses a variety of diagnostic tests.","has_causal":false,"relations":[]}
+{"id":8,"text":"The cough syrup was in a bottle on a shelf in the kitchen.","has_causal":false,"relations":[]}
+{"id":9,"text":"The bottle carrier converts your bottle into a canteen.","has_causal":false,"relations":[]}
+{"id":10,"text":"A polypropylene net, attached to the bottom of the fluidized bed section, acted as a flow distributor and a support for the static bed of oysters.","has_causal":false,"relations":[]}
+{"id":11,"text":"The GAA's Central Council passed a number of motions regarding discipline at a special meeting on Saturday.","has_causal":false,"relations":[]}
+{"id":12,"text":"The pressure was caused by the rapid power acceleration at the start.","has_causal":true,"relations":[{"cause":"the rapid power acceleration","effect":"The pressure"}]}
+{"id":13,"text":"In the run-up to this match, a new war of words has erupted on the internet in yet another twist to the long-simmering saga.","has_causal":false,"relations":[]}
+{"id":14,"text":"Those models were chain driven and the mechanism was enclosed in a very visible oil bath.","has_causal":false,"relations":[]}
+{"id":15,"text":"We had a flour bin, I poured flour into the well, and I stirred it with the bucket.","has_causal":false,"relations":[]}
+{"id":16,"text":"William Durand' book on the clergy and their vestments was the topic of the discussion.","has_causal":false,"relations":[]}
+{"id":17,"text":"The servant who carves removes the fat with a spoon.","has_causal":false,"relations":[]}
+{"id":18,"text":"Several authors have inserted implants into bone that have been subject to higher radiation doses.","has_causal":false,"relations":[]}
+{"id":19,"text":"The damage caused by a bullet depends on the amount of energy which it transfers to the tissues.","has_causal":true,"relations":[{"cause":"a bullet","effect":"The damage"}]}
+{"id":20,"text":"Once outside, the python was placed in a bag, which was put inside a dog crate.","has_causal":false,"relations":[]}
+{"id":21,"text":"Two prices arrived to the hotel.","has_causal":false,"relations":[]}
+{"id":22,"text":"Every child and young person seen at Starship with intoxication from alcohol or illicit drug use had a social work assessment before leaving the hospital.","has_causal":true,"relations":[{"cause":"alcohol or illicit drug use","effect":"intoxication"}]}
+{"id":23,"text":"Hoover is also notable for an extremely unusual vacuum cleaner, the Hoover Constellation, which is canister type but lacks wheels.","has_causal":false,"relations":[]}
+{"id":24,"text":"The officer threw a prisoner into a cell.","has_causal":false,"relations":[]}
+{"id":25,"text":"Priority must be given to efforts to combat insecurity and thus poverty, major cause of violence most often experienced by poorest.","has_causal":true,"relations":[{"cause":"poverty","effect":"violence"}]}
+{"id":26,"text":"The efficiency of the body of teachers, taken as a whole, during the past seven years has at no time been better than it was during the past year.","has_causal":false,"relations":[]}
+{"id":27,"text":"My equipment was built in another country.","has_causal":false,"relations":[]}
+{"id":28,"text":"At the moment heavy snow showers are running into the Northeastern regions of England.","has_causal":false,"relations":[]}
+{"id":29,"text":"The warmth was radiating from the fireplace to all corners of the room.","has_causal":true,"relations":[{"cause":"the fireplace","effect":"The warmth"}]}
+{"id":30,"text":"The \"underdog\" prize is awarded to the driver who wins the race with a car in the lowest PI of the field.","has_causal":false,"relations":[]}
+{"id":31,"text":"Even travel agents are turning to telepresence for clients.","has_causal":false,"relations":[]}
+{"id":32,"text":"Liver plays key role in how steroids cause diabetes and hypertension.","has_causal":true,"relations":[{"cause":"steroids","effect":"diabetes"},{"cause":"steroids","effect":"hypertension"}]}
+{"id":33,"text":"A blood clot is a normal reaction of the body that occurs if a blood vessel is injured.","has_causal":false,"relations":[]}
+{"id":34,"text":"The man fell into a pit.","has_causal":false,"relations":[]}
+{"id":35,"text":"Anybody who has a peep of chickens has an opportunity for some interesting observations and great omelet material.","has_causal":false,"relations":[]}
+{"id":36,"text":"For other useful ideas on how to use e-texts to aide literary analysis the girls read Robert Harris's \"The personal computer as a tool for student literary analysis\".","has_causal":false,"relations":[]}
+{"id":37,"text":"Contemporary criticism commented on the weaknesses of the opera's characters and the storyline.","has_causal":false,"relations":[]}
+{"id":38,"text":"The meeting was postponed to a later date.","has_causal":false,"relations":[]}
+{"id":39,"text":"Conflict had caused the collapse of the Somali Republic.","has_causal":true,"relations":[{"cause":"Conflict","effect":"the collapse"}]}
+{"id":40,"text":"Cervical cancer is caused by infection with the human papillomavirus  and is one of the most common cancers in women in developing countries.","has_causal":true,"relations":[{"cause":"infection","effect":"Cervical cancer"}]}
+{"id":41,"text":"LC repair is a special welding system that employs a high power YaG laser beam.","has_causal":false,"relations":[]}
+{"id":42,"text":"It shows a female doctor with a veil standing beside a female patient in bed, also wearing the veil.","has_causal":false,"relations":[]}
+{"id":43,"text":"The debris caused a crash on the Schuylkill, and it has been closed for hours because of the mishap.","has_causal":true,"relations":[{"cause":"The debris","effect":"a crash"},{"cause":"the mishap","effect":"closed"}]}
+{"id":44,"text":"Francisco Garcia Lorca sees the horse carrying the rider, against his will, to his death.","has_causal":false,"relations":[]}
+{"id":45,"text":"This weekly economic publication analyzes and interprets financial, commercial and industrial developments.","has_causal":false,"relations":[]}
+{"id":46,"text":"The only escape I had now was in a bottle.","has_causal":false,"relations":[]}
+{"id":47,"text":"Glaucoma is one of the leading causes for blindness and currently about 90 million patients worldwide are affected by the disease.","has_causal":true,"relations":[{"cause":"Glaucoma","effect":"blindness"}]}
+{"id":48,"text":"The vascular dilatation was caused by the sympathetic and the course of vaso-motor nerves.","has_causal":true,"relations":[{"cause":"the sympathetic","effect":"The vascular dilatation"},{"cause":"the course","effect":"The vascular dilatation"}]}
+{"id":49,"text":"Before he leaves Ephesus, however, a riot breaks out, instigated by the silversmiths who manufacture idols of the goddess Artemis; they are afraid that Paul's evangelistic success will ruin their business.","has_causal":true,"relations":[{"cause":"the silversmiths","effect":"a riot"}]}
+{"id":50,"text":"An unidentified substance was found in a letter.","has_causal":false,"relations":[]}
+{"id":51,"text":"These subjects were thoroughly investigated at the conference during the three seminars each of high specialist content.","has_causal":false,"relations":[]}
+{"id":52,"text":"Colds and flu cause inflammation of the mucous membranes of the nose, throat and mouth.","has_causal":true,"relations":[{"cause":"Colds","effect":"inflammation"},{"cause":"flu","effect":"inflammation"}]}
+{"id":53,"text":"Douglas was giving a speech addressing the harmful practices of the Army Corps of Engineers.","has_causal":false,"relations":[]}
+{"id":54,"text":"Villagers in the Netherlands are glad to have a mustering of stork visit them.","has_causal":false,"relations":[]}
+{"id":55,"text":"Sudden death from inhalation of petroleum distillates is well recognised in misuses of volatile substances.","has_causal":true,"relations":[{"cause":"inhalation","effect":"Sudden death"}]}
+{"id":56,"text":"The politicians have taken people deep into the twilight zone.","has_causal":false,"relations":[]}
+{"id":57,"text":"The top half of the network belongs to the engine of the refrigerator.","has_causal":false,"relations":[]}
+{"id":58,"text":"Some accounts detail the routine and perfunctory nature of arrest and proceedings against the riffraff of the \"criminal classes\" .","has_causal":false,"relations":[]}
+{"id":59,"text":"A cancer survivor writes about the relatively rare occurrence of calcification of the breast after radiation therapy.","has_causal":true,"relations":[{"cause":"radiation therapy","effect":"calcification"}]}
+{"id":60,"text":"The beach was empty except for a charm of yellow finches.","has_causal":false,"relations":[]}
+{"id":61,"text":"Just like in Oyo State, Obasanjo sired a clique of renegades, who believe that the State treasury is their birthright.","has_causal":false,"relations":[]}
+{"id":62,"text":"Our country is resolving the war and poverty caused by the previous administration.","has_causal":true,"relations":[{"cause":"the previous administration","effect":"the war"},{"cause":"the previous administration","effect":"poverty"}]}
+{"id":63,"text":"Yogurt soup is a popular comfort dish both in Turkey and Central Asia.","has_causal":false,"relations":[]}
+{"id":64,"text":"The elderly found it hard to cope with the high heat-humidity, which often causes nausea and dizziness from exhaustion and dehydration.","has_causal":true,"relations":[{"cause":"exhaustion","effect":"nausea"},{"cause":"exhaustion","effect":"dizziness"},{"cause":"dehydration","effect":"nausea"},{"cause":"dehydration","effect":"dizziness"}]}
+{"id":65,"text":"Before the barber takes his scissors out, family, friends and rabbis take turns snipping.","has_causal":false,"relations":[]}
+{"id":66,"text":"Over 90% of the cases of ringworm of the scalp are caused by Trichophyton tonsurans, a fungus that infects the hairs and causes them to break.","has_causal":true,"relations":[{"cause":"Trichophyton tonsurans","effect":"ringworm"}]}
+{"id":67,"text":"He likewise directed Edric to fling out his nets, who was rewarded with a miraculous draught of salmons.","has_causal":false,"relations":[]}
+{"id":68,"text":"The normal prostate is composed of glands and stroma.","has_causal":false,"relations":[]}
+{"id":69,"text":"The government's new measures to regulate cosmetic surgery procedures are a good move.","has_causal":false,"relations":[]}
+{"id":70,"text":"With the pollution caused by the buring of coal, the light-colored tree trunks became darker due to soot.","has_causal":true,"relations":[{"cause":"the buring","effect":"the pollution"}]}
+{"id":71,"text":"Just 18 months ago, the New York Times Magazine ran a cover story depicting progressive bloggers as a band of unkempt outsiders.","has_causal":false,"relations":[]}
+{"id":72,"text":"If a participant complaint is the source of an investigative lead, interim contact with the participant should be made by the investigator.","has_causal":true,"relations":[{"cause":"a participant complaint","effect":"an investigative lead"}]}
+{"id":73,"text":"New Western customs moved into the traditional Asian culture.","has_causal":false,"relations":[]}
+{"id":74,"text":"The transmitter generates the electromagnetic wave, some of which will be incident on the receiver.","has_causal":true,"relations":[{"cause":"The transmitter","effect":"the electromagnetic wave"}]}
+{"id":75,"text":"Louise is a director, audit chair and finance committee member of a public health board, and was a director of AFAANZ for 3 years.","has_causal":false,"relations":[]}
+{"id":76,"text":"Inhibition through synaptic depression is unlike the previous forms of inhibition in that it turns on more slowly and thus acts as delayed negative feedback.","has_causal":true,"relations":[{"cause":"synaptic depression","effect":"Inhibition"}]}
+{"id":77,"text":"The drone strike that resulted in the death of Pakistan's most wanted terrorist is believed to be a result of deliberately planted false intelligence, sources in South Waziristan have confirmed.","has_causal":true,"relations":[{"cause":"The drone strike","effect":"the death"},{"cause":"deliberately planted false intelligence","effect":"The drone strike"}]}
+{"id":78,"text":"Also, in the midst of the confusion caused by the coup, the issuing of militant posters was a way for artists and organizations to declare their active engagement against the rebellion.","has_causal":true,"relations":[{"cause":"the coup","effect":"the confusion"}]}
+{"id":79,"text":"Males had their urethra and urachus ligated with a fine silastic tubing.","has_causal":false,"relations":[]}
+{"id":80,"text":"He moves people into climate action.","has_causal":false,"relations":[]}
+{"id":81,"text":"The reaction mixture is kept in the dark at room temperature for 1 1/2 hours.","has_causal":false,"relations":[]}
+{"id":82,"text":"Fog, rain, darkness, and or blowing snow lead to disorientation.","has_causal":true,"relations":[{"cause":"Fog","effect":"disorientation"},{"cause":"rain","effect":"disorientation"},{"cause":"darkness","effect":"disorientation"},{"cause":"blowing snow","effect":"disorientation"}]}
+{"id":83,"text":"Cold sores or fever blisters are caused by the herpes simplex virus and are usually relatively easy to identify.","has_causal":true,"relations":[{"cause":"the herpes simplex virus","effect":"Cold sores"},{"cause":"the herpes simplex virus","effect":"fever blisters"}]}
+{"id":84,"text":"Our company converts waste plastics into crude oil.","has_causal":false,"relations":[]}
+{"id":85,"text":"This stolen property was in a trunk which was locked, and was in her room.","has_causal":false,"relations":[]}
+{"id":86,"text":"As the servants put the inflatable corgis in a bag for the Balmoral jumble sale, the Queen will be settling down this morning for a nice cup of tea and a quiet rest during The Archers, known to be one of her radio favourites.","has_causal":false,"relations":[]}
+{"id":87,"text":"Our powered scissors effortlessly cut fabrics, gift wrap, vinyl and much more.","has_causal":false,"relations":[]}
+{"id":88,"text":"An alert victim with a broken neck or severely torn ligament has enough discomfort from the injury and muscle spasm to force him to hold his neck still.","has_causal":true,"relations":[{"cause":"the injury","effect":"enough discomfort"}]}
+{"id":89,"text":"I have always drawn satisfaction from exertion, straining my muscles to their limits.","has_causal":true,"relations":[{"cause":"exertion","effect":"satisfaction"}]}
+{"id":90,"text":"The kitchen holds little clues about how we tried to reinvent the past.","has_causal":false,"relations":[]}
+{"id":91,"text":"Negotiations between the European Community and Greenland on a fourth protocol concerning the implementation of the agreement, were concluded at 13 September 2000.","has_causal":false,"relations":[]}
+{"id":92,"text":"The new software is shipped to the major distributors.","has_causal":false,"relations":[]}
+{"id":93,"text":"A portion of the ethernet cable 's outer insulation is in the connector as well.","has_causal":false,"relations":[]}
+{"id":94,"text":"Philip Larkin's poem \"At Grass\" employs his sensitive poetic technique to reflect on a field of aged racehorses, and on the practice of poetry.","has_causal":false,"relations":[]}
+{"id":95,"text":"We have poured cement into 3 inch forms.","has_causal":false,"relations":[]}
+{"id":96,"text":"Tom's prominient selection of various rye spirits wins him kudos today.","has_causal":false,"relations":[]}
+{"id":97,"text":"It is inherently no less silly to see a king in a pear  than to see a pear in a rabbit, a rabbit in a carafe, a carafe in a clock, and so on and so forth.","has_causal":false,"relations":[]}
+{"id":98,"text":"He created and advocated \"flower power,\"a strategy in which antiwar demonstrators promoted positive values like peace and love to dramatize their opposition to the destruction and death caused by the war in Vietnam.","has_causal":true,"relations":[{"cause":"the war","effect":"the destruction"},{"cause":"the war","effect":"death"}]}
+{"id":99,"text":"Givers gain moral strength and happiness from giving.","has_causal":true,"relations":[{"cause":"giving","effect":"moral strength"},{"cause":"giving","effect":"happiness"}]}
+{"id":100,"text":"This paralyzed him so much that when trying to lay back on the bed, he fell on his back and hit his head on the bed post.","has_causal":false,"relations":[]}
+{"id":101,"text":"The bird was put in a fish tank, and a tube was run into the tank.","has_causal":false,"relations":[]}
+{"id":102,"text":"The box holds three stiff cardboard tubes, each wrapped in now decaying cellophane.","has_causal":false,"relations":[]}
+{"id":103,"text":"Bone is built up of many cell types and so far we have only investigated human osteoblasts.","has_causal":false,"relations":[]}
+{"id":104,"text":"The missis won the lottery with a ticket she didn't tell you about.","has_causal":false,"relations":[]}
+{"id":105,"text":"No material was prepared for the sessions, so the three musicians improvised an album's worth of material.","has_causal":false,"relations":[]}
+{"id":106,"text":"Four of the entrapments resulted in suffocation: a 7-month-old in Gouverneur, N.Y.; a 7-month-old in New Iberia, La.; a 6-month-old in Summersville, W.Va.; and a 9-month-old in Bronx, N.Y.","has_causal":true,"relations":[{"cause":"the entrapments","effect":"suffocation"}]}
+{"id":107,"text":"A locksmith copies and repairs car keys for modern vehicles at a lower cost.","has_causal":false,"relations":[]}
+{"id":108,"text":"There is in fact a socialist party in America and there are real socialists.","has_causal":false,"relations":[]}
+{"id":109,"text":"He was the muster-spirit of that glorious pleiad of warriors and sailors who at that epoch used to swarm the Indian seas.","has_causal":false,"relations":[]}
+{"id":110,"text":"I too, get a headache from wine, and was always told that it was the sulfites.","has_causal":true,"relations":[{"cause":"wine","effect":"a headache"}]}
+{"id":111,"text":"The car kit has a GPS receiver built in that is better than the iPhone's.","has_causal":false,"relations":[]}
+{"id":112,"text":"The skydiving scene was the best part of the movie.","has_causal":false,"relations":[]}
+{"id":113,"text":"Here, in exclusive interview clips, he talked about his career and what he thought of today's television.","has_causal":false,"relations":[]}
+{"id":114,"text":"Overall, the fire after the earthquake burned out 7456 houses in over 530 localities.","has_causal":true,"relations":[{"cause":"the earthquake","effect":"the fire"}]}
+{"id":115,"text":"This page is a guide to the floating world of cyberspace.","has_causal":false,"relations":[]}
+{"id":116,"text":"The exhibition profit was donated to a cancer research center.","has_causal":false,"relations":[]}
+{"id":117,"text":"Doctors have inserted GHG mitigation into the prescriptions.","has_causal":false,"relations":[]}
+{"id":118,"text":"Active transport is a mechanism evolved to mediate traffic across cellular membranes.","has_causal":false,"relations":[]}
+{"id":119,"text":"More weapons are being delivered to the French navy.","has_causal":false,"relations":[]}
+{"id":120,"text":"A data warehouse is a place where data is stored for archival purposes.","has_causal":false,"relations":[]}
+{"id":121,"text":"This comprehensive book discusses both the human and the natural history of the islands of California.","has_causal":false,"relations":[]}
+{"id":122,"text":"Two hours later, I had a bottle full of warm water.","has_causal":false,"relations":[]}
+{"id":123,"text":"The whole company migrated into the country side.","has_causal":false,"relations":[]}
+{"id":124,"text":"Most deaths from the accident were caused by radiation poisoning.","has_causal":true,"relations":[{"cause":"the accident","effect":"Most deaths"},{"cause":"radiation poisoning","effect":"Most deaths"}]}
+{"id":125,"text":"The widespread opinion that protein and phosphorus cause calcium loss is examined.","has_causal":true,"relations":[{"cause":"protein","effect":"calcium loss"},{"cause":"phosphorus","effect":"calcium loss"}]}
+{"id":126,"text":"And one third of the bench of aldermen is exclusively composed of men, which explains the on average lower share of female aldermen than female local councillors.","has_causal":false,"relations":[]}
+{"id":127,"text":"A staysail schooner has no foresail, but instead carries a main staysail between the masts in addition to the fore staysail ahead of the foremast.","has_causal":false,"relations":[]}
+{"id":128,"text":"Still segregated in World War I, the U.S. Army was reluctant to use its 93d division of black soldiers in combat and instead assigned the division's three National Guard and one draftee regiments to the French Army.","has_causal":false,"relations":[]}
+{"id":129,"text":"Many simple DC power supplies regulate the voltage using a shunt regulator such as a zener diode.","has_causal":false,"relations":[]}
+{"id":130,"text":"A great wing of fluorite dragons, the greatest concentration of the rather solitary dragons ever known, joined the desperate battle with the blues and silvers against Chaos.","has_causal":false,"relations":[]}
+{"id":131,"text":"The drugs he sold had caused the overdose death of Matthew Lessard, 19, of Lowell.","has_causal":true,"relations":[{"cause":"The drugs","effect":"the overdose death"}]}
+{"id":132,"text":"Winter is here, and the little fir tree stands lonely in the forest.","has_causal":false,"relations":[]}
+{"id":133,"text":"Three years ago the coalition organized a strategic cooperative of several farmers associations to export mangos under the Taiwan Mango brand.","has_causal":false,"relations":[]}
+{"id":134,"text":"The school of fish mentioned in the title poem of this book live at the bottom of the sea, but are somehow addicted to light.","has_causal":false,"relations":[]}
+{"id":135,"text":"Individual donors make a significant difference in addressing the suffering caused by the economic crisis.","has_causal":true,"relations":[{"cause":"the economic crisis","effect":"the suffering"}]}
+{"id":136,"text":"The grandstand completes the concourse around the ground, and it will increase seating capacity to where it should be.","has_causal":false,"relations":[]}
+{"id":137,"text":"Chest pain from indigestion feels like an intense burning and is usually accompanied by regurgitation and gas.","has_causal":true,"relations":[{"cause":"indigestion","effect":"Chest pain"}]}
+{"id":138,"text":"Each year, many infants and toddlers die due to suffocation from breathing small objects into their breathing passages and lungs.","has_causal":true,"relations":[{"cause":"suffocation","effect":"die"},{"cause":"breathing small objects","effect":"suffocation"}]}
+{"id":139,"text":"Gross revenues from the selling of crude oil in 2003 reached US$11.508 billion or some 112.85 percent of the amount targeted in the 2003 state budget.","has_causal":true,"relations":[{"cause":"the selling","effect":"Gross revenues"}]}
+{"id":140,"text":"Narcotic goods have been imported into several states in Australia.","has_causal":false,"relations":[]}
+{"id":141,"text":"Pneumococcal meningitis is caused by pneumococcus bacteria, which also cause several diseases of the respiratory system, including pneumonia.","has_causal":true,"relations":[{"cause":"pneumococcus bacteria","effect":"Pneumococcal meningitis"},{"cause":"pneumococcus bacteria","effect":"several diseases"}]}
+{"id":142,"text":"This includes those rules governing transfers, academic eligibility, age requirements, and the number of consecutive seasons of athletic eligibility beyond grade eight.","has_causal":false,"relations":[]}
+{"id":143,"text":"The insurance cost has been added into the shipping price.","has_causal":false,"relations":[]}
+{"id":144,"text":"A happy resident feels part of their association.","has_causal":false,"relations":[]}
+{"id":145,"text":"The water is running into the overflow pipe.","has_causal":false,"relations":[]}
+{"id":146,"text":"The club consists of 902 condominium homes each with a unique golf course or lake view.","has_causal":false,"relations":[]}
+{"id":147,"text":"It's a file cabinet in Washington with an IOU in it.","has_causal":false,"relations":[]}
+{"id":148,"text":"The president used the pretext of national security.","has_causal":false,"relations":[]}
+{"id":149,"text":"Out of the early morning haze, a convoy of articulated lorries pulls into the Gashouder square.","has_causal":false,"relations":[]}
+{"id":150,"text":"The kennels of hounds and mews of hawks were a form of conspicuous consumption that only a noble could afford as so mark his status.","has_causal":false,"relations":[]}
+{"id":151,"text":"Eye discomfort from this staring effect is exacerbated by low humidity.","has_causal":true,"relations":[{"cause":"this staring effect","effect":"Eye discomfort"}]}
+{"id":152,"text":"The murder has dragged the victim into the water.","has_causal":false,"relations":[]}
+{"id":153,"text":"The door locks with a sliding bar hidden in the carved piece across the center of the door.","has_causal":false,"relations":[]}
+{"id":154,"text":"The announcement of the game caused a stir on the web yesterday, with the Weekly Standard launching a protest campaign encouraging readers to e-mail Microsoft and T-Enterprise, the out-of-its-depth company that had hired actual Gitmo detainee Moazzam Begg as a consultant on the game.","has_causal":true,"relations":[{"cause":"The announcement","effect":"a stir"}]}
+{"id":155,"text":"Zinc is essential for growth and cell division.","has_causal":true,"relations":[{"cause":"Zinc","effect":"growth"},{"cause":"Zinc","effect":"cell division"}]}
+{"id":156,"text":"The average soldier joins your army for the pay, and if you cannot pay him he will walk away and go back to get a job as a farmer or laborer.","has_causal":false,"relations":[]}
+{"id":157,"text":"In the Western Province the starch is stored in woven palm leaf bundles.","has_causal":false,"relations":[]}
+{"id":158,"text":"The steam caused a backpressure on the VTD, resulting in the rupture disc opening.","has_causal":true,"relations":[{"cause":"The steam","effect":"a backpressure"},{"cause":"a backpressure","effect":"the rupture disc opening"}]}
+{"id":159,"text":"He put the posts in chronological order.","has_causal":false,"relations":[]}
+{"id":160,"text":"The record was a sheet of paper stored in a file cabinet or an image on microform.","has_causal":false,"relations":[]}
+{"id":161,"text":"Peg bags are the medium sized bags that hang in the candy isle of the store.","has_causal":false,"relations":[]}
+{"id":162,"text":"Earthquakes are caused by the discharge of accumulated along geologic faults.","has_causal":true,"relations":[{"cause":"the discharge","effect":"Earthquakes"}]}
+{"id":163,"text":"MDI implants were placed into the jawbone.","has_causal":false,"relations":[]}
+{"id":164,"text":"We dissolved the contents of one packet in a carafe of water and ran the brew cycle.","has_causal":false,"relations":[]}
+{"id":165,"text":"The nice thing about the title of the first book was that as soon as you saw the the cover, or even read the title, you knew immediately about the blog without having to read a review or a \"to get more info\" blurb.","has_causal":false,"relations":[]}
+{"id":166,"text":"Our microwave has a turn-able turntable inside and dial-able knobs outside.","has_causal":false,"relations":[]}
+{"id":167,"text":"Muscle fatigue is the number one cause of arm muscle pain.","has_causal":true,"relations":[{"cause":"Muscle fatigue","effect":"arm muscle pain"}]}
+{"id":168,"text":"DOJ released a probe into Siegelman prosecution.","has_causal":false,"relations":[]}
+{"id":169,"text":"Menopause and PMS cause stress and anxiety even without imbalanced hormones.","has_causal":true,"relations":[{"cause":"Menopause","effect":"stress"},{"cause":"Menopause","effect":"anxiety"},{"cause":"PMS","effect":"stress"},{"cause":"PMS","effect":"anxiety"}]}
+{"id":170,"text":"It is best to use bold flavors in herb butter.","has_causal":false,"relations":[]}
+{"id":171,"text":"Franken's uncle, who was in the Russian army, liberated Auschwitz with Barry's uncle.","has_causal":false,"relations":[]}
+{"id":172,"text":"One drift of the sheep was marked with a red cross, and the other drift with a black patch.","has_causal":false,"relations":[]}
+{"id":173,"text":"Cuba is already a customer and now the state development bank, BNDES, plans to finance the export of ethanol knowhow to Africa, where the hopes of countries such as Ghana are pinned on the jatropha plant.","has_causal":false,"relations":[]}
+{"id":174,"text":"The violence in Indonesia's Aceh province has been discussed at talks in Jakarta between President Wahid and the visiting Malaysian prime minister, Mahathir Mohamad.","has_causal":false,"relations":[]}
+{"id":175,"text":"The presentation generated debate and there was general discussion on how journalists can better equip themselves to handle the challenges.","has_causal":true,"relations":[{"cause":"The presentation","effect":"debate"}]}
+{"id":176,"text":"The wrathful goddess turned her into a crane and proclaimed that her bird descendants should wage eternal war on the Pygmy folk.","has_causal":false,"relations":[]}
+{"id":177,"text":"A signal was sent to the process.","has_causal":false,"relations":[]}
+{"id":178,"text":"This is the site deep inside the earth where fault movement begin.","has_causal":false,"relations":[]}
+{"id":179,"text":"On the floor of the passenger side, they found a plastic bag with marijuana inside.","has_causal":false,"relations":[]}
+{"id":180,"text":"The ice cores were shipped to clean labs for examination.","has_causal":false,"relations":[]}
+{"id":181,"text":"Asparagus is a natural cure for cancer.","has_causal":false,"relations":[]}
+{"id":182,"text":"Germs are microscopic organisms that cause sickness or disease.","has_causal":true,"relations":[{"cause":"Germs","effect":"sickness"},{"cause":"Germs","effect":"disease"}]}
+{"id":183,"text":"The exhibit features the winning designs in both the professional and student categories, as well as other outstanding entries.","has_causal":false,"relations":[]}
+{"id":184,"text":"Method according to claim 1, characterized in that the time duration of the quality reduction is limited at least to the duration of the interference triggered by the switching process.","has_causal":true,"relations":[{"cause":"the switching process","effect":"the interference"}]}
+{"id":185,"text":"The decedent had left the nursery supply company's main yard earlier in the day.","has_causal":false,"relations":[]}
+{"id":186,"text":"A question was raised in regard to the public announcement of the names of the three finalists.","has_causal":false,"relations":[]}
+{"id":187,"text":"Constipation is the most common cause of abdominal pain in the pediatric population.","has_causal":true,"relations":[{"cause":"Constipation","effect":"abdominal pain"}]}
+{"id":188,"text":"When the force was generated via the joystick, the reproduced force matched the original force much more accurately.","has_causal":true,"relations":[{"cause":"the joystick","effect":"the force"}]}
+{"id":189,"text":"There were setbacks and technical problems that ensued from the location design, flooding, and moisture that plagued the winery and bumped up the investment cost beyond the initial budgetary estimates.","has_causal":true,"relations":[{"cause":"the location design","effect":"setbacks"},{"cause":"the location design","effect":"technical problems"},{"cause":"flooding","effect":"setbacks"},{"cause":"flooding","effect":"technical problems"},{"cause":"moisture","effect":"setbacks"},{"cause":"moisture","effect":"technical problems"}]}
+{"id":190,"text":"The poet Essex Hemphill conquered sorrow after the loss of a friend by taking up the cause of that friend.","has_causal":true,"relations":[{"cause":"the loss","effect":"sorrow"}]}
+{"id":191,"text":"An article has been prepared on patient self testing of oral anticoagulation.","has_causal":false,"relations":[]}
+{"id":192,"text":"Investment flows into emerging markets.","has_causal":false,"relations":[]}
+{"id":193,"text":"An oil spill caused by a collision between a ship and a barge closed the ship channel servicing the nation's second largest port.","has_causal":true,"relations":[{"cause":"a collision","effect":"An oil spill"}]}
+{"id":194,"text":"The NRMA's president, Wendy Machin, and the chief executive, Tony Stuart, were among members of the party which viewed the concert in a private box.","has_causal":false,"relations":[]}
+{"id":195,"text":"In a large oval crock pot I've had some hams that can fit in whole.","has_causal":false,"relations":[]}
+{"id":196,"text":"Most women use a portable pump for this purpose.","has_causal":false,"relations":[]}
+{"id":197,"text":"The changes now seen in the endometrium are caused by a hormone called progesterone.","has_causal":true,"relations":[{"cause":"a hormone","effect":"The changes"}]}
+{"id":198,"text":"The incident was caused by the entry of high pressure gas from a deep formation that got confined in the porthole of the well.","has_causal":true,"relations":[{"cause":"the entry","effect":"The incident"}]}
+{"id":199,"text":"The key matches the private key that the sender used to encrypt it.","has_causal":false,"relations":[]}
+{"id":200,"text":"A songwriter is someone who writes the lyrics, as well as the musical composition or melody to songs.","has_causal":false,"relations":[]}
+{"id":201,"text":"The swelling of the vocal fold mucosa is caused by smoking.","has_causal":true,"relations":[{"cause":"smoking","effect":"The swelling"}]}
+{"id":202,"text":"The latter course explained the biological phenomena in a mathematical way.","has_causal":false,"relations":[]}
+{"id":203,"text":"The pillow of Western nations is a cushion of linen or other material, stuffed with feathers, down, hair or wool.","has_causal":false,"relations":[]}
+{"id":204,"text":"A western regiment was behind it, a regiment of hunters and marksmen.","has_causal":false,"relations":[]}
+{"id":205,"text":"The lower house was composed of elected representatives.","has_causal":false,"relations":[]}
+{"id":206,"text":"The corporate regulator has been dragged into undertaker's inquiry.","has_causal":false,"relations":[]}
+{"id":207,"text":"The remaining articles run the gamut of sociological research.","has_causal":false,"relations":[]}
+{"id":208,"text":"This time the lobster was full of its superb flavor, which suffused even into the buttered corn.","has_causal":false,"relations":[]}
+{"id":209,"text":"The money was locked in a safe on the premises, but it was on a timelock and would not have opened until 9am.","has_causal":false,"relations":[]}
+{"id":210,"text":"The Commission is accepting comments regarding the program's adherence to the Accreditation Standards.","has_causal":false,"relations":[]}
+{"id":211,"text":"Options that are core components of the plan include: a benefit period, an elimination period, a maximum benefit percentage of salary and a maximum weekly benefit.","has_causal":false,"relations":[]}
+{"id":212,"text":"My wife mistakenly poured water into the valve cover of her 1999 Sebring when it began overheating.","has_causal":false,"relations":[]}
+{"id":213,"text":"National Geographic videos include several tapes dealing with a shrewdness of apes that dwells in Zaire.","has_causal":false,"relations":[]}
+{"id":214,"text":"Those who staged the coup appointed a civilian prime minister and a cabinet of civilian technocrats.","has_causal":false,"relations":[]}
+{"id":215,"text":"The cysts are caused by chronic inflammation of the perichondrium with production of serous fluid between the perichondrium and cartilage.","has_causal":true,"relations":[{"cause":"chronic inflammation","effect":"The cysts"}]}
+{"id":216,"text":"Thermocerin is a powerful fat burner that works with a combination of natural herbs such as White and Green Tea, Capsaicin, and Caffeine.","has_causal":false,"relations":[]}
+{"id":217,"text":"The grenade was found inside a sock Sunday morning.","has_causal":false,"relations":[]}
+{"id":218,"text":"The remainder of the breast is composed of connective tissue , adipose tissue , and Cooper's ligaments.","has_causal":false,"relations":[]}
+{"id":219,"text":"The parable related the rewards for those who invested successfully and the punishment for those who did not.","has_causal":false,"relations":[]}
+{"id":220,"text":"The polluted water has been poured into a local river.","has_causal":false,"relations":[]}
+{"id":221,"text":"Data shows that public concern about the economy has moved into the top five issues facing the country.","has_causal":false,"relations":[]}
+{"id":222,"text":"You noticed the three numbers at the bottom of a fertilizer package.","has_causal":false,"relations":[]}
+{"id":223,"text":"She mentioned the scandal caused by a BBC documentary on the treatment of children in a special-needs home and asked how the state had responded to these.","has_causal":true,"relations":[{"cause":"a BBC documentary","effect":"the scandal"}]}
+{"id":224,"text":"The toy was inside a box and had been left on the minivan.","has_causal":false,"relations":[]}
+{"id":225,"text":"The cow makes a sound called lowing, also known as mooing.","has_causal":true,"relations":[{"cause":"The cow","effect":"a sound"}]}
+{"id":226,"text":"The furnace thermostat is the nerve center of your home heating system.","has_causal":false,"relations":[]}
+{"id":227,"text":"Goatfish use a pair of large chin barbels to probe the sea bottom to detect buried prey.","has_causal":false,"relations":[]}
+{"id":228,"text":"Both novels tackle with political questions in a direct manner.","has_causal":false,"relations":[]}
+{"id":229,"text":"The movie gives the inaccurate impression that the Apaches all surrendered.","has_causal":true,"relations":[{"cause":"The movie","effect":"the inaccurate impression"}]}
+{"id":230,"text":"Paul the novelist has a computer but uses his old Smith Corona manual.","has_causal":false,"relations":[]}
+{"id":231,"text":"This is one of the more common causes of hair loss caused by stress and when you are losing hair because of this your hair stops growing and lies dormant.","has_causal":true,"relations":[{"cause":"stress","effect":"hair loss"}]}
+{"id":232,"text":"But the discomfort caused by the ointment and the duration of treatment often result in non-compliance.","has_causal":true,"relations":[{"cause":"the discomfort","effect":"non-compliance"},{"cause":"the ointment","effect":"the discomfort"},{"cause":"the duration","effect":"non-compliance"}]}
+{"id":233,"text":"They shop there for a huge selection of furniture and table legs, carved and turned furniture legs and feet, wood turnings and more.","has_causal":false,"relations":[]}
+{"id":234,"text":"The president of this corporation was one of its stockholders.","has_causal":false,"relations":[]}
+{"id":235,"text":"Tissue damage and electrode corrosion are both associatcd with high charge density stimulation.","has_causal":false,"relations":[]}
+{"id":236,"text":"The progenitor cells migrated into the tumor.","has_causal":false,"relations":[]}
+{"id":237,"text":"The origin of berserkers is unknown, although Tacitus mentions groups of Germanic warriors with berserk-like fury.","has_causal":false,"relations":[]}
+{"id":238,"text":"Oak root and chamomile provide a gentle astringent that helps reduce inflammation and calms skin irritation from the sun and environmental pollutants.","has_causal":true,"relations":[{"cause":"the sun","effect":"skin irritation"},{"cause":"environmental pollutants","effect":"skin irritation"}]}
+{"id":239,"text":"Dartmouth nearly narrowed the gap to one goal when a slapshot popped out of the glove of Princeton goalie Zane Kalemba '10.","has_causal":false,"relations":[]}
+{"id":240,"text":"When I start the engine the car makes a screaching sound.","has_causal":true,"relations":[{"cause":"the car","effect":"a screaching sound"}]}
+{"id":241,"text":"This year's Nobel Laureates in Physiology or Medicine made the remarkable and unexpected discovery that inflammation in the stomach  as well as ulceration of the stomach or duodenum  is the result of an infection of the stomach caused by the bacterium Helicobacter pylori.","has_causal":true,"relations":[{"cause":"an infection","effect":"inflammation"},{"cause":"an infection","effect":"ulceration"},{"cause":"the bacterium Helicobacter pylori","effect":"an infection"}]}
+{"id":242,"text":"The farmers and city officials in the region have tried to get state money to move the farmers market into a first-class operation and tourist attraction.","has_causal":false,"relations":[]}
+{"id":243,"text":"Seniors get much joy from animals.","has_causal":true,"relations":[{"cause":"animals","effect":"much joy"}]}
+{"id":244,"text":"The largest landslide triggered by the earthquake is located approximately 32 kilometers southeast of Muzafarrabad in a tributary valley of the Jhelum River.","has_causal":true,"relations":[{"cause":"the earthquake","effect":"The largest landslide"}]}
+{"id":245,"text":"The transmitter emits a constant radio signal to crea.","has_causal":true,"relations":[{"cause":"The transmitter","effect":"a constant radio signal"}]}
+{"id":246,"text":"Once outside, the python was placed in a bag, which was put inside a dog crate.","has_causal":false,"relations":[]}
+{"id":247,"text":"This classic Huffman photograph pictures the cow hands on their way to set up camp with their remuda of geldings trailing behind.","has_causal":false,"relations":[]}
+{"id":248,"text":"Climate Hackers dumped iron into the ocean.","has_causal":false,"relations":[]}
+{"id":249,"text":"The skeleton was discovered inside a Neolithic-age tomb unearthed in Yumuktepe Hoyuk of the southern Mersin province.","has_causal":false,"relations":[]}
+{"id":250,"text":"In \"Prologue,\" the youthful scientist splits open a hailstone with a violin string, the only sharp edge available.","has_causal":false,"relations":[]}
+{"id":251,"text":"These are all symptoms of the muscle paralysis caused by the bacterial toxin.","has_causal":true,"relations":[{"cause":"the bacterial toxin","effect":"the muscle paralysis"}]}
+{"id":252,"text":"Seven tears have flown into the river.","has_causal":false,"relations":[]}
+{"id":253,"text":"The 08 campaign green jobs was the main talking point of any speech.","has_causal":false,"relations":[]}
+{"id":254,"text":"The expressive colour, contrasting with the blackness of an apocalyptic sky, the chiaroscuro that accentuates the insubstantial limbs, and the desert landscape and pile of excrement dominating the scene express Miro's profound pessimism.","has_causal":false,"relations":[]}
+{"id":255,"text":"Every municipality in Ontario is a member of the corporation.","has_causal":false,"relations":[]}
+{"id":256,"text":"When Frances was 13, she read an article about a woman who escaped an unhappy marriage and went to Kenya.","has_causal":false,"relations":[]}
+{"id":257,"text":"NUS today responded to the Government's announcement of the long-awaited review of university funding.","has_causal":false,"relations":[]}
+{"id":258,"text":"Tidal is a major departure for Cisco, a switch and router company that in the last year has been on an acquisition binge buying a number of Web 2.0 application firms.","has_causal":false,"relations":[]}
+{"id":259,"text":"The director, Robert Connolly, who co-wrote the script with David Williamson, assembles the pieces with great methodical logic.","has_causal":false,"relations":[]}
+{"id":260,"text":"He encourages students to read beyond the mandatory texts in order to prepare for his exam.","has_causal":false,"relations":[]}
+{"id":261,"text":"Cruisers and large yachts have much more sophisticated fittings that that require more skills.","has_causal":false,"relations":[]}
+{"id":262,"text":"Well my husband was still in the shower and the remote was in the desk in the back room.","has_causal":false,"relations":[]}
+{"id":263,"text":"A child is an individual with personal oppinions, feelings and needs, just as adults are, that is what the convention of children's rights says.","has_causal":false,"relations":[]}
+{"id":264,"text":"The elevator operator is a meditation on the simultaneous power and futility of hope.","has_causal":false,"relations":[]}
+{"id":265,"text":"The painting was one of the first used as a poster in an advertising campaign for soap powder.","has_causal":false,"relations":[]}
+{"id":266,"text":"Also in the programme we consider the subject of happiness.","has_causal":false,"relations":[]}
+{"id":267,"text":"Patients with adenomyosis experience pain from this disease in the early 30's.","has_causal":true,"relations":[{"cause":"this disease","effect":"adenomyosis experience pain"}]}
+{"id":268,"text":"The RCMP released its report this week on the death of Robert Dziekanski.","has_causal":false,"relations":[]}
+{"id":269,"text":"Scarcely had we reached the edge of the wood when Turk darted past us, barking furiously at a troop of monkeys, who were gambolling on the turf.","has_causal":false,"relations":[]}
+{"id":270,"text":"We store the cards in a matching box.","has_causal":false,"relations":[]}
+{"id":271,"text":"The lure is a treat that is held in the owners hand, and the ferret lifts its paw to try to get to the treat.","has_causal":false,"relations":[]}
+{"id":272,"text":"Like a battalion of medieval archers, these plasma cells let fly their antibodies, which travel to their targets on the outer surface of harmful bacteria.","has_causal":false,"relations":[]}
+{"id":273,"text":"In many countries, the national association is a federation of various Scout associations.","has_causal":false,"relations":[]}
+{"id":274,"text":"Japanese commuters look at a clock inside a Tokyo train station.","has_causal":false,"relations":[]}
+{"id":275,"text":"To prepare for his exam, the student visited the ISA website.","has_causal":false,"relations":[]}
+{"id":276,"text":"Someone has blown soot into my face.","has_causal":false,"relations":[]}
+{"id":277,"text":"A human finger was found in a can of menudo soup.","has_causal":false,"relations":[]}
+{"id":278,"text":"Narrative identity takes part in the story's movement, in the dialectic between order and disorder.","has_causal":false,"relations":[]}
+{"id":279,"text":"The news that the stock-index futures have been approved stimulated Wednesday's market.","has_causal":false,"relations":[]}
+{"id":280,"text":"My hand was resting on the arm of the chair.","has_causal":false,"relations":[]}
+{"id":281,"text":"Within minutes of last night's terrorist attacks in Mumbai in India, blogs and social networks were buzzing with news, photos and eyewitness accounts.","has_causal":false,"relations":[]}
+{"id":282,"text":"But Pradyumna did not die, even when he was digested in the belly of the fish.","has_causal":false,"relations":[]}
+{"id":283,"text":"The first five-day workshop introduced tools for identifying and exploiting market opportunities.","has_causal":false,"relations":[]}
+{"id":284,"text":"On returning home, the patient's grandmother applied a poultice to the child's ankle overnight with the aim of reducing pain and inflammation.","has_causal":false,"relations":[]}
+{"id":285,"text":"The study found that people who took the combination of cholinesterase inhibitors  and Memantine, showed a significantly slower rate of cognitve decline than those who took only a cholinesterase inhibitor or no drug.","has_causal":false,"relations":[]}
+{"id":286,"text":"The site has a lounge of dedicated lizards who vote out anyone with whom they do not agree.","has_causal":false,"relations":[]}
+{"id":287,"text":"He posted his gifts to a military base in Middle East Asia.","has_causal":false,"relations":[]}
+{"id":288,"text":"That box was in a chest that had been locked since at least the early 1800s.","has_causal":false,"relations":[]}
+{"id":289,"text":"The north side of the street accommodated a gas station on the corner.","has_causal":false,"relations":[]}
+{"id":290,"text":"Lymphedema is an abnormal build-up of fluid that causes swelling, most often in the arms or legs.","has_causal":true,"relations":[{"cause":"Lymphedema","effect":"swelling"}]}
+{"id":291,"text":"The rest of the world has stuffed communism into the dustbin of history.","has_causal":false,"relations":[]}
+{"id":292,"text":"Generally it appears that most of the damage was caused by the winds and the rough seas.","has_causal":true,"relations":[{"cause":"the winds","effect":"the damage"},{"cause":"the rough seas","effect":"the damage"}]}
+{"id":293,"text":"The infant was born in a condition of shock and died in ten minutes.","has_causal":false,"relations":[]}
+{"id":294,"text":"Aware of the suffering caused by exploitation, social injustice, stealing, and oppression, I am committed to cultivate loving kindness and learn ways to work for the well-being of people, animals, plants, and minerals.","has_causal":true,"relations":[{"cause":"exploitation","effect":"the suffering"},{"cause":"social injustice","effect":"the suffering"},{"cause":"stealing","effect":"the suffering"},{"cause":"oppression","effect":"the suffering"}]}
+{"id":295,"text":"The album was stored in a protective poly jacket and the vinyl was stored in an anti-static sleeve.","has_causal":false,"relations":[]}
+{"id":296,"text":"The protein migrated into the nuclei.","has_causal":false,"relations":[]}
+{"id":297,"text":"On 8 February 1992, Ulysses reached Jupiter for the gravity-assist manoeuvre that placed the spacecraft in a polar orbit.","has_causal":false,"relations":[]}
+{"id":298,"text":"Heavy-gauge flatware is composed of polished stainless steel for good heft and balance.","has_causal":false,"relations":[]}
+{"id":299,"text":"While most of the experimental literature focuses on individual contributions, many real-world problems involve the formation of coalitions.","has_causal":false,"relations":[]}
+{"id":300,"text":"On boats with only one jib, it is common for the clew of the jib to be further aft than the mast, meaning the jib and mainsail overlap.","has_causal":false,"relations":[]}
+{"id":301,"text":"Questions on various aspects of the study were raised and discussed.","has_causal":false,"relations":[]}
+{"id":302,"text":"Oscillation of the lever caused by the swinging of the pendulum.","has_causal":true,"relations":[{"cause":"the swinging","effect":"Oscillation"}]}
+{"id":303,"text":"The malfunctions on Monday caused delays for patrons waiting to check out or renew books at the branches, and impeded access to personal accounts that allow users to renew or hold books online.","has_causal":true,"relations":[{"cause":"The malfunctions","effect":"delays"}]}
+{"id":304,"text":"The theme is centered around urban street vision, with a philosophical future edge.","has_causal":false,"relations":[]}
+{"id":305,"text":"Stimulation of the posterior horn of the medial meniscus produced a measurable amount of CMAP latency for the semimembranosus muscle.","has_causal":true,"relations":[{"cause":"Stimulation","effect":"CMAP latency"}]}
+{"id":306,"text":"The paragraph states that the number of rules is finite.","has_causal":false,"relations":[]}
+{"id":307,"text":"The first fighter wing of these planes is already in service.","has_causal":false,"relations":[]}
+{"id":308,"text":"The other contents of the suitcase included gym shoes, dirty sweat socks, Limburger cheese, scented oils, and a severely poop stained Armani suit.","has_causal":false,"relations":[]}
+{"id":309,"text":"200 IT jobs are going into schools in Victoria.","has_causal":false,"relations":[]}
+{"id":310,"text":"General information about the infection caused by the bacteria called Salmonella, when food is eaten raw or undercooked.","has_causal":true,"relations":[{"cause":"the bacteria","effect":"the infection"}]}
+{"id":311,"text":"The afterglow is produced by shock waves in the jets of tenuous gas that shoot from the blast at almost the speed of light.","has_causal":true,"relations":[{"cause":"shock waves","effect":"The afterglow"}]}
+{"id":312,"text":"We have poured billions into airline safety.","has_causal":false,"relations":[]}
+{"id":313,"text":"White souffle of clouds were strolling along the sky.","has_causal":false,"relations":[]}
+{"id":314,"text":"A mechanic attaches a socket wrench to a bolt.","has_causal":false,"relations":[]}
+{"id":315,"text":"The light in the background is from the sunrise.","has_causal":true,"relations":[{"cause":"the sunrise","effect":"The light"}]}
+{"id":316,"text":"The volunteers enjoy a sense of satisfaction and personal fulfillment from helping others, and recent findings suggest that this feeling may well be a major reason why many people choose to volunteer.","has_causal":true,"relations":[{"cause":"helping others","effect":"satisfaction"},{"cause":"helping others","effect":"personal fulfillment"}]}
+{"id":317,"text":"The final chapter offers a theological survey of the use of the formula.","has_causal":false,"relations":[]}
+{"id":318,"text":"With these axioms, the judges cultivated the principles of judgment, and those principles could be used in gauging the restrictions on freedom that were justified or unjustified, in any domain of the law.","has_causal":false,"relations":[]}
+{"id":319,"text":"Major car manufacturers are launching more and more cars to attain the top position in this jungle of automotives.","has_causal":false,"relations":[]}
+{"id":320,"text":"The loan program is running into insurmountable difficulties.","has_causal":false,"relations":[]}
+{"id":321,"text":"Their ancestors reached the island using bamboo rafts.","has_causal":false,"relations":[]}
+{"id":322,"text":"Finally, Slone's fear of AIDS and the mental distress she suffered from this fear were caused by the needle stab.","has_causal":true,"relations":[{"cause":"the needle stab","effect":"Slone's fear"},{"cause":"the needle stab","effect":"the mental distress"}]}
+{"id":323,"text":"The possible implications were indicated in the first publication.","has_causal":false,"relations":[]}
+{"id":324,"text":"Hunt clubs often maintain a cry of hounds, trained to hunt foxes.","has_causal":false,"relations":[]}
+{"id":325,"text":"The disruption caused by the latest Christmas terrorist has added too much to the weary trip home.","has_causal":true,"relations":[{"cause":"the latest Christmas terrorist","effect":"The disruption"}]}
+{"id":326,"text":"A huddle of photographers was waiting outside the courtroom.","has_causal":false,"relations":[]}
+{"id":327,"text":"The children, seated on their mother's laps, played with toys on a table in front of a picture with holes in it.","has_causal":false,"relations":[]}
+{"id":328,"text":"The funds raised through this appeal have a direct impact on the people affected by the severe devastations caused by the storms.","has_causal":true,"relations":[{"cause":"the storms","effect":"the severe devastations"}]}
+{"id":329,"text":"I had a nest of garter snakes in the crack between the sidewalk and foundation last year.","has_causal":false,"relations":[]}
+{"id":330,"text":"A trend has been caused by the growing absolute numbers of young people on the planet, and by the rising unemployment rate.","has_causal":true,"relations":[{"cause":"the growing absolute numbers","effect":"A trend"},{"cause":"the rising unemployment rate","effect":"A trend"}]}
+{"id":331,"text":"The patient is kept in the hospital one night for observation.","has_causal":false,"relations":[]}
+{"id":332,"text":"In 1965, a farmer dug up the lower jawbone of a mammoth while in the process of expanding his cellar.","has_causal":false,"relations":[]}
+{"id":333,"text":"Spamming has been the subject of legislation in many jurisdictions.","has_causal":false,"relations":[]}
+{"id":334,"text":"The group has thrown together a neat prototype device that could possibly be the future of casinos.","has_causal":false,"relations":[]}
+{"id":335,"text":"The report looks at past and future of booming population of senior citizens.","has_causal":false,"relations":[]}
+{"id":336,"text":"When Guang Yang worked in a textile factory in her hometown of Beijing, she would sing to pass the time.","has_causal":false,"relations":[]}
+{"id":337,"text":"Xiehouyu is a Chinese proverb consisting of two parts.","has_causal":false,"relations":[]}
+{"id":338,"text":"The essential information is found in the second sentence.","has_causal":false,"relations":[]}
+{"id":339,"text":"Some animal viruses have migrated into humans.","has_causal":false,"relations":[]}
+{"id":340,"text":"But just think, sadness leads to fear then fear leads to anger.","has_causal":true,"relations":[{"cause":"sadness","effect":"fear"},{"cause":"fear","effect":"anger"}]}
+{"id":341,"text":"The cockpit accommodated a crew of three, including pilot, radar operator, and sensor operator.","has_causal":false,"relations":[]}
+{"id":342,"text":"Part of the task which the authors set themselves is the delineation and validation of the idea that a subculture of violence exists.","has_causal":false,"relations":[]}
+{"id":343,"text":"The team put up an advertisement to fill 225 posts, we received over 6500 applications.","has_causal":false,"relations":[]}
+{"id":344,"text":"Eighty-four percent of the complications resulted in patient deaths, while 16 percent resulted in a serious injury.","has_causal":true,"relations":[{"cause":"the complications","effect":"patient deaths"},{"cause":"the complications","effect":"a serious injury"}]}
+{"id":345,"text":"The Boyd Group is a British based, independent think tank considering issues relating to animal testing.","has_causal":false,"relations":[]}
+{"id":346,"text":"The worst pain of all was caused by the torment to her head which was like the pain of thorns pressing into her.","has_causal":true,"relations":[{"cause":"the torment","effect":"The worst pain"}]}
+{"id":347,"text":"Researchers have turned a mouse into a factory for human liver cells.","has_causal":false,"relations":[]}
+{"id":348,"text":"The report is about the regular road user and the law.","has_causal":false,"relations":[]}
+{"id":349,"text":"The governments sent scientists to the desert for surveying climate changes.","has_causal":false,"relations":[]}
+{"id":350,"text":"A daughter donated her kidney to her father.","has_causal":false,"relations":[]}
+{"id":351,"text":"He operated the centrifuge with rotors and buckets which show signs of corrosion or mechanical damage.","has_causal":false,"relations":[]}
+{"id":352,"text":"This error message indicates that an error has occurred.","has_causal":false,"relations":[]}
+{"id":353,"text":"The genreal anesthetic cause unconsciousness and insensibility to paid and are used for major surgical procedures.","has_causal":true,"relations":[{"cause":"The genreal anesthetic","effect":"unconsciousness"},{"cause":"The genreal anesthetic","effect":"insensibility"}]}
+{"id":354,"text":"Even nuclear energy is among the causes of water pollution.","has_causal":true,"relations":[{"cause":"Even nuclear energy","effect":"water pollution"}]}
+{"id":355,"text":"The mason who did the stonework did a wonderful job.","has_causal":false,"relations":[]}
+{"id":356,"text":"We poured the molten aluminium into ingots, which was very dangerous.","has_causal":false,"relations":[]}
+{"id":357,"text":"The mass on the whisk side of the broom is closer to the center of mass than the end of the broom stick.","has_causal":false,"relations":[]}
+{"id":358,"text":"The White Paper Full Employment in Australia was the defining document of economic policy in Australia for the 30 years between 1945 and 1975.","has_causal":false,"relations":[]}
+{"id":359,"text":"The subject was taken into custody for trespassing.","has_causal":false,"relations":[]}
+{"id":360,"text":"Landslides caused the majority of the deaths.","has_causal":true,"relations":[{"cause":"Landslides","effect":"the deaths"}]}
+{"id":361,"text":"A penal code is a portion of a state's laws defining crimes and specifying the punishment.","has_causal":false,"relations":[]}
+{"id":362,"text":"Jack and Jill are lying on the floor inside the house dead.","has_causal":false,"relations":[]}
+{"id":363,"text":"Aware of the suffering caused by unmindful drinking, I am committed to cultivate good health, both physical and mental, for myself, my family, and my society.","has_causal":true,"relations":[{"cause":"unmindful drinking","effect":"the suffering"}]}
+{"id":364,"text":"The kitchen holds patient drinks and snacks.","has_causal":false,"relations":[]}
+{"id":365,"text":"In the 1950s, several books were published on the topic of sociometrics.","has_causal":false,"relations":[]}
+{"id":366,"text":"The statue of an Aztec god is carried into a temple.","has_causal":false,"relations":[]}
+{"id":367,"text":"As the molten metal cools, it hardens and assumes the shape created by the mold's cavity.","has_causal":true,"relations":[{"cause":"the mold's cavity","effect":"the shape"}]}
+{"id":368,"text":"At my work, an electronic engineer has migrated into embedded software.","has_causal":false,"relations":[]}
+{"id":369,"text":"The drag caused by the Earth's atmosphere works against a rocket or a water molecule.","has_causal":true,"relations":[{"cause":"the Earth's atmosphere","effect":"The drag"}]}
+{"id":370,"text":"Snails and slugs cause damage to seedlings, flowers, vegetables and shrubs.","has_causal":true,"relations":[{"cause":"Snails","effect":"damage"},{"cause":"slugs","effect":"damage"}]}
+{"id":371,"text":"Pipe bombs have been thrown into two parked cars in Londonderry.","has_causal":false,"relations":[]}
+{"id":372,"text":"The explosion caused a gas leak on the pipeline near the village of Pouce Coupe, south of Dawson Creek.","has_causal":true,"relations":[{"cause":"The explosion","effect":"a gas leak"}]}
+{"id":373,"text":"You are on the committee to select a slate of officers for the next academic year.","has_causal":false,"relations":[]}
+{"id":374,"text":"We have donated the books to the local library.","has_causal":false,"relations":[]}
+{"id":375,"text":"The molotov cocktail is a bottle with gasoline in it that has a damp cloth in the top that acts as a wick.","has_causal":false,"relations":[]}
+{"id":376,"text":"South Bade residents have been blown back into primitive lifestyle.","has_causal":false,"relations":[]}
+{"id":377,"text":"Compared to running barefoot, running in conventional running shoes increases stress on the knee joints up to 38%.","has_causal":false,"relations":[]}
+{"id":378,"text":"There is an urgent need for a fraternity of various sections of the people to fight for the rights of the tribals and against the increasing atrocities on them.","has_causal":false,"relations":[]}
+{"id":379,"text":"Most of the discussion has been about the words he used.","has_causal":false,"relations":[]}
+{"id":380,"text":"The statute covering the matter specified in detail when and where the fair was to be held.","has_causal":false,"relations":[]}
+{"id":381,"text":"The man ate the steak with a fork.","has_causal":false,"relations":[]}
+{"id":382,"text":"A system for attaining an impedance match uses an array of collinear dipoles.","has_causal":false,"relations":[]}
+{"id":383,"text":"We have placed the candidates into roles.","has_causal":false,"relations":[]}
+{"id":384,"text":"There were two smiling and waving individuals hanging under the bun in a wicker basket equipped with the big Bunsen burner.","has_causal":false,"relations":[]}
+{"id":385,"text":"The CFA program curriculum is shipped to the people.","has_causal":false,"relations":[]}
+{"id":386,"text":"A student relaxes with a book in a Cambridge park.","has_causal":false,"relations":[]}
+{"id":387,"text":"He also appeared in a television commercial against internet movie piracy.","has_causal":false,"relations":[]}
+{"id":388,"text":"The animal control released a wild leopard into the wild.","has_causal":false,"relations":[]}
+{"id":389,"text":"Vulvodynia is the cause of chronic vulval pain in the absence of skin disease and infection.","has_causal":true,"relations":[{"cause":"Vulvodynia","effect":"chronic vulval pain"}]}
+{"id":390,"text":"Its introduction supplies useful historical background.","has_causal":false,"relations":[]}
+{"id":391,"text":"Each painting is built up of many layers over time, thin transparent layers are juxtaposed with thicker juicier layers of paint.","has_causal":false,"relations":[]}
+{"id":392,"text":"A photo of a paddle wheel boat on the Mississippi River at New Orleans.","has_causal":false,"relations":[]}
+{"id":393,"text":"The internal auditors are moved into specific pre-selected locations.","has_causal":false,"relations":[]}
+{"id":394,"text":"The piglet's incisor teeth are cut off with pliers.","has_causal":false,"relations":[]}
+{"id":395,"text":"Our microwave has a button for popcorn.","has_causal":false,"relations":[]}
+{"id":396,"text":"Arcane Subtlety reduced the threat caused by Polymorph by 40% at max rank, though the threat caused by the spell is minimal.","has_causal":true,"relations":[{"cause":"Polymorph","effect":"the threat"},{"cause":"the spell","effect":"the threat"}]}
+{"id":397,"text":"We estimate a wind speed associated with the devastation caused by the tornado.","has_causal":true,"relations":[{"cause":"the tornado","effect":"the devastation"}]}
+{"id":398,"text":"Like a catch-22 the worst part is that acne causes stress and stress triggers acne breakouts.","has_causal":true,"relations":[{"cause":"acne","effect":"stress"},{"cause":"stress","effect":"acne breakouts"}]}
+{"id":399,"text":"The problem comes from the widgets resembling HTC's own Sense UI widgets.","has_causal":true,"relations":[{"cause":"the widgets","effect":"The problem"}]}
+{"id":400,"text":"The government was criticised in a radio debate.","has_causal":false,"relations":[]}
+{"id":401,"text":"Canola oil is a versatile, neutral-tasting oil that is very low in saturated fat.","has_causal":false,"relations":[]}
+{"id":402,"text":"The storm resulted in 31 deaths and 2.5 million dollars damage.","has_causal":true,"relations":[{"cause":"The storm","effect":"31 deaths"},{"cause":"The storm","effect":"2.5 million dollars damage"}]}
+{"id":403,"text":"The company has also targeted the premium sector with the Pringles Gourmet line.","has_causal":false,"relations":[]}
+{"id":404,"text":"Avci was the head of the chief of the police in Diyarbakir between 1984 and 1992.","has_causal":false,"relations":[]}
+{"id":405,"text":"These chemical studies were directed toward proof of structure of the indole components of the seeds.","has_causal":true,"relations":[{"cause":"These chemical studies","effect":"proof"}]}
+{"id":406,"text":"They incorporated the immigrant flows into microsimulation.","has_causal":false,"relations":[]}
+{"id":407,"text":"In that case, the doctor stops the bleeding with hormones.","has_causal":false,"relations":[]}
+{"id":408,"text":"Smoke is one of the leading causes of kidney failures.","has_causal":true,"relations":[{"cause":"Smoke","effect":"kidney failures"}]}
+{"id":409,"text":"Many of the passengers took the shuttle to town and turned around in ten minutes retreating back to the comfort of the air-conditioned ship.","has_causal":false,"relations":[]}
+{"id":410,"text":"A basket such as you mention holds four ears of corn.","has_causal":false,"relations":[]}
+{"id":411,"text":"An explanation of that conclusion was set out in appendix.","has_causal":false,"relations":[]}
+{"id":412,"text":"This wheel with its snout-engaging pins is exposed so that the worker can thrust the snout thereagainst.","has_causal":false,"relations":[]}
+{"id":413,"text":"The reports regarding the casualties has been announced and the loss that has been caused by the quake is being estimated.","has_causal":true,"relations":[{"cause":"the quake","effect":"the loss"}]}
+{"id":414,"text":"Without doubt, this is one of the best books for artists available.","has_causal":false,"relations":[]}
+{"id":415,"text":"Moreover, it is beyond the power of the State to compel the Syme family to retain their shares or, more importantly, to oblige Mr Macdonald to remain the chief executive of this company.","has_causal":false,"relations":[]}
+{"id":416,"text":"The scientist's invention is still in the house of the Plummers.","has_causal":false,"relations":[]}
+{"id":417,"text":"The doctor implanted an injection into three vertical glabellar furrows.","has_causal":false,"relations":[]}
+{"id":418,"text":"The findings have been published in a special section of the academic journal Archives of Sexual Behavior.","has_causal":false,"relations":[]}
+{"id":419,"text":"The major theme of the book is the beauty of a dream.","has_causal":false,"relations":[]}
+{"id":420,"text":"The body was in a bin, next to a dumpster, in a fenced-in area of the complex's parking lot.","has_causal":false,"relations":[]}
+{"id":421,"text":"Brazilian campaign laws include several restrictions on political speech that can seem arcane to outsiders, and even to some Brazilians.","has_causal":false,"relations":[]}
+{"id":422,"text":"My problem is that the advertisement gives the impression that women in rural Bangladesh have 6 children.","has_causal":true,"relations":[{"cause":"the advertisement","effect":"the impression"}]}
+{"id":423,"text":"Conveyance is any unit for transportation of explosives or blasting agents, including but not limited to trucks, trailers, rail cars, barges, and vessels.","has_causal":false,"relations":[]}
+{"id":424,"text":"Bogus water collectors have dropped flyers into people's letter boxes.","has_causal":false,"relations":[]}
+{"id":425,"text":"The current list includes pumpkin ale, local hops ale and an organic wheat and oats ale.","has_causal":false,"relations":[]}
+{"id":426,"text":"Whenever we try a new butcher we always buy the butcher's sausage first.","has_causal":false,"relations":[]}
+{"id":427,"text":"In these cases, the disappointment from the purchase is not forgotten over time, but rather accumulates.","has_causal":true,"relations":[{"cause":"the purchase","effect":"the disappointment"}]}
+{"id":428,"text":"The radiation from the atomic bomb explosion is a typical acute radiation.","has_causal":true,"relations":[{"cause":"the atomic bomb explosion","effect":"The radiation"}]}
+{"id":429,"text":"The team has moved into fifth place in career scoring at ND.","has_causal":false,"relations":[]}
+{"id":430,"text":"It has been nearly 40 years since former U.S. president Lyndon Johnson convened the skulk of veteran foxes for the fateful consultation on November 2, 1967, on the issue of the Vietnam War.","has_causal":false,"relations":[]}
+{"id":431,"text":"The Scorpio single was in a bin with around 6 zillion 45s.","has_causal":false,"relations":[]}
+{"id":432,"text":"New settlers arrived into this harsh land to seek a new life.","has_causal":false,"relations":[]}
+{"id":433,"text":"Other early organisms have released barium into sulphate depleted pore-waters.","has_causal":false,"relations":[]}
+{"id":434,"text":"The film features eight influential contemporary philosophers walking around New York.","has_causal":false,"relations":[]}
+{"id":435,"text":"I have found that I have extremely sensitive skin and most cleaners cause rash or a burning sensation if it has contact with my skin.","has_causal":true,"relations":[{"cause":"most cleaners","effect":"rash"},{"cause":"most cleaners","effect":"a burning sensation"}]}
+{"id":436,"text":"The disruption has been caused by work being carried out by track operator Network Rail.","has_causal":true,"relations":[{"cause":"work","effect":"The disruption"}]}
+{"id":437,"text":"Chicken bouillon is obtained in three different forms, either liquid, powder or in cubes.","has_causal":false,"relations":[]}
+{"id":438,"text":"China sent seeds into space.","has_causal":false,"relations":[]}
+{"id":439,"text":"In a person who already has some neck tension from stress, such an event can lead to a long-term increase of neck tension.","has_causal":true,"relations":[{"cause":"stress","effect":"some neck tension"},{"cause":"such an event","effect":"a long-term increase"}]}
+{"id":440,"text":"A covey of partridges nested in my pear grove.","has_causal":false,"relations":[]}
+{"id":441,"text":"The Medicare buy-in plan ran into Senate resistance.","has_causal":false,"relations":[]}
+{"id":442,"text":"When a tsunami is generated by a strong offshore earthquake, its first waves would reach the outer coast minutes after the ground stops shaking.","has_causal":true,"relations":[{"cause":"a strong offshore earthquake","effect":"a tsunami"}]}
+{"id":443,"text":"Ground resonance occurs while the helicopter is on the ground with rotors turning; it will not happen in flight.","has_causal":false,"relations":[]}
+{"id":444,"text":"The car has been delivered to the upholstery shop.","has_causal":false,"relations":[]}
+{"id":445,"text":"Scientists have injected human cells into lab animals.","has_causal":false,"relations":[]}
+{"id":446,"text":"More than 40 years have passed since the spacecraft departed into the outer-space with a fuel cell on-board.","has_causal":false,"relations":[]}
+{"id":447,"text":"For a beginner, the layout of piano keys is hard to recognize on a piano keyboard.","has_causal":false,"relations":[]}
+{"id":448,"text":"I bought a whole cartload of groceries, and spent a fraction of what I would at any regular grocery store.","has_causal":false,"relations":[]}
+{"id":449,"text":"Your e-mail has been successfully delivered to the receiver.","has_causal":false,"relations":[]}
+{"id":450,"text":"I pressed my nose against a bottle full of snakes, fermenting in their frozen grimaces.","has_causal":false,"relations":[]}
+{"id":451,"text":"I sent the payment to the registered email address in sandbox.","has_causal":false,"relations":[]}
+{"id":452,"text":"And so this book involves the reader in a true educational process which is also fun.","has_causal":false,"relations":[]}
+{"id":453,"text":"I caught a dose of crabs in Phuket once.","has_causal":false,"relations":[]}
+{"id":454,"text":"Debate continues to swirl around the theory of evolution Charles Darwin proposed 150 years ago in his groundbreaking book.","has_causal":false,"relations":[]}
+{"id":455,"text":"The flag randomly popped out of an enemy's corpse.","has_causal":false,"relations":[]}
+{"id":456,"text":"Infection is one of the commonest causes of death in burn patients, particularly.","has_causal":true,"relations":[{"cause":"Infection","effect":"death"}]}
+{"id":457,"text":"The contents of the envelope were a sheet of foreign note-paper, and a folded enclosure.","has_causal":false,"relations":[]}
+{"id":458,"text":"The bungalow was built inside a barn.","has_causal":false,"relations":[]}
+{"id":459,"text":"The software caused a pretty good drain on the CPU for some reason.","has_causal":true,"relations":[{"cause":"The software","effect":"a pretty good drain"}]}
+{"id":460,"text":"A major government researcher once complained that his bosses used his scientific findings the way a drunk uses a lamppost: for support rather than illumination.","has_causal":false,"relations":[]}
+{"id":461,"text":"We have a congress of different nations and congress within nations and some sports congress.","has_causal":false,"relations":[]}
+{"id":462,"text":"These slippers have a double sole with padding inside.","has_causal":false,"relations":[]}
+{"id":463,"text":"The bottom section of the mast has been mounted onto the ship.","has_causal":false,"relations":[]}
+{"id":464,"text":"We served a bowl of delicious soup in a dish of ivory china.","has_causal":false,"relations":[]}
+{"id":465,"text":"Once more he is facing off against the malicious Cobra, who has released a division of irresistible infantrymen with fierce battle talents.","has_causal":false,"relations":[]}
+{"id":466,"text":"Construction industry's worth is invested into construction plant and equipment.","has_causal":false,"relations":[]}
+{"id":467,"text":"Olive Garden is a family of local restaurants focused on delighting every guest with a genuine Italian dining experience.","has_causal":false,"relations":[]}
+{"id":468,"text":"Overall, discomfort from braces is typically short in duration and easily managed.","has_causal":true,"relations":[{"cause":"braces","effect":"discomfort"}]}
+{"id":469,"text":"The crashes resulted in the collapse of much of the World Trade Center complex, the destruction of part of the southwest side of the Pentagon.","has_causal":true,"relations":[{"cause":"The crashes","effect":"the collapse"},{"cause":"The crashes","effect":"the destruction"}]}
+{"id":470,"text":"Before databases appeared, the information on the computers was stored in files.","has_causal":false,"relations":[]}
+{"id":471,"text":"The stay at home dads in Inverness put their feet up for a little while in a chauffeur driven limousine.","has_causal":false,"relations":[]}
+{"id":472,"text":"Adaptive hyperplasia and compensatory growth in the salt glands of ducks and geese.","has_causal":false,"relations":[]}
+{"id":473,"text":"The primary parts of a skateboard are the deck, the trucks, the wheels and bearings, the hardware and the grip tape.","has_causal":false,"relations":[]}
+{"id":474,"text":"New plans are outlined for another wind farm in north Devon of no more than four turbines.","has_causal":false,"relations":[]}
+{"id":475,"text":"I even placed the dish in a cold oven as directions state.","has_causal":false,"relations":[]}
+{"id":476,"text":"I always carry a suitcase with my clothes in it.","has_causal":false,"relations":[]}
+{"id":477,"text":"A technician uses an in-circuit emulator on the host PC to set breakpoints, read/write internal registers, dump memory, and perform other debugger-like functions.","has_causal":false,"relations":[]}
+{"id":478,"text":"Seth tends to devote his affections to his float of crocodiles that live in the tiny swampland on seabat isle.","has_causal":false,"relations":[]}
+{"id":479,"text":"The drill platform was a part of the Romulan mining ship Narada that could be lowered into the atmosphere of a planet or planetoid for mining operations.","has_causal":false,"relations":[]}
+{"id":480,"text":"The dialogue at the Summit also covered the economic impact of ICT literacy.","has_causal":false,"relations":[]}
+{"id":481,"text":"In particular, the 'historical inevitability' of a united proletariat of various nationalities was understood as a state interest.","has_causal":false,"relations":[]}
+{"id":482,"text":"The litho was enclosed in plastic and is like new.","has_causal":false,"relations":[]}
+{"id":483,"text":"Later in his speech, Obama declared his support for Iranian nuclear power and opposition to Iranian nuclear weapons.","has_causal":false,"relations":[]}
+{"id":484,"text":"A bundle of sensitive files linked to a massive police drugs bust have been found dumped in a skip.","has_causal":false,"relations":[]}
+{"id":485,"text":"The gods conquer the Asuras with the \"breath within the mouth\".","has_causal":false,"relations":[]}
+{"id":486,"text":"And the chorus of teenage boys and girls were a pleasure to watch as they sang and danced.","has_causal":false,"relations":[]}
+{"id":487,"text":"Billions have sunk into devastating companies.","has_causal":false,"relations":[]}
+{"id":488,"text":"Other private sector stakeholders have placed funds into a separate state-specific account.","has_causal":false,"relations":[]}
+{"id":489,"text":"The flooding, caused by a cyclone, came on the heels of a prolonged drought, which destroyed 60 percent of Fiji's sugar cane crop last year and cost more than 50 million Fijian dollars  in relief and rehabilitation.","has_causal":true,"relations":[{"cause":"a cyclone","effect":"The flooding"}]}
+{"id":490,"text":"The musician also treated the wood with a preparation of borax in the manner of Stradivari.","has_causal":false,"relations":[]}
+{"id":491,"text":"The ship is arriving into the port now.","has_causal":false,"relations":[]}
+{"id":492,"text":"The pillars of the ruins of Persepolis are famous and an example of the glories of Iran during the reign of the Darius emperors.","has_causal":false,"relations":[]}
+{"id":493,"text":"His place was in the desk in front of me.","has_causal":false,"relations":[]}
+{"id":494,"text":"A surgeon carefully applies the splints to the forearm.","has_causal":false,"relations":[]}
+{"id":495,"text":"The study focuses on the personnel in three service stations in Finland that are part of Teboil's organisation.","has_causal":false,"relations":[]}
+{"id":496,"text":"As it did in 2004, the event combined the annual neural prosthesis workshop - now in its 36th year - and the DBS consortium.","has_causal":false,"relations":[]}
+{"id":497,"text":"Obama's economic policies are turning into a global disaster.","has_causal":true,"relations":[{"cause":"Obama's economic policies","effect":"a global disaster"}]}
+{"id":498,"text":"The white plastic cup was put inside a large cup and 100 Formosan subterranean termites were released inside the large cup.","has_causal":false,"relations":[]}
+{"id":499,"text":"The taste, however, is mild, and like rice liquor gone right.","has_causal":false,"relations":[]}
+{"id":500,"text":"He puts creativity into use.","has_causal":false,"relations":[]}
+{"id":501,"text":"The church is sinking into indolent obscurity.","has_causal":false,"relations":[]}
+{"id":502,"text":"He posted the answers to the website.","has_causal":false,"relations":[]}
+{"id":503,"text":"The trio, the penguins, and a cartload of chimpanzees use the newly-fixed plane  to come to the rescue.","has_causal":false,"relations":[]}
+{"id":504,"text":"She indicated to the deputy sheriff that a gun was in a box in her bedroom.","has_causal":false,"relations":[]}
+{"id":505,"text":"The Aroon indicator system consists of two lines, 'Aroon' and 'Aroon'.","has_causal":false,"relations":[]}
+{"id":506,"text":"My father is going into college at his old age.","has_causal":false,"relations":[]}
+{"id":507,"text":"The viruses were sent to unsuspecting labs.","has_causal":false,"relations":[]}
+{"id":508,"text":"The old man went into diabetic coma.","has_causal":false,"relations":[]}
+{"id":509,"text":"In the second section, the authors explore factors that are ostensibly unrelated to race but nonetheless contribute to racial inequality.","has_causal":false,"relations":[]}
+{"id":510,"text":"The Israeli media treated the event with a mixture of derision and pity.","has_causal":false,"relations":[]}
+{"id":511,"text":"They misplaced mastiffs into homes.","has_causal":false,"relations":[]}
+{"id":512,"text":"The diamond ring was dropped into a trick-or-treater's bag.","has_causal":false,"relations":[]}
+{"id":513,"text":"At the time of the incident the front tank was full of molasses, the middle two tanks were empty and the rear tank had just been emptied.","has_causal":false,"relations":[]}
+{"id":514,"text":"They have poured millions into these projects.","has_causal":false,"relations":[]}
+{"id":515,"text":"Our company has released five computer applications to the Apple's online shops.","has_causal":false,"relations":[]}
+{"id":516,"text":"Google groups were sending commands to malware.","has_causal":false,"relations":[]}
+{"id":517,"text":"I've sold a diamond ring that I bought at Zales for about $500 for $200 on craigslist.","has_causal":false,"relations":[]}
+{"id":518,"text":"The transmitter was discovered inside a bed settee suite on which he had been sitting.","has_causal":false,"relations":[]}
+{"id":519,"text":"The arrest completes a dismal past five weeks for the 25-year-old.","has_causal":false,"relations":[]}
+{"id":520,"text":"The agency spent this week auctioning off a pack of beer-commercial scripts on eBay.","has_causal":false,"relations":[]}
+{"id":521,"text":"These tests are a major theme of the book, so it is worth investigating them.","has_causal":false,"relations":[]}
+{"id":522,"text":"The company has landed into great controversies.","has_causal":false,"relations":[]}
+{"id":523,"text":"The kids dug into the Baked Ziti with gusto.","has_causal":false,"relations":[]}
+{"id":524,"text":"Sip the tea slowly to reduce stomach pain from indigestion, bloating and feeling of fullness.","has_causal":true,"relations":[{"cause":"indigestion","effect":"stomach pain"},{"cause":"bloating","effect":"stomach pain"},{"cause":"feeling","effect":"stomach pain"}]}
+{"id":525,"text":"The curved spans of the bridge are the original sections.","has_causal":false,"relations":[]}
+{"id":526,"text":"Money flows into hedge funds again.","has_causal":false,"relations":[]}
+{"id":527,"text":"Whooping cough is another name for the pertussis, an infection of the airways caused by the bacteria bordetella pertussis.","has_causal":true,"relations":[{"cause":"the bacteria bordetella pertussis","effect":"the pertussis"}]}
+{"id":528,"text":"When the hobo leaves the next morning, Dick notices that on the gate is a picture of a knife.","has_causal":false,"relations":[]}
+{"id":529,"text":"People have inherited a tendency to obesity.","has_causal":false,"relations":[]}
+{"id":530,"text":"Flag holders have been pushed into the floor to remove the bump on top of the flag.","has_causal":false,"relations":[]}
+{"id":531,"text":"Sensitive pets experience rashes and discomfort from ticks and fleas.","has_causal":true,"relations":[{"cause":"ticks","effect":"rashes"},{"cause":"ticks","effect":"discomfort"},{"cause":"fleas","effect":"rashes"},{"cause":"fleas","effect":"discomfort"}]}
+{"id":532,"text":"Using the product around the house killed germs that were causing flu, colds or sore throat.","has_causal":true,"relations":[{"cause":"germs","effect":"flu"},{"cause":"germs","effect":"colds"},{"cause":"germs","effect":"sore throat"}]}
+{"id":533,"text":"His tale of a subculture of poets, folk singers, and eccentrics who smoked marijuana and rejected conformist society was written in just three weeks.","has_causal":false,"relations":[]}
+{"id":534,"text":"The user is cooling a processor with a power usage of 35W, using a conventional heatsink.","has_causal":false,"relations":[]}
+{"id":535,"text":"Real working cowboys, who are hired to take a drove of cattle to market, have a very difficult and strenuous job.","has_causal":false,"relations":[]}
+{"id":536,"text":"Discussion ensued from the Florida contingent on the fact that very stringent landowner protection laws in Florida make it imperative that the highest supportable appraised vallue be offered first.","has_causal":true,"relations":[{"cause":"the Florida contingent","effect":"Discussion"}]}
+{"id":537,"text":"The company has mocked up a version of YouTube built around the HTML5 video tag, playing mini-movies inside a browser sans plug-ins.","has_causal":false,"relations":[]}
+{"id":538,"text":"The pipeline had to face the following main concerns from opposition: disturbance of animal migration patterns, environmental damage from spills, geological concerns and the Alaskan permafrost.","has_causal":true,"relations":[{"cause":"spills","effect":"environmental damage"}]}
+{"id":539,"text":"The three types of bone cells in the nasal turbinates had characteristic ultrastructural features.","has_causal":false,"relations":[]}
+{"id":540,"text":"The crane arm raises, swivels, and extends to a maximum length of 11\" inches, just like our own Poe Ghostal.","has_causal":false,"relations":[]}
+{"id":541,"text":"A planted bomb put inside a sedan car exploded in front of the fine arts institution at Mansour neighborhood.","has_causal":false,"relations":[]}
+{"id":542,"text":"Much like the virus that caused the 1918 flu pandemic, this new H1N1 flu virus affects young adults and school children in greater numbers.","has_causal":true,"relations":[{"cause":"the virus","effect":"the 1918 flu pandemic"}]}
+{"id":543,"text":"Increased reproductive toxicity of landfill leachate after degradation was caused by nitrite.","has_causal":true,"relations":[{"cause":"nitrite","effect":"Increased reproductive toxicity"}]}
+{"id":544,"text":"The boots were in a box of stuff the boys picked up at the post office just before the curtain fell.","has_causal":false,"relations":[]}
+{"id":545,"text":"We just finished our last run of pasture poultry for the year.","has_causal":false,"relations":[]}
+{"id":546,"text":"Criminal procedure refers to the legal process for adjudicating claims that someone has violated criminal law.","has_causal":false,"relations":[]}
+{"id":547,"text":"His mother's body was in a chest freezer in the basement.","has_causal":false,"relations":[]}
+{"id":548,"text":"The relative calm produced by the Shia ceasefire has coincided with what the CIA is now calling the \"near strategic defeat\" of al-Qaeda in Iraq.","has_causal":true,"relations":[{"cause":"the Shia ceasefire","effect":"The relative calm"}]}
+{"id":549,"text":"Some gardeners use a thick mulch for this purpose.","has_causal":false,"relations":[]}
+{"id":550,"text":"The machine processes the blood using a centrifugal pump, which separates the components of the blood and the plasma.","has_causal":false,"relations":[]}
+{"id":551,"text":"The complete examination process has been carried out according to the pertinent directives.","has_causal":false,"relations":[]}
+{"id":552,"text":"In this grotto the boy was also born, and exposed; the mother leaves the child behind in a woven basket.","has_causal":false,"relations":[]}
+{"id":553,"text":"Theocritus was born in Syracuse, Sicily, spent time on the island of Kos and was also a member of the pleiad of Alexandrian poets under Ptolemy II in Alexandria.","has_causal":false,"relations":[]}
+{"id":554,"text":"The heel of a persons foot consists of the heel bone, a pad of fat which acts as a protective cushion and a layer of thickened skin.","has_causal":false,"relations":[]}
+{"id":555,"text":"Swissair was a victim of the clandestine wealth-transfer plaguing the productive sector as a result of the falling interest-rate structure caused by bond speculation.","has_causal":true,"relations":[{"cause":"the falling interest-rate structure","effect":"a victim"},{"cause":"bond speculation","effect":"the falling interest-rate structure"}]}
+{"id":556,"text":"The liftable scaffold 10 has a platform 12 including a frame 14.","has_causal":false,"relations":[]}
+{"id":557,"text":"In the poem, the author develops the metaphysical issues raised in A Riddle and Canto.","has_causal":false,"relations":[]}
+{"id":558,"text":"He was the author of a chronicle narrating the fortunes of the monastery.","has_causal":false,"relations":[]}
+{"id":559,"text":"Dry air, dust and wind dry out the nose and throat and cause nosebleeds, coughing, wheezing, and other short-term respiratory problems","has_causal":true,"relations":[{"cause":"Dry air","effect":"nosebleeds"},{"cause":"Dry air","effect":"coughing"},{"cause":"Dry air","effect":"wheezing"},{"cause":"Dry air","effect":"other short-term respiratory problems"},{"cause":"dust","effect":"nosebleeds"},{"cause":"dust","effect":"coughing"},{"cause":"dust","effect":"wheezing"},{"cause":"dust","effect":"other short-term respiratory problems"},{"cause":"wind","effect":"nosebleeds"},{"cause":"wind","effect":"coughing"},{"cause":"wind","effect":"wheezing"},{"cause":"wind","effect":"other short-term respiratory problems"}]}
+{"id":560,"text":"The sword appears in the photograph with the hilt at 10 o'clock and the blade tip at 5 o'clock.","has_causal":false,"relations":[]}
+{"id":561,"text":"When the first model sank in August 1991, the crash caused a seismic event registering 3.0 on the Richter scale, and left nothing but a pile of debris at 220m of depth.","has_causal":true,"relations":[{"cause":"the crash","effect":"a seismic event"}]}
+{"id":562,"text":"He took a ring folder, and a pad of paper suitably punched to fit the ring folder.","has_causal":false,"relations":[]}
+{"id":563,"text":"Collapsing commodity prices have pushed the farmer into poverty.","has_causal":false,"relations":[]}
+{"id":564,"text":"Progress comes from constructive competition, and churches and religions can benefit greatly from it.","has_causal":true,"relations":[{"cause":"constructive competition","effect":"Progress"}]}
+{"id":565,"text":"The movable mold carrier has arrived into the store.","has_causal":false,"relations":[]}
+{"id":566,"text":"During the period of economy growth, those people have migrated into the urban areas.","has_causal":false,"relations":[]}
+{"id":567,"text":"The inquiry was confined to investigating marine safety issues.","has_causal":false,"relations":[]}
+{"id":568,"text":"The clock struck twelve with a loud chime that made me jump.","has_causal":true,"relations":[{"cause":"The clock","effect":"a loud chime"}]}
+{"id":569,"text":"Despite being a fan of 1860 Munich, he ended up playing for the youth squad of their rivals, Bayern Munich, in 1959.","has_causal":false,"relations":[]}
+{"id":570,"text":"The spotter sweeps the surrounding countryside with a powerful hand-held lamp with a tightly focused beam.","has_causal":false,"relations":[]}
+{"id":571,"text":"Many of the ingredients in a gourmet basket are vaguely familiar, but they have been taken to the ultimate level in luxury.","has_causal":false,"relations":[]}
+{"id":572,"text":"This document reflects the best browser settings for use with a Macintosh system.","has_causal":false,"relations":[]}
+{"id":573,"text":"The intestines and appendix are part of the gastrointestinal system.","has_causal":false,"relations":[]}
+{"id":574,"text":"The email marketing is landing into the spam folders decreasing the ROI for these programs.","has_causal":false,"relations":[]}
+{"id":575,"text":"The newspaper was being kept in a box.","has_causal":false,"relations":[]}
+{"id":576,"text":"Various hormonal, bacterial and inflammatory disturbances cause acne.","has_causal":true,"relations":[{"cause":"Various hormonal, bacterial and inflammatory disturbances","effect":"acne"}]}
+{"id":577,"text":"In any case, fish oil did harm patients.","has_causal":false,"relations":[]}
+{"id":578,"text":"He puts a driver bit that fits the screw in the drill press chuck.","has_causal":false,"relations":[]}
+{"id":579,"text":"Today it was proved Camp is the third best keeper in the team.","has_causal":false,"relations":[]}
+{"id":580,"text":"Selecting the dry gourds according to their shape, the artisan carves the decorative motifs with a burin.","has_causal":false,"relations":[]}
+{"id":581,"text":"After the war, as the Midway was preparing for retirement, she was called upon one last time to the Philippines to help with an evacuation after the eruption of Mt. Pinatubo.","has_causal":true,"relations":[{"cause":"the eruption","effect":"an evacuation"}]}
+{"id":582,"text":"The book includes a 13-page index, which is quite extensive for a volume of this length.","has_causal":false,"relations":[]}
+{"id":583,"text":"The dynamite used in blasting for the South Island Line had been stored at a depot in Chung Hom Shan, near Stanley.","has_causal":false,"relations":[]}
+{"id":584,"text":"He went to the kids department in the store, decorated one of the \"Little Brown Bags\" and was entered to win prizes, including a $100 shopping spree.","has_causal":false,"relations":[]}
+{"id":585,"text":"Lavender is excellent in the reatment of headaches from fatigue and exhaustion.","has_causal":true,"relations":[{"cause":"fatigue","effect":"headaches"},{"cause":"exhaustion","effect":"headaches"}]}
+{"id":586,"text":"I had the picture frame in my office for couple of days, but like anybody else in the world I wanted to play with the device for a little longer.","has_causal":false,"relations":[]}
+{"id":587,"text":"The alleged abuse resulted in bruises and swelling of the brain.","has_causal":true,"relations":[{"cause":"The alleged abuse","effect":"bruises"},{"cause":"The alleged abuse","effect":"swelling"}]}
+{"id":588,"text":"The presentation uses animation to show how germs and microbes cause sickness, and outlines simple preventive measures.","has_causal":true,"relations":[{"cause":"germs","effect":"sickness"},{"cause":"microbes","effect":"sickness"}]}
+{"id":589,"text":"Using solar electricity instead of conventional electricity sources helps to reduce pollution that causes smog, acid rain, respiratory illness and global warming.","has_causal":true,"relations":[{"cause":"pollution","effect":"smog"},{"cause":"pollution","effect":"acid rain"},{"cause":"pollution","effect":"respiratory illness"},{"cause":"pollution","effect":"global warming"}]}
+{"id":590,"text":"These are documents to do with finance.","has_causal":false,"relations":[]}
+{"id":591,"text":"That big piece of meat was in a can of Bush's Baked Beans that we had for lunch today.","has_causal":false,"relations":[]}
+{"id":592,"text":"When the soul left the body, it was at the first moment quite unclothed, as at birth.","has_causal":false,"relations":[]}
+{"id":593,"text":"The club's president saw the money that was inside a box.","has_causal":false,"relations":[]}
+{"id":594,"text":"The wire had caused a slight injury on the ventral side of the neck and at the base of horns.","has_causal":true,"relations":[{"cause":"The wire","effect":"a slight injury"}]}
+{"id":595,"text":"I used these techniques to stretch my ear lobes to accept 6 gauge earrings.","has_causal":false,"relations":[]}
+{"id":596,"text":"This blog tracks and comments on news relevant to the interplay of science & religion.","has_causal":false,"relations":[]}
+{"id":597,"text":"An encapsulating composition is infused into the channel to encapsulate the tissue in a capsule.","has_causal":false,"relations":[]}
+{"id":598,"text":"Carbon nanotubes introduced into the abdominal cavity of mice show asbestos-like pathogenicity.","has_causal":false,"relations":[]}
+{"id":599,"text":"The NMB maintains a panel of neutral referees for service on these and certain other boards.","has_causal":false,"relations":[]}
+{"id":600,"text":"The election was caused by the appointment of Donald Sumner, formerly Conservative MP for Orpington, to be a county court judge.","has_causal":true,"relations":[{"cause":"the appointment","effect":"The election"}]}
+{"id":601,"text":"The scientist is pouring beakers into the formula.","has_causal":false,"relations":[]}
+{"id":602,"text":"I also received one stand of choice bees and about $100 in cash.","has_causal":false,"relations":[]}
+{"id":603,"text":"Controversy and even heated debate with respect to the ethical issues involved has broken out in Germany and other parts of the world.","has_causal":false,"relations":[]}
+{"id":604,"text":"A stereo buss outputs the stereo buss signal; a record buss outputs the record buss signal.","has_causal":true,"relations":[{"cause":"A stereo buss","effect":"the stereo buss signal"},{"cause":"a record buss","effect":"the record buss signal"}]}
+{"id":605,"text":"Riviera holiday club consists of few hotels  which are located on the beach, in a nice and quite park.","has_causal":false,"relations":[]}
+{"id":606,"text":"The purpose of this test was to report to the American public on the academic achievement of individual students, schools, districts, and states.","has_causal":false,"relations":[]}
+{"id":607,"text":"The driver of the cement truck cleaned the loading chute on his truck with a truck-mounted water hose and began to pull away.","has_causal":false,"relations":[]}
+{"id":608,"text":"The accolade was decided upon after an intense discussion between about 200 members.","has_causal":true,"relations":[{"cause":"an intense discussion","effect":"The accolade"}]}
+{"id":609,"text":"The hull caused a scratch on the eye and that is why it's not healing all the way.","has_causal":true,"relations":[{"cause":"The hull","effect":"a scratch"}]}
+{"id":610,"text":"Getting help has reduced the time to reverse all the irritation that had been caused by the fungus.","has_causal":true,"relations":[{"cause":"the fungus","effect":"all the irritation"}]}
+{"id":611,"text":"My son  has been complaining of pain on his jaw bone for a few weeks now.","has_causal":false,"relations":[]}
+{"id":612,"text":"A knot of toads or an army of frogs in the garden is a pleasure to see, and it feels like a compliment to the gardener.","has_causal":false,"relations":[]}
+{"id":613,"text":"The phrase was related in a preface of a 1904 collection of Drury's stories.","has_causal":false,"relations":[]}
+{"id":614,"text":"This is how a politician uses tourism as an instrument for power.","has_causal":false,"relations":[]}
+{"id":615,"text":"Treatment consists of antifungal therapy, surgery, and supportive care.","has_causal":false,"relations":[]}
+{"id":616,"text":"A fuel leak in one of the C-17s caused a delay on the morning of Nov. 7 as the crew was preparing for departure for Cairo, Egypt.","has_causal":true,"relations":[{"cause":"A fuel leak","effect":"a delay"}]}
+{"id":617,"text":"The energy of emission produces the separation field.","has_causal":true,"relations":[{"cause":"The energy","effect":"the separation field"}]}
+{"id":618,"text":"And there's you, floating a couple of thousand feet up in the sky in a tiny little basket.","has_causal":false,"relations":[]}
+{"id":619,"text":"He claimed to have witnessed terrible abuses in Iraq as a corporal in the army.","has_causal":false,"relations":[]}
+{"id":620,"text":"The crowd congregating near the dwelling reminded one man of \"a huge cluster of swarming bees extending far back.","has_causal":false,"relations":[]}
+{"id":621,"text":"Before attacking the Walthers kit with a razor saw, however, let's take care of some other important layout details.","has_causal":false,"relations":[]}
+{"id":622,"text":"In a decade, neighborhoods are sinking into disrepair.","has_causal":false,"relations":[]}
+{"id":623,"text":"Another manuscript introduced justice in terms of contractual justice.","has_causal":false,"relations":[]}
+{"id":624,"text":"The coil of the galvanometer is wrapped around a cylindrical form.","has_causal":false,"relations":[]}
+{"id":625,"text":"This rose bud waiting to open up for the world to see, was in the garden at the Swan Inn.","has_causal":false,"relations":[]}
+{"id":626,"text":"The veteran inventor best-known for creating the clockwork radio is planning to float his incubator company on the Stock Exchange.","has_causal":false,"relations":[]}
+{"id":627,"text":"The accident caused a major traffic snarl on the arterial road.","has_causal":true,"relations":[{"cause":"The accident","effect":"a major traffic snarl"}]}
+{"id":628,"text":"China has tested Barack Obama early in his presidency, with a flotilla of naval vessels surrounding and harassing a US spy ship in the South China Sea.","has_causal":false,"relations":[]}
+{"id":629,"text":"In the hold of the American ship, I was feeling very queasy.","has_causal":false,"relations":[]}
+{"id":630,"text":"The violence resulted in the death of police \"capo\" Filippo Raciti, which caused widespread soul-searching and a week-long suspension of Italian football.","has_causal":true,"relations":[{"cause":"The violence","effect":"the death"},{"cause":"the death","effect":"widespread soul-searching"},{"cause":"the death","effect":"a week-long suspension"}]}
+{"id":631,"text":"That strawberry jelly was more like strawberry glue.","has_causal":false,"relations":[]}
+{"id":632,"text":"The outdoor unit is going into defrost.","has_causal":false,"relations":[]}
+{"id":633,"text":"The dust, noise, and sleep deprivation produced by the construction are intolerable.","has_causal":true,"relations":[{"cause":"the construction","effect":"The dust"},{"cause":"the construction","effect":"noise"},{"cause":"the construction","effect":"sleep deprivation"}]}
+{"id":634,"text":"Plantar warts are caused by a virus that infects the outer layer of skin on the soles of the feet.","has_causal":true,"relations":[{"cause":"a virus","effect":"Plantar warts"}]}
+{"id":635,"text":"More than 4500 tons of nitrogen oxides annually -- a pollutant that causes smog, acid rain, and contributes to asthma attacks and other breathing problems.","has_causal":true,"relations":[{"cause":"a pollutant","effect":"smog"},{"cause":"a pollutant","effect":"acid rain"},{"cause":"a pollutant","effect":"asthma attacks"},{"cause":"a pollutant","effect":"other breathing problems"}]}
+{"id":636,"text":"You find a bottle with pretty blue water in it in the bathroom.","has_causal":false,"relations":[]}
+{"id":637,"text":"Scientists have successfully tested a system that translates brain waves into speech.","has_causal":false,"relations":[]}
+{"id":638,"text":"But what is not seen in the television pictures, is the almost invisible army of 7000 migrant workers who built the iconic structure.","has_causal":false,"relations":[]}
+{"id":639,"text":"The publication has connection to an international research project.","has_causal":false,"relations":[]}
+{"id":640,"text":"Recent global warming has thrown nature into disarray.","has_causal":false,"relations":[]}
+{"id":641,"text":"In an experiment, proteins successfully transported copper into the tissue.","has_causal":false,"relations":[]}
+{"id":642,"text":"Here is a picture of the artist taking a photograph of a young girl in front of a vegetable stand on Mulberry Street in New York City.","has_causal":false,"relations":[]}
+{"id":643,"text":"The flyer advertised a two-week workshop being conducted at the university this summer.","has_causal":false,"relations":[]}
+{"id":644,"text":"Companies face big risk from loss of key employees.","has_causal":true,"relations":[{"cause":"loss","effect":"big risk"}]}
+{"id":645,"text":"She tried to find out what key on your keyboard fits your personalty.","has_causal":false,"relations":[]}
+{"id":646,"text":"She moved the files into a shared folder.","has_causal":false,"relations":[]}
+{"id":647,"text":"The workmen applied a blowlamp to the pipes which were lagged with felt.","has_causal":false,"relations":[]}
+{"id":648,"text":"The author clearly got a great deal of pleasure from the work and did not allow his vast amount of material to force him into shallow generalizations.","has_causal":true,"relations":[{"cause":"the work","effect":"pleasure"}]}
+{"id":649,"text":"Here's the theory I wrote down the other night on the cocktail napkin I fished out of my purse just now.","has_causal":false,"relations":[]}
+{"id":650,"text":"The Fujita Scale is used to rate the intensity of a tornado by examining the damage caused by the tornado after it has passed over a man-made structure.","has_causal":true,"relations":[{"cause":"the tornado","effect":"the damage"}]}
+{"id":651,"text":"A method of mitigating the effect of a market spike caused by the triggering and the election of a conditional order includes monitoring conditional orders.","has_causal":true,"relations":[{"cause":"the triggering","effect":"a market spike"},{"cause":"the election","effect":"a market spike"}]}
+{"id":652,"text":"There is a certain dissonance among the essays collected in this volume.","has_causal":false,"relations":[]}
+{"id":653,"text":"About 30 ducks were found dead in Klamath County in the past two days, and officials are investigating whether the deaths are from a cholera outbreak.","has_causal":true,"relations":[{"cause":"a cholera outbreak","effect":"the deaths"}]}
+{"id":654,"text":"The apartment has a separate dining room, which can easily be converted into a third bedroom if need be.","has_causal":false,"relations":[]}
+{"id":655,"text":"Nielsen released his insights into the online industry.","has_causal":false,"relations":[]}
+{"id":656,"text":"Tsunamis are caused by the sudden displacement of large volumes of water.","has_causal":true,"relations":[{"cause":"the sudden displacement","effect":"Tsunamis"}]}
+{"id":657,"text":"The products of business entity within the export processing zone are shipped to non-bonded areas.","has_causal":false,"relations":[]}
+{"id":658,"text":"The Leftist student platform at LAU is newly born independent leftist league of various leftist movements and independents at the Lebanese American University.","has_causal":false,"relations":[]}
+{"id":659,"text":"The sculpture of Lawrence J Nowlan has been featured in numerous publications.","has_causal":false,"relations":[]}
+{"id":660,"text":"Heat, wind and smoke cause flight delays.","has_causal":true,"relations":[{"cause":"Heat","effect":"flight delays"},{"cause":"wind","effect":"flight delays"},{"cause":"smoke","effect":"flight delays"}]}
+{"id":661,"text":"A spaghetti pie served at a church dinner had caused the poisoning of one hundred people.","has_causal":true,"relations":[{"cause":"A spaghetti pie","effect":"the poisoning"}]}
+{"id":662,"text":"Thus previous scientific estimates had overstated the devastation caused by the asteroid, since topographic and ecologic factors contributing to the result had not been taken into account.","has_causal":true,"relations":[{"cause":"the asteroid","effect":"the devastation"},{"cause":"topographic and ecologic factors","effect":"the result"}]}
+{"id":663,"text":"They chose a shop that oven bakes the paint in a down draft paint booth.","has_causal":false,"relations":[]}
+{"id":664,"text":"470000 mullet fingerlings have been released into the lake.","has_causal":false,"relations":[]}
+{"id":665,"text":"I purchased the Wen lumberjack saw a few years ago, and just broke the blade.","has_causal":false,"relations":[]}
+{"id":666,"text":"Interestingly, the sink was inside the room.","has_causal":false,"relations":[]}
+{"id":667,"text":"Alcohol and drugs directly cause suicide by significantly diminishing the reasoning of the person at the time of the suicide.","has_causal":true,"relations":[{"cause":"Alcohol","effect":"suicide"},{"cause":"drugs","effect":"suicide"}]}
+{"id":668,"text":"The campaign coincides with a government initiative to promote safer drinking.","has_causal":false,"relations":[]}
+{"id":669,"text":"A bottle full of liquid flew out of the stands and struck visiting keeper Armando Ribeiro just below the right eye.","has_causal":false,"relations":[]}
+{"id":670,"text":"And with a flourish of her wand she unleashed a plague of biting insects, the sand fly.","has_causal":false,"relations":[]}
+{"id":671,"text":"The crust of the earth is composed of a great variety of igneous, metamorphic, and sedimentary rocks.","has_causal":false,"relations":[]}
+{"id":672,"text":"In the film, Howell plays a cop who gets involved with a murder witness, only to find out that she's part of an international ring of sex-for-hire beauties.","has_causal":false,"relations":[]}
+{"id":673,"text":"A month of snowy sundays in January had an adverse impact on Prospect's finances.","has_causal":false,"relations":[]}
+{"id":674,"text":"Three people had been killed in a fire after the quake and hundreds of people were injured.","has_causal":true,"relations":[{"cause":"the quake","effect":"a fire"}]}
+{"id":675,"text":"In any forest, the carbon is stored in the plants and trees.","has_causal":false,"relations":[]}
+{"id":676,"text":"Extra virgin olive oil is in a cask.","has_causal":false,"relations":[]}
+{"id":677,"text":"The damages caused by mudslides, tremors, subsidence, superficial or underground water were verified, as well as swelling clay soils.","has_causal":true,"relations":[{"cause":"mudslides","effect":"The damages"},{"cause":"tremors","effect":"The damages"},{"cause":"subsidence","effect":"The damages"},{"cause":"superficial or underground water","effect":"The damages"},{"cause":"swelling clay soils","effect":"The damages"}]}
+{"id":678,"text":"The boom and shaking was caused by the asteroid that passed Earth yesterday.","has_causal":true,"relations":[{"cause":"the asteroid","effect":"The boom"},{"cause":"the asteroid","effect":"shaking"}]}
+{"id":679,"text":"Far below and a universe away, a constellation of windows darkened.","has_causal":false,"relations":[]}
+{"id":680,"text":"Heartwater disease was imported into the major cities.","has_causal":false,"relations":[]}
+{"id":681,"text":"This article lists people whose artwork has been featured on stamps of the United States.","has_causal":false,"relations":[]}
+{"id":682,"text":"The pollution from animal factories is also destroying parts of the world's oceans.","has_causal":true,"relations":[{"cause":"animal factories","effect":"The pollution"}]}
+{"id":683,"text":"My new boss moved into his office yesterday.","has_causal":false,"relations":[]}
+{"id":684,"text":"He clicked the left key of the mouse in order to copy the chosen translation to the clipboard.","has_causal":false,"relations":[]}
+{"id":685,"text":"This export company is involved in sourcing various manufacturing commodities and exporting these products to different countries around the world.","has_causal":false,"relations":[]}
+{"id":686,"text":"Manufacturers passed on the costs to the consumers.","has_causal":false,"relations":[]}
+{"id":687,"text":"A large tsunami triggered by the earthquake spread outward from off the Sumatran coast.","has_causal":true,"relations":[{"cause":"the earthquake","effect":"A large tsunami"}]}
+{"id":688,"text":"The temperature inside the car was 79 degrees.","has_causal":false,"relations":[]}
+{"id":689,"text":"He handed the suspects over to the police.","has_causal":false,"relations":[]}
+{"id":690,"text":"The signoff queue is used for reports that the user has not seen before.","has_causal":false,"relations":[]}
+{"id":691,"text":"This data has been concerning primarily assembly operations.","has_causal":false,"relations":[]}
+{"id":692,"text":"I sold a gold ring to another company online and they sent me a lousy check for $14.00.","has_causal":false,"relations":[]}
+{"id":693,"text":"Until 1864 vessels in the service of certain UK public offices defaced the Red Ensign with the badge of their office.","has_causal":false,"relations":[]}
+{"id":694,"text":"The contents of the box were a present and the box itself was as a present.","has_causal":false,"relations":[]}
+{"id":695,"text":"Little did these naive people realize at the time that they were embracing a foul brood of ungrateful vipers, which would soon prove to be their undoing.","has_causal":false,"relations":[]}
+{"id":696,"text":"The man has journeyed into deeper level studies with sound masters.","has_causal":false,"relations":[]}
+{"id":697,"text":"A famous singer was sent to prison.","has_causal":false,"relations":[]}
+{"id":698,"text":"The fibre pellets were blown into cavities using special equipment.","has_causal":false,"relations":[]}
+{"id":699,"text":"Anyway, the guy convinced some local with a car to drive somewhere to procure us some beer.","has_causal":false,"relations":[]}
+{"id":700,"text":"Their moral criticism concerns the particular social and personal context in which they appear.","has_causal":false,"relations":[]}
+{"id":701,"text":"The morning session of the symposium ends with a reunion lunch for the attendees.","has_causal":false,"relations":[]}
+{"id":702,"text":"It was the only living thing in sight except for a stationary cloud of hysterical gnats suspended in the heat above the road.","has_causal":false,"relations":[]}
+{"id":703,"text":"The contents of the cyst included a foul smelling gas and white-green pus.","has_causal":false,"relations":[]}
+{"id":704,"text":"The data is stored in tables.","has_causal":false,"relations":[]}
+{"id":705,"text":"My little brother's tooth was in a cup of water the other day and I nearly fainted when I saw it.","has_causal":false,"relations":[]}
+{"id":706,"text":"You saw professional chefs using a garlic press.","has_causal":false,"relations":[]}
+{"id":707,"text":"The cutaneous mycoses are caused by a homogeneous group of keratinophilic fungi termed the dermatophytes.","has_causal":true,"relations":[{"cause":"keratinophilic fungi","effect":"The cutaneous mycoses"}]}
+{"id":708,"text":"When poured into a Sly Imperial pint glass, this rye ale was a solid amber color with a few minor gold highlights along the sides and at the bottom of the beer.","has_causal":false,"relations":[]}
+{"id":709,"text":"The incoming water caused a stain on the wall that, through the lens of pareidolia, looked like a bearded man with a big afro hairdo.","has_causal":true,"relations":[{"cause":"The incoming water","effect":"a stain"}]}
+{"id":710,"text":"Bounding pulses are caused by the relatively low systemic arterial blood pressure due to the continuous runoff of blood from the aorta into the pulmonary artery.","has_causal":true,"relations":[{"cause":"the relatively low systemic arterial blood pressure","effect":"Bounding pulses"},{"cause":"the continuous runoff","effect":"the relatively low systemic arterial blood pressure"}]}
+{"id":711,"text":"The slide system consists of a slideway and a sliding element, whereas the slide system is connected to at least one piston and the crank of the shaft.","has_causal":false,"relations":[]}
+{"id":712,"text":"The organisation campaigns against such things as child labour.","has_causal":false,"relations":[]}
+{"id":713,"text":"Each warrior carries a sime, or spatulate-shaped sword, in a leather sheath, and bears a bow and quiver of poisoned arrows.","has_causal":false,"relations":[]}
+{"id":714,"text":"There is great concern among voters over the economy.","has_causal":false,"relations":[]}
+{"id":715,"text":"The disruption of electricity and telecommunication lines have thrown the city into darkness.","has_causal":false,"relations":[]}
+{"id":716,"text":"The young student is part of the environmental association IndyACT.","has_causal":false,"relations":[]}
+{"id":717,"text":"Information about the foodborne illness caused by salmonella bacteria.","has_causal":true,"relations":[{"cause":"salmonella bacteria","effect":"the foodborne illness"}]}
+{"id":718,"text":"Bed sores  are caused by pressure, which cuts off blood flow to parts of the body.","has_causal":true,"relations":[{"cause":"pressure","effect":"Bed sores"}]}
+{"id":719,"text":"These pages are intended to assist you in accessing Belgian library book catalogues over the internet.","has_causal":false,"relations":[]}
+{"id":720,"text":"The crane has a five-section 51 m boom with MEGAFORM shaping for greater rigidity and Grove's patented TWIN-LOCK boom pinning system.","has_causal":false,"relations":[]}
+{"id":721,"text":"Most illnesses, including colds and flu, cause a toxic overload that also increases the stress on the kidneys.","has_causal":true,"relations":[{"cause":"colds","effect":"a toxic overload"},{"cause":"flu","effect":"a toxic overload"}]}
+{"id":722,"text":"I've just sold a gold ring, which was my last asset and now we have nothing left for a better life.","has_causal":false,"relations":[]}
+{"id":723,"text":"Insects that harm trees are often prey for a descent of woodpeckers, which, in turn benefits the birds that nest in the saved tree.","has_causal":false,"relations":[]}
+{"id":724,"text":"The grief from sudden death is completely different from expected death, when families have time to prepare and say goodbye.","has_causal":true,"relations":[{"cause":"sudden death","effect":"The grief"}]}
+{"id":725,"text":"We have exported products to domestic locations only.","has_causal":false,"relations":[]}
+{"id":726,"text":"In a known motor-pump unit of this type, the slot-barrel motor is connected, to the drive spindle of the screw-spindle pump with a pressure side throttle interval interposed.","has_causal":false,"relations":[]}
+{"id":727,"text":"The ship leaked oil into Brisbane river.","has_causal":false,"relations":[]}
+{"id":728,"text":"A temporary password has been sent to your email.","has_causal":false,"relations":[]}
+{"id":729,"text":"The remnants of Einstein's brain were in a box marked \"Costa Cider.","has_causal":false,"relations":[]}
+{"id":730,"text":"The accident caused a traffic snarl on the ever busy bridge leading to diversions to other routes.","has_causal":true,"relations":[{"cause":"The accident","effect":"a traffic snarl"}]}
+{"id":731,"text":"The joey is blind at birth, and must instinctively ascend their mother's belly and crawl into the nurturing pouch.","has_causal":false,"relations":[]}
+{"id":732,"text":"So far this year, the city has dumped sewage into the river more than 500 times.","has_causal":false,"relations":[]}
+{"id":733,"text":"The contortions are caused by gravitational interactions with the small satellites Prometheus and Pandora.","has_causal":true,"relations":[{"cause":"gravitational interactions","effect":"The contortions"}]}
+{"id":734,"text":"In recent months, civility has been a topic of much discussion in the newspapers.","has_causal":false,"relations":[]}
+{"id":735,"text":"When a person assists the employee with completing this form, the preparer must certify the form.","has_causal":false,"relations":[]}
+{"id":736,"text":"The vehicle's name was leaked in a Financial Times article published on August 31, and this evening, several photos and more information about the concept were published online.","has_causal":false,"relations":[]}
+{"id":737,"text":"Asteroid threatened Earth with disaster.","has_causal":false,"relations":[]}
+{"id":738,"text":"Historians use evidence and artifacts.","has_causal":false,"relations":[]}
+{"id":739,"text":"The celebrity arrived to crash the party.","has_causal":false,"relations":[]}
+{"id":740,"text":"Speaking of nerdy sweaters, my girlfriend knit me a Mugatu sweater for xmas a few years back.","has_causal":false,"relations":[]}
+{"id":741,"text":"I dragged the files into the file sharing folder.","has_causal":false,"relations":[]}
+{"id":742,"text":"His deeds have thrown thousands of people into eternal financial damnation.","has_causal":false,"relations":[]}
+{"id":743,"text":"We have a bright and cheery yellow casement window over the sink in my kitchen.","has_causal":false,"relations":[]}
+{"id":744,"text":"It is the story of a teenager who finds himself floating on a raft down the Mississippi River with an escaping slave.","has_causal":false,"relations":[]}
+{"id":745,"text":"The \"Happy Hour\" gathering was the best part of the event.","has_causal":false,"relations":[]}
+{"id":746,"text":"The band first reached the charts with the song \"Touch My Light\" in the late spring of 1993, receiving major airplay on mainstream radio stations.","has_causal":false,"relations":[]}
+{"id":747,"text":"I changed the length of the catapult arm and I changed the rubber band.","has_causal":false,"relations":[]}
+{"id":748,"text":"The shock wave was generated by an explosive made from RDX.","has_causal":true,"relations":[{"cause":"an explosive","effect":"The shock wave"}]}
+{"id":749,"text":"Man at the norhtern edge of the mouth of the cave of Stora Forvar, with a Stone Age settlement which was excavated in 1888-1893.","has_causal":false,"relations":[]}
+{"id":750,"text":"The DS Criminal Investigative Division conducts criminal investigations into violations of passport and visa fraud.","has_causal":false,"relations":[]}
+{"id":751,"text":"We have entered successful surveys into report demonstrating secondary meaning.","has_causal":false,"relations":[]}
+{"id":752,"text":"Ji-Sung finds Jae-Young, but the striker blasts over the bar with only the keeper to beat.","has_causal":false,"relations":[]}
+{"id":753,"text":"The stunt plane went into uncontrollable dive.","has_causal":false,"relations":[]}
+{"id":754,"text":"Magnetic nanoworms and nanocrystals deliver the amino acid to the tumors.","has_causal":false,"relations":[]}
+{"id":755,"text":"Ordinary warts on the hands and feet are caused by viruses, which only affect humans.","has_causal":true,"relations":[{"cause":"viruses","effect":"Ordinary warts"}]}
+{"id":756,"text":"My friend has entered into a new relationship.","has_causal":false,"relations":[]}
+{"id":757,"text":"He added ethanol into the wash buffer.","has_causal":false,"relations":[]}
+{"id":758,"text":"Lately, even women inject steroids into their muscles.","has_causal":false,"relations":[]}
+{"id":759,"text":"His becomes Version 1 of the report and is the report that fulfills compliance with the ARRA Section 1512 reporting requirements.","has_causal":false,"relations":[]}
+{"id":760,"text":"Headaches, dizziness, balance problems, and neck and back pain were caused by the work injury.","has_causal":true,"relations":[{"cause":"the work injury","effect":"Headaches"},{"cause":"the work injury","effect":"dizziness"},{"cause":"the work injury","effect":"balance problems"},{"cause":"the work injury","effect":"neck and back pain"}]}
+{"id":761,"text":"These later paintings explore non-figurative shapes and textures within a bare compositional space.","has_causal":false,"relations":[]}
+{"id":762,"text":"The crew assisted with the investigation and was in service for around an hour.","has_causal":false,"relations":[]}
+{"id":763,"text":"Thus, evaluating capital punishment as a form of retribution is reduced by Sellin to merely estimating the proportion of capital murders that result in execution.","has_causal":true,"relations":[{"cause":"capital murders","effect":"execution"}]}
+{"id":764,"text":"Maybe a few times my boobs have popped out of an outfit but that happens.","has_causal":false,"relations":[]}
+{"id":765,"text":"The treatment includes an aromatherapy mask and moisturizer.","has_causal":false,"relations":[]}
+{"id":766,"text":"The round bedroom was the best part of this suite.","has_causal":false,"relations":[]}
+{"id":767,"text":"Well I still have a sore spot on my cheek bone and left joint.","has_causal":false,"relations":[]}
+{"id":768,"text":"On the eve of the Olympics, the Times Online ran a story looking at disconcerting trends developing in the doping world.","has_causal":false,"relations":[]}
+{"id":769,"text":"Traffic vibrations on the street outside had caused the movement of the light.","has_causal":true,"relations":[{"cause":"Traffic vibrations","effect":"the movement"}]}
+{"id":770,"text":"Discussion took place on the function of this Committee.","has_causal":false,"relations":[]}
+{"id":771,"text":"I used to get terrible headaches from sinus infections that resulted in taking antibiotics a few times a year.","has_causal":true,"relations":[{"cause":"terrible headaches","effect":"taking antibiotics"},{"cause":"sinus infections","effect":"terrible headaches"}]}
+{"id":772,"text":"First Great Western is preparing to distribute thousands of leaflets on board its trains to inform customers about a major track improvement.","has_causal":false,"relations":[]}
+{"id":773,"text":"The Big Barn Farm friends discover a pile of junk.","has_causal":false,"relations":[]}
+{"id":774,"text":"Flowers are nice, but don't last very long and the fruit in a fruit basket often goes bad.","has_causal":false,"relations":[]}
+{"id":775,"text":"The citizens remained in their houses, and only vagabonds, the scum of various nationalities, and spies were about; women were not to be seen, or only such as belonged to the dregs of society.","has_causal":false,"relations":[]}
+{"id":776,"text":"Judges wear the bench wig when they are sitting in court.","has_causal":false,"relations":[]}
+{"id":777,"text":"Later on that same day, an electrical short at the Farragut North station caused a fire on the tracks which shut down service three times over the course of the day.","has_causal":true,"relations":[{"cause":"an electrical short","effect":"a fire"}]}
+{"id":778,"text":"So, the theme of the play has to do with religion.","has_causal":false,"relations":[]}
+{"id":779,"text":"Most dieters are familiar with the usual weight loss formula: proper diet, adequate exercise, and a healthier lifestyle.","has_causal":false,"relations":[]}
+{"id":780,"text":"The electricity is produced by 440 nuclear reactors in 31 countries.","has_causal":true,"relations":[{"cause":"440 nuclear reactors","effect":"The electricity"}]}
+{"id":781,"text":"Information about Salmonellosis, an illness caused by a bacteria found in raw food, soil, or water.","has_causal":true,"relations":[{"cause":"a bacteria","effect":"an illness"}]}
+{"id":782,"text":"Before introducing Via in three test markets, the company told employees an elaborate story about its creation.","has_causal":false,"relations":[]}
+{"id":783,"text":"A programmer uses a high level language to implement its algorithms.","has_causal":false,"relations":[]}
+{"id":784,"text":"One of the most vivid portraits is that of Brookie Simmons, a white woman who fought to abolish child labor in a town factory.","has_causal":false,"relations":[]}
+{"id":785,"text":"The earthquake caused the failures of the electric power system, the water supply system, the sewer system, the telephone and telegraph systems.","has_causal":true,"relations":[{"cause":"The earthquake","effect":"the failures"}]}
+{"id":786,"text":"There was the glitter of admirals and generals before the high altar, and the brighter colors of the representatives of powers and potentates.","has_causal":false,"relations":[]}

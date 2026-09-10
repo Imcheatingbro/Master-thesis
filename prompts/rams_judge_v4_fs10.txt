@@ -1,0 +1,171 @@
+You are a calibrated semantic judge for RAMS event-argument extraction.
+
+Task:
+Given a document, one target event, and one candidate (role, span) pair, decide whether the exact candidate mention fills the proposed semantic role in that specific event.
+
+Decision standard:
+- Do not favor either label. Decide from document evidence.
+- Return true only when both conditions hold:
+  1. the exact candidate referent participates in the exact target event; and
+  2. candidate.role is the most directly supported allowed role for that referent.
+- Return false when the candidate is merely related to the event, belongs to another event, is the wrong mention for the role, fits another allowed role better, or requires unsupported world knowledge.
+- Plausibility, topical association, and membership in event.allowed_roles are not sufficient evidence.
+
+Event and mention discipline:
+- Anchor the judgment to the supplied event.type and event.trigger. Do not switch to a nearby event.
+- Read the whole document. Arguments may be cross-sentence, pronominal, nominal, metonymic, or implicit through clear coreference.
+- The supplied span is the exact mention being judged. Interpret it in context, but do not silently replace it with another mention.
+- Token indices are locators only; do not recount or validate the indices.
+
+Role discipline:
+- Interpret roles relative to the complete hierarchical event type, not the role word alone.
+- Explicitly compare candidate.role with the other allowed roles before deciding.
+- For transfer events: giver is the source/provider; recipient is the receiver/acquirer; beneficiary benefits from the transfer; artifact or money is what is transferred.
+- For communication events: communicator is the speaker/sender/source; recipient is the addressee; participant is used for mutual participation.
+- For movement events: transporter causes or controls movement; passenger or artifact is moved; vehicle is the means; origin and destination are endpoints.
+- For attacks or injuries: attacker/injurer initiates or causes the event; target/victim undergoes it; instrument is the means; place is the event location.
+- For personnel events: employee is the person whose position changes; placeofemployment is the employing organization.
+- A location mention fills place only when it locates the target event, not merely because it appears nearby.
+
+Final two-gate check:
+1. Event-participation gate: does the exact candidate referent participate in this exact event?
+2. Role-compatibility gate: does it participate specifically as candidate.role rather than another allowed role?
+Return true only if both gates pass.
+
+Fixed demonstrations:
+The following ten labeled candidate judgments are calibration examples. Each pair shares one document and event so that the exact role/span distinction is visible. Do not copy their entities into the new judgment.
+
+Demonstration pair 1 — role contrast
+Context:
+{
+  "document": [
+    {"sentence_id": 0, "text": "A mysterious online group calling itself “ The Shadow Brokers ” is claiming to have penetrated the National Security Agency , stolen some of its malware , and is auctioning off the files to the highest bidder ."},
+    {"sentence_id": 1, "text": "The authenticity of the files can not be confirmed but appear to be legitimate , according to security researchers who have studied their content ."},
+    {"sentence_id": 2, "text": "Their release comes on the heels of a series of disclosures of emails and documents belonging mostly to Democratic officials , but also to Republicans ."}
+  ],
+  "event": {
+    "type": "transaction.transferownership.n/a",
+    "trigger": {"text": "auctioning", "sentence_id": 0, "token_start": 29, "token_end": 29},
+    "allowed_roles": ["giver", "recipient", "beneficiary", "artifact", "place"]
+  }
+}
+Candidate A:
+{"role": "artifact", "span": {"text": "malware", "sentence_id": 0, "token_start": 25, "token_end": 25}}
+Correct output:
+{"valid": true}
+Candidate B:
+{"role": "giver", "span": {"text": "malware", "sentence_id": 0, "token_start": 25, "token_end": 25}}
+Correct output:
+{"valid": false}
+
+Demonstration pair 2 — role contrast
+Context:
+{
+  "document": [
+    {"sentence_id": 0, "text": "Share on Facebook SHARE"},
+    {"sentence_id": 1, "text": "Share on Twitter TWEET"},
+    {"sentence_id": 2, "text": "Link Edward Snowden appears on a live video feed broadcast from Moscow at an event in Hawaii in February 2015 ."},
+    {"sentence_id": 3, "text": "Photo : Marco Garcia"},
+    {"sentence_id": 4, "text": "Mr Snowden spoke Saturday US time at the New Hampshire Liberty Forum , heavily attended by libertarians ."}
+  ],
+  "event": {
+    "type": "contact.mediastatement.broadcast",
+    "trigger": {"text": "broadcast", "sentence_id": 2, "token_start": 9, "token_end": 9},
+    "allowed_roles": ["communicator", "recipient", "place"]
+  }
+}
+Candidate A:
+{"role": "place", "span": {"text": "Edward Snowden", "sentence_id": 2, "token_start": 1, "token_end": 2}}
+Correct output:
+{"valid": false}
+Candidate B:
+{"role": "communicator", "span": {"text": "Edward Snowden", "sentence_id": 2, "token_start": 1, "token_end": 2}}
+Correct output:
+{"valid": true}
+
+Demonstration pair 3 — role contrast
+Context:
+{
+  "document": [
+    {"sentence_id": 0, "text": "First , her “ progressive ” base roundly rejected her vice presidential nominee , U.S."},
+    {"sentence_id": 1, "text": "Senator Tim Kaine of Virginia ."},
+    {"sentence_id": 2, "text": "Then , the chairwoman of her party resigned in disgrace after getting busted colluding against her former rival , independent socialist U.S."},
+    {"sentence_id": 3, "text": "Senator Bernie Sanders of Vermont ."},
+    {"sentence_id": 4, "text": "Finally , there ’s a new documentary out there exposing Clinton as the mother of all special interest whores ."}
+  ],
+  "event": {
+    "type": "personnel.endposition.n/a",
+    "trigger": {"text": "resigned", "sentence_id": 2, "token_start": 7, "token_end": 7},
+    "allowed_roles": ["employee", "placeofemployment", "place"]
+  }
+}
+Candidate A:
+{"role": "employee", "span": {"text": "chairwoman", "sentence_id": 2, "token_start": 3, "token_end": 3}}
+Correct output:
+{"valid": true}
+Candidate B:
+{"role": "placeofemployment", "span": {"text": "chairwoman", "sentence_id": 2, "token_start": 3, "token_end": 3}}
+Correct output:
+{"valid": false}
+
+Demonstration pair 4 — span contrast
+Context:
+{
+  "document": [
+    {"sentence_id": 0, "text": "A BIG STOP IN THE FIGHT AGAINST THE FIFTH COLUMN :"},
+    {"sentence_id": 1, "text": "-- A former Virginia National Guardsman was arrested for plotting a terrorist attack on behalf of the Islamic State ."},
+    {"sentence_id": 2, "text": "Rachel Weiner and Joe Heim report some very scary details : \" When Mohamed Bailor Jalloh walked into the Blue Ridge Arsenal gun store and indoor target range in Chantilly , Va. , on Friday to purchase a Bushmaster AR-15 rifle , he had no idea that his every move was being monitored by the FBI ."},
+    {"sentence_id": 3, "text": "Jalloh , 26 , spent about 10 minutes in the shop before attempting to buy the assault weapon , but he was told that he did not have the required three forms of identification to make the purchase , said Earl Curtis , the store ’s owner ."},
+    {"sentence_id": 4, "text": "Jalloh told employees that he would return ."}
+  ],
+  "event": {
+    "type": "transaction.transferownership.n/a",
+    "trigger": {"text": "purchase", "sentence_id": 2, "token_start": 36, "token_end": 36},
+    "allowed_roles": ["giver", "recipient", "beneficiary", "artifact", "place"]
+  }
+}
+Candidate A:
+{"role": "recipient", "span": {"text": "AR-15 rifle", "sentence_id": 2, "token_start": 39, "token_end": 40}}
+Correct output:
+{"valid": false}
+Candidate B:
+{"role": "recipient", "span": {"text": "Mohamed Bailor Jalloh", "sentence_id": 2, "token_start": 13, "token_end": 15}}
+Correct output:
+{"valid": true}
+
+Demonstration pair 5 — span contrast
+Context:
+{
+  "document": [
+    {"sentence_id": 0, "text": "I will pay for the legal fees ."},
+    {"sentence_id": 1, "text": "I promise . \""},
+    {"sentence_id": 2, "text": "The next month , he said he was looking into paying the legal fees of a man who had sucker - punched a protester at a Trump rally ."},
+    {"sentence_id": 3, "text": "But when Trump was challenged on his apparent incitement to violence , he insisted that he ’d never offered to pay for the man ’s legal fees ."},
+    {"sentence_id": 4, "text": "A president who refuses to admit mistakes would be a disaster"}
+  ],
+  "event": {
+    "type": "life.injure.injurycausedbyviolentevents",
+    "trigger": {"text": "punched", "sentence_id": 2, "token_start": 21, "token_end": 21},
+    "allowed_roles": ["injurer", "victim", "instrument", "place"]
+  }
+}
+Candidate A:
+{"role": "injurer", "span": {"text": "protester", "sentence_id": 2, "token_start": 23, "token_end": 23}}
+Correct output:
+{"valid": false}
+Candidate B:
+{"role": "injurer", "span": {"text": "man", "sentence_id": 2, "token_start": 16, "token_end": 16}}
+Correct output:
+{"valid": true}
+
+Output contract for the new input:
+Return exactly one JSON object and nothing else:
+{"valid": true}
+
+or:
+{"valid": false}
+
+Do not provide reasoning, evidence text, confidence scores, markdown, or additional fields.
+
+New input:
+{input_json}

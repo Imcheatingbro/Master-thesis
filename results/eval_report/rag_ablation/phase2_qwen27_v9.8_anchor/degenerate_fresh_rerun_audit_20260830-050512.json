@@ -1,0 +1,149 @@
+{
+  "mode": "apply",
+  "recovery_type": "fresh_model_rerun_after_degenerate_max_length_loop",
+  "target_count": 3,
+  "targets": [
+    {
+      "run_name": "fixed_rag_k3",
+      "k": 3,
+      "sample_id": 1173
+    },
+    {
+      "run_name": "fixed_rag_k5",
+      "k": 5,
+      "sample_id": 1717
+    },
+    {
+      "run_name": "fixed_rag_k5",
+      "k": 5,
+      "sample_id": 164
+    }
+  ],
+  "outcomes": [
+    {
+      "run_name": "fixed_rag_k3",
+      "k": 3,
+      "sample_id": 1173,
+      "success": true,
+      "prediction": {
+        "id": 1173,
+        "has_causal": true,
+        "triples": [
+          {
+            "cause": {
+              "span": "as part of her election campaign in the city on Thursday"
+            },
+            "relation": "caused",
+            "effect": {
+              "span": "Trinamool Congress supremo Mamata Banerjee organised a huge padayatra"
+            }
+          },
+          {
+            "cause": {
+              "span": "sending a message to the CPM leadership about the possible change in the state administration ."
+            },
+            "relation": "caused",
+            "effect": {
+              "span": "Trinamool Congress supremo Mamata Banerjee organised a huge padayatra as part of her election campaign in the city on Thursday"
+            }
+          }
+        ],
+        "generation_recovery_type": "fresh_model_rerun_after_degenerate_max_length_loop",
+        "generation_recovery_fresh_attempt": 1
+      },
+      "fresh_attempts": [
+        {
+          "fresh_attempt": 1,
+          "instance_id": "local/qwen3.6-27b-no-thinking",
+          "success": true,
+          "repair_type": null,
+          "raw_output": "{\n  \"has_causal\": true,\n  \"triples\": [\n    {\n      \"cause\": {\n        \"span\": \"as part of her election campaign in the city on Thursday\"\n      },\n      \"relation\": \"caused\",\n      \"effect\": {\n        \"span\": \"Trinamool Congress supremo Mamata Banerjee organised a huge padayatra\"\n      }\n    },\n    {\n      \"cause\": {\n        \"span\": \"sending a message to the CPM leadership about the possible change in the state administration .\"\n      },\n      \"relation\": \"caused\",\n      \"effect\": {\n        \"span\": \"Trinamool Congress supremo Mamata Banerjee organised a huge padayatra as part of her election campaign in the city on Thursday\"\n      }\n    }\n  ]\n}"
+        }
+      ],
+      "original_prediction_sha256": "ebb70055216740bcc472e9ba22f613cfd6c372474f803ea26aba471fffed972c"
+    },
+    {
+      "run_name": "fixed_rag_k5",
+      "k": 5,
+      "sample_id": 1717,
+      "success": true,
+      "prediction": {
+        "id": 1717,
+        "has_causal": true,
+        "triples": [
+          {
+            "cause": {
+              "span": "The incident"
+            },
+            "relation": "caused",
+            "effect": {
+              "span": "protests across New Delhi over the security of students from the north-east ."
+            }
+          }
+        ],
+        "generation_recovery_type": "fresh_model_rerun_after_degenerate_max_length_loop",
+        "generation_recovery_fresh_attempt": 1
+      },
+      "fresh_attempts": [
+        {
+          "fresh_attempt": 1,
+          "instance_id": "local/qwen3.6-27b-no-thinking",
+          "success": true,
+          "repair_type": null,
+          "raw_output": "{\n  \"has_causal\": true,\n  \"triples\": [\n    {\n      \"cause\": {\n        \"span\": \"The incident\"\n      },\n      \"relation\": \"caused\",\n      \"effect\": {\n        \"span\": \"protests across New Delhi over the security of students from the north-east .\"\n      }\n    }\n  ]\n}"
+        }
+      ],
+      "original_prediction_sha256": "056c9ec6735d2754b0797e2693d75b002c09498daa1e7ebc11c2e8ff8086a404"
+    },
+    {
+      "run_name": "fixed_rag_k5",
+      "k": 5,
+      "sample_id": 164,
+      "success": true,
+      "prediction": {
+        "id": 164,
+        "has_causal": true,
+        "triples": [
+          {
+            "cause": {
+              "span": "in a two-hour long gun battle with Maharashtra Police on the border the state shares with Chhattisgarh"
+            },
+            "relation": "caused",
+            "effect": {
+              "span": "Seven Maoists were killed"
+            }
+          }
+        ],
+        "generation_recovery_type": "fresh_model_rerun_after_degenerate_max_length_loop",
+        "generation_recovery_fresh_attempt": 1
+      },
+      "fresh_attempts": [
+        {
+          "fresh_attempt": 1,
+          "instance_id": "local/qwen3.6-27b-no-thinking",
+          "success": true,
+          "repair_type": null,
+          "raw_output": "{\n\"has_causal\": true,\n\"triples\": [\n{\n\"cause\": {\n\"span\": \"in a two-hour long gun battle with Maharashtra Police on the border the state shares with Chhattisgarh\"\n},\n\"relation\": \"caused\",\n\"effect\": {\n\"span\": \"Seven Maoists were killed\"\n}\n}\n]\n}"
+        }
+      ],
+      "original_prediction_sha256": "2f1764e1485ac083a011dde5d8e0148cd14dca373d164625e524716f422c8e48"
+    }
+  ],
+  "success_count": 3,
+  "backup_dir": "D:\\Master thesis\\results\\repair_backups\\degenerate-20260830-050512",
+  "rebuilt_reports": {
+    "fixed_rag_k3": {
+      "report_path": "D:\\Master thesis\\results\\eval_report\\rag_ablation\\phase2_qwen27_v9.8_anchor\\local-qwen3.6-27b-no-thinking_cnc_sft_validation-n500_prompt-v9.8_rag-knn_pattern-k3_20260830-043015.md",
+      "generation_failures": 0,
+      "detection_f1": 0.852772466539197,
+      "anchor_all_f1": 0.5611940298507463
+    },
+    "fixed_rag_k5": {
+      "report_path": "D:\\Master thesis\\results\\eval_report\\rag_ablation\\phase2_qwen27_v9.8_anchor\\local-qwen3.6-27b-no-thinking_cnc_sft_validation-n500_prompt-v9.8_rag-knn_pattern-k5_20260830-050132.md",
+      "generation_failures": 0,
+      "detection_f1": 0.8468809073724008,
+      "anchor_all_f1": 0.5505124450951684
+    }
+  },
+  "audit_path": "D:\\Master thesis\\results\\eval_report\\rag_ablation\\phase2_qwen27_v9.8_anchor\\degenerate_fresh_rerun_audit_20260830-050512.json"
+}

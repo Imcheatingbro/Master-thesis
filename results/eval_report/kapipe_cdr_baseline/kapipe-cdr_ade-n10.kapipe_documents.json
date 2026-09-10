@@ -1,0 +1,375 @@
+[
+  {
+    "doc_key": "1",
+    "sentences": [
+      "Mucosal pigmentation after oral lichen planus treatment with topical tacrolimus ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          9,
+          9
+        ],
+        "name": "tacrolimus",
+        "entity_type": "Chemical",
+        "entity_id": "D016559"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "tacrolimus"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D016559"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "2",
+    "sentences": [
+      "Methysergide - induced retroperitoneal fibrosis : successful outcome and two new laboratory features ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          0,
+          0
+        ],
+        "name": "Methysergide",
+        "entity_type": "Chemical",
+        "entity_id": "D008784"
+      },
+      {
+        "span": [
+          3,
+          4
+        ],
+        "name": "retroperitoneal fibrosis",
+        "entity_type": "Disease",
+        "entity_id": "D012185"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Methysergide"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D008784"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "retroperitoneal fibrosis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D012185"
+      }
+    ],
+    "relations": [
+      {
+        "arg1": 0,
+        "relation": "CID",
+        "arg2": 1
+      }
+    ]
+  },
+  {
+    "doc_key": "3",
+    "sentences": [
+      "DISCUSSION : As of February 11 , 2004 , this is the first case , to our knowledge , to describe the use of oral terbutaline therapy for chronotropic support in the setting of acute rejection after heart transplantation ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          25,
+          25
+        ],
+        "name": "terbutaline",
+        "entity_type": "Chemical",
+        "entity_id": "D013726"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "terbutaline"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D013726"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "4",
+    "sentences": [
+      "Myocardial infarction ( MI ) , associated with the use of these concentrates , is a well - recognized , but uncommon , complication ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          0,
+          1
+        ],
+        "name": "Myocardial infarction",
+        "entity_type": "Disease",
+        "entity_id": "D009203"
+      },
+      {
+        "span": [
+          3,
+          3
+        ],
+        "name": "MI",
+        "entity_type": "Disease",
+        "entity_id": "D009203"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0,
+          1
+        ],
+        "mention_names": [
+          "Myocardial infarction",
+          "MI"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D009203"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "5",
+    "sentences": [
+      "We noted C . striatum to be the infecting pathogen or copathogen in six patients ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "6",
+    "sentences": [
+      "20 % of the reported cases of t ( 8 ; 16 ) ( p11 ; p13 ) AML are therapy - related and this case further supports the possible role of the ionizing radiation in the development of this disorder ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          18,
+          18
+        ],
+        "name": "AML",
+        "entity_type": "Disease",
+        "entity_id": "D015470"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "AML"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D015470"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "7",
+    "sentences": [
+      "A case of presumed anaphylactic shock highlights early detection and review , rapid mobilization of the effector arm , and identification of implications for quality improvement ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          4,
+          5
+        ],
+        "name": "anaphylactic shock",
+        "entity_type": "Disease",
+        "entity_id": "D000707"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "anaphylactic shock"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D000707"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "8",
+    "sentences": [
+      "Another important concept behind some medical myths is the overreliance on case reports or authoritative text ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "9",
+    "sentences": [
+      "We present a fatal case of subacute methanol toxicity with associated diffuse brain involvement , including bilateral putaminal necrosis and cerebral edema with ventricular compression ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          7,
+          7
+        ],
+        "name": "methanol",
+        "entity_type": "Chemical",
+        "entity_id": "D000432"
+      },
+      {
+        "span": [
+          8,
+          8
+        ],
+        "name": "toxicity",
+        "entity_type": "Disease",
+        "entity_id": "D064420"
+      },
+      {
+        "span": [
+          17,
+          18
+        ],
+        "name": "putaminal necrosis",
+        "entity_type": "Disease",
+        "entity_id": "D020146"
+      },
+      {
+        "span": [
+          20,
+          21
+        ],
+        "name": "cerebral edema",
+        "entity_type": "Disease",
+        "entity_id": "D001929"
+      },
+      {
+        "span": [
+          23,
+          24
+        ],
+        "name": "ventricular compression",
+        "entity_type": "Disease",
+        "entity_id": "D001929"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "methanol"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D000432"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "toxicity"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D064420"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "putaminal necrosis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D020146"
+      },
+      {
+        "mention_indices": [
+          3,
+          4
+        ],
+        "mention_names": [
+          "cerebral edema",
+          "ventricular compression"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D001929"
+      }
+    ],
+    "relations": [
+      {
+        "arg1": 0,
+        "relation": "CID",
+        "arg2": 2
+      },
+      {
+        "arg1": 0,
+        "relation": "CID",
+        "arg2": 3
+      }
+    ]
+  },
+  {
+    "doc_key": "10",
+    "sentences": [
+      "RESULTS : Five of the six patients experienced intolerable exacerbation of parkinsonism ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          11,
+          11
+        ],
+        "name": "parkinsonism",
+        "entity_type": "Disease",
+        "entity_id": "D010302"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "parkinsonism"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D010302"
+      }
+    ],
+    "relations": []
+  }
+]

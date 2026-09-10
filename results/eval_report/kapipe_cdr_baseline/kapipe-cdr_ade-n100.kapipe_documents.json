@@ -1,0 +1,4188 @@
+[
+  {
+    "doc_key": "1",
+    "sentences": [
+      "Mucosal pigmentation after oral lichen planus treatment with topical tacrolimus ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          9,
+          9
+        ],
+        "name": "tacrolimus",
+        "entity_type": "Chemical",
+        "entity_id": "D016559"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "tacrolimus"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D016559"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "2",
+    "sentences": [
+      "Methysergide - induced retroperitoneal fibrosis : successful outcome and two new laboratory features ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          0,
+          0
+        ],
+        "name": "Methysergide",
+        "entity_type": "Chemical",
+        "entity_id": "D008784"
+      },
+      {
+        "span": [
+          3,
+          4
+        ],
+        "name": "retroperitoneal fibrosis",
+        "entity_type": "Disease",
+        "entity_id": "D012185"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Methysergide"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D008784"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "retroperitoneal fibrosis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D012185"
+      }
+    ],
+    "relations": [
+      {
+        "arg1": 0,
+        "relation": "CID",
+        "arg2": 1
+      }
+    ]
+  },
+  {
+    "doc_key": "3",
+    "sentences": [
+      "DISCUSSION : As of February 11 , 2004 , this is the first case , to our knowledge , to describe the use of oral terbutaline therapy for chronotropic support in the setting of acute rejection after heart transplantation ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          25,
+          25
+        ],
+        "name": "terbutaline",
+        "entity_type": "Chemical",
+        "entity_id": "D013726"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "terbutaline"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D013726"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "4",
+    "sentences": [
+      "Myocardial infarction ( MI ) , associated with the use of these concentrates , is a well - recognized , but uncommon , complication ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          0,
+          1
+        ],
+        "name": "Myocardial infarction",
+        "entity_type": "Disease",
+        "entity_id": "D009203"
+      },
+      {
+        "span": [
+          3,
+          3
+        ],
+        "name": "MI",
+        "entity_type": "Disease",
+        "entity_id": "D009203"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0,
+          1
+        ],
+        "mention_names": [
+          "Myocardial infarction",
+          "MI"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D009203"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "5",
+    "sentences": [
+      "We noted C . striatum to be the infecting pathogen or copathogen in six patients ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "6",
+    "sentences": [
+      "20 % of the reported cases of t ( 8 ; 16 ) ( p11 ; p13 ) AML are therapy - related and this case further supports the possible role of the ionizing radiation in the development of this disorder ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          18,
+          18
+        ],
+        "name": "AML",
+        "entity_type": "Disease",
+        "entity_id": "D007953"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "AML"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D007953"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "7",
+    "sentences": [
+      "A case of presumed anaphylactic shock highlights early detection and review , rapid mobilization of the effector arm , and identification of implications for quality improvement ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          4,
+          5
+        ],
+        "name": "anaphylactic shock",
+        "entity_type": "Disease",
+        "entity_id": "D000707"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "anaphylactic shock"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D000707"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "8",
+    "sentences": [
+      "Another important concept behind some medical myths is the overreliance on case reports or authoritative text ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "9",
+    "sentences": [
+      "We present a fatal case of subacute methanol toxicity with associated diffuse brain involvement , including bilateral putaminal necrosis and cerebral edema with ventricular compression ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          7,
+          7
+        ],
+        "name": "methanol",
+        "entity_type": "Chemical",
+        "entity_id": "D000432"
+      },
+      {
+        "span": [
+          8,
+          8
+        ],
+        "name": "toxicity",
+        "entity_type": "Disease",
+        "entity_id": "D064420"
+      },
+      {
+        "span": [
+          17,
+          18
+        ],
+        "name": "putaminal necrosis",
+        "entity_type": "Disease",
+        "entity_id": "D020146"
+      },
+      {
+        "span": [
+          20,
+          21
+        ],
+        "name": "cerebral edema",
+        "entity_type": "Disease",
+        "entity_id": "D001929"
+      },
+      {
+        "span": [
+          23,
+          24
+        ],
+        "name": "ventricular compression",
+        "entity_type": "Disease",
+        "entity_id": "D013117"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "methanol"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D000432"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "toxicity"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D064420"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "putaminal necrosis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D020146"
+      },
+      {
+        "mention_indices": [
+          3
+        ],
+        "mention_names": [
+          "cerebral edema"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D001929"
+      },
+      {
+        "mention_indices": [
+          4
+        ],
+        "mention_names": [
+          "ventricular compression"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D013117"
+      }
+    ],
+    "relations": [
+      {
+        "arg1": 0,
+        "relation": "CID",
+        "arg2": 2
+      },
+      {
+        "arg1": 0,
+        "relation": "CID",
+        "arg2": 3
+      }
+    ]
+  },
+  {
+    "doc_key": "10",
+    "sentences": [
+      "RESULTS : Five of the six patients experienced intolerable exacerbation of parkinsonism ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          11,
+          11
+        ],
+        "name": "parkinsonism",
+        "entity_type": "Disease",
+        "entity_id": "D010302"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "parkinsonism"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D010302"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "11",
+    "sentences": [
+      "PURPOSE : Choroidal detachment is a known complication of topical hypotensive agents when used to treat eyes sensitized by prior surgery ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          2,
+          3
+        ],
+        "name": "Choroidal detachment",
+        "entity_type": "Disease",
+        "entity_id": "D015794"
+      },
+      {
+        "span": [
+          10,
+          10
+        ],
+        "name": "hypotensive",
+        "entity_type": "Disease",
+        "entity_id": "D007022"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Choroidal detachment"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D015794"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "hypotensive"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D007022"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "12",
+    "sentences": [
+      "RESULTS : One patient progressed to chronic renal failure and required prolonged dialysis followed by renal transplantation , though the leukemia remained in remission ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          6,
+          8
+        ],
+        "name": "chronic renal failure",
+        "entity_type": "Disease",
+        "entity_id": "D007676"
+      },
+      {
+        "span": [
+          20,
+          20
+        ],
+        "name": "leukemia",
+        "entity_type": "Disease",
+        "entity_id": "D007938"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "chronic renal failure"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D007676"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "leukemia"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D007938"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "13",
+    "sentences": [
+      "Nonetheless , the results of therapy with many of the treatment programs described are encouraging , as exemplified by the report from Graboys and coworkers ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "14",
+    "sentences": [
+      "Discontinuation of methicillin therapy and appropriate antibiotic treatment of endocarditis led to clinical improvement , emphasizing the need to promptly discontinue potential nephrotoxic agents when abnormalities in renal function appear ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          2,
+          2
+        ],
+        "name": "methicillin",
+        "entity_type": "Chemical",
+        "entity_id": "D008712"
+      },
+      {
+        "span": [
+          9,
+          9
+        ],
+        "name": "endocarditis",
+        "entity_type": "Disease",
+        "entity_id": "D004696"
+      },
+      {
+        "span": [
+          22,
+          22
+        ],
+        "name": "nephrotoxic",
+        "entity_type": "Disease",
+        "entity_id": "D007674"
+      },
+      {
+        "span": [
+          25,
+          28
+        ],
+        "name": "abnormalities in renal function",
+        "entity_type": "Disease",
+        "entity_id": "D007674"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "methicillin"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D008712"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "endocarditis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D004696"
+      },
+      {
+        "mention_indices": [
+          2,
+          3
+        ],
+        "mention_names": [
+          "nephrotoxic",
+          "abnormalities in renal function"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D007674"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "15",
+    "sentences": [
+      "We sought to evaluate the etiology of the long QT syndrome in these patients without previously identified causes for QT , prolongation , and determine the prevalence among patients with HIV infection ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          8,
+          10
+        ],
+        "name": "long QT syndrome",
+        "entity_type": "Disease",
+        "entity_id": "D008133"
+      },
+      {
+        "span": [
+          30,
+          31
+        ],
+        "name": "HIV infection",
+        "entity_type": "Disease",
+        "entity_id": "D015658"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "long QT syndrome"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D008133"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "HIV infection"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D015658"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "16",
+    "sentences": [
+      "Acidic and neutral drugs were screened for by liquid - liquid extraction followed by high - performance liquid chromatography - diode - array detection ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "17",
+    "sentences": [
+      "Attempts were made to stop and then restart the theophylline therapy at progressively lower doses ; however , with each attempt , the patient ' s reaction to the drug became more toxic , with serum theophylline levels ranging between 99 . 9 and 149 . 9 micromol / L ( 18 and 27 microg / mL ) ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          9,
+          9
+        ],
+        "name": "theophylline",
+        "entity_type": "Chemical",
+        "entity_id": "D013806"
+      },
+      {
+        "span": [
+          36,
+          36
+        ],
+        "name": "theophylline",
+        "entity_type": "Chemical",
+        "entity_id": "D013806"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0,
+          1
+        ],
+        "mention_names": [
+          "theophylline",
+          "theophylline"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D013806"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "18",
+    "sentences": [
+      "Foreign body granuloma of activated charcoal ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "19",
+    "sentences": [
+      "We remind clinicians that phenytoin toxicity can easily mimic a cerebellar lesion or alcohol intoxication , and suggest that in accordance with National Institute for Clinical Excellence ( NICE ) guidelines phenytoin should no longer be used as a first - line treatment for epilepsy ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          4,
+          4
+        ],
+        "name": "phenytoin",
+        "entity_type": "Chemical",
+        "entity_id": "D010672"
+      },
+      {
+        "span": [
+          5,
+          5
+        ],
+        "name": "toxicity",
+        "entity_type": "Disease",
+        "entity_id": "D064420"
+      },
+      {
+        "span": [
+          10,
+          11
+        ],
+        "name": "cerebellar lesion",
+        "entity_type": "Disease",
+        "entity_id": "D002526"
+      },
+      {
+        "span": [
+          31,
+          31
+        ],
+        "name": "phenytoin",
+        "entity_type": "Chemical",
+        "entity_id": "D010672"
+      },
+      {
+        "span": [
+          44,
+          44
+        ],
+        "name": "epilepsy",
+        "entity_type": "Disease",
+        "entity_id": "D004827"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0,
+          3
+        ],
+        "mention_names": [
+          "phenytoin",
+          "phenytoin"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D010672"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "toxicity"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D064420"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "cerebellar lesion"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D002526"
+      },
+      {
+        "mention_indices": [
+          4
+        ],
+        "mention_names": [
+          "epilepsy"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D004827"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "20",
+    "sentences": [
+      "Two months after the transplant she developed an interstitial pneumonia : bronchoalveolar lavage yielded cytomegalic cells with intranuclear bodies , and cytomegalovirus DNA was detected by in situ hybridization techniques ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          8,
+          9
+        ],
+        "name": "interstitial pneumonia",
+        "entity_type": "Disease",
+        "entity_id": "D011014"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "interstitial pneumonia"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D011014"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "21",
+    "sentences": [
+      "RESULTS : The patient retained excellent visual acuity and the choroidal hemorrhage resolved completely within two months ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          10,
+          11
+        ],
+        "name": "choroidal hemorrhage",
+        "entity_type": "Disease",
+        "entity_id": "D002832"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "choroidal hemorrhage"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D002832"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "22",
+    "sentences": [
+      "It is important to recognize the potential for this complication when postoperative epidural analgesia is contemplated , especially following a left - sided surgical dissection ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "23",
+    "sentences": [
+      "The VPA concentration following this dose escalation was 392 micromol / L , and the patient improved clinically ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          1,
+          1
+        ],
+        "name": "VPA",
+        "entity_type": "Chemical",
+        "entity_id": "D014635"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "VPA"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D014635"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "24",
+    "sentences": [
+      "A case is described of severe splenic hemorrhage and rupture which developed 3 h after completion of tPA infusion for suspected acute myocardial infarction ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          6,
+          7
+        ],
+        "name": "splenic hemorrhage",
+        "entity_type": "Disease",
+        "entity_id": "D006470"
+      },
+      {
+        "span": [
+          17,
+          17
+        ],
+        "name": "tPA",
+        "entity_type": "Chemical",
+        "entity_id": "D017275"
+      },
+      {
+        "span": [
+          21,
+          23
+        ],
+        "name": "acute myocardial infarction",
+        "entity_type": "Disease",
+        "entity_id": "D009203"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "splenic hemorrhage"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D006470"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "tPA"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D017275"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "acute myocardial infarction"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D009203"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "25",
+    "sentences": [
+      "Radiography disclosed a lumbosacral intradural tumor ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          3,
+          5
+        ],
+        "name": "lumbosacral intradural tumor",
+        "entity_type": "Disease",
+        "entity_id": "D013120"
+      },
+      {
+        "span": [
+          4,
+          5
+        ],
+        "name": "intradural tumor",
+        "entity_type": "Disease",
+        "entity_id": "D013120"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0,
+          1
+        ],
+        "mention_names": [
+          "lumbosacral intradural tumor",
+          "intradural tumor"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D013120"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "26",
+    "sentences": [
+      "CASE : We report a 17 - year old JRA patient with primary ovarian diffuse large B - cell non - Hodgkin ' s lymphoma ( NHL ) ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          14,
+          24
+        ],
+        "name": "diffuse large B - cell non - Hodgkin ' s lymphoma",
+        "entity_type": "Disease",
+        "entity_id": "D016403"
+      },
+      {
+        "span": [
+          26,
+          26
+        ],
+        "name": "NHL",
+        "entity_type": "Disease",
+        "entity_id": "D008223"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "diffuse large B - cell non - Hodgkin ' s lymphoma"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D016403"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "NHL"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D008223"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "27",
+    "sentences": [
+      "We suggest that voriconazole may be a useful treatment alternative to the more traditional therapy with amphotericin B - based agents ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          3,
+          3
+        ],
+        "name": "voriconazole",
+        "entity_type": "Chemical",
+        "entity_id": "D065819"
+      },
+      {
+        "span": [
+          16,
+          17
+        ],
+        "name": "amphotericin B",
+        "entity_type": "Chemical",
+        "entity_id": "D000666"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "voriconazole"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D065819"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "amphotericin B"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D000666"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "28",
+    "sentences": [
+      "CONCLUSIONS : These findings suggest that , in patients who are susceptible , the periocular or systemic absorption of inhaled corticosteroids may be sufficient to produce CSC in humans , supporting previous hypotheses regarding the pathogenesis of the disorder ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          20,
+          20
+        ],
+        "name": "corticosteroids",
+        "entity_type": "Chemical",
+        "entity_id": "D000305"
+      },
+      {
+        "span": [
+          26,
+          26
+        ],
+        "name": "CSC",
+        "entity_type": "Disease",
+        "entity_id": "D018288"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "corticosteroids"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D000305"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "CSC"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D018288"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "29",
+    "sentences": [
+      "Although hepatic veno - occlusive disease ( HVOD ) is a common complication of allogenic bone marrow transplantation ( BMT ) , pulmonary veno - occlusive disease ( PVOD ) is very rare ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          1,
+          5
+        ],
+        "name": "hepatic veno - occlusive disease",
+        "entity_type": "Disease",
+        "entity_id": "D006504"
+      },
+      {
+        "span": [
+          7,
+          7
+        ],
+        "name": "HVOD",
+        "entity_type": "Disease",
+        "entity_id": "D006504"
+      },
+      {
+        "span": [
+          22,
+          26
+        ],
+        "name": "pulmonary veno - occlusive disease",
+        "entity_type": "Disease",
+        "entity_id": "D011668"
+      },
+      {
+        "span": [
+          28,
+          28
+        ],
+        "name": "PVOD",
+        "entity_type": "Disease",
+        "entity_id": "D011668"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0,
+          1
+        ],
+        "mention_names": [
+          "hepatic veno - occlusive disease",
+          "HVOD"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D006504"
+      },
+      {
+        "mention_indices": [
+          2,
+          3
+        ],
+        "mention_names": [
+          "pulmonary veno - occlusive disease",
+          "PVOD"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D011668"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "30",
+    "sentences": [
+      "Evidence regarding the remyelinating nature of human monoclonal antibodies raises interest in the potential therapeutic role these antibodies may have ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "31",
+    "sentences": [
+      "The course of this patient ' s renal disease contrasts sharply with diffuse proliferative glomerulonephritis of idiopathic systemic lupus , and suggests that this rare complication of procainamide therapy may have a favorable course ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          7,
+          8
+        ],
+        "name": "renal disease",
+        "entity_type": "Disease",
+        "entity_id": "D007674"
+      },
+      {
+        "span": [
+          13,
+          14
+        ],
+        "name": "proliferative glomerulonephritis",
+        "entity_type": "Disease",
+        "entity_id": "D005921"
+      },
+      {
+        "span": [
+          16,
+          18
+        ],
+        "name": "idiopathic systemic lupus",
+        "entity_type": "Disease",
+        "entity_id": "D008180"
+      },
+      {
+        "span": [
+          27,
+          27
+        ],
+        "name": "procainamide",
+        "entity_type": "Chemical",
+        "entity_id": "D011342"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "renal disease"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D007674"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "proliferative glomerulonephritis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D005921"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "idiopathic systemic lupus"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D008180"
+      },
+      {
+        "mention_indices": [
+          3
+        ],
+        "mention_names": [
+          "procainamide"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D011342"
+      }
+    ],
+    "relations": [
+      {
+        "arg1": 3,
+        "relation": "CID",
+        "arg2": 1
+      }
+    ]
+  },
+  {
+    "doc_key": "32",
+    "sentences": [
+      "Bilateral computerized tomography showed no progression in radiographic changes during the treatment ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "33",
+    "sentences": [
+      "Intravenous ribavirin was obtained and administered for 5 days without success ; the patient ' s mental status deteriorated rapidly and she died on day 69 post - transplant ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          1,
+          1
+        ],
+        "name": "ribavirin",
+        "entity_type": "Chemical",
+        "entity_id": "D012254"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "ribavirin"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D012254"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "34",
+    "sentences": [
+      "Further investigation revealed hyponatremia 112 mEq / L , low serum osmolality , high urine osmolality , normal renal function , normal adrenal and thyroid hormones , and high plasma vasopressin 40 pg / mL ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          3,
+          3
+        ],
+        "name": "hyponatremia",
+        "entity_type": "Disease",
+        "entity_id": "D007010"
+      },
+      {
+        "span": [
+          30,
+          30
+        ],
+        "name": "vasopressin",
+        "entity_type": "Chemical",
+        "entity_id": "D014667"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "hyponatremia"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D007010"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "vasopressin"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D014667"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "35",
+    "sentences": [
+      "Fourteen months after the second stenting , a new elective angiogram was performed without evidence of in - stent restenosis ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          19,
+          19
+        ],
+        "name": "restenosis",
+        "entity_type": "Disease",
+        "entity_id": "D023903"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "restenosis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D023903"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "36",
+    "sentences": [
+      "Smoke inhalation injury from newer synthetic building materials - - a patient who survived 205 days ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          0,
+          2
+        ],
+        "name": "Smoke inhalation injury",
+        "entity_type": "Disease",
+        "entity_id": "D015208"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Smoke inhalation injury"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D015208"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "37",
+    "sentences": [
+      "Toxic epidermal necrolysis ( TEN ) , or Lyell ' s syndrome , is a fulminant bullous dermatitis ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          0,
+          2
+        ],
+        "name": "Toxic epidermal necrolysis",
+        "entity_type": "Disease",
+        "entity_id": "D004820"
+      },
+      {
+        "span": [
+          4,
+          4
+        ],
+        "name": "TEN",
+        "entity_type": "Disease",
+        "entity_id": "D017443"
+      },
+      {
+        "span": [
+          8,
+          11
+        ],
+        "name": "Lyell ' s syndrome",
+        "entity_type": "Disease",
+        "entity_id": "D006527"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Toxic epidermal necrolysis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D004820"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "TEN"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D017443"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "Lyell ' s syndrome"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D006527"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "38",
+    "sentences": [
+      "There was a striking temporal relationship between the administration of antibiotics or allopurinol and exacerbations of the disease ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          12,
+          12
+        ],
+        "name": "allopurinol",
+        "entity_type": "Chemical",
+        "entity_id": "D000493"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "allopurinol"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D000493"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "39",
+    "sentences": [
+      "Blood , urine , and throat cultures were negative ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "40",
+    "sentences": [
+      "There was no evidence of renal failure , diabetes , acidosis , increased potassium intake , or significant tissue trauma ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          5,
+          6
+        ],
+        "name": "renal failure",
+        "entity_type": "Disease",
+        "entity_id": "D051437"
+      },
+      {
+        "span": [
+          8,
+          8
+        ],
+        "name": "diabetes",
+        "entity_type": "Disease",
+        "entity_id": "D003920"
+      },
+      {
+        "span": [
+          10,
+          10
+        ],
+        "name": "acidosis",
+        "entity_type": "Disease",
+        "entity_id": "D000138"
+      },
+      {
+        "span": [
+          13,
+          13
+        ],
+        "name": "potassium",
+        "entity_type": "Chemical",
+        "entity_id": "D011188"
+      },
+      {
+        "span": [
+          18,
+          19
+        ],
+        "name": "tissue trauma",
+        "entity_type": "Disease",
+        "entity_id": "D014947"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "renal failure"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D051437"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "diabetes"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D003920"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "acidosis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D000138"
+      },
+      {
+        "mention_indices": [
+          3
+        ],
+        "mention_names": [
+          "potassium"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D011188"
+      },
+      {
+        "mention_indices": [
+          4
+        ],
+        "mention_names": [
+          "tissue trauma"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D014947"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "41",
+    "sentences": [
+      "Failure of intravenous ribavirin in the treatment of invasive adenovirus infection following allogeneic bone marrow transplantation : a case report ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          3,
+          3
+        ],
+        "name": "ribavirin",
+        "entity_type": "Chemical",
+        "entity_id": "D012254"
+      },
+      {
+        "span": [
+          9,
+          10
+        ],
+        "name": "adenovirus infection",
+        "entity_type": "Disease",
+        "entity_id": "D000257"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "ribavirin"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D012254"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "adenovirus infection"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D000257"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "42",
+    "sentences": [
+      "It has multiple adverse effects including neurotoxicity ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          6,
+          6
+        ],
+        "name": "neurotoxicity",
+        "entity_type": "Disease",
+        "entity_id": "D020258"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "neurotoxicity"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D020258"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "43",
+    "sentences": [
+      "Alternatives to neurosurgery , such as pharmacotherapy , include systemic corticosteroids and antidepressants ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          10,
+          10
+        ],
+        "name": "corticosteroids",
+        "entity_type": "Chemical",
+        "entity_id": "D000305"
+      },
+      {
+        "span": [
+          12,
+          12
+        ],
+        "name": "antidepressants",
+        "entity_type": "Chemical",
+        "entity_id": "D000928"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "corticosteroids"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D000305"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "antidepressants"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D000928"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "44",
+    "sentences": [
+      "Successful treatment of acute dapsone intoxication using charcoal hemoperfusion ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          4,
+          4
+        ],
+        "name": "dapsone",
+        "entity_type": "Chemical",
+        "entity_id": "D003622"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "dapsone"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D003622"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "45",
+    "sentences": [
+      "Calciphylaxis ( calcific uremic arteriolopathy ) is a severe complication of hemodialysis characterized by subcutaneous calcification of the small arteries and tissue necrosis ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          0,
+          0
+        ],
+        "name": "Calciphylaxis",
+        "entity_type": "Disease",
+        "entity_id": "D002115"
+      },
+      {
+        "span": [
+          2,
+          4
+        ],
+        "name": "calcific uremic arteriolopathy",
+        "entity_type": "Disease",
+        "entity_id": "D061205"
+      },
+      {
+        "span": [
+          15,
+          19
+        ],
+        "name": "calcification of the small arteries",
+        "entity_type": "Disease",
+        "entity_id": "D002114"
+      },
+      {
+        "span": [
+          21,
+          22
+        ],
+        "name": "tissue necrosis",
+        "entity_type": "Disease",
+        "entity_id": "D009336"
+      },
+      {
+        "span": [
+          22,
+          22
+        ],
+        "name": "necrosis",
+        "entity_type": "Disease",
+        "entity_id": "D009336"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Calciphylaxis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D002115"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "calcific uremic arteriolopathy"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D061205"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "calcification of the small arteries"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D002114"
+      },
+      {
+        "mention_indices": [
+          3,
+          4
+        ],
+        "mention_names": [
+          "tissue necrosis",
+          "necrosis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D009336"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "46",
+    "sentences": [
+      "Combination therapy with i . a . urokinase , i . a . prostaglandines and i . v . anticoagulation resulted in re - opening of the obstructed distal artery and complete cessation of symptoms ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          7,
+          7
+        ],
+        "name": "urokinase",
+        "entity_type": "Chemical",
+        "entity_id": "D014568"
+      },
+      {
+        "span": [
+          13,
+          13
+        ],
+        "name": "prostaglandines",
+        "entity_type": "Chemical",
+        "entity_id": "D011453"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "urokinase"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D014568"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "prostaglandines"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D011453"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "47",
+    "sentences": [
+      "Evans syndrome refers to a hematological autoimmune disorder with autoimmune hemolytic anemia accompanied by immune thrombocytopenia ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          0,
+          1
+        ],
+        "name": "Evans syndrome",
+        "entity_type": "Disease",
+        "entity_id": "D006527"
+      },
+      {
+        "span": [
+          5,
+          7
+        ],
+        "name": "hematological autoimmune disorder",
+        "entity_type": "Disease",
+        "entity_id": "D006402"
+      },
+      {
+        "span": [
+          9,
+          11
+        ],
+        "name": "autoimmune hemolytic anemia",
+        "entity_type": "Disease",
+        "entity_id": "D000744"
+      },
+      {
+        "span": [
+          14,
+          15
+        ],
+        "name": "immune thrombocytopenia",
+        "entity_type": "Disease",
+        "entity_id": "D013921"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Evans syndrome"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D006527"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "hematological autoimmune disorder"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D006402"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "autoimmune hemolytic anemia"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D000744"
+      },
+      {
+        "mention_indices": [
+          3
+        ],
+        "mention_names": [
+          "immune thrombocytopenia"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D013921"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "48",
+    "sentences": [
+      "A longitudinal case report shows a sudden remission of the severe course of a seasonal bipolar disorder after 10 years of psychopharmacological treatments ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          15,
+          16
+        ],
+        "name": "bipolar disorder",
+        "entity_type": "Disease",
+        "entity_id": "D001714"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "bipolar disorder"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D001714"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "49",
+    "sentences": [
+      "Several also reported improved sleep at night ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "50",
+    "sentences": [
+      "These findings suggest that there may be a place for intravenous CyA therapy in patients with severe Crohn ' s disease who do not respond to conventional therapy or to oral treatment with CyA ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          11,
+          11
+        ],
+        "name": "CyA",
+        "entity_type": "Chemical",
+        "entity_id": "D001379"
+      },
+      {
+        "span": [
+          17,
+          20
+        ],
+        "name": "Crohn ' s disease",
+        "entity_type": "Disease",
+        "entity_id": "D003424"
+      },
+      {
+        "span": [
+          33,
+          33
+        ],
+        "name": "CyA",
+        "entity_type": "Chemical",
+        "entity_id": "D003520"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "CyA"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D001379"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "Crohn ' s disease"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D003424"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "CyA"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D003520"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "51",
+    "sentences": [
+      "Vitamin D toxicity complicating the treatment of senile , postmenopausal , and glucocorticoid - induced osteoporosis ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          0,
+          1
+        ],
+        "name": "Vitamin D",
+        "entity_type": "Chemical",
+        "entity_id": "D014807"
+      },
+      {
+        "span": [
+          2,
+          2
+        ],
+        "name": "toxicity",
+        "entity_type": "Disease",
+        "entity_id": "D064420"
+      },
+      {
+        "span": [
+          15,
+          15
+        ],
+        "name": "osteoporosis",
+        "entity_type": "Disease",
+        "entity_id": "D010024"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Vitamin D"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D014807"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "toxicity"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D064420"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "osteoporosis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D010024"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "52",
+    "sentences": [
+      "We report the confocal microscopic findings in a case of interlamellar stromal keratopathy induced by elevated intraocular pressure ( IOP ) after laser in situ keratomileusis ( LASIK ) ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "53",
+    "sentences": [
+      "RESULTS : A 60 - year - old woman with chronic active viral C hepatitis ( HCV genotype = 3a ) started IFN - alpha therapy in November ' 96 ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          10,
+          14
+        ],
+        "name": "chronic active viral C hepatitis",
+        "entity_type": "Disease",
+        "entity_id": "D019698"
+      },
+      {
+        "span": [
+          22,
+          24
+        ],
+        "name": "IFN - alpha",
+        "entity_type": "Chemical",
+        "entity_id": "C417083"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "chronic active viral C hepatitis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D019698"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "IFN - alpha"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "C417083"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "54",
+    "sentences": [
+      "We describe a drug - drug interaction between itraconazole and efavirenz in a patient with disseminated histoplasmosis and acquired immunodeficiency syndrome ( AIDS ) ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          8,
+          8
+        ],
+        "name": "itraconazole",
+        "entity_type": "Chemical",
+        "entity_id": "D017964"
+      },
+      {
+        "span": [
+          10,
+          10
+        ],
+        "name": "efavirenz",
+        "entity_type": "Chemical",
+        "entity_id": "C098320"
+      },
+      {
+        "span": [
+          10,
+          16
+        ],
+        "name": "efavirenz in a patient with disseminated histoplasmosis",
+        "entity_type": "Chemical",
+        "entity_id": "C098320"
+      },
+      {
+        "span": [
+          15,
+          16
+        ],
+        "name": "disseminated histoplasmosis",
+        "entity_type": "Disease",
+        "entity_id": "D006660"
+      },
+      {
+        "span": [
+          18,
+          20
+        ],
+        "name": "acquired immunodeficiency syndrome",
+        "entity_type": "Disease",
+        "entity_id": "D000163"
+      },
+      {
+        "span": [
+          22,
+          22
+        ],
+        "name": "AIDS",
+        "entity_type": "Disease",
+        "entity_id": "D000163"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "itraconazole"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D017964"
+      },
+      {
+        "mention_indices": [
+          1,
+          2
+        ],
+        "mention_names": [
+          "efavirenz",
+          "efavirenz in a patient with disseminated histoplasmosis"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "C098320"
+      },
+      {
+        "mention_indices": [
+          3
+        ],
+        "mention_names": [
+          "disseminated histoplasmosis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D006660"
+      },
+      {
+        "mention_indices": [
+          4,
+          5
+        ],
+        "mention_names": [
+          "acquired immunodeficiency syndrome",
+          "AIDS"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D000163"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "55",
+    "sentences": [
+      "Radiation recall refers to inflammatory reactions triggered by cytotoxic agents and develops in previously irradiated areas ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "56",
+    "sentences": [
+      "We suggest , however , that routine screening in such patients may be important ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "57",
+    "sentences": [
+      "As Paget ( 1988 ) says , \" The sorrow of mistakes is sometimes very diffuse and sometimes very pointed ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "58",
+    "sentences": [
+      "These children aged 2 . 5 - 15 years were treated for Burkitt ' s lymphoma , Ewing ' s tumour , small cell bone tumour or medulloblastoma ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          12,
+          15
+        ],
+        "name": "Burkitt ' s lymphoma",
+        "entity_type": "Disease",
+        "entity_id": "D002051"
+      },
+      {
+        "span": [
+          17,
+          20
+        ],
+        "name": "Ewing ' s tumour",
+        "entity_type": "Disease",
+        "entity_id": "D012512"
+      },
+      {
+        "span": [
+          22,
+          25
+        ],
+        "name": "small cell bone tumour",
+        "entity_type": "Disease",
+        "entity_id": "D010524"
+      },
+      {
+        "span": [
+          27,
+          27
+        ],
+        "name": "medulloblastoma",
+        "entity_type": "Disease",
+        "entity_id": "D008527"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Burkitt ' s lymphoma"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D002051"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "Ewing ' s tumour"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D012512"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "small cell bone tumour"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D010524"
+      },
+      {
+        "mention_indices": [
+          3
+        ],
+        "mention_names": [
+          "medulloblastoma"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D008527"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "59",
+    "sentences": [
+      "Neurological examination revealed bilateral ptosis , and complete external opthalmoplegia with normal pupillary and corneal reflexes ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          4,
+          4
+        ],
+        "name": "ptosis",
+        "entity_type": "Disease",
+        "entity_id": "D015877"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "ptosis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D015877"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "60",
+    "sentences": [
+      "RESULTS : Dual desensitization resulted in marked improvement in her symptoms ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "61",
+    "sentences": [
+      "We report the case of a 14 - year - old female with acute promyelocytic leukemia who developed symptomatic cardiomyopathy only 4 months into treatment with a combination of daunomycin and all - trans retinoic acid ( ATRA ) ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          13,
+          15
+        ],
+        "name": "acute promyelocytic leukemia",
+        "entity_type": "Disease",
+        "entity_id": "D015473"
+      },
+      {
+        "span": [
+          19,
+          19
+        ],
+        "name": "cardiomyopathy",
+        "entity_type": "Disease",
+        "entity_id": "D009202"
+      },
+      {
+        "span": [
+          29,
+          29
+        ],
+        "name": "daunomycin",
+        "entity_type": "Chemical",
+        "entity_id": "D003630"
+      },
+      {
+        "span": [
+          31,
+          35
+        ],
+        "name": "all - trans retinoic acid",
+        "entity_type": "Chemical",
+        "entity_id": "D014801"
+      },
+      {
+        "span": [
+          37,
+          37
+        ],
+        "name": "ATRA",
+        "entity_type": "Chemical",
+        "entity_id": "D001285"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "acute promyelocytic leukemia"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D015473"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "cardiomyopathy"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D009202"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "daunomycin"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D003630"
+      },
+      {
+        "mention_indices": [
+          3
+        ],
+        "mention_names": [
+          "all - trans retinoic acid"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D014801"
+      },
+      {
+        "mention_indices": [
+          4
+        ],
+        "mention_names": [
+          "ATRA"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D001285"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "62",
+    "sentences": [
+      "This case represented the acute tumor lysis syndrome that occurred after chemotherapy of breast carcinoma ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          5,
+          5
+        ],
+        "name": "tumor",
+        "entity_type": "Disease",
+        "entity_id": "D009369"
+      },
+      {
+        "span": [
+          13,
+          14
+        ],
+        "name": "breast carcinoma",
+        "entity_type": "Disease",
+        "entity_id": "D001943"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "tumor"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D009369"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "breast carcinoma"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D001943"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "63",
+    "sentences": [
+      "In vivo confocal microscopic findings of interlamellar stromal keratopathy induced by elevated intraocular pressure ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          6,
+          8
+        ],
+        "name": "interlamellar stromal keratopathy",
+        "entity_type": "Disease",
+        "entity_id": "D007638"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "interlamellar stromal keratopathy"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D007638"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "64",
+    "sentences": [
+      "A relatively uncommon but unique and life threatening iatrogenic condition is described ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "65",
+    "sentences": [
+      "Fever and neutrophilic alveolitis caused by a vanadium based catalyst ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          0,
+          0
+        ],
+        "name": "Fever",
+        "entity_type": "Disease",
+        "entity_id": "D005334"
+      },
+      {
+        "span": [
+          7,
+          7
+        ],
+        "name": "vanadium",
+        "entity_type": "Chemical",
+        "entity_id": "D014639"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Fever"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D005334"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "vanadium"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D014639"
+      }
+    ],
+    "relations": [
+      {
+        "arg1": 1,
+        "relation": "CID",
+        "arg2": 0
+      }
+    ]
+  },
+  {
+    "doc_key": "66",
+    "sentences": [
+      "In the immunocompetent host , antiviral therapy can successfully treat herpesvirus respiratory infection , with reversal of clinical , virologic , and pathologic findings ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          10,
+          12
+        ],
+        "name": "herpesvirus respiratory infection",
+        "entity_type": "Disease",
+        "entity_id": "D018259"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "herpesvirus respiratory infection"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D018259"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "67",
+    "sentences": [
+      "To the best of our knowledge , this is the first report on the treatment of Stenotrophomonas maltophilia bacteremia after living donor liver transplantation ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          16,
+          17
+        ],
+        "name": "Stenotrophomonas maltophilia",
+        "entity_type": "Disease",
+        "entity_id": "D020615"
+      },
+      {
+        "span": [
+          16,
+          18
+        ],
+        "name": "Stenotrophomonas maltophilia bacteremia",
+        "entity_type": "Disease",
+        "entity_id": "C531821"
+      },
+      {
+        "span": [
+          18,
+          18
+        ],
+        "name": "bacteremia",
+        "entity_type": "Disease",
+        "entity_id": "D016470"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Stenotrophomonas maltophilia"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D020615"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "Stenotrophomonas maltophilia bacteremia"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "C531821"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "bacteremia"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D016470"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "68",
+    "sentences": [
+      "We report a case of senna - induced cholestatic hepatitis which was not diagnosed at presentation ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          5,
+          5
+        ],
+        "name": "senna",
+        "entity_type": "Chemical",
+        "entity_id": "D012676"
+      },
+      {
+        "span": [
+          8,
+          9
+        ],
+        "name": "cholestatic hepatitis",
+        "entity_type": "Disease",
+        "entity_id": "D002779"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "senna"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D012676"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "cholestatic hepatitis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D002779"
+      }
+    ],
+    "relations": [
+      {
+        "arg1": 0,
+        "relation": "CID",
+        "arg2": 1
+      }
+    ]
+  },
+  {
+    "doc_key": "69",
+    "sentences": [
+      "Renal failure is a rare complication associated with the use of rifampicin for the treatment of tuberculosis , usually occurring well into the course of therapy ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          0,
+          1
+        ],
+        "name": "Renal failure",
+        "entity_type": "Disease",
+        "entity_id": "D051437"
+      },
+      {
+        "span": [
+          11,
+          11
+        ],
+        "name": "rifampicin",
+        "entity_type": "Chemical",
+        "entity_id": "D012293"
+      },
+      {
+        "span": [
+          16,
+          16
+        ],
+        "name": "tuberculosis",
+        "entity_type": "Disease",
+        "entity_id": "D014376"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Renal failure"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D051437"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "rifampicin"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D012293"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "tuberculosis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D014376"
+      }
+    ],
+    "relations": [
+      {
+        "arg1": 1,
+        "relation": "CID",
+        "arg2": 0
+      }
+    ]
+  },
+  {
+    "doc_key": "70",
+    "sentences": [
+      "DESIGN : Description of the clinical findings in two patients with this condition ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "71",
+    "sentences": [
+      "We observed an unexpectedly rapid rise in platelet counts with complete haematological recovery after a BEAM regimen , in a patient who could not be rescued by autologous transplant but who received filgrastim , epoetin alfa , and ancestim ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          32,
+          32
+        ],
+        "name": "filgrastim",
+        "entity_type": "Chemical",
+        "entity_id": "C554038"
+      },
+      {
+        "span": [
+          38,
+          38
+        ],
+        "name": "ancestim",
+        "entity_type": "Chemical",
+        "entity_id": "C060752"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "filgrastim"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "C554038"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "ancestim"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "C060752"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "72",
+    "sentences": [
+      "Neisseria sicca , previously classified as a \" nonpathogenic \" organism , has now been recognized as a cause of many infections , including endocarditis and meningitis ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          21,
+          21
+        ],
+        "name": "infections",
+        "entity_type": "Disease",
+        "entity_id": "D007239"
+      },
+      {
+        "span": [
+          24,
+          24
+        ],
+        "name": "endocarditis",
+        "entity_type": "Disease",
+        "entity_id": "D004696"
+      },
+      {
+        "span": [
+          26,
+          26
+        ],
+        "name": "meningitis",
+        "entity_type": "Disease",
+        "entity_id": "D008581"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "infections"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D007239"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "endocarditis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D004696"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "meningitis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D008581"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "73",
+    "sentences": [
+      "In one patient this resulted in an ischemic and necrotic digital ulcus , necessitating surgical amputation ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          9,
+          9
+        ],
+        "name": "necrotic",
+        "entity_type": "Disease",
+        "entity_id": "D009336"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "necrotic"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D009336"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "74",
+    "sentences": [
+      "Animal studies suggest central D2 - type dopamine receptor stimulation and oxytocin release from the paraventricular nucleus of the hypothalamus mediate the effect ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          7,
+          7
+        ],
+        "name": "dopamine",
+        "entity_type": "Chemical",
+        "entity_id": "D004298"
+      },
+      {
+        "span": [
+          11,
+          11
+        ],
+        "name": "oxytocin",
+        "entity_type": "Chemical",
+        "entity_id": "D010121"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "dopamine"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D004298"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "oxytocin"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D010121"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "75",
+    "sentences": [
+      "Upon withdrawal of ibopamine but continuation of all other drugs , the patient recovered from the blood dyscrasia within 5 days and showed resolution of symptoms ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          3,
+          3
+        ],
+        "name": "ibopamine",
+        "entity_type": "Chemical",
+        "entity_id": "C023487"
+      },
+      {
+        "span": [
+          16,
+          17
+        ],
+        "name": "blood dyscrasia",
+        "entity_type": "Disease",
+        "entity_id": "D006402"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "ibopamine"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "C023487"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "blood dyscrasia"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D006402"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "76",
+    "sentences": [
+      "No patient had a history of previous chronic lung disease ; most were not immunocompromised ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          7,
+          9
+        ],
+        "name": "chronic lung disease",
+        "entity_type": "Disease",
+        "entity_id": "D029424"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "chronic lung disease"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D029424"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "77",
+    "sentences": [
+      "The cause is presumed to be secondary to hypercoagulability due to asparaginase - induced antithrombin III deficiency ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          8,
+          8
+        ],
+        "name": "hypercoagulability",
+        "entity_type": "Disease",
+        "entity_id": "D006947"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "hypercoagulability"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D006947"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "78",
+    "sentences": [
+      "Animal models showing paradoxical or opposing responses to serotonin - enhancing agents may apply to human sexual functioning as well ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          8,
+          8
+        ],
+        "name": "serotonin",
+        "entity_type": "Chemical",
+        "entity_id": "D012701"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "serotonin"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D012701"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "79",
+    "sentences": [
+      "Reduction in the number of cataplectic episodes per week after 20 weeks of treatment constituted the basis for efficacy determination ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          5,
+          5
+        ],
+        "name": "cataplectic",
+        "entity_type": "Disease",
+        "entity_id": "D002385"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "cataplectic"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D002385"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "80",
+    "sentences": [
+      "One patient died with myeloid leukemia at 43 . 5 months after initial treatment ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          4,
+          5
+        ],
+        "name": "myeloid leukemia",
+        "entity_type": "Disease",
+        "entity_id": "D007951"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "myeloid leukemia"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D007951"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "81",
+    "sentences": [
+      "A final dosage of 60 mg / kg was used ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "82",
+    "sentences": [
+      "The edema disappeared within 24 hr after stopping the infusion therapy ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          1,
+          1
+        ],
+        "name": "edema",
+        "entity_type": "Disease",
+        "entity_id": "D004487"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "edema"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D004487"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "83",
+    "sentences": [
+      "The cough continued for the duration of therapy with quinapril ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          1,
+          1
+        ],
+        "name": "cough",
+        "entity_type": "Disease",
+        "entity_id": "D003371"
+      },
+      {
+        "span": [
+          9,
+          9
+        ],
+        "name": "quinapril",
+        "entity_type": "Chemical",
+        "entity_id": "C041125"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "cough"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D003371"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "quinapril"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "C041125"
+      }
+    ],
+    "relations": [
+      {
+        "arg1": 1,
+        "relation": "CID",
+        "arg2": 0
+      }
+    ]
+  },
+  {
+    "doc_key": "84",
+    "sentences": [
+      "If troglitazone is used , frequent monitoring of serum aminotransferases and symptoms is mandatory ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          1,
+          1
+        ],
+        "name": "troglitazone",
+        "entity_type": "Chemical",
+        "entity_id": "C057693"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "troglitazone"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "C057693"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "85",
+    "sentences": [
+      "A 29 - year - old woman who underwent laser in situ keratomileusis ( LASIK ) for myopic astigmatism in both eyes presented with severe pain , photophobia and decreased visual acuity in the left eye eight days after surgery ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          17,
+          18
+        ],
+        "name": "myopic astigmatism",
+        "entity_type": "Disease",
+        "entity_id": "D001251"
+      },
+      {
+        "span": [
+          25,
+          25
+        ],
+        "name": "pain",
+        "entity_type": "Disease",
+        "entity_id": "D010146"
+      },
+      {
+        "span": [
+          27,
+          27
+        ],
+        "name": "photophobia",
+        "entity_type": "Disease",
+        "entity_id": "D020795"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "myopic astigmatism"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D001251"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "pain"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D010146"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "photophobia"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D020795"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "86",
+    "sentences": [
+      "A case of cataract development in a patient with atopic dermatitis is presented ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          3,
+          3
+        ],
+        "name": "cataract",
+        "entity_type": "Disease",
+        "entity_id": "D002386"
+      },
+      {
+        "span": [
+          9,
+          10
+        ],
+        "name": "atopic dermatitis",
+        "entity_type": "Disease",
+        "entity_id": "D003876"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "cataract"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D002386"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "atopic dermatitis"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D003876"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "87",
+    "sentences": [
+      "Serotyping revealed that the two episodes of bacteraemia were caused by different strains ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          7,
+          7
+        ],
+        "name": "bacteraemia",
+        "entity_type": "Disease",
+        "entity_id": "D016470"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "bacteraemia"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D016470"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "88",
+    "sentences": [
+      "To our knowledge , this is the first case of stroke occurring in a pregnant woman following vasopressor therapy for spinal anesthesia - induced hypotension ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          10,
+          10
+        ],
+        "name": "stroke",
+        "entity_type": "Disease",
+        "entity_id": "D020521"
+      },
+      {
+        "span": [
+          24,
+          24
+        ],
+        "name": "hypotension",
+        "entity_type": "Disease",
+        "entity_id": "D007022"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "stroke"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D020521"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "hypotension"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D007022"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "89",
+    "sentences": [
+      "It is often misdiagnosed as multiple sclerosis ( MS ) from which it differs in its clinical presentation , course of disease and prognosis ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          5,
+          6
+        ],
+        "name": "multiple sclerosis",
+        "entity_type": "Disease",
+        "entity_id": "D009103"
+      },
+      {
+        "span": [
+          8,
+          8
+        ],
+        "name": "MS",
+        "entity_type": "Disease",
+        "entity_id": "D009103"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0,
+          1
+        ],
+        "mention_names": [
+          "multiple sclerosis",
+          "MS"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D009103"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "90",
+    "sentences": [
+      "Chryseobacterium indologenes is a non - fermentative Gram - negative bacillus that is a rare pathogen in humans ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "91",
+    "sentences": [
+      "New lesions gradually spread to the arms and trunk ( Fig . 1 ) ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "92",
+    "sentences": [
+      "A 24 - year - old woman with ALL developed severe epigastric pain 168 days after CBSCT , followed by blistering eruptions 2 days later ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          8,
+          8
+        ],
+        "name": "ALL",
+        "entity_type": "Disease",
+        "entity_id": "D007725"
+      },
+      {
+        "span": [
+          11,
+          12
+        ],
+        "name": "epigastric pain",
+        "entity_type": "Disease",
+        "entity_id": "D048949"
+      },
+      {
+        "span": [
+          16,
+          16
+        ],
+        "name": "CBSCT",
+        "entity_type": "Chemical",
+        "entity_id": "D008755"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "ALL"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D007725"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "epigastric pain"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D048949"
+      },
+      {
+        "mention_indices": [
+          2
+        ],
+        "mention_names": [
+          "CBSCT"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D008755"
+      }
+    ],
+    "relations": [
+      {
+        "arg1": 2,
+        "relation": "CID",
+        "arg2": 1
+      }
+    ]
+  },
+  {
+    "doc_key": "93",
+    "sentences": [
+      "In the untreated infant with Menkes Kinky Hair Syndrome , copper concentrations in brain and liver are deficient , while excessive copper accumulates in other tissues ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          5,
+          8
+        ],
+        "name": "Menkes Kinky Hair Syndrome",
+        "entity_type": "Disease",
+        "entity_id": "D011535"
+      },
+      {
+        "span": [
+          10,
+          10
+        ],
+        "name": "copper",
+        "entity_type": "Chemical",
+        "entity_id": "D003300"
+      },
+      {
+        "span": [
+          21,
+          21
+        ],
+        "name": "copper",
+        "entity_type": "Chemical",
+        "entity_id": "D003300"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Menkes Kinky Hair Syndrome"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D011535"
+      },
+      {
+        "mention_indices": [
+          1,
+          2
+        ],
+        "mention_names": [
+          "copper",
+          "copper"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D003300"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "94",
+    "sentences": [
+      "Methotrexate serum concentrations must be monitored because of the possible toxicity of drug elimination delay ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          0,
+          0
+        ],
+        "name": "Methotrexate",
+        "entity_type": "Chemical",
+        "entity_id": "D008727"
+      },
+      {
+        "span": [
+          10,
+          10
+        ],
+        "name": "toxicity",
+        "entity_type": "Disease",
+        "entity_id": "D064420"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Methotrexate"
+        ],
+        "entity_type": "Chemical",
+        "entity_id": "D008727"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "toxicity"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D064420"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "95",
+    "sentences": [
+      "A male patient with malignant lymphoma and thyroid papillary carcinoma after pediatric renal transplantation ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          4,
+          5
+        ],
+        "name": "malignant lymphoma",
+        "entity_type": "Disease",
+        "entity_id": "D008223"
+      },
+      {
+        "span": [
+          7,
+          9
+        ],
+        "name": "thyroid papillary carcinoma",
+        "entity_type": "Disease",
+        "entity_id": "D065646"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "malignant lymphoma"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D008223"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "thyroid papillary carcinoma"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D065646"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "96",
+    "sentences": [
+      "Two patients died ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "97",
+    "sentences": [
+      "Hypercalcemia occurs frequently after renal transplantation ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          0,
+          0
+        ],
+        "name": "Hypercalcemia",
+        "entity_type": "Disease",
+        "entity_id": "D006934"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Hypercalcemia"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D006934"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "98",
+    "sentences": [
+      "Visual acuity had improved to 20 / 30 ( + 2 ) O . D . and 20 / 30 O . S ."
+    ],
+    "mentions": [],
+    "entities": [],
+    "relations": []
+  },
+  {
+    "doc_key": "99",
+    "sentences": [
+      "Both asthma and thyroid disease are common disorders that occasionally occur together ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          1,
+          1
+        ],
+        "name": "asthma",
+        "entity_type": "Disease",
+        "entity_id": "D001249"
+      },
+      {
+        "span": [
+          3,
+          4
+        ],
+        "name": "thyroid disease",
+        "entity_type": "Disease",
+        "entity_id": "D013959"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "asthma"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D001249"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "thyroid disease"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D013959"
+      }
+    ],
+    "relations": []
+  },
+  {
+    "doc_key": "100",
+    "sentences": [
+      "The challenge test for Stevens - Johnson syndrome type drug allergy is very risky ."
+    ],
+    "mentions": [
+      {
+        "span": [
+          4,
+          10
+        ],
+        "name": "Stevens - Johnson syndrome type drug allergy",
+        "entity_type": "Disease",
+        "entity_id": "D013262"
+      },
+      {
+        "span": [
+          9,
+          10
+        ],
+        "name": "drug allergy",
+        "entity_type": "Disease",
+        "entity_id": "D004342"
+      }
+    ],
+    "entities": [
+      {
+        "mention_indices": [
+          0
+        ],
+        "mention_names": [
+          "Stevens - Johnson syndrome type drug allergy"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D013262"
+      },
+      {
+        "mention_indices": [
+          1
+        ],
+        "mention_names": [
+          "drug allergy"
+        ],
+        "entity_type": "Disease",
+        "entity_id": "D004342"
+      }
+    ],
+    "relations": []
+  }
+]

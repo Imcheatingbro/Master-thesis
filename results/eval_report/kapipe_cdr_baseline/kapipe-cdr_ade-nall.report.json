@@ -1,0 +1,90 @@
+{
+  "n_samples": 2942,
+  "n_causal_gold": 448,
+  "n_causal_pred": 365,
+  "detection": {
+    "tp": 300,
+    "tn": 2429,
+    "fp": 65,
+    "fn": 148,
+    "accuracy": 0.9276002719238613,
+    "precision": 0.821917808219178,
+    "recall": 0.6696428571428571,
+    "f1": 0.7380073800738007
+  },
+  "extraction": {
+    "primary_metric": "anchor_window",
+    "strict_token_f1": {
+      "all_samples": {
+        "tp": 308,
+        "fp": 161,
+        "fn": 355,
+        "precision": 0.6567164179104478,
+        "recall": 0.4645550527903469,
+        "f1": 0.5441696113074206,
+        "n_eval_samples": 2942,
+        "n_gold_triples": 663,
+        "n_pred_triples": 469
+      },
+      "detected_only": {
+        "tp": 308,
+        "fp": 86,
+        "fn": 161,
+        "precision": 0.7817258883248731,
+        "recall": 0.6567164179104478,
+        "f1": 0.7137891077636153,
+        "n_eval_samples": 300,
+        "n_gold_triples": 469,
+        "n_pred_triples": 394
+      }
+    },
+    "anchor_window": {
+      "all_samples": {
+        "tp": 272,
+        "fp": 197,
+        "fn": 391,
+        "precision": 0.579957356076759,
+        "recall": 0.41025641025641024,
+        "f1": 0.48056537102473496,
+        "n_eval_samples": 2942,
+        "n_gold_triples": 663,
+        "n_pred_triples": 469
+      },
+      "detected_only": {
+        "tp": 272,
+        "fp": 122,
+        "fn": 197,
+        "precision": 0.6903553299492385,
+        "recall": 0.579957356076759,
+        "f1": 0.6303592120509849,
+        "n_eval_samples": 300,
+        "n_gold_triples": 469,
+        "n_pred_triples": 394
+      }
+    },
+    "all_samples": {
+      "tp": 272,
+      "fp": 197,
+      "fn": 391,
+      "precision": 0.579957356076759,
+      "recall": 0.41025641025641024,
+      "f1": 0.48056537102473496,
+      "n_eval_samples": 2942,
+      "n_gold_triples": 663,
+      "n_pred_triples": 469
+    },
+    "detected_only": {
+      "tp": 272,
+      "fp": 122,
+      "fn": 197,
+      "precision": 0.6903553299492385,
+      "recall": 0.579957356076759,
+      "f1": 0.6303592120509849,
+      "n_eval_samples": 300,
+      "n_gold_triples": 469,
+      "n_pred_triples": 394
+    }
+  },
+  "fuzzy_threshold": 0.8,
+  "anchor_window_threshold": 0.9
+}

@@ -1,0 +1,90 @@
+{
+  "n_samples": 10,
+  "n_causal_gold": 3,
+  "n_causal_pred": 2,
+  "detection": {
+    "tp": 2,
+    "tn": 7,
+    "fp": 0,
+    "fn": 1,
+    "accuracy": 0.9,
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1": 0.8
+  },
+  "extraction": {
+    "primary_metric": "anchor_window",
+    "strict_token_f1": {
+      "all_samples": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 5,
+        "precision": 1.0,
+        "recall": 0.375,
+        "f1": 0.5454545454545454,
+        "n_eval_samples": 10,
+        "n_gold_triples": 8,
+        "n_pred_triples": 3
+      },
+      "detected_only": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.42857142857142855,
+        "f1": 0.6,
+        "n_eval_samples": 2,
+        "n_gold_triples": 7,
+        "n_pred_triples": 3
+      }
+    },
+    "anchor_window": {
+      "all_samples": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 6,
+        "precision": 0.6666666666666666,
+        "recall": 0.25,
+        "f1": 0.36363636363636365,
+        "n_eval_samples": 10,
+        "n_gold_triples": 8,
+        "n_pred_triples": 3
+      },
+      "detected_only": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 5,
+        "precision": 0.6666666666666666,
+        "recall": 0.2857142857142857,
+        "f1": 0.4,
+        "n_eval_samples": 2,
+        "n_gold_triples": 7,
+        "n_pred_triples": 3
+      }
+    },
+    "all_samples": {
+      "tp": 2,
+      "fp": 1,
+      "fn": 6,
+      "precision": 0.6666666666666666,
+      "recall": 0.25,
+      "f1": 0.36363636363636365,
+      "n_eval_samples": 10,
+      "n_gold_triples": 8,
+      "n_pred_triples": 3
+    },
+    "detected_only": {
+      "tp": 2,
+      "fp": 1,
+      "fn": 5,
+      "precision": 0.6666666666666666,
+      "recall": 0.2857142857142857,
+      "f1": 0.4,
+      "n_eval_samples": 2,
+      "n_gold_triples": 7,
+      "n_pred_triples": 3
+    }
+  },
+  "fuzzy_threshold": 0.8,
+  "anchor_window_threshold": 0.9
+}

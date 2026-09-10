@@ -1,0 +1,500 @@
+{"prediction": {"has_causal": false, "id": 141, "triples": []}, "sample_id": 141}
+{"prediction": {"has_causal": true, "id": 1386, "triples": [{"cause": {"span": "demanding exemption from payment of Value Added Tax ( VAT ) with retrospective effect from 2003 ."}, "effect": {"span": "The Greater Hyderabad Cab and Bus Operators Association went on strike"}, "relation": "caused"}]}, "sample_id": 1386}
+{"prediction": {"has_causal": true, "id": 2991, "triples": [{"cause": {"span": "Today 's incident"}, "effect": {"span": "cast a shadow over the February 16 Lok Sabhapolls in the state ."}, "relation": "caused"}]}, "sample_id": 2991}
+{"prediction": {"has_causal": false, "id": 2634, "triples": []}, "sample_id": 2634}
+{"prediction": {"has_causal": false, "id": 802, "triples": []}, "sample_id": 802}
+{"prediction": {"has_causal": true, "id": 88, "triples": [{"cause": {"span": "due to the bandh"}, "effect": {"span": "Some schools which had to postpone their mid-term examinations"}, "relation": "caused"}]}, "sample_id": 88}
+{"prediction": {"has_causal": true, "id": 1835, "triples": [{"cause": {"span": "for the murder of two ANC branch leaders on the KwaZulu-Natal south coast"}, "effect": {"span": "Two men have been arrested"}, "relation": "caused"}]}, "sample_id": 1835}
+{"prediction": {"has_causal": false, "id": 1032, "triples": []}, "sample_id": 1032}
+{"prediction": {"has_causal": false, "id": 1548, "triples": []}, "sample_id": 1548}
+{"prediction": {"has_causal": false, "id": 2714, "triples": []}, "sample_id": 2714}
+{"prediction": {"has_causal": true, "id": 407, "triples": [{"cause": {"span": "when the police removed all 850 workers from inside the plant on Saturday morning and detained them at two locations in Oragadam ."}, "effect": {"span": "It ended"}, "relation": "caused"}]}, "sample_id": 407}
+{"prediction": {"has_causal": false, "id": 764, "triples": []}, "sample_id": 764}
+{"prediction": {"has_causal": false, "id": 1269, "triples": []}, "sample_id": 1269}
+{"prediction": {"has_causal": false, "id": 2873, "triples": []}, "sample_id": 2873}
+{"prediction": {"has_causal": false, "id": 2992, "triples": []}, "sample_id": 2992}
+{"prediction": {"has_causal": false, "id": 2229, "triples": []}, "sample_id": 2229}
+{"prediction": {"has_causal": false, "id": 297, "triples": []}, "sample_id": 297}
+{"prediction": {"has_causal": false, "id": 2990, "triples": []}, "sample_id": 2990}
+{"prediction": {"has_causal": false, "id": 2890, "triples": []}, "sample_id": 2890}
+{"prediction": {"has_causal": false, "id": 582, "triples": []}, "sample_id": 582}
+{"prediction": {"has_causal": false, "id": 209, "triples": []}, "sample_id": 209}
+{"prediction": {"has_causal": false, "id": 2777, "triples": []}, "sample_id": 2777}
+{"prediction": {"has_causal": true, "id": 2342, "triples": [{"cause": {"span": "to mark their protest against the increase in school and admission fee ."}, "effect": {"span": "Parents and guardians of students from Lord Mahavira Jain Public School , Ambala Cantonment , held a demonstration and dharna , on Thursday"}, "relation": "caused"}]}, "sample_id": 2342}
+{"prediction": {"has_causal": false, "id": 1406, "triples": []}, "sample_id": 1406}
+{"prediction": {"has_causal": false, "id": 1838, "triples": []}, "sample_id": 1838}
+{"prediction": {"has_causal": true, "id": 1403, "triples": [{"cause": {"span": "as he had violated his bail conditions related to an earlier case when he was arrested during student protests in February last year ."}, "effect": {"span": "Khanyile was last year denied bail"}, "relation": "caused"}]}, "sample_id": 1403}
+{"prediction": {"has_causal": false, "id": 2072, "triples": []}, "sample_id": 2072}
+{"prediction": {"has_causal": true, "id": 1542, "triples": [{"cause": {"span": "when the trial court and the Bombay High Court acquitted the two saying there was no evidence against the two ."}, "effect": {"span": "Mumbai Crime Branch ... had to face embarrassment twice"}, "relation": "caused"}]}, "sample_id": 1542}
+{"prediction": {"has_causal": true, "id": 1527, "triples": [{"cause": {"span": "due to an indefinite strike by doctors"}, "effect": {"span": "The medical crisis in Rajasthan"}, "relation": "caused"}, {"cause": {"span": "an indefinite strike by doctors , which has crippled health services and left over a dozen patients dead"}, "effect": {"span": "5,000 doctors submitting their resignations ."}, "relation": "caused"}]}, "sample_id": 1527}
+{"prediction": {"has_causal": false, "id": 918, "triples": []}, "sample_id": 918}
+{"prediction": {"has_causal": true, "id": 1309, "triples": [{"cause": {"span": "for taking anti-people decisions ."}, "effect": {"span": "The BJP also held a protest and urged voters to reject the Congress"}, "relation": "caused"}]}, "sample_id": 1309}
+{"prediction": {"has_causal": false, "id": 597, "triples": []}, "sample_id": 597}
+{"prediction": {"has_causal": true, "id": 1440, "triples": [{"cause": {"span": "demanding action against the principal Chengal Raju and in-charge of the survey department Ramana Reddy ."}, "effect": {"span": "Hundreds of students along with parents took out a rally"}, "relation": "caused"}]}, "sample_id": 1440}
+{"prediction": {"has_causal": false, "id": 1629, "triples": []}, "sample_id": 1629}
+{"prediction": {"has_causal": false, "id": 2593, "triples": []}, "sample_id": 2593}
+{"prediction": {"has_causal": true, "id": 2525, "triples": [{"cause": {"span": "he pulled the trigger"}, "effect": {"span": "that killed Chika"}, "relation": "caused"}]}, "sample_id": 2525}
+{"prediction": {"has_causal": true, "id": 621, "triples": [{"cause": {"span": "rivalry between student groups"}, "effect": {"span": "the violence in which firing from a country - made pistol allegedly took place and eight students were said to be injured"}, "relation": "caused"}]}, "sample_id": 621}
+{"prediction": {"has_causal": false, "id": 24, "triples": []}, "sample_id": 24}
+{"prediction": {"has_causal": true, "id": 1754, "triples": [{"cause": {"span": "to protest Kerala 's refusal to raise the storage level in the dam ."}, "effect": {"span": "political activists continued their protest in several places in Tamil Nadu , particularly districts fed by the Mullaperiyar waters"}, "relation": "caused"}]}, "sample_id": 1754}
+{"prediction": {"has_causal": false, "id": 1220, "triples": []}, "sample_id": 1220}
+{"prediction": {"has_causal": false, "id": 696, "triples": []}, "sample_id": 696}
+{"prediction": {"has_causal": false, "id": 71, "triples": []}, "sample_id": 71}
+{"prediction": {"has_causal": true, "id": 1314, "triples": [{"cause": {"span": "as they have to concentrate on exams"}, "effect": {"span": "Students declare that they cannot continue agitation"}, "relation": "caused"}]}, "sample_id": 1314}
+{"prediction": {"has_causal": false, "id": 328, "triples": []}, "sample_id": 328}
+{"prediction": {"has_causal": false, "id": 1793, "triples": []}, "sample_id": 1793}
+{"prediction": {"has_causal": true, "id": 1549, "triples": [{"cause": {"span": "as the LeT terrorist was badly injured in the gun-fight ."}, "effect": {"span": "the map recovered from killed terrorist pocket should have some wrinkles on it and blood spots"}, "relation": "caused"}]}, "sample_id": 1549}
+{"prediction": {"has_causal": true, "id": 393, "triples": [{"cause": {"span": "When they failed to comply"}, "effect": {"span": "a team of MC officials was dispatched to serve a final notice which came under attack by the mob ."}, "relation": "caused"}]}, "sample_id": 393}
+{"prediction": {"has_causal": true, "id": 978, "triples": [{"cause": {"span": "the strikes"}, "effect": {"span": "brought farming activity to a standstill in fruit-growing regions of the province in recent months ."}, "relation": "caused"}]}, "sample_id": 978}
+{"prediction": {"has_causal": true, "id": 1913, "triples": [{"cause": {"span": "accusing them of being police spies"}, "effect": {"span": "CPI-Maoist cadres shot dead three persons , accusing them of being police spies , at Borlagunda village in Andhra Pradesh 's Karimnagar district ."}, "relation": "caused"}]}, "sample_id": 1913}
+{"prediction": {"has_causal": false, "id": 2162, "triples": []}, "sample_id": 2162}
+{"prediction": {"has_causal": true, "id": 2459, "triples": [{"cause": {"span": "A strike called by a section of employees against the government decision to include the government Secretariat in the Kerala Administrative Service ( KAS )"}, "effect": {"span": "crippled the functioning of the State administrative headquarters on Thursday ."}, "relation": "caused"}]}, "sample_id": 2459}
+{"prediction": {"has_causal": true, "id": 1833, "triples": [{"cause": {"span": "to get their arrested colleagues released"}, "effect": {"span": "the fully-armed Naxalites have resorted to such high profile abductions"}, "relation": "caused"}]}, "sample_id": 1833}
+{"prediction": {"has_causal": false, "id": 2830, "triples": []}, "sample_id": 2830}
+{"prediction": {"has_causal": false, "id": 2430, "triples": []}, "sample_id": 2430}
+{"prediction": {"has_causal": false, "id": 271, "triples": []}, "sample_id": 271}
+{"prediction": {"has_causal": true, "id": 2006, "triples": [{"cause": {"span": "The alleged attack on Nagari YSRC MLA RK Roja by some TDP men at Nagari on Friday mid-night , when she went there for offering the ‘ first Harathi ’ to the processional deity of Goddess Gangamma ,"}, "effect": {"span": "tension in and round the town on Saturday with the actress-turned-politician and her supports staging widespread protests over the incident ."}, "relation": "caused"}]}, "sample_id": 2006}
+{"prediction": {"has_causal": true, "id": 286, "triples": [{"cause": {"span": "the subject of demonstrations by tens of thousands of Shifang residents ."}, "effect": {"span": "Authorities yesterday said they would scrap the 10.4 billion yuan ( HK $ 12.7 billion ) project"}, "relation": "caused"}]}, "sample_id": 286}
+{"prediction": {"has_causal": false, "id": 1577, "triples": []}, "sample_id": 1577}
+{"prediction": {"has_causal": true, "id": 2039, "triples": [{"cause": {"span": "against the Circle Inspector 's highhandedness ."}, "effect": {"span": "They protested"}, "relation": "caused"}]}, "sample_id": 2039}
+{"prediction": {"has_causal": false, "id": 1174, "triples": []}, "sample_id": 1174}
+{"prediction": {"has_causal": true, "id": 617, "triples": [{"cause": {"span": "after two farmers accused of the murder of Matlhomola Jonas Mosweu were granted bail ."}, "effect": {"span": "the violence that flared up in Coligny , in the North West"}, "relation": "caused"}]}, "sample_id": 617}
+{"prediction": {"has_causal": false, "id": 1860, "triples": []}, "sample_id": 1860}
+{"prediction": {"has_causal": false, "id": 2748, "triples": []}, "sample_id": 2748}
+{"prediction": {"has_causal": false, "id": 571, "triples": []}, "sample_id": 571}
+{"prediction": {"has_causal": false, "id": 1862, "triples": []}, "sample_id": 1862}
+{"prediction": {"has_causal": true, "id": 2159, "triples": [{"cause": {"span": "Concerned that this new policy would reduce their children ’ s chances of getting into university"}, "effect": {"span": "they marched in the streets to protest ."}, "relation": "caused"}]}, "sample_id": 2159}
+{"prediction": {"has_causal": false, "id": 2318, "triples": []}, "sample_id": 2318}
+{"prediction": {"has_causal": false, "id": 2784, "triples": []}, "sample_id": 2784}
+{"prediction": {"has_causal": false, "id": 2412, "triples": []}, "sample_id": 2412}
+{"prediction": {"has_causal": false, "id": 1571, "triples": []}, "sample_id": 1571}
+{"prediction": {"has_causal": false, "id": 1074, "triples": []}, "sample_id": 1074}
+{"prediction": {"has_causal": false, "id": 2387, "triples": []}, "sample_id": 2387}
+{"prediction": {"has_causal": true, "id": 301, "triples": [{"cause": {"span": "The action"}, "effect": {"span": "helped launch a 79-day street occupation that was described as the greatest challenge to China ’ s Communist rulers since the 1989 Tiananmen protests ."}, "relation": "caused"}]}, "sample_id": 301}
+{"prediction": {"has_causal": true, "id": 994, "triples": [{"cause": {"span": "Angry over the denial of a ticket to Suryakant Nagamarapalli"}, "effect": {"span": "his supporters attacked the district BJP office in Bidar and vandalised the furniture on Friday ."}, "relation": "caused"}]}, "sample_id": 994}
+{"prediction": {"has_causal": true, "id": 2252, "triples": [{"cause": {"span": "Extravagant excess has fuelled anger"}, "effect": {"span": "Keith Cheng , Sheung Shui"}, "relation": "caused"}]}, "sample_id": 2252}
+{"prediction": {"has_causal": true, "id": 2069, "triples": [{"cause": {"span": "in a bid to halt the killing ."}, "effect": {"span": "authorities had gradually been transforming the region into a police state"}, "relation": "caused"}]}, "sample_id": 2069}
+{"prediction": {"has_causal": true, "id": 731, "triples": [{"cause": {"span": "following a wordy duel over some poll issues ."}, "effect": {"span": "the two factions got engaged in the fight"}, "relation": "caused"}]}, "sample_id": 731}
+{"prediction": {"has_causal": true, "id": 1918, "triples": [{"cause": {"span": "in communal clashes that began on Saturday last over the issue of putting up religious flags ."}, "effect": {"span": "Two persons had been killed and over 90 injured"}, "relation": "caused"}]}, "sample_id": 1918}
+{"prediction": {"has_causal": true, "id": 318, "triples": [{"cause": {"span": "to draw the attention of the officials to the poor condition of the road ."}, "effect": {"span": "The protesters planted the saplings in potholes"}, "relation": "caused"}]}, "sample_id": 318}
+{"prediction": {"has_causal": false, "id": 568, "triples": []}, "sample_id": 568}
+{"prediction": {"has_causal": false, "id": 2382, "triples": []}, "sample_id": 2382}
+{"prediction": {"has_causal": false, "id": 251, "triples": []}, "sample_id": 251}
+{"prediction": {"has_causal": false, "id": 2139, "triples": []}, "sample_id": 2139}
+{"prediction": {"has_causal": true, "id": 6, "triples": [{"cause": {"span": "To show our solidarity and say no to terrorism"}, "effect": {"span": "we have to stand up."}, "relation": "caused"}, {"cause": {"span": "Yuen Long was under terrorist attack"}, "effect": {"span": "we have no choice but to take it back."}, "relation": "caused"}, {"cause": {"span": "over a controversial bill that would allow suspects to be extradited from Hong Kong to mainland China"}, "effect": {"span": "The protests"}, "relation": "caused"}]}, "sample_id": 6}
+{"prediction": {"has_causal": true, "id": 1710, "triples": [{"cause": {"span": "about a water shortage in Mothutlung ."}, "effect": {"span": "Residents started protesting on Sunday afternoon"}, "relation": "caused"}]}, "sample_id": 1710}
+{"prediction": {"has_causal": true, "id": 2883, "triples": [{"cause": {"span": "to show black flags to the Prime Minister in his way back to the Ghughra helipad ."}, "effect": {"span": "a group of advocates who had gathered at Favvara circle"}, "relation": "caused"}, {"cause": {"span": "a group of advocates who had gathered at Favvara circle to show black flags to the Prime Minister in his way back to the Ghughra helipad ."}, "effect": {"span": "Police used mild force to disperse"}, "relation": "caused"}]}, "sample_id": 2883}
+{"prediction": {"has_causal": true, "id": 3035, "triples": [{"cause": {"span": "in protest against selective eviction of vendors in front of Sambalpur Town police station"}, "effect": {"span": "Hundreds of roadside vendors under the banner of the Sambalpur Utha Dokani Sangha staged a demonstration in front of the office of the DIG ( NR ) on Wednesday"}, "relation": "caused"}, {"cause": {"span": "and demanded their rehabilitation ."}, "effect": {"span": "Hundreds of roadside vendors under the banner of the Sambalpur Utha Dokani Sangha staged a demonstration in front of the office of the DIG ( NR ) on Wednesday"}, "relation": "caused"}]}, "sample_id": 3035}
+{"prediction": {"has_causal": false, "id": 531, "triples": []}, "sample_id": 531}
+{"prediction": {"has_causal": true, "id": 2271, "triples": [{"cause": {"span": "to observe the death anniversary of Swami Laxamananda Saraswati"}, "effect": {"span": "the members of the VHP assembled there"}, "relation": "caused"}, {"cause": {"span": "whose killing had sparked a large scale riot in the area in 2008"}, "effect": {"span": "The communally sensitive Kandhamal district was today put under high security blanket"}, "relation": "caused"}]}, "sample_id": 2271}
+{"prediction": {"has_causal": true, "id": 287, "triples": [{"cause": {"span": "over polluting projects"}, "effect": {"span": "The massive three-day protest this week was the latest in a series of grass-roots demonstrations"}, "relation": "caused"}]}, "sample_id": 287}
+{"prediction": {"has_causal": true, "id": 70, "triples": [{"cause": {"span": "Influenced by religious extremism"}, "effect": {"span": "trio plotted knife rampage , court says"}, "relation": "caused"}, {"cause": {"span": "for taking part"}, "effect": {"span": "a fourth defendant handed life sentence"}, "relation": "caused"}]}, "sample_id": 70}
+{"prediction": {"has_causal": true, "id": 2067, "triples": [{"cause": {"span": "demanding a monthly basic salary of R12,500 ."}, "effect": {"span": "On January 23 , Amcu members at Lonmin , Amplats , and Implats downed tools"}, "relation": "caused"}]}, "sample_id": 2067}
+{"prediction": {"has_causal": false, "id": 204, "triples": []}, "sample_id": 204}
+{"prediction": {"has_causal": false, "id": 3063, "triples": []}, "sample_id": 3063}
+{"prediction": {"has_causal": true, "id": 2957, "triples": [{"cause": {"span": "following the decision of the State Government to resume work from early next month ."}, "effect": {"span": "The meeting discussed strategies to intensify the agitation against the Posco project and counter police action during construction of coastal road"}, "relation": "caused"}]}, "sample_id": 2957}
+{"prediction": {"has_causal": true, "id": 1300, "triples": [{"cause": {"span": "after a third day of protests in Tianjin over the government response to Wednesday ’ s explosions"}, "effect": {"span": "The newspaper ’ s insistence"}, "relation": "caused"}, {"cause": {"span": "over the government response to Wednesday ’ s explosions"}, "effect": {"span": "a third day of protests in Tianjin"}, "relation": "caused"}, {"cause": {"span": "which followed a blaze at a warehouse storing hazardous chemicals ."}, "effect": {"span": "Wednesday ’ s explosions"}, "relation": "caused"}]}, "sample_id": 1300}
+{"prediction": {"has_causal": true, "id": 2671, "triples": [{"cause": {"span": "Raising slogans against the State Government ’ s ban on toddy tapping , which was later upheld by the Supreme Court ,"}, "effect": {"span": "some protestors drank toddy and certified that it was only a health drink with insignificant alcohol content and not an alcoholic beverage like the brew being sold in the IMFL outlets of the State Government ."}, "relation": "caused"}]}, "sample_id": 2671}
+{"prediction": {"has_causal": false, "id": 2496, "triples": []}, "sample_id": 2496}
+{"prediction": {"has_causal": false, "id": 1231, "triples": []}, "sample_id": 1231}
+{"prediction": {"has_causal": false, "id": 1925, "triples": []}, "sample_id": 1925}
+{"prediction": {"has_causal": false, "id": 55, "triples": []}, "sample_id": 55}
+{"prediction": {"has_causal": false, "id": 1301, "triples": []}, "sample_id": 1301}
+{"prediction": {"has_causal": false, "id": 112, "triples": []}, "sample_id": 112}
+{"prediction": {"has_causal": false, "id": 891, "triples": []}, "sample_id": 891}
+{"prediction": {"has_causal": false, "id": 1876, "triples": []}, "sample_id": 1876}
+{"prediction": {"has_causal": true, "id": 2842, "triples": [{"cause": {"span": "as he was bombarded by questions about the fiasco on May Day when a booing crowd had refused to let him speak at a rally in Bloemfontein on Monday ."}, "effect": {"span": "South African President Jacob Zuma was ushered away by minders on Wednesday"}, "relation": "caused"}]}, "sample_id": 2842}
+{"prediction": {"has_causal": true, "id": 525, "triples": [{"cause": {"span": "after a youth belonging to a minority Muslim sect was allegedly severely injured in a thrashing by a youth from the majority sect following an altercation ."}, "effect": {"span": "The clashes erupted"}, "relation": "caused"}]}, "sample_id": 525}
+{"prediction": {"has_causal": true, "id": 2790, "triples": [{"cause": {"span": "to curb the mushrooming of structures on the land"}, "effect": {"span": "the municipality obtained a court order to remove the land invaders ."}, "relation": "caused"}]}, "sample_id": 2790}
+{"prediction": {"has_causal": false, "id": 431, "triples": []}, "sample_id": 431}
+{"prediction": {"has_causal": true, "id": 1432, "triples": [{"cause": {"span": "to register their protest against the delay in categorisation of SCs ."}, "effect": {"span": "The agitating activists attacked the ruling party office"}, "relation": "caused"}]}, "sample_id": 1432}
+{"prediction": {"has_causal": false, "id": 1139, "triples": []}, "sample_id": 1139}
+{"prediction": {"has_causal": true, "id": 1551, "triples": [{"cause": {"span": "Upset with Probe into AIADMK Man 's Murder"}, "effect": {"span": "Wife Stages Stir"}, "relation": "caused"}]}, "sample_id": 1551}
+{"prediction": {"has_causal": false, "id": 3036, "triples": []}, "sample_id": 3036}
+{"prediction": {"has_causal": false, "id": 2313, "triples": []}, "sample_id": 2313}
+{"prediction": {"has_causal": false, "id": 89, "triples": []}, "sample_id": 89}
+{"prediction": {"has_causal": true, "id": 2740, "triples": [{"cause": {"span": "for setting fire to the councillor 's house ."}, "effect": {"span": "Another person was arrested"}, "relation": "caused"}]}, "sample_id": 2740}
+{"prediction": {"has_causal": true, "id": 68, "triples": [{"cause": {"span": "after intelligence inputs that a group of Lashkar terrorists have plotted to kill Gujarat Chief Minister Narendra Modi to avenge the 2002 communal riots in the state ."}, "effect": {"span": "Ishrat Jahan , a 19 - year-old college student was killed along with three others on June 15 , 2004 allegedly by a team of Crime Branch officials on the outskirts of Ahmedabad"}, "relation": "caused"}]}, "sample_id": 68}
+{"prediction": {"has_causal": false, "id": 2007, "triples": []}, "sample_id": 2007}
+{"prediction": {"has_causal": false, "id": 2803, "triples": []}, "sample_id": 2803}
+{"prediction": {"has_causal": false, "id": 123, "triples": []}, "sample_id": 123}
+{"prediction": {"has_causal": false, "id": 2075, "triples": []}, "sample_id": 2075}
+{"prediction": {"has_causal": true, "id": 612, "triples": [{"cause": {"span": "after the violence on Wednesday in which one senior company official was killed ."}, "effect": {"span": "Maruti Suzuki India Friday said its plant was remain closed for the second day"}, "relation": "caused"}]}, "sample_id": 612}
+{"prediction": {"has_causal": false, "id": 1818, "triples": []}, "sample_id": 1818}
+{"prediction": {"has_causal": false, "id": 857, "triples": []}, "sample_id": 857}
+{"prediction": {"has_causal": true, "id": 2719, "triples": [{"cause": {"span": "after spotting rods similar to those used against passengers last Sunday"}, "effect": {"span": "a group of protesters had smashed the windows of a Lexus near the train station , leaving fliers criticising the police on the bonnet ."}, "relation": "caused"}]}, "sample_id": 2719}
+{"prediction": {"has_causal": true, "id": 919, "triples": [{"cause": {"span": "after his expulsion from the University of the North ( Turfloop )"}, "effect": {"span": "He enrolled at UNISA"}, "relation": "caused"}, {"cause": {"span": "for political activism , which arose from the organisation of the pro-Frelimo rallies in 1974 under the banner of the then South African Students Organisation ( SASO ) ."}, "effect": {"span": "his expulsion from the University of the North ( Turfloop )"}, "relation": "caused"}]}, "sample_id": 919}
+{"prediction": {"has_causal": true, "id": 3045, "triples": [{"cause": {"span": "still haunted by memories of the 2002 Gujarat riots"}, "effect": {"span": "Muslims across the city of lakes ... say they will not vote for someone who was unable to stop a massacre of ‘ innocent people ’ in his state ."}, "relation": "caused"}]}, "sample_id": 3045}
+{"prediction": {"has_causal": false, "id": 2073, "triples": []}, "sample_id": 2073}
+{"prediction": {"has_causal": false, "id": 656, "triples": []}, "sample_id": 656}
+{"prediction": {"has_causal": false, "id": 2758, "triples": []}, "sample_id": 2758}
+{"prediction": {"has_causal": false, "id": 1575, "triples": []}, "sample_id": 1575}
+{"prediction": {"has_causal": false, "id": 3025, "triples": []}, "sample_id": 3025}
+{"prediction": {"has_causal": true, "id": 2571, "triples": [{"cause": {"span": "allegedly due to the negligence of the staff"}, "effect": {"span": "a 25 - year-old man who died at the Government Chest Hospital in Erragadda"}, "relation": "caused"}, {"cause": {"span": "The family of a 25 - year-old man who died at the Government Chest Hospital in Erragadda , allegedly due to the negligence of the staff"}, "effect": {"span": "protested at the hospital on Tuesday ."}, "relation": "caused"}]}, "sample_id": 2571}
+{"prediction": {"has_causal": true, "id": 2140, "triples": [{"cause": {"span": "This"}, "effect": {"span": "reportedly angered the owners , who first damaged the speakers of the protesters and then opened fire , injuring six persons ."}, "relation": "caused"}]}, "sample_id": 2140}
+{"prediction": {"has_causal": true, "id": 923, "triples": [{"cause": {"span": "reading : `` We demand decent salary with omnibus ''"}, "effect": {"span": "Marchers carried placards"}, "relation": "caused"}, {"cause": {"span": "and `` We demand stability at the metro police . ''"}, "effect": {"span": "Marchers carried placards"}, "relation": "caused"}]}, "sample_id": 923}
+{"prediction": {"has_causal": false, "id": 2730, "triples": []}, "sample_id": 2730}
+{"prediction": {"has_causal": true, "id": 2227, "triples": [{"cause": {"span": "The protest by NGO ‘ Swabhiman ’ led by Maharashtra Industry Minister Narayan Rane ’ s son Nitesh Rane against 15 percent water supply cut by the Shiv Sena-ruled Brihanmumbai Municipal Corporation ( BMC )"}, "effect": {"span": "claimed one life on Thursday ."}, "relation": "caused"}]}, "sample_id": 2227}
+{"prediction": {"has_causal": true, "id": 1544, "triples": [{"cause": {"span": "with an intention to submit a representation t o g o v e r n o r E S L Narasimhan ."}, "effect": {"span": "a 70 - member contingent of VHP and Bajrang Dal activists led by their leaders Yaman Singh and nearly 20 religious heads went in a procession towards the Raj Bhavan"}, "relation": "caused"}]}, "sample_id": 1544}
+{"prediction": {"has_causal": false, "id": 375, "triples": []}, "sample_id": 375}
+{"prediction": {"has_causal": false, "id": 653, "triples": []}, "sample_id": 653}
+{"prediction": {"has_causal": false, "id": 2575, "triples": []}, "sample_id": 2575}
+{"prediction": {"has_causal": false, "id": 2582, "triples": []}, "sample_id": 2582}
+{"prediction": {"has_causal": false, "id": 805, "triples": []}, "sample_id": 805}
+{"prediction": {"has_causal": true, "id": 2954, "triples": [{"cause": {"span": "in connection with the stone-throwing incident ."}, "effect": {"span": "Rajendran of the Thamizh Desiya Podhuvudamai Katchi , were arrested in Thanjavur , while 10 persons , including MDMK rural district secretary , Tiruchi , were held in Tiruchi"}, "relation": "caused"}]}, "sample_id": 2954}
+{"prediction": {"has_causal": true, "id": 1496, "triples": [{"cause": {"span": "because of the protest action that happened today in Tshwane"}, "effect": {"span": "our staff members were chased away by the community earlier"}, "relation": "caused"}]}, "sample_id": 1496}
+{"prediction": {"has_causal": false, "id": 2184, "triples": []}, "sample_id": 2184}
+{"prediction": {"has_causal": false, "id": 1305, "triples": []}, "sample_id": 1305}
+{"prediction": {"has_causal": true, "id": 2120, "triples": [{"cause": {"span": "demanding the removal of Justice K G Balakrishanan from the Chairman post of the National Human Rights Commission on December 17 ."}, "effect": {"span": "The Ernakulam Central Police on Tuesday arrested the Ernakulam Law College student who allegedly ran naked through MG road"}, "relation": "caused"}]}, "sample_id": 2120}
+{"prediction": {"has_causal": false, "id": 2154, "triples": []}, "sample_id": 2154}
+{"prediction": {"has_causal": true, "id": 718, "triples": [{"cause": {"span": "to mark the 75th anniversary of Black Christmas"}, "effect": {"span": "About 20 volunteers dressed in period British military uniforms have been gathering on the streets of the city over the past month"}, "relation": "caused"}]}, "sample_id": 718}
+{"prediction": {"has_causal": false, "id": 1690, "triples": []}, "sample_id": 1690}
+{"prediction": {"has_causal": true, "id": 986, "triples": [{"cause": {"span": "to register its protest against the alleged neglect of the district in the revised Budget presented by Finance Minister K.M. Mani ."}, "effect": {"span": "The district unit of the Left Democratic Front ( LDF ) staged a dharna at the Press Club Maidan here on Friday"}, "relation": "caused"}]}, "sample_id": 986}
+{"prediction": {"has_causal": true, "id": 2679, "triples": [{"cause": {"span": "when they attempted to tap toddy at various places in the district ."}, "effect": {"span": "More than 2000 persons , including 949 women , were arrested on Wednesday"}, "relation": "caused"}]}, "sample_id": 2679}
+{"prediction": {"has_causal": false, "id": 270, "triples": []}, "sample_id": 270}
+{"prediction": {"has_causal": true, "id": 1341, "triples": [{"cause": {"span": "to protest against the zonal-level decision to implement a High Court order which directed officials to give preference to drivers who are exclusively trained to drive Volvo buses , whenever the working timetable is reworked ."}, "effect": {"span": "the strike was called"}, "relation": "caused"}]}, "sample_id": 1341}
+{"prediction": {"has_causal": true, "id": 2272, "triples": [{"cause": {"span": "due to VHP programme"}, "effect": {"span": "High security in Kandhamal"}, "relation": "caused"}]}, "sample_id": 2272}
+{"prediction": {"has_causal": true, "id": 706, "triples": [{"cause": {"span": "on the ground that he did not participate in the direct assault ."}, "effect": {"span": "The High Court granted bail"}, "relation": "caused"}]}, "sample_id": 706}
+{"prediction": {"has_causal": true, "id": 3057, "triples": [{"cause": {"span": "demanding the State government hand over the probe to the Central Bureau of Investigation ."}, "effect": {"span": "The activists of Jaya Karnataka Sanghatane and Manava Hakkugala Horatagarara Parishat also staged separate protests at the Deputy Commissioner ’ s office"}, "relation": "caused"}]}, "sample_id": 3057}
+{"prediction": {"has_causal": true, "id": 1699, "triples": [{"cause": {"span": "when violence erupted at a meeting attended by about 750 people"}, "effect": {"span": "The number four shaft was closed on Tuesday night"}, "relation": "caused"}, {"cause": {"span": "violence erupted at a meeting attended by about 750 people"}, "effect": {"span": "leading to the deaths ."}, "relation": "caused"}]}, "sample_id": 1699}
+{"prediction": {"has_causal": false, "id": 169, "triples": []}, "sample_id": 169}
+{"prediction": {"has_causal": true, "id": 1412, "triples": [{"cause": {"span": "as advocates held a protest at the Mysore Bank Circle demanding suspension of a police constable for allegedly beating up a fellow advocate ."}, "effect": {"span": "Traffic on major roads of Bangalore was paralysed for close to seven hours on Tuesday"}, "relation": "caused"}]}, "sample_id": 1412}
+{"prediction": {"has_causal": false, "id": 195, "triples": []}, "sample_id": 195}
+{"prediction": {"has_causal": false, "id": 1111, "triples": []}, "sample_id": 1111}
+{"prediction": {"has_causal": true, "id": 2728, "triples": [{"cause": {"span": "to speak out against violence ."}, "effect": {"span": "Those attending the rally on Saturday"}, "relation": "caused"}]}, "sample_id": 2728}
+{"prediction": {"has_causal": false, "id": 1369, "triples": []}, "sample_id": 1369}
+{"prediction": {"has_causal": true, "id": 667, "triples": [{"cause": {"span": "because of the agitation by students"}, "effect": {"span": "The posts they are ready to enjoy"}, "relation": "caused"}]}, "sample_id": 667}
+{"prediction": {"has_causal": false, "id": 689, "triples": []}, "sample_id": 689}
+{"prediction": {"has_causal": false, "id": 2362, "triples": []}, "sample_id": 2362}
+{"prediction": {"has_causal": false, "id": 819, "triples": []}, "sample_id": 819}
+{"prediction": {"has_causal": false, "id": 1380, "triples": []}, "sample_id": 1380}
+{"prediction": {"has_causal": false, "id": 2327, "triples": []}, "sample_id": 2327}
+{"prediction": {"has_causal": true, "id": 2798, "triples": [{"cause": {"span": "against joining the police and army"}, "effect": {"span": "The posters have warned them"}, "relation": "caused"}]}, "sample_id": 2798}
+{"prediction": {"has_causal": false, "id": 264, "triples": []}, "sample_id": 264}
+{"prediction": {"has_causal": false, "id": 2156, "triples": []}, "sample_id": 2156}
+{"prediction": {"has_causal": true, "id": 2284, "triples": [{"cause": {"span": "for not arresting all those involved in the killing ."}, "effect": {"span": "Swami Sachidananda Maharaj criticised the Odisha govenrment"}, "relation": "caused"}]}, "sample_id": 2284}
+{"prediction": {"has_causal": true, "id": 1617, "triples": [{"cause": {"span": "Maoists detonate powerful landmine and blow up police bus in Koraput district , Orissa"}, "effect": {"span": "killing around 10 Special Operations Group personnel and injuring 16 ."}, "relation": "caused"}]}, "sample_id": 1617}
+{"prediction": {"has_causal": false, "id": 1802, "triples": []}, "sample_id": 1802}
+{"prediction": {"has_causal": false, "id": 2032, "triples": []}, "sample_id": 2032}
+{"prediction": {"has_causal": true, "id": 2761, "triples": [{"cause": {"span": "Louise Khurshid 's vehicle hit him"}, "effect": {"span": "causing injuries ."}, "relation": "caused"}]}, "sample_id": 2761}
+{"prediction": {"has_causal": true, "id": 1662, "triples": [{"cause": {"span": "after various protests throughout the day ."}, "effect": {"span": "More than 50 people were reportedly taken to hospital for treatment"}, "relation": "caused"}]}, "sample_id": 1662}
+{"prediction": {"has_causal": true, "id": 1871, "triples": [{"cause": {"span": "after a gathering of the latter turned violent outside the Surat Diamond Association ( SDA ) office at Varachha on Monday ."}, "effect": {"span": "Police resorted to baton charge and tear gas shelling on jobless diamond workers"}, "relation": "caused"}]}, "sample_id": 1871}
+{"prediction": {"has_causal": false, "id": 2736, "triples": []}, "sample_id": 2736}
+{"prediction": {"has_causal": true, "id": 2596, "triples": [{"cause": {"span": "after their ouster from power in 2005 in Bihar"}, "effect": {"span": "Lalu-Rabri for the first time made a political mark by a near total shutdown"}, "relation": "caused"}, {"cause": {"span": "after his party was routed in the Lok Sabha polls ."}, "effect": {"span": "Lalu Prasad lost his place in the Congress-led United Progressive Alliance central government last year"}, "relation": "caused"}]}, "sample_id": 2596}
+{"prediction": {"has_causal": true, "id": 965, "triples": [{"cause": {"span": "demanding arrest of the culprits and punishment to them ."}, "effect": {"span": "In Bhaderwah and Thathri , protestors took out a march and burnt tyres"}, "relation": "caused"}]}, "sample_id": 965}
+{"prediction": {"has_causal": false, "id": 2273, "triples": []}, "sample_id": 2273}
+{"prediction": {"has_causal": false, "id": 419, "triples": []}, "sample_id": 419}
+{"prediction": {"has_causal": true, "id": 3009, "triples": [{"cause": {"span": "During the entire impasse , Mallya did not come in the forefront and the negotiations were carried out by top officials of the airline and the UB Group"}, "effect": {"span": "leading employees to demand his presence ."}, "relation": "caused"}]}, "sample_id": 3009}
+{"prediction": {"has_causal": true, "id": 1035, "triples": [{"cause": {"span": "the gangrape"}, "effect": {"span": "the public outrage that followed it ."}, "relation": "caused"}]}, "sample_id": 1035}
+{"prediction": {"has_causal": false, "id": 254, "triples": []}, "sample_id": 254}
+{"prediction": {"has_causal": true, "id": 344, "triples": [{"cause": {"span": "demanding the government reassess its priorities , commitment to original principles , ability to link national sovereignty and independence to the truest freedoms of every Indian , including freedom from poverty , hunger , exploitation and slavery ."}, "effect": {"span": "Congress leaders led by Gandhiji , including Rajaji , Jawaharlal Nehru , Sardar Vallabhbhai Patel , Abul Kalam and Jayant Kriplani sat on a hunger strike"}, "relation": "caused"}]}, "sample_id": 344}
+{"prediction": {"has_causal": false, "id": 851, "triples": []}, "sample_id": 851}
+{"prediction": {"has_causal": false, "id": 238, "triples": []}, "sample_id": 238}
+{"prediction": {"has_causal": true, "id": 1803, "triples": [{"cause": {"span": "as part of intensifying the agitation ."}, "effect": {"span": "The KGMOA has started boycotting all VIP duties , outside duties , training and camps from Monday"}, "relation": "caused"}]}, "sample_id": 1803}
+{"prediction": {"has_causal": false, "id": 2030, "triples": []}, "sample_id": 2030}
+{"prediction": {"has_causal": false, "id": 1219, "triples": []}, "sample_id": 1219}
+{"prediction": {"has_causal": true, "id": 639, "triples": [{"cause": {"span": "following stone throwing"}, "effect": {"span": "These services were affected in the last two days"}, "relation": "caused"}]}, "sample_id": 639}
+{"prediction": {"has_causal": false, "id": 223, "triples": []}, "sample_id": 223}
+{"prediction": {"has_causal": false, "id": 1539, "triples": []}, "sample_id": 1539}
+{"prediction": {"has_causal": true, "id": 1760, "triples": [{"cause": {"span": "after blowing the whistle on companies and individuals he claimed were involved in tender corruption ."}, "effect": {"span": "Mbombela municipal speaker Jimmy Mohlala , who was shot dead in January 2009"}, "relation": "caused"}]}, "sample_id": 1760}
+{"prediction": {"has_causal": true, "id": 2065, "triples": [{"cause": {"span": "The end to the platinum strike"}, "effect": {"span": "brought a stop to the hardships that South Africa has suffered in the last few months"}, "relation": "caused"}]}, "sample_id": 2065}
+{"prediction": {"has_causal": false, "id": 615, "triples": []}, "sample_id": 615}
+{"prediction": {"has_causal": true, "id": 608, "triples": [{"cause": {"span": "Following the telecast of the baseless story linking Reliance with the death of YSR"}, "effect": {"span": "Reliance outlets across the state were targeted ."}, "relation": "caused"}]}, "sample_id": 608}
+{"prediction": {"has_causal": false, "id": 2238, "triples": []}, "sample_id": 2238}
+{"prediction": {"has_causal": false, "id": 511, "triples": []}, "sample_id": 511}
+{"prediction": {"has_causal": false, "id": 2021, "triples": []}, "sample_id": 2021}
+{"prediction": {"has_causal": true, "id": 2910, "triples": [{"cause": {"span": "the drinking water issues , lethargic garbage removal and poor maintenance of street lights"}, "effect": {"span": "In the other agitation , residents of ward 19 highlighted"}, "relation": "caused"}]}, "sample_id": 2910}
+{"prediction": {"has_causal": true, "id": 2425, "triples": [{"cause": {"span": "to register their protest against the insensitive and indifferent attitude of the Government to the genuine demands of the pourakarmikas ."}, "effect": {"span": "Braving scorching sun , hundreds of people , including many women , led by Sri Mahanta Shivacharyaru of the Sulpul Math , Sri Rajashekar Shivacharyaru , Guru Mahanta Shivacharyaru of the Hiremath at Pala , Shivanda Swamigalu of Sonna Dasoha Math , Gangadhar Swamigalu of Chowdapur Math , Kanchi Basava Shivacharyaru of Roza Math , battery of Congress leaders including DCC president Allamprabhu Patil , MLC , the former Mayor Chandrika Parameshwar , zilla panchayat member Ambaraya Ashtagi , the former president of the HKCCI Umakant Nigudgi , Karnataka Rakshana Vedike president Arunkumar Patil , Hyderabad Karnataka Janapara Sangarsh Samiti Laxman Dasti and others marched from the Super Market to the Deputy Commissioner 's office"}, "relation": "caused"}]}, "sample_id": 2425}
+{"prediction": {"has_causal": false, "id": 2135, "triples": []}, "sample_id": 2135}
+{"prediction": {"has_causal": true, "id": 2937, "triples": [{"cause": {"span": "in protest at foreign drivers allegedly taking away their jobs ."}, "effect": {"span": "South African truck drivers have embarked on a nationwide strike"}, "relation": "caused"}]}, "sample_id": 2937}
+{"prediction": {"has_causal": true, "id": 1323, "triples": [{"cause": {"span": "over SP 's transfer"}, "effect": {"span": "Andhra cops go on rampage"}, "relation": "caused"}]}, "sample_id": 1323}
+{"prediction": {"has_causal": false, "id": 970, "triples": []}, "sample_id": 970}
+{"prediction": {"has_causal": false, "id": 2750, "triples": []}, "sample_id": 2750}
+{"prediction": {"has_causal": false, "id": 2848, "triples": []}, "sample_id": 2848}
+{"prediction": {"has_causal": false, "id": 988, "triples": []}, "sample_id": 988}
+{"prediction": {"has_causal": false, "id": 1554, "triples": []}, "sample_id": 1554}
+{"prediction": {"has_causal": true, "id": 1852, "triples": [{"cause": {"span": "as the junior doctors have resorted to cease-work agitation demanding removal of the college Dean as well as head of the Medicine Department along with arrest of the journalist , against whom they had lodged a complaint ."}, "effect": {"span": "Medical services have been crippled"}, "relation": "caused"}]}, "sample_id": 1852}
+{"prediction": {"has_causal": false, "id": 1732, "triples": []}, "sample_id": 1732}
+{"prediction": {"has_causal": false, "id": 955, "triples": []}, "sample_id": 955}
+{"prediction": {"has_causal": true, "id": 1388, "triples": [{"cause": {"span": "for ferrying passengers ."}, "effect": {"span": "Irate cab drivers also damaged three vehicles at Tarnaka , Habsiguda , Chandrayangutta and Shamshabad airport early on Thursday"}, "relation": "caused"}]}, "sample_id": 1388}
+{"prediction": {"has_causal": true, "id": 1165, "triples": [{"cause": {"span": "in anticipation of tense situation due to bandh"}, "effect": {"span": "schools would be closed"}, "relation": "caused"}]}, "sample_id": 1165}
+{"prediction": {"has_causal": true, "id": 900, "triples": [{"cause": {"span": "against the stone crushers who have been licensed to mine the agriculturally-rich region of Tehri district ’ s Maletha gram sabha ."}, "effect": {"span": "More than 500 villagers on Saturday protested"}, "relation": "caused"}]}, "sample_id": 900}
+{"prediction": {"has_causal": false, "id": 472, "triples": []}, "sample_id": 472}
+{"prediction": {"has_causal": false, "id": 1362, "triples": []}, "sample_id": 1362}
+{"prediction": {"has_causal": false, "id": 2801, "triples": []}, "sample_id": 2801}
+{"prediction": {"has_causal": false, "id": 1711, "triples": []}, "sample_id": 1711}
+{"prediction": {"has_causal": false, "id": 832, "triples": []}, "sample_id": 832}
+{"prediction": {"has_causal": false, "id": 137, "triples": []}, "sample_id": 137}
+{"prediction": {"has_causal": false, "id": 1530, "triples": []}, "sample_id": 1530}
+{"prediction": {"has_causal": true, "id": 1387, "triples": [{"cause": {"span": "as some radio cab operators did not participate in the strike"}, "effect": {"span": "Passengers to the Shamshabad airport did not have much of a problem"}, "relation": "caused"}]}, "sample_id": 1387}
+{"prediction": {"has_causal": true, "id": 1687, "triples": [{"cause": {"span": "with the deadly attack on police personnel in Ambur Town on Saturday night which left 38 police personnel , including women , and a couple of civilians injured"}, "effect": {"span": "As many as 95 youth have been arrested"}, "relation": "caused"}, {"cause": {"span": "in connection with the death of Shameel Ahmed ."}, "effect": {"span": "the deadly attack on police personnel in Ambur Town on Saturday night"}, "relation": "caused"}]}, "sample_id": 1687}
+{"prediction": {"has_causal": true, "id": 1431, "triples": [{"cause": {"span": "in protest"}, "effect": {"span": "Singhdeo sat on a dharna in the Well"}, "relation": "caused"}]}, "sample_id": 1431}
+{"prediction": {"has_causal": true, "id": 2293, "triples": [{"cause": {"span": "a series of protests that have rocked her city"}, "effect": {"span": "she needs to listen better to the youth and people in general"}, "relation": "caused"}]}, "sample_id": 2293}
+{"prediction": {"has_causal": false, "id": 117, "triples": []}, "sample_id": 117}
+{"prediction": {"has_causal": false, "id": 489, "triples": []}, "sample_id": 489}
+{"prediction": {"has_causal": false, "id": 939, "triples": []}, "sample_id": 939}
+{"prediction": {"has_causal": false, "id": 181, "triples": []}, "sample_id": 181}
+{"prediction": {"has_causal": false, "id": 3070, "triples": []}, "sample_id": 3070}
+{"prediction": {"has_causal": true, "id": 2378, "triples": [{"cause": {"span": "the brutal killing of Shri V Ramesh our General Secretary of Tamil Nadu unit ."}, "effect": {"span": "I am shocked to hear about"}, "relation": "caused"}]}, "sample_id": 2378}
+{"prediction": {"has_causal": true, "id": 1534, "triples": [{"cause": {"span": "Several incidents of violence and intimidation"}, "effect": {"span": "severely affected the distribution of goods and foodstuffs to shops and depots ."}, "relation": "caused"}]}, "sample_id": 1534}
+{"prediction": {"has_causal": true, "id": 1717, "triples": [{"cause": {"span": "The incident"}, "effect": {"span": "protests across New Delhi over the security of students from the north-east ."}, "relation": "caused"}]}, "sample_id": 1717}
+{"prediction": {"has_causal": false, "id": 164, "triples": []}, "sample_id": 164}
+{"prediction": {"has_causal": false, "id": 2756, "triples": []}, "sample_id": 2756}
+{"prediction": {"has_causal": true, "id": 470, "triples": [{"cause": {"span": "following sectarian clashes"}, "effect": {"span": "Curfew continued to remain imposed without any relaxation in parts of Bandipora district of north Kashmir for the fourth consecutive day on Thursday"}, "relation": "caused"}]}, "sample_id": 470}
+{"prediction": {"has_causal": false, "id": 1175, "triples": []}, "sample_id": 1175}
+{"prediction": {"has_causal": true, "id": 2629, "triples": [{"cause": {"span": "calling for Ching 's release ."}, "effect": {"span": "Democratic Party members staged a protest yesterday outside the central government 's liaison office in Hong Kong and handed in a letter addressed to Premier Wen Jiabao"}, "relation": "caused"}]}, "sample_id": 2629}
+{"prediction": {"has_causal": true, "id": 2594, "triples": [{"cause": {"span": "The dawn-to-dusk shutdown"}, "effect": {"span": "upsetting Lalu-Rabri rival Nitish Kumar as well as the Bharatiya Janata Party ( BJP ) and the Congress , which is trying for a revival in the state ."}, "relation": "caused"}]}, "sample_id": 2594}
+{"prediction": {"has_causal": true, "id": 487, "triples": [{"cause": {"span": "When a security guard tried to intervene"}, "effect": {"span": "he was brutally assaulted ."}, "relation": "caused"}]}, "sample_id": 487}
+{"prediction": {"has_causal": true, "id": 1750, "triples": [{"cause": {"span": "Parking contract has been given to some goons who were collecting high rates from students and patients"}, "effect": {"span": "he claimed and warned of intensifying the agitation ."}, "relation": "caused"}]}, "sample_id": 1750}
+{"prediction": {"has_causal": false, "id": 1411, "triples": []}, "sample_id": 1411}
+{"prediction": {"has_causal": true, "id": 2503, "triples": [{"cause": {"span": "fearing police retaliation ."}, "effect": {"span": "They then took the workers , who were sleeping there , including the JCB and tractor drivers , to about one km"}, "relation": "caused"}]}, "sample_id": 2503}
+{"prediction": {"has_causal": true, "id": 951, "triples": [{"cause": {"span": "for the intemperate language they used against Members of Parliament"}, "effect": {"span": "The Lok Sabha on Tuesday lashed out against Team Anna members"}, "relation": "caused"}, {"cause": {"span": "for “ lowering the dignity of the House ” with the remarks they made during Anna Hazare ’ s one-day fast at Jantar Mantar on Sunday ."}, "effect": {"span": "and strongly condemned them"}, "relation": "caused"}]}, "sample_id": 951}
+{"prediction": {"has_causal": false, "id": 2044, "triples": []}, "sample_id": 2044}
+{"prediction": {"has_causal": false, "id": 788, "triples": []}, "sample_id": 788}
+{"prediction": {"has_causal": false, "id": 1069, "triples": []}, "sample_id": 1069}
+{"prediction": {"has_causal": true, "id": 1321, "triples": [{"cause": {"span": "to request the global leaders to re-design the policies so that earth could become a peaceful place to live with harmony"}, "effect": {"span": "We conducted the march"}, "relation": "caused"}]}, "sample_id": 1321}
+{"prediction": {"has_causal": false, "id": 446, "triples": []}, "sample_id": 446}
+{"prediction": {"has_causal": true, "id": 2289, "triples": [{"cause": {"span": "to protest against the proposed law allowing for the extradition of individuals for trial in mainland China , where the opaque court system is controlled by the Communist party ."}, "effect": {"span": "Millions have taken to the streets"}, "relation": "caused"}]}, "sample_id": 2289}
+{"prediction": {"has_causal": true, "id": 796, "triples": [{"cause": {"span": "against Beijing ’ s meddling in the local legal system ."}, "effect": {"span": "more than 2,000 members of the legal profession marched"}, "relation": "caused"}]}, "sample_id": 796}
+{"prediction": {"has_causal": true, "id": 2607, "triples": [{"cause": {"span": "when he was done to death by forces backed by the government"}, "effect": {"span": "CRPP general secretary Balla Ravindranath said in a press release ."}, "relation": "caused"}]}, "sample_id": 2607}
+{"prediction": {"has_causal": true, "id": 2095, "triples": [{"cause": {"span": "they want answers"}, "effect": {"span": "About 200 members of the Treatment Action Campaign ( TAC ) protested outside the hospital"}, "relation": "caused"}]}, "sample_id": 2095}
+{"prediction": {"has_causal": false, "id": 526, "triples": []}, "sample_id": 526}
+{"prediction": {"has_causal": true, "id": 820, "triples": [{"cause": {"span": "previous government attempts to enact security legislation and national education"}, "effect": {"span": "sparked mass protests ."}, "relation": "caused"}]}, "sample_id": 820}
+{"prediction": {"has_causal": false, "id": 665, "triples": []}, "sample_id": 665}
+{"prediction": {"has_causal": false, "id": 2489, "triples": []}, "sample_id": 2489}
+{"prediction": {"has_causal": false, "id": 1092, "triples": []}, "sample_id": 1092}
+{"prediction": {"has_causal": false, "id": 658, "triples": []}, "sample_id": 658}
+{"prediction": {"has_causal": true, "id": 533, "triples": [{"cause": {"span": "against recent Naxal attack on Congress leaders"}, "effect": {"span": "Activists of Youth Indian National Trade Union Congress ( INTUC ) protest"}, "relation": "caused"}]}, "sample_id": 533}
+{"prediction": {"has_causal": true, "id": 1052, "triples": [{"cause": {"span": "over the allegation of mass transfer of employees ."}, "effect": {"span": "A minor scuffle broke out between the activists of the NGO Union and the NGO Association in the compound of the regional office of the Department of Public Works at Mananchira here on Wednesday"}, "relation": "caused"}]}, "sample_id": 1052}
+{"prediction": {"has_causal": false, "id": 54, "triples": []}, "sample_id": 54}
+{"prediction": {"has_causal": true, "id": 876, "triples": [{"cause": {"span": "after allegedly participating in the public service strike ."}, "effect": {"span": "the workers fired on June 11"}, "relation": "caused"}]}, "sample_id": 876}
+{"prediction": {"has_causal": false, "id": 1996, "triples": []}, "sample_id": 1996}
+{"prediction": {"has_causal": true, "id": 247, "triples": [{"cause": {"span": "demanding to reject the PFRDA Bill ."}, "effect": {"span": "He was inaugurating the dharna held in front of the Secretariat , ahead of the general strike called for February 28"}, "relation": "caused"}]}, "sample_id": 247}
+{"prediction": {"has_causal": true, "id": 2700, "triples": [{"cause": {"span": "While the management agreed to take back all the employees who were given the sack after their participated in the strike"}, "effect": {"span": "representatives of employees agreed to report for duty on Friday morning ."}, "relation": "caused"}]}, "sample_id": 2700}
+{"prediction": {"has_causal": true, "id": 2668, "triples": [{"cause": {"span": "as a mark of protest"}, "effect": {"span": "Members of Tamil Nadu Nadar Peravai showing pots in Virudhunagar on Wednesday ."}, "relation": "caused"}]}, "sample_id": 2668}
+{"prediction": {"has_causal": false, "id": 1245, "triples": []}, "sample_id": 1245}
+{"prediction": {"has_causal": false, "id": 2876, "triples": []}, "sample_id": 2876}
+{"prediction": {"has_causal": false, "id": 2403, "triples": []}, "sample_id": 2403}
+{"prediction": {"has_causal": false, "id": 634, "triples": []}, "sample_id": 634}
+{"prediction": {"has_causal": false, "id": 2002, "triples": []}, "sample_id": 2002}
+{"prediction": {"has_causal": true, "id": 1173, "triples": [{"cause": {"span": "as part of her election campaign in the city on Thursday"}, "effect": {"span": "Trinamool Congress supremo Mamata Banerjee organised a huge padayatra"}, "relation": "caused"}, {"cause": {"span": "sending a message to the CPM leadership about the possible change in the state administration ."}, "effect": {"span": "Trinamool Congress supremo Mamata Banerjee organised a huge padayatra"}, "relation": "caused"}]}, "sample_id": 1173}
+{"prediction": {"has_causal": true, "id": 2608, "triples": [{"cause": {"span": "demanding that the British government recognise the freedom fighters in jails as political prisoners"}, "effect": {"span": "Bhagat Singh and his comrades staged protests in jail ."}, "relation": "caused"}]}, "sample_id": 2608}
+{"prediction": {"has_causal": false, "id": 2812, "triples": []}, "sample_id": 2812}
+{"prediction": {"has_causal": true, "id": 1322, "triples": [{"cause": {"span": "to protest against the transfer of superintendent of police Umesh Chandra"}, "effect": {"span": "Armed reserve and civil policemen revolted and unleashed a reign of terror in the town last night"}, "relation": "caused"}, {"cause": {"span": "due to several incidents recently ."}, "effect": {"span": "the image of the police which touched an all-time low"}, "relation": "caused"}]}, "sample_id": 1322}
+{"prediction": {"has_causal": true, "id": 2626, "triples": [{"cause": {"span": "Two low intensity blasts rocked the busy commercial Fancy Bazaar area in Guwahati Saturday afternoon"}, "effect": {"span": "injuring four persons ."}, "relation": "caused"}]}, "sample_id": 2626}
+{"prediction": {"has_causal": false, "id": 2130, "triples": []}, "sample_id": 2130}
+{"prediction": {"has_causal": false, "id": 1620, "triples": []}, "sample_id": 1620}
+{"prediction": {"has_causal": false, "id": 952, "triples": []}, "sample_id": 952}
+{"prediction": {"has_causal": true, "id": 778, "triples": [{"cause": {"span": "Taking strong exception to the inordinate delay in release of the promised compensation for crop loss in the August 2005 floods"}, "effect": {"span": "nearly 50 farmers , led by the Telugu Desam Party MPTC member Gurumurthy and local CPI - ( M ) leaders Krishna Babu and Kondala Babu , squatted before the MRO ."}, "relation": "caused"}]}, "sample_id": 778}
+{"prediction": {"has_causal": false, "id": 1265, "triples": []}, "sample_id": 1265}
+{"prediction": {"has_causal": true, "id": 347, "triples": [{"cause": {"span": "the caste violence that wrecked the lives of over a thousand Dalits earlier this month"}, "effect": {"span": "has forever tainted the image of Dharmapuri district as a former Naxal stronghold that , even a decade ago , had no place for caste or class differences ."}, "relation": "caused"}]}, "sample_id": 347}
+{"prediction": {"has_causal": false, "id": 1704, "triples": []}, "sample_id": 1704}
+{"prediction": {"has_causal": false, "id": 1164, "triples": []}, "sample_id": 1164}
+{"prediction": {"has_causal": true, "id": 435, "triples": [{"cause": {"span": "against the appointment of general teachers for physical education work in schools ."}, "effect": {"span": "Students and teachers of physical education relaunched their protest"}, "relation": "caused"}]}, "sample_id": 435}
+{"prediction": {"has_causal": true, "id": 418, "triples": [{"cause": {"span": "as doctors closed ranks to protest Tuesday 's rioting at Bhagwati Hospital , where a BJP leader , injured in a shootout , had succumbed to his injuries ."}, "effect": {"span": "An honorary orthopaedic surgeon with Bhagwati Hospital resigned today and private hospitals from Jogeshwari to Dahisar decided to down shutters for a day"}, "relation": "caused"}]}, "sample_id": 418}
+{"prediction": {"has_causal": false, "id": 693, "triples": []}, "sample_id": 693}
+{"prediction": {"has_causal": true, "id": 1082, "triples": [{"cause": {"span": "In the charged atmosphere generated by the dangerous currents of domestic politics and media-induced panic"}, "effect": {"span": "Prime Minister Manmohan Singh is finding himself under tremendous pressure to respond decisively to initial evidence that ‘ elements in Pakistan ’ were responsible for last week ’ s terrorist outrage in Mumbai ."}, "relation": "caused"}]}, "sample_id": 1082}
+{"prediction": {"has_causal": true, "id": 967, "triples": [{"cause": {"span": "to drop the cases registered against the Christians in connection with church attacks ."}, "effect": {"span": "He urged the government"}, "relation": "caused"}]}, "sample_id": 967}
+{"prediction": {"has_causal": true, "id": 1686, "triples": [{"cause": {"span": "for Attack on Ambur cops"}, "effect": {"span": "95 Youth Arrested"}, "relation": "caused"}]}, "sample_id": 1686}
+{"prediction": {"has_causal": true, "id": 2123, "triples": [{"cause": {"span": "our protest action on Tuesday"}, "effect": {"span": "a great victory for learners at Sizimisele ."}, "relation": "caused"}]}, "sample_id": 2123}
+{"prediction": {"has_causal": true, "id": 989, "triples": [{"cause": {"span": "to quell the violence by the mob which tried to storm their storehouse of arms and ammunition ."}, "effect": {"span": "Inspector General of BSF Jammu Frontier Rajeev Krishna had said that its personnel opened fire in self-defence with \" maximum restraint \""}, "relation": "caused"}]}, "sample_id": 989}
+{"prediction": {"has_causal": true, "id": 2458, "triples": [{"cause": {"span": "One-day agitation against KAS"}, "effect": {"span": "cripples Secretariat"}, "relation": "caused"}]}, "sample_id": 2458}
+{"prediction": {"has_causal": false, "id": 1892, "triples": []}, "sample_id": 1892}
+{"prediction": {"has_causal": false, "id": 705, "triples": []}, "sample_id": 705}
+{"prediction": {"has_causal": true, "id": 2470, "triples": [{"cause": {"span": "he had participated in a private panel discussion commemorating the massacre ."}, "effect": {"span": "Beijing police detained Pu Zhiqiang , a prominent human rights lawyer who helped organise the 1989 demonstration"}, "relation": "caused"}]}, "sample_id": 2470}
+{"prediction": {"has_causal": true, "id": 1293, "triples": [{"cause": {"span": "the Cultural Revolution that was launched on the mainland one year earlier ."}, "effect": {"span": "The riots were a spillover"}, "relation": "caused"}]}, "sample_id": 1293}
+{"prediction": {"has_causal": true, "id": 90, "triples": [{"cause": {"span": "amid fears that the taxi strike might turn violent"}, "effect": {"span": "businesses closed"}, "relation": "caused"}]}, "sample_id": 90}
+{"prediction": {"has_causal": true, "id": 501, "triples": [{"cause": {"span": "when militants struck the Lal Chowk commercial hub of the city this morning"}, "effect": {"span": "At least four persons , including two CRPF personnel , were injured"}, "relation": "caused"}]}, "sample_id": 501}
+{"prediction": {"has_causal": false, "id": 2498, "triples": []}, "sample_id": 2498}
+{"prediction": {"has_causal": false, "id": 1538, "triples": []}, "sample_id": 1538}
+{"prediction": {"has_causal": false, "id": 632, "triples": []}, "sample_id": 632}
+{"prediction": {"has_causal": false, "id": 896, "triples": []}, "sample_id": 896}
+{"prediction": {"has_causal": false, "id": 1051, "triples": []}, "sample_id": 1051}
+{"prediction": {"has_causal": true, "id": 2040, "triples": [{"cause": {"span": "Demanding tar-topped roads between Yercaud and Kovilur village , drinking water and hospital facilities"}, "effect": {"span": "members of All India Kissan Mahasabha ( AIKM ) staged a demonstration near Anna Statue in Yercaud here on Wednesday ."}, "relation": "caused"}]}, "sample_id": 2040}
+{"prediction": {"has_causal": false, "id": 1915, "triples": []}, "sample_id": 1915}
+{"prediction": {"has_causal": false, "id": 1757, "triples": []}, "sample_id": 1757}
+{"prediction": {"has_causal": false, "id": 2055, "triples": []}, "sample_id": 2055}
+{"prediction": {"has_causal": false, "id": 662, "triples": []}, "sample_id": 662}
+{"prediction": {"has_causal": false, "id": 364, "triples": []}, "sample_id": 364}
+{"prediction": {"has_causal": false, "id": 1887, "triples": []}, "sample_id": 1887}
+{"prediction": {"has_causal": false, "id": 2811, "triples": []}, "sample_id": 2811}
+{"prediction": {"has_causal": false, "id": 9, "triples": []}, "sample_id": 9}
+{"prediction": {"has_causal": true, "id": 1604, "triples": [{"cause": {"span": "flaying the arrests of their activists"}, "effect": {"span": "The TRS students ' wing activists staged dharna in front of Karimnagar One Town police"}, "relation": "caused"}]}, "sample_id": 1604}
+{"prediction": {"has_causal": false, "id": 2760, "triples": []}, "sample_id": 2760}
+{"prediction": {"has_causal": false, "id": 2617, "triples": []}, "sample_id": 2617}
+{"prediction": {"has_causal": false, "id": 1273, "triples": []}, "sample_id": 1273}
+{"prediction": {"has_causal": false, "id": 1896, "triples": []}, "sample_id": 1896}
+{"prediction": {"has_causal": false, "id": 1688, "triples": []}, "sample_id": 1688}
+{"prediction": {"has_causal": true, "id": 1484, "triples": [{"cause": {"span": "Taking its protest against FDI to the streets"}, "effect": {"span": "opposition parties today said their fight will go on till they ensure that it is scrapped altogether ."}, "relation": "caused"}]}, "sample_id": 1484}
+{"prediction": {"has_causal": false, "id": 3050, "triples": []}, "sample_id": 3050}
+{"prediction": {"has_causal": true, "id": 493, "triples": [{"cause": {"span": "because she was wearing a mini-skirt at the Noord Street taxi rank in Johannesburg ."}, "effect": {"span": "Nwabisa Ngcukana , 25 , was undressed assaulted by taxi drivers and hawkers"}, "relation": "caused"}]}, "sample_id": 493}
+{"prediction": {"has_causal": true, "id": 633, "triples": [{"cause": {"span": "rising inflation , increased privatisation and state anti-labour policies ."}, "effect": {"span": "The unions are protesting"}, "relation": "caused"}]}, "sample_id": 633}
+{"prediction": {"has_causal": false, "id": 1945, "triples": []}, "sample_id": 1945}
+{"prediction": {"has_causal": false, "id": 1659, "triples": []}, "sample_id": 1659}
+{"prediction": {"has_causal": false, "id": 2195, "triples": []}, "sample_id": 2195}
+{"prediction": {"has_causal": false, "id": 1337, "triples": []}, "sample_id": 1337}
+{"prediction": {"has_causal": false, "id": 1390, "triples": []}, "sample_id": 1390}
+{"prediction": {"has_causal": true, "id": 1072, "triples": [{"cause": {"span": "to give Indians a voice to the Climate Summit in Copenhagen ."}, "effect": {"span": "actions around the Copenhagen talks are being organised by Climate Satyagraha Camp , a civil society coalition"}, "relation": "caused"}]}, "sample_id": 1072}
+{"prediction": {"has_causal": false, "id": 697, "triples": []}, "sample_id": 697}
+{"prediction": {"has_causal": false, "id": 2676, "triples": []}, "sample_id": 2676}
+{"prediction": {"has_causal": true, "id": 1790, "triples": [{"cause": {"span": "to avoid protests further down the road ."}, "effect": {"span": "he was diverting traffic on the R52 leading to Sannieshof"}, "relation": "caused"}]}, "sample_id": 1790}
+{"prediction": {"has_causal": true, "id": 1695, "triples": [{"cause": {"span": "demanding the release of the persons arrested"}, "effect": {"span": "Around 50 women protested and tried to surround the Tahsildar office in Ambur Town"}, "relation": "caused"}]}, "sample_id": 1695}
+{"prediction": {"has_causal": true, "id": 1995, "triples": [{"cause": {"span": "the authorities ’ harsh policing of the protests , coupled with a refusal by Hong Kong ’ s leader to completely withdraw the bill"}, "effect": {"span": "protesters have returned to the streets time and again ."}, "relation": "caused"}]}, "sample_id": 1995}
+{"prediction": {"has_causal": true, "id": 246, "triples": [{"cause": {"span": "because the cartoon had raised various concerns ."}, "effect": {"span": "Spokesman Keith Khoza said they had decided to March to Prime Media"}, "relation": "caused"}]}, "sample_id": 246}
+{"prediction": {"has_causal": false, "id": 1960, "triples": []}, "sample_id": 1960}
+{"prediction": {"has_causal": false, "id": 122, "triples": []}, "sample_id": 122}
+{"prediction": {"has_causal": false, "id": 2115, "triples": []}, "sample_id": 2115}
+{"prediction": {"has_causal": false, "id": 2998, "triples": []}, "sample_id": 2998}
+{"prediction": {"has_causal": false, "id": 337, "triples": []}, "sample_id": 337}
+{"prediction": {"has_causal": true, "id": 2114, "triples": [{"cause": {"span": "to protest against the move of the zilla panchayat to inaugurate a newly built bridge across the Mavinahole stream without developing the road connecting the bridge on either side ."}, "effect": {"span": "People of Devbag , near here , staged a demonstration on Tuesday"}, "relation": "caused"}]}, "sample_id": 2114}
+{"prediction": {"has_causal": false, "id": 1794, "triples": []}, "sample_id": 1794}
+{"prediction": {"has_causal": true, "id": 1855, "triples": [{"cause": {"span": "junior doctors ’ strike has affected hundreds of patients"}, "effect": {"span": "they should be directed to join duty immediately ."}, "relation": "caused"}]}, "sample_id": 1855}
+{"prediction": {"has_causal": true, "id": 1436, "triples": [{"cause": {"span": "During service delivery protests"}, "effect": {"span": "three people died ."}, "relation": "caused"}]}, "sample_id": 1436}
+{"prediction": {"has_causal": true, "id": 2513, "triples": [{"cause": {"span": "The Supreme Court verdict commuting death penalty of 15 convicts"}, "effect": {"span": "given hope that the three death row convicts in the Rajiv Gandhi assassination case could get similar relief"}, "relation": "caused"}]}, "sample_id": 2513}
+{"prediction": {"has_causal": false, "id": 1480, "triples": []}, "sample_id": 1480}
+{"prediction": {"has_causal": true, "id": 1930, "triples": [{"cause": {"span": "after he was allegedly assaulted by another group in the shrine during Sunday mass"}, "effect": {"span": "A 55 - year-old presbyter of a church at Hasthampatty near here was injured"}, "relation": "caused"}]}, "sample_id": 1930}
+{"prediction": {"has_causal": true, "id": 1761, "triples": [{"cause": {"span": "over + 2 Results"}, "effect": {"span": "Students Lay Siege to CHSE Office"}, "relation": "caused"}]}, "sample_id": 1761}
+{"prediction": {"has_causal": false, "id": 2472, "triples": []}, "sample_id": 2472}
+{"prediction": {"has_causal": true, "id": 69, "triples": [{"cause": {"span": "for their role in the attack at a Kunming rail station that killed 31 people and injured 141 in March ."}, "effect": {"span": "Three people were sentenced to death by a Yunnan court"}, "relation": "caused"}]}, "sample_id": 69}
+{"prediction": {"has_causal": true, "id": 5, "triples": [{"cause": {"span": "Footage of the attack , which included a pregnant woman being hit , protesters being punched and kneed , and commuters screaming and crying while trying to shield themselves , emerged on Sunday night"}, "effect": {"span": "fuelling further political unrest as demonstrators , opposition lawmakers and others demanded answers from authorities for failing to stop the violence ."}, "relation": "caused"}]}, "sample_id": 5}
+{"prediction": {"has_causal": true, "id": 1407, "triples": [{"cause": {"span": "while asking them to return to work ."}, "effect": {"span": "At a meeting with the striking unions , Karunanidhi cited the increase in daily wages by Rs .40 , washing allowance by Rs .15 to Rs .25 and 8.33 percent bonus plus Rs .500 special payment"}, "relation": "caused"}]}, "sample_id": 1407}
+{"prediction": {"has_causal": true, "id": 290, "triples": [{"cause": {"span": "Following the Xiamen incident"}, "effect": {"span": "the ' not in my backyard ' mentality sparked similar protests in several mainland cities , including Dalian , Guangzhou and Shantou ."}, "relation": "caused"}]}, "sample_id": 290}
+{"prediction": {"has_causal": true, "id": 507, "triples": [{"cause": {"span": "militants attacked a CRPF patrol with grenades near a police station in downtown Srinagar"}, "effect": {"span": "killing a jawan and injuring five others ."}, "relation": "caused"}]}, "sample_id": 507}
+{"prediction": {"has_causal": true, "id": 2673, "triples": [{"cause": {"span": "when they tried to tap toddy ."}, "effect": {"span": "The police also arrested 79 persons at Surandai and 80 others at Paavoorchathram"}, "relation": "caused"}]}, "sample_id": 2673}
+{"prediction": {"has_causal": true, "id": 2521, "triples": [{"cause": {"span": "running battles between police and protesters"}, "effect": {"span": "The resumption of lectures at NMMU on Wednesday were marred by disruptions"}, "relation": "caused"}]}, "sample_id": 2521}
+{"prediction": {"has_causal": false, "id": 1268, "triples": []}, "sample_id": 1268}
+{"prediction": {"has_causal": false, "id": 2188, "triples": []}, "sample_id": 2188}
+{"prediction": {"has_causal": true, "id": 1886, "triples": [{"cause": {"span": "as a part of the BJP protest"}, "effect": {"span": "The four doctors had enacted a mock surgery of his skull near the Income Tax circle on Tuesday"}, "relation": "caused"}, {"cause": {"span": "to support their demand of bringing in the proposed Gujarat Control of Organised Crime ( GUJCOC ) Act ."}, "effect": {"span": "The four doctors had enacted a mock surgery of his skull near the Income Tax circle on Tuesday"}, "relation": "caused"}]}, "sample_id": 1886}
+{"prediction": {"has_causal": false, "id": 202, "triples": []}, "sample_id": 202}
+{"prediction": {"has_causal": true, "id": 359, "triples": [{"cause": {"span": "against a proposed increase in tuition fees and the merger of higher education institutions ."}, "effect": {"span": "The students at the university of the North West had been protesting"}, "relation": "caused"}]}, "sample_id": 359}
+{"prediction": {"has_causal": true, "id": 734, "triples": [{"cause": {"span": "demanding the realisation of free , quality and decolonised education"}, "effect": {"span": "Wits students held protests"}, "relation": "caused"}]}, "sample_id": 734}
+{"prediction": {"has_causal": false, "id": 2757, "triples": []}, "sample_id": 2757}
+{"prediction": {"has_causal": false, "id": 944, "triples": []}, "sample_id": 944}
+{"prediction": {"has_causal": true, "id": 1472, "triples": [{"cause": {"span": "in the attack that took place in South Delhi 's Mehrauli area on Friday"}, "effect": {"span": "The African nationals had sustained minor injuries"}, "relation": "caused"}]}, "sample_id": 1472}
+{"prediction": {"has_causal": false, "id": 1685, "triples": []}, "sample_id": 1685}
+{"prediction": {"has_causal": false, "id": 2984, "triples": []}, "sample_id": 2984}
+{"prediction": {"has_causal": false, "id": 2379, "triples": []}, "sample_id": 2379}
+{"prediction": {"has_causal": true, "id": 913, "triples": [{"cause": {"span": "the speedy resolution of the strike"}, "effect": {"span": "more than compensates for this service backlog ."}, "relation": "caused"}]}, "sample_id": 913}
+{"prediction": {"has_causal": false, "id": 842, "triples": []}, "sample_id": 842}
+{"prediction": {"has_causal": false, "id": 1773, "triples": []}, "sample_id": 1773}
+{"prediction": {"has_causal": false, "id": 2953, "triples": []}, "sample_id": 2953}
+{"prediction": {"has_causal": false, "id": 140, "triples": []}, "sample_id": 140}
+{"prediction": {"has_causal": true, "id": 2674, "triples": [{"cause": {"span": "when they proceeded to tap toddy ."}, "effect": {"span": "Hundreds of members of the Tamil Nadu Nadar Peravai and a few cadres of All India Moovendar Munnani Kazhagam were arrested at different places in the district on Wednesday"}, "relation": "caused"}]}, "sample_id": 2674}
+{"prediction": {"has_causal": false, "id": 956, "triples": []}, "sample_id": 956}
+{"prediction": {"has_causal": false, "id": 1720, "triples": []}, "sample_id": 1720}
+{"prediction": {"has_causal": false, "id": 555, "triples": []}, "sample_id": 555}
+{"prediction": {"has_causal": true, "id": 512, "triples": [{"cause": {"span": "following three more bombs recovered in and around Gandhi Maidan Tuesday ."}, "effect": {"span": "An elaborate security arrangement have been made for the CPI ( M-L ) rally in Patna"}, "relation": "caused"}]}, "sample_id": 512}
+{"prediction": {"has_causal": false, "id": 1914, "triples": []}, "sample_id": 1914}
+{"prediction": {"has_causal": false, "id": 2621, "triples": []}, "sample_id": 2621}
+{"prediction": {"has_causal": false, "id": 170, "triples": []}, "sample_id": 170}
+{"prediction": {"has_causal": false, "id": 3032, "triples": []}, "sample_id": 3032}
+{"prediction": {"has_causal": true, "id": 273, "triples": [{"cause": {"span": "as residents protested against the Municipal Demarcation Board 's decision to include their areas under a new municipality ."}, "effect": {"span": "some pupils returned to classes after having spent months out of school"}, "relation": "caused"}]}, "sample_id": 273}
+{"prediction": {"has_causal": true, "id": 2731, "triples": [{"cause": {"span": "Anger over last week ’ s Yuen Long attack"}, "effect": {"span": "added fuel to Hong Kong ’ s protest movement , with additional rallies planned for Sunday ."}, "relation": "caused"}]}, "sample_id": 2731}
+{"prediction": {"has_causal": false, "id": 2515, "triples": []}, "sample_id": 2515}
+{"prediction": {"has_causal": true, "id": 874, "triples": [{"cause": {"span": "demanding that the study centres be opened ."}, "effect": {"span": "About 28 organisations under the banner of Confederation of Sanathana Dharma Suhruth Vedi launched agitations about 20 months ago"}, "relation": "caused"}]}, "sample_id": 874}
+{"prediction": {"has_causal": true, "id": 2275, "triples": [{"cause": {"span": "the three-day strike"}, "effect": {"span": "put the common man through the wringer"}, "relation": "caused"}]}, "sample_id": 2275}
+{"prediction": {"has_causal": false, "id": 1294, "triples": []}, "sample_id": 1294}
+{"prediction": {"has_causal": true, "id": 1580, "triples": [{"cause": {"span": "after protestors pelted stones at police who accompanied officials in a road-widening drive on Saturday ."}, "effect": {"span": "Tension prevailed at Ammavarpet in the city"}, "relation": "caused"}]}, "sample_id": 1580}
+{"prediction": {"has_causal": false, "id": 2663, "triples": []}, "sample_id": 2663}
+{"prediction": {"has_causal": true, "id": 2152, "triples": [{"cause": {"span": "the two officials were transferred"}, "effect": {"span": "I prompted the idea of an agitation among the inmates"}, "relation": "caused"}]}, "sample_id": 2152}
+{"prediction": {"has_causal": true, "id": 299, "triples": [{"cause": {"span": "at a protest against the Army ' s action halting the vehicles"}, "effect": {"span": "The youth was killed"}, "relation": "caused"}]}, "sample_id": 299}
+{"prediction": {"has_causal": true, "id": 125, "triples": [{"cause": {"span": "after unrest rocked Tibetan-populated areas in March 2008 ."}, "effect": {"span": "Beijing launched a campaign to ' educate ' Tibetan monks and nuns"}, "relation": "caused"}]}, "sample_id": 125}
+{"prediction": {"has_causal": true, "id": 1169, "triples": [{"cause": {"span": "to press their demands for setting up AIIMS at Raha and a judicial inquiry into the death of a person in clashes between police and protesters there three days back ."}, "effect": {"span": "a 12 - hour bandh called by several organisations"}, "relation": "caused"}, {"cause": {"span": "a 12 - hour bandh called by several organisations to press their demands for setting up AIIMS at Raha and a judicial inquiry into the death of a person in clashes between police and protesters there three days back ."}, "effect": {"span": "Normal life in Central Assam was today affected"}, "relation": "caused"}]}, "sample_id": 1169}
+{"prediction": {"has_causal": false, "id": 144, "triples": []}, "sample_id": 144}
+{"prediction": {"has_causal": false, "id": 1134, "triples": []}, "sample_id": 1134}
+{"prediction": {"has_causal": true, "id": 934, "triples": [{"cause": {"span": "for 14 days ahead of his ' fast unto death '"}, "effect": {"span": "KCR , who was arrested Sunday and sent to judicial custody"}, "relation": "caused"}]}, "sample_id": 934}
+{"prediction": {"has_causal": false, "id": 300, "triples": []}, "sample_id": 300}
+{"prediction": {"has_causal": false, "id": 1346, "triples": []}, "sample_id": 1346}
+{"prediction": {"has_causal": false, "id": 1103, "triples": []}, "sample_id": 1103}
+{"prediction": {"has_causal": true, "id": 3044, "triples": [{"cause": {"span": "in protest against the damage to the idol ."}, "effect": {"span": "shops in Madukkarai area remained closed"}, "relation": "caused"}]}, "sample_id": 3044}
+{"prediction": {"has_causal": true, "id": 2232, "triples": [{"cause": {"span": "one of the explosions that ripped a hole in the northern wall of a mosque in Soweto 's Dhlamini area ."}, "effect": {"span": "A woman was killed"}, "relation": "caused"}]}, "sample_id": 2232}
+{"prediction": {"has_causal": true, "id": 2711, "triples": [{"cause": {"span": "in support of the former Minister S.K. Kanta , who is leading the pourakarmikas ' agitation"}, "effect": {"span": "Members of several organisations taking out a rally in Gulbarga on Friday ."}, "relation": "caused"}]}, "sample_id": 2711}
+{"prediction": {"has_causal": true, "id": 1109, "triples": [{"cause": {"span": "in support of ' Sadak Bandh '"}, "effect": {"span": "students trying to take out a rally"}, "relation": "caused"}]}, "sample_id": 1109}
+{"prediction": {"has_causal": false, "id": 1307, "triples": []}, "sample_id": 1307}
+{"prediction": {"has_causal": false, "id": 2556, "triples": []}, "sample_id": 2556}
+{"prediction": {"has_causal": true, "id": 168, "triples": [{"cause": {"span": "in a bid to block their impending eviction"}, "effect": {"span": "Several hundred people who have occupied homes at Delft on the Cape Flats are on their way to the Cape High Court"}, "relation": "caused"}]}, "sample_id": 168}
+{"prediction": {"has_causal": false, "id": 1065, "triples": []}, "sample_id": 1065}
+{"prediction": {"has_causal": true, "id": 2201, "triples": [{"cause": {"span": "when residents of Virupatchipuram , of ward 41 of Vellore Corporation , demanded an apology and transfer of a woman sub-inspector ( SI ) attached to the Bagayam police station ."}, "effect": {"span": "High drama was witnessed on Arni Road on Wednesday"}, "relation": "caused"}]}, "sample_id": 2201}
+{"prediction": {"has_causal": true, "id": 2945, "triples": [{"cause": {"span": "of murder , attempt to murder , obstructing and assaulting public servants and grievously injuring the police officers"}, "effect": {"span": "The court found Shahzad guilty"}, "relation": "caused"}]}, "sample_id": 2945}
+{"prediction": {"has_causal": false, "id": 1257, "triples": []}, "sample_id": 1257}
+{"prediction": {"has_causal": true, "id": 345, "triples": [{"cause": {"span": "for turning so viciously against our own people"}, "effect": {"span": "We protest against you"}, "relation": "caused"}]}, "sample_id": 345}
+{"prediction": {"has_causal": true, "id": 2190, "triples": [{"cause": {"span": "over the cleaning of streets in the locality ."}, "effect": {"span": "Anurag Pandey , the newly elected LMC corporator from Mallahi Tola -1 , and his supporters had an argument with LMC sanitation workers Arun Kumar , Anil Kumar , Sachidanand , and their colleagues"}, "relation": "caused"}]}, "sample_id": 2190}
+{"prediction": {"has_causal": true, "id": 1775, "triples": [{"cause": {"span": "saying residents could be tempted to take the law into their own hands ."}, "effect": {"span": "The memorandum called for the State to refuse bail for murderers"}, "relation": "caused"}]}, "sample_id": 1775}
+{"prediction": {"has_causal": false, "id": 527, "triples": []}, "sample_id": 527}
+{"prediction": {"has_causal": false, "id": 1963, "triples": []}, "sample_id": 1963}
+{"prediction": {"has_causal": false, "id": 2507, "triples": []}, "sample_id": 2507}
+{"prediction": {"has_causal": true, "id": 2351, "triples": [{"cause": {"span": "after Friday 's violence"}, "effect": {"span": "All courts will be shut on Saturday"}, "relation": "caused"}]}, "sample_id": 2351}
+{"prediction": {"has_causal": false, "id": 2797, "triples": []}, "sample_id": 2797}
+{"prediction": {"has_causal": false, "id": 49, "triples": []}, "sample_id": 49}
+{"prediction": {"has_causal": true, "id": 2408, "triples": [{"cause": {"span": "in connection with the surprise attack on the bungalows of Shiv Sena minister Suresh Navale and former minister Gulabrao Gavande ."}, "effect": {"span": "The Cuffe Parade police today arrested two persons and registered a case of rioting against 18 others"}, "relation": "caused"}]}, "sample_id": 2408}
+{"prediction": {"has_causal": false, "id": 698, "triples": []}, "sample_id": 698}
+{"prediction": {"has_causal": false, "id": 1903, "triples": []}, "sample_id": 1903}
+{"prediction": {"has_causal": true, "id": 2171, "triples": [{"cause": {"span": "to obtain first-hand information on the murder of a couple and the gangrape of two Muslim girls , allegedly by cow vilgilante groups ."}, "effect": {"span": "A two-member delegation comprising the chairperson is also visiting Mewat"}, "relation": "caused"}]}, "sample_id": 2171}
+{"prediction": {"has_causal": false, "id": 1881, "triples": []}, "sample_id": 1881}
+{"prediction": {"has_causal": false, "id": 600, "triples": []}, "sample_id": 600}
+{"prediction": {"has_causal": true, "id": 473, "triples": [{"cause": {"span": "while trying to blow up the local bus station ."}, "effect": {"span": "they were killed"}, "relation": "caused"}]}, "sample_id": 473}
+{"prediction": {"has_causal": false, "id": 1671, "triples": []}, "sample_id": 1671}
+{"prediction": {"has_causal": false, "id": 1728, "triples": []}, "sample_id": 1728}
+{"prediction": {"has_causal": true, "id": 1168, "triples": [{"cause": {"span": "over AIIMS"}, "effect": {"span": "Normal life hit in Central Assam by bandh"}, "relation": "caused"}]}, "sample_id": 1168}
+{"prediction": {"has_causal": false, "id": 2997, "triples": []}, "sample_id": 2997}
+{"prediction": {"has_causal": true, "id": 1357, "triples": [{"cause": {"span": "With little option but to obey the Supreme Court directive"}, "effect": {"span": "Karnataka started releasing water from September 29"}, "relation": "caused"}, {"cause": {"span": "which has led to daily protests in Bangalore and in the Cauvery basin districts ."}, "effect": {"span": "daily protests in Bangalore and in the Cauvery basin districts ."}, "relation": "caused"}]}, "sample_id": 1357}
+{"prediction": {"has_causal": false, "id": 1526, "triples": []}, "sample_id": 1526}
+{"prediction": {"has_causal": false, "id": 775, "triples": []}, "sample_id": 775}
+{"prediction": {"has_causal": true, "id": 2391, "triples": [{"cause": {"span": "in protest against the bank 's alleged move to appoint agencies to recover overdue loan amounts from farmers in the district ."}, "effect": {"span": "Activists under the Mananthavady taluk committee of the All India Youth Federation ( AIYF ) , the youth organisation of the Communist Party of India ( CPI ) , stalled work of the Mananthavady branch of Punjab National Bank on Wednesday"}, "relation": "caused"}]}, "sample_id": 2391}
+{"prediction": {"has_causal": false, "id": 3028, "triples": []}, "sample_id": 3028}
+{"prediction": {"has_causal": true, "id": 1552, "triples": [{"cause": {"span": "demanding that the police arrest those who masterminded the murder ."}, "effect": {"span": "the victim ’ s wife and relatives staged a hunger strike"}, "relation": "caused"}]}, "sample_id": 1552}
+{"prediction": {"has_causal": true, "id": 2394, "triples": [{"cause": {"span": "to disperse a group of about 300 people protesting against poor service delivery in Landsdowne Road"}, "effect": {"span": "Police used rubber bullets"}, "relation": "caused"}]}, "sample_id": 2394}
+{"prediction": {"has_causal": false, "id": 2560, "triples": []}, "sample_id": 2560}
+{"prediction": {"has_causal": false, "id": 316, "triples": []}, "sample_id": 316}
+{"prediction": {"has_causal": false, "id": 394, "triples": []}, "sample_id": 394}
+{"prediction": {"has_causal": false, "id": 2703, "triples": []}, "sample_id": 2703}
+{"prediction": {"has_causal": false, "id": 872, "triples": []}, "sample_id": 872}
+{"prediction": {"has_causal": true, "id": 2744, "triples": [{"cause": {"span": "in support of the campaign ."}, "effect": {"span": "Over 250 people participated in the rally"}, "relation": "caused"}]}, "sample_id": 2744}
+{"prediction": {"has_causal": false, "id": 2319, "triples": []}, "sample_id": 2319}
+{"prediction": {"has_causal": true, "id": 979, "triples": [{"cause": {"span": "to intervene in resolving their problems and to put an end to the 10 - month-old strike involving about 5,000 jute mill workers at Nellimarla in Vizianagaram district ."}, "effect": {"span": "Representatives of the Nellimarla Jute Mill Karmika Sangham , affiliated to IFTU , today urged Chief Minister YS Rajasekhara Reddy"}, "relation": "caused"}]}, "sample_id": 979}
+{"prediction": {"has_causal": false, "id": 2253, "triples": []}, "sample_id": 2253}
+{"prediction": {"has_causal": true, "id": 1037, "triples": [{"cause": {"span": "against the incident to demand immediate action against the culprits ."}, "effect": {"span": "the youth who were legitimately protesting"}, "relation": "caused"}]}, "sample_id": 1037}
+{"prediction": {"has_causal": true, "id": 2333, "triples": [{"cause": {"span": "On learning about the incident"}, "effect": {"span": "the local police rushed to the spot ."}, "relation": "caused"}]}, "sample_id": 2333}
+{"prediction": {"has_causal": false, "id": 925, "triples": []}, "sample_id": 925}
+{"prediction": {"has_causal": false, "id": 2424, "triples": []}, "sample_id": 2424}
+{"prediction": {"has_causal": true, "id": 469, "triples": [{"cause": {"span": "following clashes"}, "effect": {"span": "Curfew in Kashmir town for fourth day"}, "relation": "caused"}]}, "sample_id": 469}
+{"prediction": {"has_causal": false, "id": 613, "triples": []}, "sample_id": 613}
+{"prediction": {"has_causal": true, "id": 260, "triples": [{"cause": {"span": "demanding scraping of the MoU ."}, "effect": {"span": "Hundreds of locals on Monday blocked NH 55 for six hours"}, "relation": "caused"}]}, "sample_id": 260}
+{"prediction": {"has_causal": false, "id": 2681, "triples": []}, "sample_id": 2681}
+{"prediction": {"has_causal": false, "id": 2853, "triples": []}, "sample_id": 2853}
+{"prediction": {"has_causal": true, "id": 1058, "triples": [{"cause": {"span": "against the ‘ negligent ' attitude of the government in taking steps to protect the interests of farmers ."}, "effect": {"span": "The TDP members , holding placards , raised slogans"}, "relation": "caused"}]}, "sample_id": 1058}
+{"prediction": {"has_causal": true, "id": 220, "triples": [{"cause": {"span": "to protest the train fare hike ."}, "effect": {"span": "Congress workers today staged a ' rail roko ' in various parts of Maharashtra , excluding Mumbai"}, "relation": "caused"}]}, "sample_id": 220}
+{"prediction": {"has_causal": false, "id": 1230, "triples": []}, "sample_id": 1230}
+{"prediction": {"has_causal": false, "id": 1258, "triples": []}, "sample_id": 1258}
+{"prediction": {"has_causal": true, "id": 1762, "triples": [{"cause": {"span": "Outrage over large-scale discrepancy in Plus-Two results"}, "effect": {"span": "hundreds of students and their parents laid siege to the Council of Higher Secondary Education ( CHSE ) head office here on Monday"}, "relation": "caused"}, {"cause": {"span": "hundreds of students and their parents laid siege to the Council of Higher Secondary Education ( CHSE ) head office here on Monday"}, "effect": {"span": "prompting the Higher Education department to order a re-verification within 48 hours ."}, "relation": "caused"}]}, "sample_id": 1762}
+{"prediction": {"has_causal": false, "id": 2483, "triples": []}, "sample_id": 2483}
+{"prediction": {"has_causal": false, "id": 2989, "triples": []}, "sample_id": 2989}
+{"prediction": {"has_causal": false, "id": 466, "triples": []}, "sample_id": 466}
+{"prediction": {"has_causal": false, "id": 2955, "triples": []}, "sample_id": 2955}
+{"prediction": {"has_causal": false, "id": 1840, "triples": []}, "sample_id": 1840}
+{"prediction": {"has_causal": true, "id": 1941, "triples": [{"cause": {"span": "to show their solidarity with the demonstrating students ."}, "effect": {"span": "Representatives of several trade unions and students organisations , political workers participated in the camp"}, "relation": "caused"}]}, "sample_id": 1941}
+{"prediction": {"has_causal": true, "id": 938, "triples": [{"cause": {"span": "against the rising prices of cooking gas , petrol , diesel , etc."}, "effect": {"span": "The Chandigarh unit of Bahujan Samaj Party held a protest at the rally ground in Sector 25"}, "relation": "caused"}]}, "sample_id": 938}
+{"prediction": {"has_causal": true, "id": 716, "triples": [{"cause": {"span": "to probe 04th April 2009 12:12 AM THIRUVANANTHAPURAM : A special team led by City Control Room Assistant Commissioner Suresh Kumar will inquire into the destruction of the Chattambi Swami idol at Kannammoola ."}, "effect": {"span": "Special team"}, "relation": "caused"}]}, "sample_id": 716}
+{"prediction": {"has_causal": false, "id": 2266, "triples": []}, "sample_id": 2266}
+{"prediction": {"has_causal": true, "id": 931, "triples": [{"cause": {"span": "after setting the office on fire ."}, "effect": {"span": "A group of TRS workers fled"}, "relation": "caused"}]}, "sample_id": 931}
+{"prediction": {"has_causal": true, "id": 2906, "triples": [{"cause": {"span": "for allegedly looting the business that was set alight ."}, "effect": {"span": "Police arrested two women"}, "relation": "caused"}]}, "sample_id": 2906}
+{"prediction": {"has_causal": false, "id": 2980, "triples": []}, "sample_id": 2980}
+{"prediction": {"has_causal": false, "id": 2066, "triples": []}, "sample_id": 2066}
+{"prediction": {"has_causal": false, "id": 1016, "triples": []}, "sample_id": 1016}
+{"prediction": {"has_causal": true, "id": 2947, "triples": [{"cause": {"span": "on a tip off that some suspected militants involved in the blasts were holed up in the building ."}, "effect": {"span": "The police had reached Batla House"}, "relation": "caused"}]}, "sample_id": 2947}
+{"prediction": {"has_causal": true, "id": 321, "triples": [{"cause": {"span": "in protest against the police action in Cheriyathura-Beemappally areas on Sunday ."}, "effect": {"span": "the hartal on Tuesday called by Muslim organisations"}, "relation": "caused"}, {"cause": {"span": "the hartal on Tuesday called by Muslim organisations in protest against the police action in Cheriyathura-Beemappally areas on Sunday ."}, "effect": {"span": "Sporadic violence marked"}, "relation": "caused"}]}, "sample_id": 321}
+{"prediction": {"has_causal": true, "id": 1625, "triples": [{"cause": {"span": "to free four of their men ."}, "effect": {"span": "A group of motorcycle-borne armed Maoists open fire on Lakhisarai district court premises in Bihar"}, "relation": "caused"}]}, "sample_id": 1625}
+{"prediction": {"has_causal": false, "id": 2457, "triples": []}, "sample_id": 2457}
+{"prediction": {"has_causal": true, "id": 2185, "triples": [{"cause": {"span": "as the Telangana Joint Action Committee ( T-JAC ) racheted up its agitation demanding a separate State ."}, "effect": {"span": "All train services in the Telangana region are expected to stop from Saturday morning , signifying a virtual halt to every form of mass transport in the region"}, "relation": "caused"}]}, "sample_id": 2185}
+{"prediction": {"has_causal": false, "id": 2568, "triples": []}, "sample_id": 2568}
+{"prediction": {"has_causal": true, "id": 534, "triples": [{"cause": {"span": "Tribal Affairs Minister V Kishore Chandra Deo today dubbed anti-Maoist militia Salwa Judum as a \" sinful strategy \""}, "effect": {"span": "bringing to the fore apparent differences in Congress over the approach to Maoists who last week wiped out party leadership in Chhattisgarh in a deadly attack ."}, "relation": "caused"}]}, "sample_id": 534}
+{"prediction": {"has_causal": false, "id": 2384, "triples": []}, "sample_id": 2384}
+{"prediction": {"has_causal": true, "id": 1583, "triples": [{"cause": {"span": "for the government to step in with extra funding ."}, "effect": {"span": "More than 700 people also signed an online petition"}, "relation": "caused"}]}, "sample_id": 1583}
+{"prediction": {"has_causal": true, "id": 480, "triples": [{"cause": {"span": "The clashes"}, "effect": {"span": "left at least six students and a security guard injured ."}, "relation": "caused"}]}, "sample_id": 480}
+{"prediction": {"has_causal": false, "id": 2108, "triples": []}, "sample_id": 2108}
+{"prediction": {"has_causal": false, "id": 249, "triples": []}, "sample_id": 249}
+{"prediction": {"has_causal": true, "id": 2545, "triples": [{"cause": {"span": "due to them"}, "effect": {"span": "The violence that followed in Nandigram"}, "relation": "caused"}, {"cause": {"span": "for which the BJP was criticising the CPI(M)"}, "effect": {"span": "The violence that followed in Nandigram"}, "relation": "caused"}]}, "sample_id": 2545}
+{"prediction": {"has_causal": true, "id": 1483, "triples": [{"cause": {"span": "to draw public attention on the issue"}, "effect": {"span": "They also had organised a human chain protest , recently"}, "relation": "caused"}]}, "sample_id": 1483}
+{"prediction": {"has_causal": true, "id": 1503, "triples": [{"cause": {"span": "against plans to accommodate victims of the Joe Slovo shack fire"}, "effect": {"span": "Residents of Ravensmead on the Cape Flats staged a protest on Saturday"}, "relation": "caused"}]}, "sample_id": 1503}
+{"prediction": {"has_causal": false, "id": 2824, "triples": []}, "sample_id": 2824}
+{"prediction": {"has_causal": false, "id": 245, "triples": []}, "sample_id": 245}

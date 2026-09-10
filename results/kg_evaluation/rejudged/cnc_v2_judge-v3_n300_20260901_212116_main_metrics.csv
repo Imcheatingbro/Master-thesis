@@ -1,0 +1,16 @@
+metric,value
+deterministic_compliance_rate,0.9975
+forbidden_role_affected_rate,0.001667
+content_token_coverage,0.940244
+node_count,3.005556
+attribute_count,1.416389
+child_link_count,0
+avg_max_depth,0.9975
+p95_max_depth,1
+strict_unit_precision,0.926215
+correct_unit_yield,11.183333
+role_correctness,0.94914
+attachment_correctness,0.911612
+judge_coverage,1
+sample_count,300
+span_count,828

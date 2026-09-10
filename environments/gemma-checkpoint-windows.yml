@@ -1,0 +1,31 @@
+# Windows/NVIDIA base environment for serving the Gemma 4 LoRA and QLoRA checkpoints.
+# After creating it, apply the documented Transformers 5.10.4 override from README.md.
+name: Gemma_checkpoint
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - git
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.11.0+cu128
+      - torchvision==0.26.0+cu128
+      - torchaudio==2.11.0+cu128
+      - transformers==5.5.0
+      - datasets==3.6.0
+      - accelerate==1.11.0
+      - peft==0.18.1
+      - trl==0.24.0
+      - bitsandbytes==0.50.1
+      - unsloth==2026.8.19
+      - unsloth_zoo==2026.8.13
+      - torchao==0.17.0
+      - triton-windows==3.7.1.post27
+      - xformers==0.0.35
+      - cut-cross-entropy==25.1.1
+      - fastapi==0.136.3
+      - uvicorn==0.47.0
+      - safetensors==0.8.0
+      - sentencepiece==0.2.1

@@ -1,0 +1,164 @@
+You are a calibrated semantic judge for RAMS event-argument extraction.
+
+Task:
+Given a document, one target event, and one candidate (role, span) pair, decide whether the exact candidate mention fills the proposed semantic role in that specific event.
+
+Accuracy calibration:
+- The evaluation set is label-balanced. Do not use false as a safety default.
+- Return true when the document explicitly or clearly supports the exact candidate as the proposed role in the target event.
+- Clear support may be indirect, cross-sentence, pronominal, nominal, metonymic, or expressed through coreference.
+- A candidate does not need to be a direct syntactic dependent of the trigger.
+- Return false when the candidate belongs to another event, is the wrong mention for the role, clearly fits another allowed role instead, or has no document-grounded support.
+- Mere topical association is insufficient, but do not demand wording that literally states the role label.
+
+Judgment discipline:
+- Anchor the decision to the supplied event.type and event.trigger; do not switch to a nearby event.
+- Read the whole document and resolve clear aliases, pronouns, apposition, and event coreference.
+- Judge the exact supplied span. Interpret it in context, but do not replace it with another span.
+- Interpret candidate.role relative to the full hierarchical event type and compare it with the other allowed roles.
+- If the proposed role is supported and no other allowed role is clearly better, return true.
+- Token indices are locators only. event.allowed_roles is a schema inventory, not proof by itself.
+
+Role guide:
+- Transfer events: giver is the source/provider; recipient is the receiver/acquirer; beneficiary is the party that benefits; artifact or money is what is transferred.
+- Communication events: communicator is the speaker/sender/source; recipient is the addressee; participant is used for mutual participation.
+- Movement events: transporter causes or controls movement; passenger or artifact is moved; vehicle is the means; origin and destination are endpoints.
+- Attack/injury events: attacker or injurer initiates/causes the event; target or victim undergoes it; instrument is the means; place is the event location.
+- Personnel events: employee is the person whose position changes; placeofemployment is the employing organization.
+- A location can fill place when the document locates the target event there, including through clear surrounding context.
+
+Fixed demonstrations:
+The following ten labeled judgments calibrate the decision boundary. They contain seven supported positives and three precise role/span negatives. Do not copy their entities into the new judgment.
+
+Demonstration context 1
+{
+  "document": [
+    {"sentence_id": 0, "text": "A mysterious online group calling itself “ The Shadow Brokers ” is claiming to have penetrated the National Security Agency , stolen some of its malware , and is auctioning off the files to the highest bidder ."},
+    {"sentence_id": 1, "text": "The authenticity of the files can not be confirmed but appear to be legitimate , according to security researchers who have studied their content ."},
+    {"sentence_id": 2, "text": "Their release comes on the heels of a series of disclosures of emails and documents belonging mostly to Democratic officials , but also to Republicans ."}
+  ],
+  "event": {
+    "type": "transaction.transferownership.n/a",
+    "trigger": {"text": "auctioning", "sentence_id": 0, "token_start": 29, "token_end": 29},
+    "allowed_roles": ["giver", "recipient", "beneficiary", "artifact", "place"]
+  }
+}
+Candidate A:
+{"role": "artifact", "span": {"text": "malware", "sentence_id": 0, "token_start": 25, "token_end": 25}}
+Correct output: {"valid": true}
+Candidate B:
+{"role": "giver", "span": {"text": "malware", "sentence_id": 0, "token_start": 25, "token_end": 25}}
+Correct output: {"valid": false}
+Candidate C:
+{"role": "giver", "span": {"text": "The Shadow Brokers", "sentence_id": 0, "token_start": 7, "token_end": 9}}
+Correct output: {"valid": true}
+
+Demonstration context 2
+{
+  "document": [
+    {"sentence_id": 0, "text": "A BIG STOP IN THE FIGHT AGAINST THE FIFTH COLUMN :"},
+    {"sentence_id": 1, "text": "-- A former Virginia National Guardsman was arrested for plotting a terrorist attack on behalf of the Islamic State ."},
+    {"sentence_id": 2, "text": "Rachel Weiner and Joe Heim report some very scary details : \" When Mohamed Bailor Jalloh walked into the Blue Ridge Arsenal gun store and indoor target range in Chantilly , Va. , on Friday to purchase a Bushmaster AR-15 rifle , he had no idea that his every move was being monitored by the FBI ."},
+    {"sentence_id": 3, "text": "Jalloh , 26 , spent about 10 minutes in the shop before attempting to buy the assault weapon , but he was told that he did not have the required three forms of identification to make the purchase , said Earl Curtis , the store ’s owner ."},
+    {"sentence_id": 4, "text": "Jalloh told employees that he would return ."}
+  ],
+  "event": {
+    "type": "transaction.transferownership.n/a",
+    "trigger": {"text": "purchase", "sentence_id": 2, "token_start": 36, "token_end": 36},
+    "allowed_roles": ["giver", "recipient", "beneficiary", "artifact", "place"]
+  }
+}
+Candidate A:
+{"role": "recipient", "span": {"text": "Mohamed Bailor Jalloh", "sentence_id": 2, "token_start": 13, "token_end": 15}}
+Correct output: {"valid": true}
+Candidate B:
+{"role": "recipient", "span": {"text": "AR-15 rifle", "sentence_id": 2, "token_start": 39, "token_end": 40}}
+Correct output: {"valid": false}
+
+Demonstration context 3
+{
+  "document": [
+    {"sentence_id": 0, "text": "I will pay for the legal fees ."},
+    {"sentence_id": 1, "text": "I promise . \""},
+    {"sentence_id": 2, "text": "The next month , he said he was looking into paying the legal fees of a man who had sucker - punched a protester at a Trump rally ."},
+    {"sentence_id": 3, "text": "But when Trump was challenged on his apparent incitement to violence , he insisted that he ’d never offered to pay for the man ’s legal fees ."},
+    {"sentence_id": 4, "text": "A president who refuses to admit mistakes would be a disaster"}
+  ],
+  "event": {
+    "type": "life.injure.injurycausedbyviolentevents",
+    "trigger": {"text": "punched", "sentence_id": 2, "token_start": 21, "token_end": 21},
+    "allowed_roles": ["injurer", "victim", "instrument", "place"]
+  }
+}
+Candidate A:
+{"role": "injurer", "span": {"text": "man", "sentence_id": 2, "token_start": 16, "token_end": 16}}
+Correct output: {"valid": true}
+Candidate B:
+{"role": "injurer", "span": {"text": "protester", "sentence_id": 2, "token_start": 23, "token_end": 23}}
+Correct output: {"valid": false}
+
+Demonstration context 4 — supported beneficiary
+{
+  "document": [
+    {"sentence_id": 0, "text": "\" Despite having the most powerful economy on earth , the United States too often reaches for the gun instead of the purse in its international conduct , \" they write ."},
+    {"sentence_id": 1, "text": "China does n't just use punitive measures to get what it wants ."},
+    {"sentence_id": 2, "text": "It routinely gives loans and aid to countries like Venezuela that are at odds with the United States ."},
+    {"sentence_id": 3, "text": "Beijing also wields its massive sovereign wealth fund to invest -- tactically -- in parts of the world where it also wants to build political ties ."},
+    {"sentence_id": 4, "text": "The Chinese even engage in \" soccer stadium diplomacy \" where they fund and construct brand new stadiums , mostly in African countries with natural resources that China wants ."}
+  ],
+  "event": {
+    "type": "transaction.transferownership.borrowlend",
+    "trigger": {"text": "loans", "sentence_id": 2, "token_start": 3, "token_end": 3},
+    "allowed_roles": ["giver", "recipient", "beneficiary", "artifact", "place"]
+  },
+  "candidate": {"role": "beneficiary", "span": {"text": "countries like Venezuela", "sentence_id": 2, "token_start": 7, "token_end": 9}}
+}
+Correct output: {"valid": true}
+
+Demonstration context 5 — supported place
+{
+  "document": [
+    {"sentence_id": 0, "text": "She has many paths to 270 electoral votes , Trump at the moment has none ."},
+    {"sentence_id": 1, "text": "All the usual caveats apply ."},
+    {"sentence_id": 2, "text": "There is a final debate in nine days in Las Vegas ."},
+    {"sentence_id": 3, "text": "More damaging information could come out about Clinton ."},
+    {"sentence_id": 4, "text": "External events could shift the landscape in the GOP nominee 's favor ."}
+  ],
+  "event": {
+    "type": "contact.discussion.meet",
+    "trigger": {"text": "debate", "sentence_id": 2, "token_start": 4, "token_end": 4},
+    "allowed_roles": ["participant", "place"]
+  },
+  "candidate": {"role": "place", "span": {"text": "Las Vegas", "sentence_id": 2, "token_start": 9, "token_end": 10}}
+}
+Correct output: {"valid": true}
+
+Demonstration context 6 — supported instrument
+{
+  "document": [
+    {"sentence_id": 0, "text": "Most critically , his entire speech proceeded from a bigoted premise : that the primary threat to America ’s public safety is violence committed by Muslims ."},
+    {"sentence_id": 1, "text": "The GOP nominee began his speech by cataloguing every high - profile act of violence committed by a Muslim in recent years , from Fort Hood to Paris to Orlando ."},
+    {"sentence_id": 2, "text": "At one point , he invoked a recent attack in Germany — not the shooting by an apparent white extremist that took ten lives — but the axe attack by a Muslim that wounded five ."},
+    {"sentence_id": 3, "text": "Jihadist terrorism is obviously a legitimate threat to our national security ."},
+    {"sentence_id": 4, "text": "But it is not the only one ."}
+  ],
+  "event": {
+    "type": "life.injure.injurycausedbyviolentevents",
+    "trigger": {"text": "attack", "sentence_id": 2, "token_start": 8, "token_end": 8},
+    "allowed_roles": ["injurer", "victim", "instrument", "place"]
+  },
+  "candidate": {"role": "instrument", "span": {"text": "axe", "sentence_id": 2, "token_start": 27, "token_end": 27}}
+}
+Correct output: {"valid": true}
+
+Output contract for the new input:
+Return exactly one JSON object and nothing else:
+{"valid": true}
+
+or:
+{"valid": false}
+
+Do not provide reasoning, evidence text, confidence scores, markdown, or additional fields.
+
+New input:
+{input_json}

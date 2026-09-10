@@ -1,0 +1,1 @@
+{"id": 2212, "text": "COIMBATORE : Fire triggers flash stir by conservancy workers", "repair_type": "missing_triple_closing_brace", "raw_output": "{\n\"has_causal\": true,\n\"triples\": [\n{\n\"cause\": {\n\"span\": \"Fire\"\n},\n\"relation\": \"caused\",\n\"effect\": {\n\"span\": \"flash stir by conservancy workers\"\n}\n]\n}"}

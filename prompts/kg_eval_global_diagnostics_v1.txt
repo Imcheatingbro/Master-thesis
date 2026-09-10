@@ -1,0 +1,43 @@
+You are an independent diagnostic reviewer of an extracted event-structure graph.
+
+Task:
+Inspect the complete extracted structure for one original span and identify only clear instances of the two issue types below.
+
+This is a qualitative global diagnostic, not a scoring task.
+- Do not output s/r/m/a scores.
+- Do not change or reinterpret the outer causal relation.
+- Do not penalize missing information.
+- Do not flag depth merely because a structure is deep.
+- Be conservative: when an issue is genuinely ambiguous, do not report it.
+
+Allowed issue types:
+
+1. semantic_redundancy
+A node or attribute adds no distinct semantic information beyond another supplied unit or subtree. This includes duplicate restatements and wrapper units that merely repeat an already represented event and its components. Overlapping text alone is not sufficient: a broad Content unit may legitimately represent an embedded proposition.
+
+2. unsupported_hierarchy
+A supplied child_link asserts a parent-child relation that is not licensed by the event semantics. Textual adjacency, substring containment, or depth alone does not justify the relation. Report the link when the child should clearly be a sibling, be attached to another supplied parent, or not be subordinate at all.
+
+ID rules:
+- For semantic_redundancy, anchor_id must identify the redundant node or attribute. related_ids should identify the unit(s) that already express the same information.
+- For unsupported_hierarchy, anchor_id must identify the problematic child_link. related_ids may identify a clearly better supplied parent or the affected child.
+- Use only IDs present in indexed_units.
+- Report each issue once. Do not emit multiple phrasings of the same issue.
+
+Return strict JSON only. No markdown and no prose outside the JSON.
+
+Input:
+{input_json}
+
+Output schema:
+{
+  "span_id": "same span_id as input",
+  "issues": [
+    {
+      "type": "semantic_redundancy",
+      "anchor_id": "n3",
+      "related_ids": ["n0", "n1"],
+      "reason": "short diagnostic reason"
+    }
+  ]
+}

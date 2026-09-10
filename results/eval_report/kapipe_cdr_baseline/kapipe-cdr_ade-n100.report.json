@@ -1,0 +1,90 @@
+{
+  "n_samples": 100,
+  "n_causal_gold": 10,
+  "n_causal_pred": 8,
+  "detection": {
+    "tp": 5,
+    "tn": 87,
+    "fp": 3,
+    "fn": 5,
+    "accuracy": 0.92,
+    "precision": 0.625,
+    "recall": 0.5,
+    "f1": 0.5555555555555556
+  },
+  "extraction": {
+    "primary_metric": "anchor_window",
+    "strict_token_f1": {
+      "all_samples": {
+        "tp": 6,
+        "fp": 3,
+        "fn": 11,
+        "precision": 0.6666666666666666,
+        "recall": 0.35294117647058826,
+        "f1": 0.46153846153846156,
+        "n_eval_samples": 100,
+        "n_gold_triples": 17,
+        "n_pred_triples": 9
+      },
+      "detected_only": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1": 0.7499999999999999,
+        "n_eval_samples": 5,
+        "n_gold_triples": 10,
+        "n_pred_triples": 6
+      }
+    },
+    "anchor_window": {
+      "all_samples": {
+        "tp": 5,
+        "fp": 4,
+        "fn": 12,
+        "precision": 0.5555555555555556,
+        "recall": 0.29411764705882354,
+        "f1": 0.3846153846153846,
+        "n_eval_samples": 100,
+        "n_gold_triples": 17,
+        "n_pred_triples": 9
+      },
+      "detected_only": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 5,
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1": 0.625,
+        "n_eval_samples": 5,
+        "n_gold_triples": 10,
+        "n_pred_triples": 6
+      }
+    },
+    "all_samples": {
+      "tp": 5,
+      "fp": 4,
+      "fn": 12,
+      "precision": 0.5555555555555556,
+      "recall": 0.29411764705882354,
+      "f1": 0.3846153846153846,
+      "n_eval_samples": 100,
+      "n_gold_triples": 17,
+      "n_pred_triples": 9
+    },
+    "detected_only": {
+      "tp": 5,
+      "fp": 1,
+      "fn": 5,
+      "precision": 0.8333333333333334,
+      "recall": 0.5,
+      "f1": 0.625,
+      "n_eval_samples": 5,
+      "n_gold_triples": 10,
+      "n_pred_triples": 6
+    }
+  },
+  "fuzzy_threshold": 0.8,
+  "anchor_window_threshold": 0.9
+}

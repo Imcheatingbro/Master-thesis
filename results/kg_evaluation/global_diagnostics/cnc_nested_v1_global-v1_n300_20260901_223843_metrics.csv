@@ -1,0 +1,10 @@
+metric,value
+diagnostic_span_count,828
+diagnostic_coverage,0.964976
+semantic_redundancy_issue_count,104
+semantic_redundancy_affected_span_count,101
+semantic_redundancy_span_rate,0.126408
+unsupported_hierarchy_issue_count,80
+unsupported_hierarchy_eligible_span_count,517
+unsupported_hierarchy_affected_span_count,75
+unsupported_hierarchy_span_rate,0.145068

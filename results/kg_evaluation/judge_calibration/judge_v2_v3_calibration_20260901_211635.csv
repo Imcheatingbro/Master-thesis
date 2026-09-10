@@ -1,0 +1,3 @@
+prompt_version,gate_passed,case_count,judge_success_rate,error_target_count,detected_error_target_count,error_detection_rate,protected_unit_count,retained_protected_unit_count,clean_retention_rate,false_positive_rate,clean_case_pass_rate,error_case_detection_rate
+v2,True,10,1.0,5,4,0.8,36,34,0.9444444444444444,0.05555555555555558,0.8,0.8
+v3,True,10,1.0,5,5,1.0,36,36,1.0,0.0,1.0,1.0

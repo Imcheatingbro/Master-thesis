@@ -1,0 +1,59 @@
+{
+  "model_path": "D:\\Master thesis\\outputs\\finetuning\\gemma4_12b_cnc_qlora_unsloth_v1",
+  "dataset_dir": "D:\\Master thesis\\Data\\CNC_sft_gemma_v2",
+  "batch_size": 1,
+  "splits": {
+    "train": {
+      "samples": 1537,
+      "positive_samples": 812,
+      "boundaries": 1128,
+      "expected_continue": 316,
+      "expected_stop": 812,
+      "pairwise_continue_correct": 65,
+      "pairwise_continue_accuracy": 0.20569620253164558,
+      "pairwise_stop_correct": 797,
+      "pairwise_stop_accuracy": 0.9815270935960592,
+      "pairwise_overall_accuracy": 0.7641843971631206,
+      "margin_median_continue": -1.125,
+      "margin_median_stop": -2.25,
+      "margin_ties": 12,
+      "top_token_candidate_rate": 0.9459219858156028,
+      "top_token_expected_rate": 0.7384751773049646,
+      "pairwise_auc": 0.8035909147596184
+    },
+    "validation": {
+      "samples": 500,
+      "positive_samples": 264,
+      "boundaries": 366,
+      "expected_continue": 102,
+      "expected_stop": 264,
+      "pairwise_continue_correct": 23,
+      "pairwise_continue_accuracy": 0.22549019607843138,
+      "pairwise_stop_correct": 260,
+      "pairwise_stop_accuracy": 0.9848484848484849,
+      "pairwise_overall_accuracy": 0.773224043715847,
+      "margin_median_continue": -0.6875,
+      "margin_median_stop": -2.375,
+      "margin_ties": 8,
+      "top_token_candidate_rate": 0.9234972677595629,
+      "top_token_expected_rate": 0.7404371584699454,
+      "pairwise_auc": 0.8542966428995841
+    }
+  },
+  "overall": {
+    "boundaries": 1494,
+    "expected_continue": 418,
+    "expected_stop": 1076,
+    "pairwise_continue_correct": 88,
+    "pairwise_continue_accuracy": 0.21052631578947367,
+    "pairwise_stop_correct": 1057,
+    "pairwise_stop_accuracy": 0.9823420074349443,
+    "pairwise_overall_accuracy": 0.7663989290495314,
+    "margin_median_continue": -1.0,
+    "margin_median_stop": -2.25,
+    "margin_ties": 20,
+    "top_token_candidate_rate": 0.9404283801874164,
+    "top_token_expected_rate": 0.7389558232931727,
+    "pairwise_auc": 0.8162019085395137
+  }
+}

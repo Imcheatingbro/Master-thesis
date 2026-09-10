@@ -1,0 +1,28 @@
+{
+  "completed_samples": 2942,
+  "format_version": 1,
+  "predictions_path": "D:\\Master thesis\\results\\eval_checkpoints\\lmstudio_batch_ade\\google-gemma-4-31b-qat_c183789bbd28f231.jsonl",
+  "remaining_samples": 0,
+  "report_path": "D:\\Master thesis\\results\\eval_report\\lmstudio_batch_ade\\google-gemma-4-31b-qat_ade-n2942_prompt-v9.2_rag-knn_pattern-k1_20260828-234233.md",
+  "run_name": "google/gemma-4-31b-qat",
+  "sample_count": 2942,
+  "signature": "c183789bbd28f23173160138dfd3f47055a43c4bdfa3d5667dafe8d88efcef9d",
+  "signature_payload": {
+    "cache_prompt": false,
+    "context_length": 8192,
+    "dataset": "ade",
+    "dataset_sha256": "85faabd85a56c038f9199d3069b116b9506973b03ac838a69f9a2770b096fff4",
+    "max_tokens": 2048,
+    "model_key": "google/gemma-4-31b-qat",
+    "primary_metric": "anchor_window",
+    "prompt_name": "v9.2",
+    "prompt_sha256": "2053153119146affe61e6f5b4235643e6603983d5e82028a335f01c8e08a2e20",
+    "rag_database": "generic",
+    "rag_mode": "knn_pattern",
+    "rag_top_k": 1,
+    "sample_count": 2942,
+    "temperature": 0.0,
+    "use_rag": true
+  },
+  "status": "complete"
+}

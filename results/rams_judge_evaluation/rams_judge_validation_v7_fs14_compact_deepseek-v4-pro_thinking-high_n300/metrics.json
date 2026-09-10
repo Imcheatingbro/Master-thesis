@@ -1,0 +1,24 @@
+{
+  "total": 300,
+  "valid_responses": 288,
+  "invalid_responses": 12,
+  "coverage": 0.96,
+  "accuracy": 0.81,
+  "precision": 0.9603960396039604,
+  "recall": 0.6466666666666666,
+  "f1": 0.7729083665338646,
+  "macro_f1": 0.8047922921494538,
+  "valid_response_accuracy": 0.84375,
+  "confusion_matrix": {
+    "tp": 97,
+    "tn": 146,
+    "fp": 4,
+    "fn": 53
+  },
+  "per_case_accuracy": {
+    "positive": 0.6466666666666666,
+    "role_corruption": 0.9733333333333334,
+    "span_swap": 0.9733333333333334
+  },
+  "invalid_response_policy": "无有效 JSON boolean 时严格计错：gold=True 计 FN，gold=False 计 FP"
+}

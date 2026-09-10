@@ -1,0 +1,3077 @@
+{
+  "strategy": "retain eligible support rows; replace test rows with globally matched nearest train/validation positives in the same relation/signal/length stratum; complete empty causal-connective patterns with the paper-style 14-shot DeepSeek prompt; assign original-sentence lexical proxy words to the remaining implicit cases",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "pattern_completion_model": "deepseek-v4-pro",
+  "pattern_completion_audit": "D:\\Master thesis\\RAG Database\\cnc_pattern_completion.jsonl",
+  "implicit_pattern_completion_audit": "D:\\Master thesis\\RAG Database\\cnc_implicit_pattern_completion.jsonl",
+  "summary": {
+    "support_samples": 600,
+    "support_relations": 906,
+    "support_split": {
+      "train": 455,
+      "validation": 145
+    },
+    "test_sample_overlap": 0,
+    "replacement_count": 204,
+    "signal_source": {
+      "deepseek-v4-pro": 106,
+      "deepseek-v4-pro_implicit_lexical_proxy": 25,
+      "gold": 469
+    },
+    "rows_without_pattern": 0,
+    "unique_patterns": 228,
+    "completion_run": {}
+  },
+  "support_ids": [
+    3,
+    5,
+    20,
+    22,
+    28,
+    2740,
+    33,
+    38,
+    2201,
+    2574,
+    45,
+    54,
+    55,
+    58,
+    1918,
+    69,
+    70,
+    2527,
+    76,
+    81,
+    2726,
+    85,
+    90,
+    94,
+    98,
+    105,
+    107,
+    113,
+    114,
+    1741,
+    915,
+    525,
+    125,
+    1492,
+    133,
+    135,
+    147,
+    155,
+    160,
+    166,
+    168,
+    169,
+    175,
+    187,
+    2402,
+    191,
+    2468,
+    1580,
+    1920,
+    216,
+    218,
+    1427,
+    226,
+    227,
+    396,
+    235,
+    1,
+    247,
+    251,
+    2503,
+    2414,
+    260,
+    263,
+    273,
+    276,
+    277,
+    278,
+    279,
+    1653,
+    290,
+    1479,
+    292,
+    293,
+    307,
+    310,
+    311,
+    318,
+    320,
+    761,
+    331,
+    341,
+    344,
+    345,
+    352,
+    359,
+    355,
+    370,
+    371,
+    372,
+    374,
+    381,
+    385,
+    1571,
+    388,
+    391,
+    393,
+    400,
+    405,
+    420,
+    429,
+    435,
+    1440,
+    458,
+    2581,
+    2908,
+    469,
+    470,
+    490,
+    797,
+    501,
+    502,
+    2790,
+    453,
+    519,
+    1459,
+    532,
+    534,
+    535,
+    541,
+    2459,
+    546,
+    552,
+    565,
+    644,
+    2232,
+    573,
+    578,
+    579,
+    1309,
+    2481,
+    585,
+    587,
+    590,
+    595,
+    321,
+    1649,
+    600,
+    604,
+    608,
+    1462,
+    611,
+    2051,
+    619,
+    620,
+    605,
+    625,
+    626,
+    635,
+    179,
+    1985,
+    660,
+    666,
+    668,
+    670,
+    671,
+    261,
+    2425,
+    1711,
+    938,
+    690,
+    706,
+    1351,
+    722,
+    715,
+    718,
+    723,
+    1498,
+    733,
+    734,
+    751,
+    754,
+    2648,
+    760,
+    767,
+    2067,
+    779,
+    788,
+    792,
+    805,
+    2734,
+    820,
+    825,
+    826,
+    830,
+    2438,
+    1263,
+    763,
+    1441,
+    876,
+    908,
+    909,
+    2816,
+    927,
+    928,
+    3018,
+    172,
+    965,
+    2393,
+    978,
+    1403,
+    533,
+    993,
+    1000,
+    1011,
+    1019,
+    1027,
+    1439,
+    1037,
+    2776,
+    2430,
+    1044,
+    874,
+    1163,
+    1061,
+    1064,
+    1065,
+    1070,
+    3034,
+    1040,
+    1088,
+    1611,
+    1097,
+    2458,
+    1109,
+    1123,
+    955,
+    2909,
+    1128,
+    1524,
+    1150,
+    1161,
+    942,
+    1168,
+    1169,
+    2487,
+    1171,
+    1175,
+    1179,
+    2431,
+    1191,
+    162,
+    2242,
+    1322,
+    1195,
+    15,
+    1210,
+    2386,
+    1254,
+    1259,
+    390,
+    1277,
+    1296,
+    1300,
+    1303,
+    1316,
+    1319,
+    1321,
+    1341,
+    1417,
+    1347,
+    1355,
+    1359,
+    1360,
+    1361,
+    1367,
+    1371,
+    1375,
+    1379,
+    1382,
+    1386,
+    1384,
+    1387,
+    1388,
+    2994,
+    1395,
+    406,
+    1414,
+    1416,
+    1422,
+    1429,
+    1437,
+    1432,
+    1434,
+    1443,
+    1734,
+    1449,
+    1454,
+    1692,
+    1456,
+    1464,
+    951,
+    1468,
+    1475,
+    1478,
+    1484,
+    1487,
+    1494,
+    2898,
+    1500,
+    1504,
+    1518,
+    1520,
+    1522,
+    1526,
+    1527,
+    544,
+    1541,
+    1542,
+    1549,
+    1568,
+    1581,
+    1584,
+    1585,
+    1586,
+    2290,
+    998,
+    181,
+    465,
+    1615,
+    1617,
+    1634,
+    848,
+    1668,
+    2545,
+    1672,
+    2292,
+    1675,
+    1676,
+    1683,
+    1685,
+    1686,
+    1687,
+    2319,
+    900,
+    1552,
+    1712,
+    1645,
+    287,
+    1724,
+    2422,
+    1799,
+    2310,
+    1730,
+    1731,
+    1733,
+    1749,
+    1771,
+    1775,
+    1777,
+    1784,
+    1788,
+    1792,
+    1808,
+    1815,
+    1474,
+    1823,
+    2652,
+    1831,
+    1833,
+    2883,
+    1844,
+    1845,
+    1849,
+    1854,
+    1864,
+    2434,
+    1874,
+    408,
+    786,
+    737,
+    1890,
+    1924,
+    480,
+    2928,
+    1935,
+    2451,
+    1937,
+    2861,
+    1948,
+    1949,
+    1977,
+    1956,
+    2917,
+    488,
+    1972,
+    1871,
+    2185,
+    1993,
+    2006,
+    2007,
+    2008,
+    1412,
+    2015,
+    1665,
+    1942,
+    443,
+    735,
+    2027,
+    2037,
+    2039,
+    1221,
+    2378,
+    2549,
+    2669,
+    2699,
+    1760,
+    2064,
+    2066,
+    2069,
+    1080,
+    1728,
+    2073,
+    2077,
+    2096,
+    2078,
+    2334,
+    564,
+    2129,
+    2131,
+    2141,
+    2149,
+    2154,
+    2158,
+    1304,
+    1238,
+    210,
+    2190,
+    2193,
+    2194,
+    2196,
+    2197,
+    2199,
+    2204,
+    433,
+    2209,
+    1940,
+    96,
+    193,
+    1496,
+    2724,
+    2751,
+    2239,
+    2245,
+    2252,
+    2255,
+    822,
+    2260,
+    2261,
+    2266,
+    2269,
+    2277,
+    2288,
+    2289,
+    2307,
+    1233,
+    1483,
+    2339,
+    2340,
+    1857,
+    86,
+    2351,
+    2356,
+    2358,
+    2359,
+    2362,
+    2363,
+    2365,
+    2370,
+    2369,
+    2271,
+    2398,
+    2966,
+    2409,
+    2410,
+    2243,
+    1913,
+    232,
+    2419,
+    855,
+    1411,
+    2429,
+    2557,
+    2439,
+    2462,
+    2463,
+    2464,
+    2470,
+    2472,
+    2332,
+    2485,
+    2486,
+    1803,
+    554,
+    2500,
+    2517,
+    2012,
+    13,
+    2524,
+    2765,
+    2120,
+    1447,
+    2542,
+    2553,
+    2556,
+    2725,
+    1941,
+    2579,
+    2580,
+    2588,
+    2593,
+    2596,
+    796,
+    2602,
+    150,
+    2604,
+    2683,
+    2617,
+    2623,
+    2628,
+    2629,
+    2631,
+    109,
+    2644,
+    1914,
+    2655,
+    2662,
+    711,
+    2668,
+    2671,
+    2673,
+    2680,
+    1544,
+    2695,
+    48,
+    2700,
+    2701,
+    1246,
+    2709,
+    2711,
+    1995,
+    2728,
+    2730,
+    2731,
+    2737,
+    2749,
+    2758,
+    2769,
+    2054,
+    323,
+    136,
+    2792,
+    2793,
+    2794,
+    2808,
+    2810,
+    2814,
+    2573,
+    2829,
+    2872,
+    2839,
+    2842,
+    2852,
+    2854,
+    2863,
+    2864,
+    2869,
+    2606,
+    2746,
+    2887,
+    2892,
+    2895,
+    2901,
+    2918,
+    2927,
+    1034,
+    2942,
+    2945,
+    2949,
+    2950,
+    2513,
+    2954,
+    2964,
+    2978,
+    2982,
+    2983,
+    2991,
+    3009,
+    3030,
+    3040,
+    3042,
+    3043,
+    3048,
+    2392,
+    1562,
+    3055,
+    3058,
+    3059,
+    1223,
+    3064,
+    3068
+  ],
+  "replacements": [
+    {
+      "position": 5,
+      "old_test_id": 31,
+      "new_support_id": 2740,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.700595
+    },
+    {
+      "position": 8,
+      "old_test_id": 43,
+      "new_support_id": 2201,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "long"
+      ],
+      "cosine_similarity": 0.714188
+    },
+    {
+      "position": 9,
+      "old_test_id": 44,
+      "new_support_id": 2574,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "short"
+      ],
+      "cosine_similarity": 0.667068
+    },
+    {
+      "position": 14,
+      "old_test_id": 62,
+      "new_support_id": 1918,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.656122
+    },
+    {
+      "position": 17,
+      "old_test_id": 73,
+      "new_support_id": 2527,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.658111
+    },
+    {
+      "position": 20,
+      "old_test_id": 82,
+      "new_support_id": 2726,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.613279
+    },
+    {
+      "position": 29,
+      "old_test_id": 116,
+      "new_support_id": 1741,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.654707
+    },
+    {
+      "position": 30,
+      "old_test_id": 120,
+      "new_support_id": 915,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.552164
+    },
+    {
+      "position": 31,
+      "old_test_id": 121,
+      "new_support_id": 525,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.656859
+    },
+    {
+      "position": 33,
+      "old_test_id": 126,
+      "new_support_id": 1492,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.699762
+    },
+    {
+      "position": 44,
+      "old_test_id": 189,
+      "new_support_id": 2402,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.655284
+    },
+    {
+      "position": 46,
+      "old_test_id": 208,
+      "new_support_id": 2468,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.67337
+    },
+    {
+      "position": 47,
+      "old_test_id": 213,
+      "new_support_id": 1580,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "long"
+      ],
+      "cosine_similarity": 0.611384
+    },
+    {
+      "position": 48,
+      "old_test_id": 215,
+      "new_support_id": 1920,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.654314
+    },
+    {
+      "position": 51,
+      "old_test_id": 225,
+      "new_support_id": 1427,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        false,
+        "long"
+      ],
+      "cosine_similarity": 0.665465
+    },
+    {
+      "position": 54,
+      "old_test_id": 229,
+      "new_support_id": 396,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.650912
+    },
+    {
+      "position": 56,
+      "old_test_id": 241,
+      "new_support_id": 1,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.589315
+    },
+    {
+      "position": 59,
+      "old_test_id": 253,
+      "new_support_id": 2503,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.545403
+    },
+    {
+      "position": 60,
+      "old_test_id": 257,
+      "new_support_id": 2414,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.539892
+    },
+    {
+      "position": 68,
+      "old_test_id": 285,
+      "new_support_id": 1653,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.866138
+    },
+    {
+      "position": 70,
+      "old_test_id": 291,
+      "new_support_id": 1479,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.63261
+    },
+    {
+      "position": 78,
+      "old_test_id": 324,
+      "new_support_id": 761,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.656536
+    },
+    {
+      "position": 84,
+      "old_test_id": 358,
+      "new_support_id": 359,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.889956
+    },
+    {
+      "position": 85,
+      "old_test_id": 360,
+      "new_support_id": 355,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.750288
+    },
+    {
+      "position": 92,
+      "old_test_id": 386,
+      "new_support_id": 1571,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.657218
+    },
+    {
+      "position": 101,
+      "old_test_id": 437,
+      "new_support_id": 1440,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.630988
+    },
+    {
+      "position": 103,
+      "old_test_id": 463,
+      "new_support_id": 2581,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.670881
+    },
+    {
+      "position": 104,
+      "old_test_id": 464,
+      "new_support_id": 2908,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.622552
+    },
+    {
+      "position": 108,
+      "old_test_id": 492,
+      "new_support_id": 797,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.670994
+    },
+    {
+      "position": 111,
+      "old_test_id": 505,
+      "new_support_id": 2790,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.587892
+    },
+    {
+      "position": 112,
+      "old_test_id": 514,
+      "new_support_id": 453,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.631672
+    },
+    {
+      "position": 114,
+      "old_test_id": 530,
+      "new_support_id": 1459,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.580747
+    },
+    {
+      "position": 119,
+      "old_test_id": 542,
+      "new_support_id": 2459,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.524649
+    },
+    {
+      "position": 123,
+      "old_test_id": 567,
+      "new_support_id": 644,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.555743
+    },
+    {
+      "position": 124,
+      "old_test_id": 570,
+      "new_support_id": 2232,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.625185
+    },
+    {
+      "position": 128,
+      "old_test_id": 583,
+      "new_support_id": 1309,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.655216
+    },
+    {
+      "position": 129,
+      "old_test_id": 584,
+      "new_support_id": 2481,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.711584
+    },
+    {
+      "position": 134,
+      "old_test_id": 601,
+      "new_support_id": 321,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.637035
+    },
+    {
+      "position": 135,
+      "old_test_id": 602,
+      "new_support_id": 1649,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.611656
+    },
+    {
+      "position": 136,
+      "old_test_id": 603,
+      "new_support_id": 600,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.711877
+    },
+    {
+      "position": 139,
+      "old_test_id": 609,
+      "new_support_id": 1462,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.60174
+    },
+    {
+      "position": 141,
+      "old_test_id": 616,
+      "new_support_id": 2051,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.671303
+    },
+    {
+      "position": 144,
+      "old_test_id": 623,
+      "new_support_id": 605,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.693525
+    },
+    {
+      "position": 148,
+      "old_test_id": 640,
+      "new_support_id": 179,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "short"
+      ],
+      "cosine_similarity": 0.738611
+    },
+    {
+      "position": 149,
+      "old_test_id": 641,
+      "new_support_id": 1985,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.714506
+    },
+    {
+      "position": 155,
+      "old_test_id": 673,
+      "new_support_id": 261,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.590658
+    },
+    {
+      "position": 156,
+      "old_test_id": 678,
+      "new_support_id": 2425,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.66232
+    },
+    {
+      "position": 157,
+      "old_test_id": 681,
+      "new_support_id": 1711,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.680264
+    },
+    {
+      "position": 158,
+      "old_test_id": 682,
+      "new_support_id": 938,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.709259
+    },
+    {
+      "position": 161,
+      "old_test_id": 713,
+      "new_support_id": 1351,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.732222
+    },
+    {
+      "position": 162,
+      "old_test_id": 714,
+      "new_support_id": 722,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.569647
+    },
+    {
+      "position": 166,
+      "old_test_id": 732,
+      "new_support_id": 1498,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.614583
+    },
+    {
+      "position": 171,
+      "old_test_id": 758,
+      "new_support_id": 2648,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.672448
+    },
+    {
+      "position": 174,
+      "old_test_id": 776,
+      "new_support_id": 2067,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.614428
+    },
+    {
+      "position": 179,
+      "old_test_id": 817,
+      "new_support_id": 2734,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.672967
+    },
+    {
+      "position": 184,
+      "old_test_id": 834,
+      "new_support_id": 2438,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.631107
+    },
+    {
+      "position": 185,
+      "old_test_id": 835,
+      "new_support_id": 1263,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.698479
+    },
+    {
+      "position": 186,
+      "old_test_id": 853,
+      "new_support_id": 763,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.570623
+    },
+    {
+      "position": 187,
+      "old_test_id": 870,
+      "new_support_id": 1441,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.573296
+    },
+    {
+      "position": 191,
+      "old_test_id": 911,
+      "new_support_id": 2816,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.655196
+    },
+    {
+      "position": 194,
+      "old_test_id": 935,
+      "new_support_id": 3018,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.611364
+    },
+    {
+      "position": 195,
+      "old_test_id": 948,
+      "new_support_id": 172,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.622661
+    },
+    {
+      "position": 197,
+      "old_test_id": 977,
+      "new_support_id": 2393,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.629185
+    },
+    {
+      "position": 199,
+      "old_test_id": 984,
+      "new_support_id": 1403,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.673618
+    },
+    {
+      "position": 200,
+      "old_test_id": 992,
+      "new_support_id": 533,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "long"
+      ],
+      "cosine_similarity": 0.684618
+    },
+    {
+      "position": 206,
+      "old_test_id": 1036,
+      "new_support_id": 1439,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.616592
+    },
+    {
+      "position": 208,
+      "old_test_id": 1042,
+      "new_support_id": 2776,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        false,
+        "long"
+      ],
+      "cosine_similarity": 0.583724
+    },
+    {
+      "position": 209,
+      "old_test_id": 1043,
+      "new_support_id": 2430,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "short"
+      ],
+      "cosine_similarity": 0.516334
+    },
+    {
+      "position": 211,
+      "old_test_id": 1045,
+      "new_support_id": 874,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.569116
+    },
+    {
+      "position": 212,
+      "old_test_id": 1057,
+      "new_support_id": 1163,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.741476
+    },
+    {
+      "position": 217,
+      "old_test_id": 1076,
+      "new_support_id": 3034,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.64205
+    },
+    {
+      "position": 218,
+      "old_test_id": 1079,
+      "new_support_id": 1040,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.677267
+    },
+    {
+      "position": 220,
+      "old_test_id": 1095,
+      "new_support_id": 1611,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.723028
+    },
+    {
+      "position": 222,
+      "old_test_id": 1105,
+      "new_support_id": 2458,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.61298
+    },
+    {
+      "position": 225,
+      "old_test_id": 1124,
+      "new_support_id": 955,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.654801
+    },
+    {
+      "position": 226,
+      "old_test_id": 1125,
+      "new_support_id": 2909,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "short"
+      ],
+      "cosine_similarity": 0.499211
+    },
+    {
+      "position": 228,
+      "old_test_id": 1136,
+      "new_support_id": 1524,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.590941
+    },
+    {
+      "position": 231,
+      "old_test_id": 1167,
+      "new_support_id": 942,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.71696
+    },
+    {
+      "position": 234,
+      "old_test_id": 1170,
+      "new_support_id": 2487,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.588077
+    },
+    {
+      "position": 238,
+      "old_test_id": 1185,
+      "new_support_id": 2431,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.648846
+    },
+    {
+      "position": 240,
+      "old_test_id": 1192,
+      "new_support_id": 162,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.62271
+    },
+    {
+      "position": 241,
+      "old_test_id": 1193,
+      "new_support_id": 2242,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.607483
+    },
+    {
+      "position": 242,
+      "old_test_id": 1194,
+      "new_support_id": 1322,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.643416
+    },
+    {
+      "position": 244,
+      "old_test_id": 1200,
+      "new_support_id": 15,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "long"
+      ],
+      "cosine_similarity": 0.572526
+    },
+    {
+      "position": 246,
+      "old_test_id": 1226,
+      "new_support_id": 2386,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.668585
+    },
+    {
+      "position": 249,
+      "old_test_id": 1275,
+      "new_support_id": 390,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.687576
+    },
+    {
+      "position": 258,
+      "old_test_id": 1344,
+      "new_support_id": 1417,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.778426
+    },
+    {
+      "position": 264,
+      "old_test_id": 1368,
+      "new_support_id": 1367,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.670141
+    },
+    {
+      "position": 269,
+      "old_test_id": 1383,
+      "new_support_id": 1386,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.648163
+    },
+    {
+      "position": 273,
+      "old_test_id": 1391,
+      "new_support_id": 2994,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.618342
+    },
+    {
+      "position": 275,
+      "old_test_id": 1398,
+      "new_support_id": 406,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "short"
+      ],
+      "cosine_similarity": 0.552694
+    },
+    {
+      "position": 280,
+      "old_test_id": 1430,
+      "new_support_id": 1437,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.576962
+    },
+    {
+      "position": 284,
+      "old_test_id": 1445,
+      "new_support_id": 1734,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.712415
+    },
+    {
+      "position": 287,
+      "old_test_id": 1455,
+      "new_support_id": 1692,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.562648
+    },
+    {
+      "position": 290,
+      "old_test_id": 1467,
+      "new_support_id": 951,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.55724
+    },
+    {
+      "position": 297,
+      "old_test_id": 1497,
+      "new_support_id": 2898,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.658639
+    },
+    {
+      "position": 305,
+      "old_test_id": 1533,
+      "new_support_id": 544,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.671813
+    },
+    {
+      "position": 314,
+      "old_test_id": 1589,
+      "new_support_id": 2290,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.588401
+    },
+    {
+      "position": 315,
+      "old_test_id": 1590,
+      "new_support_id": 998,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.680595
+    },
+    {
+      "position": 316,
+      "old_test_id": 1595,
+      "new_support_id": 181,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.734187
+    },
+    {
+      "position": 317,
+      "old_test_id": 1607,
+      "new_support_id": 465,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.595148
+    },
+    {
+      "position": 319,
+      "old_test_id": 1624,
+      "new_support_id": 1617,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.704054
+    },
+    {
+      "position": 321,
+      "old_test_id": 1642,
+      "new_support_id": 848,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.650105
+    },
+    {
+      "position": 323,
+      "old_test_id": 1669,
+      "new_support_id": 2545,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.63072
+    },
+    {
+      "position": 325,
+      "old_test_id": 1673,
+      "new_support_id": 2292,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.931245
+    },
+    {
+      "position": 332,
+      "old_test_id": 1694,
+      "new_support_id": 2319,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "short"
+      ],
+      "cosine_similarity": 0.651972
+    },
+    {
+      "position": 333,
+      "old_test_id": 1697,
+      "new_support_id": 900,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "long"
+      ],
+      "cosine_similarity": 0.564884
+    },
+    {
+      "position": 334,
+      "old_test_id": 1702,
+      "new_support_id": 1552,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.574349
+    },
+    {
+      "position": 336,
+      "old_test_id": 1715,
+      "new_support_id": 1645,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.56527
+    },
+    {
+      "position": 337,
+      "old_test_id": 1723,
+      "new_support_id": 287,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.603559
+    },
+    {
+      "position": 339,
+      "old_test_id": 1725,
+      "new_support_id": 2422,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.678591
+    },
+    {
+      "position": 340,
+      "old_test_id": 1726,
+      "new_support_id": 1799,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.68222
+    },
+    {
+      "position": 341,
+      "old_test_id": 1729,
+      "new_support_id": 2310,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.638197
+    },
+    {
+      "position": 354,
+      "old_test_id": 1821,
+      "new_support_id": 1474,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.562954
+    },
+    {
+      "position": 356,
+      "old_test_id": 1825,
+      "new_support_id": 2652,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.561933
+    },
+    {
+      "position": 359,
+      "old_test_id": 1834,
+      "new_support_id": 2883,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.506112
+    },
+    {
+      "position": 365,
+      "old_test_id": 1870,
+      "new_support_id": 2434,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.602247
+    },
+    {
+      "position": 367,
+      "old_test_id": 1879,
+      "new_support_id": 408,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.660835
+    },
+    {
+      "position": 368,
+      "old_test_id": 1884,
+      "new_support_id": 786,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.745471
+    },
+    {
+      "position": 369,
+      "old_test_id": 1885,
+      "new_support_id": 737,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.647091
+    },
+    {
+      "position": 372,
+      "old_test_id": 1931,
+      "new_support_id": 480,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.614014
+    },
+    {
+      "position": 373,
+      "old_test_id": 1932,
+      "new_support_id": 2928,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.531213
+    },
+    {
+      "position": 375,
+      "old_test_id": 1936,
+      "new_support_id": 2451,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "long"
+      ],
+      "cosine_similarity": 0.537559
+    },
+    {
+      "position": 377,
+      "old_test_id": 1944,
+      "new_support_id": 2861,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.629185
+    },
+    {
+      "position": 380,
+      "old_test_id": 1950,
+      "new_support_id": 1977,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.665921
+    },
+    {
+      "position": 382,
+      "old_test_id": 1957,
+      "new_support_id": 2917,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.622022
+    },
+    {
+      "position": 383,
+      "old_test_id": 1964,
+      "new_support_id": 488,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.732219
+    },
+    {
+      "position": 385,
+      "old_test_id": 1979,
+      "new_support_id": 1871,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.555223
+    },
+    {
+      "position": 386,
+      "old_test_id": 1989,
+      "new_support_id": 2185,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.743463
+    },
+    {
+      "position": 391,
+      "old_test_id": 2013,
+      "new_support_id": 1412,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.635167
+    },
+    {
+      "position": 393,
+      "old_test_id": 2018,
+      "new_support_id": 1665,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.604427
+    },
+    {
+      "position": 394,
+      "old_test_id": 2019,
+      "new_support_id": 1942,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.679584
+    },
+    {
+      "position": 395,
+      "old_test_id": 2023,
+      "new_support_id": 443,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.730968
+    },
+    {
+      "position": 396,
+      "old_test_id": 2024,
+      "new_support_id": 735,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.746139
+    },
+    {
+      "position": 400,
+      "old_test_id": 2042,
+      "new_support_id": 1221,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.633999
+    },
+    {
+      "position": 401,
+      "old_test_id": 2048,
+      "new_support_id": 2378,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.673721
+    },
+    {
+      "position": 402,
+      "old_test_id": 2057,
+      "new_support_id": 2549,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.657912
+    },
+    {
+      "position": 403,
+      "old_test_id": 2060,
+      "new_support_id": 2669,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        false,
+        "long"
+      ],
+      "cosine_similarity": 0.588447
+    },
+    {
+      "position": 404,
+      "old_test_id": 2061,
+      "new_support_id": 2699,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "short"
+      ],
+      "cosine_similarity": 0.634265
+    },
+    {
+      "position": 405,
+      "old_test_id": 2063,
+      "new_support_id": 1760,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.58781
+    },
+    {
+      "position": 409,
+      "old_test_id": 2070,
+      "new_support_id": 1080,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.663191
+    },
+    {
+      "position": 410,
+      "old_test_id": 2071,
+      "new_support_id": 1728,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.684024
+    },
+    {
+      "position": 414,
+      "old_test_id": 2101,
+      "new_support_id": 2078,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.65791
+    },
+    {
+      "position": 415,
+      "old_test_id": 2102,
+      "new_support_id": 2334,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.665891
+    },
+    {
+      "position": 416,
+      "old_test_id": 2119,
+      "new_support_id": 564,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.597486
+    },
+    {
+      "position": 423,
+      "old_test_id": 2160,
+      "new_support_id": 1304,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.603872
+    },
+    {
+      "position": 424,
+      "old_test_id": 2166,
+      "new_support_id": 1238,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.579138
+    },
+    {
+      "position": 425,
+      "old_test_id": 2173,
+      "new_support_id": 210,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.655831
+    },
+    {
+      "position": 433,
+      "old_test_id": 2208,
+      "new_support_id": 433,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "long"
+      ],
+      "cosine_similarity": 0.671526
+    },
+    {
+      "position": 435,
+      "old_test_id": 2210,
+      "new_support_id": 1940,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.559671
+    },
+    {
+      "position": 436,
+      "old_test_id": 2211,
+      "new_support_id": 96,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.718879
+    },
+    {
+      "position": 437,
+      "old_test_id": 2212,
+      "new_support_id": 193,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.60015
+    },
+    {
+      "position": 438,
+      "old_test_id": 2214,
+      "new_support_id": 1496,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.574949
+    },
+    {
+      "position": 439,
+      "old_test_id": 2236,
+      "new_support_id": 2724,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.671837
+    },
+    {
+      "position": 440,
+      "old_test_id": 2237,
+      "new_support_id": 2751,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.689231
+    },
+    {
+      "position": 445,
+      "old_test_id": 2256,
+      "new_support_id": 822,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.715356
+    },
+    {
+      "position": 454,
+      "old_test_id": 2311,
+      "new_support_id": 1233,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "long"
+      ],
+      "cosine_similarity": 0.489587
+    },
+    {
+      "position": 455,
+      "old_test_id": 2330,
+      "new_support_id": 1483,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.645597
+    },
+    {
+      "position": 458,
+      "old_test_id": 2347,
+      "new_support_id": 1857,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.510758
+    },
+    {
+      "position": 459,
+      "old_test_id": 2349,
+      "new_support_id": 86,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.545751
+    },
+    {
+      "position": 460,
+      "old_test_id": 2350,
+      "new_support_id": 2351,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.816511
+    },
+    {
+      "position": 468,
+      "old_test_id": 2371,
+      "new_support_id": 2369,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.677106
+    },
+    {
+      "position": 469,
+      "old_test_id": 2374,
+      "new_support_id": 2271,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.686943
+    },
+    {
+      "position": 471,
+      "old_test_id": 2406,
+      "new_support_id": 2966,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "short"
+      ],
+      "cosine_similarity": 0.539681
+    },
+    {
+      "position": 474,
+      "old_test_id": 2416,
+      "new_support_id": 2243,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.59749
+    },
+    {
+      "position": 475,
+      "old_test_id": 2417,
+      "new_support_id": 1913,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.657049
+    },
+    {
+      "position": 476,
+      "old_test_id": 2418,
+      "new_support_id": 232,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.583474
+    },
+    {
+      "position": 478,
+      "old_test_id": 2426,
+      "new_support_id": 855,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.699643
+    },
+    {
+      "position": 479,
+      "old_test_id": 2427,
+      "new_support_id": 1411,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "short"
+      ],
+      "cosine_similarity": 0.63508
+    },
+    {
+      "position": 481,
+      "old_test_id": 2433,
+      "new_support_id": 2557,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.50878
+    },
+    {
+      "position": 488,
+      "old_test_id": 2480,
+      "new_support_id": 2332,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.575507
+    },
+    {
+      "position": 491,
+      "old_test_id": 2490,
+      "new_support_id": 1803,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.560524
+    },
+    {
+      "position": 492,
+      "old_test_id": 2491,
+      "new_support_id": 554,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.48132
+    },
+    {
+      "position": 495,
+      "old_test_id": 2518,
+      "new_support_id": 2012,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.673029
+    },
+    {
+      "position": 496,
+      "old_test_id": 2519,
+      "new_support_id": 13,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.603248
+    },
+    {
+      "position": 498,
+      "old_test_id": 2528,
+      "new_support_id": 2765,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        false,
+        "long"
+      ],
+      "cosine_similarity": 0.529735
+    },
+    {
+      "position": 499,
+      "old_test_id": 2529,
+      "new_support_id": 2120,
+      "new_split": "validation",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.523336
+    },
+    {
+      "position": 500,
+      "old_test_id": 2531,
+      "new_support_id": 1447,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.577026
+    },
+    {
+      "position": 504,
+      "old_test_id": 2558,
+      "new_support_id": 2725,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.633285
+    },
+    {
+      "position": 505,
+      "old_test_id": 2576,
+      "new_support_id": 1941,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.656415
+    },
+    {
+      "position": 509,
+      "old_test_id": 2589,
+      "new_support_id": 2593,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.917671
+    },
+    {
+      "position": 511,
+      "old_test_id": 2601,
+      "new_support_id": 796,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.650004
+    },
+    {
+      "position": 513,
+      "old_test_id": 2603,
+      "new_support_id": 150,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.542925
+    },
+    {
+      "position": 515,
+      "old_test_id": 2605,
+      "new_support_id": 2683,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "long"
+      ],
+      "cosine_similarity": 0.603011
+    },
+    {
+      "position": 521,
+      "old_test_id": 2639,
+      "new_support_id": 109,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.691527
+    },
+    {
+      "position": 523,
+      "old_test_id": 2645,
+      "new_support_id": 1914,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.710951
+    },
+    {
+      "position": 526,
+      "old_test_id": 2667,
+      "new_support_id": 711,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.595822
+    },
+    {
+      "position": 531,
+      "old_test_id": 2686,
+      "new_support_id": 1544,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.563021
+    },
+    {
+      "position": 533,
+      "old_test_id": 2696,
+      "new_support_id": 48,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.521378
+    },
+    {
+      "position": 536,
+      "old_test_id": 2705,
+      "new_support_id": 1246,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.67197
+    },
+    {
+      "position": 539,
+      "old_test_id": 2727,
+      "new_support_id": 1995,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.658411
+    },
+    {
+      "position": 547,
+      "old_test_id": 2787,
+      "new_support_id": 2054,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.623713
+    },
+    {
+      "position": 548,
+      "old_test_id": 2788,
+      "new_support_id": 323,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "short"
+      ],
+      "cosine_similarity": 0.59658
+    },
+    {
+      "position": 549,
+      "old_test_id": 2789,
+      "new_support_id": 136,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        false,
+        "medium"
+      ],
+      "cosine_similarity": 0.573162
+    },
+    {
+      "position": 556,
+      "old_test_id": 2823,
+      "new_support_id": 2573,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.597508
+    },
+    {
+      "position": 558,
+      "old_test_id": 2832,
+      "new_support_id": 2872,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.601036
+    },
+    {
+      "position": 566,
+      "old_test_id": 2870,
+      "new_support_id": 2606,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.564413
+    },
+    {
+      "position": 567,
+      "old_test_id": 2879,
+      "new_support_id": 2746,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.597109
+    },
+    {
+      "position": 574,
+      "old_test_id": 2934,
+      "new_support_id": 1034,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.626037
+    },
+    {
+      "position": 575,
+      "old_test_id": 2941,
+      "new_support_id": 2942,
+      "new_split": "train",
+      "stratum": [
+        "multi",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.723877
+    },
+    {
+      "position": 579,
+      "old_test_id": 2952,
+      "new_support_id": 2513,
+      "new_split": "validation",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.51185
+    },
+    {
+      "position": 592,
+      "old_test_id": 3051,
+      "new_support_id": 2392,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "long"
+      ],
+      "cosine_similarity": 0.703707
+    },
+    {
+      "position": 593,
+      "old_test_id": 3052,
+      "new_support_id": 1562,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "short"
+      ],
+      "cosine_similarity": 0.674778
+    },
+    {
+      "position": 597,
+      "old_test_id": 3060,
+      "new_support_id": 1223,
+      "new_split": "train",
+      "stratum": [
+        "single",
+        true,
+        "medium"
+      ],
+      "cosine_similarity": 0.632115
+    }
+  ]
+}

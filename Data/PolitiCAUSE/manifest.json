@@ -1,0 +1,141 @@
+{
+  "strategy": "official split; exact-text join; retain positives only when at least two accepted valid pairable annotations are all strict 1-Cause/1-Effect and the selected medoid Cause and Effect each overlap every peer at an original-sentence token position; this identity check does not use an evaluation metric or similarity threshold; reject selected spans that begin or end inside an original token; deterministically downsample negatives to restore each official split's original positive/negative ratio",
+  "source": {
+    "input_samples": 17780,
+    "input_causal_samples": 5070,
+    "input_non_causal_samples": 12710,
+    "output_samples": 5475,
+    "causal_samples": 1561,
+    "non_causal_samples": 3914,
+    "excluded_causal_samples": 3509,
+    "excluded_non_causal_samples": 8796,
+    "total_relations": 1561,
+    "multi_relation_samples": 0
+  },
+  "splits": {
+    "train": {
+      "split_role": "train",
+      "input_samples": 12446,
+      "input_causal_samples": 3549,
+      "input_non_causal_samples": 8897,
+      "output_samples": 3844,
+      "causal_samples": 1096,
+      "non_causal_samples": 2748,
+      "excluded_causal_samples": 2453,
+      "excluded_non_causal_samples": 6149,
+      "negative_sampling_seed": 20260829,
+      "input_positive_ratio": 0.285152,
+      "output_positive_ratio": 0.28512,
+      "positive_exclusion_reasons": {
+        "fewer_than_two_pairable_annotations": 555,
+        "invalid_token_boundary": 44,
+        "no_pairable_annotation": 344,
+        "relation_identity_disagreement": 459,
+        "relation_structure_disagreement": 1051
+      },
+      "total_relations": 1096,
+      "multi_relation_samples": 0,
+      "relation_count_distribution": {
+        "0": 2748,
+        "1": 1096
+      },
+      "selected_pairing_kinds": {
+        "one_to_one": 1096
+      },
+      "warnings": {}
+    },
+    "validation": {
+      "split_role": "validation",
+      "input_samples": 2667,
+      "input_causal_samples": 761,
+      "input_non_causal_samples": 1906,
+      "output_samples": 771,
+      "causal_samples": 220,
+      "non_causal_samples": 551,
+      "excluded_causal_samples": 541,
+      "excluded_non_causal_samples": 1355,
+      "negative_sampling_seed": 20260830,
+      "input_positive_ratio": 0.285339,
+      "output_positive_ratio": 0.285344,
+      "positive_exclusion_reasons": {
+        "fewer_than_two_pairable_annotations": 120,
+        "invalid_token_boundary": 11,
+        "no_pairable_annotation": 81,
+        "relation_identity_disagreement": 100,
+        "relation_structure_disagreement": 229
+      },
+      "total_relations": 220,
+      "multi_relation_samples": 0,
+      "relation_count_distribution": {
+        "0": 551,
+        "1": 220
+      },
+      "selected_pairing_kinds": {
+        "one_to_one": 220
+      },
+      "warnings": {}
+    },
+    "test": {
+      "split_role": "test",
+      "input_samples": 2667,
+      "input_causal_samples": 760,
+      "input_non_causal_samples": 1907,
+      "output_samples": 860,
+      "causal_samples": 245,
+      "non_causal_samples": 615,
+      "excluded_causal_samples": 515,
+      "excluded_non_causal_samples": 1292,
+      "negative_sampling_seed": 20260831,
+      "input_positive_ratio": 0.284964,
+      "output_positive_ratio": 0.284884,
+      "positive_exclusion_reasons": {
+        "fewer_than_two_pairable_annotations": 134,
+        "invalid_token_boundary": 16,
+        "no_pairable_annotation": 61,
+        "relation_identity_disagreement": 97,
+        "relation_structure_disagreement": 207
+      },
+      "total_relations": 245,
+      "multi_relation_samples": 0,
+      "relation_count_distribution": {
+        "0": 615,
+        "1": 245
+      },
+      "selected_pairing_kinds": {
+        "one_to_one": 245
+      },
+      "warnings": {}
+    }
+  },
+  "prompt_development_subset": {
+    "source_split": "validation",
+    "reference_split": "test",
+    "selection_seed": 20260829,
+    "output_samples": 300,
+    "causal_samples": 85,
+    "non_causal_samples": 215,
+    "single_relation_samples": 85,
+    "multi_relation_samples": 0,
+    "total_relations": 85,
+    "test_reference_bucket_counts": {
+      "single_relation": 245,
+      "negative": 615
+    },
+    "target_bucket_counts": {
+      "negative": 215,
+      "single_relation": 85,
+      "multi_relation": 0
+    },
+    "actual_bucket_counts": {
+      "single_relation": 85,
+      "negative": 215
+    },
+    "test_positive_ratio": 0.284884,
+    "output_positive_ratio": 0.283333
+  },
+  "overlap": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  }
+}

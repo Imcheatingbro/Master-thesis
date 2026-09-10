@@ -1,0 +1,28 @@
+{
+  "completed_samples": 2942,
+  "format_version": 1,
+  "predictions_path": "D:\\Master thesis\\results\\eval_checkpoints\\lmstudio_batch_ade\\qwen-qwen3.6-35b-a3b_903c3b6a8670247b.jsonl",
+  "remaining_samples": 0,
+  "report_path": "D:\\Master thesis\\results\\eval_report\\lmstudio_batch_ade\\qwen-qwen3.6-35b-a3b_ade-n2942_prompt-v9.1_rag-knn_pattern-k3_20260828-210852.md",
+  "run_name": "qwen/qwen3.6-35b-a3b",
+  "sample_count": 2942,
+  "signature": "903c3b6a8670247b241fd939dbda5f3b266fce8c3a084693e285a09044acdeec",
+  "signature_payload": {
+    "cache_prompt": false,
+    "context_length": 8192,
+    "dataset": "ade",
+    "dataset_sha256": "85faabd85a56c038f9199d3069b116b9506973b03ac838a69f9a2770b096fff4",
+    "max_tokens": 2048,
+    "model_key": "qwen/qwen3.6-35b-a3b",
+    "primary_metric": "anchor_window",
+    "prompt_name": "v9.1",
+    "prompt_sha256": "633037338e398faf028152a683bf31e3fdea9dd97de664f1b8fe067d27f6722d",
+    "rag_database": "generic",
+    "rag_mode": "knn_pattern",
+    "rag_top_k": 3,
+    "sample_count": 2942,
+    "temperature": 0.0,
+    "use_rag": true
+  },
+  "status": "complete"
+}

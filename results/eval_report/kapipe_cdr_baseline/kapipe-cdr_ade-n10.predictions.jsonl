@@ -1,0 +1,10 @@
+{"id": 1, "has_causal": false, "triples": [], "source": "kapipe_cdr"}
+{"id": 2, "has_causal": true, "triples": [{"cause": {"span": "Methysergide"}, "effect": {"span": "retroperitoneal fibrosis"}, "source_relation": "CID"}], "source": "kapipe_cdr"}
+{"id": 3, "has_causal": false, "triples": [], "source": "kapipe_cdr"}
+{"id": 4, "has_causal": false, "triples": [], "source": "kapipe_cdr"}
+{"id": 5, "has_causal": false, "triples": [], "source": "kapipe_cdr"}
+{"id": 6, "has_causal": false, "triples": [], "source": "kapipe_cdr"}
+{"id": 7, "has_causal": false, "triples": [], "source": "kapipe_cdr"}
+{"id": 8, "has_causal": false, "triples": [], "source": "kapipe_cdr"}
+{"id": 9, "has_causal": true, "triples": [{"cause": {"span": "methanol"}, "effect": {"span": "putaminal necrosis"}, "source_relation": "CID"}, {"cause": {"span": "methanol"}, "effect": {"span": "cerebral edema"}, "source_relation": "CID"}], "source": "kapipe_cdr"}
+{"id": 10, "has_causal": false, "triples": [], "source": "kapipe_cdr"}

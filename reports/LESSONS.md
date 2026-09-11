@@ -124,3 +124,12 @@
 - v10.1 与 v10.2 均必须保留唯一的 `{rag_examples}` 槽位。Li 第一轮家族批量对照关闭 RAG；第二轮沿用 CNC validation 预先选定的家族配置与 CNC train-only support：Qwen 为 KNN+Pattern k=3，Gemma 为 KNN+Pattern k=1，不能退回未经选择的 generic KNN 默认值。
 - Li 最终批量比较使用当前全部 786 条，不再另拆 validation/test。由于 Gemma v10.2 曾根据前 300 条结果确定，完整 786 条包含 Prompt 开发样本，因此论文中应称为“Li 全数据集评测”，不能表述为完全未触碰的 held-out test。
 - Li 家族 RAG 全量运行中，Qwen 35B 正常完成，Qwen 27B 再次出现大量调用错误；已完成报告确认 `cache_prompt=False`，因此该现象不能解释为缓存开关回退。后续仅补跑 Qwen 27B 与两个 Gemma，并每 50 条卸载、重新加载当前模型实例；该设置属于 LM Studio 长批量稳定性控制，不改变 Prompt、RAG、解码参数或评估样本。
+
+## 2026-09-12：CausalDiscovery / Mistral-7B 基线适配
+
+- 直接读取本地作者仓库的两份 `prompts.py`，固定 Detection=`few_ICL_system`、Extraction=`chain_of_thought`，不修改 prompt、示例或添加 chat template。作者 CoT 模板要求静默分析并返回 JSON；它不是 LM Studio 的模型 thinking 开关。
+- 作者将检测与 gold-positive 抽取作为独立实验。本项目为接入同一端到端 evaluator，改为全样本检测、仅对预测正例抽取，再对全部样本评分；模型输入只含原始 text，不能用 gold 决定抽取集合。论文中标记为 adapted baseline，同时报告 detection、all-samples extraction 和 detected-only extraction。
+- 两阶段虽然都用 bitsandbytes 4-bit，但检测仅设置 `load_in_4bit=True`（库默认 FP4），抽取明确设置 NF4、double quant、FP16 compute；不能统一改成同一种 GGUF Q4。适配器分别加载两阶段模型，抽取复用原始 `quantize_4bit` 与 `run_llm_batch`，单卡 batch 从作者默认 64 调整到 4，其余生成参数沿用源码，并保存实际软件、模型 revision、量化与生成配置。
+- 作者抽取脚本依赖解码文本与原 prompt 逐字相同来删除前缀，tokenizer 归一化或输入截断后可能把示例 JSON 留在输出中。适配仅按输入 token 长度分离续写，不改输入或生成参数。编号 cause/effect 对、方向、重复和非原文 span 保留；格式错误单独记录，不删除评估样本。无效 detection 在布尔 evaluator 中映射为空预测并标记错误；正例抽取失败仍保留正例 detection。
+- 正式数据入口为 `cnc_sft_test`、`li`、`ade`、`politicause`。Notebook 默认每集前 10 条 smoke、关闭全量，输出按阶段与数据集隔离。只有完整且输入/源码/配置/依赖指纹一致的阶段可复用；未完成阶段重跑，避免没有随机数状态时拼接采样输出。
+- 准备时 `Master_thesis` 的 PyTorch 为 CPU 版，缺少 accelerate 与 bitsandbytes；notebook 提供默认关闭的 CUDA 安装单元并要求重启 kernel。39 项适配、notebook、evaluator 和数据接口测试通过，包含用受控模型响应执行四数据集 smoke/full 接线；这不是实际 Mistral 推理结果，准备期间未安装大模型依赖或下载权重。

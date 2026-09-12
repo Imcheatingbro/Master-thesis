@@ -31,8 +31,10 @@ def test_notebook_preflight_and_data_work_without_inference(
     import IPython.display
     import subprocess
     import torch
+    import sys
 
     monkeypatch.chdir(ROOT / "notebooks")
+    monkeypatch.setattr(sys, "prefix", str(tmp_path / "CausalDiscovery"))
     monkeypatch.setenv("HF_HOME", str(tmp_path / "hf"))
     monkeypatch.setattr(IPython.display, "display", lambda *args: None)
     monkeypatch.setattr(torch.cuda, "is_available", lambda: False)
@@ -49,11 +51,13 @@ def test_notebook_preflight_and_data_work_without_inference(
         exec(compile(cell.source, str(NOTEBOOK), "exec"), namespace)
         if "configuration" in cell.metadata.tags:
             assert namespace["RUN_SMOKE"] is True and namespace["RUN_FULL_EVAL"] is False
-            assert namespace["INSTALL_DEPENDENCIES"] is False
             namespace["RUN_SMOKE"] = False
     assert namespace["ROOT"] == ROOT
     assert set(namespace["DATASETS"]) == {"cnc_sft_test", "li", "ade", "politicause"}
     assert all(namespace["DATASETS"].values())
+    assert namespace["MODEL_NAME_OR_PATH"] == str(
+        ROOT / "reference code from related work" / "CausalDiscovery-model" / "Mistral-7B-Instruct-v0.3"
+    )
     assert not namespace["recent_results"]
     with pytest.raises(RuntimeError, match="推理环境未就绪"):
         namespace["require_inference_environment"]()
@@ -64,8 +68,10 @@ def test_notebook_smoke_and_full_use_actual_evaluator_with_stubbed_model(
     monkeypatch: pytest.MonkeyPatch, tmp_path: Path,
 ) -> None:
     import IPython.display
+    import sys
 
     monkeypatch.chdir(ROOT)
+    monkeypatch.setattr(sys, "prefix", str(tmp_path / "CausalDiscovery"))
     monkeypatch.setenv("HF_HOME", str(tmp_path / "hf"))
     monkeypatch.setattr(IPython.display, "display", lambda *args: None)
     prepared: list[str] = []

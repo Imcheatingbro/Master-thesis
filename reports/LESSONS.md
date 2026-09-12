@@ -132,4 +132,4 @@
 - 两阶段虽然都用 bitsandbytes 4-bit，但检测仅设置 `load_in_4bit=True`（库默认 FP4），抽取明确设置 NF4、double quant、FP16 compute；不能统一改成同一种 GGUF Q4。适配器分别加载两阶段模型，抽取复用原始 `quantize_4bit` 与 `run_llm_batch`，单卡 batch 从作者默认 64 调整到 4，其余生成参数沿用源码，并保存实际软件、模型 revision、量化与生成配置。
 - 作者抽取脚本依赖解码文本与原 prompt 逐字相同来删除前缀，tokenizer 归一化或输入截断后可能把示例 JSON 留在输出中。适配仅按输入 token 长度分离续写，不改输入或生成参数。编号 cause/effect 对、方向、重复和非原文 span 保留；格式错误单独记录，不删除评估样本。无效 detection 在布尔 evaluator 中映射为空预测并标记错误；正例抽取失败仍保留正例 detection。
 - 正式数据入口为 `cnc_sft_test`、`li`、`ade`、`politicause`。Notebook 默认每集前 10 条 smoke、关闭全量，输出按阶段与数据集隔离。只有完整且输入/源码/配置/依赖指纹一致的阶段可复用；未完成阶段重跑，避免没有随机数状态时拼接采样输出。
-- 准备时 `Master_thesis` 的 PyTorch 为 CPU 版，缺少 accelerate 与 bitsandbytes；notebook 提供默认关闭的 CUDA 安装单元并要求重启 kernel。39 项适配、notebook、evaluator 和数据接口测试通过，包含用受控模型响应执行四数据集 smoke/full 接线；这不是实际 Mistral 推理结果，准备期间未安装大模型依赖或下载权重。
+- `Master_thesis` 保留原 CPU 版 PyTorch，另建 `CausalDiscovery` 环境，固定 PyTorch 2.10.0+cu128、Transformers 5.8.1、Accelerate 1.15.0 与 bitsandbytes 0.50.2，并注册同名 Jupyter kernel；实际 NF4 CUDA 量化检查和 39 项适配、notebook、evaluator、数据接口测试均通过。模型由用户另行下载到项目内固定目录；官方仓库同时含 consolidated 权重和 Transformers 三分片，下载命令排除前者，避免重复占用约 14.5 GB。

@@ -35,7 +35,6 @@ def test_notebook_preflight_and_data_work_without_inference(
 
     monkeypatch.chdir(ROOT / "notebooks")
     monkeypatch.setattr(sys, "prefix", str(tmp_path / "CausalDiscovery"))
-    monkeypatch.setenv("HF_HOME", str(tmp_path / "hf"))
     monkeypatch.setattr(IPython.display, "display", lambda *args: None)
     monkeypatch.setattr(torch.cuda, "is_available", lambda: False)
 
@@ -61,7 +60,10 @@ def test_notebook_preflight_and_data_work_without_inference(
     assert not namespace["recent_results"]
     with pytest.raises(RuntimeError, match="推理环境未就绪"):
         namespace["require_inference_environment"]()
-    assert not (tmp_path / "hf").exists()
+    notebook_source = "\n".join(cell.source for cell in _notebook().cells)
+    assert "MODEL_REPO_ID" not in notebook_source and "HF_HOME" not in notebook_source
+    assert "INSTALL_DEPENDENCIES" not in notebook_source and "DOWNLOAD_MODEL" not in notebook_source
+    assert "不启用模型级 thinking mode" in notebook_source
 
 
 def test_notebook_smoke_and_full_use_actual_evaluator_with_stubbed_model(
@@ -72,7 +74,6 @@ def test_notebook_smoke_and_full_use_actual_evaluator_with_stubbed_model(
 
     monkeypatch.chdir(ROOT)
     monkeypatch.setattr(sys, "prefix", str(tmp_path / "CausalDiscovery"))
-    monkeypatch.setenv("HF_HOME", str(tmp_path / "hf"))
     monkeypatch.setattr(IPython.display, "display", lambda *args: None)
     prepared: list[str] = []
 

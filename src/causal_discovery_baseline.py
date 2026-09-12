@@ -24,6 +24,10 @@ DEFAULT_SOURCE_DIR = (
     PROJECT_ROOT / "reference code from related work" / "CausalDiscovery-main" / "CausalDiscovery-main"
 )
 MODEL_ID = "mistralai/Mistral-7B-Instruct-v0.3"
+AUTHOR_PROFILE = "author"
+ADAPTED_PROFILE = "adapted"
+FOUR_BIT = "4bit"
+BF16 = "bf16"
 SOURCE_FILES = (
     "experiments/experiment1/main.py",
     "experiments/experiment1/prompts.py",
@@ -31,14 +35,31 @@ SOURCE_FILES = (
     "experiments/experiment2/prompts.py",
 )
 
+ADAPTED_DETECTION_RULES = """
+
+For this evaluation, return exactly one JSON object with the answer key and stop immediately.
+Do not continue with another Text or Output example.
+""".rstrip()
+
+ADAPTED_EXTRACTION_RULES = """
+
+Additional span and serialization rules for this adapted evaluation:
+- Copy every cause and effect as an exact, continuous substring of the input; do not paraphrase or change capitalization, articles, or punctuation.
+- Select the smallest complete span that still expresses the causal argument. Keep a causal predicate inside the argument when it is part of that argument in the input.
+- Extract all supported pairs. Put every pair in one flat JSON object using cause/effect, cause_2/effect_2, cause_3/effect_3, and so on.
+- Return exactly one JSON object and stop. Do not continue with another Input or Output example.
+""".rstrip()
+
 
 @dataclass(frozen=True)
 class RunConfig:
-    """固定论文报告的提示策略；较小 batch 用于单卡运行，其余生成设置沿用作者代码。"""
+    """配置作者忠实版或为本项目 evaluator 稳定化的适配版。"""
 
     model_name_or_path: str = MODEL_ID
     batch_size: int = 4
     seed: int = 4000
+    profile: str = AUTHOR_PROFILE
+    precision: str = FOUR_BIT
     detection_prompt: str = "few_ICL_system"
     extraction_prompt: str = "chain_of_thought"
     detection_max_new_tokens: int = 512
@@ -49,6 +70,10 @@ class RunConfig:
     def __post_init__(self) -> None:
         if self.batch_size < 1:
             raise ValueError("batch_size 必须大于 0")
+        if self.profile not in {AUTHOR_PROFILE, ADAPTED_PROFILE}:
+            raise ValueError(f"未知 profile：{self.profile}")
+        if self.precision not in {FOUR_BIT, BF16}:
+            raise ValueError(f"未知 precision：{self.precision}")
 
 
 def _import_file(path: Path, name: str) -> ModuleType:
@@ -94,14 +119,25 @@ def _load_author_script(root: Path, stage: str) -> ModuleType:
 def build_prompts(
     samples: Sequence[Mapping[str, Any]], stage: str, templates: Mapping[str, Any], config: RunConfig,
 ) -> list[str]:
-    """保持原始 prompt 拼接方式；输入只读取 text，不读取标签、关系或样本类型。"""
+    """构造作者原 prompt 或带最小格式/span 约束的适配 prompt；输入只读取 text。"""
 
     if stage == "detection":
         template = templates[stage][config.detection_prompt]
-        return [template["system"] + "\n\n" + template["user"].format(sentence=s["text"]) for s in samples]
+        system = template["system"]
+        if config.profile == ADAPTED_PROFILE:
+            system += ADAPTED_DETECTION_RULES
+        prompts = [system + "\n\n" + template["user"].format(sentence=s["text"]) for s in samples]
+        return [prompt + "\nOutput:" for prompt in prompts] if config.profile == ADAPTED_PROFILE else prompts
     if stage == "extraction":
         template = templates[stage][config.extraction_prompt]
-        return [template.format(input_sentence=s["text"]) for s in samples]
+        if config.profile == ADAPTED_PROFILE:
+            marker = "Now extract the cause–effect pairs from the following sentence(s):"
+            position = template.rfind(marker)
+            if position < 0:
+                raise ValueError("作者 extraction prompt 缺少最终输入标记，无法安全插入适配规则")
+            template = template[:position] + ADAPTED_EXTRACTION_RULES + "\n" + template[position:]
+        prompts = [template.format(input_sentence=s["text"]) for s in samples]
+        return [prompt + "\nOutput:" for prompt in prompts] if config.profile == ADAPTED_PROFILE else prompts
     raise ValueError(f"未知阶段：{stage}")
 
 
@@ -120,10 +156,51 @@ def parse_author_json(response: str) -> tuple[dict[str, Any], str]:
     return parsed, ""
 
 
-def parse_detection(response: str) -> tuple[str | None, str]:
+def parse_first_json(response: str) -> tuple[dict[str, Any], str]:
+    """读取首个完整 JSON 对象，忽略其后的模型续写。"""
+
+    start = response.find("{")
+    if start < 0:
+        return {}, "missing_json_object"
+    try:
+        parsed, _ = json.JSONDecoder().raw_decode(response[start:])
+    except json.JSONDecodeError as exc:
+        return {}, f"invalid_json: {exc.msg}"
+    if not isinstance(parsed, dict):
+        return {}, "expected_json_object"
+    return parsed, ""
+
+
+def parse_adjacent_json_objects(response: str) -> tuple[list[dict[str, Any]], str]:
+    """读取首个 JSON 及紧邻的逗号分隔对象，不吸收后续伪造的 Input/Text 示例。"""
+
+    start = response.find("{")
+    if start < 0:
+        return [], "missing_json_object"
+    decoder = json.JSONDecoder()
+    objects: list[dict[str, Any]] = []
+    remaining = response[start:]
+    while remaining:
+        try:
+            parsed, end = decoder.raw_decode(remaining)
+        except json.JSONDecodeError as exc:
+            return (objects, "") if objects else ([], f"invalid_json: {exc.msg}")
+        if not isinstance(parsed, dict):
+            return (objects, "") if objects else ([], "expected_json_object")
+        objects.append(parsed)
+        remaining = remaining[end:].lstrip()
+        if not remaining.startswith(","):
+            break
+        remaining = remaining[1:].lstrip()
+        if not remaining.startswith("{"):
+            break
+    return objects, ""
+
+
+def parse_detection(response: str, adapted: bool = False) -> tuple[str | None, str]:
     """只接受作者定义的 causal/noncausal，不用抽取结果反推检测标签。"""
 
-    parsed, error = parse_author_json(response)
+    parsed, error = parse_first_json(response) if adapted else parse_author_json(response)
     if error:
         return None, error
     label = parsed.get("answer")
@@ -133,37 +210,44 @@ def parse_detection(response: str) -> tuple[str | None, str]:
 
 
 def prediction_from_author_outputs(
-    sample_id: Any, detection_response: str, extraction_response: str | None,
+    sample_id: Any, detection_response: str, extraction_response: str | None, adapted: bool = False,
 ) -> dict[str, Any]:
     """将作者平铺的多对字段映射到 evaluator；保留方向、重复预测和非原文 span。"""
 
-    label, detection_error = parse_detection(detection_response)
+    label, detection_error = parse_detection(detection_response, adapted=adapted)
     triples: list[dict[str, Any]] = []
     extraction_errors: list[str] = []
     if label == "causal":
         if extraction_response is None:
             raise ValueError(f"预测正例 {sample_id} 缺少抽取输出")
-        parsed, error = parse_author_json(extraction_response)
+        if adapted:
+            parsed_objects, error = parse_adjacent_json_objects(extraction_response)
+        else:
+            parsed, error = parse_author_json(extraction_response)
+            parsed_objects = [parsed] if parsed else []
         if error:
             extraction_errors.append(error)
-        suffixes: set[str] = set()
-        for key in parsed:
-            match = re.fullmatch(r"(?:cause|effect)(_(?:[2-9]|[1-9][0-9]+))?", key)
-            if match:
-                suffixes.add(match.group(1) or "")
-        if not error and not suffixes:
+        found_pair_fields = False
+        for parsed in parsed_objects:
+            suffixes: set[str] = set()
+            for key in parsed:
+                match = re.fullmatch(r"(?:cause|effect)(_(?:[2-9]|[1-9][0-9]+))?", key)
+                if match:
+                    suffixes.add(match.group(1) or "")
+            found_pair_fields = found_pair_fields or bool(suffixes)
+            for suffix in sorted(suffixes, key=lambda value: int(value[1:]) if value else 1):
+                cause, effect = parsed.get(f"cause{suffix}"), parsed.get(f"effect{suffix}")
+                if not isinstance(cause, str) or not isinstance(effect, str) or not cause.strip() or not effect.strip():
+                    extraction_errors.append(f"incomplete_pair{suffix}")
+                    continue
+                triples.append({"cause": {"span": cause}, "effect": {"span": effect}})
+        if not error and not found_pair_fields:
             extraction_errors.append("missing_cause_effect_fields")
-        for suffix in sorted(suffixes, key=lambda value: int(value[1:]) if value else 1):
-            cause, effect = parsed.get(f"cause{suffix}"), parsed.get(f"effect{suffix}")
-            if not isinstance(cause, str) or not isinstance(effect, str) or not cause.strip() or not effect.strip():
-                extraction_errors.append(f"incomplete_pair{suffix}")
-                continue
-            triples.append({"cause": {"span": cause}, "effect": {"span": effect}})
     return {
         "id": sample_id,
         "has_causal": label == "causal",
         "triples": triples,
-        "source": "anuyah2025_pcd_mistral",
+        "source": "anuyah2025_pcd_mistral_adapted" if adapted else "anuyah2025_pcd_mistral",
         "detection_label": label,
         "detection_error": detection_error,
         "extraction_errors": extraction_errors,
@@ -192,7 +276,7 @@ class _ContinuationTokenizer:
 
 
 class AuthorRunner:
-    """复用本地作者脚本；检测 FP4 默认设置与抽取 NF4 分别加载，避免占用两份显存。"""
+    """复用本地作者脚本，并按配置选择作者 4-bit 或未量化 BF16 加载。"""
 
     def __init__(self, source_dir: Path | str = DEFAULT_SOURCE_DIR, config: RunConfig | None = None) -> None:
         self.source_dir = Path(source_dir)
@@ -228,7 +312,14 @@ class AuthorRunner:
             name = self.config.model_name_or_path
             self.tokenizer = AutoTokenizer.from_pretrained(name, padding_side="left")
             self.tokenizer.pad_token = self.tokenizer.eos_token
-            if stage == "detection":
+            if self.config.precision == BF16:
+                if not torch.cuda.is_bf16_supported():
+                    raise RuntimeError("当前 GPU 不支持 BF16；请改用 precision='4bit'")
+                self.model = AutoModelForCausalLM.from_pretrained(
+                    name, dtype=torch.bfloat16, device_map="auto",
+                )
+                self.pipe = TextGenerationPipeline(model=self.model, tokenizer=self.tokenizer)
+            elif stage == "detection":
                 self.model = AutoModelForCausalLM.from_pretrained(
                     name, quantization_config=BitsAndBytesConfig(load_in_4bit=True), device_map="auto",
                 )
@@ -237,10 +328,12 @@ class AuthorRunner:
                 self.model = self.script.quantize_4bit(name)
             self.model.eval()
             self.stage = stage
-        quantization = self.model.config.quantization_config
+        quantization = getattr(self.model.config, "quantization_config", None)
         self.runtime[stage] = {
             "model_commit": getattr(self.model.config, "_commit_hash", None),
             "quantization_config": quantization.to_dict() if hasattr(quantization, "to_dict") else quantization,
+            "precision": self.config.precision,
+            "torch_dtype": str(getattr(self.model, "dtype", getattr(self.model.config, "torch_dtype", None))),
             "generation_config": self.model.generation_config.to_dict(),
             "gpu": torch.cuda.get_device_name(0),
         }
@@ -248,8 +341,17 @@ class AuthorRunner:
             self.runtime[stage]["pipeline_generation_config"] = self.pipe.generation_config.to_dict()
 
     def generate(self, prompts: list[str]) -> list[str]:
-        """检测沿用作者 pipeline 调用，抽取直接调用其 run_llm_batch。"""
+        """作者 profile 沿用原生成方式；适配 profile 显式使用 greedy decoding。"""
 
+        if self.config.profile == ADAPTED_PROFILE:
+            max_new_tokens = (self.config.detection_max_new_tokens if self.stage == "detection"
+                              else self.config.extraction_max_new_tokens)
+            outputs = self.pipe(
+                prompts, max_new_tokens=max_new_tokens, do_sample=False,
+                batch_size=self.config.batch_size, truncation=True,
+                return_full_text=False, pad_token_id=self.tokenizer.eos_token_id,
+            )
+            return [row[0]["generated_text"].strip() for row in outputs]
         if self.stage == "detection":
             outputs = self.pipe(
                 prompts, max_new_tokens=self.config.detection_max_new_tokens,
@@ -361,12 +463,14 @@ def run_causal_discovery_baseline(
         "report_json": "report.json", "report_md": "report.md",
     }.items()}
     identity = {
-        "adapter_version": 1, "dataset": dataset, "config": asdict(runner.config),
+        "adapter_version": 2 if runner.config.profile == ADAPTED_PROFILE else 1,
+        "dataset": dataset, "config": asdict(runner.config),
         "adapter_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "source_sha256": runner.templates["source_sha256"],
         "input_sha256": hashlib.sha256(_json([{"id": s["id"], "text": s["text"]} for s in samples]).encode()).hexdigest(),
         "packages": software_versions(),
-        "extraction_scope": "predicted_causal_only", "prompt_modified": False,
+        "extraction_scope": "predicted_causal_only",
+        "prompt_modified": runner.config.profile == ADAPTED_PROFILE,
         "output_decode": "continuation_tokens_only",
     }
     fingerprint = hashlib.sha256(_json(identity).encode()).hexdigest()
@@ -391,7 +495,9 @@ def run_causal_discovery_baseline(
     runner.runtime.clear()
     try:
         detection = _run_stage(samples, "detection", runner, paths["detection_raw"], reuse_completed_stages)
-        positives = [s for s, r in zip(samples, detection) if parse_detection(r["response"])[0] == "causal"]
+        adapted = runner.config.profile == ADAPTED_PROFILE
+        positives = [s for s, r in zip(samples, detection)
+                     if parse_detection(r["response"], adapted=adapted)[0] == "causal"]
         export_csv(paths["extraction_input_csv"], positives)
         extraction = _run_stage(positives, "extraction", runner, paths["extraction_raw"], reuse_completed_stages)
     finally:
@@ -399,7 +505,8 @@ def run_causal_discovery_baseline(
         _write_json(paths["manifest"], manifest)
         runner.close()
     extracted = {_json(r["id"]): r["response"] for r in extraction}
-    predictions = [prediction_from_author_outputs(s["id"], r["response"], extracted.get(_json(s["id"])))
+    predictions = [prediction_from_author_outputs(
+                       s["id"], r["response"], extracted.get(_json(s["id"])), adapted=adapted)
                    for s, r in zip(samples, detection)]
     evaluator = Evaluator(dataset=dataset, primary_metric=primary_metric)
     for prediction, gold in zip(predictions, samples):
@@ -413,6 +520,14 @@ def run_causal_discovery_baseline(
             t["cause"]["span"] not in s["text"] or t["effect"]["span"] not in s["text"]
             for s, p in zip(samples, predictions) for t in p["triples"]
         ),
+        "normalized_detection_outputs": sum(
+            bool(parse_detection(r["response"])[1]) and not bool(parse_detection(r["response"], adapted=True)[1])
+            for r in detection
+        ) if adapted else 0,
+        "normalized_extraction_outputs": sum(
+            bool(parse_author_json(r["response"])[1]) and not bool(parse_adjacent_json_objects(r["response"])[1])
+            for r in extraction
+        ) if adapted else 0,
     }
     report["baseline"] = {"manifest": str(paths["manifest"]), "diagnostics": diagnostics}
     formatted = evaluator.format_report(title=f"Anuyah et al. (2025) / Mistral-7B: {dataset}")

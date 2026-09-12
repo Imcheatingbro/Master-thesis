@@ -12,6 +12,8 @@ from typing import Any
 import pytest
 
 from src.causal_discovery_baseline import (
+    ADAPTED_PROFILE,
+    BF16,
     DEFAULT_SOURCE_DIR,
     AuthorRunner,
     RunConfig,
@@ -19,6 +21,7 @@ from src.causal_discovery_baseline import (
     _load_author_script,
     build_prompts,
     load_author_templates,
+    parse_adjacent_json_objects,
     parse_detection,
     prediction_from_author_outputs,
     run_causal_discovery_baseline,
@@ -49,10 +52,46 @@ def test_original_prompts_receive_only_text_and_keep_examples(templates: dict[st
     assert build_prompts([changed_gold], "extraction", templates, config) == [extraction]
 
 
+def test_adapted_prompts_add_output_and_verbatim_constraints_without_gold(templates: dict[str, Any]) -> None:
+    config = RunConfig(profile=ADAPTED_PROFILE, precision=BF16)
+    sample = {"id": "hidden-id", "text": "Rain causes flooding.", "has_causal": True,
+              "relations": [{"cause": "SECRET_GOLD"}]}
+    detection = build_prompts([sample], "detection", templates, config)[0]
+    extraction = build_prompts([sample], "extraction", templates, config)[0]
+    assert detection.endswith("Output:")
+    assert "Do not continue with another Text" in detection
+    assert extraction.endswith("Output:")
+    assert "exact, continuous substring" in extraction
+    assert "cause_2/effect_2" in extraction
+    assert "SECRET_GOLD" not in detection + extraction
+
+
 @pytest.mark.parametrize("raw", ['{"answer": true}', '{"answer":"Causal"}', 'causal', '{"answer":'])
 def test_detection_invalid_outputs_are_not_guessed(raw: str) -> None:
     label, error = parse_detection(raw)
     assert label is None and error
+
+
+def test_adapted_parser_recovers_answer_and_adjacent_pairs_without_following_examples() -> None:
+    response = '{"answer":"noncausal"}\nText: fake\nOutput: {"answer":"causal"}'
+    assert parse_detection(response) == (None, "invalid_json: Extra data")
+    assert parse_detection(response, adapted=True) == ("noncausal", "")
+
+    extraction = (
+        'Output: {"cause":"A","effect":"B"}, {"cause":"C","effect":"D"}'
+        '\nInput: fabricated\nOutput: {"cause":"X","effect":"Y"}'
+    )
+    objects, error = parse_adjacent_json_objects(extraction)
+    assert error == ""
+    assert [(obj["cause"], obj["effect"]) for obj in objects] == [("A", "B"), ("C", "D")]
+    prediction = prediction_from_author_outputs(
+        9, '{"answer":"causal"}', extraction, adapted=True,
+    )
+    assert prediction["triples"] == [
+        {"cause": {"span": "A"}, "effect": {"span": "B"}},
+        {"cause": {"span": "C"}, "effect": {"span": "D"}},
+    ]
+    assert prediction["source"] == "anuyah2025_pcd_mistral_adapted"
 
 
 def test_multipair_mapping_preserves_direction_duplicates_and_nonverbatim_text() -> None:
@@ -264,3 +303,60 @@ def test_author_stages_keep_distinct_quantization_and_serializable_runtime(
     assert runner.runtime["detection"]["pipeline_generation_config"] == {"do_sample": True}
     assert json.loads(json.dumps(runner.runtime))["extraction"]["model_commit"] == "test-commit"
     runner.close()
+
+
+def test_bf16_profile_loads_unquantized_model_for_both_stages(
+    monkeypatch: pytest.MonkeyPatch, templates: dict[str, Any],
+) -> None:
+    import torch
+
+    loads: list[dict[str, Any]] = []
+    monkeypatch.setattr(torch.cuda, "is_available", lambda: True)
+    monkeypatch.setattr(torch.cuda, "is_bf16_supported", lambda: True)
+    monkeypatch.setattr(torch.cuda, "empty_cache", lambda: None)
+    monkeypatch.setattr(torch.cuda, "get_device_name", lambda index: "test GPU")
+
+    def load_model(name: str, **kwargs: Any) -> Any:
+        loads.append(kwargs)
+        return SimpleNamespace(
+            config=SimpleNamespace(_commit_hash="test-commit", torch_dtype=torch.bfloat16),
+            dtype=torch.bfloat16,
+            generation_config=SimpleNamespace(to_dict=lambda: {"do_sample": False}),
+            eval=lambda: None,
+        )
+
+    backend = ModuleType("transformers")
+    backend.BitsAndBytesConfig = lambda **kwargs: kwargs
+    backend.AutoModelForCausalLM = SimpleNamespace(from_pretrained=load_model)
+    backend.AutoTokenizer = SimpleNamespace(from_pretrained=lambda *args, **kwargs: SimpleNamespace(
+        eos_token="</s>", eos_token_id=2))
+    backend.TextGenerationPipeline = lambda **kwargs: SimpleNamespace(
+        generation_config=SimpleNamespace(to_dict=lambda: {"do_sample": True}))
+    backend.set_seed = lambda seed: None
+    monkeypatch.setitem(sys.modules, "transformers", backend)
+
+    runner = AuthorRunner(config=RunConfig(profile=ADAPTED_PROFILE, precision=BF16))
+    runner.prepare("detection")
+    runner.prepare("extraction")
+    assert len(loads) == 2
+    assert all(load == {"dtype": torch.bfloat16, "device_map": "auto"} for load in loads)
+    assert runner.runtime["detection"]["quantization_config"] is None
+    assert runner.runtime["extraction"]["precision"] == BF16
+    runner.close()
+
+
+def test_adapted_generation_is_deterministic() -> None:
+    calls: list[dict[str, Any]] = []
+
+    def pipe(prompts: list[str], **kwargs: Any) -> list[list[dict[str, str]]]:
+        calls.append(kwargs)
+        return [[{"generated_text": '{"answer":"causal"}'}] for _ in prompts]
+
+    runner = AuthorRunner.__new__(AuthorRunner)
+    runner.config = RunConfig(profile=ADAPTED_PROFILE, precision=BF16, detection_max_new_tokens=32)
+    runner.stage = "detection"
+    runner.pipe = pipe
+    runner.tokenizer = SimpleNamespace(eos_token_id=2)
+    assert runner.generate(["prompt"]) == ['{"answer":"causal"}']
+    assert calls[0]["do_sample"] is False
+    assert calls[0]["max_new_tokens"] == 32

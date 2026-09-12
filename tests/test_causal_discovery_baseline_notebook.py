@@ -50,6 +50,7 @@ def test_notebook_preflight_and_data_work_without_inference(
         exec(compile(cell.source, str(NOTEBOOK), "exec"), namespace)
         if "configuration" in cell.metadata.tags:
             assert namespace["RUN_SMOKE"] is True and namespace["RUN_FULL_EVAL"] is False
+            assert namespace["RUN_ID"] == "mistral7b_bf16_ficl_cot_adapted_v2"
             namespace["RUN_SMOKE"] = False
     assert namespace["ROOT"] == ROOT
     assert set(namespace["DATASETS"]) == {"cnc_sft_test", "li", "ade", "politicause"}
@@ -63,7 +64,13 @@ def test_notebook_preflight_and_data_work_without_inference(
     notebook_source = "\n".join(cell.source for cell in _notebook().cells)
     assert "MODEL_REPO_ID" not in notebook_source and "HF_HOME" not in notebook_source
     assert "INSTALL_DEPENDENCIES" not in notebook_source and "DOWNLOAD_MODEL" not in notebook_source
-    assert "不启用模型级 thinking mode" in notebook_source
+    assert "不启用独立 reasoning/thinking 开关" in notebook_source
+    assert "profile=ADAPTED_PROFILE" in notebook_source
+    assert "precision=BF16" in notebook_source
+    assert "do_sample=False" in notebook_source
+    assert namespace["CONFIG"].profile == baseline.ADAPTED_PROFILE
+    assert namespace["CONFIG"].precision == baseline.BF16
+    assert namespace["CONFIG"].extraction_max_new_tokens == 1024
 
 
 def test_notebook_smoke_and_full_use_actual_evaluator_with_stubbed_model(
@@ -115,3 +122,4 @@ def test_notebook_smoke_and_full_use_actual_evaluator_with_stubbed_model(
             row = namespace["result_row"](result)
             assert "Extraction F1 (all)" in row and "Extraction F1 (detected-only)" in row
             assert row["Detection parse errors"] == 0
+            assert row["Normalized detection outputs"] == 0

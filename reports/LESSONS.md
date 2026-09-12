@@ -133,3 +133,11 @@
 - 作者抽取脚本依赖解码文本与原 prompt 逐字相同来删除前缀，tokenizer 归一化或输入截断后可能把示例 JSON 留在输出中。适配仅按输入 token 长度分离续写，不改输入或生成参数。编号 cause/effect 对、方向、重复和非原文 span 保留；格式错误单独记录，不删除评估样本。无效 detection 在布尔 evaluator 中映射为空预测并标记错误；正例抽取失败仍保留正例 detection。
 - 正式数据入口为 `cnc_sft_test`、`li`、`ade`、`politicause`。Notebook 默认每集前 10 条 smoke、关闭全量，输出按阶段与数据集隔离。只有完整且输入/源码/配置/依赖指纹一致的阶段可复用；未完成阶段重跑，避免没有随机数状态时拼接采样输出。
 - `Master_thesis` 保留原 CPU 版 PyTorch，另建 `CausalDiscovery` 环境，固定 PyTorch 2.10.0+cu128、Transformers 5.8.1、Accelerate 1.15.0 与 bitsandbytes 0.50.2，并注册同名 Jupyter kernel；实际 NF4 CUDA 量化检查和 39 项适配、notebook、evaluator、数据接口测试均通过。模型由用户另行下载到项目内固定目录；官方仓库同时含 consolidated 权重和 Transformers 三分片，下载命令排除前者，避免重复占用约 14.5 GB。
+
+## 2026-09-12：CausalDiscovery BF16 稳定化适配
+
+- 首轮 4-bit 作者忠实 smoke 的主要故障不能只归因于 JSON 解析：40 条 detection 有 7 条在正确首对象后续写示例，12 条 extraction 有 10 条不符合作者的单对象解析；离线恢复首对象后 detection F1 仅小幅变化，恢复全部相邻对象又引入大量错误关系。作者发布的 Mistral CoT 结果也只有 1444/8925 条 `CE` 非空，因此不能期待单纯放宽解析显著提高端到端结果。
+- v2 保留作者 FICL detection 与 CoT extraction 作为方法主体，但明确标为 adapted：增加单一 JSON、停止续写、原文连续 span、最小完整边界和多关系平铺键约束；两阶段显式 `do_sample=False`。解析只接收首个完整 JSON 及其紧邻的逗号分隔对象，遇到新的 `Input/Text` 后停止，避免把模型自行续写的示例当作当前样本关系。
+- v2 使用官方 Transformers 权重的未量化 BF16，旧 author/4-bit 路径与输出继续保留。RTX 4090 已实际完成 BF16 Detection 和 Extraction 加载及生成，分别返回合法 detection JSON 与原文连续 cause/effect JSON；正式报告必须注明 BF16、prompt 适配和 greedy decoding，不能写成作者原始量化配置的直接复现。
+- Extraction 的 `max_new_tokens` 不能按单关系 smoke 设定。四个真实评估入口中，CNC 最多 5 对关系、Li 最多 12 对、ADE 最多 10 对；按作者完整平铺 schema 用本地 Mistral tokenizer 估算的最长 gold 输出分别约 404、818、675 tokens。因此 v2 使用 1024 tokens，Detection 仍为 32；显存不足时只降低 batch，并用新运行 ID 留痕。
+- BF16 adapted v2 的四数据集各 10 条真实 smoke 已完成，Detection 与 Extraction 解析错误均为 0，说明首轮主要格式故障已修复；CNC 的 detection/all-samples extraction F1 为 `0.800/0.286`，但 Li、ADE、PolitiCAUSE 的 extraction F1 仍为 0，且 Li 与 PolitiCAUSE 仍出现非原文或过度拆分 span。这表明剩余问题主要是模型的跨域语义和边界质量，不能再归因于 4-bit 量化、320-token 截断或 JSON 解析失败；10 条样本只用于工程诊断，不能作为正式模型结论。
